@@ -1,0 +1,37 @@
+---
+permalink: config-linux/nvme-ib-configure-storage-connections-task.html 
+sidebar: sidebar 
+keywords: express linux configuration, software configuration, linux host, E2800, E5700, EF300, EF600, E-Series, eseries 
+summary: Wenn Ihr Controller einen NVMe-over-InfiniBand-Port enthält, können Sie die IP-Adresse jedes Ports mit SANtricity System Manager konfigurieren. 
+---
+= Konfigurieren Sie NVMe over InfiniBand-Verbindungen für das Storage-Array
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Wenn Ihr Controller einen NVMe-over-InfiniBand-Port enthält, können Sie die IP-Adresse jedes Ports mit SANtricity System Manager konfigurieren.
+
+.Schritte
+. Wählen Sie in der System Manager-Schnittstelle die Option *Hardware* aus.
+. Wenn die Grafik die Laufwerke anzeigt, klicken Sie auf *Zurück zum Regal anzeigen*.
++
+Die Grafik ändert sich, um die Controller anstelle der Laufwerke anzuzeigen.
+
+. Klicken Sie auf den Controller mit den NVMe-over-InfiniBand-Ports, die Sie konfigurieren möchten.
++
+Das Kontextmenü des Controllers wird angezeigt.
+
+. Wählen Sie *NVMe über InfiniBand-Ports konfigurieren* aus.
++
+
+NOTE: Die Option NVMe-over-InfiniBand-Ports konfigurieren wird nur angezeigt, wenn System Manager NVMe-over-InfiniBand-Ports auf dem Controller erkennt.
+
++
+Das Dialogfeld *NVMe über InfiniBand Ports konfigurieren* wird geöffnet.
+
+. Wählen Sie in der Dropdown-Liste den HIC-Port aus, den Sie konfigurieren möchten, und geben Sie dann die IP-Adresse des Ports ein.
+. Klicken Sie Auf *Konfigurieren*.
+. Wiederholen Sie die Schritte 5 und 6 für die anderen HIC-Ports, die verwendet werden.
+

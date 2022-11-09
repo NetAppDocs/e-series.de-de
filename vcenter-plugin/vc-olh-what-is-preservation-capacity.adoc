@@ -1,0 +1,21 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/vc-olh-what-is-preservation-capacity.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
+summary: 'Bei der Konservierung wird die Kapazität (Anzahl der Laufwerke) verwendet, die in einem Pool reserviert ist, um potenzielle Laufwerksausfälle zu unterstützen.' 
+---
+= Was ist Erhaltungskapazität?
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Bei der Konservierung wird die Kapazität (Anzahl der Laufwerke) verwendet, die in einem Pool reserviert ist, um potenzielle Laufwerksausfälle zu unterstützen.
+
+Wenn ein Pool erstellt wird, reserviert das System abhängig von der Anzahl der Laufwerke im Pool automatisch eine standardmäßige Anlagenkapazität.
+
+Pools nutzen während der Rekonstruktion haltende Kapazitäten, wohingegen Volume-Gruppen Hot-Spare-Festplatten zu demselben Zweck einsetzen. Die Methode zur Erhaltung der Kapazität ist eine Verbesserung gegenüber Hot-Spare-Festplatten, da sie eine schnellere Rekonstruktion ermöglicht. Die Konservierungskapazität wird bei einem Hot-Spare-Laufwerk über eine Anzahl von Laufwerken im Pool verteilt, nicht auf einer Festplatte, sodass die Geschwindigkeit und Verfügbarkeit einer einzelnen Festplatte nicht eingeschränkt ist.

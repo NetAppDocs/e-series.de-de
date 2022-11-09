@@ -1,0 +1,81 @@
+---
+permalink: maintenance-e5700/controllers-overview-concept.html 
+sidebar: sidebar 
+keywords: E5700 controller, repair E5700 controller, replace E5700 controller, failed E5700 controller 
+summary: Prüfen der Controller-Typen und -Anforderungen der E5700 
+---
+= Anforderungen für den Austausch von E5700 Controller
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Bevor Sie einen E5700 Controller ersetzen, lesen Sie bitte die Anforderungen und Überlegungen.
+
+Jeder Controller-Behälter enthält eine Controller-Karte, einen Akku und eine optionale Host-Schnittstellenkarte (HIC).
+
+
+
+== Verfahrensübersicht
+
+Wenn Sie einen defekten Controller-Behälter ersetzen, müssen Sie die Batterie und HIC, falls vorhanden, aus dem ursprünglichen Controller-Behälter entfernen und in den Ersatzcontroller-Behälter installieren.
+
+Sie können auf zwei Arten feststellen, ob ein ausgefallener Controller-Behälter besteht:
+
+* Der Recovery Guru im SANtricity System Manager führt Sie dazu, den Controller-Behälter zu ersetzen.
+* Die gelbe Warn-LED am Controller-Behälter leuchtet und zeigt an, dass der Controller einen Fehler aufweist.
+
+
+image::../media/e5700_attention_led_callout.png[Das Aufsehen der e5700 führte zu einer Legende]
+
+*(1)* _Warn-LED_
+
+
+NOTE: Die Abbildung zeigt einen Beispiel-Controller-Behälter; die Host-Ports am Controller-Behälter können unterschiedlich sein.
+
+* Dieses Verfahren gilt für die IOM12- und IOM12B-Laufwerkseinschübe.
+
+
+
+NOTE: IOM12B-Module werden nur ab SANtricity OS 11.07.2 unterstützt. Stellen Sie sicher, dass die Firmware Ihres Controllers aktualisiert wurde, bevor Sie auf ein IOM12B installieren oder aktualisieren.
+
+
+NOTE: Dieses Verfahren gilt für EAM-Hot-Swaps oder Ersatz wie für Regal-ähnliche. So können Sie nur ein IOM12-Modul durch ein anderes IOM12-Modul ersetzen oder ein IOM12B-Modul durch ein anderes IOM12B-Modul ersetzen. (Ihr Shelf kann zwei IOM12-Module haben oder zwei IOM12B-Module haben.)
+
+
+
+== Anforderungen für den Austausch eines fehlerhaften Controllers
+
+Bevor Sie einen Controller austauschen, müssen folgende Funktionen erforderlich sein:
+
+* Ein Ersatzcontroller-Behälter mit der gleichen Teilenummer wie der Controller-Behälter, den Sie austauschen.
+
+
+
+NOTE: Ersatz-Controller sind mit 16 GB vorinstalliertem Speicher ausgestattet. Wenn der Controller eine 64-GB-Konfiguration benötigt, verwenden Sie das im Lieferumfang enthaltene Upgrade-Kit, bevor Sie den Ersatz-Controller installieren.
+
+* Ein ESD-Armband, oder Sie haben andere antistatische Vorsichtsmaßnahmen getroffen.
+* Etiketten, um jedes Kabel zu identifizieren, das mit dem Controller-Behälter verbunden ist.
+* A #1 Kreuzschlitzschraubendreher.
+* Eine Management Station mit einem Browser, der für den Controller auf den SANtricity System Manager zugreifen kann. (Zeigen Sie zum Öffnen der System Manager-Schnittstelle den Domain-Namen oder die IP-Adresse des Controllers im Browser.)
++
+Optional können Sie einige der Verfahren mit der Befehlszeilenschnittstelle (CLI) ausführen. Wenn Sie keinen Zugriff auf die CLI haben, können Sie einen der folgenden Aktionen ausführen:
+
++
+** *Für SANtricity System Manager (Version 11.60 und höher)* -- Laden Sie das CLI-Paket (ZIP-Datei) aus dem System Manager herunter. Wechseln Sie zum Menü:Einstellungen[System > Add-ons > Command Line Interface]. Sie können dann CLI-Befehle von einer Betriebssystemaufforderung ausgeben, z. B. von der DOS C:-Eingabeaufforderung.
+** *Für SANtricity Storage Manager/Enterprise Management Window (EMW)* -- Folgen Sie den Anweisungen im Express Guide, um die Software herunterzuladen und zu installieren. Sie können CLI-Befehle über EMW ausführen, indem Sie Menü:Extras[Skript ausführen] auswählen.
+
+
+
+
+
+
+== Anforderungen für die Duplexkonfiguration
+
+Bei einem Controller-Shelf mit zwei Controllern (Duplexkonfiguration) können Sie einen Controller-Behälter ersetzen, während Ihr Speicher-Array eingeschaltet ist und Host-I/O-Vorgänge ausführt, sofern die folgenden Bedingungen erfüllt sind:
+
+* Der zweite Reglerbehälter im Regal hat optimalen Status.
+* Im Feld *OK to remove* im Bereich Details des Recovery Guru im SANtricity System Manager wird *Ja* angezeigt, was darauf hinweist, dass es sicher ist, diese Komponente zu entfernen.
+

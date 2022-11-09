@@ -1,0 +1,96 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/vc-olh-upgrade-santricity-os.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
+summary: Aktualisieren Sie ein oder mehrere Storage-Arrays mit der neuesten Software und NVSRAM, um sicherzustellen, dass Sie über alle neuesten Funktionen und Fehlerbehebungen verfügen. 
+---
+= Upgrade von SANtricity OS
+:hardbreaks:
+:allow-uri-read: 
+:experimental: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Aktualisieren Sie ein oder mehrere Storage-Arrays mit der neuesten Software und NVSRAM, um sicherzustellen, dass Sie über alle neuesten Funktionen und Fehlerbehebungen verfügen. Der NVSRAM-Controller ist eine Controller-Datei, die die Standardeinstellungen für die Controller angibt.
+
+Stellen Sie sicher, dass:
+
+* Die neuesten SANtricity OS-Dateien sind auf dem Host-System verfügbar, auf dem das Plugin ausgeführt wird.
+* Sie wissen, ob Sie Ihr Software-Upgrade jetzt oder später aktivieren möchten. Aus folgenden Gründen können Sie sich später aktivieren:
++
+** *Tageszeit* -- die Aktivierung der Software kann eine lange Zeit dauern, so dass Sie möglicherweise warten möchten, bis I/O-Lasten leichter sind. Der Failover der Controller während der Aktivierung ist möglich, sodass die Performance bis zum Abschluss des Upgrades unter Umständen niedriger ist als üblich.
+** *Art des Pakets* -- möglicherweise möchten Sie die neue Betriebssystemsoftware auf einem Speicher-Array testen, bevor Sie die Dateien auf anderen Speicher-Arrays aktualisieren.
+
+
+
+
+
+CAUTION: *Risiko eines Datenverlustes oder eines Schadensrisikos am Speicher-Array* -- nehmen Sie während des Upgrades keine Änderungen am Speicher-Array vor. Halten Sie den Strom für das Speicher-Array aufrecht.
+
+.Schritte
+. Wenn Ihr Storage Array nur einen Controller oder einen Multipath-Treiber enthält, beenden Sie die I/O-Aktivitäten des Storage Arrays, um Applikationsfehler zu vermeiden. Wenn Ihr Storage Array über zwei Controller verfügt und Sie einen Multipath-Treiber installiert haben, müssen Sie die I/O-Aktivität nicht stoppen.
+. Wählen Sie in der Hauptansicht *Verwalten* aus, und wählen Sie dann ein oder mehrere Speicher-Arrays aus, die Sie aktualisieren möchten.
+. Wählen Sie Menü:Upgrade Center[Upgrade > SANtricity OS > Software].
++
+Die Seite SANtricity OS-Software aktualisieren wird angezeigt.
+
+. Laden Sie das aktuelle SANtricity OS Softwarepaket von der Support-Website auf Ihren lokalen Computer herunter.
++
+.. Klicken Sie auf Neue Datei zum Software-Repository hinzufügen
+.. Klicken Sie auf den Link, um die neuesten SANtricity OS Downloads zu finden.
+.. Klicken Sie auf den Link *Letzte Version herunterladen*.
+.. Befolgen Sie die restlichen Anweisungen, um die Betriebssystemdatei und die NVSRAM-Datei auf Ihren lokalen Computer herunterzuladen.
++
+
+NOTE: In Version 8.42 und höher ist digital signierte Firmware erforderlich. Wenn Sie versuchen, nicht signierte Firmware herunterzuladen, wird ein Fehler angezeigt und der Download wird abgebrochen.
+
+
+
+. Wählen Sie die Betriebssystemsoftware und die NVSRAM-Datei aus, die Sie zum Aktualisieren der Controller verwenden möchten:
++
+.. Wählen Sie im Dropdown-Menü die Betriebssystemdatei aus, die Sie auf Ihren lokalen Computer heruntergeladen haben.
++
+Wenn mehrere Dateien verfügbar sind, werden die Dateien vom neuesten Datum bis zum ältesten Datum sortiert.
+
++
+
+NOTE: Das Software-Repository listet alle mit dem Plug-in verbundenen Softwaredateien auf. Wenn die Datei nicht angezeigt wird, die Sie verwenden möchten, klicken Sie auf den Link *Neue Datei zum Software-Repository hinzufügen*, um zu dem Speicherort zu navigieren, an dem sich die Betriebssystemdatei befindet, die Sie hinzufügen möchten.
+
+.. Wählen Sie im Dropdown-Menü *Select an NVSRAM file* die gewünschte Controllerdatei aus.
++
+Wenn es mehrere Dateien gibt, werden die Dateien vom neuesten Datum bis zum ältesten Datum sortiert.
+
+
+
+. Überprüfen Sie in der Tabelle kompatibler Speicher-Arrays die Speicherarrays, die mit der ausgewählten Betriebssystemsoftware kompatibel sind, und wählen Sie dann die Arrays aus, die aktualisiert werden sollen.
++
+** Die Speicherarrays, die Sie in der Ansicht Verwalten ausgewählt haben und mit der ausgewählten Firmware-Datei kompatibel sind, werden standardmäßig in der Tabelle kompatible Speicherarrays ausgewählt.
+** Die Speicher-Arrays, die nicht mit der ausgewählten Firmware-Datei aktualisiert werden können, können in der kompatiblen Speicher-Array-Tabelle nicht wie im Status *inkompatibel* angegeben ausgewählt werden.
+
+
+. (Optional) um die Software-Datei ohne Aktivierung auf die Speicher-Arrays zu übertragen, wählen Sie das Kontrollkästchen *Betriebssystemsoftware auf die Speicher-Arrays übertragen, als stufenweise markieren und zu einem späteren Zeitpunkt aktivieren* aus.
+. Klicken Sie Auf *Start*.
+. Je nachdem, ob Sie jetzt oder später aktiviert haben, führen Sie einen der folgenden Schritte aus:
++
+** Typ `TRANSFER` Um zu bestätigen, dass Sie die vorgeschlagene Betriebssystemsoftware auf den Arrays übertragen möchten, die Sie aktualisieren möchten, und klicken Sie dann auf *Transfer*. Um die übertragene Software zu aktivieren, wählen Sie MENU:Upgrade Center[Staged SANtricity OS Software aktivieren].
+** Typ `UPGRADE` Um zu bestätigen, dass Sie die vorgeschlagene Betriebssystemsoftware auf den Arrays übertragen und aktivieren möchten, die Sie für die Aktualisierung ausgewählt haben, und klicken Sie dann auf *Upgrade*.
++
+Das System überträgt die Softwaredatei auf jedes Speicherarray, das Sie für die Aktualisierung ausgewählt haben, und aktiviert diese Datei durch einen Neustart.
+
++
+Während des Aktualisierungsvorgangs treten folgende Aktionen auf:
+
+** Im Rahmen des Upgrades wird eine Integritätsprüfung vor dem Upgrade ausgeführt. Bei der Integritätsprüfung vor dem Upgrade werden alle Komponenten des Storage Arrays bewertet, um sicherzustellen, dass das Upgrade fortgesetzt werden kann.
+** Wenn eine Integritätsprüfung für ein Speicherarray fehlschlägt, wird das Upgrade abgebrochen. Klicken Sie auf die Ellipsen (…) Und wählen Sie *Protokoll speichern*, um die Fehler zu überprüfen. Sie können auch den Fehler der Integritätsprüfung überschreiben und dann auf *Weiter* klicken, um mit dem Upgrade fortzufahren.
+** Sie können den Upgrade-Vorgang nach der Integritätsprüfung vor dem Upgrade abbrechen.
+
+
+. (Optional) Sobald das Upgrade abgeschlossen ist, wird eine Liste der für ein bestimmtes Speicherarray aktualisierten Versionen angezeigt, indem Sie auf die Auslassungspunkte (…) klicken. Und wählen Sie dann *Protokoll speichern*.
++
+Die Datei wird im Ordner Downloads für Ihren Browser mit dem Namen gespeichert `upgrade_log-<date>. json`.
+
+

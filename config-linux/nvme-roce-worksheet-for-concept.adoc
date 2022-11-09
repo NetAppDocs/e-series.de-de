@@ -1,0 +1,144 @@
+---
+permalink: config-linux/nvme-roce-worksheet-for-concept.html 
+sidebar: sidebar 
+keywords: NVMe over RoCE worksheet Linux, express linux configuration, software configuration, linux host, E2800, E5700, EF300, EF600, E-Series, eseries 
+summary: Verwenden Sie dieses Arbeitsblatt, um Informationen zur NVMe over RoCE-Storage-Konfiguration aufzuzeichnen. 
+---
+= Nehmen Sie die NVMe-over-RoCE-Konfiguration auf
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können eine PDF-Datei auf dieser Seite erstellen und drucken und dann mithilfe des folgenden Arbeitsblatts NVMe over RoCE-Storage-Konfigurationsinformationen erfassen. Sie benötigen diese Informationen für Bereitstellungsaufgaben.
+
+
+
+== Topologie mit direkter Verbindung
+
+In einer Topologie mit direkter Verbindung sind ein oder mehrere Hosts direkt mit dem Subsystem verbunden. In SANtricity OS 11.50 Release unterstützen wir, wie unten dargestellt, eine einzelne Verbindung von jedem Host zu einem Subsystem-Controller. In dieser Konfiguration sollte sich ein HCA-Port (Host Channel Adapter) von jedem Host im selben Subnetz befinden wie der E-Series-Controller-Port, mit dem er verbunden ist, aber in einem anderen Subnetz als dem anderen HCA-Port.
+
+image::../media/nvmeof_direct_connect.gif[Nvmeof direct connect]
+
+Eine Beispielkonfiguration, die die Anforderungen erfüllt, besteht aus vier Netznetzen wie folgt:
+
+* Subnetz 1: Host 1 HCA-Port 1 und Controller 1 Host-Port 1
+* Subnetz 2: Host 1 HCA-Port 2 und Controller 2 Host-Port 1
+* Subnetz 3: Host 2 HCA-Port 1 und Controller 1 Host-Port 2
+* Subnetz 4: Host 2 HCA-Port 2 und Controller 2 Host-Port 2
+
+
+
+
+== Switch Connect-Topologie
+
+In einer Fabric-Topologie werden ein oder mehrere Switches verwendet. Siehe https://mysupport.netapp.com/matrix["NetApp Interoperabilitäts-Matrix-Tool"^] Für eine Liste der unterstützten Switches.
+
+image::../media/nvmeof_switch_connect.gif[Nvmeof Switch-Verbindungen]
+
+
+
+== Host-IDs
+
+Suchen und Dokumentieren des Initiator-NQN von jedem Host aus.
+
+|===
+| Host-Port-Verbindungen | Software-Initiator NQN 
+
+
+ a| 
+Host (Initiator) 1
+ a| 
+
+
+
+ a| 
+ a| 
+
+
+
+ a| 
+Host (Initiator) 2
+ a| 
+
+
+
+ a| 
+ a| 
+
+
+
+ a| 
+ a| 
+
+|===
+
+
+== Ziel-NQN
+
+Dokumentieren Sie das Ziel-NQN für das Speicher-Array.
+
+|===
+| Array-Name | Ziel-NQN 
+
+
+ a| 
+Array-Controller (Ziel)
+ a| 
+
+|===
+
+
+== Ziel-NQNs
+
+Dokumentieren Sie die NQNs, die von den Array-Ports verwendet werden sollen.
+
+|===
+| Port-Verbindungen für Array-Controller (Ziel | NQN 
+
+
+ a| 
+Controller A, Port 1
+ a| 
+
+
+
+ a| 
+Controller B, Port 1
+ a| 
+
+
+
+ a| 
+Controller A, Port 2
+ a| 
+
+
+
+ a| 
+Controller B, Port 2
+ a| 
+
+|===
+
+
+== Zuordnung des Hostnamens
+
+
+NOTE: Der Name des Zuordners wird während des Workflows erstellt.
+
+|===
+
+
+ a| 
+Zuordnung des Hostnamens
+ a| 
+
+
+
+ a| 
+Host-OS-Typ
+ a| 
+
+|===

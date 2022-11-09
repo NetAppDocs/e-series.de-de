@@ -1,0 +1,48 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/vc-olh-activate-staged-os-software.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
+summary: Sie können wählen, ob Sie die Software-Datei zu einem angenehmeren Zeitpunkt aktivieren möchten. 
+---
+= Aktivieren Sie die stufenweise Betriebssystemsoftware
+:hardbreaks:
+:allow-uri-read: 
+:experimental: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Sie können die Software-Datei sofort aktivieren oder bis zu einem angenehmeren Zeitpunkt warten. Bei diesem Verfahren wird davon ausgegangen, dass Sie die Softwaredatei zu einem späteren Zeitpunkt aktivieren.
+
+Sie können die Firmware-Dateien übertragen, ohne sie zu aktivieren. Aus folgenden Gründen können Sie sich später aktivieren:
+
+* *Tageszeit* -- die Aktivierung der Software kann eine lange Zeit dauern, so dass Sie möglicherweise warten möchten, bis I/O-Lasten leichter sind. Die Controller starten neu und führen einen Failover während der Aktivierung durch. Dadurch kann die Performance bis zum Abschluss des Upgrades unter Umständen niedriger sein als üblich.
+* *Paketyp* -- möglicherweise möchten Sie die neue Software und Firmware auf einem Speicher-Array testen, bevor Sie die Dateien auf anderen Speicher-Arrays aktualisieren.
+
+
+
+NOTE: Sie können den Aktivierungsvorgang nach dem Start nicht beenden.
+
+.Schritte
+. Wählen Sie in der Hauptansicht *Verwalten*. Klicken Sie bei Bedarf auf die Spalte *Status*, um oben auf der Seite alle Speicher-Arrays mit dem Status „Betriebssystem-Upgrade (Aktivierung ausstehend)“ zu sortieren.
+. Wählen Sie ein oder mehrere Speicher-Arrays aus, für die Sie Software aktivieren möchten, und wählen Sie dann Menü:Upgrade Center[Activate Staged SANtricity Software].
++
+Während des Aktualisierungsvorgangs treten folgende Aktionen auf:
+
++
+** Im Rahmen der Aktivierung wird eine Integritätsprüfung vor dem Upgrade ausgeführt. Bei der Integritätsprüfung vor dem Upgrade werden alle Komponenten des Storage-Arrays bewertet, um sicherzustellen, dass die Aktivierung fortgesetzt werden kann.
+** Wenn eine Integritätsprüfung für ein Speicherarray fehlschlägt, wird die Aktivierung angehalten. Klicken Sie auf die Ellipsen (…) Und wählen Sie *Protokoll speichern*, um die Fehler zu überprüfen. Sie können auch den Fehler der Integritätsprüfung überschreiben und dann auf *Weiter* klicken, um mit der Aktivierung fortzufahren.
+** Sie können den Aktivierungsvorgang nach der Integritätsprüfung vor dem Upgrade abbrechen.
++
+Nach erfolgreichem Abschluss der Integritätsprüfung vor dem Upgrade erfolgt die Aktivierung. Die Aktivierungszeiten hängen von der Konfiguration des Speicherarrays und den Komponenten ab, die Sie aktivieren.
+
+
+
+. (Optional) nach Abschluss der Aktivierung sehen Sie eine Liste der aktivierten Optionen für ein bestimmtes Speicherarray, indem Sie auf die Ellipsen (…) klicken. Und wählen Sie dann *Protokoll speichern*.
++
+Die Datei wird im Ordner Downloads für Ihren Browser mit dem Namen gespeichert `activate_log-<date>. json`.
+
+

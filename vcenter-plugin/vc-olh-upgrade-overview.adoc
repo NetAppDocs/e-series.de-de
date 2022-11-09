@@ -1,0 +1,70 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/vc-olh-upgrade-overview.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
+summary: Sie können SANtricity und NVSRAM Upgrades für mehrere Storage Arrays desselben Typs managen. 
+---
+= Upgrade-Übersicht
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Im Storage Plug-in für vCenter können Sie SANtricity Software und NVSRAM Upgrades für mehrere Storage Arrays desselben Typs managen.
+
+
+
+== Workflow-Upgrade
+
+Die folgenden Schritte bieten einen grundlegenden Workflow zur Durchführung von Software-Upgrades:
+
+. Sie laden die neueste SANtricity OS-Datei von der Support-Website herunter. (Ein Link ist auf der Support-Seite verfügbar) Speichern Sie die Datei auf dem Management-Host-System (dem Host, auf den Sie in einem Browser auf das Plugin zugreifen), und entpacken Sie die Datei.
+. Im Plugin können Sie die SANtricity OS-Softwaredatei und die NVSRAM-Datei in das Repository laden (ein Bereich des Servers, auf dem Dateien gespeichert sind).
+. Nachdem die Dateien in das Repository geladen wurden, können Sie die Datei auswählen, die für das Upgrade verwendet werden soll. Wählen Sie auf der Seite Upgrade SANtricity OS Software die Betriebssystemsoftware und die NVSRAM-Datei aus. Nach Auswahl einer Softwaredatei wird auf dieser Seite eine Liste kompatibler Speicher-Arrays angezeigt. Anschließend wählen Sie die Speicher-Arrays aus, die Sie mit der neuen Software aktualisieren möchten. (Sie können nicht inkompatible Arrays auswählen.)
+. Anschließend können Sie eine sofortige Softwareübertragung und -Aktivierung starten oder die Dateien zu einem späteren Zeitpunkt für die Aktivierung aktivieren. Während des Upgrade-Vorgangs führt das Plugin die folgenden Aufgaben aus:
++
+** Durchführung einer Integritätsprüfung für die Speicher-Arrays, um festzustellen, ob Bedingungen vorhanden sind, die das Upgrade möglicherweise verhindern. Wenn Arrays die Integritätsprüfung nicht bestanden haben, können Sie das jeweilige Array überspringen und das Upgrade für die anderen fortsetzen. Alternativ können Sie den gesamten Prozess beenden und die Arrays, die nicht bestanden haben, beheben.
+** Überträgt die Upgrade-Dateien an jeden Controller.
+** Bootet die Controller neu und aktiviert das neue Betriebssystem, jeweils ein Controller. Während der Aktivierung wird die vorhandene Betriebssystemdatei durch die neue Datei ersetzt.
+
+
+
+
+
+NOTE: Sie können auch angeben, dass die Software zu einem späteren Zeitpunkt aktiviert wird.
+
+
+
+== Upgrade-Überlegungen
+
+Vor dem Upgrade mehrerer Storage-Arrays sollten Sie die wichtigsten Überlegungen in Ihrer Planung durchgehen.
+
+
+
+=== Aktuelle Versionen
+
+Sie können die aktuellen Softwareversionen des SANtricity OS von der Seite Verwalten des Storage Plug-ins für vCenter für jedes erkannte Storage-Array anzeigen. Die Version wird in der Spalte SANtricity OS Software angezeigt. Die Informationen zu Controller-Firmware und NVSRAM finden Sie in einem Popup-Dialogfeld, wenn Sie in jeder Zeile auf die Betriebssystemversion klicken.
+
+
+
+=== Andere Komponenten müssen aktualisiert werden
+
+Im Rahmen des Upgrades müssen Sie eventuell auch den Multipath-/Failover-Treiber oder den HBA-Treiber des Hosts aktualisieren, damit der Host korrekt mit den Controllern interagieren kann. Informationen zur Kompatibilität finden Sie im link:https://imt.netapp.com/matrix/["Interoperabilitäts-Matrix-Tool"^].
+
+
+
+=== Dual-Controller
+
+Wenn ein Storage-Array zwei Controller enthält und ein Multipath-Treiber installiert ist, kann das Storage-Array die I/O-Verarbeitung während des Upgrades fortsetzen. Während des Upgrades erfolgt der folgende Vorgang:
+
+. Controller A Failover aller LUNs zu Controller B
+. Das Upgrade erfolgt bei Controller A
+. Controller A nimmt seine LUNs und alle Controller B LUNs wieder auf.
+. Upgrade erfolgt auf Controller B.
+
+
+Nach Abschluss des Upgrades müssen Sie Volumes möglicherweise manuell zwischen den Controllern neu verteilen, um sicherzustellen, dass die Volumes wieder zum korrekten Controller zurückkehren.

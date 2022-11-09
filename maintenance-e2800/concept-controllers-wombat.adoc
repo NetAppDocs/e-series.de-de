@@ -1,0 +1,14 @@
+---
+permalink: maintenance-e2800/concept-controllers-wombat.html 
+sidebar: sidebar 
+keywords: controller, board, firmware, software, control, drive, implement, system, manager, function, convert, duplex 
+summary: Ein Controller besteht aus einer Hauptplatine, Firmware und Software. Sie steuert die Laufwerke und implementiert die Funktionen von System Manager. In diesem Abschnitt wird beschrieben, wie Sie in eine Duplexkonfiguration umwandeln können, indem Sie einen zweiten Controller hinzufügen und einen Controller in einer Simplex-Konfiguration und in einer Duplexkonfiguration ersetzen. 
+---
+= Controller
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Ein Controller besteht aus einer Hauptplatine, Firmware und Software. Sie steuert die Laufwerke und implementiert die Funktionen von System Manager. In diesem Abschnitt wird beschrieben, wie Sie in eine Duplexkonfiguration umwandeln können, indem Sie einen zweiten Controller hinzufügen und einen Controller in einer Simplex-Konfiguration und in einer Duplexkonfiguration ersetzen.

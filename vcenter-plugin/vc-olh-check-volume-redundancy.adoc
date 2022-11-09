@@ -1,0 +1,86 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/vc-olh-check-volume-redundancy.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
+summary: Sie können die Redundanz auf einem Volume in einem Pool oder einer Volume-Gruppe überprüfen, um festzustellen, ob die Daten auf diesem Volume konsistent sind. Redundanzdaten dienen der schnellen Rekonstruktion von Informationen über das Ersatzlaufwerk, wenn eines der Laufwerke im Pool oder der Volume-Gruppe ausfällt. 
+---
+= Volume-Redundanz prüfen
+:hardbreaks:
+:allow-uri-read: 
+:experimental: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Mithilfe des technischen Supports oder der Anleitung durch den Recovery Guru können Sie die Redundanz auf einem Volume in einem Pool oder einer Volume-Gruppe überprüfen, um zu ermitteln, ob die Daten auf diesem Volume konsistent sind.
+
+Redundanzdaten dienen der schnellen Rekonstruktion von Informationen über das Ersatzlaufwerk, wenn eines der Laufwerke im Pool oder der Volume-Gruppe ausfällt.
+
+.Bevor Sie beginnen
+* Der Status des Pools oder der Volume-Gruppe muss optimal sein.
+* Der Pool oder die Volume-Gruppe darf keine Änderungsvorgänge für das Volume ausführen.
+* Sie können Redundanz auf jeder RAID-Ebene außer RAID 0 prüfen, da RAID 0 keine Datenredundanz hat. (Pools sind nur als RAID 6 konfiguriert.)
+
+
+
+NOTE: Prüfen Sie die Volume-Redundanz nur dann, wenn Sie vom Recovery Guru zur Verfügung stehen und unter Anleitung des technischen Supports dies tun.
+
+Sie können diese Prüfung nur für einen Pool oder eine Volume-Gruppe gleichzeitig durchführen. Bei einer Volume-Redundanzprüfung werden folgende Aktionen durchgeführt:
+
+* Scannt die Datenblöcke in einem RAID 3-Volume, einem RAID 5-Volume oder einem RAID 6-Volume und überprüft die Redundanzinformationen für jeden Block. (RAID 3 kann Volume-Gruppen nur über die Befehlszeilenschnittstelle zugewiesen werden.)
+* Vergleicht die Datenblöcke auf gespiegelten RAID 1-Laufwerken.
+* Gibt Redundanzfehler zurück, wenn die Controller-Firmware feststellt, dass die Daten inkonsistent sind.
+
+
+
+NOTE: Eine sofortige Durchführung einer Redundanzprüfung auf demselben Pool oder derselben Volume-Gruppe kann zu einem Fehler führen. Um dieses Problem zu vermeiden, warten Sie ein bis zwei Minuten, bevor Sie eine weitere Redundanzprüfung auf demselben Pool oder derselben Volume-Gruppe durchführen.
+
+.Schritte
+. Wählen Sie auf der Seite Verwalten das Speicher-Array mit dem Pool oder der Volume-Gruppe aus.
+. Wählen Sie Menü:Provisioning[Pools und Volume-Gruppen konfigurieren].
+. Menü wählen:Sonstige Aufgaben[Volumenredundanz prüfen].
++
+Das Dialogfeld Redundanz prüfen wird angezeigt.
+
+. Wählen Sie die Volumes aus, die Sie prüfen möchten, und geben Sie anschließend Check ein, um zu bestätigen, dass Sie diesen Vorgang ausführen möchten.
+. Klicken Sie Auf *Prüfen*.
++
+Der Vorgang „Volume-Redundanz prüfen“ wird gestartet. Die Volumes im Pool oder in der Volume-Gruppe werden sequenziell gescannt. Sie beginnen dabei von oben in der Tabelle im Dialogfeld. Diese Aktionen werden beim Scannen der einzelnen Volumes ausgeführt:
+
++
+** Das Volume wird in der Volume-Tabelle ausgewählt.
+** Der Status der Redundanzprüfung wird in der Spalte Status angezeigt.
+** Die Prüfung wird bei einem Datenträger- oder Paritätsfehler angehalten und meldet dann den Fehler. Die folgende Tabelle bietet weitere Informationen zum Status der Redundanzprüfung:
+
+
++
+.Felddetails
+====
+[cols="25h,~"]
+|===
+| Status | Beschreibung 
+
+
+| Ausstehend | Dies ist das erste zu scannende Volume, und Sie haben nicht auf Start geklickt, um die Redundanzprüfung zu starten. -Oder- die Redundanzprüfung wird auf anderen Volumes im Pool oder der Volume-Gruppe durchgeführt. 
+
+
+| Prüfen | Das Volumen wird durch die Redundanzprüfung geprüft. 
+
+
+| Bestanden | Das Volume bestand die Redundanzprüfung. In den Redundanzinformationen wurden keine Inkonsistenzen gefunden. 
+
+
+| Fehlgeschlagen | Das Volume hat die Redundanzprüfung nicht bestanden. In den Redundanzinformationen wurden Inkonsistenzen gefunden. 
+
+
+| Medienfehler | Das Laufwerkmedium ist defekt und unlesbar. Befolgen Sie die Anweisungen im Recovery Guru. 
+
+
+| Paritätsfehler | Die Parität ist nicht, was sie für einen bestimmten Teil der Daten sein sollte. Ein Paritätsfehler ist potenziell schwerwiegend und kann zu permanentem Datenverlust führen. 
+|===
+====
+. Klicken Sie auf *Fertig*, nachdem das letzte Volume im Pool oder der Volume-Gruppe überprüft wurde.
+

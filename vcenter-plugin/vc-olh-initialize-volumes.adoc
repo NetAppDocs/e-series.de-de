@@ -1,0 +1,58 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/vc-olh-initialize-volumes.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
+summary: Initialisieren Sie ein Volume manuell, um die Wiederherstellung nach bestimmten Fehlerbedingungen durchzuführen. 
+---
+= Volumes initialisieren
+:hardbreaks:
+:allow-uri-read: 
+:experimental: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Ein Volume wird beim ersten Erstellen automatisch initialisiert. Möglicherweise empfiehlt der Recovery Guru jedoch, ein Volume manuell zu initialisieren, um eine Wiederherstellung nach bestimmten Fehlerbedingungen durchzuführen.
+
+Verwenden Sie diese Option nur unter Anleitung des technischen Supports. Sie können ein oder mehrere Volumes für die Initialisierung auswählen.
+
+.Bevor Sie beginnen
+* Alle I/O-Vorgänge wurden angehalten.
+* Alle Geräte oder Dateisysteme auf den Volumes, die Sie initialisieren möchten, müssen abgehängt werden.
+* Die Lautstärke ist optimal und es werden keine Änderungsvorgänge auf dem Volume ausgeführt.*Achtung: *Nach dem Start kann der Vorgang nicht mehr abgebrochen werden. Alle Volume-Daten werden gelöscht. Versuchen Sie diese Operation nur, wenn der Recovery Guru Sie dazu rät. Wenden Sie sich vor Beginn dieses Verfahrens an den technischen Support.
+
+
+Bei der Initialisierung eines Volume bleiben die WWN, Host-Zuweisungen, zugewiesene Kapazität und reservierte Kapazität des Volume erhalten. Zudem werden dieselben Data Assurance (da)-Einstellungen und Sicherheitseinstellungen beibehalten.
+
+Die folgenden Volume-Typen können nicht initialisiert werden:
+
+* Basis-Volume eines Snapshot-Volumes
+* Primäres Volume in einer Spiegelbeziehung
+* Sekundäres Volume in einer Spiegelbeziehung
+* Quell-Volume in einer Volume-Kopie
+* Ziel-Volume in einer Volume-Kopie
+* Volume, für das bereits eine Initialisierung läuft
+
+
+Dieser Vorgang gilt nur für Standard-Volumes, die aus Pools oder Volume-Gruppen erstellt wurden.
+
+.Schritte
+. Wählen Sie auf der Seite Verwalten das Speicher-Array aus, das die Volumes enthält, die Sie initialisieren möchten.
+. Wählen Sie MENU:Provisioning[Volumes verwalten].
+. Wählen Sie ein beliebiges Volume aus, und wählen Sie dann Menü:Mehr[Initialisieren von Volumes].
++
+Das Dialogfeld Volumes initialisieren wird angezeigt. In diesem Dialogfeld werden alle Volumes im Speicher-Array angezeigt.
+
+. Wählen Sie ein oder mehrere Volumes aus, die Sie initialisieren möchten, und bestätigen Sie, dass Sie den Vorgang durchführen möchten.
+
+
+Das System führt die folgenden Aktionen durch:
+
+* Löscht alle Daten aus den Volumes, die initialisiert wurden.
+* Löscht die Blockindizes, was dazu führt, dass nicht geschriebene Blöcke gelesen werden, als ob sie null gefüllt sind (das Volume scheint vollständig leer zu sein).
+
+
+Dieser Vorgang kann langwierig sein und die System-Performance beeinträchtigen.

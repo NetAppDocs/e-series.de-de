@@ -1,0 +1,91 @@
+---
+permalink: maintenance-e2800/batteries-overview-requirements-concept.html 
+sidebar: sidebar 
+keywords: E2800 battery fail, E2800 battery, E2800 battery replacement, replace E2800 battery, replacing E2800 battery, E2800, E-Series, eseries 
+summary: Anforderungen und Überlegungen zum Austausch der E2800 Batterie prüfen 
+---
+= Anforderungen für den Austausch von E2800 Batterien
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Bevor Sie eine E2800-Batterie ersetzen, sollten Sie die Anforderungen und Überlegungen überprüfen.
+
+Jeder Controller-Behälter enthält eine Batterie, die zwischengespeicherte Daten behält, wenn die Wechselstromversorgung ausfällt.
+
+
+
+== Recovery Guru – Warnmeldungen
+
+Wenn der Recovery Guru in SANtricity System Manager einen der folgenden Statusmeldungen meldet, müssen Sie die betroffene Batterie austauschen:
+
+* Akku Defekt
+* Austausch Der Batterie Erforderlich
+
+
+Sehen Sie sich im SANtricity System Manager die Details im Recovery Guru an, um zu überprüfen, ob ein Problem mit einer Batterie vorliegt, und um sicherzustellen, dass keine weiteren Punkte zuerst behoben werden müssen.
+
+
+
+== Verfahrensübersicht
+
+Um Ihre Daten zu schützen, müssen Sie eine fehlerhafte Batterie so schnell wie möglich austauschen.
+
+Im Folgenden finden Sie eine Übersicht über die Schritte zum Austausch eines Akkus in einem E2800 Controller:
+
+. Bereiten Sie den Austausch vor, und befolgen Sie dabei die entsprechenden Schritte für eine Duplex- oder Simplexkonfiguration.
+. Den Controller-Behälter ausbauen.
+. Entfernen Sie die fehlerhafte Batterie.
+. Setzen Sie den neuen Akku ein.
+. Installieren Sie den Controller-Behälter erneut.
+. Führen Sie den Austausch gemäß den entsprechenden Schritten für eine Duplex- oder Simplex-Konfiguration durch.
+
+
+
+
+== Duplex- oder Simplexkonfiguration
+
+Die Schritte zum Austauschen einer Batterie hängen davon ab, ob Sie einen oder zwei Controller haben:
+
+|===
+| Wenn Ihr Storage Array... | Sie müssen... 
+
+
+ a| 
+Zwei Controller (Duplexkonfiguration)
+ a| 
+. Versetzen Sie den Controller in den Offline-Modus.
+. Den Controller-Behälter ausbauen.
+. Tauschen Sie die Batterie aus.
+. Den Controller-Behälter austauschen.
+. Versetzen Sie den Controller in den Online-Modus.
+
+
+
+
+ a| 
+Ein Controller (Simplexkonfiguration)
+ a| 
+. Stoppen Sie Host-I/O-Vorgänge.
+. Schalten Sie das Controller-Shelf aus.
+. Den Controller-Behälter ausbauen.
+. Tauschen Sie die Batterie aus.
+. Den Controller-Behälter austauschen.
+. Schalten Sie das Controller-Shelf ein.
+
+
+|===
+
+
+== Anforderungen für den Austausch einer Batterie
+
+Wenn Sie einen fehlerhaften Akku austauschen möchten, müssen Sie Folgendes haben:
+
+* Eine Ersatzbatterie.
+* Ein ESD-Armband, oder Sie haben andere antistatische Vorsichtsmaßnahmen getroffen.
+* Etiketten, um jedes Kabel zu identifizieren, das mit dem Controller-Behälter verbunden ist.
+* Eine Management Station mit einem Browser, der für den Controller auf den SANtricity System Manager zugreifen kann. (Zeigen Sie zum Öffnen der System Manager-Schnittstelle den Domain-Namen oder die IP-Adresse des Controllers im Browser.)
+

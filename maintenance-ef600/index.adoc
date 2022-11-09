@@ -1,0 +1,68 @@
+---
+permalink: maintenance-ef600/index.html 
+sidebar: sidebar 
+keywords: EF300 maintenance, EF600 maintenance, repairing EF300, repairing EF600, replace EF300 components, replace EF600 components 
+summary: EF300- und EF600-Hardware Aufrechterhaltung 
+---
+= EF300- und EF600-Hardware nutzen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Für die EF300- und EF600-Speichersysteme können Wartungsvorgänge für die folgenden Komponenten durchgeführt werden.
+
+
+
+== Batterien
+
+Ein Akku ist im Lieferumfang eines Controllers enthalten und behält zwischengespeicherte Daten bei Ausfall des Netzstroms bei.
+
+
+
+== Controller
+
+Ein Controller besteht aus einer Hauptplatine, Firmware und Software. Sie steuert die Laufwerke und implementiert die Funktionen des SANtricity-System-Managers.
+
+
+
+== DIMMs
+
+Sie müssen ein DIMM (Dual-Inline-Speichermodul) ersetzen, wenn ein Speicherfehler vorliegt oder ein ausgefallenes DIMM vorliegt.
+
+
+
+== Laufwerke
+
+Ein Laufwerk ist ein Gerät, das den physischen Speicher für Daten bereitstellt.
+
+
+
+== Lüfter
+
+Jedes EF300- oder EF600 Controller-Shelf oder Laufwerk-Shelf enthält fünf Lüfter zum Kühlen des Controllers.
+
+
+
+== Host-Schnittstellenkarten (HICs)
+
+Eine Host Interface Card (HIC) muss innerhalb eines Controller-Kanisters installiert sein. Der EF600 Controller umfasst Host Ports auf der optionalen HIC. In die HIC integrierte Host Ports werden HIC Ports genannt.
+
+
+
+== Host-Port-Protokoll
+
+Sie können das Host-Protokoll in ein anderes Protokoll umwandeln, um Kompatibilität und Kommunikation herzustellen.
+
+
+
+== Netzteile
+
+Ein Netzteil stellt eine redundante Stromversorgung in einem Controller Shelf bereit.
+
+
+
+== SAS-Erweiterungskarten
+
+Eine SAS-Erweiterungskarte kann in einem Controller-Behälter installiert werden. Der EF300-Controller unterstützt SAS-Erweiterung.

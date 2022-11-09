@@ -1,0 +1,24 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/vc-olh-how-do-i-match-the-host-ports-to-a-host.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
+summary: 'Wenn Sie einen Host manuell erstellen, müssen Sie zuerst das entsprechende HBA-Dienstprogramm (Host Bus Adapter) verwenden, das auf dem Host verfügbar ist, um die Host-Port-IDs zu ermitteln, die mit jedem HBA verknüpft sind, der im Host installiert ist.' 
+---
+= Wie Stelle ich die Host-Ports einem Host gegenüber?
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Wenn Sie einen Host manuell erstellen, müssen Sie zuerst das entsprechende HBA-Dienstprogramm (Host Bus Adapter) verwenden, das auf dem Host verfügbar ist, um die Host-Port-IDs zu ermitteln, die mit jedem HBA verknüpft sind, der im Host installiert ist.
+
+Wenn Sie über diese Informationen verfügen, wählen Sie aus der Liste im Dialogfeld „Host erstellen“ die Host-Port-IDs aus, die sich beim Speicher-Array angemeldet haben.
+
+
+CAUTION: Stellen Sie sicher, dass Sie die entsprechenden Host-Port-IDs für den von Ihnen erstellten Host auswählen. Wenn Sie die falschen Host-Port-IDs zuordnen, können Sie unbeabsichtigten Zugriff von einem anderen Host auf diese Daten verursachen.
+
+Wenn Sie Hosts automatisch mithilfe des Host Context Agent (HCA) erstellen, der auf jedem Host installiert ist, sollte die HCA die Host-Port-IDs automatisch jedem Host zuordnen und entsprechend konfigurieren.

@@ -1,0 +1,191 @@
+---
+permalink: upgrade-santricity/upgrade-multiple-controller-task.html 
+sidebar: sidebar 
+keywords: E-Series, eseries, E2800, E5700, EF300, EF600, SANtricity, drive firmware, upgrade SANtricity, upgrade OS, upgrade E-Series, upgrade firmware, upgrading, upgrade IOM firmware, upgrade NVSRAM, upgrade controller 
+summary: Verwenden Sie SANtricity Unified Manager, um ein Upgrade der SANtricity OS Software auf mehreren Storage Arrays desselben Typs durchzuführen. 
+---
+= Aktualisieren von Software und Firmware für mehrere Controller
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können mehrere Controller des gleichen Typs mit SANtricity Unified Manager aktualisieren.
+
+.Bevor Sie beginnen
+* Prüfen link:overview-upgrade-consider-task.html["Upgrade-Überlegungen"].
+* Stellen Sie fest, ob Sie Ihr Software-Upgrade jetzt oder später aktivieren möchten. Aus folgenden Gründen können Sie sich später aktivieren:
++
+** *Tageszeit* -- die Aktivierung der Software kann eine lange Zeit dauern, so dass Sie möglicherweise warten möchten, bis I/O-Lasten leichter sind. Der Failover der Controller während der Aktivierung ist möglich, sodass die Performance bis zum Abschluss des Upgrades unter Umständen niedriger ist als üblich.
+** *Art des Pakets* -- möglicherweise möchten Sie die neue Betriebssystemsoftware auf einem Speicher-Array testen, bevor Sie die Dateien auf anderen Speicher-Arrays aktualisieren.
+
+
+* Beachten Sie folgende Vorsichtsmaßnahmen:
+
+
+
+CAUTION: Risiko eines Datenverlusts oder einer Beschädigung des Storage Arrays: Nehmen Sie während des Upgrades keine Änderungen am Storage Array vor. Halten Sie den Strom für das Speicher-Array aufrecht.
+
+
+CAUTION: Bei einem Upgrade von SANtricity OS auf einer StorageGRID Appliance (z. B. SG5612 oder SG5760) müssen I/O-Aktivitäten angehalten werden, indem die Appliance in den Wartungsmodus versetzt wird, bevor Sie mit diesem Verfahren fortfahren. Andernfalls könnten die Daten verloren gehen. Ausführliche Schritte finden Sie in der Installations- und Wartungsanleitung für Ihre StorageGRID-Appliance.
+
+
+
+== Schritt 1: Durchführen einer Integritätsprüfung vor dem Upgrade
+
+Eine Zustandsprüfung wird im Rahmen des Upgrade-Prozesses ausgeführt, doch vor Beginn kann zusätzlich ein Systemcheck separat durchgeführt werden. Bei der Integritätsprüfung werden Komponenten des Storage-Arrays bewertet, um sicherzustellen, dass das Upgrade fortgesetzt werden kann.
+
+.Schritte
+. Öffnen Sie Unified Manager.
+. Wählen Sie in der Hauptansicht *Verwalten* und dann Menü:Upgrade Center[Health Check Pre-Upgrade].
++
+Das Dialogfeld Integritätsprüfung vor dem Upgrade wird geöffnet und zeigt alle erkannten Speichersysteme an.
+
+. Filtern oder sortieren Sie bei Bedarf die Speichersysteme in der Liste, sodass Sie alle Systeme, die sich derzeit nicht im optimalen Zustand befinden, anzeigen können.
+. Aktivieren Sie die Kontrollkästchen für die Speichersysteme, die Sie durch die Integritätsprüfung ausführen möchten.
+. Klicken Sie Auf *Start*.
++
+Der Fortschritt wird im Dialogfeld angezeigt, während die Integritätsprüfung durchgeführt wird.
+
+. Wenn die Integritätsprüfung abgeschlossen ist, können Sie rechts neben jeder Zeile auf die Ellipsen (...) klicken, um weitere Informationen anzuzeigen und andere Aufgaben auszuführen.
++
+
+NOTE: Wenn Arrays die Integritätsprüfung nicht bestanden haben, können Sie das jeweilige Array überspringen und das Upgrade für die anderen fortsetzen. Alternativ können Sie den gesamten Prozess beenden und die Arrays, die nicht bestanden haben, beheben.
+
+
+
+
+
+== Schritt 2: Laden Sie Software-Dateien von der Support-Website
+
+In diesem Schritt speichern Sie auf der NetApp Support Site die neuen DLP-Dateien (Download Package) in Ihrem Management-Host-System.
+
+.Schritte
+. Wenn Ihr Storage Array nur einen Controller oder einen Multipath-Treiber enthält, beenden Sie die I/O-Aktivitäten des Storage Arrays, um Applikationsfehler zu vermeiden. Wenn Ihr Storage Array über zwei Controller verfügt und Sie einen Multipath-Treiber installiert haben, müssen Sie die I/O-Aktivität nicht stoppen.
+. Wählen Sie in der Hauptansicht von Unified Manager die Option *Verwalten* aus und wählen Sie dann ein oder mehrere Speicher-Arrays aus, die Sie aktualisieren möchten.
+. Wählen Sie MENU:Upgrade Center[Upgrade SANtricity OS Software].
++
+Die Seite SANtricity OS-Software aktualisieren wird angezeigt.
+
+. Laden Sie das neueste Software-Paket für SANtricity OS von der NetApp Support-Website auf Ihren lokalen Computer herunter.
++
+.. Klicken Sie auf *Neue Datei zum Software-Repository hinzufügen*.
+.. Klicken Sie auf den Link, um die neuesten *SANtricity OS Downloads* zu finden.
+.. Klicken Sie auf den Link *Letzte Version herunterladen*.
+.. Folgen Sie den restlichen Anweisungen, um die SANtricity OS-Datei und die NVSRAM-Datei auf Ihren lokalen Computer herunterzuladen.
+
+
++
+
+NOTE: In Version 8.42 und höher ist digital signierte Firmware erforderlich. Wenn Sie versuchen, nicht signierte Firmware herunterzuladen, wird ein Fehler angezeigt und der Download wird abgebrochen.
+
+
+
+
+
+== Schritt 3: Übertragen Sie Software-Dateien auf die Controller
+
+Sie laden die SANtricity OS Softwaredatei und die NVSRAM-Datei in das Repository, damit sie für das Unified Manager Upgrade Center zugänglich ist.
+
+
+CAUTION: Risiko eines Datenverlusts oder einer Beschädigung des Storage Arrays: Nehmen Sie während des Upgrades keine Änderungen am Storage Array vor. Halten Sie den Strom für das Speicher-Array aufrecht.
+
+.Schritte
+. Wählen Sie in der Hauptansicht von Unified Manager die Option *Verwalten* aus und wählen Sie dann ein oder mehrere Speicher-Arrays aus, die Sie aktualisieren möchten.
+. Wählen Sie MENU:Upgrade Center[Upgrade SANtricity OS Software].
++
+Die Seite SANtricity OS-Software aktualisieren wird angezeigt.
+
+. Laden Sie das neueste Software-Paket für SANtricity OS von der NetApp Support-Website auf Ihren lokalen Computer herunter.
++
+.. Klicken Sie auf *Neue Datei zum Software-Repository hinzufügen*.
+.. Klicken Sie auf den Link, um die neuesten *SANtricity OS Downloads* zu finden.
+.. Klicken Sie auf den Link *Letzte Version herunterladen*.
+.. Folgen Sie den restlichen Anweisungen, um die SANtricity OS-Datei und die NVSRAM-Datei auf Ihren lokalen Computer herunterzuladen.
+
+
++
+
+NOTE: In Version 8.42 und höher ist digital signierte Firmware erforderlich. Wenn Sie versuchen, nicht signierte Firmware herunterzuladen, wird ein Fehler angezeigt und der Download wird abgebrochen.
+
+. Wählen Sie die Betriebssystemsoftware und die NVSRAM-Datei aus, die Sie zum Aktualisieren der Controller verwenden möchten:
++
+.. Wählen Sie aus der Dropdown-Liste *Select a SANtricity OS Software file* die Betriebssystemdatei aus, die Sie auf Ihren lokalen Rechner heruntergeladen haben.
++
+Wenn mehrere Dateien verfügbar sind, werden die Dateien vom neuesten Datum bis zum ältesten Datum sortiert.
+
++
+
+NOTE: Das Software-Repository enthält alle Softwaredateien, die dem Web Services Proxy zugeordnet sind. Wenn die Datei nicht angezeigt wird, die Sie verwenden möchten, klicken Sie auf den Link *Neue Datei zum Software-Repository hinzufügen*, um zu dem Speicherort zu navigieren, an dem sich die Betriebssystemdatei befindet, die Sie hinzufügen möchten.
+
+.. Wählen Sie im Dropdown-Menü *Select an NVSRAM file* die gewünschte Controllerdatei aus.
++
+Wenn es mehrere Dateien gibt, werden die Dateien vom neuesten Datum bis zum ältesten Datum sortiert.
+
+
+
+. Überprüfen Sie in der Tabelle kompatibler Speicher-Arrays die Speicherarrays, die mit der ausgewählten Betriebssystemsoftware kompatibel sind, und wählen Sie dann die Arrays aus, die aktualisiert werden sollen.
++
+** Die Speicherarrays, die Sie in der Ansicht Verwalten ausgewählt haben und mit der ausgewählten Firmware-Datei kompatibel sind, werden standardmäßig in der Tabelle kompatible Speicherarrays ausgewählt.
+** Die Speicher-Arrays, die nicht mit der ausgewählten Firmware-Datei aktualisiert werden können, können in der kompatiblen Speicher-Array-Tabelle nicht wie im Status *inkompatibel* angegeben ausgewählt werden.
+
+
+. (Optional) um die Software-Datei ohne Aktivierung auf die Speicher-Arrays zu übertragen, wählen Sie das Kontrollkästchen *Betriebssystemsoftware auf die Speicher-Arrays übertragen, als stufenweise markieren und zu einem späteren Zeitpunkt aktivieren* aus.
+. Klicken Sie Auf *Start*.
+. Je nachdem, ob Sie jetzt oder später aktiviert haben, führen Sie einen der folgenden Schritte aus:
++
+** Geben Sie *TRANSFER* ein, um zu bestätigen, dass Sie die vorgeschlagenen Betriebssystemversionen auf den Arrays übertragen möchten, die Sie für die Aktualisierung ausgewählt haben, und klicken Sie dann auf *Transfer*.
++
+Um die übertragene Software zu aktivieren, wählen Sie MENU:Upgrade Center[Staged OS Software aktivieren].
+
+** Geben Sie *UPGRADE* ein, um zu bestätigen, dass Sie die vorgeschlagenen Betriebssystemversionen auf den Arrays übertragen und aktivieren möchten, die Sie aktualisieren möchten, und klicken Sie dann auf *Upgrade*.
++
+Das System überträgt die Softwaredatei auf jedes Speicherarray, das Sie für die Aktualisierung ausgewählt haben, und aktiviert diese Datei durch einen Neustart.
+
+
+
++
+Während des Aktualisierungsvorgangs treten folgende Aktionen auf:
+
++
+** Im Rahmen des Upgrades wird eine Integritätsprüfung vor dem Upgrade ausgeführt. Bei der Integritätsprüfung vor dem Upgrade werden alle Komponenten des Storage Arrays bewertet, um sicherzustellen, dass das Upgrade fortgesetzt werden kann.
+** Wenn eine Integritätsprüfung für ein Speicherarray fehlschlägt, wird das Upgrade abgebrochen. Sie können auf die Ellipsen (...) klicken und *Protokoll speichern* wählen, um die Fehler zu überprüfen. Sie können auch den Fehler der Integritätsprüfung überschreiben und dann auf *Weiter* klicken, um mit dem Upgrade fortzufahren.
+** Sie können den Upgrade-Vorgang nach der Integritätsprüfung vor dem Upgrade abbrechen.
+
+
+. (Optional) nach Abschluss des Upgrades sehen Sie eine Liste der für ein bestimmtes Speicherarray aktualisierten Versionen, indem Sie auf die Ellipsen (...) klicken und dann *Protokoll speichern* wählen.
++
+Die Datei wird im Ordner Downloads für Ihren Browser mit dem Namen gespeichert``upgrade_log-<date>.json``.
+
+
+
+
+
+== Schritt 4: Stufenweise Software-Dateien aktivieren (optional)
+
+Sie können die Software-Datei sofort aktivieren oder bis zu einem angenehmeren Zeitpunkt warten. Bei diesem Verfahren wird davon ausgegangen, dass Sie die Softwaredatei zu einem späteren Zeitpunkt aktivieren.
+
+
+NOTE: Sie können den Aktivierungsvorgang nach dem Start nicht beenden.
+
+.Schritte
+. Wählen Sie in der Hauptansicht von Unified Manager die Option *Verwalten*. Klicken Sie bei Bedarf auf die Spalte Status, um alle Speicher-Arrays mit dem Status „Betriebssystem-Upgrade (Aktivierung ausstehend)“ zu sortieren.
+. Wählen Sie einen oder mehrere Speicher-Arrays aus, für die Sie Software aktivieren möchten, und wählen Sie dann Menü:Upgrade Center[Activate Staged OS Software].
++
+Während des Aktualisierungsvorgangs treten folgende Aktionen auf:
+
++
+** Im Rahmen der Aktivierung wird eine Integritätsprüfung vor dem Upgrade ausgeführt. Bei der Integritätsprüfung vor dem Upgrade werden alle Komponenten des Storage-Arrays bewertet, um sicherzustellen, dass die Aktivierung fortgesetzt werden kann.
+** Wenn eine Integritätsprüfung für ein Speicherarray fehlschlägt, wird die Aktivierung angehalten. Sie können auf die Ellipsen (...) klicken und *Protokoll speichern* wählen, um die Fehler zu überprüfen. Sie können auch den Fehler der Integritätsprüfung überschreiben und dann auf *Weiter* klicken, um mit der Aktivierung fortzufahren.
+** Sie können den Aktivierungsvorgang nach der Integritätsprüfung vor dem Upgrade abbrechen. Nach erfolgreichem Abschluss der Integritätsprüfung vor dem Upgrade erfolgt die Aktivierung. Die Aktivierungszeiten hängen von der Konfiguration des Speicherarrays und den Komponenten ab, die Sie aktivieren.
+
+
+. (Optional) Nachdem die Aktivierung abgeschlossen ist, können Sie eine Liste dessen sehen, was für ein bestimmtes Speicherarray aktiviert wurde, indem Sie auf die Ellipsen (...) klicken und dann *Protokoll speichern* wählen.
++
+Die Datei wird im Ordner Downloads für Ihren Browser mit dem Namen gespeichert `activate_log-<date>.json`.
+
+
+
+Das Upgrade der Controller-Software ist abgeschlossen. Sie können den normalen Betrieb fortsetzen.

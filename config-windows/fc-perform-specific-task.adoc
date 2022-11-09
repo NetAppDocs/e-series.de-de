@@ -1,0 +1,178 @@
+---
+permalink: config-windows/fc-perform-specific-task.html 
+sidebar: sidebar 
+keywords: Fibre Channel protocol, switches, zone switches, zoning, host port identifiers, express Windows configuration, software configuration, Windows host, E2800, E5700, EF300, EF600, E-Series, eseries 
+summary: Für das Fibre Channel-Protokoll konfigurieren Sie die Switches und bestimmen die Host-Port-IDs. 
+---
+= Führen Sie FC-spezifische Aufgaben aus
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Für das Fibre Channel-Protokoll konfigurieren Sie die Switches und bestimmen die Host-Port-IDs.
+
+
+
+== Schritt: Konfigurieren Sie die FC-Switches – ​Windows
+
+Konfigurieren (Zoning) der Fibre Channel (FC)-Switches ermöglicht es den Hosts, eine Verbindung zum Storage-Array herzustellen, und begrenzt die Anzahl der Pfade. Sie Zonen der Switches mithilfe der Managementoberfläche für die Switches.
+
+.Was Sie und#8217;ll benötigen
+* Administrator-Anmeldeinformationen für die Switches.
+* Der WWPN jedes Host-Initiator-Ports und jedes Controller-Zielports, der mit dem Switch verbunden ist. (Verwenden Sie Ihr HBA Utility für die Erkennung.)
+
+
+Sie müssen die Zone nach WWPN und nicht nach physischem Port angeben. Jeder Initiator-Port muss sich in einer separaten Zone mit allen entsprechenden Ziel-Ports befinden. Informationen zum Zoning der Switches finden Sie in der Dokumentation des Switch-Anbieters.
+
+.Schritte
+. Melden Sie sich beim FC Switch-Administrationsprogramm an und wählen Sie dann die Zoning-Konfigurationsoption aus.
+. Erstellen Sie eine neue Zone, die den ersten Host-Initiator-Port enthält, und die auch alle Ziel-Ports umfasst, die mit demselben FC-Switch wie der Initiator verbunden sind.
+. Erstellen Sie zusätzliche Zonen für jeden FC-Host-Initiator-Port im Switch.
+. Speichern Sie die Zonen, und aktivieren Sie dann die neue Zoning-Konfiguration.
+
+
+
+
+== Schritt 2: Bestimmen Sie Host-WWPNs und nehmen Sie empfohlene Einstellungen vor – ​FC, Windows
+
+Sie installieren ein FC HBA Utility, damit Sie den weltweiten Port-Namen (WWPN) jedes Host-Ports anzeigen können. Darüber hinaus können Sie das HBA-Dienstprogramm verwenden, um alle Einstellungen zu ändern, die in der Spalte Hinweise des empfohlen werden http://mysupport.netapp.com/matrix["NetApp Interoperabilitäts-Matrix-Tool"^] Für die unterstützte Konfiguration.
+
+Prüfen Sie diese Richtlinien für HBA Utilities:
+
+* Die meisten HBA-Anbieter bieten ein HBA-Dienstprogramm an. Sie benötigen die richtige HBA-Version für Ihr Hostbetriebssystem und Ihre CPU. Beispiele für FC HBA Utilities:
++
+** Emulex OneCommand Manager für Emulex HBAs
+** QLogic QConverge Console für QLogic HBAs
+
+
+* Host-I/O-Ports registrieren möglicherweise automatisch, wenn der Host-Kontext-Agent installiert ist.
+
+
+.Schritte
+. Laden Sie das entsprechende Dienstprogramm von der Website Ihres HBA-Anbieters herunter.
+. Installieren Sie das Dienstprogramm.
+. Wählen Sie die entsprechenden Einstellungen im HBA-Dienstprogramm aus.
++
+Die entsprechenden Einstellungen für Ihre Konfiguration sind in der Spalte Hinweise des aufgeführt http://mysupport.netapp.com/matrix["NetApp Interoperabilitäts-Matrix-Tool"^].
+
+
+
+
+
+== Schritt 3: Notieren Sie Ihre Konfiguration
+
+Sie können eine PDF-Datei auf dieser Seite erstellen und drucken und anschließend die Konfigurationsinformationen für den FC-Speicher mithilfe des folgenden Arbeitsblatts erfassen. Sie benötigen diese Informationen für Bereitstellungsaufgaben.
+
+Die Abbildung zeigt einen Host, der in zwei Zonen mit einem Storage-Array der E-Series verbunden ist. Eine Zone wird durch die blaue Linie angezeigt; die andere Zone wird durch die rote Linie angezeigt. Jeder einzelne Port verfügt über zwei Pfade zum Storage (einen zu jedem Controller).
+
+image::../media/port_identifiers_host_and_target_conf-win.gif[Port Identifikatoren Host und Ziel conf gewinnen]
+
+
+
+=== Host-IDs
+
+|===
+| Nummer Der Legende | Host-Port-Verbindungen (Initiator) | WWPN 
+
+
+ a| 
+1
+ a| 
+Host
+ a| 
+_Nicht zutreffend_
+
+
+
+ a| 
+2
+ a| 
+Host-Port 0 zu FC-Switch-Zone 0
+ a| 
+
+
+
+ a| 
+7
+ a| 
+Host Port 1 zu FC Switch Zone 1
+ a| 
+
+|===
+
+
+=== Zielkennungen
+
+|===
+| Nummer Der Legende | Port-Verbindungen für Array-Controller (Ziel | WWPN 
+
+
+ a| 
+3
+ a| 
+Switch
+ a| 
+_Nicht zutreffend_
+
+
+
+ a| 
+6
+ a| 
+Array-Controller (Ziel)
+ a| 
+_Nicht zutreffend_
+
+
+
+ a| 
+5
+ a| 
+Controller A, Port 1 zu FC Switch 1
+ a| 
+
+
+
+ a| 
+9
+ a| 
+Controller A, Port 2 zu FC Switch 2
+ a| 
+
+
+
+ a| 
+4
+ a| 
+Controller B, Port 1 zu FC Switch 1
+ a| 
+
+
+
+ a| 
+8
+ a| 
+Controller B, Port 2 zu FC Switch 2
+ a| 
+
+|===
+
+
+=== Zuordnung des Hostnamens
+
+|===
+
+
+ a| 
+Zuordnung des Hostnamens
+ a| 
+
+
+
+ a| 
+Host-OS-Typ
+ a| 
+
+|===

@@ -1,0 +1,270 @@
+---
+permalink: web-services-proxy/array-intro-concept.html 
+sidebar: sidebar 
+keywords: Web Services, WSP, SANtricity API, discover storage WSP, 
+summary: Um Storage-Systeme im Netzwerk zu managen, müssen Sie sie zunächst ermitteln und dann der Management-Liste hinzufügen. 
+---
+= Managen Sie Speichersysteme über Web Services Proxy
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Um Storage-Systeme im Netzwerk zu managen, müssen Sie sie zunächst ermitteln und dann der Management-Liste hinzufügen.
+
+
+
+== Storage-Systeme erkennen
+
+Sie können die automatische Erkennung festlegen oder Storage-Systeme manuell ermitteln.
+
+
+
+=== Automatische Erkennung von Storage-Systemen
+
+Sie können festlegen, dass Speichersysteme automatisch im Netzwerk erkannt werden, indem Sie die Einstellungen in der Datei wsconfig.xml ändern. Standardmäßig ist die automatische IPv6-Erkennung deaktiviert und IPv4 aktiviert.
+
+Sie müssen nur eine Management-IP- oder DNS-Adresse angeben, um ein Storage-System hinzuzufügen. Der Server erkennt automatisch alle Verwaltungspfade, wenn die Pfade entweder nicht konfiguriert oder die Pfade konfiguriert und drehbar sind.
+
+
+NOTE: Wenn Sie versuchen, ein IPv6-Protokoll zu verwenden, um Speichersysteme nach der ersten Verbindung automatisch von der Controller-Konfiguration zu erkennen, schlägt der Vorgang möglicherweise fehl. Mögliche Ursachen für den Ausfall sind u. a. Probleme bei der IP-Adressweiterleitung oder bei der Aktivierung von IPv6 auf den Speichersystemen, die jedoch nicht auf dem Server aktiviert werden.
+
+Bevor Sie die IPv6-Erkennungseinstellungen aktivieren, überprüfen Sie, ob Ihre Infrastruktur die IPv6-Konnektivität zu den Speichersystemen unterstützt, um eventuelle Verbindungsprobleme zu beheben.
+
+.Schritte
+. Öffnen Sie die Datei wsconfig.xml unter:
++
+** (Windows) -- C:\Program Files\NetApp\SANtricity Web Services Proxy
+** (Linux) -- /opt/netapp/santricity_Web_Services_Proxy
+
+
+. Ändern Sie in den Zeichenketten für die automatische Erkennung die Einstellungen von `true` Bis `false`, Nach Wunsch. Siehe das folgende Beispiel.
++
+[listing]
+----
+<env key="autodiscover.ipv6.enable">true</env>
+----
++
+
+NOTE: Wenn die Pfade konfiguriert, aber nicht so konfiguriert sind, dass der Server zu den Adressen weiterleiten kann, treten intermittierende Verbindungsfehler auf. Wenn Sie die IP-Adressen nicht vom Host als routingfähig festlegen können, deaktivieren Sie die automatische Erkennung (ändern Sie die Einstellungen in `false`).
+
+. Speichern Sie die Datei.
+
+
+
+
+=== Storage-Systeme mit API-Endpunkten erkennen und hinzufügen
+
+Über API-Endpunkte können Storage-Systeme ermittelt und der Liste gemanagt hinzugefügt werden. Durch dieses Verfahren wird eine Managementverbindung zwischen dem Storage-System und der API erstellt.
+
+
+NOTE: In dieser Aufgabe wird beschrieben, wie Storage-Systeme mithilfe der REST API ermittelt und hinzugefügt werden. So können Sie diese Systeme in der interaktiven API-Dokumentation managen. Es ist jedoch möglicherweise sinnvoll, Storage-Systeme im Unified Manager zu managen, wodurch eine benutzerfreundliche Oberfläche bereitgestellt wird. Weitere Informationen finden Sie in der Online-Hilfe von Unified Manager.
+
+Bei Storage-Systemen mit SANtricity Version 11.30 und höher muss über die SANtricity System Manager-Schnittstelle die alte Managementoberfläche für Symbol aktiviert sein. Andernfalls schlagen die Endpunkte der Erkennung fehl. Sie können diese Einstellung finden, indem Sie System Manager öffnen und dann im Menü:Einstellungen[System > zusätzliche Einstellungen > Managementoberfläche ändern] wechseln.
+
+.Schritte
+. Melden Sie sich bei an link:install-login-task.html["Interaktive API-Dokumentation"].
+. Storage-Systeme erkennen Sie wie folgt:
++
+.. Stellen Sie aus der API-Dokumentation sicher, dass *V2* in der Dropdown-Liste ausgewählt ist, und erweitern Sie dann die Kategorie *Storage-Systeme*.
+.. Klicken Sie auf den Endpunkt *POST: /Discovery* und dann auf *Probieren Sie es aus*.
+.. Geben Sie die Parameter ein, wie in der Tabelle beschrieben.
++
+|===
+
+
+ a| 
+StartIP
+
+EndIP
+ a| 
+Ersetzen Sie die Zeichenfolge durch den Start- und Endbereich der IP-Adresse für ein oder mehrere Speichersysteme im Netzwerk.
+
+
+
+ a| 
+Einsatzagenten
+ a| 
+Setzen Sie diesen Wert auf:
+
+*** True = in-Band-Agenten für den Netzwerkscan verwenden.
+*** False = Verwenden Sie keine bandinternen Agenten für den Netzwerkscan.
+
+
+
+
+ a| 
+Verbindungs-Timeout
+ a| 
+Geben Sie die Sekunden ein, die für den Scan zulässig sind, bevor die Verbindung unterbrochen wird.
+
+
+
+ a| 
+MaxPortsToUse
+ a| 
+Geben Sie eine maximale Anzahl von Ports ein, die für die Netzwerküberprüfung verwendet werden.
+
+|===
+.. Klicken Sie Auf *Ausführen*.
++
+
+NOTE: API-Aktionen werden ohne Benutzeraufforderungen ausgeführt.
+
++
+Die Bestandsaufnahme wird im Hintergrund ausgeführt.
+
+.. Stellen Sie sicher, dass der Code eine 202 zurückgibt.
+.. Suchen Sie unter *Response Body* den für die Anforderungs-ID zurückgegebenen Wert. Im nächsten Schritt müssen Sie die Anfrage-ID anzeigen.
+
+
+. Zeigen Sie die Ergebnisse der Bestandsaufnahme an:
++
+.. Klicken Sie auf den Endpunkt *GET: /Discovery* und dann auf *Try it out*.
+.. Geben Sie die Anforderungs-ID im vorherigen Schritt ein. Wenn Sie die *Anfrage-ID* leer lassen, wird standardmäßig die letzte ausgeführte Anforderungs-ID verwendet.
+.. Klicken Sie Auf *Ausführen*.
+.. Stellen Sie sicher, dass der Code 200 zurückgegeben wird.
+.. Suchen Sie im Antwortkörper Ihre Anfrage-ID und die Strings für storageSystems. Die Zeichenfolgen sehen dem folgenden Beispiel ähnlich aus:
++
+[listing]
+----
+"storageSystems": [
+    {
+      "serialNumber": "123456789",
+      "wwn": "000A011000AF0000000000001A0C000E",
+      "label": "EF570_Array",
+      "firmware": "08.41.10.01",
+      "nvsram": "N5700-841834-001",
+      "ipAddresses": [
+        "10.xxx.xx.213",
+        "10.xxx.xx.214"
+      ],
+----
+.. Notieren Sie sich die Werte für wwn, Label und ipAddresses. Sie brauchen sie für den nächsten Schritt.
+
+
+. Fügen Sie Storage-Systeme wie folgt hinzu:
++
+.. Klicken Sie auf den Endpunkt *POST: /Storage-System* und dann auf *Try it out*.
+.. Geben Sie die Parameter ein, wie in der Tabelle beschrieben.
++
+|===
+
+
+ a| 
+id
+ a| 
+Geben Sie einen eindeutigen Namen für dieses Speichersystem ein. Sie können die Beschriftung eingeben (die in der Antwort für GET: /Discovery angezeigt wird), aber der Name kann eine beliebige Zeichenfolge sein, die Sie auswählen. Wenn Sie für dieses Feld keinen Wert angeben, weist Web Services automatisch eine eindeutige Kennung zu.
+
+
+
+ a| 
+ControllerAddresses
+ a| 
+Geben Sie die IP-Adressen ein, die in der Antwort für GET: /Discovery angezeigt werden. Trennen Sie bei Dual-Controllern die IP-Adressen durch Komma. Beispiel:
+
+`"IP address 1","IP address 2"`
+
+
+
+ a| 
+Validieren
+ a| 
+Eingabe `true`, So können Sie die Bestätigung erhalten, dass Web Services eine Verbindung zum Speichersystem herstellen können.
+
+
+
+ a| 
+Passwort
+ a| 
+Geben Sie das Administratorpasswort für das Speichersystem ein.
+
+
+
+ a| 
+wwn
+ a| 
+Geben Sie den WWN des Storage-Systems ein (wird in der Antwort für GET: /Discovery angezeigt).
+
+|===
+.. Danach alle Strings entfernen `"enableTrace": true`, Damit der gesamte String-Satz dem folgenden Beispiel ähnelt:
++
+[listing]
+----
+{
+  "id": "EF570_Array",
+  "controllerAddresses": [
+    "Controller-A-Mgmt-IP","Controller-B-Mgmt_IP"
+  ],
+  "validate":true,
+  "password": "array-admin-password",
+  "wwn": "000A011000AF0000000000001A0C000E",
+  "enableTrace": true
+}
+----
+.. Klicken Sie Auf *Ausführen*.
+.. Stellen Sie sicher, dass die Codeantwort 201 ist, was darauf hinweist, dass der Endpunkt erfolgreich ausgeführt wurde.
++
+Der Endpunkt *Post: /Storage-Systems* befindet sich in der Warteschlange. Im nächsten Schritt können Sie die Ergebnisse mit dem Endpunkt *GET: /Storage-Systems* anzeigen.
+
+
+
+. Bestätigen Sie das Hinzufügen der Liste wie folgt:
++
+.. Klicken Sie auf den Endpunkt *GET: /Storage-System*.
++
+Es sind keine Parameter erforderlich.
+
+.. Klicken Sie Auf *Ausführen*.
+.. Stellen Sie sicher, dass die Codeantwort 200 ist, was bedeutet, dass der Endpunkt erfolgreich ausgeführt wurde.
+.. Suchen Sie im Antwortkörper nach den Details des Speichersystems. Die zurückgegebenen Werte zeigen an, dass sie erfolgreich zur Liste der verwalteten Arrays hinzugefügt wurde, ähnlich wie im folgenden Beispiel:
++
+[listing]
+----
+[
+  {
+    "id": "EF570_Array",
+    "name": "EF570_Array",
+    "wwn": "000A011000AF0000000000001A0C000E",
+    "passwordStatus": "valid",
+    "passwordSet": true,
+    "status": "optimal",
+    "ip1": "10.xxx.xx.213",
+    "ip2": "10.xxx.xx.214",
+    "managementPaths": [
+      "10.xxx.xx.213",
+      "10.xxx.xx.214"
+  ]
+  }
+]
+----
+
+
+
+
+
+
+== Skalieren Sie die Anzahl an gemanagten Storage-Systemen vertikal
+
+Standardmäßig kann die API bis zu 100 Storage-Systeme verwalten. Wenn Sie mehr verwalten müssen, müssen Sie die Speicheranforderungen für den Server erhöhen.
+
+Der Server ist auf 512 MB Arbeitsspeicher eingestellt. Fügen Sie für jedes 100 zusätzliche Speichersystem in Ihrem Netzwerk 250 MB hinzu. Fügen Sie nicht mehr Speicher hinzu, als Sie physisch haben. Lassen Sie Ihrem Betriebssystem und anderen Anwendungen genügend zusätzliche Kapazität zu.
+
+
+NOTE: Die standardmäßige Cache-Größe beträgt 8,192 Ereignisse. Die ungefähre Datennutzung im MEL-Ereignicache beträgt je 8,192 Ereignisse 1 MB. Daher sollte bei Beibehaltung der Standardeinstellungen der Cache-Bedarf bei einem Storage-System ungefähr 1 MB betragen.
+
+
+NOTE: Zusätzlich zum Arbeitsspeicher verwendet der Proxy für jedes Speichersystem Netzwerkanschlüsse. Linux und Windows betrachten Netzwerkports als Datei-Handles. Als Sicherheitsmaßnahme begrenzen die meisten Betriebssysteme die Anzahl der offenen Datei-Handles, die ein Prozess oder ein Benutzer gleichzeitig geöffnet haben kann. Vor allem in Linux-Umgebungen, in denen offene TCP-Verbindungen als Datei-Handles betrachtet werden, kann der Web Services Proxy dieses Limit leicht überschreiten. Da der Fix systemabhängig ist, sollten Sie in der Dokumentation Ihres Betriebssystems nachschlagen, wie Sie diesen Wert erhöhen können.
+
+.Schritte
+. Führen Sie einen der folgenden Schritte aus:
++
+** Gehen Sie unter Windows in die Datei appserver64.init. Suchen Sie die Zeile, `vmarg.3=-Xmx512M`
+** Wählen Sie unter Linux die Datei webserver.sh. Suchen Sie die Zeile, `JAVA_OPTIONS="-Xmx512M"`
+
+
+. Um den Speicher zu erhöhen, ersetzen Sie `512` Mit dem gewünschten Arbeitsspeicher in MB.
+. Speichern Sie die Datei.
+

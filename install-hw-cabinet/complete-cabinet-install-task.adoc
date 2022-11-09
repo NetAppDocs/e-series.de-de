@@ -1,0 +1,284 @@
+---
+permalink: install-hw-cabinet/complete-cabinet-install-task.html 
+sidebar: sidebar 
+keywords: 3040 40U cabinet, cabinet installation, drive tray installation, controller installation, shelf installation, E2800, E5700, EF300, EF600 
+summary: Die Schrankinstallation abschließen. 
+---
+= Komplette Schrankinstallation
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Nachdem Sie den Schrank bewegt haben, senken Sie die Nivellierfüße und den Stabilitätsfuß ab, setzen Sie die entnommenen Komponenten wieder ein, installieren Sie weitere erforderliche Komponenten und schließen Sie den Schrank an die Stromversorgung an.
+
+
+
+== Schritt 1: Untere Nivellierfüße und Stabilitätsfuß
+
+Sie stabilisieren den Schrank, indem Sie seine Füße einstellen. Die Nivellierfüße stützen den Schrank von den Rollen. Der Stabilitätsfuß verhindert, dass der Schrank überfällt, nachdem er sich in seiner festen Position befindet.
+
+.Schritte
+. Senken Sie die Nivellierfüße ab, um den Schrank von den Rollen zu stützen.
++
+Die Nivellierfüße befinden sich in der Nähe jeder unteren Ecke des Schranks.
+
+. Stellen Sie sicher, dass der Schrank so gut wie möglich ist.
++
+Die folgende Abbildung bietet eine Nahaufnahme des Stabilitätsfußes und der Nivellierfüße.
+
++
+image::../media/83000_08.gif[83000 08]
+
++
+|===
+
+
+ a| 
+1.
+ a| 
+Nivellierfüße
+
+
+
+ a| 
+2.
+ a| 
+Stabile Füße
+
+|===
+
+
+
+
+== Schritt 2: Installieren Sie die Fächer wieder
+
+Nachdem Sie den Schrank verschoben haben, können Sie die Fächer an ihren ursprünglichen Positionen wieder einsetzen.
+
+
+CAUTION: _Nicht_ Installieren Sie die folgenden Fächer oben auf dem Schrank über Ihrem Kopf. Bei voller Auslastung wiegt jedes dieser Fächer über 100 kg (220 lb). Wenn diese Schalen oben im Schrank installiert sind, erstellen Sie ein hochschweres Gehäuse, das sich leicht aus dem Gleichgewicht halten lässt: E2660, E2660, E2760, E5460, E5560, Und E5660 Controller-Laufwerksfächer sowie das DE6600-Laufwerksfach
+
+.Schritte
+. Setzen Sie alle Fächer an den ursprünglichen Positionen im Schrank wieder ein.
++
+
+CAUTION: *Verletzungsgefahr* -- ein leeres Tablett wiegt etwa 56.7 kg (125 lb). Drei Personen sind verpflichtet, ein leeres Tablett sicher zu bewegen Wenn das Fach mit Komponenten befüllt ist, ist ein mechanisierter Hub erforderlich, um das Fach sicher zu bewegen
+
+. Setzen Sie alle Komponenten an ihren ursprünglichen Positionen in den Fächern wieder ein.
++
+Um Adresskonflikte und Datenverlust zu vermeiden, ersetzen Sie alle Komponenten in demselben Fach und an derselben Stelle im Fach
+
+. Setzen Sie alle Kabel wieder an die ursprünglichen Positionen in den Fächern ein.
+. Verlegen Sie die Schnittstellenkabel in den Schrank.
+. Verlegen Sie die Hauptstromkabel vom Gehäuse an die beiden externen Stromquellen. _Zu diesem Zeitpunkt nicht_ die Netzkabel einstecken.
+
+
+
+
+== Schritt 3: Installieren Sie Kabelspulen und Kabelbinder
+
+Nachdem Sie die Fächer wieder eingesetzt haben, installieren Sie die Kabelspulen und Kabelbinder. Die Kabelspulen und Kabelbinder bieten eine überlange Kabellänge und eine Kabelführung für die Controller und die Fächer.
+
+.Schritt
+. Installieren Sie die Kabelspulen und die Kabelbinder an beiden Seiten der vertikalen Stromverteilerausgänge.
++
+image::../media/83003_01_dwg_3040_cable_spools.gif[83003 01 DWG 3040 Kabelspulen]
+
++
+|===
+
+
+ a| 
+1.
+ a| 
+Position zum Bindeband
+
+
+
+ a| 
+2.
+ a| 
+Kabelspule
+
+|===
+
+
+
+
+== Schritt 4: Installieren Sie zusätzliche Fächer
+
+Bei Bedarf können Sie zusätzliche Fächer installieren. Sie müssen nicht verwendete Positionen für Fächer abdecken, um einen korrekten Luftstrom zu gewährleisten.
+
+.Schritte
+. Wenn Sie über zusätzliche Fächer verfügen, die installiert werden müssen, installieren Sie die Montagehardware für diese Fächer.
+. Wenn die Vorderseite des Gehäuses nicht vollständig mit Fächern gefüllt ist, verwenden Sie die Frontblendarkits, um die leeren Bereiche über oder unter den installierten Fächern zu decken.
++
+Die Abdeckung der leeren Räume ist erforderlich, damit der Luftstrom durch den Schrank ordnungsgemäß gehalten wird.
+
+. Schalten Sie die Fächer ein.
+
+
+
+
+== Schritt 5: Installieren Sie zusätzliche Befestigungsschienen
+
+[role="lead"]
+Wenn Sie Controller-Laufwerksfächer oder Laufwerksfächer installieren, die separat geliefert wurden (nicht bereits im Schrank installiert), müssen Sie möglicherweise weitere Befestigungsschienen im Schrank installieren.
+
+.Schritte
+. Bestimmen Sie die Position der Befestigungsschienen.
++
+** *Über einem vorhandenen Fach* -- positionieren Sie die Befestigungsschienen sofort über dem oberen Fach im Schrank.
+** *Unter einem vorhandenen Fach* -- die Befestigungsschienen mit ausreichend Abstand positionieren, um das eingesetzte Fach zu halten:
++
+*** 8.9 cm (3.5 Zoll) für 2-HE-Controller-Laufwerksfächer oder Laufwerksfächer
+*** 17.8 cm (7 Zoll) für 4-HE-Controller-Laufwerksfächer oder Laufwerksfächer
+
+
+
+
+. Befestigen Sie die Befestigungsschienen mit den Messmarkierungen an den vertikalen Stützhaltern vorn rechts und vorn links an der gleichen Position auf beiden Seiten des Schranks.
++
+image::../media/92042_06.gif[92042 06]
+
++
+|===
+
+
+ a| 
+1.
+ a| 
+Vordere verstellbare Schiene
+
+
+
+ a| 
+2.
+ a| 
+Verstellbare hintere Schiene
+
+
+
+ a| 
+3.
+ a| 
+Einstellplatte und Schrauben
+
+
+
+ a| 
+4.
+ a| 
+Schienenmontage M5×10 mm Schrauben
+
+
+
+ a| 
+5.
+ a| 
+Muttern aufklemmen
+
+
+
+ a| 
+6.
+ a| 
+Hintere Halteklammer
+
+
+
+ a| 
+7.
+ a| 
+Vertikale Stützung
+
+|===
++
+
+NOTE: Die Klemmmuttern und die hintere Haltebügel werden nicht verwendet, wenn die Schienen in einem 3040-Schrank eingebaut sind.
+
+. Setzen Sie die hintere verstellbare Schiene auf die vertikale Stützschiene.
+. Richten Sie an der hinteren verstellbaren Schiene die verstellbaren Schienenstöcher vor den Löchern in der vertikalen Stützung aus.
+. Befestigen Sie zwei M5×10 mm Schrauben.
++
+.. Bringen Sie die Schrauben durch die vertikale Stützschiene und die hintere verstellbare Schiene an.
+.. Ziehen Sie die Schrauben fest.
+
+
+. Stellen Sie die vordere verstellbare Schiene auf die vertikale Stützschiene.
+. Richten Sie an der vorderen verstellbaren Schiene die verstellbaren Schienenstöcher vor den Löchern im vertikalen Stützelement aus.
+. Befestigen Sie zwei M5×10 mm Schrauben.
++
+.. Befestigen Sie eine Schraube durch die vertikale Stützschiene und das untere Loch der vorderen verstellbaren Schiene.
+.. Befestigen Sie eine Schraube durch die vertikale Stützschiene und die Mitte der drei oberen Löcher in der vorderen verstellbaren Schiene.
+.. Ziehen Sie die Schrauben fest.
+
+
++
+
+NOTE: Die verbleibenden beiden Schraubenbohrungen werden zur Montage des Fachs verwendet
+
+. Wiederholen Sie Schritt 3 bis Schritt 8, um die zweite Schiene auf der anderen Seite des Schranks anzubringen.
+. Installieren Sie jedes Fach mit den entsprechenden Anweisungen für die Installation des Fachs.
+. Wählen Sie eine der folgenden Optionen:
++
+** Wenn alle Positionen für Fächer voll sind, schalten Sie die Fächer ein.
+** Wenn nicht alle Positionen für Fächer voll sind, verwenden Sie die Frontplattenkits, um die leeren Bereiche über oder unter den installierten Fächern zu decken.
+
+
+
+
+
+
+== Schritt 6: Schließen Sie das Gehäuse an die Stromversorgung an
+
+Um die Schrankinstallation abzuschließen, schalten Sie die Schaltschrankkomponenten ein.
+
+Während die Fächer das Einschalten durchführen, blinken die LEDs an der Vorderseite und an der Rückseite der Fächer. Je nach Konfiguration kann es mehrere Minuten dauern, bis der Einschalvorgang abgeschlossen ist.
+
+.Schritte
+. Schalten Sie die Stromversorgung für alle Komponenten im Schrank aus.
+. Alle 12 Leistungsschalter in die aus- (Abwärts-) Position schalten.
+. Stecken Sie jeden der sechs NEMA L6-30-Stecker (USA und Kanada) oder die sechs IEC 60309-Stecker (weltweit, außer USA und Kanada) in eine verfügbare Steckdose.
++
+
+NOTE: Sie müssen jede PDU an eine unabhängige Stromquelle außerhalb des Schaltschranks anschließen.
+
+. Alle 12 Leistungsschalter in die Stellung ein (nach oben) schalten.
++
+image::../media/83002_05_dwg_3040_cabinet_pdus.gif[83002 05 DWG 3040-Gehäuse-pdus]
+
++
+|===
+
+
+ a| 
+1.
+ a| 
+Leistungsschalter
+
+
+
+ a| 
+2.
+ a| 
+Steckdosen
+
+
+
+ a| 
+3.
+ a| 
+Einsteigerboxen
+
+|===
+. Schalten Sie die Stromversorgung für alle Laufwerksfächer im Schrank ein.
++
+
+NOTE: Warten Sie nach dem Einschalten der Laufwerksfächer 30 Sekunden, bevor Sie die Stromversorgung der Controller-Laufwerksfächer einschalten.
+
+. Warten Sie 30 Sekunden, nachdem Sie die Laufwerksfächer eingeschaltet haben, und schalten Sie dann alle Controller-Laufwerksfächer im Schrank ein.
+
+
+Die Schrankinstallation ist abgeschlossen. Sie können den normalen Betrieb fortsetzen.

@@ -1,0 +1,14 @@
+---
+permalink: maintenance-ef600/concept-controllers-wombat.html 
+sidebar: sidebar 
+keywords: controller, board, firmware, software, control, drive, implement, system, manager, function, ef300, ef600, shelf 
+summary: Ein Controller besteht aus einer Hauptplatine, Firmware und Software. Sie steuert die Laufwerke und implementiert die Funktionen von System Manager. In diesem Abschnitt wird beschrieben, wie ein einzelner Controller oder beide Controller in Ihrem EF300- oder EF600-Controller-Shelf ersetzt werden. 
+---
+= Controller
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Ein Controller besteht aus einer Hauptplatine, Firmware und Software. Sie steuert die Laufwerke und implementiert die Funktionen von System Manager. In diesem Abschnitt wird beschrieben, wie ein einzelner Controller oder beide Controller in Ihrem EF300- oder EF600-Controller-Shelf ersetzt werden.

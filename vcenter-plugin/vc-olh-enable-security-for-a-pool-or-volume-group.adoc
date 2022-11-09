@@ -1,0 +1,41 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/vc-olh-enable-security-for-a-pool-or-volume-group.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
+summary: Sie können die Laufwerkssicherheit für einen Pool oder eine Volume-Gruppe aktivieren, um unbefugten Zugriff auf die Daten auf den Laufwerken im Pool oder der Volume-Gruppe zu verhindern. 
+---
+= Aktivieren Sie die Sicherheit für einen Pool oder eine Volume-Gruppe
+:hardbreaks:
+:allow-uri-read: 
+:experimental: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Sie können die Laufwerkssicherheit für einen Pool oder eine Volume-Gruppe aktivieren, um unbefugten Zugriff auf die Daten auf den Laufwerken im Pool oder der Volume-Gruppe zu verhindern.
+
+Lese- und Schreibzugriff auf die Laufwerke ist nur über einen Controller verfügbar, der mit einem Sicherheitsschlüssel konfiguriert ist.
+
+.Bevor Sie beginnen
+* Die Laufwerkssicherheitsfunktion muss aktiviert sein.
+* Ein Sicherheitsschlüssel muss erstellt werden.
+* Der Pool oder die Volume-Gruppe muss sich im optimalen Zustand befinden.
+* Alle Laufwerke im Pool oder in der Volume-Gruppe müssen sichere Laufwerke sein.
+
+
+Wenn Sie die Laufwerkssicherheit verwenden möchten, wählen Sie einen Pool oder eine Volume-Gruppe aus, der sicher ist. Ein Pool oder eine Volume-Gruppe kann sowohl sichere als auch nicht sichere Laufwerke enthalten. Zur Nutzung der Verschlüsselungsfunktionen müssen jedoch alle Laufwerke sicher sein.
+
+Nach Aktivierung der Sicherheitskontrolle können Sie sie nur entfernen, indem Sie den Pool oder die Volume-Gruppe löschen und dann die Laufwerke löschen.
+
+.Schritte
+. Wählen Sie auf der Seite Verwalten das Speicher-Array mit dem Pool oder der Volume-Gruppe aus.
+. Wählen Sie Menü:Provisioning[Pools und Volume-Gruppen konfigurieren].
+. Wählen Sie den Pool oder die Volume-Gruppe aus, auf dem Sie die Sicherheit aktivieren möchten, und klicken Sie dann auf Menü:Mehr[Sicherheit aktivieren].
++
+Das Dialogfeld Sicherheit bestätigen wird angezeigt.
+
+. Bestätigen Sie, dass Sie die Sicherheit für den ausgewählten Pool oder die ausgewählte Volume-Gruppe aktivieren möchten, und klicken Sie dann auf *Aktivieren*.
+

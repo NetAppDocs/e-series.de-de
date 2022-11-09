@@ -1,0 +1,24 @@
+---
+permalink: maintenance-ef600/hpp-complete-protocol-conversion-task.html 
+sidebar: sidebar 
+keywords: host protocol change, EF300 host protocol, EF600 host protocol 
+summary: Führen Sie nach dem Konvertieren des Protokolls der Host-Ports weitere Schritte durch, um das neue Protokoll zu verwenden. 
+---
+= Vollständige Hostprotokollkonvertierung für eine EF300 oder EF600
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Nachdem Sie den Funktionspackschlüssel zur Konvertierung des Protokolls angewendet haben, müssen Sie den Host so konfigurieren, dass das entsprechende Protokoll verwendet wird.
+
+Schritt-für-Schritt-Anleitungen finden Sie im für Ihr System geeigneten Handbuch:
+
+* link:../config-linux/index.html["Linux Express-Konfiguration"]
+* link:../config-vmware/index.html["VMware Express-Konfiguration"]
+* link:../config-windows/index.html["Windows Express-Konfiguration"]
++
+Bestimmte Einstellungen können variieren. Prüfen Sie die http://mysupport.netapp.com/matrix["NetApp Interoperabilitätsmatrix"^] Genaue Anweisungen und zusätzliche empfohlene Einstellungen für Ihre Lösung
+
+

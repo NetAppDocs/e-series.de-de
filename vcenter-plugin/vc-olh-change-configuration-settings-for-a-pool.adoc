@@ -1,0 +1,85 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/vc-olh-change-configuration-settings-for-a-pool.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
+summary: Bearbeiten Sie die Einstellungen für einen Pool, einschließlich Name, Kapazitätswarneinstellungen, Änderungsprioritäten und Erhaltungskapazität. 
+---
+= Ändern Sie die Konfigurationseinstellungen für einen Pool
+:hardbreaks:
+:allow-uri-read: 
+:experimental: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Sie können die Einstellungen für einen Pool bearbeiten, einschließlich Name, Kapazitätswarnungen, Änderungsprioritäten und Erhaltungskapazität.
+
+In dieser Aufgabe wird beschrieben, wie die Konfigurationseinstellungen für einen Pool geändert werden.
+
+
+NOTE: Sie können den RAID-Level eines Pools nicht mit der Plugin-Schnittstelle ändern. Das Plugin konfiguriert Pools automatisch als RAID 6.
+
+.Schritte
+. Wählen Sie auf der Seite Verwalten das Speicher-Array mit dem Pool aus.
+. Wählen Sie Menü:Provisioning[Pools und Volume-Gruppen konfigurieren].
+. Wählen Sie den Pool aus, den Sie bearbeiten möchten, und klicken Sie dann auf *Einstellungen anzeigen/bearbeiten*.
++
+Das Dialogfeld Pool-Einstellungen wird angezeigt.
+
+. Wählen Sie die Registerkarte *Einstellungen* aus, und bearbeiten Sie anschließend die Pooleinstellungen entsprechend.
++
+.Felddetails
+====
+[cols="25h,~"]
+|===
+| Einstellung | Beschreibung 
+
+
+ a| 
+Name
+ a| 
+Sie können den vom Benutzer bereitgestellten Namen des Pools ändern. Die Angabe eines Namens für einen Pool ist erforderlich.
+
+
+
+ a| 
+Kapazitätswarnungen
+ a| 
+Sie können Benachrichtigungen senden, wenn die freie Kapazität in einem Pool einen bestimmten Schwellenwert erreicht oder überschreitet. Wenn die im Pool gespeicherten Daten den angegebenen Schwellenwert überschreiten, sendet das Plugin eine Nachricht, sodass Sie mehr Speicherplatz hinzufügen oder unnötige Objekte löschen können. Warnmeldungen werden im Bereich Benachrichtigungen auf dem Dashboard angezeigt und können per E-Mail und SNMP-Trap-Nachrichten vom Server an Administratoren gesendet werden. Sie können die folgenden Kapazitätswarnungen definieren:
+
+** *Critical Alert* -- Diese kritische Warnmeldung informiert Sie, wenn die freie Kapazität im Pool den angegebenen Schwellenwert erreicht oder überschreitet. Verwenden Sie die Spinner-Regler, um den Schwellenwert in Prozent einzustellen. Aktivieren Sie das Kontrollkästchen, um diese Benachrichtigung zu deaktivieren.
+** *Frühwarnung* -- Diese Frühwarnung informiert Sie, wenn die freie Kapazität in einem Pool einen bestimmten Schwellenwert erreicht. Verwenden Sie die Spinner-Regler, um den Schwellenwert in Prozent einzustellen. Aktivieren Sie das Kontrollkästchen, um diese Benachrichtigung zu deaktivieren.
+
+
+
+
+ a| 
+Änderungsprioritäten
+ a| 
+Sie können die Prioritätsstufen für Änderungsvorgänge in einem Pool relativ zur Systemleistung festlegen. Eine höhere Priorität für Änderungsvorgänge in einem Pool führt dazu, dass ein Vorgang schneller abgeschlossen wird, die Host-I/O-Performance jedoch beeinträchtigt wird. Bei geringerer Priorität dauern Vorgänge länger, bis die I/O-Performance des Hosts weniger beeinträchtigt ist. Sie können aus fünf Prioritätsstufen wählen: Niedrigste, niedrige, mittlere, höchste und höchste. Je höher die Priorität, desto größer ist die Auswirkung auf die Host-I/O und System-Performance.
+
+** *Kritische Rekonstruktionspriorität* -- dieser Schieberegler bestimmt die Priorität eines Datenrekonstruktionsvorgangs, wenn mehrere Laufwerksausfälle zu einem Zustand führen, in dem einige Daten keine Redundanz aufweisen und ein zusätzlicher Laufwerksausfall zu Datenverlust führen kann.
+** *Degradierte Rekonstruktionspriorität* -- dieser Schieberegler bestimmt die Priorität des Datenrekonstruktionsvorgangs bei einem Laufwerksausfall, aber die Daten haben noch Redundanz und ein zusätzlicher Laufwerksausfall führt nicht zu Datenverlust.
+** *Background Operation Priority* -- dieser Schieberegler bestimmt die Priorität der Pool-Hintergrundoperationen, die auftreten, während sich der Pool in einem optimalen Zustand befindet. Zu diesen Vorgängen gehören dynamische Volume-Erweiterung (DVE), Instant Availability Format (IAF) und die Migration von Daten auf ein ersetztes oder hinzugefügtes Laufwerk.
+
+
+
+
+ a| 
+Dauerhafte Kapazität („Optimierungskapazität“ für die EF600 oder EF300)
+ a| 
+*Preservation Capacity* -- Sie können die Anzahl der Laufwerke definieren, um die Kapazität zu bestimmen, die im Pool reserviert ist, um potenzielle Laufwerksausfälle zu unterstützen. Bei einem Laufwerksausfall werden die rekonstruierten Daten anhand der Festplattenkapazität gespeichert. Pools verwenden während der Datenrekonstruktion freie Kapazitäten anstelle von Hot-Spare-Laufwerken, die in Volume-Gruppen verwendet werden. Passen Sie mit den Spinner-Steuerungen die Anzahl der Antriebe an. Je nach Anzahl der Laufwerke wird die Konservierungskapazität im Pool neben der Spinner Box angezeigt. Berücksichtigen Sie die folgenden Hinweise zur Konservierungskapazität.
+
+** Da die Konservierungskapazität von der gesamten freien Kapazität eines Pools abgezogen wird, wirkt sich die Menge der reservierten Kapazität darauf aus, wie viel freie Kapazität zur Erstellung von Volumes zur Verfügung steht. Wenn Sie für die Erhaltungskapazität 0 angeben, wird die gesamte freie Kapazität im Pool zur Volume-Erstellung genutzt.
+** Wenn Sie die Konservierungskapazität verringern, erhöhen Sie die Kapazität, die für Pool Volumes genutzt werden kann.
+
+
+*Zusätzliche Optimierungskapazität (nur EF600 und EF300 Arrays)* -- Wenn ein Pool erstellt wird, wird eine empfohlene Optimierungskapazität generiert, die ein ausgewogenes Verhältnis zwischen verfügbarer Kapazität und Performance sowie Laufwerksabnutzung bietet. Sie können diese Balance anpassen, indem Sie den Schieberegler nach rechts bewegen, um eine bessere Performance zu erzielen und den Verschleiß zu erhöhen. Wenn Sie die verfügbare Kapazität in die linke Seite verschieben, können Sie die verfügbare Kapazität auf Kosten einer besseren Performance und eines höheren Verschleißes der Laufwerke erhöhen. SSD-Laufwerke haben eine längere Lebensdauer und eine bessere maximale Schreib-Performance, wenn ein Teil ihrer Kapazität nicht zugewiesen ist. Bei Laufwerken, die einem Pool zugeordnet sind, besteht nicht zugewiesene Kapazität aus der Erhaltungskapazität eines Pools, der freien Kapazität (nicht von Volumes genutzte Kapazität) und einem Teil der nutzbaren Kapazität, der als zusätzliche Optimierungskapazität zur Verfügung steht. Die zusätzliche Optimierungskapazität stellt ein Mindestmaß an Optimierungskapazität zur Verfügung, indem die nutzbare Kapazität reduziert wird. Somit ist für die Volume-Erstellung nicht verfügbar.
+
+|===
+====
+. Klicken Sie Auf *Speichern*.
+

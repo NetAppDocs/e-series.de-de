@@ -1,0 +1,14 @@
+---
+permalink: maintenance-ef600/concept-drives-wombat.html 
+sidebar: sidebar 
+keywords: drive, device, physical, storage, media, data 
+summary: Ein Laufwerk ist ein Gerät, das den physischen Speicher für Daten bereitstellt. 
+---
+= Laufwerke
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Ein Laufwerk ist ein Gerät, das den physischen Speicher für Daten bereitstellt.

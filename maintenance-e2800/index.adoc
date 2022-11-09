@@ -1,0 +1,50 @@
+---
+permalink: maintenance-e2800/index.html 
+sidebar: sidebar 
+keywords: E2800 maintenance, E2800 repair, replace E2800 components, replacing E2800 components, 
+summary: Führen Sie Wartungsarbeiten an E2800 Komponenten durch. 
+---
+= Erhalt der E2800 Hardware
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Für das E2800 Storage-System können Sie anhand der folgenden Komponenten Wartungsvorgänge durchführen.
+
+
+
+== Batterien
+
+Jeder Controller-Behälter enthält eine Batterie, die zwischengespeicherte Daten behält, wenn die Wechselstromversorgung ausfällt.
+
+
+
+== Controller
+
+Ein Controller besteht aus einer Hauptplatine, Firmware und Software. Sie steuert die Laufwerke und implementiert die Funktionen von System Manager.
+
+
+
+== Kanister
+
+Behälter bestehen aus drei verschiedenen Typen: Stromverlüfter (Netzteile), die eine redundante Stromversorgung und eine ausreichende Kühlung in einem Controller-Shelf mit 12 Laufwerken oder 24 Laufwerken bereitstellen. Stromversorgungs-Behälter, die für Redundanz in einem Controller-Shelf für 60 Laufwerke oder Festplatten-Shelf verwendet werden. Und Lüfter-Kanister, die zum Kühlen des Controller-Shelfs für 60 Laufwerke oder des Laufwerks-Shelfs verwendet werden.
+
+
+
+== Laufwerke
+
+Ein Laufwerk ist ein elektromagnetisches mechanisches Gerät, das die physischen Speichermedien für Daten zur Verfügung stellt.
+
+
+
+== Host-Schnittstellenkarten (HICs)
+
+Eine Host Interface Card (HIC) kann optional in einem Controller-Behälter installiert werden. Der E2800 Controller enthält integrierte Host-Ports auf der Controller-Karte selbst sowie Host-Ports auf der optionalen HIC. Host Ports, die in den Controller integriert sind, werden als Baseboard Host Ports bezeichnet. In die HIC integrierte Host Ports werden HIC Ports genannt.
+
+
+
+== Host-Port-Protokoll
+
+Sie können das Host-Protokoll in ein anderes Protokoll umwandeln, um Kompatibilität und Kommunikation herzustellen.

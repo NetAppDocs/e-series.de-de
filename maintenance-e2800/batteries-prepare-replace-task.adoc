@@ -1,0 +1,171 @@
+---
+permalink: maintenance-e2800/batteries-prepare-replace-task.html 
+sidebar: sidebar 
+keywords: E2800 battery fail, E2800 battery, E2800 battery replacement, replace E2800 battery, replacing E2800 battery, E2800, E-Series, eseries 
+summary: Bereiten Sie sich auf den Austausch der E2800-Batterie vor. Befolgen Sie dabei die entsprechenden Schritte für Duplex- oder Simplexkonfiguration. 
+---
+= Vorbereiten des Austausches für den E2800 Akku
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Die Schritte zur Vorbereitung auf den Batterieaustausch hängen davon ab, ob Sie über eine Duplexkonfiguration (zwei Controller) oder eine Simplex-Konfiguration (ein Controller) verfügen.
+
+* Informationen zu Duplexkonfigurationen finden Sie unter  controller offline (duplex).
+* Informationen zu Simplexkonfigurationen finden Sie unter  down the controller shelf (simplex).
+
+
+.Bevor Sie beginnen
+* Überprüfen Sie, ob keine Volumes verwendet werden oder ob auf allen Hosts, die diese Volumes verwenden, ein Multipath-Treiber installiert ist.
+* Überprüfen Sie die link:batteries-overview-requirements-concept.html["Anforderungen für den Austausch von E2800 Batterien"].
+
+
+
+
+== Controller offline schalten (Duplex)
+
+Wenn Sie über eine Duplexkonfiguration verfügen, müssen Sie den betroffenen Controller offline stellen, damit Sie den fehlerhaften Akku sicher entfernen können. Der Controller, den Sie nicht in den Offline-Modus versetzen, muss den Status „Online“ (im optimalen Status) aufweisen.
+
+
+NOTE: Führen Sie diese Aufgabe nur aus, wenn Ihr Speicher-Array über zwei Controller verfügt (Duplexkonfiguration).
+
+.Schritte
+. Sehen Sie sich im SANtricity System Manager die Details im Recovery Guru an, um zu überprüfen, ob ein Problem mit einer Batterie vorliegt, und um sicherzustellen, dass keine weiteren Punkte zuerst behoben werden müssen.
+. Stellen Sie im Bereich Details des Recovery Guru fest, welche Batterie ersetzt werden soll.
+. Sichern Sie die Konfigurationsdatenbank des Storage-Arrays mit SANtricity System Manager.
++
+Wenn beim Entfernen eines Controllers ein Problem auftritt, können Sie die gespeicherte Datei verwenden, um Ihre Konfiguration wiederherzustellen. Das System speichert den aktuellen Status der RAID-Konfigurationsdatenbank, die alle Daten für Volume-Gruppen und Festplatten-Pools auf dem Controller enthält.
+
++
+** Über System Manager:
++
+... Wählen Sie MENU:Support[Support Center > Diagnose].
+... Wählen Sie *Konfigurationsdaten Erfassen*.
+... Klicken Sie Auf *Collect*.
++
+Die Datei wird im Ordner Downloads für Ihren Browser mit dem Namen *configurationData-<arrayName>-<dateTime>.7z* gespeichert.
+
+
+
+** Alternativ können Sie die Konfigurationsdatenbank mit dem folgenden CLI-Befehl sichern:
++
+`save storageArray dbmDatabase sourceLocation=onboard contentType=all file="filename";`
+
+
+
+. Support-Daten für Ihr Storage Array mit SANtricity System Manager erfassen
++
+Wenn beim Entfernen eines Controllers ein Problem auftritt, können Sie die gespeicherte Datei zum Beheben des Problems verwenden. Das System speichert Bestands-, Status- und Performancedaten Ihres Speicherarrays in einer einzelnen Datei.
+
++
+.. Wählen Sie MENU:Support[Support Center > Diagnose].
+.. Wählen Sie *Support-Daten Erfassen* Aus.
+.. Klicken Sie Auf *Collect*.
++
+Die Datei wird im Ordner Downloads für Ihren Browser mit dem Namen *Support-Data.7z* gespeichert.
+
+
+
+. Wenn der Controller nicht bereits offline ist, versetzen Sie ihn jetzt mithilfe von SANtricity System Manager in den Offline-Modus.
++
+** Über den SANtricity System Manager:
++
+... Wählen Sie *Hardware*.
+... Wenn die Grafik die Laufwerke anzeigt, wählen Sie *Zurück vom Shelf anzeigen* aus, um die Controller anzuzeigen.
+... Wählen Sie den Controller aus, den Sie in den Offline-Modus versetzen möchten.
+... Wählen Sie im Kontextmenü die Option *Offline platzieren* aus, und bestätigen Sie, dass Sie den Vorgang ausführen möchten.
++
+
+NOTE: Wenn Sie mit dem Controller auf SANtricity System Manager zugreifen, den Sie offline schalten möchten, wird eine Meldung vom SANtricity System Manager nicht verfügbar angezeigt. Wählen Sie *mit einer alternativen Netzwerkverbindung verbinden* aus, um automatisch über den anderen Controller auf SANtricity System Manager zuzugreifen.
+
+
+
+** Alternativ können Sie die Controller mit den folgenden CLI-Befehlen offline schalten:
++
+* Für Steuerung A:* `set controller [a] availability=offline`
+
++
+* Für Regler B:* `set controller [b] availability=offline`
+
+
+
+. Warten Sie, bis SANtricity System Manager den Status des Controllers auf „Offline“ aktualisiert.
+. Gehen Sie zu link:batteries-remove-controller-canister-task.html["Den E2800 Controller-Behälter entfernen"].
++
+
+CAUTION: Beginnen Sie keine anderen Vorgänge, bis der Status aktualisiert wurde.
+
+
+
+
+
+== Controller-Shelf herunterfahren (Simplexkonfiguration)
+
+Wenn Sie eine Simplexkonfiguration haben, schalten Sie das Controller-Shelf aus, damit Sie den ausgefallenen Akku sicher entfernen können.
+
+
+NOTE: Führen Sie diese Aufgabe nur aus, wenn Ihr Speicher-Array über einen Controller verfügt (Simplex-Konfiguration).
+
+.Schritte
+. Sichern Sie die Konfigurationsdatenbank des Storage-Arrays mit SANtricity System Manager.
++
+Wenn beim Entfernen eines Controllers ein Problem auftritt, können Sie die gespeicherte Datei verwenden, um Ihre Konfiguration wiederherzustellen. Das System speichert den aktuellen Status der RAID-Konfigurationsdatenbank, die alle Daten für Volume-Gruppen und Festplatten-Pools auf dem Controller enthält.
+
++
+** Über System Manager:
++
+... Wählen Sie MENU:Support[Support Center > Diagnose].
+... Wählen Sie *Konfigurationsdaten Erfassen*.
+... Klicken Sie Auf *Collect*.
++
+Die Datei wird im Ordner Downloads für Ihren Browser mit dem Namen *configurationData-<arrayName>-<dateTime>.7z* gespeichert.
+
+
+
+** Alternativ können Sie die Konfigurationsdatenbank mit dem folgenden CLI-Befehl sichern:
++
+`save storageArray dbmDatabase sourceLocation=onboard contentType=all file="filename";`
+
+
+
+. Support-Daten für Ihr Storage Array mit SANtricity System Manager erfassen
++
+Wenn beim Entfernen eines Controllers ein Problem auftritt, können Sie die gespeicherte Datei zum Beheben des Problems verwenden. Das System speichert Bestands-, Status- und Performancedaten Ihres Speicherarrays in einer einzelnen Datei.
+
++
+.. Wählen Sie MENU:Support[Support Center > Diagnose].
+.. Wählen Sie *Support-Daten Erfassen* Aus.
+.. Klicken Sie Auf *Collect*.
++
+Die Datei wird im Ordner Downloads für Ihren Browser mit dem Namen *Support-Data.7z* gespeichert.
+
+
+
+. Vergewissern Sie sich, dass zwischen dem Storage-Array und allen verbundenen Hosts keine I/O-Vorgänge stattfinden. Sie können beispielsweise die folgenden Schritte durchführen:
++
+.. Beenden Sie alle Prozesse, die die LUNs umfassen, die den Hosts vom Storage zugeordnet sind.
+.. Stellen Sie sicher, dass keine Applikationen Daten auf LUNs schreiben, die vom Storage den Hosts zugeordnet sind.
+.. Heben Sie die Bereitstellung aller Dateisysteme auf, die mit den Volumes im Array verbunden sind, auf.
++
+
+NOTE: Die genauen Schritte zur Stoerung von Host-I/O-Vorgängen hängen vom Host-Betriebssystem und der Konfiguration ab, die den Umfang dieser Anweisungen übersteigen. Wenn Sie nicht sicher sind, wie Sie I/O-Vorgänge für Hosts in Ihrer Umgebung anhalten, sollten Sie das Herunterfahren des Hosts in Betracht ziehen.
+
++
+
+CAUTION: *Möglicher Datenverlust* -- Wenn Sie diesen Vorgang während der I/O-Vorgänge fortsetzen, können Sie Daten verlieren.
+
+
+
+. Warten Sie, bis alle Daten im Cache-Speicher auf die Laufwerke geschrieben werden.
++
+Die grüne LED „Cache aktiv“ auf der Rückseite des Controllers leuchtet, wenn Daten im Cache auf die Laufwerke geschrieben werden müssen. Sie müssen warten, bis diese LED ausgeschaltet ist.
+
+. Wählen Sie auf der Startseite des SANtricity System Managers die Option *Vorgänge in Bearbeitung anzeigen*.
+. Bestätigen Sie, dass alle Vorgänge abgeschlossen wurden, bevor Sie mit dem nächsten Schritt fortfahren.
+. Schalten Sie beide Netzschalter am Controller Shelf aus.
+. Warten Sie, bis alle LEDs am Controller-Shelf ausgeschaltet sind.
+. Gehen Sie zu link:batteries-remove-controller-canister-task.html["Den E2800 Controller-Behälter entfernen"].
+

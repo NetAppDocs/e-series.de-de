@@ -1,0 +1,184 @@
+---
+permalink: config-linux/iscsi-configure-host-side-network-task.html 
+sidebar: sidebar 
+keywords: configure iSCSI networking, express linux configuration, software configuration, linux host, E2800, E5700, EF300, EF600, E-Series, eseries 
+summary: Konfigurieren Sie das iSCSI-Netzwerk auf der Host-Seite. 
+---
+= Konfigurieren Sie Host-seitiges Netzwerk
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Zur Konfiguration von Host-seitigem Netzwerk müssen Sie mehrere Schritte durchführen.
+
+Sie konfigurieren das iSCSI-Netzwerk auf der Hostseite, indem Sie die Anzahl der Knotensitzungen pro physischem Pfad festlegen, die entsprechenden iSCSI-Dienste einschalten, das Netzwerk für die iSCSI-Ports konfigurieren, iSCSI-Face-Bindungen erstellen und die iSCSI-Sitzungen zwischen Initiatoren und Zielen einrichten.
+
+In den meisten Fällen können Sie den Inbox Software-Initiator für iSCSI CNA/NIC verwenden. Sie müssen den neuesten Treiber, die aktuelle Firmware und das BIOS nicht herunterladen. Siehe https://mysupport.netapp.com/matrix["NetApp Interoperabilitäts-Matrix-Tool"^] Um Codeanforderungen zu ermitteln.
+
+.Schritte
+. Prüfen Sie die `node.session.nr_sessions` Variable in der Datei /etc/iscsi/iscsid.conf, um die Standardanzahl von Sitzungen pro physischem Pfad anzuzeigen. Ändern Sie bei Bedarf die Standardanzahl von Sitzungen in eine Sitzung.
++
+[listing]
+----
+node.session.nr_sessions = 1
+----
+. Ändern Sie das `node.session.timeo.replacement_timeout` Variable in der Datei /etc/iscsi/iscsid.conf in `20`, Von einem Standardwert von `120`.
++
+[listing]
+----
+node.session.timeo.replacement_timeout=20
+----
+. Stellen Sie sicher `iscsid` Und `(open-)iscsi` Dienste sind aktiviert und für das Booten aktiviert.
++
+* Red hat Enterprise Linux 7, 8 und 9 (RHEL 7, RHEL 8 und RHEL9)*
+
++
+[listing]
+----
+# systemctl start iscsi
+# systemctl start iscsid
+# systemctl enable iscsi
+# systemctl enable iscsid
+----
++
+*SUSE Linux Enterprise Server 12 und 15 (SLES 12 und SLES 15)*
+
++
+[listing]
+----
+# systemctl start iscsid.service
+# systemctl enable iscsid.service
+----
++
+Optional stellen Sie fest `node.startup = automatic` In /etc/iscsi/iscsid.conf vor dem Ausführen von any `iscsiadm` Befehle, für die Sessions gespeichert werden sollen, bleiben nach dem Neubooten bestehen.
+
+. Ermitteln Sie den Host-IQN-Initiatornamen, mit dem der Host für ein Array konfiguriert wird.
++
+[listing]
+----
+# cat /etc/iscsi/initiatorname.iscsi
+----
+. Konfigurieren Sie das Netzwerk für iSCSI-Ports:
++
+
+NOTE: Zusätzlich zum öffentlichen Netzwerkport sollten iSCSI-Initiatoren zwei oder mehr NICs in separaten privaten Segmenten oder VLANs verwenden.
+
++
+.. Bestimmen Sie die iSCSI-Portnamen mit `ifconfig -a` Befehl.
+.. Legen Sie die IP-Adresse für die iSCSI-Initiator-Ports fest. Die Initiator-Ports sollten sich im gleichen Subnetz wie die iSCSI-Zielports befinden.
++
+* Red hat Enterprise Linux 7, 8 und 9 (RHEL 7, RHEL 8 und RHEL9)*
+
++
+[listing]
+----
+# vim /etc/sysconfig/network-scripts/ifcfg-<NIC port>
+----
++
+*SUSE Linux Enterprise Server 12 und 15 (SLES 12 und SLES 15)*
+
++
+[listing]
+----
+# vim /etc/sysconfig/network/ifcfg-<NIC port>
+----
++
+Bearbeiten:
+
++
+[listing]
+----
+BOOTPROTO=none
+ONBOOT=yes
+NM_CONTROLLED=no
+----
++
+Hinzufügen:
+
++
+[listing]
+----
+IPADDR=192.168.xxx.xxx
+NETMASK=255.255.255.0
+----
++
+
+NOTE: Stellen Sie sicher, dass Sie die Adresse für beide iSCSI-Initiator-Ports festlegen.
+
+.. Starten Sie die Netzwerkdienste neu.
++
+[listing]
+----
+# systemctl restart network
+----
+.. Stellen Sie sicher, dass der Linux-Server alle -iSCSI-Zielports anpingen kann.
+
+
+. Richten Sie die iSCSI-Sitzungen zwischen Initiatoren und Zielen (insgesamt vier) ein.
++
+.. Konfigurieren Sie bei Verwendung von ifaces die iSCSI-Schnittstellen, indem Sie zwei iSCSI-iface-Bindungen erstellen.
++
+[listing]
+----
+# iscsiadm -m iface -I iface0 -o new
+# iscsiadm -m iface -I iface0 -o update -n iface.net_ifacename -v <NIC port1>
+----
++
+[listing]
+----
+# iscsiadm -m iface -I iface1 -o new
+# iscsiadm -m iface -I iface1 -o update -n iface.net_ifacename -v <NIC port2>
+----
++
+
+NOTE: Verwenden Sie zum Auflisten der Schnittstellen `iscsiadm -m iface`.
+
+.. ISCSI-Ziele erkennen Speichern Sie den IQN (er entspricht jeder Ermittlung) im Arbeitsblatt für den nächsten Schritt.
++
+[listing]
+----
+# iscsiadm -m discovery -t sendtargets -p 192.168.0.1:3260 -I iface0 -P 1
+----
++
+Oder
+
++
+[listing]
+----
+# iscsiadm -m discovery -t sendtargets -p 192.168.0.1:3260
+----
++
+
+NOTE: Der IQN sieht wie folgt aus:
+
++
+[listing]
+----
+iqn.1992-01.com.netapp:2365.60080e50001bf1600000000531d7be3
+----
+.. Erstellen Sie die Verbindung zwischen den iSCSI-Initiatoren und den iSCSI-Zielen.
++
+[listing]
+----
+# iscsiadm -m node -T iqn.1992-01.com.netapp:2365.60080e50001bf1600000000531d7be3
+-p 192.168.0.1:3260 -I iface0 -l
+----
++
+Oder
+
++
+[listing]
+----
+# iscsiadm -m node -L all
+----
+.. Führen Sie die iSCSI-Sitzungen auf, die auf dem Host eingerichtet wurden, auf.
++
+[listing]
+----
+# iscsiadm -m session
+----
+
+
+

@@ -1,0 +1,84 @@
+---
+permalink: upgrade-controllers/remove-controllers-task.html 
+sidebar: sidebar 
+keywords: E-Series, eseries, E2800, E5700, EF300, EF600, upgrade controller, upgrading controller, remove controller, removing controller, remove battery, removing battery 
+summary: Der erste Schritt beim Aktualisieren der Controller besteht darin, die alten Controller und optional die Batterie zu entfernen. 
+---
+= Controller entfernen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Nach der Vorbereitung der Aktualisierung können Sie die Controller entfernen und gegebenenfalls die Batterie entfernen.
+
+
+
+== Schritt 1: Controller entfernen
+
+Entfernen Sie den Controller-Behälter, damit Sie ihn mit einem neuen aktualisieren können. Sie müssen alle Kabel trennen und alle SFP-Transceiver entfernen. Anschließend können Sie den Controller-Behälter aus dem Controller-Regal schieben.
+
+.Was Sie und#8217;ll benötigen
+* Ein ESD-Armband oder andere antistatische Vorsichtsmaßnahmen treffen.
+* Etiketten, um jedes Kabel zu identifizieren, das mit dem Controller-Behälter verbunden ist.
+
+
+Führen Sie für jeden Controller im Fach für das Controller-Laufwerk die folgenden Schritte aus
+
+Wenn Sie Controller in einem Duplex-Controller-Laufwerksfach aktualisieren, wiederholen Sie alle Schritte, um den zweiten Controller-Behälter zu entfernen.
+
+.Schritte
+. Setzen Sie ein ESD-Armband an oder ergreifen Sie andere antistatische Vorsichtsmaßnahmen.
+. Beschriften Sie jedes Kabel, das am alten Controller-Behälter befestigt ist. Je nach HIC-Konfiguration können Sie möglicherweise einige Kabel wieder anschließen, nachdem Sie den Controller-Behälter ersetzt haben.
+. Trennen Sie alle Schnittstellen- und Ethernet-Kabel vom alten Controller-Behälter.
++
+Wenn Glasfaserkabel vorhanden sind, können Sie den Controller-Behälter mit den beiden Freigabehebeln teilweise ausbauen. Durch das Öffnen dieser Freigabehebel lässt sich die Freigabelasche des Glasfaserkabels leichter herunterdrücken.
+
++
+
+CAUTION: Um eine verminderte Leistung zu vermeiden, dürfen die Kabel nicht verdreht, gefaltet, gequetscht oder treten.
+
+. Wenn der alte Controller-Behälter eine Fibre-Channel-HIC oder eine InfiniBand-HIC enthält, entfernen Sie die SFP+-Transceiver (für Fibre Channel) oder Quad SFP (QSFP+) von der HIC und speichern Sie sie zur möglichen Wiederverwendung.
+. Controller A. entfernen
++
+.. Entriegeln und drehen Sie die Entriegelungsgriffe heraus, um den Controller-Behälter zu lösen.
+.. Ziehen Sie den Controller-Behälter mithilfe der Freigabegriffe und der Hände aus dem Controller-Laufwerksfach heraus
++
+Die folgende Abbildung zeigt ein Beispiel für den allgemeinen Speicherort der Release-Griffe für Controller-Modelle. Controller Shelfs und Controller-Laufwerksfächer verfügen über eine ähnliche Konfiguration für die Release-Griffe.
+
++
+image:../media/28_dwg_e2824_remove_controller_canister_upg-hw.gif[""]
+
++
+*(1)* _Controller-Behälter_
+
++
+*(2)* _Cam Griff_
+
+
+
+. Stellen Sie den alten Controller-Behälter mit den Freigabehebeln auf eine flache, statische Oberfläche in der Nähe des Controller-Laufwerkfachs ein. Positionieren Sie den Controller-Behälter so, dass Sie auf die obere Abdeckung zugreifen können.
+. (Bedingt) Wenn Sie Controller in einem Duplex-Controller-Laufwerksfach aktualisieren, wiederholen Sie alle Schritte, um den zweiten Controller-Behälter zu entfernen.
+
+
+Wenn Sie den Akku des alten Reglers in der neuen Steuerung verwenden möchten, gehen Sie zum nächsten Teil des Abschnitts; andernfalls gehen Sie zu link:install-controllers-task.html["Installieren Sie neue Controller"].
+
+
+
+== Schritt 2: Entfernen Sie den Akku
+
+Entfernen Sie den Akku nur, wenn Sie beabsichtigen, den Akku aus dem alten Controller-Behälter im neuen Controller-Behälter zu verwenden.
+
+.Schritte
+. Drücken Sie die beiden Verriegelungsknöpfe der oberen Abdeckung am alten Controller-Behälter nach unten, und schieben Sie die obere Abdeckung nach hinten am Behälter.
+. Führen Sie je nach Modell des Controller-Laufwerksfachs eine der folgenden Optionen aus, um den alten Akku freizugeben:
++
+** Lösen Sie bei der E2600 oder dem E2700 Controller-Laufwerksfach die Flügelschraube, mit der die Batterie am Controller-Behälter befestigt ist.
+** Für E5400, EF540, E5500, EF550, E5600 Oder das EF600 Controller-Laufwerksfach lösen Sie die Lasche, mit der der Akku am Controller-Behälter befestigt ist.
+
+
+. Entfernen Sie die Batterie, indem Sie sie zur Rückseite des alten Reglerkanisters schieben.
+
+
+Gehen Sie zu link:install-controllers-task.html["Installieren Sie neue Controller"].

@@ -1,0 +1,24 @@
+---
+permalink: config-linux/iscsi-verify-storage-access-host-task.html 
+sidebar: sidebar 
+keywords: express linux configuration, software configuration, linux host, E2800, E5700, EF300, EF600, E-Series, eseries 
+summary: Vor der Verwendung des Volumes überprüfen Sie, ob der Host Daten auf das Volume schreiben und wieder lesen kann. 
+---
+= Überprüfen Sie den Speicherzugriff auf dem Host
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Vor der Verwendung des Volumes überprüfen Sie, ob der Host Daten auf das Volume schreiben und wieder lesen kann.
+
+Ein initialisiertes Volume, das mit einem Dateisystem formatiert ist.
+
+.Schritte
+. Kopieren Sie auf dem Host eine oder mehrere Dateien auf den Bereitstellungspunkt des Datenträgers.
+. Kopieren Sie die Dateien zurück in einen anderen Ordner auf der Originalfestplatte.
+. Führen Sie die aus `diff` Befehl zum Vergleichen der kopierten Dateien mit den Originalen.
+
+
+Entfernen Sie die kopierte Datei und den Ordner.

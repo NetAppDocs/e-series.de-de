@@ -1,0 +1,23 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/vc-olh-array-groups-overview.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
+summary: Managen Sie Ihre physische und virtualisierte Infrastruktur durch Gruppierung mehrerer Storage-Arrays. 
+---
+= Array-Gruppen – Übersicht
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Sie können Ihre physische und virtualisierte Infrastruktur im Storage Plug-in für vCenter managen, indem Sie eine Reihe von Storage-Arrays gruppieren. Möglicherweise möchten Sie Storage-Arrays gruppieren, um die Ausführung von Überwachungs- oder Reporting-Aufgaben zu erleichtern.
+
+Arten von Speicher-Array-Gruppen:
+
+* *Alle Gruppe* -- die All-Gruppe ist die Standardgruppe und umfasst alle Speicher-Arrays, die in Ihrem Unternehmen entdeckt wurden. Auf die Gruppe Alle kann über die Hauptansicht zugegriffen werden.
+* *Vom Benutzer erstellte Gruppe* -- Eine vom Benutzer erstellte Gruppe enthält die Speicherarrays, die Sie manuell auswählen, um diese Gruppe hinzuzufügen. Auf von Benutzern erstellte Gruppen kann über die Hauptansicht zugegriffen werden.
+

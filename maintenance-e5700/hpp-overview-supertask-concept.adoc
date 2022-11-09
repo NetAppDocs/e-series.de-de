@@ -1,0 +1,110 @@
+---
+permalink: maintenance-e5700/hpp-overview-supertask-concept.html 
+sidebar: sidebar 
+keywords: E5700 change host protocol, E5700 baseboard ports, convert E5700 protocol, IB protocol, Infiniband protocol, Fibre Channel protocol, FC protocol, iSCSI protocol, converting host port protocol, 
+summary: Konvertieren des Host-Protokolls für eine E5700. 
+---
+= Anforderungen für das Ändern des E5700 Host-Port-Protokolls
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Überprüfen Sie vor der Konvertierung des Host-Port-Protokolls in der E5700 die Anforderungen.
+
+
+
+== Host-Ports, die Sie ändern können
+
+
+NOTE: In einem E5700 Controller können nur die optischen Basis-Ports konvertiert werden.
+
+Die folgende Abbildung zeigt die E5700 mit ihren SFP+ (optischen) Baseboard-Host-Ports *(1)* und den optionalen zwei IB-HIC-Ports *(2)*.
+
+image::../media/e5700_with_2_port_100g_edr_infiniband_hic_w_callouts.gif[e5700 mit 2-Port 100 g edr infiniband HIC W Callouts]
+
+
+
+== Anforderungen
+
+* Sie müssen für dieses Verfahren ein Wartungsfenster zur Ausfallzeit planen.
+* Sie müssen Host-I/O-Vorgänge stoppen, wenn Sie die Konvertierung durchführen, und Sie können nicht auf Daten auf dem Speicher-Array zugreifen, bis Sie die Konvertierung erfolgreich abgeschlossen haben.
+* Sie müssen Out-of-Band-Management verwenden. (Sie können dieses Verfahren nicht mit der bandinternen Verwaltung abschließen.)
+* Sie haben die erforderliche Hardware für die Konvertierung erhalten. Ihr NetApp Vertriebsmitarbeiter hilft Ihnen dabei, die benötigte Hardware zu ermitteln und die richtigen Teile zu bestellen.
+* Wenn Sie versuchen, die Baseboard Host Ports Ihres Storage Arrays zu ändern und derzeit Dual-Protokoll-Transceiver (auch als _Unified_ bezeichnet) SFP Transceiver zu verwenden, die Sie von NetApp gekauft haben, müssen Sie Ihre SFP-Transceiver nicht ändern.
+* Stellen Sie sicher, dass die Dual-Protokoll-SFP-Transceiver sowohl FC (mit 4 Gbit/s oder 16 Gbit/s) als auch iSCSI (mit 10 Gbit/s) unterstützen, jedoch keine 1 Gbit/s iSCSI. Siehe link:hpp-change-host-protocol-task.html["Schritt: Bestimmen Sie, ob Sie SFPs mit zwei Protokollen haben"] Um zu bestimmen, welche Art von SFP-Transceivern installiert ist.
+
+
+
+
+== Überlegungen beim Ändern des Host-Protokolls
+
+Die Überlegungen zum Ändern des Host-Protokolls hängen von den Start- und Endprotokollen der Baseboard-Host-Ports und den HIC-Ports ab.
+
+Wenn Sie eine Funktion zur Spiegelung oder die Funktion Data Assurance (da) verwenden, müssen Sie wissen, was mit diesen Funktionen passiert, wenn Sie das Host-Port-Protokoll ändern.
+
+
+NOTE: Die folgenden Überlegungen gelten nur, wenn Sie ein bereits in Gebrauch getes Speicher-Array konvertieren. Diese Überlegungen gelten nicht, wenn Sie ein neues Speicher-Array konvertieren, das noch keine Hosts und Volumes definiert hat.
+
+
+
+=== Konvertierung von FC zu iSCSI
+
+* Für die asynchrone Spiegelung muss sowohl das lokale Storage-Array als auch das Remote-Storage-Array dasselbe Protokoll verwenden.
++
+** Wenn Sie derzeit asynchrone Spiegelung über die Baseboard verwenden, müssen Sie asynchrone Spiegelung-Beziehungen mit diesen Ports deaktivieren, bevor Sie das Funktionspaket anwenden.
+** Löschen Sie alle gespiegelten Konsistenzgruppen in der Online-Hilfe von SANtricity System Manager und entfernen Sie alle gespiegelten Paare aus dem lokalen und Remote Storage Arrays. Befolgen Sie außerdem die Anweisungen in der Online-Hilfe, um Asynchronous Mirroring zu deaktivieren.
++
+
+NOTE: Wenn Ihre Konfiguration SAN-Boot-Hosts enthält, die mit den FC-Baseboard-Ports verbunden sind, überprüfen Sie den https://mysupport.netapp.com/NOW/products/interoperability["NetApp Interoperabilitätsmatrix"^] Tool, um sicherzustellen, dass die Konfiguration auf iSCSI unterstützt wird. Wenn dies nicht der Fall ist, können Sie das Host-Protokoll nicht in iSCSI konvertieren.
+
+
+
+* Die Funktion Synchronous Mirroring wird für iSCSI nicht unterstützt.
++
+** Wenn Sie derzeit synchrone Spiegelung-Beziehungen über die Baseboard-Ports verwenden, müssen Sie diese synchronen Mirroring-Beziehungen deaktivieren.
+** In der Online-Hilfe von SANtricity System Manager können Sie alle synchronen gespiegelten Paare entfernen, die Spiegelbeziehungen auf dem lokalen Storage Array und auf dem Remote Storage Array entfernen. Befolgen Sie darüber hinaus die Anweisungen in der Online-Hilfe, um Synchronous Mirroring zu deaktivieren.
++
+
+CAUTION: Wenn Sie die Synchronous Mirroring-Beziehungen vor der Konvertierung in iSCSI nicht deaktivieren, kann es zu Datenverlusten und Datenverlust kommen.
+
+
+
+
+
+
+
+=== Konvertierung von iSCSI zu FC
+
+* Für die asynchrone Spiegelung muss sowohl das lokale Storage-Array als auch das Remote-Storage-Array dasselbe Protokoll verwenden. Wenn Sie derzeit asynchrone Spiegelung mit den Baseboard-Ports verwenden, müssen Sie das asynchrone Spiegeln deaktivieren, bevor Sie das Protokoll ändern.
+* Löschen Sie alle gespiegelten Konsistenzgruppen in der Online-Hilfe von SANtricity System Manager und entfernen Sie alle gespiegelten Paare aus dem lokalen und Remote Storage Arrays. Befolgen Sie außerdem die Anweisungen in der Online-Hilfe, um Asynchronous Mirroring zu deaktivieren.
+
+
+
+
+=== Konvertieren von IB-iSER nach/von IB-SRP
+
+* Sie müssen Ihre Hardware nicht ändern, wenn Sie von/nach iSER in SRP konvertieren.
+* Die Funktion Data Assurance (da) wird für SRP nicht unterstützt.
+* Die da-Funktion wird für IB-SRP nicht unterstützt. Wenn Sie diese Funktion derzeit über die IB-HIC verwenden und diese Ports von iSER in SRP konvertieren möchten, müssen Sie da für alle Volumes dauerhaft deaktivieren. Ändern Sie die Einstellungen für ein Volume in der Online-Hilfe von SANtricity System Manager, um die Data Assurance-Einstellung dauerhaft zu deaktivieren.
++
+
+NOTE: Nach dessen Deaktivierung kann das da auf dem Volume nicht wieder aktiviert werden.
+
+* Bestätigen Sie Folgendes:
++
+** Der Zugriff auf SANtricity System Manager ist über einen Webbrowser möglich.
+** Auf dem Storage-System wird SANtricity OS (Controller-Firmware) Version 08.40.11.00 oder höher ausgeführt.
+
+
+
+
+
+
+=== Spiegelungsvorgänge erfordern das gleiche Host-Protokoll
+
+Spiegelungsvorgänge werden nicht beeinträchtigt, wenn die Host-Ports, die für die Spiegelung genutzt werden, dasselbe Protokoll beibehalten, nachdem Sie das Funktionspaket angewendet haben. Selbst vor dem Anwenden des Feature Packs sollten Sie vor dem Anwenden bestätigen, dass alle Konsistenzgruppen der Spiegelung synchronisiert werden. Nach dem Anwenden des Feature Packs sollten Sie die Kommunikation zwischen dem lokalen Speicher-Array und dem Remote-Speicher-Array testen. Lesen Sie die Online-Hilfe für den SANtricity System Manager, wenn Sie Fragen dazu haben.
+
+
+NOTE: Asynchrones und synchrones Spiegeln werden für NVMe over Fabrics nicht unterstützt. Zum Deaktivieren der asynchronen und synchronen Spiegelung können Sie den verwenden `disable storageArray feature=asyncMirror` Oder `disable storageArray feature=syncMirror` Befehle über die Befehlszeilenschnittstelle. Siehe http://docs.netapp.com/ess-11/topic/com.netapp.doc.ssm-cli-115/GUID-0F156C94-C2A7-4458-A922-56439A098C09.html["Deaktivieren der Speicher-Array-Funktion"^] Spiegelungsbefehle in der CLI Command Reference Online-Hilfe finden Sie weitere Informationen zum Deaktivieren der Spiegelung.

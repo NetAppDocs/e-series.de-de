@@ -1,0 +1,89 @@
+---
+permalink: config-linux/nvme-fc-define-host-task.html 
+sidebar: sidebar 
+keywords: define host Linux, configure host linux, express linux configuration, linux host, 
+summary: Mit dem SANtricity System Manager definieren Sie die Hosts, die Daten an das Storage Array senden. Die Definition eines Hosts ist einer der Schritte, die erforderlich sind, damit das Storage-Array wissen kann, an welche Hosts angeschlossen sind, und um den I/O-Zugriff auf die Volumes zu ermöglichen. 
+---
+= Definieren Sie einen Host
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Mit dem SANtricity System Manager definieren Sie die Hosts, die Daten an das Storage Array senden. Die Definition eines Hosts ist einer der Schritte, die erforderlich sind, damit das Storage-Array wissen kann, an welche Hosts angeschlossen sind, und um den I/O-Zugriff auf die Volumes zu ermöglichen.
+
+Beachten Sie beim Definieren eines Hosts die folgenden Richtlinien:
+
+* Sie müssen die dem Host zugeordneten Host-Identifier-Ports definieren.
+* Stellen Sie sicher, dass Sie denselben Namen wie den zugewiesenen Systemnamen des Hosts angeben.
+* Dieser Vorgang ist nicht erfolgreich, wenn der gewählte Name bereits verwendet wird.
+* Die Länge des Namens darf nicht mehr als 30 Zeichen umfassen.
+
+
+.Schritte
+. Wählen Sie Menü:Storage[Hosts].
+. Klicken Sie auf Menü:Create[Host].
++
+Das Dialogfeld Host erstellen wird angezeigt.
+
+. Wählen Sie die entsprechenden Einstellungen für den Host aus.
++
+|===
+| Einstellung | Beschreibung 
+
+
+ a| 
+Name
+ a| 
+Geben Sie einen Namen für den neuen Host ein.
+
+
+
+ a| 
+Host-Betriebssystem-Typ
+ a| 
+Wählen Sie eine der folgenden Optionen aus der Dropdown-Liste aus:
+
+** *Linux* für SANtricity 11.60 und neuer
+** *Linux DM-MP (Kernel 3.10 oder höher)* für Pre-SANtricity 11.60
+
+
+
+
+ a| 
+Host-Schnittstellentyp
+ a| 
+Wählen Sie den Host-Schnittstellentyp aus, den Sie verwenden möchten. Wenn das zu konfigurierende Array nur einen verfügbaren Schnittstellentyp für die Host-Schnittstelle hat, steht diese Einstellung möglicherweise nicht zur Verfügung.
+
+
+
+ a| 
+Host-Ports
+ a| 
+Führen Sie einen der folgenden Schritte aus:
+
+** *E/A-Schnittstelle auswählen*
++
+Wenn die Host-Ports angemeldet sind, können Sie Host-Port-IDs aus der Liste auswählen. Dies ist die empfohlene Methode.
+
+** *Manuelles Hinzufügen*
++
+Wenn sich die Host-Ports nicht angemeldet haben, suchen Sie auf dem Host unter /etc/nvme/hostnqn nach den hostnqn-Kennungen und verknüpfen Sie sie mit der Hostdefinition.
+
++
+Sie können die Host-Port-IDs manuell eingeben oder sie aus der Datei /etc/nvme/hostnqn (jeweils einzeln) in das Feld *Host-Ports* kopieren/einfügen.
+
++
+Sie müssen eine Host-Port-ID gleichzeitig hinzufügen, um sie dem Host zuzuordnen. Sie können jedoch weiterhin so viele Kennungen auswählen, die dem Host zugeordnet sind. Jede Kennung wird im Feld *Host Ports* angezeigt. Bei Bedarf können Sie auch einen Bezeichner entfernen, indem Sie neben ihm die *X*-Option auswählen.
+
+
+
+|===
+. Klicken Sie Auf *Erstellen*.
+
+
+Nach der erfolgreichen Erstellung des Hosts erstellt SANtricity System Manager für jeden für den Host konfigurierten Host-Port einen Standardnamen.
+
+Der Standard-Alias ist `<Hostname_Port Number>`. Beispiel: Der Standard-Alias für den ersten Port, für den erstellt wurde `host IPT is IPT_1`.

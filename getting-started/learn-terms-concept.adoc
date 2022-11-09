@@ -1,0 +1,144 @@
+---
+permalink: getting-started/learn-terms-concept.html 
+sidebar: sidebar 
+keywords: E-Series, eseries, E2800, E5700, EF300, EF600, terms 
+summary: Erfahren Sie mehr über die in der E-Series verwendeten Begriffe. 
+---
+= Terminologie für E-Series
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Erfahren Sie mehr über die in der E-Series verwendeten Begriffe.
+
+|===
+| Laufzeit | Beschreibung 
+
+
+ a| 
+Controller
+ a| 
+Ein Controller besteht aus einer Hauptplatine, Firmware und Software. Er steuert die Laufwerke und implementiert die Funktionen.
+
+
+
+ a| 
+duplex-/Simplexkonfigurationen
+ a| 
+Duplex ist eine Konfiguration mit zwei Controllern im Speicher-Array. Simplex ist eine Single-Controller-Modulkonfiguration.
+
+
+
+ a| 
+HDD
+ a| 
+Festplattenlaufwerke (HDDs) sind Datenspeicher-Geräte, die rotierende Metallplatten mit einer magnetischen Beschichtung verwenden.
+
+
+
+ a| 
+HIC
+ a| 
+Eine Host Interface Card (HIC) verbindet das Array mit dem Host. Optional kann er in einem Controller-Behälter installiert werden.
+
+
+
+ a| 
+IB
+ a| 
+InfiniBand (IB) ist ein Kommunikationsstandard für die Datenübertragung zwischen hochperformanten Servern und Storage-Systemen.
+
+
+
+ a| 
+IOPS
+ a| 
+IOPS sind I/O-Operationen pro Sekunde.
+
+
+
+ a| 
+Spiegelung
+ a| 
+Spiegelung ist die Replizierung von Daten-Volumes auf separate Storage Arrays, um die kontinuierliche Verfügbarkeit zu gewährleisten.
+
+
+
+ a| 
+Pool
+ a| 
+Ein Pool ist eine Reihe von Laufwerken, die logisch gruppiert sind. Mit einem Pool können Sie ein oder mehrere Volumes erstellen, auf die ein Host zugreifen kann.
+
+
+
+ a| 
+Power-/Lüfterbehälter
+ a| 
+Ein Power-/Lüfterbehälter ist eine Baugruppe, die in ein Regal gleist. Sie umfasst ein Netzteil und einen integrierten Lüfter.
+
+
+
+ a| 
+Rack-Einheit (HE)
+ a| 
+Eine Rack-Einheit (abgekürzt U) ist eine Maßeinheit, die als 44.50 Millimeter (1.75 in) definiert ist.
+
+
+
+ a| 
+SAS
+ a| 
+Serial Attached SCSI (SAS) ist ein Point-to-Point-Protokoll, bei dem Controller direkt mit Festplatten verbunden werden.
+
+
+
+ a| 
+ROCE
+ a| 
+RDMA over Converged Ethernet (RoCE) ist ein Netzwerkprotokoll, das über ein Ethernet-Netzwerk einen Remote Direct Memory Access (RDMA) ermöglicht.
+
+
+
+ a| 
+Shelf
+ a| 
+Ein Shelf ist ein Gehäuse, das in einem Schrank oder Rack installiert ist. Er enthält die Hardwarekomponenten für das Storage-Array. Es gibt zwei Typen von Shelfs: Ein Controller-Shelf und ein Festplatten-Shelf. Ein Controller Shelf enthält Controller und Laufwerke. Ein Festplatten-Shelf enthält ein-/Ausgabemodule (IOMs) und Laufwerke.
+
+
+
+ a| 
+snapshot
+ a| 
+Ein Snapshot-Image ist eine logische Kopie der Volume-Daten, die zu einem bestimmten Zeitpunkt erfasst werden. Wie bei einem Wiederherstellungspunkt können Sie durch Snapshot Images ein Rollback zu einem bekannten fehlerfreien Datensatz durchführen.
+
+
+
+ a| 
+SSD
+ a| 
+Solid State Disks (SSDs) sind Daten-Storage-Geräte, die Solid State Memory (Flash) verwenden, um Daten dauerhaft zu speichern. SSDs bieten herkömmliche Festplatten an und sind mit denselben Schnittstellen verfügbar wie die Festplatten.
+
+
+
+ a| 
+Storage Array erledigen
+ a| 
+Ein Storage Array umfasst Shelfs, Controller, Laufwerke, Software und Firmware.
+
+
+
+ a| 
+Datenmenge
+ a| 
+Ein Volume ist ein Container, in dem Applikationen, Datenbanken und Filesysteme Daten speichern. Dies ist die logische Komponente, die erstellt wird, damit der Host auf den Speicher des Speicherarrays zugreifen kann.
+
+
+
+ a| 
+Workload
+ a| 
+Ein Workload ist ein Storage-Objekt, das eine Applikation unterstützt. Bei einigen Applikationen konfiguriert System Manager den Workload so, dass er Volumes mit ähnlichen zugrunde liegenden Volume-Merkmalen enthält. Diese Volume-Merkmale werden basierend auf dem Applikationstyp optimiert, den der Workload unterstützt.
+
+|===

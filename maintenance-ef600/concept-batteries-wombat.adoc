@@ -1,0 +1,14 @@
+---
+permalink: maintenance-ef600/concept-batteries-wombat.html 
+sidebar: sidebar 
+keywords: battery, include, controller, preserve, cache, data, ac, power, fail, batteries 
+summary: Ein Akku ist im Lieferumfang eines Controllers enthalten und behält zwischengespeicherte Daten bei Ausfall des Netzstroms bei. 
+---
+= Batterien
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Ein Akku ist im Lieferumfang eines Controllers enthalten und behält zwischengespeicherte Daten bei Ausfall des Netzstroms bei.

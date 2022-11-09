@@ -1,0 +1,75 @@
+---
+permalink: install-hw-cabling/index.html 
+sidebar: sidebar 
+keywords: cabling, cables, E-Series, eseries, E2800, E5700, EF300, EF600, DE212C, DE224C, DE460C 
+summary: Verbinden Sie einen Host direkt mit einem Controller oder verwenden Sie Switches. 
+---
+= Verkabelungsübersicht
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können einen Host direkt mit einem Controller verkabeln oder mithilfe von Switches einen Host mit einem Controller verbinden.
+
+Wenn Ihr Storage-System ein oder mehrere Festplatten-Shelfs enthält, müssen Sie diese mit Ihrem Controller-Shelf verkabeln. Sie können ein neues Festplatten-Shelf hinzufügen, während die Stromversorgung weiterhin auf andere Komponenten des Storage-Systems angewendet wird. Darüber hinaus können Sie Ihr Storage-System mit einem Netzwerk verbinden, um Out-of-Band-Management zu ermöglichen.
+
+Die Verkabelungsinformationen richten sich an Hardwareinstechniker oder Systemadministrator, der ein Speichersystem installiert oder erweitert. Es wird davon ausgegangen, dass Sie das Storage-System gemäß der Beschreibung „ _Installation and Setup Instructions_“ für Ihre Hardware installiert haben.
+
+
+
+== Anwendbares Hardware-Modell
+
+Verkabelungsinformationen gelten für die folgenden Hardware-Modelle.
+
+|===
+| *Controller-Shelf* | *Drive Shelf* 
+
+
+ a| 
+EF300, EF600
+ a| 
+DE212C, DE460
+
+
+
+ a| 
+E5724, EF570, E2812, E2824, EF280
+ a| 
+DE212C, DE224C
+
+
+
+ a| 
+E2860, E5760
+ a| 
+DE460C
+
+|===
+
+
+== Weitere Informationen zur Verkabelung
+
+Wenn Sie für die folgende Konfiguration verkabeln, lesen Sie https://mysupport.netapp.com/ecm/ecm_download_file/ECMLP2859057["Hinzufügen von IOM-Laufwerk-Shelfs zu einem vorhandenen E27XX-, E56XX- oder EF560-Controller-Shelf"^]
+
+|===
+| *Controller-Shelf* | *Drive Shelf* 
+
+
+ a| 
+E2712, E2724, E5612, E5624, EF560
+ a| 
+DE212C, DE224C
+
+
+
+ a| 
+E2760, E5660
+ a| 
+DE460C
+
+|===
+Weitere Informationen zu anderen Kabeloptionen finden Sie im https://mysupport.netapp.com/ecm/ecm_download_file/ECMLP2773533["Hardware-Verkabelungsleitfaden für die E-Series"^] Für ältere Systeme.
+
+Informationen über die Verkabelung zur Unterstützung von Spiegelungsfunktionen finden Sie im https://www.netapp.com/us/media/tr-4656.pdf["Funktionsbeschreibungen und Implementierungsleitfaden für synchrone und asynchrone Spiegelung"^].

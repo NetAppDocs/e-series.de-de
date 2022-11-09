@@ -1,0 +1,24 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/vc-olh-what-is-optimization-capacity-for-pools.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
+summary: SSD-Laufwerke haben eine längere Lebensdauer und eine bessere maximale Schreib-Performance, wenn ein Teil ihrer Kapazität nicht zugewiesen ist. 
+---
+= Was ist die Optimierungskapazität für Pools?
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+SSD-Laufwerke haben eine längere Lebensdauer und eine bessere maximale Schreib-Performance, wenn ein Teil ihrer Kapazität nicht zugewiesen ist.
+
+Bei Laufwerken, die einem Pool zugeordnet sind, besteht nicht zugewiesene Kapazität aus der Erhaltungskapazität eines Pools, der freien Kapazität (nicht von Volumes genutzte Kapazität) und einem Teil der nutzbaren Kapazität, der als zusätzliche Optimierungskapazität zur Verfügung steht. Die zusätzliche Optimierungskapazität stellt ein Mindestmaß an Optimierungskapazität zur Verfügung, indem die nutzbare Kapazität reduziert wird. Somit ist für die Volume-Erstellung nicht verfügbar.
+
+Wenn ein Pool erstellt wird, wird eine empfohlene Optimierungskapazität generiert, die ein ausgewogenes Verhältnis zwischen Performance, Laufwerksabnutzung und verfügbarer Kapazität bietet. Der Schieberegler „zusätzliche Optimierung der Kapazität“ im Dialogfeld „Pooleinstellungen“ ermöglicht die Anpassung an die Optimierungskapazität des Pools. Durch das Anpassen des Schiebereglers erhalten Sie eine bessere Performance und längere Lebensdauer der Laufwerke, und zwar auf Kosten der verfügbaren Kapazität oder zusätzlicher verfügbarer Kapazität, und zwar auf Kosten der Leistung und des Verschleißes der Laufwerke.
+
+
+NOTE: Der Schieberegler „zusätzliche Optimierung der Kapazität“ ist nur für Speichersysteme EF600 und EF300 verfügbar.

@@ -1,0 +1,141 @@
+---
+permalink: install-hw-e2800-e5700/e2824-e5724-prepare-task.html 
+sidebar: sidebar 
+keywords: e5724, ef570, ef280, e2812, e2824, de212c, de224c, installation 
+summary: Für die Installation der E5724, EF570, EF280, E2812, E2824, DE212C oder DE224C, erstellen Sie ein Konto und registrieren Sie Ihre Hardware. 
+---
+= Installation vorbereiten
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Bereiten Sie sich auf die Installation Ihrer E5724, EF570, EF280, E2812, E2824, DE212C oder DE224C Storage-System.
+
+.Schritte
+. Erstellen Sie ein Konto und registrieren Sie Ihre Hardware unter http://mysupport.netapp.com/["mysupport.netapp.com"^].
+. Stellen Sie sicher, dass die folgenden Elemente in dem Feld enthalten sind, das Sie erhalten haben.
++
+|===
+
+
+ a| 
+image:../media/trafford_overview.png[""]
+ a| 
+Shelf mit installierten Laufwerken (Blende separat verpackt)
+
+
+
+ a| 
+image:../media/superrails_inst-hw-e2800-e5700.png[""]
+ a| 
+Rack-montierte Hardware
+
+|===
++
+In der folgenden Tabelle sind die Kabeltypen aufgeführt, die Sie möglicherweise erhalten können. Wenn Sie ein Kabel erhalten, das nicht in der Tabelle aufgeführt ist, lesen Sie https://hwu.netapp.com/["Hardware Universe"^] Um das Kabel zu lokalisieren und dessen Verwendung zu identifizieren.
+
++
+|===
+| Steckverbindertyp | Kabeltyp | Nutzung 
+
+
+ a| 
+image:../media/cable_ethernet_inst-hw-e2800-e5700.png[""]
+ a| 
+Ethernet-Kabel
+
+(Bei Bestellung)
+ a| 
+Management-Verbindung
+
+
+
+ a| 
+image:../media/cable_io_inst-hw-e2800-e5700.png[""]
+ a| 
+E/A-Kabel
+
+(Bei Bestellung)
+ a| 
+Verkabelung der Daten-Hosts
+
+
+
+ a| 
+image:../media/cable_power_inst-hw-e2800-e5700.png[""]
+ a| 
+Stromkabel
+
+(Bei Bestellung)
+ a| 
+Einschalten des Storage-Systems
+
+
+
+ a| 
+image:../media/sas_cable.png[""]
+ a| 
+SAS-Kabel sind nur in den Festplatten-Shelfs enthalten
+ a| 
+SAS-Kabel
+
+|===
+. Stellen Sie sicher, dass Sie die folgenden Angaben machen.
++
+|===
+
+
+ a| 
+image:../media/screwdriver_inst-hw-e2800-e5700.png[""]
+ a| 
+Kreuzschlitzschraubendreher #2
+
+
+
+ a| 
+image:../media/flashlight_inst-hw-e2800-e5700.png[""]
+ a| 
+Taschenlampe
+
+
+
+ a| 
+image:../media/wrist_strap_inst-hw-e2800-e5700.png[""]
+ a| 
+ESD-Riemen
+
+
+
+ a| 
+image:../media/2u_rackspace_inst-hw-e2800-e5700.png[""]
+ a| 
+2-HE-Rack-Fläche: Eine Standardgröße von 19 Zoll 48.30 cm Rack für 2-HE-Shelfs mit folgenden Abmessungen:
+
+*Tiefe*: 19.0 Zoll (48.3 cm)
+
+*Breite*: 17.6 Zoll (44.7 cm)
+
+*Höhe*: 3.34 Zoll (8.48 cm)
+
+*Regal*: 24-Laufwerk
+
+*Höchstgewicht*: 60.5 lb (27.4 kg)
+
+
+
+ a| 
+image:../media/management_station_inst-hw-e2800-e5700_g60b3.png[""]
+ a| 
+Ein unterstützter Browser für die Verwaltungssoftware:
+
+** Google Chrome (Version 78 und höher)
+** Microsoft Internet Explorer (Version 11 und höher)
+** Microsoft Edge (88 und höher)
+** Mozilla Firefox (Version 70 und höher)
+** Safari (Version 12 und höher)
+
+
+|===
+

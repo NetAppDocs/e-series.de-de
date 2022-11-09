@@ -1,0 +1,69 @@
+---
+permalink: maintenance-e2800/batteries-remove-controller-canister-task.html 
+sidebar: sidebar 
+keywords: E2800 battery fail, E2800 battery, E2800 battery replacement, replace E2800 battery, replacing E2800 battery, E2800, E-Series, eseries 
+summary: Um den Akku zu entfernen, entfernen Sie zuerst den Controller-Behälter aus dem Controller-Regal. 
+---
+= Den E2800 Controller-Behälter entfernen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie müssen den Controller-Behälter aus dem Controller-Regal entfernen, damit Sie den Akku entfernen können.
+
+Wenn Sie einen Controller-Behälter entfernen, müssen Sie alle Kabel trennen. Anschließend können Sie den Controller-Behälter aus dem Controller-Regal schieben.
+
+.Was Sie und#8217;ll benötigen
+* Ein ESD-Armband, oder Sie haben andere antistatische Vorsichtsmaßnahmen getroffen.
+* Etiketten, um jedes Kabel zu identifizieren, das mit dem Controller-Behälter verbunden ist.
+
+
+.Schritte
+. Setzen Sie ein ESD-Armband an oder ergreifen Sie andere antistatische Vorsichtsmaßnahmen.
+. Beschriften Sie jedes Kabel, das am Controller-Behälter befestigt ist.
+. Trennen Sie alle Kabel vom Controller-Behälter.
++
+
+CAUTION: Um eine verminderte Leistung zu vermeiden, dürfen die Kabel nicht verdreht, gefaltet, gequetscht oder treten.
+
+. Wenn die Host-Ports am Controller-Behälter SFP+-Transceiver verwenden, lassen Sie sie nicht installiert.
+. Vergewissern Sie sich, dass die LED Cache Active auf der Rückseite des Controllers ausgeschaltet ist.
+. Drücken Sie den Riegel am Nockengriff, bis er loslässt, und öffnen Sie dann den Nockengriff nach rechts, um den Steuerkanister aus dem Regal zu lösen.
++
+Die folgende Abbildung zeigt ein Beispiel für ein E2812 Controller-Shelf, ein E2824 Controller-Shelf oder ein EF280 Flash-Array:
+
++
+image::../media/28_dwg_e2824_remove_controller_canister_maint-e2800.gif[28 dwg e2824 Controller-Behälter meine2800 ausbauen]
+
++
+*(1)* _Controller-Behälter_
+
++
+*(2)* _Cam Griff_
+
++
+Die folgende Abbildung zeigt ein Beispiel für ein E2860 Controller-Shelf:
+
++
+image::../media/28_dwg_e2860_add_controller_canister_maint-e2800.gif[28 DWG e2860, Zusatz-Controller-Behälter, Version 2800]
+
++
+*(1)* _Controller-Behälter_
+
++
+*(2)* _Cam Griff_
+
+. Schieben Sie den Controller-Behälter mit zwei Händen und dem Nockengriff aus dem Regal.
++
+
+CAUTION: Verwenden Sie immer zwei Hände, um das Gewicht eines Reglerkanisters zu unterstützen.
+
++
+Wenn Sie den Controller-Behälter aus einem E2812-Controller-Shelf, einem E2824-Controller-Shelf oder einem EF280 Flash-Array entfernen, wird eine Klappe an ihre Stelle gewechselt, um den leeren Schacht zu blockieren. Dadurch wird der Luftstrom und die Kühlung aufrechterhalten.
+
+. Drehen Sie den Controller-Behälter so um, dass die abnehmbare Abdeckung nach oben zeigt.
+. Setzen Sie den Steuerungsbehälter auf eine flache, statisch freie Oberfläche.
+. Gehen Sie zu link:batteries-remove-failed-task.html["Entfernen Sie den ausgefallenen E2800-Akku"].
+

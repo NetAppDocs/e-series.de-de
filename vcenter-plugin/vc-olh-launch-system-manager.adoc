@@ -1,0 +1,28 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/vc-olh-launch-system-manager.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
+summary: Zum Verwalten eines einzelnen Arrays verwenden Sie die Option Starten, um System Manager in einem neuen Browser-Fenster zu öffnen. 
+---
+= Starten Sie System Manager
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Verwenden Sie zum Verwalten eines einzelnen Arrays die Option Starten, um SANtricity System Manager in einem neuen Browser-Fenster zu öffnen.
+
+System Manager ist eine eingebettete Anwendung auf dem Controller des Storage-Arrays, die über einen Ethernet-Management-Port mit dem Netzwerk verbunden ist. System Manager enthält alle Array-basierten Funktionen. Um auf System Manager zugreifen zu können, müssen Sie über eine Out-of-Band-Verbindung mit einem Netzwerkverwaltungs-Client mit einem Webbrowser verfügen.
+
+.Schritte
+. Wählen Sie auf der Seite *Verwalten* ein oder mehrere Speicherarrays aus, die Sie verwalten möchten.
+. Klicken Sie Auf *Start*.
++
+Das System öffnet im Browser eine neue Registerkarte und zeigt dann die Anmeldeseite von System Manager an.
+
+. Geben Sie Ihren Benutzernamen und Ihr Passwort ein und klicken Sie dann auf *Anmelden*.
+

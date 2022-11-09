@@ -1,0 +1,22 @@
+---
+permalink: config-vmware/configure-multipath-software-concept.html 
+sidebar: sidebar 
+keywords: multipath software for vmware, express vmware configuration, software configuration, vmware host, E2800, E5700, EF300, EF600, E-Series, eseries 
+summary: Konfiguration der m-Software für einen redundanten Pfad zum Speicher-Array im Falle eines Unterbrechung eines physischen Pfads. 
+---
+= Konfigurieren Sie die Multipath-Software
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Um einen redundanten Pfad zum Storage Array bereitzustellen, können Sie die Multipath-Software konfigurieren.
+
+Die Multipath-Software liefert einen redundanten Pfad zum Storage Array, falls ein physischer Pfad unterbrochen wird. Die Multipath-Software präsentiert das Betriebssystem mit einem einzigen virtuellen Gerät, das die aktiven physischen Pfade zum Storage darstellt. Die Multipath-Software managt auch den Failover-Prozess zur Aktualisierung des virtuellen Geräts. Für VMware verwendet NVMe/FC High Performance Plug-in (HPP).
+
+` ist nur für FC-, iSCSI- und SAS-Protokolle anwendbar und bietet Plug-ins – sogenannte Storage Array Type Plug-ins (SATP) – zur Verarbeitung von Failover-Implementierungen spezifischer Storage-Arrays anderer Anbieter.
+
+Der SATP, den Sie verwenden sollten, ist *VMW_SATP_ALUA*.
+
+Weitere Informationen finden Sie unter https://docs.vmware.com/en/VMware-vSphere/7.0/com.vmware.vsphere.storage.doc/GUID-DB5BC795-E4D9-4350-9C5D-12BB3C0E6D99.html["VMware SATA"^].

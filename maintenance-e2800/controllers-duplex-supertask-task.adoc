@@ -1,0 +1,462 @@
+---
+permalink: maintenance-e2800/controllers-duplex-supertask-task.html 
+sidebar: sidebar 
+keywords: replace E2800 controller, replacing E2800 controller, duplex controller replacement, E2800, E2824, E2860, EF280, E-Series, eseries 
+summary: Ersetzen Sie einen Controller-Behälter in einer Duplexkonfiguration. 
+---
+= Controller werden in der E2800 Duplexkonfiguration ersetzt
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können einen Controller-Behälter in einer Duplex-Konfiguration (zwei-Controller) für die folgenden Controller-Shelves ersetzen:
+
+* E2812 Controller-Shelf
+* E2824 Controller-Shelf
+* E2860 Controller-Shelf
+* EF280 Flash-Array
+
+
+Jeder Controller-Behälter enthält eine Controller-Karte, einen Akku und eine optionale Host-Schnittstellenkarte (HIC). Wenn Sie einen Controller-Behälter austauschen, müssen Sie die Batterie und die HIC, falls vorhanden, aus dem ursprünglichen Controller-Behälter entfernen und in den Ersatzcontroller-Behälter einsetzen.
+
+.Was Sie und#8217;ll benötigen
+* Ein Ersatzcontroller-Behälter mit der gleichen Teilenummer wie der Controller-Behälter, den Sie austauschen. (Siehe Schritt 1, um die Teilenummer zu überprüfen.)
+* Ein ESD-Armband, oder Sie haben andere antistatische Vorsichtsmaßnahmen getroffen.
+* #1 Kreuzschlitzschraubendreher.
+* Etiketten, um jedes Kabel zu identifizieren, das mit dem Controller-Behälter verbunden ist.
+* Eine Management Station mit einem Browser, der für den Controller auf den SANtricity System Manager zugreifen kann. (Zeigen Sie zum Öffnen der System Manager-Schnittstelle den Domain-Namen oder die IP-Adresse des Controllers im Browser.)
+
+
+
+
+== Schritt 1: Austausch der Steuerung (Duplex) vorbereiten
+
+Bereiten Sie den Austausch des Controllers vor, indem Sie überprüfen, ob der Ersatzcontroller-Behälter über die richtige FRU-Teilenummer verfügt, die Konfiguration sichern und Support-Daten erfassen. Wenn der Controller noch online ist, müssen Sie ihn in den Offline-Modus versetzen.
+
+.Schritte
+. Packen Sie den neuen Controller-Behälter aus, und stellen Sie ihn auf eine flache, statische Oberfläche.
++
+Bewahren Sie das Verpackungsmaterial auf, das beim Versand des defekten Reglerkanisters verwendet werden soll.
+
+. Suchen Sie die Etiketten für MAC-Adresse und FRU-Teilenummer auf der Rückseite des Controller-Behälters.
++
+image::../media/28_dwg_e2800_labels_maint-e2800.gif[28-m-e2800-Etiketten maint e2800]
+
++
+*(1)* _MAC-Adresse:_ die MAC-Adresse für Verwaltungsport 1 („`P1`"). Wenn Sie die IP-Adresse des ursprünglichen Controllers über DHCP erhalten haben, benötigen Sie diese Adresse, um eine Verbindung mit dem neuen Controller herzustellen.
+
++
+*(2)* _FRU Teilenummer:_ Diese Nummer muss der Ersatzteilonummer für den derzeit installierten Controller entsprechen.
+
+. Suchen Sie im SANtricity System Manager die Teilenummer des Ersatzteils für den zu ersetzenden Controllerbehälter.
++
+Wenn ein Controller einen Fehler aufweist und ausgetauscht werden muss, wird im Bereich Details des Recovery Guru die Ersatzteilnummer angezeigt. Wenn Sie diese Nummer manuell suchen müssen, führen Sie die folgenden Schritte aus:
+
++
+.. Wählen Sie *Hardware*.
+.. Suchen Sie das Controller-Shelf, das mit dem Controller-Symbol gekennzeichnet ist image:../media/sam1130_ss_hardware_controller_icon_maint-e2800.gif[""].
+.. Klicken Sie auf das Controller-Symbol.
+.. Wählen Sie den Controller aus und klicken Sie auf *Weiter*.
+.. Notieren Sie sich auf der Registerkarte *Base* die *Ersatz-Teilenummer* für den Controller.
+
+
+. Vergewissern Sie sich, dass die Ersatzteilnummer des ausgefallenen Controllers mit der FRU-Teilenummer für den Ersatz-Controller identisch ist.
++
+
+CAUTION: *Möglicher Verlust des Datenzugangs* -- Wenn die beiden Teilenummern nicht gleich sind, versuchen Sie dieses Verfahren nicht. Wenn der ausgefallene Controller-Behälter eine Host-Schnittstellenkarte (HIC) enthält, müssen Sie diese HIC im neuen Controller-Behälter installieren. Wenn Controller oder HIC nicht stimmen, wird der neue Controller gesperrt, wenn er online geschaltet wird.
+
+. Sichern Sie die Konfigurationsdatenbank des Storage-Arrays mit SANtricity System Manager.
++
+Wenn beim Entfernen eines Controllers ein Problem auftritt, können Sie die gespeicherte Datei verwenden, um Ihre Konfiguration wiederherzustellen. Das System speichert den aktuellen Status der RAID-Konfigurationsdatenbank, die alle Daten für Volume-Gruppen und Festplatten-Pools auf dem Controller enthält.
+
++
+** Über System Manager:
++
+... Wählen Sie MENU:Support[Support Center > Diagnose].
+... Wählen Sie *Konfigurationsdaten Erfassen*.
+... Klicken Sie Auf *Collect*.
++
+Die Datei wird im Ordner Downloads für Ihren Browser mit dem Namen *configurationData-<arrayName>-<dateTime>.7z* gespeichert.
+
+
+
+** Alternativ können Sie die Konfigurationsdatenbank mit dem folgenden CLI-Befehl sichern:
++
+`save storageArray dbmDatabase sourceLocation=onboard contentType=all file="filename";`
+
+
+
+. Support-Daten für Ihr Storage Array mit SANtricity System Manager erfassen
++
+Wenn beim Entfernen eines Controllers ein Problem auftritt, können Sie die gespeicherte Datei zum Beheben des Problems verwenden. Das System speichert Bestands-, Status- und Performancedaten Ihres Speicherarrays in einer einzelnen Datei.
+
++
+.. Wählen Sie MENU:Support[Support Center > Diagnose].
+.. Wählen Sie *Support-Daten Erfassen* Aus.
+.. Klicken Sie Auf *Collect*.
++
+Die Datei wird im Ordner Downloads für Ihren Browser mit dem Namen *Support-Data.7z* gespeichert.
+
+
+
+. Wenn der Controller nicht bereits offline ist, versetzen Sie ihn jetzt mithilfe von SANtricity System Manager in den Offline-Modus.
++
+** Über den SANtricity System Manager:
++
+... Wählen Sie *Hardware*.
+... Wenn die Grafik die Laufwerke anzeigt, wählen Sie *Zurück vom Shelf anzeigen* aus, um die Controller anzuzeigen.
+... Wählen Sie den Controller aus, den Sie in den Offline-Modus versetzen möchten.
+... Wählen Sie im Kontextmenü die Option *Offline platzieren* aus, und bestätigen Sie, dass Sie den Vorgang ausführen möchten.
++
+
+NOTE: Wenn Sie mit dem Controller auf SANtricity System Manager zugreifen, den Sie offline schalten möchten, wird eine Meldung vom SANtricity System Manager nicht verfügbar angezeigt. Wählen Sie *mit einer alternativen Netzwerkverbindung verbinden* aus, um automatisch über den anderen Controller auf SANtricity System Manager zuzugreifen.
+
+
+
+** Alternativ können Sie die Controller mit den folgenden CLI-Befehlen offline schalten:
++
+* Für Steuerung A:* `set controller [a] availability=offline`
+
++
+* Für Regler B:* `set controller [b] availability=offline`
+
+
+
+. Warten Sie, bis SANtricity System Manager den Status des Controllers auf „Offline“ aktualisiert.
++
+
+CAUTION: Beginnen Sie keine anderen Vorgänge, bis der Status aktualisiert wurde.
+
+. Wählen Sie *recheck* aus dem Recovery Guru, und bestätigen Sie, dass das Feld *OK to remove* im Bereich Details *Ja* angezeigt wird, was darauf hinweist, dass es sicher ist, diese Komponente zu entfernen.
+
+
+
+
+== Schritt 2: Entfernen des fehlerhaften Controllers (Duplex)
+
+Ersetzen Sie den defekten Behälter durch einen neuen.
+
+
+
+=== Schritt 2a: Controller-Behälter (Duplex) ausbauen
+
+Entfernen Sie den defekten Reglerbehälter, so dass Sie ihn durch einen neuen ersetzen können.
+
+.Schritte
+. Setzen Sie ein ESD-Armband an oder ergreifen Sie andere antistatische Vorsichtsmaßnahmen.
+. Beschriften Sie jedes Kabel, das am Controller-Behälter befestigt ist.
+. Trennen Sie alle Kabel vom Controller-Behälter.
++
+
+CAUTION: Um eine verminderte Leistung zu vermeiden, dürfen die Kabel nicht verdreht, gefaltet, gequetscht oder treten.
+
+. Wenn der Controller-Behälter über eine HIC verfügt, die SFP+-Transceiver verwendet, entfernen Sie die SFPs.
++
+Da Sie die HIC aus dem fehlerhaften Controller-Behälter entfernen müssen, müssen Sie alle SFPs von den HIC-Ports entfernen. Sie können jedoch alle SFPs in den Baseboard Host Ports installieren lassen. Wenn Sie die Kabel wieder anschließen, können Sie die SFPs in den neuen Controller-Behälter verlegen.
+
+. Vergewissern Sie sich, dass die LED Cache Active auf der Rückseite des Controllers ausgeschaltet ist.
+. Drücken Sie den Riegel am Nockengriff, bis er loslässt, und öffnen Sie dann den Nockengriff nach rechts, um den Steuerkanister aus dem Regal zu lösen.
++
+Die folgende Abbildung zeigt ein Beispiel für ein E2812 Controller-Shelf, ein E2824 Controller-Shelf oder ein EF280 Flash-Array:
+
++
+image::../media/28_dwg_e2824_remove_controller_canister_maint-e2800.gif[28 dwg e2824 Controller-Behälter meine2800 ausbauen]
+
++
+*(1)* _Controller-Behälter_
+
++
+*(2)* _Cam Griff_
+
++
+Die folgende Abbildung zeigt ein Beispiel für ein E2860 Controller-Shelf:
+
++
+image::../media/28_dwg_e2860_add_controller_canister_maint-e2800.gif[28 DWG e2860, Zusatz-Controller-Behälter, Version 2800]
+
++
+*(1)* _Controller-Behälter_
+
++
+*(2)* _Cam Griff_
+
+. Schieben Sie den Controller-Behälter mit zwei Händen und dem Nockengriff aus dem Regal.
++
+
+CAUTION: Verwenden Sie immer zwei Hände, um das Gewicht eines Reglerkanisters zu unterstützen.
+
++
+Wenn Sie den Controller-Behälter aus einem E2812 Controller-Shelf, einem E2824 Controller-Shelf oder einem EF280 Flash-Array entfernen, schwingen Sie eine Klappe an ihre Stelle, um den leeren Schacht zu blockieren. Dadurch wird der Luftstrom und die Kühlung aufrechterhalten.
+
+. Drehen Sie den Controller-Behälter so um, dass die abnehmbare Abdeckung nach oben zeigt.
+. Setzen Sie den Steuerungsbehälter auf eine flache, statisch freie Oberfläche.
+
+
+
+
+=== Schritt 2b: Batterie entfernen (Duplex)
+
+Entfernen Sie den Akku, damit Sie den neuen Controller installieren können.
+
+.Schritte
+. Entfernen Sie die Abdeckung des Reglerkanisters, indem Sie die Taste nach unten drücken und die Abdeckung abnehmen.
+. Vergewissern Sie sich, dass die grüne LED im Controller (zwischen Akku und DIMMs) aus ist.
++
+Wenn diese grüne LED leuchtet, wird der Controller weiterhin mit Strom versorgt. Sie müssen warten, bis diese LED erlischt, bevor Sie Komponenten entfernen.
+
++
+image::../media/28_dwg_e2800_internal_cache_active_led_maint-e2800.gif[28 DWG e2800 interner Cache, aktiver LED maint e2800]
+
++
+*(1)* _LED Interner Cache aktiv_
+
++
+*(2)* _Akku_
+
+. Suchen Sie den blauen Freigabehebel für die Batterie.
+. Entriegeln Sie den Akku, indem Sie den Freigabehebel nach unten und vom Controller-Behälter wegdrücken.
++
+image::../media/28_dwg_e2800_remove_battery_maint-e2800.gif[28 m e2800 Batterie-Nr. e2800 entfernen]
+
++
+*(1)* _Entriegelung der Batterie_
+
++
+*(2)* _Akku_
+
+. Heben Sie den Akku an, und schieben Sie ihn aus dem Controller-Behälter.
+
+
+
+
+=== Schritt 2c: Entfernen der Host-Schnittstellenkarte (Duplex)
+
+Wenn der Controller-Behälter eine Host-Schnittstellenkarte (HIC) enthält, müssen Sie die HIC aus dem ursprünglichen Controller-Behälter entfernen, damit Sie sie im neuen Controller-Behälter wiederverwenden können.
+
+.Schritte
+. Entfernen Sie mit einem #1 Kreuzschlitzschraubendreher die Schrauben, mit denen die HIC-Frontplatte am Controller-Behälter befestigt ist.
++
+Es gibt vier Schrauben: Eine auf der Oberseite, eine auf der Seite und zwei auf der Vorderseite.
+
++
+image::../media/28_dwg_e2800_hic_faceplace_screws_maint-e2800.gif[28-wg-e2800-Gewindestifte für die Frontpartie maint e2800]
+
+. Entfernen Sie die HIC-Frontplatte.
+. Lösen Sie mit den Fingern oder einem Kreuzschlitzschraubendreher die drei Rändelschrauben, mit denen die HIC an der Controllerkarte befestigt ist.
+. Lösen Sie die HIC vorsichtig von der Controllerkarte, indem Sie die Karte nach oben heben und wieder zurückschieben.
++
+
+CAUTION: Achten Sie darauf, dass die Komponenten auf der Unterseite der HIC oder auf der Oberseite der Controller-Karte nicht verkratzen oder stoßen.
+
++
+image::../media/28_dwg_e2800_hic_thumbscrews_maint-e2800.gif[28 dwg e2800 HIC Rändelschrauben maint e2800]
+
++
+*(1)* _Host Interface Card (HIC)_
+
++
+*(2)* _Gewindestifte_
+
+. Platzieren Sie die HIC auf einer statischen Oberfläche.
+
+
+
+
+== Schritt 3: Neuen Controller installieren (Duplex)
+
+Installieren Sie einen neuen Controller-Behälter, um den defekten auszutauschen. Führen Sie diese Aufgabe nur aus, wenn Ihr Speicher-Array über zwei Controller verfügt (Duplexkonfiguration).
+
+
+
+=== Schritt 3a: Batterie einbauen (Duplex)
+
+Sie müssen den Akku in den Behälter des Ersatzcontrollers einsetzen. Sie können den Akku, den Sie aus dem ursprünglichen Controller-Behälter entfernt haben, installieren oder einen neuen Akku installieren, den Sie bestellt haben.
+
+.Schritte
+. Drehen Sie den Ersatzcontroller-Behälter um, so dass die abnehmbare Abdeckung nach oben zeigt.
+. Drücken Sie die Abdeckungstaste nach unten, und schieben Sie die Abdeckung ab.
+. Richten Sie den Controller-Behälter so aus, dass der Steckplatz für die Batterie zu Ihnen zeigt.
+. Setzen Sie den Akku in einem leichten Abwärtswinkel in den Controller-Behälter ein.
++
+Sie müssen den Metallflansch an der Vorderseite der Batterie in den Schlitz an der Unterseite des Controller-Kanisters stecken und die Oberseite der Batterie unter den kleinen Ausrichtstift auf der linken Seite des Kanisters schieben.
+
+. Schieben Sie die Akkuverriegelung nach oben, um die Batterie zu sichern.
++
+Wenn die Verriegelung einrastet, Haken unten an der Verriegelung in einen Metallschlitz am Gehäuse.
+
++
+image::../media/28_dwg_e2800_insert_battery_maint-e2800.gif[28-m-e2800-Batterieeinschub e2800]
+
++
+*(1)* _Entriegelung der Batterie_
+
++
+*(2)* _Akku_
+
+. Drehen Sie den Controller-Behälter um, um zu bestätigen, dass der Akku ordnungsgemäß installiert ist.
++
+
+CAUTION: *Möglicher Hardwareschaden* -- der Metallflansch an der Vorderseite der Batterie muss vollständig in den Schlitz am Controller-Behälter eingesetzt werden (wie in der ersten Abbildung dargestellt). Wenn der Akku nicht richtig eingesetzt ist (wie in der zweiten Abbildung dargestellt), kann der Metallflansch die Controllerplatine kontaktieren, was beim Einschalten der Stromversorgung zu einer Beschädigung des Controllers führt.
+
++
+** *Korrekt* -- der Metallflansch der Batterie ist vollständig in den Steckplatz am Controller eingesetzt:
+
+
++
+image:../media/28_dwg_e2800_battery_flange_ok_maint-e2800.gif[""]
+
++
+** *Incorrect* -- der Metallflansch der Batterie ist nicht in den Steckplatz am Controller eingelegt:
+
+
++
+image:../media/28_dwg_e2800_battery_flange_not_ok_maint-e2800.gif[""]
+
+
+
+
+
+=== Schritt 3b: Installieren der Host-Schnittstellenkarte (Duplex)
+
+Wenn Sie eine HIC aus dem ursprünglichen Controller-Behälter entfernt haben, müssen Sie diese HIC im neuen Controller-Behälter installieren.
+
+.Schritte
+. Entfernen Sie mit einem #1 Kreuzschlitzschraubendreher die vier Schrauben, mit denen die leere Frontplatte am Behälter des Ersatzcontrollers befestigt ist, und entfernen Sie die Frontplatte.
+. Richten Sie die drei Rändelschrauben der HIC an den entsprechenden Löchern am Controller aus, und richten Sie den Anschluss an der Unterseite der HIC an dem HIC-Schnittstellenanschluss auf der Controllerkarte aus.
++
+Achten Sie darauf, dass die Komponenten auf der Unterseite der HIC oder auf der Oberseite der Controller-Karte nicht verkratzen oder stoßen.
+
+. Senken Sie die HIC vorsichtig ab, und setzen Sie den HIC-Anschluss ein, indem Sie vorsichtig auf die HIC drücken.
++
+
+CAUTION: *Mögliche Geräteschäden* -- vorsichtig sein, den goldenen Ribbon-Anschluss für die Controller-LEDs zwischen der HIC und den Daumenschrauben nicht zu quetschen.
+
++
+image::../media/28_dwg_e2800_hic_thumbscrews_maint-e2800.gif[28 dwg e2800 HIC Rändelschrauben maint e2800]
+
++
+*(1)* _Host Interface Card (HIC)_
+
++
+*(2)* _Gewindestifte_
+
+. Ziehen Sie die HIC-Rändelschrauben manuell fest.
++
+Verwenden Sie keinen Schraubendreher, oder ziehen Sie die Schrauben möglicherweise zu fest.
+
+. Befestigen Sie mit einem #1 Kreuzschlitzschraubendreher die HIC-Frontplatte, die Sie aus dem ursprünglichen Controller-Behälter entfernt haben, mit vier Schrauben am neuen Controller-Behälter.
++
+image::../media/28_dwg_e2800_hic_faceplace_screws_maint-e2800.gif[28-wg-e2800-Gewindestifte für die Frontpartie maint e2800]
+
+
+
+
+
+=== Schritt 3c: Neuen Controller-Behälter (Duplex) einbauen
+
+Nach der Installation der Batterie und der Host-Schnittstellenkarte (HIC), wenn eine installiert wurde, können Sie den neuen Controller-Behälter im Controller-Shelf installieren.
+
+.Schritte
+. Bringen Sie die Abdeckung wieder am Controller-Behälter an, indem Sie die Abdeckung von hinten nach vorne schieben, bis die Taste einrastet.
+. Drehen Sie den Controller-Behälter so um, dass die abnehmbare Abdeckung nach unten zeigt.
+. Schieben Sie den Steuerkanister bei geöffnetem Nockengriff vollständig in das Reglerregal.
++
+image::../media/28_dwg_e2824_remove_controller_canister_maint-e2800.gif[28 dwg e2824 Controller-Behälter meine2800 ausbauen]
+
++
+*(1)* _Controller-Behälter_
+
++
+*(2)* _Cam Griff_
+
++
+image::../media/28_dwg_e2860_add_controller_canister_maint-e2800.gif[28 DWG e2860, Zusatz-Controller-Behälter, Version 2800]
+
++
+*(1)* _Controller-Behälter_
+
++
+*(2)* _Cam Griff_
+
+. Bewegen Sie den Nockengriff nach links, um den Steuerkanister zu verriegeln.
+. Installieren Sie die SFPs vom ursprünglichen Controller in den Host-Ports des neuen Controllers, und schließen Sie alle Kabel wieder an.
++
+Wenn Sie mehr als ein Host-Protokoll verwenden, installieren Sie unbedingt die SFPs in den korrekten Host-Ports.
+
+. Wenn der ursprüngliche Controller DHCP für die IP-Adresse verwendet hat, suchen Sie die MAC-Adresse auf dem Etikett auf der Rückseite des Ersatzcontrollers. Bitten Sie den Netzwerkadministrator, die DNS/Netzwerk- und IP-Adresse des entfernten Controllers mit der MAC-Adresse des Ersatzcontrollers zu verknüpfen.
++
+
+NOTE: Wenn der ursprüngliche Controller DHCP für die IP-Adresse nicht verwendet hat, übernimmt der neue Controller die IP-Adresse des entfernten Controllers.
+
+
+
+
+
+== Schritt 4: Vollständiger Controller-Austausch (Duplex)
+
+Platzieren Sie den Controller online, sammeln Sie Support-Daten und setzen Sie den Betrieb fort.
+
+.Schritte
+. Überprüfen Sie beim Booten des Controllers die Controller-LEDs und die siebenSegment-Anzeige.
++
+Wenn die Kommunikation mit der anderen Steuerung wiederhergestellt wird:
+
++
+** Die 7-Segment-Anzeige zeigt die sich wiederholende Sequenz *OS*, *OL*, *_blank_* an, um anzuzeigen, dass der Controller offline ist.
+** Die gelbe Warn-LED leuchtet weiterhin.
+** Je nach Host-Schnittstelle leuchtet, blinkt oder leuchtet die LED für Host-Link möglicherweise nicht.image:../media/28_dwg_attn_led_7s_display_maint-e2800.gif[""]
++
+*(1)* _Warn-LED (gelb)_
+
++
+*(2)* _Sieben-Segment-Anzeige_
+
++
+*(3)* _Host Link LEDs_
+
+
+
+. Überprüfen Sie die Codes auf der 7-Segment-Anzeige des Controllers, wenn sie wieder online angezeigt werden. Wenn auf der Anzeige eine der folgenden sich wiederholenden Sequenzen angezeigt wird, entfernen Sie sofort die Steuerung.
++
+** *OE*, *L0*, *_blank_* (nicht übereinstimmende Controller)
+** *OE*, *L6*, *_blank_* (nicht unterstützte HIC)
++
+
+CAUTION: *Möglicher Verlust des Datenzugangs* -- Wenn der gerade installierte Controller einen dieser Codes anzeigt und der andere Controller aus irgendeinem Grund zurückgesetzt wird, könnte auch der zweite Regler gesperrt werden.
+
+
+
+. Wenn der Controller wieder online ist, bestätigen Sie, dass sein Status optimal lautet, und überprüfen Sie die Warn-LEDs für das Controller-Shelf.
++
+Wenn der Status nicht optimal ist oder eine der Warn-LEDs leuchtet, vergewissern Sie sich, dass alle Kabel richtig eingesetzt sind und der Controller-Behälter richtig installiert ist. Gegebenenfalls den Controller-Behälter ausbauen und wieder einbauen.
+
++
+
+NOTE: Wenden Sie sich an den technischen Support, wenn das Problem nicht gelöst werden kann.
+
+. Falls erforderlich, verteilen Sie alle Volumes mithilfe von SANtricity System Manager zurück an ihren bevorzugten Eigentümer.
++
+.. Wählen Sie Menü:Storage[Volumes].
+.. Wählen Sie Menü:Mehr[Umverteilung von Volumes].
+
+
+. Klicken Sie auf Menü:Hardware[Support > Upgrade Center], um sicherzustellen, dass die neueste Version der SANtricity OS Software (Controller-Firmware) installiert ist.
++
+Installieren Sie bei Bedarf die neueste Version.
+
+. Support-Daten für Ihr Storage Array mit SANtricity System Manager erfassen
++
+.. Wählen Sie MENU:Support[Support Center > Diagnose].
+.. Wählen Sie *Support-Daten Erfassen* Aus.
+.. Klicken Sie Auf *Collect*.
++
+Die Datei wird im Ordner Downloads für Ihren Browser mit dem Namen *Support-Data.7z* gespeichert.
+
+
+
+
+
+Der Austausch des Controllers ist abgeschlossen. Sie können den normalen Betrieb fortsetzen.

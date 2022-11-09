@@ -1,0 +1,97 @@
+---
+permalink: config-linux/srp-ib-worksheet-concept.html 
+sidebar: sidebar 
+keywords: SRP over Infiniband worksheet Linux, express linux configuration, software configuration, linux host, E2800, E5700, EF300, EF600, E-Series, eseries 
+summary: Verwenden Sie dieses Arbeitsblatt, um SRP über InfiniBand Informationen zur Storage-Konfiguration aufzuzeichnen. 
+---
+= Zeichnen Sie Ihre SRP über IB-Konfiguration auf
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können eine PDF-Datei auf dieser Seite erstellen und drucken und dann mithilfe des folgenden Arbeitsblatts SRP über InfiniBand-Speicherkonfigurationsinformationen aufzeichnen. Sie benötigen diese Informationen für Bereitstellungsaufgaben.
+
+image::../media/port_identifiers_ib_srp.gif[Port-IDs ib srp]
+
+
+
+== Host-IDs
+
+
+NOTE: Die Initiator-GUIDs werden in der Aufgabe festgelegt, xref:srp-ib-determine-host-port-guids-task.adoc[Ermittlung der Host-Port-GUIDs, empfohlene Einstellungen].
+
+|===
+| Nummer Der Legende | Host-Port-Verbindungen (Initiator) | GUID 
+
+
+ a| 
+1
+ a| 
+Host
+ a| 
+_Nicht zutreffend_
+
+
+
+ a| 
+3
+ a| 
+Switch
+ a| 
+_Nicht zutreffend_
+
+
+
+ a| 
+4
+ a| 
+Ziel (Storage-Array)
+ a| 
+_Nicht zutreffend_
+
+
+
+ a| 
+2
+ a| 
+Host Port 1 zu IB Switch 1 („A“-Pfad)
+ a| 
+
+
+
+ a| 
+5
+ a| 
+Host Port 2 zum IB Switch 2 (Pfad „B“)
+ a| 
+
+|===
+
+
+== Empfohlene Konfiguration
+
+Empfohlene Konfigurationen bestehen aus zwei Initiator-Ports und vier Ziel-Ports.
+
+
+
+== Zuordnung des Hostnamens
+
+
+NOTE: Der Name des Zuordners wird während des Workflows erstellt.
+
+|===
+
+
+ a| 
+Zuordnung des Hostnamens
+ a| 
+
+
+
+ a| 
+Host-OS-Typ
+ a| 
+
+|===

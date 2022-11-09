@@ -1,0 +1,162 @@
+---
+permalink: upgrade-controllers/prepare-upgrade-controllers-task.html 
+sidebar: sidebar 
+keywords: E-Series, eseries, E2800, E5700, EF300, EF600, upgrade controller, upgrading controller, upgrade controller requirements, upgrade controller key management, prepare upgrade controller, upgrade controller preparation, preparing controller upgrade 
+summary: Bereiten Sie sich auf das Upgrade von Controllern vor, indem Sie den Sicherheitsschlüssel des Laufwerks speichern, die Support-Daten erfassen und den Controller offline schalten. 
+---
+= Controller-Upgrades vorbereiten
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Bereiten Sie das Upgrade von Controllern vor, indem Sie den Laufwerkssicherheitsschlüssel (falls verwendet) speichern, die Seriennummer aufzeichnen, Supportdaten sammeln, bestimmte Funktionen deaktivieren (falls verwendet) und den Controller offline schalten.
+
+
+NOTE: Das Sammeln von Support-Daten kann vorübergehend Auswirkungen auf die Performance Ihres Storage Arrays haben.
+
+.Schritte
+. Stellen Sie sicher, dass das vorhandene Speicherarray auf die neueste Version des Betriebssystems (Controller-Firmware) aktualisiert wird, die für Ihre aktuellen Controller verfügbar ist. Wählen Sie im SANtricity System Manager im Menü:Support[Upgrade Center], um Ihren Software- und Firmware-Bestand anzuzeigen.
++
+
+NOTE: Wenn Sie ein Upgrade auf Controller durchführen, die SANtricity OS Version 8.50 unterstützen, müssen Sie nach der Installation die neuesten Versionen von SANtricity OS und den neuesten NVSRAM installieren und die neuen Controller einschalten. Wenn Sie dieses Upgrade nicht durchführen, können Sie das Speicher-Array möglicherweise nicht für den automatischen Lastausgleich (ALB) konfigurieren.
+
+. Wenn Sie über sichere Laufwerke verfügen und einen vollständigen Austausch des Controllers planen, führen Sie die entsprechenden Schritte für Ihren Sicherheitstyp (intern oder extern) und den Laufwerksstatus in der folgenden Tabelle durch. Wenn Sie nicht * mit sicheren Laufwerken installiert haben, können Sie diesen Schritt überspringen und mit Schritt 3 unter der Tabelle fortfahren.
++
+
+NOTE: Für einige Schritte in der Tabelle sind Befehle der Befehlszeilenschnittstelle (CLI) erforderlich. Informationen über die Verwendung dieser Befehle finden Sie im https://docs.netapp.com/us-en/e-series-cli/index.html["Referenz für Befehlszeilenschnittstelle"].
+
++
+|===
+| Sicherheitstyp und Kontext | Schritte 
+
+
+ a| 
+Internes Verschlüsselungsmanagement, ein oder mehrere Laufwerke sind gesperrt
+ a| 
+Exportieren Sie die interne Sicherheitsschlüsseldatei an einen bekannten Speicherort auf dem Management-Client (das System mit einem Browser, der für den Zugriff auf System Manager verwendet wird). Verwenden Sie die `export storageArray securityKey` CLI-Befehl. Sie müssen den Passphrase angeben, der mit dem Sicherheitsschlüssel verknüpft ist, und den Speicherort angeben, an dem der Schlüssel gespeichert werden soll.
+
+
+
+ a| 
+Externes Verschlüsselungsmanagement, alle Laufwerke gesperrt. Sie können vorübergehend auf das interne Verschlüsselungsmanagement für den Austausch des Controllers (empfohlen) umsteigen.
+ a| 
+Führen Sie die folgenden Schritte in der Reihenfolge aus:
+
+.. Notieren Sie die Adresse und die Portnummer des externen KMS-Servers. Wählen Sie in System Manager Menü:Einstellungen[System > Sicherheitsschlüsselverwaltung > Einstellungen für Key Management Server anzeigen/bearbeiten].
+.. Stellen Sie sicher, dass die Client- und Server-Zertifikate auf Ihrem lokalen Host verfügbar sind, damit sich das Speicherarray und der Schlüsselverwaltungsserver nach Abschluss des Controller-Austauschs gegenseitig authentifizieren können. Verwenden Sie die `save storageArray keyManagementCertificate` CLI-Befehl zum Speichern der Zertifikate. Stellen Sie sicher, dass Sie den Befehl zweimal, einmal mit dem ausführen `certificateType` Parameter auf gesetzt `client`, Und der andere mit dem Parameter auf gesetzt `server`.
+.. Wechseln Sie zu internem Verschlüsselungsmanagement, indem Sie den ausführen `disable storageArray externalKeyManagement` CLI-Befehl.
+.. Exportieren Sie die interne Sicherheitsschlüsseldatei an einen bekannten Speicherort auf dem Management-Client (das System mit einem Browser, der für den Zugriff auf System Manager verwendet wird). Verwenden Sie die `export storageArray securityKey` CLI-Befehl. Sie müssen den Passphrase angeben, der mit dem Sicherheitsschlüssel verknüpft ist, und den Speicherort angeben, an dem der Schlüssel gespeichert werden soll.
+
+
+
+
+ a| 
+Externes Verschlüsselungsmanagement, alle Laufwerke gesperrt, Sie können vorübergehend nicht auf ein internes Verschlüsselungsmanagement für den Austausch des Controllers umsteigen.
+ a| 
+Führen Sie die folgenden Schritte in der Reihenfolge aus:
+
+.. Notieren Sie die Adresse und die Portnummer des externen KMS-Servers. Wählen Sie in System Manager Menü:Einstellungen[System > Sicherheitsschlüsselverwaltung > Einstellungen für Key Management Server anzeigen/bearbeiten].
+.. Stellen Sie sicher, dass die Client- und Server-Zertifikate auf Ihrem lokalen Host verfügbar sind, damit sich das Speicherarray und der Schlüsselverwaltungsserver nach Abschluss des Controller-Austauschs gegenseitig authentifizieren können. Verwenden Sie die `save storageArray keyManagementCertificate` CLI-Befehl zum Speichern der Zertifikate. Stellen Sie sicher, dass Sie den Befehl zweimal, einmal mit dem ausführen `certificateType` Parameter auf gesetzt `client`, Und der andere mit dem Parameter auf gesetzt `server`.
+.. Exportieren Sie die interne Sicherheitsschlüsseldatei an einen bekannten Speicherort auf dem Management-Client (das System mit einem Browser, der für den Zugriff auf System Manager verwendet wird). Verwenden Sie die `export storageArray securityKey` CLI-Befehl. Sie müssen den Passphrase angeben, der mit dem Sicherheitsschlüssel verknüpft ist, und den Speicherort angeben, an dem der Schlüssel gespeichert werden soll.
+
+
+
+
+ a| 
+Externes Verschlüsselungsmanagement, teilweise Laufwerke gesperrt
+ a| 
+Es sind keine weiteren Schritte erforderlich.
+
+|===
++
+
+NOTE: Ihr Speicher-Array muss sich im optimalen Zustand befinden, um Client- und Serverzertifikate abzurufen. Wenn die Zertifikate nicht abgerufen werden können, müssen Sie eine neue CSR erstellen, die CSR signieren lassen und das Serverzertifikat vom externen Schlüsselverwaltungsserver (EKMS) herunterladen.
+
+. Notieren Sie die Seriennummer für Ihr Speicher-Array:
++
+.. Wählen Sie in System Manager Menü:Support[Support Center > Registerkarte Support Resources].
+.. Scrollen Sie nach unten zu *Detaillierte Speicher-Array-Informationen* und wählen Sie dann *Storage-Array-Profil*.
++
+Der Bericht wird auf Ihrem Bildschirm angezeigt.
+
+.. Um die Seriennummer des Gehäuses unter dem Profil des Speicherarrays zu finden, geben Sie *Seriennummer* in das Textfeld *Suchen* ein, und klicken Sie dann auf *Suchen*.
++
+Alle übereinstimmenden Begriffe werden hervorgehoben. Um alle Ergebnisse nacheinander durchzublättern, klicken Sie mit * Suchen*.
+
+.. Erstellen Sie einen Eintrag des `Chassis Serial Number`.
++
+Sie benötigen diese Seriennummer, um die Schritte in auszuführen link:complete-upgrade-controllers-task.html["Führen Sie das Controller-Upgrade durch"].
+
+
+
+. Sie können Support-Daten über Ihr Storage Array über die grafische Benutzeroberfläche oder die CLI erfassen:
++
+** Verwenden Sie entweder System Manager oder das Array Management-Fenster in Storage Manager, um ein Support Bundle Ihres Speicher-Arrays zu sammeln und zu speichern.
++
+*** Wählen Sie in System Manager im Menü:Support[Support Center > Registerkarte Diagnose]. Wählen Sie dann *Support-Daten sammeln* und klicken Sie auf *Collect*.
+*** Wählen Sie in der Symbolleiste Array Management Window die Option MENU:Überwachen[Systemzustand > Support-Daten manuell erfassen]. Geben Sie dann einen Namen ein und geben Sie einen Speicherort auf Ihrem System an, auf dem Sie das Supportpaket speichern möchten.
++
+Die Datei wird im Ordner Downloads für Ihren Browser mit dem Namen gespeichert `support-data.7z`.
+
++
+Wenn Ihr Regal Schubladen enthält, werden die Diagnosedaten für dieses Shelf in einer separaten Datei mit dem Namen gezippt archiviert `tray-component-state-capture.7z`.
+
+
+
+** Verwenden Sie die CLI, um die auszuführen `save storageArray supportData` Befehl zum Sammeln umfassender Support-Daten zum Storage Array.
+
+
+. Vergewissern Sie sich, dass keine I/O-Vorgänge zwischen dem Storage-Array und allen verbundenen Hosts auftreten:
++
+.. Beenden Sie alle Prozesse, die die LUNs umfassen, die den Hosts vom Storage zugeordnet sind.
+.. Stellen Sie sicher, dass keine Applikationen Daten auf LUNs schreiben, die vom Storage den Hosts zugeordnet sind.
+.. Heben Sie die Bereitstellung aller Dateisysteme auf, die mit den Volumes im Array verbunden sind, auf.
++
+
+NOTE: Die genauen Schritte zur Stoerung von Host-I/O-Vorgängen hängen vom Host-Betriebssystem und der Konfiguration ab, die den Umfang dieser Anweisungen übersteigen. Wenn Sie nicht sicher sind, wie Sie I/O-Vorgänge für Hosts in Ihrer Umgebung anhalten, sollten Sie das Herunterfahren des Hosts in Betracht ziehen.
+
++
+
+CAUTION: *Möglicher Datenverlust* -- Wenn Sie diesen Vorgang während der I/O-Vorgänge fortsetzen, können Sie Daten verlieren.
+
+
+
+. Wenn das Speicher-Array an einer Spiegelungsbeziehung beteiligt ist, beenden Sie alle Host-I/O-Vorgänge auf dem sekundären Storage Array.
+. Wenn Sie eine asynchrone oder synchrone Spiegelung verwenden, löschen Sie alle gespiegelten Paare und deaktivieren Sie irgendwelche Spiegelbeziehungen über den System Manager oder das Array Management-Fenster.
+. Wenn ein Thin Provisioning-Volume auf dem Host als Thin Volume gemeldet wird und auf dem alten Array Firmware (ab Version 8.25 Firmware) ausgeführt wird, die die UNMAP-Funktion unterstützt, deaktivieren Sie Write Back Caching für alle Thin Volumes:
++
+.. Wählen Sie im System Manager Menü:Storage[Volumes] aus.
+.. Wählen Sie ein beliebiges Volume aus, und wählen Sie dann Menü:Mehr[Cache-Einstellungen ändern].
++
+Das Dialogfeld Cache-Einstellung ändern wird angezeigt. In diesem Dialogfeld werden alle Volumes im Speicher-Array angezeigt.
+
+.. Wählen Sie die Registerkarte *Basic* und ändern Sie die Einstellungen für Lese-Cache und Schreib-Caching.
+.. Klicken Sie Auf *Speichern*.
+.. Warten Sie fünf Minuten, bis alle Daten im Cache-Speicher auf die Festplatte gespeichert werden.
+
+
+. Wenn die Security Assertion Markup Language (SAML) auf dem Controller aktiviert ist, wenden Sie sich an den technischen Support, um die SAML-Authentifizierung zu deaktivieren.
++
+
+NOTE: Nachdem SAML aktiviert ist, können Sie sie nicht über die SANtricity System Manager-Schnittstelle deaktivieren. Wenden Sie sich an den technischen Support, um Hilfe zu erhalten, wenn Sie die SAML-Konfiguration deaktivieren möchten.
+
+. Warten Sie, bis alle laufenden Vorgänge abgeschlossen sind, bevor Sie mit dem nächsten Schritt fortfahren.
++
+.. Wählen Sie auf der Seite *Home* des System Managers die Option *laufenden Betrieb anzeigen*.
+.. Vergewissern Sie sich, dass alle im Fenster *laufenden Betrieb* angezeigten Vorgänge abgeschlossen sind, bevor Sie fortfahren.
+
+
+. Schalten Sie das Controller-Laufwerksfach aus
++
+Warten Sie, bis alle LEDs am Controller-Laufwerksfach dunkel werden.
+
+. Schalten Sie die Stromversorgung für jedes Laufwerksfach aus, das mit dem Controller-Laufwerksfach verbunden ist
++
+Warten Sie zwei Minuten, bis alle Laufwerke heruntergefahren sind.
+
+
+
+Gehen Sie zu link:remove-controllers-task.html["Controller entfernen"].

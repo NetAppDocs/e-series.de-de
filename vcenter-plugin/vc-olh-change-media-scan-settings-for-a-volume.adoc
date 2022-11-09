@@ -1,0 +1,54 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/vc-olh-change-media-scan-settings-for-a-volume.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
+summary: Ein Medien-Scan ist ein Hintergrundvorgang, der alle Daten und Redundanzinformationen auf dem Volume scannt. Verwenden Sie diese Option, um die Einstellungen für den Medienscan für ein oder mehrere Volumes zu aktivieren oder zu deaktivieren oder die Scandauer zu ändern. 
+---
+= Ändern Sie die Einstellungen für die Mediensuche für ein Volume
+:hardbreaks:
+:allow-uri-read: 
+:experimental: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Ein Medien-Scan ist ein Hintergrundvorgang, der alle Daten und Redundanzinformationen auf dem Volume scannt. Verwenden Sie diese Option, um die Einstellungen für den Medienscan für ein oder mehrere Volumes zu aktivieren oder zu deaktivieren oder die Scandauer zu ändern.
+
+Verstehen Sie Folgendes:
+
+* Die Medien-Scans werden kontinuierlich mit konstanter Geschwindigkeit ausgeführt, basierend auf der zu scannenden Kapazität und der Scandauer. Hintergrundscans können vorübergehend durch eine Hintergrundaufgabe mit höherer Priorität ausgesetzt werden (z. B. Rekonstruktion), werden aber mit derselben konstanten Geschwindigkeit fortgesetzt.
+* Ein Volume wird nur dann gescannt, wenn die Option zum Scannen von Medien für das Storage-Array und für das entsprechende Volume aktiviert ist. Wenn auch die Redundanzprüfung für das Volume aktiviert ist, werden die Redundanzinformationen auf dem Volume auf Konsistenz mit Daten überprüft, sofern das Volume über Redundanz verfügt. Der Medien-Scan mit Redundanzprüfung ist standardmäßig für jedes Volume bei seiner Erstellung aktiviert.
+* Wenn während des Scans ein nicht behebbarer Medienfehler auftritt, werden die Daten gegebenenfalls durch Redundanzinformationen repariert.
++
+So stehen beispielsweise Informationen zur Redundanz in optimalen RAID 5-Volumes oder in RAID 6-Volumes zur Verfügung, die optimal sind oder nur ein Laufwerk ausfällt. Wenn der nicht behebbare Fehler nicht mithilfe von Redundanzinformationen behoben werden kann, wird der Datenblock zum unlesbaren Sektor-Log hinzugefügt. Das Event-Protokoll wird sowohl korrigierbare als auch nicht korrigierbare Medienfehler gemeldet.
+
+* Wenn die Redundanzprüfung eine Inkonsistenz zwischen Daten und den Redundanzinformationen findet, wird sie dem Ereignisprotokoll gemeldet.
+
+
+Medienprüfungen erkennen und reparieren Medienfehler auf Festplattenlaufwerken, die selten von Applikationen gelesen werden. Dadurch wird Datenverlust bei einem Laufwerksausfall verhindert, da die Daten der ausgefallenen Laufwerke durch Redundanzinformationen und die Daten anderer Laufwerke in der Volume-Gruppe oder dem Pool rekonstruiert werden.
+
+Sie können folgende Aktionen ausführen:
+
+* Aktivieren oder Deaktivieren von Medienprüfungen im Hintergrund für das gesamte Storage-Array
+* Ändern Sie die Scandauer für das gesamte Storage Array
+* Aktivieren oder deaktivieren Sie die Medienüberprüfung für ein oder mehrere Volumes
+* Aktivieren oder deaktivieren Sie die Redundanzprüfung auf ein oder mehrere Volumes
+
+
+.Schritte
+. Wählen Sie auf der Seite Verwalten das Speicher-Array aus, das die Volumes enthält, für die Sie die Einstellungen für die Medienüberprüfung ändern möchten.
+. Wählen Sie MENU:Provisioning[Volumes verwalten].
+. Wählen Sie eine beliebige Lautstärke aus, und wählen Sie dann Menü:Mehr[Einstellungen für Medienscan ändern].
++
+Das Dialogfeld Einstellungen für Laufwerkmedienscan ändern wird angezeigt. In diesem Dialogfeld werden alle Volumes im Speicher-Array angezeigt.
+
+. Um den Medienscan zu aktivieren, aktivieren Sie das Kontrollkästchen *Medien scannen über...*. Wenn Sie das Kontrollkästchen Medien-Scan deaktivieren, werden alle Einstellungen für den Medienscan unterbrochen.
+. Geben Sie die Anzahl der Tage an, über die der Medienscan ausgeführt werden soll.
+. Aktivieren Sie das Kontrollkästchen *Media Scan* für jedes Volume, auf dem Sie einen Medien-Scan durchführen möchten. Das System aktiviert die Option Redundanzprüfung für jedes Volume, auf dem Sie einen Medien-Scan ausführen möchten. Wenn es einzelne Volumes gibt, für die Sie keine Redundanzprüfung durchführen möchten, deaktivieren Sie das Kontrollkästchen *Redundanzprüfung*.
+. Klicken Sie Auf *Speichern*.
+
+
+Das System wendet basierend auf Ihrer Auswahl Änderungen an Medien-Scans im Hintergrund an.

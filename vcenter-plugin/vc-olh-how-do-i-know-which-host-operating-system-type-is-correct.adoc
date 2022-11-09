@@ -1,0 +1,71 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/vc-olh-how-do-i-know-which-host-operating-system-type-is-correct.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
+summary: 'Das Feld Host-Betriebssystemtyp enthält das Betriebssystem des Hosts. Sie können den empfohlenen Hosttyp aus der Dropdown-Liste auswählen oder dem Host Context Agent (HCA) die Konfiguration des Hosts und des entsprechenden Host-Betriebssystems ermöglichen.' 
+---
+= Wie kann ich feststellen, welches Host-Betriebssystem richtig ist?
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Das Feld Host-Betriebssystemtyp enthält das Betriebssystem des Hosts. Sie können den empfohlenen Hosttyp aus der Dropdown-Liste auswählen oder dem Host Context Agent (HCA) die Konfiguration des Hosts und des entsprechenden Host-Betriebssystems ermöglichen.
+
+Die Hosttypen, die in der Dropdown-Liste angezeigt werden, hängen vom Speicher-Array-Modell und der Firmware-Version ab. Die neuesten Versionen zeigen zuerst die häufigsten Optionen an, die am wahrscheinlichsten geeignet sind. Die Darstellung in dieser Liste impliziert nicht, dass die Option vollständig unterstützt wird.
+
+
+NOTE: Weitere Informationen zur Host-Unterstützung finden Sie im http://mysupport.netapp.com/matrix["NetApp Interoperabilitäts-Matrix-Tool"^].
+
+Einige der folgenden Host-Typen werden möglicherweise in der Liste angezeigt:
+
+|===
+| Host-Betriebssystem | Betriebssystem und Multipath-Treiber 
+
+
+| Linux DM-MP (Kernel 3.10 oder höher) | Unterstützt Linux-Betriebssysteme mit einer Device Mapper Multipath Failover-Lösung mit einem 3.10 oder höher Kernel. 
+
+
+| VMware ESXi | Unterstützung für VMware ESXi Betriebssysteme mit der Nnativen Multipathing Plug-in-Architektur (NMP) mit dem integrierten Storage Array Type Policy-Modul SATP_ALUA von VMware. 
+
+
+| Windows (Cluster oder nicht-Cluster) | Unterstützt Konfigurationen mit Windows-Clustern oder nicht-Clustern, die den ATTO-Multipathing-Treiber nicht ausführen. 
+
+
+| ATTO Cluster (alle Betriebssysteme) | Unterstützt alle Clusterkonfigurationen unter Verwendung des Multipathing-Treibers ATTO Technology, Inc. 
+
+
+| Linux (Veritas DMP) | Unterstützung von Linux Betriebssystemen mit einer Veritas DMP-Multipathing-Lösung. 
+
+
+| Linux (ATTO) | Unterstützt Linux-Betriebssysteme unter Verwendung eines ATTO Technology, Inc., Multipathing-Treibers. 
+
+
+| Mac OS | Unterstützt Mac-Betriebssystemversionen mit einem Multipathing-Treiber ATTO Technology, Inc. 
+
+
+| Windows (ATTO) | Unterstützt Windows-Betriebssysteme mit einem Multipathing-Treiber ATTO Technology, Inc. 
+
+
+| FlexArray (ALUA) | Unterstützt ein NetApp FlexArray-System mit ALUA für Multipathing. 
+
+
+| IBM SVC | Unterstützt eine IBM SAN Volume Controller-Konfiguration. 
+
+
+| Werkseitige Standardeinstellung | Reserviert für den Erststart des Speicher-Arrays. Wenn Ihr Host-Betriebssystem auf Werkseinstellung eingestellt ist, ändern Sie es entsprechend dem Host-Betriebssystem und dem Multipath-Treiber, der auf dem angeschlossenen Host ausgeführt wird. 
+
+
+| Linux DM-MP (Kernal 3.9 oder früher) | Unterstützt Linux-Betriebssysteme mit einer Device Mapper Multipath Failover-Lösung mit einem 3.9 oder früheren Kernel. 
+
+
+| Cluster-Fenster (veraltet) | Wenn Ihr Host-Betriebssystem-Typ auf diesen Wert eingestellt ist, verwenden Sie stattdessen die Windows-Einstellung (Cluster oder nicht-Cluster). 
+|===
+Nachdem die HCA installiert und der Speicher mit dem Host verbunden ist, sendet die HCA die Hosttopologie über den I/O-Pfad an die Speicher-Controller. Auf der Grundlage der Host-Topologie definieren die Storage Controller automatisch den Host und die zugehörigen Host-Ports und legen anschließend den Host-Typ fest.
+
+
+NOTE: Wenn der HCA den empfohlenen Hosttyp nicht wählt, müssen Sie den Hosttyp manuell einstellen.

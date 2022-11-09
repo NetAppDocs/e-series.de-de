@@ -1,0 +1,73 @@
+---
+permalink: config-windows/configure-storage-host-task.html 
+sidebar: sidebar 
+keywords: LUNs, configure LUNs, express Windows configuration, software configuration, Windows host, E2800, E5700, EF300, EF600, E-Series, eseries 
+summary: Konfigurieren Sie Speicher auf dem Host für die Windows Express-Methode. 
+---
+= Konfigurieren Sie Speicher auf dem Host
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Da eine neue LUN offline ist und über keine Partition oder ein Dateisystem verfügt, wenn ein Windows-Host sie zuerst erkennt, müssen Sie das Volume online schalten und es in Windows initialisieren. Optional können Sie die LUN mit einem Dateisystem formatieren.
+
+Sie können den Datenträger als Basislaufwerk mit einer GPT- oder MBR-Partitionstabelle initialisieren. In der Regel formatieren Sie die LUN mit einem Dateisystem wie z. B. New Technology File System (NTFS).
+
+Eine LUN, die vom Host erkannt wurde.
+
+.Schritte
+. Geben Sie an einer Windows-Eingabeaufforderung das ein `diskpart` Kontext.
++
+[listing]
+----
+> diskpart
+----
+. Die Liste der verfügbaren Festplatten anzeigen.
++
+[listing]
+----
+> list disk
+----
+. Wählen Sie das Laufwerk aus, das Sie online schalten möchten.
++
+[listing]
+----
+> select disk 1
+----
+. Stellen Sie die Festplatte online.
++
+[listing]
+----
+> online disk
+----
+. Erstellen Sie eine Partition.
++
+[listing]
+----
+> create partition primary
+----
++
+
+NOTE: In Windows Server 2008 und höher werden Sie sofort nach dem Erstellen der Partition aufgefordert, um die Festplatte zu formatieren und ihm einen Namen zu geben. Wählen Sie in der Eingabeaufforderung *Abbrechen* aus, um mit diesen Anweisungen zum Formatieren und Benennen der Partition fortzufahren.
+
+. Weisen Sie einen Laufwerksbuchstaben zu.
++
+[listing]
+----
+> assign letter=f
+----
+. Formatieren Sie die Festplatte.
++
+[listing]
+----
+> format FS=NTFS LABEL=”New Volume” QUICK
+----
+. Schließen Sie den Diskpart-Kontext.
++
+[listing]
+----
+> exit
+----
+

@@ -1,0 +1,190 @@
+---
+permalink: cloud-connector/backup-intro-concept.html 
+sidebar: sidebar 
+keywords: Cloud Connector backup 
+summary: Sie können die Backup-Option im linken Navigationsbereich der SANtricity Cloud Connector-Anwendung aufrufen. Mit der Option Backups wird die Seite Backups angezeigt, auf der Sie neue abbildbasierte oder dateibasierte Sicherungsaufträge erstellen können. 
+---
+= Backups
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können die Backup-Option im linken Navigationsbereich der SANtricity Cloud Connector-Anwendung aufrufen. Mit der Option Backups wird die Seite Backups angezeigt, auf der Sie neue abbildbasierte oder dateibasierte Sicherungsaufträge erstellen können.
+
+Verwenden Sie die Seite *Backups* der SANtricity Cloud Connector Applikation zur Erstellung und Verarbeitung von Backups von E-Series Volumes. Sie können Image- oder dateibasierte Backups erstellen und diese anschließend sofort oder zu einem späteren Zeitpunkt ausführen. Außerdem können Sie anhand des letzten vollständigen Backups oder inkrementeller Backups durchführen. Auf Grundlage des letzten vollständigen Backups, die durch die SANtricity Cloud Connector Applikation durchgeführt werden, können maximal sechs inkrementelle Backups durchgeführt werden.
+
+
+NOTE: Alle Zeitstempel für Backup- und Wiederherstellungsjobs, die unter der Anwendung SANtricity Cloud Connector aufgeführt sind, verwenden lokale Zeit.
+
+
+
+== Erstellen Sie ein neues Image-basiertes Backup
+
+Über die Funktion Erstellen können Sie neue abbilderbasierte Backups auf der Backup-Seite der SANtricity Cloud Connector-Anwendung erstellen.
+
+Stellen Sie sicher, dass Sie Speicherarrays aus dem Webservices Proxy auf dem SANtricity Cloud Connector registriert haben.
+
+.Schritte
+. Klicken Sie auf der Backup-Seite auf *Erstellen*.
++
+Das Fenster Backup erstellen wird angezeigt.
+
+. Wählen Sie *Erstellen eines Image-basierten Backups*.
+. Klicken Sie Auf *Weiter*.
++
+Eine Liste der verfügbaren E-Series Volumes wird im Fenster Backup erstellen angezeigt.
+
+. Wählen Sie das gewünschte Volumen der E-Serie aus und klicken Sie auf *Weiter*.
++
+Die Seite *Name der Sicherung und eine Beschreibung* des Fensters Create Backup confirmation wird angezeigt.
+
+. Um den automatisch generierten Backup-Namen zu ändern, geben Sie den gewünschten Namen in das Feld *Job Name* ein.
+. Fügen Sie bei Bedarf eine Beschreibung für das Backup im Feld *Job Description* hinzu.
++
+
+NOTE: Sie sollten eine Jobbeschreibung eingeben, mit der Sie den Inhalt des Backups leicht identifizieren können.
+
+. Klicken Sie Auf *Weiter*.
++
+Eine Zusammenfassung des ausgewählten bildbasierten Backups wird auf der Seite *Backup-Informationen überprüfen* des Fensters Backup erstellen angezeigt.
+
+. Überprüfen Sie die ausgewählte Sicherung, und klicken Sie auf *Fertig stellen*.
++
+Das Fenster Backup erstellen wird auf der Bestätigungsseite angezeigt.
+
+. Wählen Sie eine der folgenden Optionen:
++
+** *JA* -- initiiert eine vollständige Sicherung für das ausgewählte Backup.
+** *NO* -- eine vollständige Sicherung für das ausgewählte Image-basierte Backup wird nicht durchgeführt.
++
+
+NOTE: Ein vollständiges Backup für das ausgewählte Image-basierte Backup kann zu einem späteren Zeitpunkt über die Funktion Ausführen auf der Backup-Seite durchgeführt werden.
+
+
+
+. Klicken Sie auf *OK*.
++
+Das Backup für das ausgewählte E-Series Volume wird gestartet, und der Status der Aufgabe wird im Abschnitt Ergebnisliste der Backup-Seite angezeigt.
+
+
+
+
+
+== Erstellen Sie ein neues Ordner-/dateibasiertes Backup
+
+Sie können neue Ordner-/dateibasierte Backups über die Funktion Erstellen auf der Backup-Seite der SANtricity Cloud Connector-Anwendung erstellen.
+
+Stellen Sie sicher, dass Sie Speicherarrays aus dem Webservices Proxy auf dem SANtricity Cloud Connector registriert haben.
+
+Ein dateibasiertes Backup sichert bedingungslos alle Dateien auf dem von Ihnen angegebenen Dateisystem. Sie können jedoch eine selektive Wiederherstellung von Dateien und Ordnern durchführen.
+
+.Schritte
+. Klicken Sie auf der Backup-Seite auf *Erstellen*.
++
+Das Fenster Backup erstellen wird angezeigt.
+
+. Wählen Sie *Ordner/Datei-basiertes Backup erstellen* aus.
+. Klicken Sie Auf *Weiter*.
++
+Im Fenster Backup erstellen wird eine Liste von Volumes mit für Backups verfügbaren Dateisystemen angezeigt.
+
+. Wählen Sie die gewünschte Lautstärke aus und klicken Sie auf *Weiter*.
++
+Im Fenster Backup erstellen wird eine Liste der verfügbaren Dateisysteme auf dem ausgewählten Volume angezeigt.
+
++
+
+NOTE: Wenn Ihr Dateisystem nicht angezeigt wird, überprüfen Sie, ob Ihr Dateisystem-Typ von der SANtricity-Cloud-Connector-Anwendung unterstützt wird. Weitere Informationen finden Sie unter link:learn-intro-concept.html#supported-file-systems["Unterstützte Dateisysteme"].
+
+. Wählen Sie das gewünschte Dateisystem aus, das den Ordner oder die zu sicherenden Dateien enthält, und klicken Sie auf *Weiter*.
++
+Die Seite *Name der Sicherung und eine Beschreibung* des Fensters Create Backup confirmation wird angezeigt.
+
+. Um den automatisch generierten Backup-Namen zu ändern, geben Sie den gewünschten Namen in das Feld *Job Name* ein.
+. Fügen Sie bei Bedarf eine Beschreibung für das Backup im Feld *Job Description* hinzu.
++
+
+NOTE: Sie sollten eine Jobbeschreibung eingeben, mit der Sie den Inhalt des Backups leicht identifizieren können.
+
+. Klicken Sie Auf *Weiter*.
++
+Eine Zusammenfassung des ausgewählten Ordners/dateibasierten Backups wird im Fenster Backup erstellen auf der Seite *Backup-Informationen überprüfen* angezeigt.
+
+. Prüfen Sie den ausgewählten Ordner/das dateibasierte Backup und klicken Sie auf *Fertig stellen*.
++
+Das Fenster Backup erstellen wird auf der Bestätigungsseite angezeigt.
+
+. Wählen Sie eine der folgenden Optionen:
++
+** *JA* -- initiiert eine vollständige Sicherung für das ausgewählte Backup.
+** *NEIN* -- eine vollständige Sicherung für die ausgewählte Sicherung wird nicht durchgeführt.
++
+
+NOTE: Ein vollständiges Backup für das ausgewählte dateibasierte Backup kann auch zu einem späteren Zeitpunkt über die Funktion Ausführen auf der Backup-Seite durchgeführt werden.
+
+
+
+. Klicken Sie Auf *Schließen*.
++
+Das Backup für das ausgewählte E-Series-Volume wird gestartet, und der Status der Aufgabe wird im Abschnitt Ergebnisliste der Backup-Seite angezeigt.
+
+
+
+
+
+== Vollständige und inkrementelle Backups ausführen
+
+Sie können über die Funktion Ausführen auf der Seite Backups vollständige und inkrementelle Backups durchführen. Inkrementelle Backups sind nur für dateibasierte Backups verfügbar.
+
+Stellen Sie sicher, dass Sie über den SANtricity Cloud Connector einen Backup-Job erstellt haben.
+
+.Schritte
+. Wählen Sie auf der Registerkarte Backups den gewünschten Sicherungsauftrag aus und klicken Sie auf *Ausführen*.
++
+
+NOTE: Ein vollständiges Backup wird automatisch durchgeführt, wenn ein Image-basierter Backup-Job oder ein Backup-Job ohne eine zuvor durchgeführte erste Sicherung ausgewählt wird.
+
++
+Das Fenster Sicherung ausführen wird angezeigt.
+
+. Wählen Sie eine der folgenden Optionen:
++
+** *Full* -- sichert alle Daten für das ausgewählte dateibasierte Backup.
+** *Incremental* -- sichert die Änderungen nur seit dem letzten Backup.
++
+
+NOTE: Basierend auf dem letzten vollständigen Backup, das durch die SANtricity Cloud Connector Applikation durchgeführt wurde, können maximal sechs inkrementelle Backups durchgeführt werden.
+
+
+
+. Klicken Sie Auf *Ausführen*.
++
+Die Backup-Anfrage wird gestartet.
+
+
+
+
+
+== Löschen Sie einen Sicherungsauftrag
+
+Mit der Funktion Löschen werden gesicherte Daten am angegebenen Zielspeicherort für die ausgewählte Sicherung zusammen mit dem Backup-Satz gelöscht.
+
+Stellen Sie sicher, dass ein Backup mit dem Status „Abgeschlossen“, „Fehlgeschlagen“ oder „abgebrochen“ vorhanden ist.
+
+.Schritte
+. Wählen Sie auf der Seite Backups die gewünschte Sicherung aus und klicken Sie auf *Löschen*.
++
+
+NOTE: Wenn eine vollständige Basissicherung zum Löschen ausgewählt wird, werden auch alle damit verbundenen inkrementellen Backups gelöscht.
+
++
+Das Fenster Löschen bestätigen wird angezeigt.
+
+. Geben Sie im Feld *Typ delete* ein `DELETE` Um die Löschaktion zu bestätigen.
+. Klicken Sie Auf *Löschen*.
++
+Die ausgewählte Sicherung wird gelöscht.
+
+

@@ -1,0 +1,562 @@
+---
+permalink: maintenance-e2800/hpp-change-host-protocol-task.html 
+sidebar: sidebar 
+keywords: 'E2800 convert host port protocol, convert E2800 FC iSCSI, Fibre Channel protocol, iSCSI protocol, convert HPP, converting host port protocol, SFP+ (optical) host ports, E2800, E-Series, eseries' 
+summary: 'Ändern Sie das Host-Port-Protokoll von Fibre Channel (FC) zu iSCSI oder von iSCSI zu FC.' 
+---
+= Ändern des Host-Protokolls für die E2800
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Wenn Sie über ein E2800 Storage-Array mit SFP+ (optischen) Host-Ports verfügen, können Sie das Host-Port-Protokoll von Fibre Channel (FC) zu iSCSI oder von iSCSI zu FC ändern.
+
+Sie können das Protokoll ändern, das von den im Controller integrierten Host Ports (_Baseboard Host Ports_), das von den Host-Ports auf der Host-Schnittstellenkarte (_HIC Ports_) verwendete Protokoll oder das Protokoll aller Host-Ports verwendet wird.
+
+
+
+== Schritt: Bestimmen Sie, ob Sie SFPs mit zwei Protokollen haben
+
+Mit dem SANtricity System Manager können Sie ermitteln, welche Art von SFP-Transceivern Sie haben. Da diese SFPs sowohl mit FC- als auch mit iSCSI-Protokollen verwendet werden können, werden sie als _Dual-Protocol_ oder _Unified_ SFPs bezeichnet.
+
+.Schritte
+. Wählen Sie im SANtricity System Manager *Support* aus.
+. Wählen Sie die Kachel *Support Center* aus.
+. Wählen Sie auf der Registerkarte Support Resources den Link *Storage Array Profile* aus.
+. Geben Sie in das Textfeld * SFP* ein, und klicken Sie auf *Suchen*.
+. Suchen Sie für jeden SFP, der im Speicher-Array-Profil aufgelistet ist, den Eintrag für *unterstützte Datenrate(en)*.
++
+image::../media/sam1130_ss_e2800_unified_spf_maint-e2800.gif[Sam1130 ss e2800 Unified spf maint e2800]
+
+. Die folgende Tabelle gibt an, ob Sie die SFPs wiederverwenden können:
++
+|===
+| Unterstützte Datenrate(en) | SFP-Typ | Unterstützte Protokolle 
+
+
+ a| 
+16 Gbit/S, 10 Gbit/S, 4 Gbit/S
+ a| 
+Dual-Protokoll
+ a| 
+** * FC:* 16 Gbit/s, 4 Gbit/s
+** **ISCSI:**10 Gbit/s
+
+
+
+
+ a| 
+25 Gbit/S, 10 Gbit/S
+ a| 
+25 Gbit/S 10 Gbit/S
+ a| 
+Nur iSCSI
+
+
+
+ a| 
+32 Gbit/S, 16 Gbit/S, 8 Gbit/S, 4 Gbit/S
+ a| 
+32 Gbit/S, 16 Gbit/S
+ a| 
+Nur FC
+
+|===
++
+** Selbst wenn Sie SFPs mit zwei Protokollen haben, können Sie sie nach der Konvertierung des Protokolls weiter nutzen.
++
+
+NOTE: Die Dual-Protokoll-SFPs unterstützen keine 1 Gbit iSCSI. Wenn Sie Hostports in iSCSI konvertieren, beachten Sie, dass die SFPs mit zwei Protokollen nur einen 10-GB-Link zum verbundenen Port unterstützen.
+
+** Wenn Sie SFPs mit 16 Gbit/s haben und Host-Ports in iSCSI konvertieren, müssen Sie nach der Konvertierung des Protokolls die SFPs entfernen und durch SFPs mit zwei Protokollen oder 10 Gbit/s ersetzen. Nach Bedarf können Sie auch 10 Gbit/s iSCSI Kupfer verwenden, indem Sie ein spezielles Twin-Ax Kabel mit SFPs verwenden.
++
+
+NOTE: 8 Gbit/s FC-SFPs werden NICHT in den Controllern E28xx und E57xx unterstützt. Es werden NUR 16 Gbit/s und 32 Gbit/s FC SFPs unterstützt.
+
+** Wenn Sie SFPs mit 10 Gbit/s haben und Host-Ports zu FC konvertieren, müssen Sie die SFPs von diesen Ports entfernen und nach dem Konvertieren des Protokolls durch SFPs mit zwei Protokollen oder 16 Gbit/s ersetzen.
+
+
+
+
+
+
+== Schritt 2: Holen Sie sich das Funktionspaket
+
+Um das Feature Pack zu erhalten, benötigen Sie die Seriennummer vom Controller-Shelf, einen Feature Activation Code und die Feature Enable Identifier für das Speicher-Array.
+
+.Schritte
+. Suchen Sie die Seriennummer.
++
+.. Wählen Sie im SANtricity System Manager Menü:Support[Support Center].
+.. Wenn die Registerkarte *Support Resources* ausgewählt ist, scrollen Sie zum Abschnitt *Top Storage Array Properties*.
+.. Suchen Sie die *Chassis Serial Number*, und kopieren Sie diesen Wert in eine Textdatei.
++
+image::../media/sam1130_ss_e2800_storage_array_profile_sn_smid_copy_maint-e2800.gif[Sam1130 ss e2800 Storage-Array-Profil sn smid Kopie maint e2800]
+
+
+
+. Suchen Sie die Untermodell-ID des *Feature Packs*.
++
+.. Wählen Sie auf der Registerkarte Support Resources den Link *Storage Array Profile* aus.
+.. Geben Sie in das Textfeld * Feature Pack Submodel ID* ein, und klicken Sie auf *Suchen*.
+.. Suchen Sie die Submodel-ID für das Feature Pack für die Starting-Konfiguration.
++
+image::../media/storage_array_profile2_maint-e2800.gif[Storage-Array-Profile2 Wartung e2800]
+
+
+
+. Suchen Sie mithilfe der Submodel-ID des Feature Packs die entsprechende Controller-Untermodell-ID für die Starting-Konfiguration, und suchen Sie in der nachstehenden Tabelle den Aktivierungscode für die gewünschte Endung. Kopieren Sie dann diesen Aktivierungscode in eine Textdatei.
++
+|===
+3+| Konfiguration wird gestartet 3+| Konfiguration wird beendet .2+| Aktivierungscode Für Die Funktion 
+
+
+| Untermodell-ID des Controllers | Baseboard-Ports | HIC-Ports | Untermodell-ID des Controllers | Baseboard-Ports | HIC-Ports 
+
+
+ a| 
+318
+ a| 
+FC
+ a| 
+FC
+ a| 
+319
+ a| 
+FC
+ a| 
+ISCSI
+ a| 
+ZGW-4L2-Z36IJ
+
+
+
+ a| 
+320
+ a| 
+ISCSI
+ a| 
+FC
+ a| 
+4GZ-NL2-Z4NRP
+
+
+
+ a| 
+321
+ a| 
+ISCSI
+ a| 
+ISCSI
+ a| 
+TG2-7L2-Z5485
+
+
+
+ a| 
+_Keine HIC oder keine optische HIC_
+ a| 
+321
+ a| 
+ISCSI
+ a| 
+TG2-7L2-Z5485
+
+
+
+ a| 
+319
+ a| 
+FC
+ a| 
+ISCSI
+ a| 
+318
+ a| 
+FC
+ a| 
+FC
+ a| 
+1G5-QL2-Z7LFC
+
+
+
+ a| 
+320
+ a| 
+ISCSI
+ a| 
+FC
+ a| 
+FG7-AL2-Z82RW
+
+
+
+ a| 
+321
+ a| 
+ISCSI
+ a| 
+ISCSI
+ a| 
+5G7-0K2-Z0G8X
+
+
+
+ a| 
+320
+ a| 
+ISCSI
+ a| 
+FC
+ a| 
+318
+ a| 
+FC
+ a| 
+FC
+ a| 
+4GP-HL2-ZYRKP
+
+
+
+ a| 
+319
+ a| 
+FC
+ a| 
+ISCSI
+ a| 
+PGU-KL2-Z1P7I
+
+
+
+ a| 
+321
+ a| 
+ISCSI
+ a| 
+ISCSI
+ a| 
+BGA-8K2-ZQWM5
+
+
+
+ a| 
+321
+ a| 
+ISCSI
+ a| 
+ISCSI
+ a| 
+318
+ a| 
+FC
+ a| 
+FC
+ a| 
+SGH-UK2-ZUCJG
+
+
+
+ a| 
+319
+ a| 
+FC
+ a| 
+ISCSI
+ a| 
+1GK-EK2-ZVSW1
+
+
+
+ a| 
+320
+ a| 
+ISCSI
+ a| 
+FC
+ a| 
+AGM-XL2-ZWA8A
+
+|===
++
+|===
+3+| Konfiguration wird gestartet 3+| Konfiguration wird beendet .2+| Aktivierungscode Für Die Funktion 
+
+
+| Untermodell-ID des Controllers | Baseboard-Ports | HIC-Ports | Untermodell-ID des Controllers | Baseboard-Ports | HIC-Ports 
+
+
+ a| 
+338
+ a| 
+FC
+ a| 
+FC
+ a| 
+339
+ a| 
+FC
+ a| 
+ISCSI
+ a| 
+PGC-RK2-ZREUT
+
+
+
+ a| 
+340
+ a| 
+ISCSI
+ a| 
+FC
+ a| 
+MGF-BK2-ZSU3Z
+
+
+
+ a| 
+341
+ a| 
+ISCSI
+ a| 
+ISCSI
+ a| 
+NGR-1L2-ZZ8QC
+
+
+
+ a| 
+_Keine HIC oder keine optische HIC_
+ a| 
+341
+ a| 
+ISCSI
+ a| 
+NGR-1L2-ZZ8QC
+
+
+
+ a| 
+339
+ a| 
+FC
+ a| 
+ISCSI
+ a| 
+338
+ a| 
+FC
+ a| 
+FC
+ a| 
+DGT-7M2-ZKBMD
+
+
+
+ a| 
+340
+ a| 
+ISCSI
+ a| 
+FC
+ a| 
+GGA-TL2-Z9J50
+
+
+
+ a| 
+341
+ a| 
+ISCSI
+ a| 
+ISCSI
+ a| 
+WGC-DL2-ZBZIB
+
+
+
+ a| 
+340
+ a| 
+ISCSI
+ a| 
+FC
+ a| 
+338
+ a| 
+FC
+ a| 
+FC
+ a| 
+4GM-KM2-ZGWS1
+
+
+
+ a| 
+339
+ a| 
+FC
+ a| 
+ISCSI
+ a| 
+PG0-4M2-ZHDZ6
+
+
+
+ a| 
+341
+ a| 
+ISCSI
+ a| 
+ISCSI
+ a| 
+XGR-NM2-ZJUGR
+
+
+
+ a| 
+341
+ a| 
+ISCSI
+ a| 
+ISCSI
+ a| 
+338
+ a| 
+FC
+ a| 
+FC
+ a| 
+3GE-WL2-ZCHNY
+
+
+
+ a| 
+339
+ a| 
+FC
+ a| 
+ISCSI
+ a| 
+FGH-HL2-ZDY3R
+
+
+
+ a| 
+340
+ a| 
+ISCSI
+ a| 
+FC
+ a| 
+VGJ-1L2-ZFEW
+
+|===
++
+
+NOTE: Wenn Ihre Controller-Untermodell-ID nicht aufgeführt ist, wenden Sie sich an http://mysupport.netapp.com["NetApp Support"^].
+
+. Suchen Sie in System Manager nach der Feature Enable Identifier.
++
+.. Wechseln Sie zum Menü:Einstellungen[System].
+.. Scrollen Sie nach unten zu *Add-ons*.
+.. Suchen Sie unter *Feature Pack ändern* den *Feature Enable Identifier*.
+.. Kopieren Sie diese 32-stellige Zahl in eine Textdatei.
++
+image::../media/sam1130_ss_e2800_change_feature_pack_feature_enable_identifier_copy_maint-e2800.gif[Die Funktion des Änderungsfunktionspacks sam1130 ss e2800 aktivieren die Funktion Identifier Copy maint e2800]
+
+
+
+. Gehen Sie zu http://partnerspfk.netapp.com["Aktivierung der NetApp Lizenz: Aktivierung der Premium-Funktionen von Storage Array"^]Und geben Sie die Informationen ein, die erforderlich sind, um das Feature Pack zu erhalten.
++
+** Seriennummer des Chassis
+** Aktivierungscode Für Die Funktion
+** Kennzeichner Für Feature-Aktivierung
++
+
+NOTE: Die Website zur Aktivierung von Premium-Funktionen enthält einen Link zu „`Anweisungen zur Aktivierung von Premium-Funktionen`“. Versuchen Sie nicht, diese Anweisungen für dieses Verfahren zu verwenden.
+
+
+
+. Wählen Sie aus, ob Sie die Schlüsseldatei für das Feature Pack in einer E-Mail erhalten oder direkt von der Website herunterladen möchten.
+
+
+
+
+== Schritt 3: Stoppen Sie die Host I/O
+
+Sie müssen alle I/O-Vorgänge vom Host beenden, bevor Sie das Protokoll der Host-Ports konvertieren. Sie können erst dann auf Daten im Speicher-Array zugreifen, wenn Sie die Konvertierung erfolgreich abgeschlossen haben.
+
+.Schritte
+. Vergewissern Sie sich, dass zwischen dem Storage-Array und allen verbundenen Hosts keine I/O-Vorgänge stattfinden. Sie können beispielsweise die folgenden Schritte durchführen:
++
+** Beenden Sie alle Prozesse, die die LUNs umfassen, die den Hosts vom Storage zugeordnet sind.
+** Stellen Sie sicher, dass keine Applikationen Daten auf LUNs schreiben, die vom Storage den Hosts zugeordnet sind.
+** Heben Sie die Bereitstellung aller Dateisysteme auf, die mit den Volumes im Array verbunden sind, auf.
++
+
+NOTE: Die genauen Schritte zur Stoerung von Host-I/O-Vorgängen hängen vom Host-Betriebssystem und der Konfiguration ab, die den Umfang dieser Anweisungen übersteigen. Wenn Sie nicht sicher sind, wie Sie I/O-Vorgänge für Hosts in Ihrer Umgebung anhalten, sollten Sie das Herunterfahren des Hosts in Betracht ziehen.
+
++
+
+CAUTION: *Möglicher Datenverlust* -- Wenn Sie diesen Vorgang während der I/O-Vorgänge fortsetzen, kann die Host-Anwendung den Zugriff auf die Daten verlieren, da der Speicher nicht zugänglich ist.
+
+
+
+. Wenn das Speicher-Array an einer Spiegelungsbeziehung beteiligt ist, beenden Sie alle Host-I/O-Vorgänge auf dem sekundären Storage Array.
+. Warten Sie, bis alle Daten im Cache-Speicher auf die Laufwerke geschrieben werden.
++
+Die grüne LED „Cache aktiv“ auf der Rückseite jedes Controllers leuchtet, wenn die Daten im Cache auf die Laufwerke geschrieben werden müssen. Sie müssen warten, bis diese LED ausgeschaltet ist.image:../media/28_dwg_2800_controller_attn_led_maint-e2800.gif[""]
+
++
+|===
+| Legende | Typ der Host-Ports 
+
+
+ a| 
+*(1)*
+ a| 
+LED „Cache aktiv“
+
+|===
+. Wählen Sie auf der Startseite des SANtricity System Managers die Option *Vorgänge in Bearbeitung anzeigen*.
+. Warten Sie, bis alle Vorgänge abgeschlossen sind, bevor Sie mit dem nächsten Schritt fortfahren.
+
+
+
+
+== Schritt 4: Ändern Sie das Funktionspaket
+
+Ändern Sie das Feature Pack, um das Host-Protokoll der Baseboard-Host-Ports, die IB-HIC-Ports oder beide Arten von Ports zu konvertieren.
+
+.Schritte
+. Wählen Sie im SANtricity System Manager Menü:Einstellungen[System].
+. Wählen Sie unter *Add-ons* die Option *Feature Pack ändern*.
++
+image::../media/sam1130_ss_system_change_feature_pack_maint-e2800.gif[Sam1130 ss Systemwechsel Feature Pack maint e2800]
+
+. Klicken Sie auf *Durchsuchen* und wählen Sie dann das Feature Pack aus, das Sie anwenden möchten.
+. Typ `CHANGE` Vor Ort.
+. Klicken Sie Auf *Ändern*.
++
+Die Migration des Feature Packs beginnt. Beide Controller starten automatisch zweimal neu, damit das neue Funktionspaket wirksam wird. Das Speicher-Array kehrt nach Abschluss des Neubootens in einen reaktionsfähigen Zustand zurück.
+
+. Überprüfen Sie, ob die Host-Ports das erwartete Protokoll haben.
++
+.. Wählen Sie im SANtricity System Manager die Option *Hardware* aus.
+.. Klicken Sie auf *Zurück von Regal anzeigen*.
+.. Wählen Sie die Grafik für Controller A oder Controller B aus
+.. Wählen Sie im Kontextmenü die Option *Einstellungen anzeigen* aus.
+.. Wählen Sie die Registerkarte *Host Interfaces* aus.
+.. Klicken Sie auf *Weitere Einstellungen anzeigen*.
+.. Überprüfen Sie die Details für die Baseboard-Ports und die HIC-Ports (gekennzeichnet mit „`slot 1`“), und vergewissern Sie sich, dass jeder Port-Typ das erwartete Protokoll hat.
+
+
+
+
+Gehen Sie zu link:hpp-complete-protocol-conversion-task.html["Vollständige Konvertierung des Host-Protokolls"].

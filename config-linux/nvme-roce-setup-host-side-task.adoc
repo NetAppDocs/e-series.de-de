@@ -1,0 +1,154 @@
+---
+permalink: config-linux/nvme-roce-setup-host-side-task.html 
+sidebar: sidebar 
+keywords: express linux configuration, software configuration, linux host, E2800, E5700, EF300, EF600, E-Series, eseries 
+summary: Die NVMe-Initiatorkonfiguration in einer RoCE-Umgebung umfasst die Installation und Konfiguration von rdma-Core- und nvme-cli-Paketen, die Konfiguration von Initiator-IP-Adressen und das Einrichten der NVMe-of-Schicht auf dem Host. 
+---
+= Richten Sie NVMe over RoCE auf der Host-Seite ein
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Die NVMe-Initiatorkonfiguration in einer RoCE-Umgebung umfasst die Installation und Konfiguration von rdma-Core- und nvme-cli-Paketen, die Konfiguration von Initiator-IP-Adressen und das Einrichten der NVMe-of-Schicht auf dem Host.
+
+Sie müssen das aktuelle kompatible Betriebssystem RHEL 7, RHEL 8 und RHEL 9 SUSE Linux Enterprise Server 12 und 15 Service Pack ausführen. Siehe https://mysupport.netapp.com/matrix["NetApp Interoperabilitäts-Matrix-Tool"^] Für eine vollständige Liste der aktuellen Anforderungen.
+
+.Schritte
+. rdma- und nvme-cli-Pakete installieren:
++
+*SLES 12 oder SLES 15*
+
++
+[listing]
+----
+
+# zypper install rdma-core
+# zypper install nvme-cli
+----
++
+*RHEL 7, RHEL 8 UND RHEL 9*
+
++
+[listing]
+----
+
+# yum install rdma-core
+# yum install nvme-cli
+----
+. Holen Sie den Host-NQN ab, mit dem der Host für ein Array konfiguriert werden kann.
++
+[listing]
+----
+# cat /etc/nvme/hostnqn
+----
+. Richten Sie IPv4-IP-Adressen auf den ethernet-Ports ein, die für die Verbindung von NVMe over RoCE verwendet werden. Erstellen Sie für jede Netzwerkschnittstelle ein Konfigurationsskript, das die verschiedenen Variablen für diese Schnittstelle enthält.
++
+Die in diesem Schritt verwendeten Variablen basieren auf der Server-Hardware und der Netzwerkumgebung. Die Variablen enthalten die `IPADDR` Und `GATEWAY`. Dies sind Beispielanweisungen für SLES und RHEL:
+
++
+*SLES 12 und SLES 15*
+
++
+Erstellen Sie die Beispieldatei `/etc/sysconfig/network/ifcfg-eth4` Mit folgendem Inhalt:
+
++
+[listing]
+----
+BOOTPROTO='static'
+BROADCAST=
+ETHTOOL_OPTIONS=
+IPADDR='192.168.1.87/24'
+GATEWAY='192.168.1.1'
+MTU=
+NAME='MT27800 Family [ConnectX-5]'
+NETWORK=
+REMOTE_IPADDR=
+STARTMODE='auto'
+----
++
+Erstellen Sie dann die Beispieldatei `/etc/sysconfig/network/ifcfg-eth5`:
+
++
+[listing]
+----
+BOOTPROTO='static'
+BROADCAST=
+ETHTOOL_OPTIONS=
+IPADDR='192.168.2.87/24'
+GATEWAY='192.168.2.1'
+MTU=
+NAME='MT27800 Family [ConnectX-5]'
+NETWORK=
+REMOTE_IPADDR=
+STARTMODE='auto'
+----
++
+*RHEL 7, RHEL 8 UND RHEL 9*
+
++
+Erstellen Sie die Beispieldatei `/etc/sysconfig/network-scripts/ifcfg-eth4` Mit folgendem Inhalt:
+
++
+[listing]
+----
+BOOTPROTO='static'
+BROADCAST=
+ETHTOOL_OPTIONS=
+IPADDR='192.168.1.87/24’
+GATEWAY='192.168.1.1'
+MTU=
+NAME='MT27800 Family [ConnectX-5]'
+NETWORK=
+REMOTE_IPADDR=
+STARTMODE='auto'
+----
++
+Erstellen Sie dann die Beispieldatei `/etc/sysconfig/network-scripts/ifcfg-eth5`:
+
++
+[listing]
+----
+BOOTPROTO='static'
+BROADCAST=
+ETHTOOL_OPTIONS=
+IPADDR='192.168.2.87/24'
+GATEWAY='192.168.2.1'
+MTU=
+NAME='MT27800 Family [ConnectX-5]'
+NETWORK=
+REMOTE_IPADDR=
+STARTMODE='auto'
+----
+. Aktivieren der Netzwerkschnittstellen:
++
+[listing]
+----
+
+# ifup eth4
+# ifup eth5
+----
+. Legen Sie auf dem Host den NVMe-of-Layer fest. Erstellen Sie die folgende Datei unter `/etc/modules-load.d/` Um die zu laden `nvme-rdma` Kernel-Modul und stellen Sie sicher, dass das Kernel-Modul immer eingeschaltet ist, auch nach einem Neustart:
++
+[listing]
+----
+
+# cat /etc/modules-load.d/nvme-rdma.conf
+  nvme-rdma
+----
++
+Um die zu überprüfen `nvme-rdma` Kernel-Modul ist geladen, führen Sie diesen Befehl aus:
+
++
+[listing]
+----
+# lsmod | grep nvme
+nvme_rdma              36864  0
+nvme_fabrics           24576  1 nvme_rdma
+nvme_core             114688  5 nvme_rdma,nvme_fabrics
+rdma_cm               114688  7 rpcrdma,ib_srpt,ib_srp,nvme_rdma,ib_iser,ib_isert,rdma_ucm
+ib_core               393216  15 rdma_cm,ib_ipoib,rpcrdma,ib_srpt,ib_srp,nvme_rdma,iw_cm,ib_iser,ib_umad,ib_isert,rdma_ucm,ib_uverbs,mlx5_ib,qedr,ib_cm
+t10_pi                 16384  2 sd_mod,nvme_core
+----
+

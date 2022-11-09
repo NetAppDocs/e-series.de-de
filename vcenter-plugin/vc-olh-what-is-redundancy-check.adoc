@@ -1,0 +1,27 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/vc-olh-what-is-redundancy-check.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
+summary: Durch eine Redundanzprüfung wird ermittelt, ob die Daten auf einem Volume in einem Pool oder einer Volume-Gruppe konsistent sind. 
+---
+= Was ist Redundanzprüfung?
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Durch eine Redundanzprüfung wird ermittelt, ob die Daten auf einem Volume in einem Pool oder einer Volume-Gruppe konsistent sind. Redundanzdaten dienen der schnellen Rekonstruktion von Informationen über das Ersatzlaufwerk, wenn eines der Laufwerke im Pool oder der Volume-Gruppe ausfällt.
+
+Sie können diese Prüfung nur für einen Pool oder eine Volume-Gruppe gleichzeitig durchführen. Bei einer Volume-Redundanzprüfung werden folgende Aktionen durchgeführt:
+
+* Scannt die Datenblöcke in einem RAID 3-Volume, einem RAID 5-Volume oder einem RAID 6-Volume und überprüft anschließend die Redundanzinformationen für jeden Block. (RAID 3 kann Volume-Gruppen nur über die Befehlszeilenschnittstelle zugewiesen werden.)
+* Vergleicht die Datenblöcke auf gespiegelten RAID 1-Laufwerken.
+* Gibt Redundanzfehler zurück, wenn die Daten von der Controller-Firmware uneinheitlich sind.
+
+
+
+NOTE: Eine sofortige Durchführung einer Redundanzprüfung auf demselben Pool oder derselben Volume-Gruppe kann zu einem Fehler führen. Um dieses Problem zu vermeiden, warten Sie ein bis zwei Minuten, bevor Sie eine weitere Redundanzprüfung auf demselben Pool oder derselben Volume-Gruppe durchführen.

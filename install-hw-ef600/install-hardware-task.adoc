@@ -1,0 +1,97 @@
+---
+permalink: install-hw-ef600/install-hardware-task.html 
+sidebar: sidebar 
+keywords: EF300, EF600, installation, 
+summary: EF300 oder EF600 System-Rack in einem 2er-Säulen-Rack oder NetApp System-Rack installieren 
+---
+= Installieren Sie die Hardware
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Ein EF300- oder EF600 Storage-System kann in einem Rack mit zwei Säulen oder einem NetApp Systemschrank installiert werden.
+
+Stellen Sie vor der Installation eines EF300- oder EF600-Storage-Systems Folgendes sicher:
+
+* Registrieren Sie Ihre Hardware unter http://mysupport.netapp.com/["mysupport.netapp.com"^].
+* Bereiten Sie einen flachen, statischen Arbeitsbereich vor.
+* Treffen Sie antistatische Vorsichtsmaßnahmen.
+
+
+.Schritte
+. Packen Sie die Hardware aus.
++
+.. Packen Sie den Inhalt aus und beinventarisieren Sie die enthaltene Hardware gegen den Verpackungsschein.
+.. Lesen Sie vor dem Fortfahren alle Anweisungen durch.
+
+
+. Installieren Sie die Schienen.
++
+
+NOTE: Um zu verhindern, dass das Gerät umkippen kann, installieren Sie die Hardware von der Unterseite des Racks oder Cabinets bis nach oben.
+
++
+|===
+
+
+ a| 
+Wenn Sie Anweisungen zur Rackmontage enthalten haben, lesen Sie diese, um zu erfahren, wie Sie die Schienen installieren. Weitere Anweisungen zur Rack-Montage finden Sie unter link:../rackmount-hardware.html["Rack-montierte Hardware"].
+
+
+
+ a| 
+image:../media/install_rails_inst-hw-ef600.png[""]
+
+|===
+. Das Shelf einbauen.
++
+|===
+
+
+ a| 
+.. Wenn Sie mehrere Shelves installieren, beginnen Sie mit der Installation von unten nach oben im Schrank. Positionieren Sie die Rückseite des Regals auf den Schienen.
++
+
+CAUTION: Verwenden Sie bei der Installation des Regals einen Teamlift mit zwei Personen.
+
+.. Das Regal von unten halten und in den Schrank schieben.
+
+
+
+
+ a| 
+image:../media/install_ef600.png[""]
+
+|===
+. Befestigen Sie das Regal.
++
+|===
+
+
+ a| 
+Weitere Informationen finden Sie unter link:../rackmount-hardware.html["Rack-montierte Hardware"].
+
+
+
+ a| 
+image:../media/secure_shelf_inst-hw-ef600.png[""]
+
+|===
+. Bringen Sie die Frontplatte an.
++
+|===
+
+
+ a| 
+.. Richten Sie die Frontplatte am Regal aus und lassen Sie sie einrasten.
+
+
+
+
+ a| 
+image:../media/install_faceplate_2_0_inst-hw-ef600.png[""]
+
+|===
+

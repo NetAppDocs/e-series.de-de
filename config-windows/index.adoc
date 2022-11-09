@@ -1,0 +1,41 @@
+---
+permalink: config-windows/index.html 
+sidebar: sidebar 
+keywords: express Windows configuration, software configuration, Windows host, E2800, E5700, EF300, EF600, E-Series, eseries 
+summary: Nutzen Sie die Express-Konfiguration für einen Windows-Host mit einem E-Series System. 
+---
+= Überblick über die Windows Express-Konfiguration
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Die Windows Express-Methode zur Installation Ihres Storage-Arrays und zum Zugriff auf SANtricity System Manager ist zur Einrichtung eines eigenständigen Windows-Hosts auf einem E-Series System geeignet. Er ist so konzipiert, dass das Storage-System mit minimalen Entscheidungspunkten schneller betriebsbereit ist.
+
+
+
+== Verfahrensübersicht
+
+Die Express-Methode umfasst die folgenden Schritte, die ebenfalls im beschrieben werden link:understand-windows-concept.html["Windows-Workflow"].
+
+. Richten Sie eine der folgenden Kommunikationsumgebungen ein:
++
+** link:fc-perform-specific-task.html["Fibre Channel (FC)"]
+** link:iscsi-perform-specific-task.html["ISCSI"]
+** link:sas-perform-specific-task.html["SAS"]
+
+
+. Erstellung logischer Volumes im Storage-Array
+. Stellen Sie die Volumes für den Daten-Host zur Verfügung.
+
+
+
+
+== Weitere Informationen
+
+* Online-Hilfe – beschreibt die Verwendung von SANtricity System Manager zum Abschließen von Konfigurations- und Storage-Managementaufgaben. Es ist im Produkt verfügbar.
+* https://kb.netapp.com/["NetApp Knowledge Base"^] (Eine Datenbank mit Artikeln) – enthält Informationen zur Fehlerbehebung, häufig gestellte Fragen und Anweisungen zu einem breiten Spektrum an NetApp Produkten und Technologien.
+* http://mysupport.netapp.com/matrix["NetApp Interoperabilitäts-Matrix-Tool"^] -- ermöglicht die Suche nach Konfigurationen von NetApp Produkten und Komponenten, die den von NetApp angegebenen Standards und Anforderungen entsprechen.
+* http://mysupport.netapp.com/documentation/productlibrary/index.html?productID=61343["NetApp Dokumentation: Host Utilities"^] -- enthält die Dokumentation für die aktuelle Windows Unified Host Utilities-Version.
+

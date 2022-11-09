@@ -1,0 +1,150 @@
+---
+permalink: upgrade-santricity/overview-upgrade-consider-task.html 
+sidebar: sidebar 
+keywords: E-Series, eseries, E2800, E5700, EF300, EF600, SANtricity, drive firmware, upgrade SANtricity, upgrade OS, upgrade E-Series, upgrade firmware, upgrading, upgrade IOM firmware, upgrade NVSRAM, upgrade controller 
+summary: Prüfen Sie Upgrade-Überlegungen für die SANtricity OS Controller-Software und -Firmware des Storage-Arrays und deren Festplatten-Firmware. 
+---
+= Upgrade-Überlegungen
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Überprüfen Sie die folgenden Upgrade-Punkte, um ein erfolgreiches Upgrade sicherzustellen.
+
+
+
+== Controller-Upgrades (Single oder mehrere)
+
+Lesen Sie vor dem Controller-Upgrade diese wichtigen Überlegungen durch.
+
+
+
+=== Aktuelle Versionen
+
+Sie können die aktuellen Versionen Ihrer Software und Firmware wie folgt anzeigen:
+
+* Verwenden Sie für einen Single Controller die Schnittstelle des SANtricity System Managers. Gehen Sie zu menu:Support[Upgrade Center] und klicken Sie dann auf den Link für *Software- und Firmware-Bestandsaufnahme*.
+* Verwenden Sie für mehrere Controller die SANtricity Unified Manager Schnittstelle. Gehen Sie zur Seite *Verwalten* für erkannte Speicher-Arrays. Die Versionen werden in der Spalte *SANtricity OS Software* angezeigt. Die Informationen zu Controller-Firmware und NVSRAM finden Sie in einem Popup-Dialogfeld, wenn Sie in den einzelnen Zeilen auf die SANtricity OS-Version klicken.
+
+
+
+
+=== Im Upgrade enthaltene Komponenten
+
+Die folgenden Komponenten sind beim Upgrade-Prozess von SANtricity OS enthalten:
+
+* *System Manager* -- System Manager ist die Software, die das Speicher-Array verwaltet.
+* *Controller-Firmware* -- Controller-Firmware verwaltet den I/O zwischen Hosts und Volumes.
+* *IOM-Firmware* -- die I/O-Modul-Firmware (IOM) verwaltet die Verbindung zwischen einem Controller und einem Festplatten-Shelf. Es überwacht auch den Status der Komponenten.
+* *Supervisor Software* -- Supervisor Software ist die virtuelle Maschine auf einem Controller, in dem die Software ausgeführt wird.
+
+
+
+
+=== Komponenten für ein separates Upgrade
+
+Die folgenden Komponenten müssen separat aktualisiert werden:
+
+* *Controller NVSRAM* -- Controller NVSRAM ist eine Controller-Datei, die die Standardeinstellungen für die Controller angibt. Anweisungen zum Upgrade des NVSRAM finden Sie in den Anweisungen zum Upgrade der Controller.
+* *Laufwerk-Firmware* -- siehe link:upgrade-drive-firmware-task.html["Aktualisieren Sie die Laufwerk-Firmware"] Für separate Anweisungen.
+* *Multipath/Failover-Treiber* -- im Rahmen des Upgrade-Prozesses muss möglicherweise auch der Multipath-/Failover-Treiber des Hosts aktualisiert werden, damit der Host mit den Controllern korrekt interagieren kann. Wenn Hosts, auf denen andere Betriebssysteme als Microsoft Windows ausgeführt werden, I/O-Verbindungen zu Ihrem Storage-System herstellen, aktualisieren Sie die Multipath-Treiber für diese Hosts. Informationen zur Kompatibilität finden Sie im https://mysupport.netapp.com/NOW/products/interoperability["NetApp Interoperabilitätsmatrix"^]. Anweisungen zum Upgrade finden Sie im link:../config-linux/index.html["Linux Express-Konfiguration"], link:../config-windows/index.html["Windows Express-Konfiguration"], Oder link:../config-vmware/index.html["VMware Express-Konfiguration"].
+* *SANtricity Unified Manager* -- Unified Manager ist die Software, die mehrere Storage-Systeme verwaltet, einschließlich der E2800, E5700, EF300 und EF600 Modelle. Unified Manager ist Teil des SANtricity Web Services Proxy. Dabei handelt es sich um einen RESTful API-Server, der separat auf einem Host-System installiert wird und so Hunderte neuer und älterer NetApp E-Series Storage-Systeme managen. Weitere Informationen finden Sie unter link:../web-services-proxy/index.html["SANtricity Web Services Proxy: Überblick"].
+* *Dienstprogramme* -- andere Verwaltungsdienstprogramme erfordern separate Upgrades, wie das SANtricity Windows Host Utility, das SANtricity Linux Host Utility und SANtricity Windows DSM. Weitere Informationen zu diesen Dienstprogrammen finden Sie im link:../config-linux/index.html["Linux Express-Konfiguration"], link:../config-windows/index.html["Windows Express-Konfiguration"], Oder link:../config-vmware/index.html["VMware Express-Konfiguration"].
+* *Legacy-Systeme* -- Wenn Ihr Speichersystem Teil eines Speichernetzwerks ist, das ältere Speichersysteme enthält, müssen Sie möglicherweise das alte SANtricity Storage Manager Enterprise Management-Fenster (EMW) verwenden, um einen unternehmensweiten Überblick über alle Ihre Speichersysteme zu erhalten. In diesem Fall sollten Sie prüfen, ob eine neuere Wartungs-Version des SANtricity Storage Managers verfügbar ist.
+
+
+
+
+=== Dual Controller und I/O-Verarbeitung
+
+Wenn ein Storage-Array zwei Controller enthält und ein Multipath-Treiber installiert ist, kann das Storage-Array die I/O-Verarbeitung während des Upgrades fortsetzen. Während des Upgrades erfolgt der folgende Vorgang:
+
+. Controller A Failover aller LUNs zu Controller B
+. Das Upgrade erfolgt bei Controller A
+. Controller A nimmt seine LUNs und alle Controller B LUNs wieder auf.
+. Upgrade erfolgt auf Controller B.
+
+
+Nach Abschluss des Upgrades müssen Sie Volumes möglicherweise manuell zwischen den Controllern neu verteilen, um sicherzustellen, dass die Volumes wieder zum korrekten Controller zurückkehren.
+
+
+
+=== Zustandsprüfung
+
+Im Rahmen des Upgrades wird eine Zustandsprüfung ausgeführt. Bei dieser Integritätsprüfung werden alle Storage Array-Komponenten bewertet, um sicherzustellen, dass das Upgrade fortgesetzt werden kann. Die folgenden Bedingungen können das Upgrade verhindern:
+
+* Ausgefallene zugewiesene Laufwerke
+* Hot Spares werden verwendet
+* Unvollständige Volume-Gruppen
+* Exklusive Vorgänge ausgeführt
+* Fehlende Volumes
+* Controller im nicht optimalen Status
+* Übermäßige Anzahl von Ereignisprotokollereignissen
+* Fehler bei der Validierung der Konfigurationsdatenbank
+* Laufwerke mit alten Versionen von DACstore
+
+
+Sie können die Integritätsprüfung vor dem Upgrade auch separat durchführen, ohne ein Upgrade durchführen zu müssen.
+
+
+
+=== Sofortiges oder stufenweise Upgrade
+
+Sie können das Upgrade sofort aktivieren oder es für einen späteren Zeitpunkt aktivieren. Aus folgenden Gründen können Sie sich später aktivieren:
+
+* *Tageszeit* -- die Aktivierung der Software kann eine lange Zeit dauern, so dass Sie möglicherweise warten möchten, bis I/O-Lasten leichter sind. Je nach I/O-Last und Cache-Größe kann ein Controller-Upgrade in der Regel zwischen 15 und 25 Minuten dauern. Die Controller starten neu und führen einen Failover während der Aktivierung durch. Dadurch kann die Performance bis zum Abschluss des Upgrades unter Umständen niedriger sein als üblich.
+* *Paketyp* -- möglicherweise möchten Sie die neue Software und Firmware auf einem Speicher-Array testen, bevor Sie die Dateien auf anderen Speicher-Arrays aktualisieren.
+
+
+
+
+== Upgrade der Laufwerk-Firmware
+
+Lesen Sie die folgenden wichtigen Überlegungen durch, bevor Sie Ihre Laufwerk-Firmware aktualisieren.
+
+
+
+=== Laufwerkskompatibilität
+
+Jede Laufwerk-Firmware-Datei enthält Informationen über den Laufwerkstyp, auf dem die Firmware ausgeführt wird. Sie können die angegebene Firmware-Datei nur auf ein kompatibles Laufwerk herunterladen. System Manager überprüft während des Upgrades die Kompatibilität automatisch.
+
+
+
+=== Laufwerks-Upgrade-Methoden
+
+Es gibt zwei Arten von Upgrade-Methoden für die Festplatten-Firmware: Online und offline.
+
+|===
+| Online-Upgrade | Offline-Upgrade 
+
+
+ a| 
+Während eines Online-Upgrades werden Festplatten nacheinander aktualisiert. Das Storage-Array verarbeitet die I/O-Verarbeitung während des Upgrades weiter. Sie müssen keine I/O-Vorgänge beenden Wenn ein Laufwerk eine Online-Aktualisierung durchführen kann, wird die Online-Methode automatisch verwendet.
+
+Laufwerke, die ein Online-Upgrade durchführen können, umfassen Folgendes:
+
+* Laufwerke in einem optimalen Pool
+* Laufwerke in einer optimalen redundanten Volume-Gruppe (RAID 1, RAID 5 und RAID 6)
+* Nicht zugewiesene Laufwerke
+* Standby-Hot-Spare-Laufwerke
+
+
+Ein Online-Upgrade der Laufwerk-Firmware kann mehrere Stunden in Anspruch nehmen, sodass dem Storage Array potenzielle Volume-Ausfälle zur Verfügung stehen. In folgenden Fällen kann es zu einem Volumenausfall kommen:
+
+* In einer RAID 1- oder RAID 5-Volume-Gruppe fällt ein Laufwerk aus, während ein anderes Laufwerk in der Volume-Gruppe aktualisiert wird.
+* In einem RAID 6 Pool oder einer Volume-Gruppe fallen zwei Laufwerke aus, während ein anderes Laufwerk im Pool oder in der Volume-Gruppe aktualisiert wird.
+
+ a| 
+Bei einem Offline-Upgrade werden alle Laufwerke desselben Laufwerktyps gleichzeitig aktualisiert. Diese Methode erfordert das Stoppen der I/O-Aktivität zu den Volumes, die mit den ausgewählten Laufwerken verknüpft sind. Da mehrere Laufwerke gleichzeitig aktualisiert werden können (parallel), wird die Ausfallzeit insgesamt deutlich reduziert. Wenn ein Laufwerk nur eine Offline-Aktualisierung durchführen kann, wird die Offline-Methode automatisch verwendet.
+
+Die folgenden Laufwerke MÜSSEN die Offline-Methode verwenden:
+
+* Laufwerke in einer nicht redundanten Volume-Gruppe (RAID 0)
+* Laufwerke in einem nicht optimalen Pool oder einer Volume-Gruppe
+* Laufwerke im SSD-Cache
+
+
+|===

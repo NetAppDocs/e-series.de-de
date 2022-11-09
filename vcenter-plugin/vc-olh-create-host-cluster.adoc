@@ -1,0 +1,65 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/vc-olh-create-host-cluster.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
+summary: Wenn zwei oder mehr Hosts I/O-Zugriff auf dieselben Volumes benötigen, können Sie ein Host-Cluster erstellen. 
+---
+= Erstellen Sie den Host-Cluster
+:hardbreaks:
+:allow-uri-read: 
+:experimental: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Wenn zwei oder mehr Hosts I/O-Zugriff auf dieselben Volumes benötigen, können Sie ein Host-Cluster erstellen.
+
+Beachten Sie beim Erstellen eines Host-Clusters die folgenden Richtlinien:
+
+* Dieser Vorgang startet nicht, wenn zum Erstellen des Clusters zwei oder mehr Hosts zur Verfügung stehen.
+* Hosts in Host-Clustern können verschiedene Betriebssysteme (heterogen) haben.
+* NVMe-Hosts in Host-Clustern können nicht mit nicht-NVMe-Hosts kombiniert werden.
+* Um ein für Data Assurance (da) fähiges Volume zu erstellen, muss die Host-Verbindung, die Sie verwenden möchten, da unterstützen.
++
+Wenn eine der Host-Verbindungen auf den Controllern im Speicher-Array keine Unterstützung für da bietet, können die zugeordneten Hosts auf da-fähige Volumes keinen Zugriff auf Daten haben.
+
+* Dieser Vorgang ist nicht erfolgreich, wenn der gewählte Name bereits verwendet wird.
+* Die Länge des Namens darf nicht mehr als 30 Zeichen umfassen.
+
+
+.Schritte
+. Wählen Sie auf der Seite Verwalten das Speicher-Array mit der Hostverbindung aus.
+. Wählen Sie Menü:Bereitstellung [Hosts konfigurieren].
++
+Die Seite Hosts konfigurieren wird geöffnet.
+
+. Wählen Sie Menü:Create[Host Cluster].
++
+Das Dialogfeld Host-Cluster erstellen wird angezeigt.
+
+. Wählen Sie die entsprechenden Einstellungen für den Host-Cluster aus.
++
+|===
+| Einstellung | Beschreibung 
+
+
+| Name | Geben Sie den Namen für das neue Host-Cluster ein. 
+
+
+| Wählen Sie Hosts aus, die den Zugriff auf das Volume gemeinsam nutzen sollen | Wählen Sie zwei oder mehr Hosts aus der Dropdown-Liste aus. In der Liste werden nur die Hosts angezeigt, die nicht bereits Teil eines Host-Clusters sind. 
+|===
+. Klicken Sie Auf *Erstellen*.
++
+Wenn die ausgewählten Hosts an Schnittstellentypen mit unterschiedlichen Funktionen zur Data Assurance (da) angeschlossen sind, wird ein Dialogfeld mit der Meldung angezeigt, dass da auf dem Host-Cluster nicht verfügbar ist. Durch diese Nichtverfügbarkeit wird verhindert, dass dem Host-Cluster DA-fähige Volumes hinzugefügt werden. Wählen Sie *Ja*, um fortzufahren, oder *Nein*, um den Vorgang abzubrechen.
+
++
+DA erhöht die Datenintegrität im gesamten Storage-System. DA ermöglicht es dem Storage-Array, nach Fehlern zu suchen, die auftreten können, wenn Daten zwischen Hosts und Laufwerken verschoben werden. Die Verwendung von da für das neue Volume stellt sicher, dass alle Fehler erkannt werden.
+
+
+
+Der neue Hostcluster wird in der Tabelle mit den zugewiesenen Hosts in den Zeilen darunter angezeigt.
+
+Sie müssen ein Volume einem Host-Cluster zuweisen, damit es für I/O-Vorgänge verwendet werden kann. Gehen Sie zu link:vc-olh-assign-volumes-to-hosts.html["Weisen Sie Hosts Volumes zu"].

@@ -1,0 +1,100 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/vc-olh-create-host-access.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
+summary: Für das Storage-Management mit dem Storage Plug-in für vCenter müssen Sie jeden Host im Netzwerk ermitteln oder definieren. 
+---
+= Hostzugriff erstellen
+:hardbreaks:
+:allow-uri-read: 
+:experimental: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Für das Storage-Management mit dem Storage Plug-in für vCenter müssen Sie jeden Host im Netzwerk ermitteln oder definieren.
+
+Durch die Erstellung eines Hosts definieren Sie die Hostparameter, um eine Verbindung zum Speicher-Array und I/O-Zugriff auf die Volumes herzustellen.
+
+Sie können dem Host Context Agent (HCA) erlauben, die Hosts automatisch zu erkennen und anschließend zu überprüfen, ob die Informationen korrekt sind, indem Sie auf der Seite Hosts konfigurieren *Einstellungen anzeigen/bearbeiten* die Option *Einstellungen anzeigen/bearbeiten* wählen. Die HCA ist jedoch nicht auf allen unterstützten Betriebssystemen verfügbar, und Sie müssen den Host manuell erstellen.
+
+Wenn Sie einen Host erstellen, beachten Sie folgende Richtlinien:
+
+* Sie müssen die dem Host zugeordneten Host-Identifier-Ports definieren.
+* Stellen Sie sicher, dass Sie denselben Namen wie den zugewiesenen Systemnamen des Hosts angeben.
+* Dieser Vorgang ist nicht erfolgreich, wenn der gewählte Name bereits verwendet wird.
+* Die Länge des Namens darf nicht mehr als 30 Zeichen umfassen.
+
+
+.Schritte
+. Wählen Sie auf der Seite Verwalten das Speicher-Array mit der Hostverbindung aus.
+. Wählen Sie Menü:Bereitstellung [Hosts konfigurieren].
++
+Die Seite Hosts konfigurieren wird geöffnet.
+
+. Klicken Sie auf Menü:Create[Host].
++
+Das Dialogfeld Host erstellen wird angezeigt.
+
+. Wählen Sie die entsprechenden Einstellungen für den Host aus.
++
+.Felddetails
+====
+[cols="25h,~"]
+|===
+| Einstellung | Beschreibung 
+
+
+ a| 
+Name
+ a| 
+Geben Sie einen Namen für den neuen Host ein.
+
+
+
+ a| 
+Host-Betriebssystem-Typ
+ a| 
+Wählen Sie aus der Dropdown-Liste das auf dem neuen Host ausgeführte Betriebssystem aus.
+
+
+
+ a| 
+Host-Schnittstellentyp
+ a| 
+(Optional) Wenn auf Ihrem Speicherarray mehr als eine Host-Schnittstelle unterstützt wird, wählen Sie den Host-Schnittstellentyp aus, den Sie verwenden möchten.
+
+
+
+ a| 
+Host-Ports
+ a| 
+Führen Sie einen der folgenden Schritte aus:
+
+** *I/O-Schnittstelle auswählen* -- generell sollten sich die Host-Ports angemeldet haben und über die Dropdown-Liste verfügbar sein. Sie können die Host-Port-IDs aus der Liste auswählen.
+** *Manuelles Hinzufügen* -- Wenn eine Host-Port-ID nicht in der Liste angezeigt wird, bedeutet dies, dass der Host-Port nicht angemeldet ist. Mithilfe eines HBA-Dienstprogramms oder des iSCSI-Initiator-Dienstprogramms können die Host-Port-IDs ermittelt und mit dem Host verknüpft werden. Sie können die Host-Port-IDs manuell eingeben oder sie aus dem Dienstprogramm (nacheinander) in das Feld Host-Ports kopieren/einfügen. Sie müssen eine Host-Port-ID gleichzeitig auswählen, um sie dem Host zuzuordnen. Sie können jedoch weiterhin so viele Kennungen auswählen, die dem Host zugeordnet sind. Jede Kennung wird im Feld Host-Ports angezeigt. Bei Bedarf können Sie auch einen Bezeichner entfernen, indem Sie neben ihm die *X*-Option auswählen.
+
+
+
+
+ a| 
+Legen Sie den CHAP-Initiatorschlüssel fest
+ a| 
+(Optional) Wenn Sie einen Host-Port mit einem iSCSI-IQN ausgewählt oder manuell eingegeben haben und wenn Sie einen Host benötigen möchten, der versucht, auf das Speicher-Array zuzugreifen, um sich mit dem Challenge Handshake Authentication Protocol (CHAP) zu authentifizieren, aktivieren Sie das Kontrollkästchen „CHAP Initiator Secret festlegen“. Gehen Sie für jeden ausgewählten oder manuell eingegebenen iSCSI-Host-Port wie folgt vor:
+
+** Geben Sie denselben CHAP-Schlüssel ein, der auf jedem iSCSI-Hostinitiator für die CHAP-Authentifizierung festgelegt wurde. Wenn Sie die gegenseitige CHAP-Authentifizierung verwenden (zwei-Wege-Authentifizierung, die es einem Host ermöglicht, sich am Speicher-Array zu validieren, und damit sich ein Speicher-Array am Host validieren kann), müssen Sie auch den CHAP-Schlüssel für das Speicher-Array bei der Ersteinrichtung oder durch Ändern von Einstellungen festlegen.
+** Wenn Sie keine Host-Authentifizierung benötigen, lassen Sie das Feld leer. Derzeit wird nur CHAP verwendet.
+
+
+|===
+====
+. Klicken Sie Auf *Erstellen*.
+. Wenn Sie die Hostinformationen aktualisieren müssen, wählen Sie den Host aus der Tabelle aus und klicken Sie auf *Einstellungen anzeigen/bearbeiten*.
+
+
+Nachdem der Host erfolgreich erstellt wurde, erstellt das System für jeden Host-Port, der für den Host konfiguriert wurde (Benutzungsbezeichnung) einen Standardnamen. Der Standard-Alias ist `<Hostname_Port Number>`. Der Standard-Alias für den ersten Port, der für das Host-IPT erstellt wurde, ist beispielsweise `IPT_1`.
+
+Sie müssen ein Volume einem Host zuweisen, damit es für I/O-Vorgänge verwendet werden kann. Gehen Sie zu link:vc-olh-assign-volumes-to-hosts.html["Weisen Sie Hosts Volumes zu"].

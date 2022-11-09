@@ -1,0 +1,21 @@
+---
+permalink: config-linux/iser-ib-setup-multipath-conf-file-concept.html 
+sidebar: sidebar 
+keywords: multipath.conf file, express linux configuration, software configuration, linux host, E2800, E5700, EF300, EF600, E-Series, eseries 
+summary: Verwenden Sie die Multipath.conf-Datei, die die Konfigurationsdatei für den Multipath-Daemon multipathd ist. 
+---
+= Richten Sie die Multipath.conf-Datei ein
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Die Multipath.conf-Datei ist die Konfigurationsdatei für den Multipath-Daemon, multipathd.
+
+Die Multipath.conf-Datei überschreibt die integrierte Konfigurationstabelle für multipathd.
+
+
+NOTE: Für das SANtricity Betriebssystem 8.30 und neuere Versionen empfiehlt NetApp die Verwendung der Standardeinstellungen, wie angegeben.
+
+Es sind keine Änderungen an /etc/Multipath.conf erforderlich.

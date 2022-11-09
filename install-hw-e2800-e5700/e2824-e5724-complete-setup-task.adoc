@@ -1,0 +1,203 @@
+---
+permalink: install-hw-e2800-e5700/e2824-e5724-complete-setup-task.html 
+sidebar: sidebar 
+keywords: E2800, E5700, installation, host cabling, direct-attach topology, fabric topology, System Manager connection, management host connection, port configuration, configuring ports, DHCP, static IP 
+summary: Schließen Sie die Controller mit dem Netzwerk an, um die Einrichtung und Konfiguration des Storage-Systems abzuschließen. 
+---
+= Vollständige Einrichtung und Konfiguration des Storage-Systems
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Erfahren Sie, wie Sie die Controller mit Ihrem Netzwerk verbinden und die Einrichtung und Konfiguration des Storage-Systems abschließen.
+
+
+
+== Schritt: Verkabeln Sie die Daten-Hosts
+
+Verkabeln Sie das System entsprechend Ihrer Netzwerktopologie.
+
+
+NOTE: Wenn Sie AIX® verwenden, müssen Sie den E-Series Multipath-Treiber auf dem Host installieren, bevor Sie ihn mit dem Array verbinden.
+
+
+
+=== Option 1: Direct-Attached-Topologie
+
+Das folgende Beispiel zeigt die Verkabelung zu den Daten-Hosts mithilfe einer Direct-Attached-Topologie.
+
+|===
+
+
+ a| 
+image:../media/2U_DirectTopology.png[""]
+ a| 
+. Verbinden Sie jeden Host-Adapter direkt mit den Host-Ports auf den Controllern.
+
+
+|===
+
+
+=== Option 2: Fabric-Topologie
+
+Das folgende Beispiel zeigt die Verkabelung zu den Daten-Hosts mithilfe einer Fabric-Topologie.
+
+|===
+
+
+ a| 
+image:../media/2U_FabricTopology.png[""]
+ a| 
+. Verbinden Sie jeden Host-Adapter direkt mit dem Switch.
+. Verbinden Sie jeden Switch direkt mit den Host Ports der Controller.
+
+
+|===
+
+
+== Schritt 2: Verbinden und Konfigurieren der Verwaltungsverbindung
+
+Sie können die Controller-Management-Ports mit einer von zwei Optionen konfigurieren: Über einen DHCP-Server oder über eine statische IP-Adresse.
+
+
+
+=== Option 1: DHCP-Server
+
+Erfahren Sie, wie die Management-Ports mit einem DHCP-Server konfiguriert werden.
+
+.Bevor Sie beginnen
+* Konfigurieren Sie Ihren DHCP-Server so, dass für jeden Controller eine IP-Adresse, eine Subnetzmaske und eine Gateway-Adresse als permanentes Leasing zugeordnet werden.
+* Beziehen Sie die zugewiesenen IP-Adressen, die Sie verwenden werden, um eine Verbindung zum Storage-System vom Netzwerkadministrator herzustellen.
+
+
+.Schritte
+. Schließen Sie ein Ethernet-Kabel an den Management-Port jedes Controllers an, und verbinden Sie das andere Ende mit Ihrem Netzwerk.
++
+|===
+
+
+ a| 
+image:../media/cable_ethernet_inst-hw-e2800-e5700.png[""]
+ a| 
+Ethernet-Kabel (falls bestellt)
+
+|===
++
+Die folgenden Abbildungen zeigen Beispiele für den Standort des Management-Ports des Controllers:
+
++
+|===
+
+
+ a| 
+image:../media/e2800_mgmt_ports.png[""]
+
+E2800 Controller P1 Management-Port
+ a| 
+image:../media/e5700_mgmt_ports.png[""]
+
+E5700 Controller P1 Management-Port
+
+|===
+. Öffnen Sie einen Browser, und stellen Sie eine Verbindung zum Storage-System mit einer der Controller-IP-Adressen her, die Sie vom Netzwerkadministrator bereitgestellt haben.
+
+
+
+
+=== Option 2: Statische IP-Adresse
+
+[role="lead"]
+Erfahren Sie, wie die Management-Ports manuell konfiguriert werden können, indem Sie die IP-Adresse und die Subnetzmaske eingeben.
+
+.Bevor Sie beginnen
+* Ermitteln Sie die IP-Adresse der Controller`, die Subnetzmaske, die Gateway-Adresse und DNS- und NTP-Serverinformationen von Ihrem Netzwerkadministrator.
+* Stellen Sie sicher, dass der verwendete Laptop keine Netzwerkkonfiguration von einem DHCP-Server empfängt.
+
+
+.Schritte
+. Verbinden Sie den Management-Port von Controller A mit einem Ethernet-Kabel mit dem Ethernet-Port eines Laptops.
++
+|===
+
+
+ a| 
+image:../media/cable_ethernet_inst-hw-e2800-e5700.png[""]
+ a| 
+Ethernet-Kabel (falls bestellt)
+
+|===
++
+Die folgenden Abbildungen zeigen Beispiele für den Standort des Management-Ports des Controllers:
+
++
+|===
+
+
+ a| 
+image:../media/e2800_mgmt_ports.png[""]
+
+E2800 Controller P1 Management-Port
+ a| 
+image:../media/e5700_mgmt_ports.png[""]
+
+E5700 Controller P1 Management-Port
+
+|===
+. Öffnen Sie einen Browser, und verwenden Sie die Standard-IP-Adresse (169.254.128.101), um eine Verbindung zum Controller herzustellen. Der Controller sendet ein selbstsigniertes Zertifikat zurück. Der Browser informiert Sie darüber, dass die Verbindung nicht sicher ist.
+. Befolgen Sie die Anweisungen des Browsers, um SANtricity System Manager zu starten.
++
+
+NOTE: Wenn Sie keine Verbindung herstellen können, überprüfen Sie, ob Sie keine Netzwerkkonfiguration von einem DHCP-Server erhalten.
+
+. Legen Sie das Kennwort des Speichersystems fest, um sich anzumelden.
+. Verwenden Sie die vom Netzwerkadministrator bereitgestellten Netzwerkeinstellungen im Assistenten * Netzwerkeinstellungen konfigurieren*, um die Netzwerkeinstellungen von Controller A zu konfigurieren, und wählen Sie dann *Fertig stellen* aus.
++
+
+NOTE: Da Sie die IP-Adresse zurücksetzen, verliert System Manager die Verbindung zum Controller.
+
+. Trennen Sie Ihren Laptop vom Speichersystem, und verbinden Sie den Managementport von Controller A mit dem Netzwerk.
+. Öffnen Sie einen Browser auf einem mit Ihrem Netzwerk verbundenen Computer, und geben Sie die neu konfigurierte IP-Adresse von Controller A ein.
++
+
+NOTE: Wenn die Verbindung zu Controller A unterbrochen wird, können Sie ein ethernet-Kabel mit Controller B verbinden, um die Verbindung mit Controller A über Controller B (169.254.128.102) wiederherzustellen.
+
+. Melden Sie sich mit dem zuvor festgelegten Passwort an.
++
+Der Assistent Netzwerkeinstellungen konfigurieren wird angezeigt.
+
+. Verwenden Sie die vom Netzwerkadministrator bereitgestellten Netzwerkeinstellungen im Assistenten * Netzwerkeinstellungen konfigurieren*, um die Netzwerkeinstellungen von Controller B zu konfigurieren, und wählen Sie dann *Fertig stellen* aus.
+. Verbinden Sie Controller B mit dem Netzwerk.
+. Überprüfen Sie die Netzwerkeinstellungen von Controller B, indem Sie die neu konfigurierte IP-Adresse von Controller B in einem Browser eingeben.
++
+
+NOTE: Wenn die Verbindung zu Controller B unterbrochen wird, können Sie Ihre zuvor validierte Verbindung zu Controller A verwenden, um die Verbindung mit Controller B über Controller A wiederherzustellen
+
+
+
+
+
+== Schritt 3: Storage-System konfigurieren
+
+Verwenden Sie nach der Installation der Hardware die SANtricity Software zum Konfigurieren und Managen Ihres Storage-Systems.
+
+.Bevor Sie beginnen
+* Konfigurieren Sie Ihre Management-Ports.
+* Überprüfen und notieren Sie Ihr Kennwort und Ihre IP-Adressen.
+
+
+.Schritte
+. Verwenden Sie die SANtricity Software zum Konfigurieren und Managen Ihrer Storage-Arrays.
+. Verbinden Sie bei der einfachsten Netzwerkkonfiguration den Controller mit einem Webbrowser. Verwenden Sie SANtricity System Manager zum Managen eines einzelnen E2800 oder E5700 Storage-Arrays.
+
+
+|===
+
+
+ a| 
+image:../media/management_s_g2285tation_inst-hw-e2800-e5700_g2285.png[""]
+ a| 
+Verwenden Sie für den Zugriff auf System Manager dieselben IP-Adressen, die Sie zum Konfigurieren der Management-Ports verwendet haben.
+
+|===

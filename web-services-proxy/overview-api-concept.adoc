@@ -1,0 +1,220 @@
+---
+permalink: web-services-proxy/overview-api-concept.html 
+sidebar: sidebar 
+keywords: Web Services, WSP, SANtricity API, 
+summary: Erfahren Sie mehr über die Web Services API 
+---
+= API-Grundlagen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+In der Web Services-API umfasst HTTP-Kommunikation einen Anforderungsantwort-Zyklus.
+
+
+
+== URL-Elemente in Anforderungen
+
+Unabhängig von der verwendeten Programmiersprache oder dem verwendeten Werkzeug hat jeder Aufruf der Web Services-API eine ähnliche Struktur, mit einer URL, einem HTTP-Verb und einem Accept-Header.
+
+image::../media/web_services_proxy_api.gif[Proxy-API für Webservices]
+
+Alle Anforderungen enthalten wie im folgenden Beispiel eine URL und enthalten die in der Tabelle beschriebenen Elemente.
+
+`+https://webservices.name.com:8443/devmgr/v2/storage-systems+`
+
+|===
+| Werden | Beschreibung 
+
+
+ a| 
+HTTP-Übertragung
+
+`https://`
+ a| 
+Der Web Services Proxy ermöglicht die Verwendung von HTTP oder HTTPS.
+
+Aus Sicherheitsgründen erfordert die integrierten Webdienste HTTPS.
+
+
+
+ a| 
+Basis-URL und Port
+
+`webservices.name.com:8443`
+ a| 
+Jede Anforderung muss korrekt an eine aktive Instanz von Webservices weitergeleitet werden. Der FQDN (vollständig qualifizierter Domänenname) oder die IP-Adresse der Instanz sind zusammen mit dem Listening-Port erforderlich. Standardmäßig kommuniziert Web Services über Port 8080 (für HTTP) und Port 8443 (für HTTPS).
+
+Für den Web Services Proxy können beide Ports während der Proxy-Installation oder in der wsconfig.xml-Datei geändert werden. Port-Konflikte sind auf Datacenter-Hosts üblich, auf denen verschiedene Management-Applikationen ausgeführt werden.
+
+Bei den integrierten Webservices kann der Port des Controllers nicht geändert werden. Standardmäßig ist der Port 8443 für sichere Verbindungen verfügbar.
+
+
+
+ a| 
+API-Pfad
+
+`devmgr/v2/storage-systems`
+ a| 
+Eine Anforderung wird an eine bestimmte REST-Ressource oder einen bestimmten Endpunkt innerhalb der Web Services-API gestellt. Die meisten Endpunkte sind in Form von:
+
+`devmgr/v2/<resource>/[id]`
+
+Der API-Pfad besteht aus drei Teilen:
+
+* `devmgr` (Device Manager) ist der Namespace der Web Services API.
+* `v2` Gibt die Version der API an, auf die Sie zugreifen. Sie können auch verwenden `utils` Für den Zugriff auf Anmeldungsendpunkte.
+* `storage-systems` Ist eine Kategorie innerhalb der Dokumentation.
+
+
+|===
+
+
+== Unterstützte HTTP-Verben
+
+Unterstützte HTTP-Verben umfassen ABRUFEN, POST und LÖSCHEN:
+
+* GET-Anforderungen werden für schreibgeschützte Anfragen verwendet.
+* POST-Requests werden zum Erstellen und Aktualisieren von Objekten sowie für Leseanforderungen verwendet, die möglicherweise Auswirkungen auf die Sicherheit haben.
+* LÖSCHANFRAGEN werden normalerweise verwendet, um ein Objekt aus dem Management zu entfernen, ein Objekt vollständig zu entfernen oder den Status des Objekts zurückzusetzen.
+
+
+
+NOTE: Derzeit unterstützt die Web Services API PUT oder PATCH nicht. Stattdessen können Sie POST verwenden, um die typischen Funktionen für diese Verben bereitzustellen.
+
+
+
+== Kopfzeilen akzeptieren
+
+Wenn ein Anforderungsentext zurückgegeben wird, gibt Web Services die Daten im JSON-Format zurück (sofern nicht anders angegeben). Bestimmte Clients haben standardmäßig die Anforderung von „`Text/HTML`“ oder etwas ähnlichem. In diesen Fällen antwortet die API mit einem HTTP-Code 406 und bezeichnet, dass sie keine Daten in diesem Format bereitstellen kann. Als Best Practice sollten Sie den Header akzeptieren für alle Fälle als „`Application/json`“ definieren, in denen Sie JSON als Antworttyp erwarten. In anderen Fällen, in denen ein Antwortkörper nicht zurückgegeben wird (z. B. LÖSCHEN), verursacht die Annahme-Kopfzeile keine unbeabsichtigten Auswirkungen.
+
+
+
+== Antworten
+
+Wenn eine Anfrage an die API gestellt wird, gibt eine Antwort zwei wichtige Informationen zurück:
+
+* HTTP-Statuscode -- gibt an, ob die Anforderung erfolgreich war.
+* Optionaler Antwortkörper -- bietet in der Regel einen JSON-Körper, der den Zustand der Ressource oder eines Körpers darstellt, der mehr Details über die Art eines Fehlers liefert.
+
+
+Sie müssen den Statuscode und den Inhaltstyp-Header überprüfen, um festzustellen, wie der resultierende Antwortkörper aussieht. Für HTTP-Statuscodes 200-203 und 422 gibt Web Services einen JSON-Text mit der Antwort zurück. Bei anderen HTTP-Statuscodes gibt Web Services in der Regel keinen zusätzlichen JSON-Text zurück, entweder weil die Spezifikation es nicht zulässt (204) oder weil der Status selbsterklärend ist. In der Tabelle sind allgemeine HTTP-Statuscodes und -Definitionen aufgeführt. Sie gibt außerdem an, ob Informationen, die mit den einzelnen HTTP-Codes in einem JSON-Körper verbunden sind, zurückgegeben werden.
+
+|===
+| HTTP-Statuscode | Beschreibung | JSON-Text 
+
+
+ a| 
+200 OK
+ a| 
+Kennzeichnet eine erfolgreiche Antwort.
+ a| 
+Ja.
+
+
+
+ a| 
+201 Erstellt
+ a| 
+Gibt an, dass ein Objekt erstellt wurde. Dieser Code wird in einigen seltenen Fällen anstelle eines 200-Status verwendet.
+ a| 
+Ja.
+
+
+
+ a| 
+202 Akzeptiert
+ a| 
+Gibt an, dass die Anforderung zur Bearbeitung als asynchrone Anforderung akzeptiert wird, Sie müssen jedoch eine nachfolgende Anfrage stellen, um das tatsächliche Ergebnis zu erhalten.
+ a| 
+Ja.
+
+
+
+ a| 
+203 Nicht-Autorisierende Informationen
+ a| 
+Ähnlich wie bei einer Antwort von 200, Webservices können jedoch nicht garantieren, dass die Daten aktuell sind (beispielsweise sind derzeit nur zwischengespeicherte Daten verfügbar).
+ a| 
+Ja.
+
+
+
+ a| 
+204 Kein Inhalt
+ a| 
+Zeigt eine erfolgreiche Operation an, aber es gibt keinen Antwortkörper.
+ a| 
+Nein
+
+
+
+ a| 
+400 Fehlerhafte Anfrage
+ a| 
+Gibt an, dass der in der Anforderung angegebene JSON-Text nicht gültig ist.
+ a| 
+Nein
+
+
+
+ a| 
+401 Nicht Autorisiert
+ a| 
+Zeigt an, dass ein Authentifizierungsfehler aufgetreten ist. Es wurden keine Anmeldedaten angegeben oder der Benutzername oder das Passwort war ungültig.
+ a| 
+Nein
+
+
+
+ a| 
+403 Verbotene
+ a| 
+Ein Autorisierungsfehler, der angibt, dass der authentifizierte Benutzer nicht über die Berechtigung zum Zugriff auf den angeforderten Endpunkt verfügt.
+ a| 
+Nein
+
+
+
+ a| 
+404 Nicht Gefunden
+ a| 
+Zeigt an, dass die angeforderte Ressource nicht gefunden werden konnte. Dieser Code ist gültig für nicht vorhandene APIs oder nicht vorhandene Ressourcen, die durch die Kennung angefordert werden.
+ a| 
+Nein
+
+
+
+ a| 
+422 Nicht Verarbeitbare Einheit
+ a| 
+Gibt an, dass die Anforderung in der Regel gut geformt ist, jedoch sind die Eingabeparameter ungültig oder der Status des Speichersystems erlaubt Web Services nicht, die Anforderung zu erfüllen.
+ a| 
+Ja.
+
+
+
+ a| 
+424 Abhängigkeit Fehlgeschlagen
+ a| 
+Wird im Web Services Proxy verwendet, um anzuzeigen, dass das angeforderte Speichersystem derzeit nicht verfügbar ist. Daher können Web Services die Anforderung nicht erfüllen.
+ a| 
+Nein
+
+
+
+ a| 
+429 Zu Viele Anfragen
+ a| 
+Gibt an, dass eine Antragsbegrenzung überschritten wurde und zu einem späteren Zeitpunkt erneut versucht werden sollte.
+ a| 
+Nein
+
+|===
+
+
+== Beispielskripts
+
+GitHub enthält ein Repository für die Sammlung und Organisation von Beispielskripten, die die Verwendung der NetApp SANtricity Web Services API veranschaulichen. Informationen zum Zugriff auf das Repository finden Sie unter https://github.com/NetApp/webservices-samples["Beispiele für NetApp Webservices"^].

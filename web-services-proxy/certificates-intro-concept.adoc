@@ -1,0 +1,130 @@
+---
+permalink: web-services-proxy/certificates-intro-concept.html 
+sidebar: sidebar 
+keywords: Certificates Web Services Proxy, WSP certificates, 
+summary: Verwalten Sie Zertifikate mithilfe der Web Services Proxy-Konfigurationsdateien, über API-Befehle oder über die Unified Manager-Schnittstelle. 
+---
+= Verwalten von Sicherheit und Zertifikaten in Web Services Proxy
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Für die Sicherheit im Web Services Proxy können Sie eine SSL-Port-Bezeichnung angeben und Zertifikate verwalten. Zertifikate identifizieren Website-Eigentümer für sichere Verbindungen zwischen Clients und Servern.
+
+
+
+== Aktivieren Sie SSL
+
+Der Web Services Proxy verwendet Secure Sockets Layer (SSL) für die Sicherheit, die während der Installation aktiviert ist. Sie können die SSL-Portbezeichnung in der Datei wsconfig.xml ändern.
+
+.Schritte
+. Öffnen Sie die Datei wsconfig.xml unter:
++
+** (Windows) -- C:\Program Files\NetApp\SANtricity Web Services Proxy
+** (Linux) -- /opt/netapp/santricity_Web_Services_Proxy
+
+
+. Fügen Sie die SSL-Portnummer hinzu oder ändern Sie sie, ähnlich dem folgenden Beispiel:
++
+[listing]
+----
+<sslport clientauth="request">8443</sslport>
+----
+
+
+Wenn der Server mit konfiguriertem SSL gestartet wird, sucht der Server nach den KeyStore- und Truststore-Dateien.
+
+* Wenn der Server keinen Schlüsselspeicher findet, verwendet der Server die IP-Adresse der ersten erkannten nicht-Loopback-IPv4-Adresse, um einen Schlüsselspeicher zu generieren und anschließend ein selbstsigniertes Zertifikat zum Schlüsselspeicher hinzuzufügen.
+* Wenn der Server keinen Truststore findet oder der Truststore nicht angegeben wird, verwendet der Server den Schlüsselspeicher als Truststore.
+
+
+
+
+== Zertifikatvalidierung umgehen
+
+Um sichere Verbindungen zu unterstützen, überprüft der Web Services Proxy die Zertifikate der Speichersysteme`' anhand der eigenen vertrauenswürdigen Zertifikate. Bei Bedarf können Sie festlegen, dass der Proxy diese Validierung umgehen kann, bevor Sie eine Verbindung zu den Speichersystemen herstellen.
+
+.Bevor Sie beginnen
+* Alle Verbindungen des Storage-Systems müssen sicher sein.
+
+
+.Schritte
+. Öffnen Sie die Datei wsconfig.xml unter:
++
+** (Windows) -- C:\Program Files\NetApp\SANtricity Web Services Proxy
+** (Linux) -- /opt/netapp/santricity_Web_Services_Proxy
+
+
+. Eingabe `true` Im `trust.all.arrays` Eintrag, wie im Beispiel gezeigt:
++
+[listing]
+----
+<env key="trust.all.arrays">true</env>
+----
+. Speichern Sie die Datei.
+
+
+
+
+== Generieren und Importieren eines Host-Managementzertifikats
+
+Zertifikate identifizieren Website-Eigentümer für sichere Verbindungen zwischen Clients und Servern. Zum Generieren und Importieren von Zertifikatszertifikaten (Certificate Authority, CA) für das Hostsystem, auf dem der Web Services Proxy installiert ist, können Sie API-Endpunkte verwenden.
+
+Zum Verwalten von Zertifikaten für das Hostsystem führen Sie die folgenden Aufgaben mithilfe der API durch:
+
+* Erstellen Sie eine Zertifikatsignierungsanforderung (CSR) für das Hostsystem.
+* Senden Sie die CSR-Datei an eine CA, und warten Sie dann, bis sie Ihnen die Zertifikatdateien senden.
+* Importieren Sie die signierten Zertifikate in das Hostsystem.
+
+
+
+NOTE: Sie können Zertifikate auch in der Unified Manager-Oberfläche verwalten. Weitere Informationen finden Sie in der Online-Hilfe von Unified Manager.
+
+.Schritte
+. Melden Sie sich bei an link:install-login-task.html["Interaktive API-Dokumentation"].
+. Gehen Sie zum Dropdown-Menü oben rechts und wählen Sie dann *v2*.
+. Erweitern Sie den Link *Administration* und scrollen Sie nach unten zu den */Certificates* -Endpunkten.
+. CSR-Datei generieren:
++
+.. Wählen Sie *POST:/Zertifikate*, und wählen Sie dann *Probieren Sie es aus*.
++
+Der Webserver generiert ein selbstsigniertes Zertifikat erneut. Anschließend können Sie Informationen in die Felder eingeben, um den allgemeinen Namen, die Organisation, die Organisationseinheit, die alternative ID und andere Informationen zu definieren, die zur Generierung des CSR verwendet werden.
+
+.. Fügen Sie die erforderlichen Informationen im Fensterbereich *Beispielwerte* hinzu, um ein gültiges CA-Zertifikat zu erstellen, und führen Sie dann die Befehle aus.
++
+
+NOTE: Rufen Sie *POST:/Certificates* oder *POST:/Certificates/Reset* nicht wieder an, oder Sie müssen den CSR erneut generieren. Wenn Sie *POST:/Certificates* oder *POST:/Certificates/Reset* anrufen, generieren Sie ein neues selbstsigniertes Zertifikat mit einem neuen privaten Schlüssel. Wenn Sie einen CSR senden, der vor dem letzten Zurücksetzen des privaten Schlüssels auf dem Server generiert wurde, funktioniert das neue Sicherheitszertifikat nicht. Sie müssen einen neuen CSR erstellen und ein neues CA-Zertifikat anfordern.
+
+.. Führen Sie den Endpunkt *GET:/Certificates/Server* aus, um zu bestätigen, dass der aktuelle Zertifikatsstatus das selbstsignierte Zertifikat mit den Informationen ist, die vom Befehl *POST:/Certificates* hinzugefügt werden.
++
+Das Serverzertifikat (gekennzeichnet durch den Alias `jetty`) Ist an dieser Stelle noch selbstsigniert.
+
+.. Erweitern Sie den Endpunkt *POST:/Zertifikate/Export*, wählen Sie *Probieren Sie es aus*, geben Sie einen Dateinamen für die CSR-Datei ein und klicken Sie dann auf *Ausführen*.
+
+
+. Kopieren Sie die, und fügen Sie sie ein `fileUrl` In eine neue Browser-Registerkarte, um die CSR-Datei herunterzuladen, und dann senden Sie die CSR-Datei an eine gültige CA, um eine neue Web-Server-Zertifikatskette anfordern.
+. Wenn die CA eine neue Zertifikatskette ausgibt, verwenden Sie ein Zertifikatmanager-Tool, um die Stammzertifikate, die Zwischenzertifikate und den Webserver auszulösen und diese dann auf den Web Services Proxy-Server zu importieren:
++
+.. Erweitern Sie den Endpunkt *POST:/sslconfig/Server* und wählen Sie *Try it out* aus.
+.. Geben Sie im Feld *Alias* einen Namen für das CA-Stammzertifikat ein.
+.. Wählen Sie im Feld *ersetzungMainServerCertificate* die Option *false* aus.
+.. Navigieren Sie zum neuen CA-Stammzertifikat, und wählen Sie es aus.
+.. Klicken Sie Auf *Ausführen*.
+.. Vergewissern Sie sich, dass der ZertifikatUpload erfolgreich war.
+.. Wiederholen Sie das Verfahren zum Hochladen des CA-Zertifikats für das Zertifizierungsstellenzertifikat.
+.. Wiederholen Sie das Verfahren zum Hochladen des Zertifikats für die neue Web-Server-Sicherheitszertifikatdatei. Mit Ausnahme dieses Schritts wählen Sie in der Dropdown-Liste *ersetzenMainServerCertificate* die Option *true* aus.
+.. Bestätigen Sie, dass der Import des Webserversicherheitszertifikats erfolgreich war.
+.. Um zu bestätigen, dass die neuen Root-, Zwischenprodukt- und Webserver-Zertifikate im Schlüsselspeicher verfügbar sind, führen Sie *GET:/Zertifikate/Server* aus.
+
+
+. Wählen und erweitern Sie den Endpunkt *POST:/Zertifikate/reload* und wählen Sie dann *Try it out* aus. Wenn Sie dazu aufgefordert werden, ob Sie beide Controller neu starten möchten oder nicht, wählen Sie *false* aus. („true“ gilt nur für Dual Array Controller.) Klicken Sie Auf *Ausführen*.
++
+Der Endpunkt */certificates/reload* gibt in der Regel eine erfolgreiche HTTP 202-Antwort zurück. Allerdings erzeugt der Reload des Web-Server Trustore und Keystore-Zertifikate eine Race-Bedingung zwischen dem API-Prozess und dem Web-Server-Zertifikat-Reload-Prozess. In seltenen Fällen kann das Reload des Webservers-Zertifikats die API-Verarbeitung überschlagen. In diesem Fall scheint das Neuladen zu fehlschlagen, obwohl es erfolgreich abgeschlossen wurde. In diesem Fall fahren Sie trotzdem mit dem nächsten Schritt fort. Wenn das Neuladen tatsächlich fehlgeschlagen ist, schlägt auch der nächste Schritt fehl.
+
+. Schließen Sie die aktuelle Browser-Sitzung am Web Services Proxy, öffnen Sie eine neue Browser-Sitzung und bestätigen Sie, dass eine neue sichere Browser-Verbindung zum Web Services Proxy hergestellt werden kann.
++
+Durch die Verwendung einer Inkognito- oder privaten Browsersitzung können Sie eine Verbindung zum Server öffnen, ohne gespeicherte Daten aus vorherigen Browsersitzungen zu verwenden.
+
+

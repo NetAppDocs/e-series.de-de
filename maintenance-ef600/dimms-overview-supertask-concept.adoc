@@ -1,0 +1,42 @@
+---
+permalink: maintenance-ef600/dimms-overview-supertask-concept.html 
+sidebar: sidebar 
+keywords: replace EF300 DIMM, replace EF600 DIMM, 
+summary: Prüfen Sie die Anforderungen und Überlegungen, bevor Sie EF300- oder EF600-DIMMs ersetzen. 
+---
+= Anforderungen für den Austausch eines EF300- oder EF600-DIMM
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Bevor Sie ein DIMM in einem EF300- oder EF600-Speicher-Array ersetzen, überprüfen Sie die Anforderungen und Überlegungen.
+
+Sie müssen ein DIMM ersetzen, wenn eine Speicherabweichung vorliegt oder ein ausgefallenes DIMM vorliegt. Überprüfen Sie die Konfiguration des EF300- oder EF600-Controllers, um sicherzustellen, dass die korrekte DIMM-Größe ersetzt wird.
+
+
+CAUTION: Beachten Sie, dass die DIMMs im Speicher-Array empfindlich sind; eine unsachgemäße Handhabung kann zu Schäden führen.
+
+Befolgen Sie die folgenden Regeln, um zu vermeiden, dass die DIMMs im Speicher-Array beschädigt werden:
+
+* Verhindern elektrostatischer Entladung (ESD):
++
+** Halten Sie das DIMM in der ESD-Tasche, bis Sie bereit sind, es zu installieren.
+** Öffnen Sie die ESD-Tasche von Hand oder schneiden Sie die Oberseite mit einer Schere ab. Setzen Sie kein Metallwerkzeug oder Messer in den ESD-Beutel.
+** Bewahren Sie den ESD-Beutel und alle Verpackungsmaterialien auf, falls Sie später ein DIMM zurückgeben müssen.
++
+
+CAUTION: Tragen Sie stets ein ESD-Handgelenkband, das an einer nicht lackierten Oberfläche am Gehäuse geerdet ist.
+
+
+
+* Behandeln Sie DIMMs sorgfältig:
++
+** Verwenden Sie beim Entfernen, Installieren oder Tragen eines DIMM immer zwei Hände.
+** Zwingen Sie ein DIMM niemals in ein Regal, und verwenden Sie einen sanften, festen Druck, um die Verriegelung vollständig zu einrasten.
+** Beim Versand von DIMMs stets zugelassene Verpackungen verwenden.
+
+
+* Magnetfelder vermeiden. Halten Sie DIMMs von magnetischen Geräten fern.
+

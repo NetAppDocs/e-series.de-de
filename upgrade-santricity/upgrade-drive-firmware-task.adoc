@@ -1,0 +1,207 @@
+---
+permalink: upgrade-santricity/upgrade-drive-firmware-task.html 
+sidebar: sidebar 
+keywords: E-Series, eseries, E2800, E5700, EF300, EF600, SANtricity, drive firmware, upgrade SANtricity, upgrade OS, upgrade E-Series, upgrade firmware, upgrading, upgrade IOM firmware, upgrade NVSRAM, upgrade controller 
+summary: Sie aktualisieren die Firmware Ihrer Laufwerke, um sicherzustellen, dass Sie über alle neuesten Funktionen und Fehlerbehebungen verfügen. 
+---
+= Aktualisieren Sie die Laufwerk-Firmware
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Befolgen Sie dieses Verfahren, um die Firmware Ihrer Laufwerke zu aktualisieren, sodass Sie über alle neuesten Funktionen und Fehlerbehebungen verfügen.
+
+
+
+== Schritt 1: Laden Sie Laufwerk-Firmware-Dateien
+
+In diesem Schritt rufen Sie die NetApp Support-Website auf, um die Laufwerk-Firmware-Dateien auf Ihren Management-Client herunterzuladen.
+
+.Schritte
+. Wählen Sie in SANtricity System Manager MENU:Support[Upgrade Center].
+. Klicken Sie unter Laufwerk-Firmware-Upgrade auf *NetApp Support* und melden Sie sich auf der NetApp Support Site an.
+. Klicken Sie auf der Support-Website auf die Registerkarte *Downloads* und wählen Sie dann *Festplattenlaufwerk & Firmware Matrix* aus.
+. Wählen Sie Festplatten-Firmware der E-Series und EF-Series aus.*
+. Befolgen Sie die Anweisungen auf dem Bildschirm, um die Dateien herunterzuladen.
+
+
+
+
+== Schritt 2: Starten Sie die Aktualisierung der Laufwerk-Firmware
+
+In diesem Schritt aktualisieren Sie die Firmware der Laufwerke.
+
+.Bevor Sie beginnen
+* Sichern Sie Ihre Daten mithilfe von Disk-to-Disk Backup, Volume-Kopien (in eine Volume-Gruppe, die nicht von der geplanten Firmware-Aktualisierung betroffen ist) oder einer Remote-Spiegelung.
+* Stellen Sie sicher, dass das Speicherarray den optimalen Status hat.
+* Stellen Sie sicher, dass alle Laufwerke den optimalen Status haben.
+* Vergewissern Sie sich, dass auf dem Speicher-Array keine Konfigurationsänderungen ausgeführt werden.
+* Erkennen Sie, dass, wenn die Laufwerke nur zu einem Offline-Upgrade fähig sind, die I/O-Aktivität zu allen mit den Laufwerken verbundenen Volumes angehalten wird.
+
+
+.Schritte
+. Klicken Sie im System Manager Upgrade Center (Menü:Support[Upgrade Center]) im Abschnitt „Drive Firmware Upgrade“ auf *Start Upgrade*.
++
+Es wird ein Dialogfeld angezeigt, in dem die aktuell verwendeten Laufwerk-Firmware-Dateien aufgelistet werden.
+
+. Extrahieren Sie die Dateien, die Sie von der Support-Website heruntergeladen haben (entpacken).
+. Klicken Sie auf *Durchsuchen* und wählen Sie die neuen Laufwerk-Firmware-Dateien aus, die Sie von der Support-Website heruntergeladen haben.
++
+Die Firmware-Dateien des Laufwerks haben einen ähnlichen Dateinamen wie `D_HUC101212CSS600_30602291_MS01_2800_0002` Mit der Erweiterung von `.dlp`.
+
++
+Sie können bis zu vier Laufwerk-Firmware-Dateien auswählen, jeweils eine. Wenn mehrere Firmware-Dateien eines Laufwerks mit demselben Laufwerk kompatibel sind, wird ein Dateikonflikt angezeigt. Legen Sie fest, welche Laufwerk-Firmware-Datei Sie für das Upgrade verwenden möchten, und entfernen Sie die andere.
+
+. Klicken Sie Auf *Weiter*.
++
+Das Dialogfeld Laufwerke auswählen wird angezeigt, in dem die Laufwerke aufgeführt werden, die Sie mit den ausgewählten Dateien aktualisieren können.
+
++
+Es werden nur kompatible Laufwerke angezeigt.
+
++
+Die ausgewählte Firmware für das Laufwerk wird im Informationsbereich *vorgeschlagene Firmware* angezeigt. Wenn Sie die Firmware ändern müssen, klicken Sie auf *Zurück*, um zum vorherigen Dialogfeld zurückzukehren.
+
+. Wählen Sie die Art des Upgrades aus, die Sie durchführen möchten:
++
+** *Online (Standard)* -- zeigt die Laufwerke, die einen Firmware-Download unterstützen können _während das Speicher-Array I/O_ verarbeitet. Bei Auswahl dieser Upgrade-Methode müssen Sie die I/O-Vorgänge der zugehörigen Volumes, die diese Laufwerke verwenden, nicht anhalten. Diese Laufwerke werden nacheinander aktualisiert, während das Storage-Array I/O-Operationen zu diesen Laufwerken verarbeitet.
+** *Offline (parallel)* -- zeigt die Laufwerke an, die einen Firmware-Download unterstützen können _nur während alle I/O-Aktivitäten angehalten sind_ auf beliebigen Volumes, die die Laufwerke verwenden. Bei Auswahl dieser Upgrade-Methode müssen Sie alle I/O-Aktivitäten auf Volumes anhalten, die die Laufwerke verwenden, die Sie aktualisieren. Laufwerke, die keine Redundanz aufweisen, müssen als Offline-Betrieb verarbeitet werden. Diese Anforderung umfasst alle Laufwerke, die mit SSD-Cache, eine RAID 0-Volume-Gruppe oder einen beliebigen Pool oder eine herabgestuften Volume-Gruppe verbunden sind. Das Offline-Upgrade (parallel) ist in der Regel schneller als die Online-Methode (Standard).
+
+
+. Wählen Sie in der ersten Spalte der Tabelle das Laufwerk oder die Laufwerke aus, die aktualisiert werden sollen.
+. Klicken Sie auf *Start* und bestätigen Sie, dass Sie den Vorgang ausführen möchten.
++
+Wenn Sie das Upgrade beenden möchten, klicken Sie auf *Stop*. Alle derzeit ausgeführten Firmware-Downloads abgeschlossen. Alle nicht gestarteten Firmware-Downloads werden abgebrochen.
+
++
+
+CAUTION: Das Anhalten der Laufwerk-Firmware-Aktualisierung kann zu Datenverlust oder nicht verfügbaren Laufwerken führen.
+
+. (Optional) um eine Liste der aktualisierten Versionen anzuzeigen, klicken Sie auf *Protokoll speichern*.
++
+Die Datei wird im Ordner Downloads für Ihren Browser mit dem Namen gespeichert `drive_upgrade_log-timestamp.txt`.
+
+. Wenn während des Aktualisierungsvorgangs eines der folgenden Fehler auftritt, ergreifen Sie die entsprechende empfohlene Maßnahme.
++
+|===
+| Wenn dieser Fehler beim Herunterladen der Firmware auftritt... | Führen Sie dann folgende Schritte aus... 
+
+
+ a| 
+** Ausgefallene zugewiesene Laufwerke
+
+ a| 
+Ein Grund für den Fehler könnte sein, dass das Laufwerk nicht über die entsprechende Signatur verfügt. Stellen Sie sicher, dass es sich bei dem betroffenen Laufwerk um ein autorisiertes Laufwerk handelt. Weitere Informationen erhalten Sie vom technischen Support.
+
+Stellen Sie beim Austausch eines Laufwerks sicher, dass das Ersatzlaufwerk eine Kapazität hat, die der des ausgefallenen Laufwerks entspricht oder größer ist als das ausgefallene Laufwerk, das Sie ersetzen.
+
+Sie können das ausgefallene Laufwerk ersetzen, während das Speicher-Array I/O-Vorgänge erhält
+
+
+
+ a| 
+Prüfen Sie das Speicher-Array
+ a| 
+** Stellen Sie sicher, dass jedem Controller eine IP-Adresse zugewiesen wurde.
+** Stellen Sie sicher, dass alle an den Controller angeschlossenen Kabel nicht beschädigt sind.
+** Stellen Sie sicher, dass alle Kabel fest angeschlossen sind.
+
+
+
+
+ a| 
+Integrierte Hot-Spare-Laufwerke
+ a| 
+Diese Fehlerbedingung muss korrigiert werden, bevor Sie die Firmware aktualisieren können. Starten Sie System Manager und beheben Sie das Problem mit dem Recovery Guru.
+
+
+
+ a| 
+Unvollständige Volume-Gruppen
+ a| 
+Wenn eine oder mehrere Volume-Gruppen oder Disk Pools unvollständig sind, müssen Sie diese Fehlerbedingung korrigieren, bevor Sie die Firmware aktualisieren können. Starten Sie System Manager und beheben Sie das Problem mit dem Recovery Guru.
+
+
+
+ a| 
+Exklusive Vorgänge (nicht für Medien-/Paritäts-Scan im Hintergrund), die derzeit auf Volume-Gruppen ausgeführt werden
+ a| 
+Wenn ein oder mehrere exklusive Vorgänge ausgeführt werden, müssen die Vorgänge abgeschlossen sein, bevor die Firmware aktualisiert werden kann. Überwachen Sie den Fortschritt des Betriebs mit System Manager.
+
+
+
+ a| 
+Fehlende Volumes
+ a| 
+Sie müssen den fehlenden Datenträgerzustand korrigieren, bevor die Firmware aktualisiert werden kann. Starten Sie System Manager und beheben Sie das Problem mit dem Recovery Guru.
+
+
+
+ a| 
+Beide Controller befinden sich in einem anderen Zustand als optimal
+ a| 
+Einer der Controller des Storage Arrays muss Aufmerksamkeit schenken. Diese Bedingung muss korrigiert werden, bevor die Firmware aktualisiert werden kann. Starten Sie System Manager und beheben Sie das Problem mit dem Recovery Guru.
+
+
+
+ a| 
+Falsche Informationen zur Speicherpartition zwischen Controller-Objektgrafiken
+ a| 
+Beim Validieren der Daten auf den Controllern ist ein Fehler aufgetreten. Wenden Sie sich an den technischen Support, um dieses Problem zu lösen.
+
+
+
+ a| 
+Die SPM-Überprüfung des Datenbank-Controllers schlägt fehl
+ a| 
+Auf einem Controller ist ein Fehler bei der Zuordnung von Speicherpartitionen zur Datenbank aufgetreten. Wenden Sie sich an den technischen Support, um dieses Problem zu lösen.
+
+
+
+ a| 
+Überprüfung der Konfigurationsdatenbank (sofern von der Controller-Version des Speicherarrays unterstützt)
+ a| 
+Auf einem Controller ist ein Fehler in der Konfigurationsdatenbank aufgetreten. Wenden Sie sich an den technischen Support, um dieses Problem zu lösen.
+
+
+
+ a| 
+MEL-bezogene Prüfungen
+ a| 
+Wenden Sie sich an den technischen Support, um dieses Problem zu lösen.
+
+
+
+ a| 
+In den letzten 7 Tagen wurden mehr als 10 DDE-Informations- oder kritische MEL-Ereignisse gemeldet
+ a| 
+Wenden Sie sich an den technischen Support, um dieses Problem zu lösen.
+
+
+
+ a| 
+In den letzten 7 Tagen wurden mehr als 2 Seiten 2C kritische MEL-Ereignisse gemeldet
+ a| 
+Wenden Sie sich an den technischen Support, um dieses Problem zu lösen.
+
+
+
+ a| 
+In den letzten 7 Tagen wurden mehr als 2 heruntergestuften Drive Channel-kritische MEL-Ereignisse gemeldet
+ a| 
+Wenden Sie sich an den technischen Support, um dieses Problem zu lösen.
+
+
+
+ a| 
+Mehr als 4 kritische MEL-Einträge in den letzten 7 Tagen
+ a| 
+Wenden Sie sich an den technischen Support, um dieses Problem zu lösen.
+
+|===
+
+
+Die Aktualisierung der Laufwerk-Firmware ist abgeschlossen. Sie können den normalen Betrieb fortsetzen.

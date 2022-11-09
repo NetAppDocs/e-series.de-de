@@ -1,0 +1,33 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/vc-olh-rename-storage-array-group.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
+summary: Ändern Sie den Namen einer Speicherarraygruppe, wenn der aktuelle Name nicht mehr aussagekräftig oder zutreffend ist. 
+---
+= Benennen Sie die Speicherarray-Gruppe um
+:hardbreaks:
+:allow-uri-read: 
+:experimental: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Sie können den Namen einer Speicherarraygruppe ändern, wenn der aktuelle Name nicht mehr aussagekräftig oder zutreffend ist.
+
+Berücksichtigen Sie diese Richtlinien bitte.
+
+* Ein Name kann aus Buchstaben, Zahlen und den Sonderzeichen Unterstrich (_), Bindestrich (-) und Pfund (#) bestehen. Wenn Sie andere Zeichen auswählen, wird eine Fehlermeldung angezeigt. Sie werden aufgefordert, einen anderen Namen auszuwählen.
+* Beschränken Sie den Namen auf 30 Zeichen. Alle führenden und nachgestellten Leerzeichen im Namen werden gelöscht.
+* Verwenden Sie einen eindeutigen, aussagekräftigen Namen, der leicht zu verstehen und zu merken ist.
+* Vermeiden Sie beliebige Namen oder Namen, die in Zukunft schnell ihre Bedeutung verlieren würden.
+
+
+.Schritte
+. Wählen Sie in der Hauptansicht *Verwalten* aus, und wählen Sie dann die Speicherarray-Gruppe aus, die Sie umbenennen möchten.
+. Wählen Sie Menü:Gruppen verwalten[Speicherarray-Gruppe umbenennen].
+. Geben Sie im Feld *Gruppenname* einen neuen Namen für die Gruppe ein.
+. Klicken Sie Auf *Umbenennen*.
+

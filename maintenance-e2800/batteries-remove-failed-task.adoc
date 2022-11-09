@@ -1,0 +1,49 @@
+---
+permalink: maintenance-e2800/batteries-remove-failed-task.html 
+sidebar: sidebar 
+keywords: E2800 battery fail, E2800 battery, E2800 battery replacement, replace E2800 battery, replacing E2800 battery, E2800, E-Series, eseries 
+summary: Nachdem Sie den Controller-Behälter aus dem Controller-Regal entfernt haben, können Sie den Akku entfernen. 
+---
+= Entfernen Sie den ausgefallenen E2800-Akku
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Nachdem Sie den Controller-Behälter aus dem Controller-Regal entfernt haben, können Sie den Akku entfernen.
+
+.Schritte
+. Entfernen Sie die Abdeckung des Reglerkanisters, indem Sie die Taste nach unten drücken und die Abdeckung abnehmen.
+. Vergewissern Sie sich, dass die grüne LED im Controller (zwischen Akku und DIMMs) aus ist.
++
+Wenn diese grüne LED leuchtet, wird der Controller weiterhin mit Strom versorgt. Sie müssen warten, bis diese LED erlischt, bevor Sie Komponenten entfernen.
+
++
+image::../media/28_dwg_e2800_internal_cache_active_led_maint-e2800.gif[28 DWG e2800 interner Cache, aktiver LED maint e2800]
+
++
+*(1)* _Interner Cache Aktiv_
+
++
+*(2)* _Akku_
+
+. Suchen Sie den blauen Freigabehebel für die Batterie.
+. Entriegeln Sie den Akku, indem Sie den Freigabehebel nach unten und vom Controller-Behälter wegdrücken.
++
+image::../media/28_dwg_e2800_remove_battery_maint-e2800.gif[28 m e2800 Batterie-Nr. e2800 entfernen]
+
++
+*(1)* _Entriegelung der Batterie_
+
++
+*(2)* _Akku_
+
+. Heben Sie den Akku an, und schieben Sie ihn aus dem Controller-Behälter.
+. Befolgen Sie die für Ihren Standort geeigneten Verfahren, um den defekten Akku zu recyceln oder zu entsorgen.
++
+
+CAUTION: Um die International Air Transport Association (IATA) Bestimmungen zu erfüllen, dürfen Sie nur dann eine Lithiumbatterie mit Luft versenden, wenn sie im Regal des Regals installiert ist.
+
+. Gehen Sie zu link:batteries-install-new-task.html["Installieren Sie den neuen Akku"].
+

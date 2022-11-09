@@ -1,0 +1,33 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/vc-olh-reset-management-certificates.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
+summary: Zurücksetzen des Managementzertifikats auf den ursprünglichen, werkseitig selbstsignierten Status 
+---
+= Managementzertifikate zurücksetzen
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Für das Managementsystem, das das Storage Plugin für vCenter hostet, können Sie das Managementzertifikat in den ursprünglichen, werkseitig selbstsignierten Zustand zurücksetzen.
+
+Mit dieser Aufgabe wird das aktuelle Management-Zertifikat aus dem Hostsystem gelöscht, auf dem das Storage Plugin für vCenter ausgeführt wird. Nach dem Zurücksetzen des Zertifikats wird das Host-System auf das selbstsignierte Zertifikat zurückgesetzt.
+
+.Schritte
+. Wählen Sie *Zertifikatverwaltung*.
+. Wählen Sie auf der Registerkarte *Verwaltung* die Option *Zurücksetzen*.
++
+Das Dialogfeld „Zertifikat zurücksetzen bestätigen“ wird geöffnet.
+
+. Geben Sie Reset in das Feld ein, und klicken Sie dann auf *Zurücksetzen*.
++
+Nach der Aktualisierung Ihres Browsers kann der Browser den Zugriff auf die Zielseite blockieren und melden, dass die Website HTTP Strict Transport Security verwendet. Diese Bedingung tritt auf, wenn Sie wieder auf selbstsignierte Zertifikate wechseln. Um die Bedingung zu löschen, die den Zugriff auf das Ziel blockiert, müssen Sie die Browserdaten aus dem Browser löschen.
+
+
+
+Das System setzt auf die Verwendung des selbstsignierten Zertifikats des Servers zurück. Das System fordert Benutzer daher auf, das selbstsignierte Zertifikat für ihre Sitzungen manuell anzunehmen.

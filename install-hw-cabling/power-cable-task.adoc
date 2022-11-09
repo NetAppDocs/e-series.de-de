@@ -1,0 +1,25 @@
+---
+permalink: install-hw-cabling/power-cable-task.html 
+sidebar: sidebar 
+keywords: cabling, cables, power cable, power cabling, power supply cabling, E-Series, eseries, E2800, E5700, EF300, EF600, DE212C, DE224C, DE460C 
+summary: Schließen Sie die Netzteile der einzelnen Komponenten an separate Stromkreise an. 
+---
+= Netzkabel
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie müssen die Netzteile jeder Komponente an getrennte Stromkreise anschließen.
+
+.Bevor Sie beginnen
+* Sie haben bestätigt, dass Ihr Standort die nötige Leistung liefert.
+* Die beiden Netzschalter an den beiden Shelf-Netzteilen müssen ausgeschaltet sein.
+
+
+Die Stromversorgung des Storage-Systems muss die Anforderungen an das neue Festplatten-Shelf erfüllen. Informationen zum Stromverbrauch Ihres Storage-Systems finden Sie im https://hwu.netapp.com/Controller/Index?platformTypeId=2357027["Hardware Universe"^].
+
+.Schritt
+. Verbinden Sie die beiden Stromkabel für jedes Shelf mit verschiedenen Stromverteilungs-Einheiten (PDUs) im Schrank oder Rack.
+

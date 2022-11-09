@@ -1,0 +1,108 @@
+---
+permalink: config-vmware/overview-concept.html 
+sidebar: sidebar 
+keywords: express vmware configuration, software configuration, vmware host, E2800, E5700, EF300, EF600, E-Series, eseries 
+summary: Anforderungen zur Nutzung der Express-Methode zur Einrichtung eines E-Series Arrays und eines VMware Hosts prüfen 
+---
+= Voraussetzungen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Die VMware Express Methode basiert auf folgenden Annahmen:
+
+|===
+| Komponente | Voraussetzungen 
+
+
+ a| 
+Trennt
+ a| 
+* Sie haben zur Installation der Hardware die in den Controller-Shelfs enthaltene Installations- und Setup-Anleitung verwendet.
+* Sie haben Kabel zwischen den optionalen Laufwerk-Shelfs und den Controllern verbunden.
+* Sie haben das Storage-System mit Strom versorgt.
+* Sie haben alle anderen Hardware installiert (z. B. Management Station, Switches) und die notwendigen Verbindungen hergestellt.
+
+
+
+
+ a| 
+Host
+ a| 
+* Sie haben eine Verbindung zwischen dem Speichersystem und dem Daten-Host hergestellt.
+* Sie haben das Host-Betriebssystem installiert.
+* Sie nutzen VMware nicht als virtualisierten Gast.
+* Sie konfigurieren den Host der Daten (I/O-Attached) nicht für den Booten über das SAN.
+
+
+
+
+ a| 
+Storage Management Station
+ a| 
+* Sie verwenden ein 1-Gbit/s- oder schnelleres Managementnetzwerk.
+* Sie verwenden für die Verwaltung eine separate Station statt des (I/O-angeschlossenen) Host.
+* Sie verwenden ein Out-of-Band-Management, bei dem eine Storage-Management-Station Befehle über die Ethernet-Verbindungen zum Controller an das Storage-System sendet.
+* Sie haben die Management-Station mit demselben Subnetz wie die Storage-Management-Ports verbunden.
+
+
+
+
+ a| 
+IP-Adresse
+ a| 
+* Sie haben einen DHCP-Server installiert und konfiguriert.
+* Sie haben *noch nicht* eine Ethernet-Verbindung zwischen der Management Station und dem Speichersystem hergestellt.
+
+
+
+
+ a| 
+Storage-Bereitstellung
+ a| 
+* Freigegebene Volumes werden nicht verwendet.
+* Sie erstellen Pools statt Volume-Gruppen.
+
+
+
+
+ a| 
+Protokoll FC
+ a| 
+* Sie haben alle Host-seitigen FC-Verbindungen und aktiviertes Switch-Zoning vorgenommen.
+* Sie verwenden von NetApp unterstützte FC HBAs und Switches.
+* Sie verwenden den FC-HBA-Treiber und die in aufgeführten Firmware-Versionen http://mysupport.netapp.com/matrix["NetApp Interoperabilitäts-Matrix-Tool"^].
+
+
+
+
+ a| 
+Protokoll: NVMe over Fibre Channel
+ a| 
+* Sie haben alle Host-seitigen FC-Verbindungen und aktiviertes Switch-Zoning vorgenommen.
+* Sie verwenden von NetApp unterstützte FC HBAs und Switches.
+* Sie verwenden den FC-HBA-Treiber und die in aufgeführten Firmware-Versionen http://mysupport.netapp.com/matrix["NetApp Interoperabilitäts-Matrix-Tool"^].
+
+
+
+
+ a| 
+Protokoll: ISCSI
+ a| 
+* Sie verwenden Ethernet-Switches, die iSCSI-Datenverkehr transportieren können.
+* Sie haben die Ethernet-Switches gemäß der Empfehlung des Anbieters für iSCSI konfiguriert.
+
+
+
+
+ a| 
+Protokoll SAS
+ a| 
+* Sie verwenden von NetApp unterstützte SAS HBAs.
+* Sie verwenden den SAS-HBA-Treiber und die in aufgeführten Firmware-Versionen http://mysupport.netapp.com/matrix["NetApp Interoperabilitäts-Matrix-Tool"^].
+
+
+|===
+Falls diese Annahmen nicht für Ihre Installation geeignet sind oder wenn Sie mehr konzeptionelle Hintergrundinformationen wünschen, lesen Sie den folgenden technischen Bericht: https://www.netapp.com/us/media/tr-4789.pdf["VMware Konfigurationshandbuch für E-Series SANtricity iSCSI Integration mit ESXi 6.X"^]

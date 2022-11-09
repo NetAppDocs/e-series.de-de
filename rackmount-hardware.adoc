@@ -1,0 +1,41 @@
+---
+sidebar: sidebar 
+permalink: rackmount-hardware.html 
+keywords: rackmount, rack-mount, install in rack, rails 
+summary: Montieren Sie die Hardware als Rack. 
+---
+= Rack-montierte Hardware
+:allow-uri-read: 
+
+
+[role="lead"]
+Verwenden Sie die folgenden Links, um auf die Dokumentation zuzugreifen, die beschreibt, wie die Rackmontage-Hardware installiert wird.
+
+
+
+== Verstellbare Stützschienen
+
+Datenzugriff https://mysupport.netapp.com/ecm/ecm_download_file/ECMP1652045["Einbau von verstellbaren Stützschienen"^] Zum Installieren eines Controller-Laufwerksfachs oder eines Laufwerksfachs, das separat geliefert wurde (nicht bereits im Rack installiert), Dieses Verfahren gilt für die folgenden 2U (9 cm oder 3.5 Zoll) Fächer:
+
+* DE1600 oder DE5600
+* E2612 oder E2624
+* E5412, E5424, E5512 ODER E5524
+
+
+
+
+== Rack mit zwei Höheneinheiten – 2 HE
+
+Datenzugriff https://mysupport.netapp.com/ecm/ecm_download_file/ECMM1280302["Installieren von 2-HE-Geräten in einem Rack mit zwei Säulen"^].
+
+
+
+== Rack oder Schrank mit vier Säulen – 2 HE
+
+Datenzugriff https://mysupport.netapp.com/ecm/ecm_download_file/ECMLP2484194["Installieren eines 2-HE-Gehäuses mit 12 Laufwerken in einem Rack oder Schrank mit vier Säulen"^].
+
+
+
+== Vierpolige-Rack – SuperRail
+
+Datenzugriff https://docs.netapp.com/us-en/ontap-systems/platform-supplemental/superrail-install.html["Installation von SuperRail in einem 4-Säulen-Rack (DE224C/DE460C Shelfs)"^].

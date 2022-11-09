@@ -1,0 +1,291 @@
+---
+permalink: maintenance-ef600/hics-upgrade-intro.html 
+sidebar: sidebar 
+keywords: upgrade EF300 HIC, upgrade EF600 HIC, increase host ports, change host protocol 
+summary: 'Sie aktualisieren eine Host Interface Card (HIC), um die Anzahl der Host Ports zu erhöhen oder Host-Protokolle zu ändern.' 
+---
+= Upgrade der EF300 oder EF600 Host-Schnittstellenkarte (HIC)
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können die Host-Schnittstellenkarten (HIC) aktualisieren, um die Anzahl der Host-Ports zu erhöhen oder Host-Protokolle zu ändern.
+
+.Über diese Aufgabe
+* Wenn Sie HIC-Upgrades durchführen, müssen Sie das Storage-Array ausschalten, die HICs aktualisieren und die Stromversorgung neu installieren.
+* Wenn Sie HICs in einem EF300 oder EF600 Controller aktualisieren, wiederholen Sie alle Schritte, um den zweiten Controller zu entfernen, die HICs des zweiten Controllers zu aktualisieren und den zweiten Controller neu zu installieren, bevor Sie den Strom an das Controller Shelf anschließen.
+
+
+.Bevor Sie beginnen
+* Prüfen link:hics-overview-supertask-concept.html["Anforderungen für EF300- oder EF600 HIC-Upgrades"].
+* Planen Sie für dieses Verfahren ein Wartungsfenster zur Ausfallzeit. Sie können erst nach erfolgreichem Abschluss dieses Verfahrens auf Daten im Speicher-Array zugreifen. Da beide Controller beim Einschalten die gleiche HIC-Konfiguration aufweisen müssen, muss beim Installieren der HICs die Stromversorgung ausgeschaltet sein.
+
+
+.Was Sie und#8217;ll benötigen
+* Zwei HICs, die mit Ihren Controllern kompatibel sind.
+* Ein ESD-Armband, oder Sie haben andere antistatische Vorsichtsmaßnahmen getroffen.
+* Ein flacher, statischer freier Arbeitsbereich.
+* Etiketten, um jedes Kabel zu identifizieren, das mit dem Controller-Behälter verbunden ist.
+* A #1 Kreuzschlitzschraubendreher.
+* Eine Management Station mit einem Browser, der für den Controller auf den SANtricity System Manager zugreifen kann. (Zeigen Sie zum Öffnen der System Manager-Schnittstelle den Domain-Namen oder die IP-Adresse des Controllers im Browser.)
+
+
+
+CAUTION: *Möglicher Verlust des Datenzugriffs* -- Installieren Sie nie eine HIC in einem EF300 oder EF600 Controller-Behälter, wenn diese HIC für einen anderen E-Series Controller entwickelt wurde. Zudem müssen sowohl die Controller als auch beide HICs identisch sein. Wenn nicht kompatible oder nicht übereinstimmende HICs vorhanden sind, werden die Controller gesperrt, wenn Sie Strom verwenden.
+
+
+
+== Schritt 1: Platzieren Sie das Controller-Shelf offline
+
+Platzieren Sie das Controller-Shelf offline, damit Sie die HICs sicher aktualisieren können.
+
+.Schritte
+. Stellen Sie auf der Startseite des SANtricity-System-Managers sicher, dass das Speicher-Array den optimalen Status hat.
++
+Wenn der Status nicht optimal lautet, verwenden Sie den Recovery Guru oder wenden Sie sich an den technischen Support, um das Problem zu lösen. Fahren Sie mit diesem Verfahren nicht fort.
+
+. Sichern Sie die Konfigurationsdatenbank des Storage-Arrays mit SANtricity System Manager.
++
+Wenn beim Entfernen eines Controllers ein Problem auftritt, können Sie die gespeicherte Datei verwenden, um Ihre Konfiguration wiederherzustellen. Das System speichert den aktuellen Status der RAID-Konfigurationsdatenbank, die alle Daten für Volume-Gruppen und Festplatten-Pools auf dem Controller enthält.
+
++
+** Über System Manager:
++
+... Wählen Sie MENU:Support[Support Center > Diagnose].
+... Wählen Sie *Konfigurationsdaten Erfassen*.
+... Klicken Sie Auf *Collect*.
++
+Die Datei wird im Ordner Downloads für Ihren Browser mit dem Namen *configurationData-<arrayName>-<dateTime>.7z* gespeichert.
+
+
+
+
+
+. Vergewissern Sie sich, dass zwischen dem Storage-Array und allen verbundenen Hosts keine I/O-Vorgänge stattfinden. Sie können beispielsweise die folgenden Schritte durchführen:
++
+** Beenden Sie alle Prozesse, die die LUNs umfassen, die den Hosts vom Storage zugeordnet sind.
+** Stellen Sie sicher, dass keine Applikationen Daten auf LUNs schreiben, die vom Storage den Hosts zugeordnet sind.
+** Heben Sie die Bereitstellung aller Dateisysteme auf, die mit den Volumes im Array verbunden sind, auf.
++
+
+NOTE: Die genauen Schritte zur Stoerung von Host-I/O-Vorgängen hängen vom Host-Betriebssystem und der Konfiguration ab, die den Umfang dieser Anweisungen übersteigen. Wenn Sie nicht sicher sind, wie Sie I/O-Vorgänge für Hosts in Ihrer Umgebung anhalten, sollten Sie das Herunterfahren des Hosts in Betracht ziehen.
+
++
+
+CAUTION: *Möglicher Datenverlust* -- Wenn Sie diesen Vorgang während der I/O-Vorgänge fortsetzen, kann die Host-Anwendung den Zugriff auf die Daten verlieren, da der Speicher nicht zugänglich ist.
+
+
+
+. Warten Sie, bis alle Daten im Cache-Speicher auf die Laufwerke geschrieben werden.
++
+Die grüne LED „Cache aktiv“ auf der Rückseite jedes Controllers leuchtet, wenn die Daten im Cache auf die Laufwerke geschrieben werden müssen. Sie müssen warten, bis diese LED ausgeschaltet ist.
+
+. Wählen Sie auf der Startseite des SANtricity System Managers die Option *Vorgänge in Bearbeitung anzeigen*. Warten Sie, bis alle Vorgänge abgeschlossen sind, bevor Sie mit dem nächsten Schritt fortfahren.
+. Schalten Sie das Controller-Shelf aus.
++
+.. Legen Sie beide Netzkabel vom Controller-Shelf ab und ziehen Sie sie ab.
+.. Warten Sie, bis alle LEDs am Controller-Shelf ausgeschaltet sind.
+
+
+
+
+
+
+== Schritt 2: Controller-Behälter entfernen
+
+Entfernen Sie den Controller-Behälter, damit Sie ein Upgrade der neuen HIC durchführen können.
+
+.Schritte
+. Beschriften Sie jedes Kabel, das am Controller-Behälter befestigt ist.
+. Trennen Sie alle Kabel vom Controller-Behälter.
++
+
+CAUTION: Um eine verminderte Leistung zu vermeiden, dürfen die Kabel nicht verdreht, gefaltet, gequetscht oder treten.
+
+. Wenn die HIC-Ports SFP+-Transceiver verwenden, entfernen Sie sie.
++
+Je nachdem, auf welche Art von HIC Sie ein Upgrade durchführen, können Sie diese SFPs wiederverwenden.
+
+. Vergewissern Sie sich, dass die LED Cache Active auf der Rückseite des Controllers ausgeschaltet ist.
+. Drücken Sie die Griffe auf beiden Seiten des Controllers, und ziehen Sie sie nach hinten, bis sie sich aus dem Shelf lösen.
++
+image::../media/remove_controller_5.png[Controller 5 ausbauen]
+
+. Schieben Sie den Controller-Behälter mit zwei Händen und den Griffen aus dem Regal. Wenn sich die Vorderseite des Controllers nicht im Gehäuse befindet, ziehen Sie sie mit zwei Händen vollständig heraus.
++
+
+CAUTION: Verwenden Sie immer zwei Hände, um das Gewicht eines Reglerkanisters zu unterstützen.
+
++
+image::../media/remove_controller_6.png[Controller 6 ausbauen]
+
+. Setzen Sie den Steuerungsbehälter auf eine flache, statisch freie Oberfläche.
+
+
+
+
+== Schritt 3: Entfernen Sie die HIC
+
+Entfernen Sie die ursprüngliche HIC, sodass Sie sie durch eine aktualisierte HIC ersetzen können.
+
+.Schritte
+. Entfernen Sie die Abdeckung des Reglerkanisters, indem Sie die einzelne Rändelschraube lösen und den Deckel öffnen.
+. Stellen Sie sicher, dass die grüne LED im Controller aus ist.
++
+Wenn diese grüne LED leuchtet, wird der Controller weiterhin mit Strom versorgt. Sie müssen warten, bis diese LED erlischt, bevor Sie Komponenten entfernen.
+
+. Entfernen Sie mit einem Kreuzschlitzschraubendreher die beiden Schrauben, mit denen die HIC-Frontplatte am Controller-Behälter befestigt ist.
++
+image::../media/hic_2.png[hic 2]
+
++
+
+NOTE: Das obige Bild ist ein Beispiel, das Aussehen Ihrer HIC kann sich unterscheiden.
+
+. Entfernen Sie die HIC-Frontplatte.
+. Lösen Sie mit den Fingern oder einem Kreuzschlitzschraubendreher die einzelne Rändelschraube, mit der die HIC an der Controllerkarte befestigt ist.
++
+image::../media/hic_3.png[hic 3]
+
++
+
+NOTE: Die HIC verfügt über drei Schraubpositionen auf der Oberseite, ist aber mit nur einer gesichert.
+
++
+
+NOTE: Das obige Bild ist ein Beispiel, das Aussehen Ihrer HIC kann sich unterscheiden.
+
+. Lösen Sie die HIC vorsichtig von der Controllerkarte, indem Sie die Karte nach oben und aus dem Controller heben.
++
+
+CAUTION: Achten Sie darauf, dass die Komponenten auf der Unterseite der HIC oder auf der Oberseite der Controller-Karte nicht verkratzen oder stoßen.
+
++
+image::../media/hic_4.png[hic 4]
+
++
+
+NOTE: Das obige Bild ist ein Beispiel, das Aussehen Ihrer HIC kann sich unterscheiden.
+
+. Legen Sie die HIC auf eine flache, statische Oberfläche.
+
+
+
+
+== Schritt 4: Aktualisieren Sie die HIC
+
+Nachdem Sie die alte HIC entfernt haben, installieren Sie die neue.
+
+
+CAUTION: *Möglicher Verlust des Datenzugriffs* -- Installieren Sie nie eine HIC in einem EF300 oder EF600 Controller-Behälter, wenn diese HIC für einen anderen E-Series Controller entwickelt wurde. Zudem müssen sowohl die Controller als auch beide HICs identisch sein. Wenn nicht kompatible oder nicht übereinstimmende HICs vorhanden sind, werden die Controller gesperrt, wenn Sie Strom verwenden.
+
+.Schritte
+. Packen Sie die neue HIC und die neue HIC-Frontplatte aus.
+. Richten Sie die einzelne Rändelschraube der HIC an den entsprechenden Löchern am Controller aus, und richten Sie den Anschluss unten auf der HIC-Schnittstelle an der Controller-Karte aus.
++
+Achten Sie darauf, dass die Komponenten auf der Unterseite der HIC oder auf der Oberseite der Controller-Karte nicht verkratzen oder stoßen.
+
++
+image::../media/hic_7.png[hic 7]
+
++
+
+NOTE: Das obige Bild ist ein Beispiel, das Aussehen Ihrer HIC kann sich unterscheiden.
+
+. Senken Sie die HIC vorsichtig ab, und setzen Sie den HIC-Anschluss ein, indem Sie vorsichtig auf die HIC drücken.
++
+
+CAUTION: *Mögliche Geräteschäden* -- vorsichtig sein, den goldenen Ribbon-Anschluss für die Controller-LEDs zwischen der HIC und der Daumenschraube nicht zu quetschen.
+
+. Ziehen Sie die HIC-Daumenschraube manuell fest.
++
+image::../media/hic_3.png[hic 3]
+
++
+
+NOTE: Das obige Bild ist ein Beispiel; das Aussehen Ihrer HIC kann sich unterscheiden.
+
++
+
+NOTE: Verwenden Sie keinen Schraubendreher, oder ziehen Sie die Schrauben möglicherweise zu fest.
+
+. Befestigen Sie mit einem #1 Kreuzschlitzschraubendreher die HIC-Frontplatte, die Sie aus der ursprünglichen HIC entfernt haben, mit den drei Schrauben.
+
+
+
+
+== Schritt 5: Controller-Behälter wieder einbauen
+
+Setzen Sie nach dem Upgrade der HIC den Controller-Behälter wieder in das Controller-Shelf ein.
+
+.Schritte
+. Senken Sie die Abdeckung am Controller-Behälter ab, und befestigen Sie die Daumenschraube.
+. Schieben Sie den Controller-Behälter vorsichtig ganz in das Reglerregal, während Sie die Controller-Griffe zusammendrücken.
++
+
+NOTE: Der Controller klickt hörbar, wenn er richtig in das Regal eingebaut ist.
+
++
+image::../media/remove_controller_7.png[Controller 7 ausbauen]
+
+. Installieren Sie die SFPs im neuen HIC, und schließen Sie alle Kabel wieder an. Wenn Sie mehr als ein Host-Protokoll verwenden, installieren Sie unbedingt die SFPs in den korrekten Host-Ports.
++
+Wenn Sie mehr als ein Host-Protokoll verwenden, installieren Sie unbedingt die SFPs in den korrekten Host-Ports.
+
+
+
+
+
+== Schritt 6: Führen Sie das HIC-Upgrade durch
+
+Platzieren Sie den Controller online, sammeln Sie Support-Daten und setzen Sie den Betrieb fort.
+
+.Schritte
+. Platzieren Sie den Controller in den Online-Modus
++
+.. Stromkabel anschließen.
+
+
+. Überprüfen Sie beim Booten des Controllers die Controller-LEDs.
++
+** Die gelbe Warn-LED leuchtet weiterhin.
+** Je nach Host-Schnittstelle leuchtet, blinkt oder leuchtet die LED für Host-Link möglicherweise nicht.
+
+
+. Wenn der Controller wieder online ist, bestätigen Sie, dass sein Status optimal lautet, und überprüfen Sie die Warn-LEDs für das Controller-Shelf.
++
+Wenn der Status nicht optimal ist oder eine der Warn-LEDs leuchtet, vergewissern Sie sich, dass alle Kabel richtig eingesetzt sind und der Controller-Behälter richtig installiert ist. Gegebenenfalls den Controller-Behälter ausbauen und wieder einbauen.
+
++
+
+NOTE: Wenden Sie sich an den technischen Support, wenn das Problem nicht gelöst werden kann.
+
+. Klicken Sie auf Menü:Hardware[Support > Upgrade Center], um sicherzustellen, dass die neueste Version des SANtricity-Betriebssystems installiert ist.
++
+Installieren Sie bei Bedarf die neueste Version.
+
+. Überprüfen Sie, ob alle Volumes an den bevorzugten Eigentümer zurückgegeben wurden.
++
+.. Wählen Sie Menü:Storage[Volumes]. Überprüfen Sie auf der Seite * All Volumes*, ob die Volumes an die bevorzugten Eigentümer verteilt werden. Wählen Sie MENU:Mehr[Eigentumsrechte ändern], um Volumeneigentümer anzuzeigen.
+.. Wenn alle Volumes Eigentum des bevorzugten Eigentümers sind, fahren Sie mit Schritt 6 fort.
+.. Wenn keines der Volumes zurückgegeben wird, müssen Sie die Volumes manuell zurückgeben. Wechseln Sie zum Menü:Mehr[Umverteilung von Volumes].
+.. Wenn nach der automatischen Verteilung oder manuellen Verteilung nur einige der Volumes an ihre bevorzugten Eigentümer zurückgegeben werden, muss der Recovery Guru auf Probleme mit der Host-Konnektivität prüfen.
+.. Wenn kein Recovery Guru zur Verfügung steht oder wenn Sie den Recovery-Guru-Schritten folgen, werden die Volumes immer noch nicht an ihren bevorzugten Besitzer zurückgegeben.
+
+
+. Support-Daten für Ihr Storage Array mit SANtricity System Manager erfassen
++
+.. Wählen Sie MENU:Support[Support Center > Diagnose].
+.. Wählen Sie *Support-Daten Erfassen* Aus.
+.. Klicken Sie Auf *Collect*.
++
+Die Datei wird im Ordner Downloads für Ihren Browser mit dem Namen *Support-Data.7z* gespeichert.
+
+
+
+
+
+Das Upgrade einer Host-Schnittstellenkarte in Ihrem Speicher-Array ist abgeschlossen. Sie können den normalen Betrieb fortsetzen.

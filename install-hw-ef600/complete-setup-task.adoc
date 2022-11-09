@@ -1,0 +1,197 @@
+---
+permalink: install-hw-ef600/complete-setup-task.html 
+sidebar: sidebar 
+keywords: EF300, EF600, installation, host cabling, direct-attach topology, fabric topology, System Manager connection, management host connection, port configuration, configuring ports, DHCP, static IP 
+summary: Sie verkabeln die Controller mit dem Netzwerk, um die Einrichtung und Konfiguration des Storage-Systems abzuschließen. 
+---
+= Vollständige Einrichtung und Konfiguration des Storage-Systems
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Erfahren Sie, wie Sie die Controller-Kabel mit Ihrem Netzwerk verbinden und dann das Setup und die Konfiguration abschließen.
+
+
+
+== Schritt: Verkabeln Sie die Daten-Hosts
+
+Verkabeln Sie das Storage-System gemäß Ihrer Netzwerktopologie.
+
+
+
+=== Option 1: Direct-Attached-Topologie
+
+Das folgende Beispiel zeigt die Verkabelung zu den Daten-Hosts mithilfe einer Direct-Attached-Topologie.
+
+|===
+
+
+ a| 
+image:../media/direct_topo.png[""]
+ a| 
+. Verbinden Sie jeden Host-Adapter direkt mit den Host-Ports auf den Controllern.
+
+
+|===
+
+
+=== Option 2: Fabric-Topologie
+
+Das folgende Beispiel zeigt die Verkabelung zu den Daten-Hosts mithilfe einer Fabric-Topologie.
+
+|===
+
+
+ a| 
+image:../media/fabric_topo.png[""]
+ a| 
+. Verbinden Sie jeden Host-Adapter direkt mit dem Switch.
+. Verbinden Sie jeden Switch direkt mit den Host Ports der Controller.
+
+
+|===
+
+
+== Schritt 2: Verbinden und Konfigurieren der Verwaltungsverbindung
+
+Sie können die Controller-Management-Ports mit einem DHCP-Server oder einer statischen IP-Adresse konfigurieren.
+
+
+
+=== Option 1: DHCP-Server
+
+Erfahren Sie, wie die Management-Ports mit einem DHCP-Server konfiguriert werden.
+
+.Bevor Sie beginnen
+* Konfigurieren Sie Ihren DHCP-Server so, dass für jeden Controller eine IP-Adresse, eine Subnetzmaske und eine Gateway-Adresse als permanentes Leasing zugeordnet werden.
+* Beziehen Sie die zugewiesenen IP-Adressen, die Sie verwenden werden, um eine Verbindung zum Storage-System vom Netzwerkadministrator herzustellen.
+
+
+.Schritte
+. Schließen Sie ein Ethernet-Kabel an den Management-Port jedes Controllers an, und verbinden Sie das andere Ende mit Ihrem Netzwerk.
++
+|===
+
+
+ a| 
+image:../media/cable_ethernet_inst-hw-ef600.png[""]
+ a| 
+RJ-45 Ethernet-Kabel (falls bestellt)
+
+|===
++
+|===
+
+
+ a| 
+Die folgende Abbildung zeigt ein Beispiel für den Standort des Management-Ports des Controllers (EF600):
+
+
+
+ a| 
+image:../media/ethernet_callout.png[""]
+
+|===
+. Öffnen Sie einen Browser, und stellen Sie eine Verbindung zum Storage-System mit einer der Controller-IP-Adressen her, die Sie vom Netzwerkadministrator bereitgestellt haben.
+
+
+
+
+=== Option 2: Statische IP-Adresse
+
+Erfahren Sie, wie die Management-Ports manuell konfiguriert werden können, indem Sie die IP-Adresse und die Subnetzmaske eingeben.
+
+.Bevor Sie beginnen
+* Ermitteln Sie die IP-Adresse der Controller`, die Subnetzmaske, die Gateway-Adresse und DNS- und NTP-Serverinformationen von Ihrem Netzwerkadministrator.
+* Stellen Sie sicher, dass der verwendete Laptop keine Netzwerkkonfiguration von einem DHCP-Server empfängt.
+
+
+.Schritte
+. Verbinden Sie den Management-Port von Controller A mit einem Ethernet-Kabel mit dem Ethernet-Port eines Laptops.
++
+
+NOTE: Controller A ist der obere Steuerungsbehälter, und Controller B ist der untere Steuerbehälter.
+
++
+|===
+
+
+ a| 
+image:../media/cable_ethernet_inst-hw-ef600.png[""]
+ a| 
+RJ-45 Ethernet-Kabel (falls bestellt)
+
+|===
++
+|===
+
+
+ a| 
+Die folgende Abbildung zeigt ein Beispiel für den Standort des Management-Ports des Controllers (EF600):
+
+
+
+ a| 
+image:../media/ethernet_callout.png[""]
+
+|===
+. Öffnen Sie einen Browser, und verwenden Sie die Standard-IP-Adresse (169.254.128.101), um eine Verbindung zum Controller herzustellen. Der Controller sendet ein selbstsigniertes Zertifikat zurück. Der Browser informiert Sie darüber, dass die Verbindung nicht sicher ist.
+. Befolgen Sie die Anweisungen des Browsers, um SANtricity System Manager zu starten.
++
+
+NOTE: Wenn Sie keine Verbindung herstellen können, überprüfen Sie, ob Sie keine Netzwerkkonfiguration von einem DHCP-Server erhalten.
+
+. Legen Sie das Kennwort des Speichersystems fest, um sich anzumelden.
+. Verwenden Sie die vom Netzwerkadministrator bereitgestellten Netzwerkeinstellungen im Assistenten * Netzwerkeinstellungen konfigurieren*, um die Netzwerkeinstellungen von Controller A zu konfigurieren, und wählen Sie dann *Fertig stellen* aus.
++
+
+NOTE: Da Sie die IP-Adresse zurücksetzen, verliert System Manager die Verbindung zum Controller.
+
+. Trennen Sie Ihren Laptop vom Speichersystem, und verbinden Sie den Managementport von Controller A mit dem Netzwerk.
+. Öffnen Sie einen Browser auf einem mit Ihrem Netzwerk verbundenen Computer, und geben Sie die neu konfigurierte IP-Adresse von Controller A ein.
++
+
+NOTE: Wenn die Verbindung zu Controller A unterbrochen wird, können Sie ein ethernet-Kabel mit Controller B verbinden, um die Verbindung mit Controller A über Controller B (169.254.128.102) wiederherzustellen.
+
+. Melden Sie sich mit dem zuvor festgelegten Passwort an.
++
+Der Assistent Netzwerkeinstellungen konfigurieren wird angezeigt.
+
+. Verwenden Sie die vom Netzwerkadministrator bereitgestellten Netzwerkeinstellungen im Assistenten * Netzwerkeinstellungen konfigurieren*, um die Netzwerkeinstellungen von Controller B zu konfigurieren, und wählen Sie dann *Fertig stellen* aus.
+. Verbinden Sie Controller B mit dem Netzwerk.
+. Überprüfen Sie die Netzwerkeinstellungen von Controller B, indem Sie die konfigurierte IP-Adresse von Controller B in einem Browser eingeben.
++
+
+NOTE: Wenn die Verbindung zu Controller B unterbrochen wird, können Sie Ihre zuvor validierte Verbindung zu Controller A verwenden, um die Verbindung mit Controller B über Controller A wiederherzustellen
+
+
+
+
+
+== Schritt 3: Storage-System konfigurieren
+
+Nachdem Sie die EF300- oder EF600-Hardware installiert haben, konfigurieren und verwalten Sie das Storage-System über die SANtricity Software.
+
+.Bevor Sie Beginnen
+* Konfigurieren Sie Ihre Management-Ports.
+* Überprüfen und notieren Sie Ihr Kennwort und Ihre IP-Adressen.
+
+
+.Schritte
+. Verbinden Sie den Controller mit einem Webbrowser.
+. Verwenden Sie den SANtricity System Manager, um das EF300- oder EF600 Storage-System zu verwalten. Weitere Informationen finden Sie in der Online-Hilfe von System Manager.
++
+|===
+
+
+ a| 
+image:../media/management_station_inst-hw-ef600_g2285.png[""]
+ a| 
+Verwenden Sie für den Zugriff auf System Manager dieselben IP-Adressen, die Sie zum Konfigurieren der Management-Ports verwendet haben.
+
+|===
+
+
+Wenn Sie Ihre EF300 für die SAS-Erweiterung verkabeln, lesen Sie link:../maintenance-ef600/index.html["Aufrechterhaltung der EF600 Hardware"] Für die Installation der SAS-Erweiterungskarte und der link:../install-hw-cabling/index.html["Verkabelung der E-Series Hardware"] Für SAS-Erweiterungskabel.

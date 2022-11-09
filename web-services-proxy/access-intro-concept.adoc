@@ -1,0 +1,228 @@
+---
+permalink: web-services-proxy/access-intro-concept.html 
+sidebar: sidebar 
+keywords: Web Services, WSP, roles WSP, user access WSP 
+summary: Sie können den Benutzerzugriff auf die Web Services-API und Unified Manager für Sicherheitszwecke verwalten. 
+---
+= Benutzerzugriff in Web Services Proxy verwalten
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können den Benutzerzugriff auf die Web Services-API und Unified Manager für Sicherheitszwecke verwalten.
+
+
+
+== Überblick über Zugriffsmanagement
+
+Zum Zugriffsmanagement gehören rollenbasierte Anmeldedaten, Passwortverschlüsselung, grundlegende Authentifizierung und LDAP-Integration.
+
+
+
+=== Rollenbasierter Zugriff
+
+Rollenbasierte Zugriffssteuerung (Role Based Access Control, RBAC) ordnet vordefinierte Benutzer Rollen zu. Jede Rolle gewährt Berechtigungen für eine bestimmte Funktionsebene.
+
+In der folgenden Tabelle werden die einzelnen Rollen beschrieben.
+
+|===
+| Rolle | Beschreibung 
+
+
+ a| 
+Sicherheit.admin
+ a| 
+SSL- und Zertifikatmanagement
+
+
+
+ a| 
+Storage.Administration
+ a| 
+Vollständiger Lese-/Schreibzugriff auf die Konfiguration des Storage-Systems.
+
+
+
+ a| 
+Storage.Monitor
+ a| 
+Schreibgeschützter Zugriff auf die Anzeige von Storage-Systemdaten.
+
+
+
+ a| 
+Support.Administration
+ a| 
+Zugriff auf alle Hardware-Ressourcen auf Storage-Systemen und Supportvorgänge, z. B. Abruf von AutoSupport (ASUP)
+
+|===
+Standardbenutzerkonten sind in der Datei users.properties definiert. Sie können Benutzerkonten ändern, indem Sie die Datei users.properties direkt ändern oder die Zugriffsverwaltungsfunktionen in Unified Manager verwenden.
+
+In der folgenden Tabelle sind die für den Web Services Proxy verfügbaren Benutzeranmeldungen aufgeführt.
+
+|===
+| Vordefinierte Benutzeranmeldung | Beschreibung 
+
+
+ a| 
+Admin
+ a| 
+Ein Superadministrator, der Zugriff auf alle Funktionen hat und alle Rollen enthält. Für Unified Manager müssen Sie das Passwort bei der ersten Anmeldung festlegen.
+
+
+
+ a| 
+Storage
+ a| 
+Der Administrator, der für die gesamte Storage-Provisionierung verantwortlich ist. Dieser Benutzer umfasst die folgenden Rollen: Storage.admin, Support.admin und Storage.Monitor. Dieses Konto wird deaktiviert, bis ein Kennwort festgelegt ist.
+
+
+
+ a| 
+Sicherheit
+ a| 
+Der für die Sicherheitskonfiguration verantwortliche Benutzer. Dieser Benutzer enthält die folgenden Rollen: Security.admin und Storage.Monitor. Dieses Konto wird deaktiviert, bis ein Kennwort festgelegt ist.
+
+
+
+ a| 
+Support
+ a| 
+Der Benutzer ist für Hardware-Ressourcen, Ausfalldaten und Firmware-Upgrades verantwortlich. Dieser Benutzer enthält die folgenden Rollen: Support.admin und Storage.Monitor. Dieses Konto wird deaktiviert, bis ein Kennwort festgelegt ist.
+
+
+
+ a| 
+Überwachen
+ a| 
+Ein Benutzer mit schreibgeschütztem Zugriff auf das System. Dieser Benutzer enthält nur die Rolle Storage.Monitor. Dieses Konto wird deaktiviert, bis ein Kennwort festgelegt ist.
+
+
+
+ a| 
+rw
+ a| 
+der rw-Benutzer (Lese/Schreib) umfasst die folgenden Rollen: Storage.admin, Support.admin und Storage.Monitor. Dieses Konto wird deaktiviert, bis ein Kennwort festgelegt ist.
+
+
+
+ a| 
+ro
+ a| 
+Der Benutzer ro (schreibgeschützt) enthält nur die Rolle „Storage.Monitor“. Dieses Konto wird deaktiviert, bis ein Kennwort festgelegt ist.
+
+|===
+
+
+=== Kennwortverschlüsselung
+
+Für jedes Passwort können Sie einen zusätzlichen Verschlüsselungsvorgang mit der vorhandenen SHA256-Kennwortkodierung anwenden. Bei diesem zusätzlichen Verschlüsselungsverfahren wird für jede SHA256-Hash-Verschlüsselung ein zufälliger Byte-Satz auf jedes Passwort (Salt) angewendet. Die SHA256-Verschlüsselung wird auf alle neu erstellten Passwörter angewendet.
+
+
+NOTE: Vor der Veröffentlichung von Web Services Proxy 3.0 wurden Passwörter nur über SHA256 Hashing verschlüsselt. Alle vorhandenen SHA256-Hash-only-verschlüsselten Passwörter behalten diese Codierung und sind weiterhin unter der Datei users.properties gültig. Allerdings sind SHA256-Hash-only-verschlüsselte Passwörter nicht so sicher wie die Passwörter mit gesalzter SHA256-Verschlüsselung.
+
+
+
+=== Grundlegende Authentifizierung
+
+Standardmäßig ist die Basisauthentifizierung aktiviert, was bedeutet, dass der Server eine grundlegende Authentifizierungsaufgabe zurückgibt. Diese Einstellung kann in der Datei wsconfig.xml geändert werden.
+
+
+
+=== LDAP
+
+Lightweight Directory Access Protocol (LDAP), ein Anwendungsprotokoll für den Zugriff auf verteilte Verzeichnisinformationsdienste und die Wartung, ist für den Web Services Proxy aktiviert. Die LDAP-Integration ermöglicht die Benutzerauthentifizierung und Zuordnung von Rollen zu Gruppen.
+
+Informationen zum Konfigurieren der LDAP-Funktionalität finden Sie in den Konfigurationsoptionen der Unified Manager-Schnittstelle oder im LDAP-Abschnitt der interaktiven API-Dokumentation.
+
+
+
+== Konfigurieren Sie den Benutzerzugriff
+
+Sie können den Benutzerzugriff verwalten, indem Sie zusätzliche Verschlüsselung auf Passwörter anwenden, grundlegende Authentifizierungsvorgaben festlegen und rollenbasierten Zugriff festlegen.
+
+
+
+=== Wenden Sie die zusätzliche Verschlüsselung auf Passwörter an
+
+Um die höchste Sicherheitsstufe zu erreichen, können Sie mithilfe der vorhandenen SHA256-Kennwortkodierung zusätzliche Verschlüsselung für Passwörter anwenden.
+
+Bei diesem zusätzlichen Verschlüsselungsverfahren wird für jede SHA256-Hash-Verschlüsselung ein zufälliger Byte-Satz auf jedes Passwort (Salt) angewendet. Die SHA256-Verschlüsselung wird auf alle neu erstellten Passwörter angewendet.
+
+.Schritte
+. Öffnen Sie die Datei users.properties unter:
++
+** (Windows) -- C:\Program Files\NetApp\SANtricity Web Services Proxy\Data\config
+** (Linux) -- /opt/netapp/santricity_Web_Services_Proxy/Daten/config
+
+
+. Geben Sie das verschlüsselte Kennwort als Klartext erneut ein.
+. Führen Sie die aus `securepasswds` Befehlszeilendienstprogramm zum Reverschlüsseln des Passworts oder einfach den Web Services Proxy neu starten. Dieses Dienstprogramm wird im Stamminstallationsverzeichnis für den Web Services Proxy installiert.
++
+
+NOTE: Alternativ können Sie lokale Benutzerpasswörter einfach salzen und hashen, wenn die Kennwortänderungen über Unified Manager vorgenommen werden.
+
+
+
+
+
+=== Konfigurieren Sie die grundlegende Authentifizierung
+
+Standardmäßig ist die Basisauthentifizierung aktiviert, was bedeutet, dass der Server eine grundlegende Authentifizierungsaufgabe zurückgibt. Sie können diese Einstellung bei Bedarf in der Datei wsconfig.xml ändern.
+
+. Öffnen Sie die Datei wsconfig.xml unter:
++
+** (Windows) -- C:\Program Files\NetApp\SANtricity Web Services Proxy
+** (Linux) -- /opt/netapp/santricity_Web_Services_Proxy
+
+
+. Ändern Sie die folgende Zeile in der Datei, indem Sie false (nicht aktiviert) oder true (aktiviert) angeben.
++
+Beispiel: `<env key="enable-basic-auth">true</env>`
+
+. Speichern Sie die Datei.
+. Starten Sie den Webserver-Dienst neu, damit die Änderung wirksam wird.
+
+
+
+
+=== Konfigurieren Sie den rollenbasierten Zugriff
+
+Um den Benutzerzugriff auf bestimmte Funktionen zu beschränken, können Sie ändern, welche Rollen für jedes Benutzerkonto angegeben sind.
+
+Der Web Services Proxy umfasst eine rollenbasierte Zugriffssteuerung (RBAC), in der Rollen vordefinierten Benutzern zugeordnet werden. Jede Rolle gewährt Berechtigungen für eine bestimmte Funktionsebene. Sie können die Rollen ändern, die Benutzerkonten zugewiesen sind, indem Sie die Datei users.properties direkt ändern.
+
+
+NOTE: Sie können Benutzerkonten auch über die Zugriffsverwaltung in Unified Manager ändern. Weitere Informationen finden Sie in der Online-Hilfe von Unified Manager.
+
+.Schritte
+. Öffnen Sie die Datei users.properties unter:
++
+** (Windows) -- C:\Program Files\NetApp\SANtricity Web Services Proxy\Data\config
+** (Linux) -- /opt/netapp/santricity_Web_Services_Proxy/Daten/config
+
+
+. Suchen Sie die Zeile für das zu ändernde Benutzerkonto (Speicherung, Sicherheit, Überwachung, Unterstützung, rw, Oder ro).
++
+
+NOTE: Ändern Sie den Admin-Benutzer nicht. Dies ist ein Superuser mit Zugriff auf alle Funktionen.
+
+. Fügen Sie die angegebenen Rollen nach Bedarf hinzu oder entfernen Sie sie.
++
+Hier einige Funktionen:
+
++
+** Security.admin -- SSL- und Zertifikatmanagement.
+** Storage.admin – vollständiger Lese-/Schreibzugriff auf die Konfiguration des Storage-Systems.
+** Storage.Monitor: Schreibgeschützter Zugriff zur Anzeige von Storage-Systemdaten
+** Support.admin – Zugriff auf alle Hardware-Ressourcen in Storage-Systemen und Supportvorgänge, z. B. Abruf von AutoSupport (ASUP)
++
+
+NOTE: Die Rolle „Storage.Monitor“ ist für alle Benutzer, einschließlich des Administrators, erforderlich.
+
+
+
+. Speichern Sie die Datei.
+

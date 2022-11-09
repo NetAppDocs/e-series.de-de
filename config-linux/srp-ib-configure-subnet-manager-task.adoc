@@ -1,0 +1,88 @@
+---
+permalink: config-linux/srp-ib-configure-subnet-manager-task.html 
+sidebar: sidebar 
+keywords: express linux configuration, software configuration, linux host, E2800, E5700, EF300, EF600, E-Series, eseries 
+summary: Die Verwendung eines InfiniBand-Switches zum Ausführen des Subnetz-Managers kann zu unerwarteten Pfadverlusten bei hohen Lasten führen. Um Pfadverluste zu vermeiden, konfigurieren Sie den Subnetz-Manager auf einem oder mehreren Hosts, die opensm verwenden. 
+---
+= Konfigurieren Sie den Subnetzmanager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Ein Subnetzmanager muss in Ihrer Umgebung auf Ihrem Switch oder auf Ihren Hosts laufen. Wenn Sie es auf Host-Seite ausführen, gehen Sie folgendermaßen vor, um es einzurichten.
+
+
+NOTE: Bevor Sie den Subnetzmanager konfigurieren, müssen Sie das infiniband-diags-Paket installieren, um die global eindeutige ID (Global Unique ID, GUID) über das zu erhalten `ibstat -p` Befehl. Siehe xref:srp-ib-determine-host-port-guids-task.adoc[Ermittlung der Host-Port-GUIDs, empfohlene Einstellungen] Weitere Informationen zur Installation des infiniband-diags-Pakets
+
+.Schritte
+. Installieren Sie den `opensm` Paket auf allen Hosts, auf denen der Subnetzmanager ausgeführt wird.
+. Verwenden Sie die `ibstat -p` Befehl zum Suchen `GUID0` Und `GUID1` Der HBA-Ports. Beispiel:
++
+[listing]
+----
+# ibstat -p
+0x248a070300a80a80
+0x248a070300a80a81
+----
+. Erstellen Sie ein Subnetz-Manager-Skript, das einmal als Teil des Boot-Prozesses ausgeführt wird.
++
+[listing]
+----
+# vim /usr/sbin/subnet-manager.sh
+----
+. Fügen Sie folgende Zeilen hinzu. Ersetzen Sie die Werte, die Sie in Schritt 2 für gefunden haben `GUID0` Und `GUID1`. Für `P0` Und `P1`, Verwenden Sie die Prioritäten der Subnetzmanager, wobei 1 die niedrigsten und 15 die höchsten ist.
++
+[listing]
+----
+#!/bin/bash
+
+opensm -B -g <GUID0> -p <P0> -f /var/log/opensm-ib0.log
+opensm -B -g <GUID1> -p <P1> -f /var/log/opensm-ib1.log
+----
++
+Ein Beispiel für den Befehl mit Wertersetzungen:
+
++
+[listing]
+----
+#!/bin/bash
+
+opensm -B -g 0x248a070300a80a80 -p 15 -f /var/log/opensm-ib0.log
+opensm -B -g 0x248a070300a80a81 -p 1 -f /var/log/opensm-ib1.log
+----
+. Erstellen Sie eine systemd Service Unit-Datei mit dem Namen `subnet-manager.service`.
++
+[listing]
+----
+# vim /etc/systemd/system/subnet-manager.service
+----
+. Fügen Sie folgende Zeilen hinzu.
++
+[listing]
+----
+[Unit]
+Description=systemd service unit file for subnet manager
+
+[Service]
+Type=forking
+ExecStart=/bin/bash /usr/sbin/subnet-manager.sh
+
+[Install]
+WantedBy=multi-user.target
+----
+. Systemd über den neuen Dienst benachrichtigen.
++
+[listing]
+----
+# systemctl daemon-reload
+----
+. Aktivieren und starten Sie den `subnet-manager` Service:
++
+[listing]
+----
+# systemctl enable subnet-manager.service
+# systemctl start subnet-manager.service
+----
+

@@ -1,0 +1,131 @@
+---
+permalink: config-linux/nvme-fc-worksheet-concept.html 
+sidebar: sidebar 
+keywords: NVMe over FC worksheet Linux, express linux configuration, software configuration, linux host, E2800, E5700, EF300, EF600, E-Series, eseries 
+summary: Verwenden Sie dieses Arbeitsblatt, um Konfigurationsinformationen für NVMe over Fibre Channel Storage aufzuzeichnen. 
+---
+= Notieren Sie Ihre NVMe over FC-Konfiguration
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können eine PDF-Datei auf dieser Seite erstellen und drucken und dann die Konfigurationsinformationen für NVMe over Fibre Channel Storage mithilfe des folgenden Arbeitsblatts erfassen. Sie benötigen diese Informationen für Bereitstellungsaufgaben.
+
+
+
+== Topologie mit direkter Verbindung
+
+In einer Topologie mit direkter Verbindung werden ein oder mehrere Hosts direkt mit dem Controller verbunden.
+
+image::../media/nvme_fc_direct_topology.png[nvme fc – direkt-Topologie]
+
+* Host 1 HBA Port 1 und Controller A Host-Port 1
+* Host 1 HBA Port 2 und Controller B Host-Port 1
+* Host 2 HBA Port 1 und Controller A Host-Port 2
+* Host 2 HBA Port 2 und Controller B Host-Port 2
+* Host 3 HBA Port 1 und Controller A Host-Port 3
+* Host 3 HBA Port 2 und Controller B Host-Port 3
+* Host 4 HBA Port 1 und Controller A Host-Port 4
+* Host 4 HBA Port 2 und Controller B Host-Port 4
+
+
+
+
+== Switch Connect-Topologie
+
+In einer Fabric-Topologie werden ein oder mehrere Switches verwendet. Siehe https://mysupport.netapp.com/matrix["NetApp Interoperabilitäts-Matrix-Tool"^] Für eine Liste der unterstützten Switches.
+
+image::../media/nvme_fc_fabric_topology.png[nvme fc Fabric-Topologie]
+
+
+
+== Host-IDs
+
+Suchen und Dokumentieren des Initiator-NQN von jedem Host aus.
+
+|===
+| Host-Port-Verbindungen | Host-NQN 
+
+
+ a| 
+Host (Initiator) 1
+ a| 
+
+
+
+ a| 
+Host (Initiator) 2
+ a| 
+
+|===
+
+
+== Ziel-NQN
+
+Dokumentieren Sie das Ziel-NQN für das Speicher-Array.
+
+|===
+| Array-Name | Ziel-NQN 
+
+
+ a| 
+Array-Controller (Ziel)
+ a| 
+
+|===
+
+
+== Ziel-NQNs
+
+Dokumentieren Sie die NQNs, die von den Array-Ports verwendet werden sollen.
+
+|===
+| Port-Verbindungen für Array-Controller (Ziel | NQN 
+
+
+ a| 
+Controller A, Port 1
+ a| 
+
+
+
+ a| 
+Controller B, Port 1
+ a| 
+
+
+
+ a| 
+Controller A, Port 2
+ a| 
+
+
+
+ a| 
+Controller B, Port 2
+ a| 
+
+|===
+
+
+== Zuordnung des Hostnamens
+
+
+NOTE: Der Name des Zuordners wird während des Workflows erstellt.
+
+|===
+
+
+ a| 
+Zuordnung des Hostnamens
+ a| 
+
+
+
+ a| 
+Host-OS-Typ
+ a| 
+
+|===

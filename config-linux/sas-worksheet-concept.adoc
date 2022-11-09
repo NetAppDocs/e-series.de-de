@@ -1,0 +1,89 @@
+---
+permalink: config-linux/sas-worksheet-concept.html 
+sidebar: sidebar 
+keywords: SAS worksheet Linux, express linux configuration, software configuration, linux host, E2800, E5700, EF300, EF600, E-Series, eseries 
+summary: Verwenden Sie dieses Arbeitsblatt, um Informationen zur SAS-Speicherkonfiguration aufzuzeichnen. 
+---
+= Notieren Sie Ihre SAS-Konfiguration
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können eine PDF-Datei auf dieser Seite erstellen und drucken und anschließend die SAS-Speicherkonfigurationsinformationen mithilfe des folgenden Arbeitsblatts aufzeichnen. Sie benötigen diese Informationen für Bereitstellungsaufgaben.
+
+image::../media/sas_topology_diagram_conf-lin.gif[Diagramm: SAS-Topologie]
+
+
+
+== Host-IDs
+
+|===
+| Nummer Der Legende | Host-Port-Verbindungen (Initiator) | SAS-Adresse 
+
+
+ a| 
+1
+ a| 
+Host
+ a| 
+_Nicht zutreffend_
+
+
+
+ a| 
+2
+ a| 
+Host-Port 1 (Initiator) ist mit Controller A verbunden, Port 1
+ a| 
+
+
+
+ a| 
+3
+ a| 
+Host-Port 1 (Initiator) ist mit Controller B verbunden, Port 1
+ a| 
+
+
+
+ a| 
+4
+ a| 
+Host-Port 2 (Initiator) ist mit Controller A verbunden, Port 1
+ a| 
+
+
+
+ a| 
+5
+ a| 
+Host-Port 2 (Initiator) ist mit Controller B verbunden, Port 1
+ a| 
+
+|===
+
+
+== Zielkennungen
+
+Empfohlene Konfigurationen bestehen aus zwei Ziel-Ports.
+
+
+
+== Host wird zugeordnet
+
+|===
+
+
+ a| 
+Zuordnen Des Host-Namens
+ a| 
+
+
+
+ a| 
+Host-Betriebssystem-Typ
+ a| 
+
+|===

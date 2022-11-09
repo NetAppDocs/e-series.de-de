@@ -1,0 +1,59 @@
+---
+permalink: config-windows/verify-storage-access-host-task.html 
+sidebar: sidebar 
+keywords: express Windows configuration, software configuration, Windows host, E2800, E5700, EF300, EF600, E-Series, eseries 
+summary: Vergewissern Sie sich, dass der Host Daten auf die LUN schreiben und sie zurücklesen kann. 
+---
+= Überprüfen Sie den Speicherzugriff auf dem Host
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Bevor Sie das Volume verwenden, vergewissern Sie sich, dass der Host Daten auf die LUN schreiben und wieder lesen kann.
+
+Sie müssen die LUN initialisiert und mit einem Dateisystem formatiert haben.
+
+.Schritte
+. Erstellen und Schreiben in eine Datei auf der neuen LUN.
++
+[listing]
+----
+> echo test file > f:\\test.txt
+----
+. Lesen Sie die Datei und überprüfen Sie, ob die Daten geschrieben wurden.
++
+[listing]
+----
+> type f:\\test.txt
+----
+. Um die Funktionsweise von Multipath zu überprüfen, ändern Sie die Eigentümerschaft für Volumes.
++
+.. Wählen Sie in der SANtricity System Manager-GUI *Speicher* > *Volumes* und dann *Mehr* > *Eigentumsänderung* aus.
+.. Verwenden Sie im Dialogfeld Volume-Eigentümerschaft ändern den Pull-down-Befehl *bevorzugter Eigentümer*, um den anderen Controller für einen der Volumes in der Liste auszuwählen, und bestätigen Sie dann den Vorgang.
+.. Vergewissern Sie sich, dass Sie weiterhin auf die Dateien auf der LUN zugreifen können.
++
+[listing]
+----
+> dir f:\\
+----
+
+
+. Suchen Sie die Ziel-ID.
++
+
+NOTE: Das Dienstprogramm dsmUtil muss die Groß-/Kleinschreibung beachten.
+
++
+[listing]
+----
+> C:\\Program Files \(x86\)\\DSMDrivers\\mppdsm\\dsmUtil.exe -a
+----
+. Zeigen Sie die Pfade zur LUN an, und überprüfen Sie, ob Sie die erwartete Anzahl von Pfaden haben. Im `<target ID>` Verwenden Sie den Teil des Befehls die Ziel-ID, die Sie im vorherigen Schritt gefunden haben.
++
+[listing]
+----
+> C:\\Program Files \(x86\)\\DSMDrivers\\mppdsm\\dsmUtil.exe –g <target ID\>
+----
+

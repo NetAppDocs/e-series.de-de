@@ -1,0 +1,36 @@
+---
+permalink: config-linux/fc-determine-host-port-wwpns-task.html 
+sidebar: sidebar 
+keywords: host wwpn, HBA utility, express linux configuration, software configuration, linux host, 
+summary: 'Sie installieren ein FC HBA-Dienstprogramm, damit Sie den weltweiten Port-Namen \(WWPN\) jedes Host-Ports anzeigen können. Darüber hinaus können Sie mit dem HBA Dienstprogramm alle Einstellungen ändern, die in der Spalte Notizen des NetApp Interoperabilitäts-Matrix-Tools für die unterstützte Konfiguration empfohlen werden.' 
+---
+= Host-WWPNs ermitteln und empfohlene Einstellungen vornehmen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie installieren ein FC HBA Utility, damit Sie den weltweiten Port-Namen (WWPN) jedes Host-Ports anzeigen können.
+
+Darüber hinaus können Sie das HBA-Dienstprogramm verwenden, um alle Einstellungen zu ändern, die in der Spalte Hinweise des empfohlen werden https://mysupport.netapp.com/matrix["NetApp Interoperabilitäts-Matrix-Tool"^] Für die unterstützte Konfiguration.
+
+Prüfen Sie diese Richtlinien für HBA Utilities:
+
+* Die meisten HBA-Anbieter bieten ein HBA-Dienstprogramm an. Sie benötigen die richtige HBA-Version für Ihr Hostbetriebssystem und Ihre CPU. Beispiele für FC HBA Utilities:
++
+** Emulex OneCommand Manager für Emulex HBAs
+** QLogic QConverge Console für QLogic HBAs
+
+
+* Host-I/O-Ports registrieren möglicherweise automatisch, wenn der Host-Kontext-Agent installiert ist.
+
+
+.Schritte
+. Laden Sie das entsprechende Dienstprogramm von der Website Ihres HBA-Anbieters herunter.
+. Installieren Sie das Dienstprogramm.
+. Wählen Sie die entsprechenden Einstellungen im HBA-Dienstprogramm aus.
++
+Die entsprechenden Einstellungen für Ihre Konfiguration sind in der Spalte Hinweise des aufgeführt https://mysupport.netapp.com/matrix["NetApp Interoperabilitäts-Matrix-Tool"^].
+
+

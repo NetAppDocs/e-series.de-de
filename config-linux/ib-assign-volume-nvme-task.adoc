@@ -1,0 +1,56 @@
+---
+permalink: config-linux/ib-assign-volume-nvme-task.html 
+sidebar: sidebar 
+keywords: express linux configuration, assign volume, assign namespace, 
+summary: 'Sie müssen einem Host oder Host-Cluster ein Volume \(Namespace\) zuweisen, damit es für I/O-Vorgänge verwendet werden kann. Diese Zuweisung gewährt einem Host oder Host-Cluster Zugriff auf einen oder mehrere Namespaces in einem Storage-Array.' 
+---
+= Weisen Sie ein Volume zu
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie müssen einem Host oder Host-Cluster ein Volume (Namespace) zuweisen, damit es für I/O-Vorgänge verwendet werden kann. Diese Zuweisung gewährt einem Host oder Host-Cluster Zugriff auf einen oder mehrere Namespaces in einem Storage-Array.
+
+Beachten Sie bei der Zuweisung von Volumes die folgenden Richtlinien:
+
+* Sie können ein Volume gleichzeitig nur einem Host oder Host-Cluster zuweisen.
+* Zugewiesene Volumes werden von den Controllern im Storage-Array gemeinsam genutzt.
+* Dieselbe Namespace-ID (NSID) kann nicht zweimal von einem Host oder einem Hostcluster verwendet werden, um auf ein Volume zuzugreifen. Sie müssen eine eindeutige NSID verwenden.
+
+
+Unter diesen Bedingungen schlägt die Zuweisung eines Volumes fehl:
+
+* Alle Volumes werden zugewiesen.
+* Das Volume ist bereits einem anderen Host oder Host-Cluster zugewiesen.
+
+
+Die Möglichkeit, ein Volume zuzuweisen, ist unter folgenden Bedingungen nicht verfügbar:
+
+* Es sind keine gültigen Hosts oder Host Cluster vorhanden.
+* Alle Volume-Zuweisungen wurden definiert.
+
+
+Es werden alle nicht zugewiesenen Volumes angezeigt, aber Funktionen für Hosts mit oder ohne Data Assurance (da) gelten wie folgt:
+
+* Für einen da-fähigen Host können Sie Volumes auswählen, die entweder als da aktiviert oder nicht als da-aktiviert aktiviert sind.
+* Wenn Sie bei einem Host, der nicht für das da-fähig ist, ein Volume auswählen, das für das da-aktiviert ist, wird in einer Warnung angegeben, dass das System vor der Zuweisung des Volumes automatisch das da-on-Volume ausschalten muss.
+
+
+.Schritte
+. Wählen Sie Menü:Storage[Hosts].
+. Wählen Sie den Host oder Host-Cluster aus, dem Sie Volumes zuweisen möchten, und klicken Sie dann auf *Volumes zuweisen*.
++
+Es wird ein Dialogfeld angezeigt, in dem alle Volumes aufgelistet werden, die zugewiesen werden können. Sie können jede der Spalten sortieren oder etwas in die *Filter* Box geben, um bestimmte Volumen leichter zu finden.
+
+. Aktivieren Sie das Kontrollkästchen neben jedem Volume, dem Sie zuweisen möchten, oder aktivieren Sie das Kontrollkästchen in der Tabellenüberschrift, um alle Volumes auszuwählen.
+. Klicken Sie auf *Zuweisen*, um den Vorgang abzuschließen.
+
+
+Nachdem ein Volume oder ein Volume erfolgreich einem Host oder Host-Cluster zugewiesen wurde, führt das System folgende Aktionen durch:
+
+* Das zugewiesene Volume erhält die nächste verfügbare NSID. Der Host verwendet die NSID für den Zugriff auf das Volume.
+* Der vom Benutzer bereitgestellte Volume-Name wird in den Volume-Listen angezeigt, die dem Host zugeordnet sind.
+

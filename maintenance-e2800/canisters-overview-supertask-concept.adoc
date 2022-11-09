@@ -1,0 +1,168 @@
+---
+permalink: maintenance-e2800/canisters-overview-supertask-concept.html 
+sidebar: sidebar 
+keywords: E2800 replace canister, replacing E2800 canister, E2800 replace power supply, replacing E2800 power supply, E2800 replace fan, replacing E2800 fan, E2800, E-Series, eseries 
+summary: Prüfen Sie die Typen und Anforderungen des E2800-Behälters. 
+---
+= Anforderungen für den Austausch des E2800 Behälters
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Bevor Sie einen Behälter in einem E2800-Array ersetzen, überprüfen Sie die Behälter-Typen und -Anforderungen.
+
+Zu den Behältern gehören Netzteile, Strombehälter und Lüfterbehälter.
+
+
+
+== Stromversorgung
+
+
+NOTE: Das Verfahren zum Austausch der Stromversorgung gilt für den IOM-Austausch. Führen Sie zum Austauschen des EAM das Verfahren zum Austausch des Netzteils durch.
+
+Jedes Controller-Shelf oder Laufwerk-Shelf für 12 oder 24 Laufwerke enthält zwei Netzteile mit integrierten Lüftern. Diese werden im SANtricity-System-Manager als _Power-Fan-Behälter_ bezeichnet. Wenn ein Lüfter-Behälter ausfällt, müssen Sie ihn so schnell wie möglich austauschen, um sicherzustellen, dass das Regal über eine redundante Stromquelle und eine ausreichende Kühlung verfügt.
+
+
+
+=== Shelf-Typen für ein Netzteil
+
+Sie können ein Netzteil in den folgenden Shelves ersetzen:
+
+* E2812 Controller-Shelf
+* E2824 Controller-Shelf
+* EF280 Flash-Array
+* DE212C Festplatten-Shelf
+* DE224C Festplatten-Shelf
+
+
+Die folgende Abbildung zeigt ein Beispiel: E2812 Controller-Shelf, E2824 Controller-Shelf und EF280 Flash-Array mit zwei Netzteilen (Lüfter-Behälter). Die DE212C und DE224C Festplatten-Shelfs sind identisch, enthalten jedoch I/O-Module (IOMs) anstelle von Controller-Containern.
+
+image::../media/28_dwg_e2812_power_fan_canisters.gif[28 dwg e2812 Power Fan Kanister]
+
+*(1)* _Controller-Regal mit zwei Netzteilen (Power-Fan-Kanister) unter den Controller-Kanistern_
+
+Das Verfahren zum Austausch eines Netzteils beschreibt nicht, wie ein ausgefallener Lüfter-Behälter in einem DE1600 oder DE5600 Laufwerksfach ersetzt wird, der möglicherweise mit dem E5700 oder E2800 Controller-Shelfs verbunden ist. Anweisungen zu den Laufwerksfachmodellen finden Sie unter link:https://library.netapp.com/ecm/ecm_download_file/ECMP1140874["Ersetzen eines Netzlüfterkanisters im DE1600 Laufwerksfach oder DE5600 Laufwerksfach"^].
+
+
+
+=== Anforderungen für den Austausch eines Netzteils
+
+Wenn Sie ein Netzteil austauschen möchten, beachten Sie die folgenden Anforderungen.
+
+* Sie benötigen ein Ersatznetzteil (Lüfter-Behälter), das für Ihr Controller-Shelf- oder Festplatten-Shelf-Modell unterstützt wird.
+* Sie haben ein ESD-Armband oder andere antistatische Vorsichtsmaßnahmen getroffen.
+* Sie können ein Netzteil (Power-Fan-Behälter) ersetzen, während Ihr Speicher-Array eingeschaltet ist und Host-I/O-Vorgänge ausführt, sofern die folgenden Bedingungen erfüllt sind:
++
+** Das zweite Netzteil (Power-Fan-Behälter) im Shelf hat einen optimalen Status.
+** Im Feld *OK to remove* im Bereich Details des Recovery Guru im SANtricity System Manager wird *Ja* angezeigt, was darauf hinweist, dass es sicher ist, diese Komponente zu entfernen.
++
+
+NOTE: Wenn das zweite Netzteil (Power-Fan-Behälter) im Shelf nicht über den optimalen Status verfügt oder wenn der Recovery Guru darauf hinweist, dass es nicht in Ordnung ist, den Lüfter-Behälter zu entfernen, wenden Sie sich an den technischen Support.
+
+
+
+
+
+
+
+== Leistungsbehälter
+
+Jedes Controller-Shelf oder Festplatten-Shelf für 60 Laufwerke enthält zwei Stromankanister für Redundanz.
+
+
+
+=== Regaltypen für einen Aktivkohlebehälter
+
+Sie können einen Leistungsbehälter in den folgenden Regalen ersetzen:
+
+* E2860 Controller-Shelfs
+* DE460C Festplatten-Shelf
+
+
+Das Verfahren zum Austausch eines Netzkanüsters beschreibt nicht, wie ein ausgefallener Netzbehälter in einem DE6600-Laufwerksfach ersetzt wird, der möglicherweise an das Controller-Shelf angeschlossen ist.
+
+Die folgende Abbildung zeigt die Rückseite eines DE460C Festplatten-Shelfs mit den beiden Power Canisters:
+
+image::../media/28_dwg_de460c_rear_no_callouts_maint-e2800.gif[28 dwg de460c hinten keine Rufumbrüche maint e2800]
+
+Die folgende Abbildung zeigt einen Leistungsbehälter:
+
+image::../media/28_dwg_e2860_de460c_psu_maint-e2800.gif[28 DWG e2860 de460c psu maint e2800]
+
+
+
+=== Anforderungen für den Austausch eines Netzkanisters
+
+Wenn Sie einen Netzbehälter austauschen möchten, beachten Sie die folgenden Anforderungen.
+
+* Sie haben einen Ersatznetzbehälter, der für Ihr Controller-Shelf- oder Festplatten-Shelf-Modell unterstützt wird.
+* Sie haben einen Strombehälter, der installiert ist und läuft.
+* Sie haben ein ESD-Armband oder andere antistatische Vorsichtsmaßnahmen getroffen.
+* Sie können einen Netzbehälter ersetzen, während Ihr Speicher-Array eingeschaltet ist und Host-I/O-Vorgänge ausführt, sofern die folgenden Bedingungen erfüllt sind:
++
+** Der andere Leistungsbehälter im Regal hat den optimalen Status.
++
+
+NOTE: Während Sie das Verfahren durchführen, versorgt der andere Netzbehälter beide Lüfter mit Strom, um sicherzustellen, dass das Gerät nicht überhitzt.
+
+** Im Feld *OK to remove* im Bereich Details des Recovery Guru im SANtricity System Manager wird *Ja* angezeigt, was darauf hinweist, dass es sicher ist, diese Komponente zu entfernen.
++
+
+NOTE: Wenn der zweite Strombehälter im Regal keinen optimalen Status hat oder wenn der Recovery Guru angibt, dass es nicht in Ordnung ist, den Strombehälter zu entfernen, wenden Sie sich an den technischen Support.
+
+
+
+
+
+
+
+== Gebläsebehälter
+
+Jedes Controller-Shelf oder Laufwerks-Shelf für 60 Laufwerke enthält zwei Lüfter-Kanister.
+
+
+
+=== Regaltypen für einen Lüfterbehälter
+
+Sie können einen Lüfterbehälter in den folgenden Regalen ersetzen:
+
+* E2860 Controller-Shelfs
+* DE460C Festplatten-Shelf
+
+
+Das Verfahren zum Austausch eines Lüfterkanisters beschreibt nicht, wie ein ausgefallener Lüfterbehälter in einem DE6600-Laufwerksfach ersetzt wird, der möglicherweise an das Controller-Shelf angeschlossen ist.
+
+Die folgende Abbildung zeigt einen Lüfterbehälter:
+
+image::../media/28_dwg_e2860_de460c_single_fan_canister_no_callouts_maint-e2800.gif[28 DWG e2860 de460c Einzelventilator Behälter ohne Ausbrüche maint e2800]
+
+Die folgende Abbildung zeigt die Rückseite eines DE460C Shelfs mit zwei Lüfterbehältern:
+
+image::../media/28_dwg_de460c_rear_no_callouts_maint-e2800.gif[28 dwg de460c hinten keine Rufumbrüche maint e2800]
+
+
+CAUTION: *Möglicher Geräteschaden* -- Wenn Sie einen Lüfterbehälter durch eingeschaltetes Strom ersetzen, müssen Sie den Austauschvorgang innerhalb von 30 Minuten abschließen, um eine Überhitzung der Anlage zu verhindern.
+
+
+
+=== Anforderungen für den Austausch eines Lüfterkanisters
+
+Wenn Sie einen Lüfterbehälter ersetzen möchten, beachten Sie die folgenden Anforderungen.
+
+* Sie haben einen Ersatzlüfterbehälter (Lüfter), der für Ihr Controller-Shelf- oder Festplatten-Shelf-Modell unterstützt wird.
+* Sie haben einen Lüfterbehälter, der installiert ist und läuft.
+* Sie haben ein ESD-Armband oder andere antistatische Vorsichtsmaßnahmen getroffen.
+* Wenn Sie dieses Verfahren bei eingeschaltter Stromversorgung durchführen, müssen Sie es innerhalb von 30 Minuten abschließen, um zu verhindern, dass das Gerät überhitzt wird.
+* Sie können einen Lüfterbehälter ersetzen, während Ihr Speicher-Array eingeschaltet ist und Host-I/O-Vorgänge ausführt, sofern die folgenden Bedingungen erfüllt sind:
++
+** Der zweite Gebläsebehälter im Regal hat einen optimalen Status.
+** Im Feld *OK to remove* im Bereich Details des Recovery Guru im SANtricity System Manager wird *Ja* angezeigt, was darauf hinweist, dass es sicher ist, diese Komponente zu entfernen.
++
+
+NOTE: Wenn der zweite Lüfterbehälter im Regal keinen optimalen Status hat oder wenn der Recovery Guru angibt, dass es nicht in Ordnung ist, den Lüfterbehälter zu entfernen, wenden Sie sich an den technischen Support.
+
+
+
+

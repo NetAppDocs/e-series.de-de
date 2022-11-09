@@ -1,0 +1,25 @@
+---
+permalink: config-linux/iscsi-configure-network-concept.html 
+sidebar: sidebar 
+keywords: express linux configuration, software configuration, linux host, E2800, E5700, EF300, EF600, E-Series, eseries 
+summary: Konfigurieren Sie das iSCSI-Netzwerk. 
+---
+= Konfigurieren des Netzwerks
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Je nach Ihren Datenspeicheranforderungen können Sie Ihr iSCSI-Netzwerk auf unterschiedliche Weise einrichten.
+
+Wenden Sie sich an Ihren Netzwerkadministrator, wenn Sie Tipps zur Auswahl der für Ihre Umgebung am besten geeigneten Konfiguration benötigen.
+
+Um ein iSCSI-Netzwerk mit grundlegender Redundanz zu konfigurieren, verbinden Sie jeden Host-Port und einen Port jedes Controllers mit separaten Switches und partitionieren Sie jeden Satz von Host-Ports und Controller-Ports in separaten Netzwerksegmenten oder VLANs.
+
+Sie müssen die Hardware-Flusssteuerung senden und empfangen *Ende bis Ende* aktivieren. Sie müssen die Flusssteuerung mit Priorität deaktivieren.
+
+Wenn Sie aus Performance-Gründen Jumbo Frames im IP SAN verwenden, stellen Sie sicher, dass Sie das Array, die Switches und Hosts für die Verwendung von Jumbo Frames konfigurieren. Informationen zum Aktivieren von Jumbo-Frames auf den Hosts und Switches finden Sie in der Dokumentation zum Betriebssystem und Switch. Führen Sie die Schritte unter aus, um Jumbo-Frames auf dem Array zu aktivieren link:iscsi-configure-array-side-network-task.html["Konfigurieren Sie Array-seitiges Netzwerk"].
+
+
+NOTE: Für den IP-Overhead müssen viele Netzwerk-Switches über 9,000 Byte konfiguriert sein. Weitere Informationen finden Sie in der Switch-Dokumentation.

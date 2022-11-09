@@ -1,0 +1,37 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/vc-olh-why-are-some-drives-not-showing-up.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
+summary: Im Dialogfeld Kapazität hinzufügen stehen nicht alle Laufwerke zur Verfügung, um einem vorhandenen Pool oder einer Volume-Gruppe Kapazität hinzuzufügen. 
+---
+= Warum werden einige Laufwerke nicht angezeigt?
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Im Dialogfeld Kapazität hinzufügen stehen nicht alle Laufwerke zur Verfügung, um einem vorhandenen Pool oder einer Volume-Gruppe Kapazität hinzuzufügen.
+
+Festplatten können aus den folgenden Gründen nicht genutzt werden:
+
+* Ein Laufwerk muss nicht zugewiesen und nicht sicher aktiviert sein. Laufwerke, die bereits zu einem anderen Pool, einer anderen Volume-Gruppe oder als Hot Spare konfiguriert sind, sind nicht berechtigt. Wenn ein Laufwerk nicht zugewiesen, aber sicher aktiviert ist, müssen Sie dieses Laufwerk manuell löschen, damit es in Frage kommt.
+* Ein Laufwerk in einem nicht optimalen Zustand ist nicht berechtigt.
+* Wenn die Kapazität eines Laufwerks zu klein ist, ist es nicht förderfähig.
+* Der Laufwerkstyp muss innerhalb eines Pools oder einer Volume-Gruppe übereinstimmen. Sie können Folgendes nicht mischen:
++
+** Festplattenlaufwerke (HDDs) mit Solid State Disks (SSDs)
+** NVMe mit SAS-Laufwerken
+** Laufwerke mit 512 Byte und 4 KiB Volume-Blockgrößen
+
+
+* Wenn ein Pool oder eine Volume-Gruppe alle sicheren Laufwerke enthält, werden nicht sichere Laufwerke nicht aufgelistet.
+* Wenn eine Pool- oder Volume-Gruppe alle FIPS-Laufwerke (Federal Information Processing Standards) enthält, werden Laufwerke außerhalb von FIPS nicht aufgeführt.
+* Wenn ein Pool oder eine Volume-Gruppe alle Data Assurance (da)-fähigen Laufwerke enthält und mindestens ein da-fähiges Volume im Pool oder in der Volume-Gruppe vorhanden ist, kann ein Laufwerk, das nicht für da geeignet ist, nicht zugelassen werden, sodass es diesem Pool oder dieser Volume-Gruppe nicht hinzugefügt werden kann. Wenn sich jedoch kein da-fähiges Volume im Pool oder in der Volume-Gruppe befindet, kann ein Laufwerk, das nicht über da-fähig ist, zu diesem Pool oder dieser Volume-Gruppe hinzugefügt werden. Wenn Sie sich für eine Kombination dieser Laufwerke entscheiden, sollten Sie bedenken, dass keine da-fähigen Volumes erstellt werden können.
+
+
+
+NOTE: Die Kapazität kann im Speicher-Array erhöht werden, indem neue Laufwerke hinzugefügt oder Pools oder Volume-Gruppen gelöscht werden.

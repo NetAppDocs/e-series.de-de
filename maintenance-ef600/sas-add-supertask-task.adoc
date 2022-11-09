@@ -1,0 +1,216 @@
+---
+permalink: maintenance-ef600/sas-add-supertask-task.html 
+sidebar: sidebar 
+keywords: replace EF300 SAS expansion card, replacing SAS card, drive tray expansion, expansion card 
+summary: Fügen Sie EF300-Controller eine SAS-Erweiterungskarte hinzu, um die Laufwerksfacherweiterung zu ermöglichen. 
+---
+= Fügen Sie die SAS-Erweiterungskarte der EF300 und EF600 hinzu
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können eine SAS-Erweiterungskarte zu einem EF300- oder EF600 Controller hinzufügen, um ein Laufwerksfach zu erweitern.
+
+Wenn Sie eine SAS-Erweiterungskarte hinzufügen, müssen Sie das Speicher-Array ausschalten, die neue SAS-Erweiterungskarte installieren und wieder einschalten.
+
+.Bevor Sie beginnen
+* Prüfen link:sas-overview-supertask-concept.html["Anforderungen für den Austausch der EF300- und EF600-SAS-Erweiterungskarten"].
+* Sie müssen für dieses Verfahren ein Wartungsfenster zur Ausfallzeit planen. Sie können erst nach erfolgreichem Abschluss dieses Verfahrens auf Daten im Speicher-Array zugreifen.
+
+
+
+CAUTION: Dieses Verfahren muss mit beiden Controller-Kanistern durchgeführt werden. Controller-HIC-Konfigurationen müssen genau übereinstimmen.
+
+.Was Sie und#8217;ll benötigen
+* Eine SAS-Erweiterungskarte, die mit Ihrem Controller kompatibel ist.
+* Ein ESD-Armband, oder Sie haben andere antistatische Vorsichtsmaßnahmen getroffen.
+* Ein flacher, statischer freier Arbeitsbereich.
+* A #1 Kreuzschlitzschraubendreher.
+* Etiketten, um jedes Kabel zu identifizieren, das mit dem Controller-Behälter verbunden ist.
+* Eine Management Station mit einem Browser, der für den Controller auf den SANtricity System Manager zugreifen kann. (Zeigen Sie zum Öffnen der System Manager-Schnittstelle den Domain-Namen oder die IP-Adresse des Controllers im Browser.)
+
+
+
+
+== Schritt 1: Platzieren Sie das Controller-Shelf offline
+
+Platzieren Sie das Controller-Shelf offline, damit Sie die SAS-Erweiterungskarte sicher hinzufügen können.
+
+.Schritte
+. Stellen Sie auf der Startseite des SANtricity-System-Managers sicher, dass das Speicher-Array den optimalen Status hat.
++
+Wenn der Status nicht optimal lautet, verwenden Sie den Recovery Guru oder wenden Sie sich an den technischen Support, um das Problem zu lösen. Fahren Sie mit diesem Verfahren nicht fort.
+
+. Sichern Sie die Konfigurationsdatenbank des Storage-Arrays mit SANtricity System Manager.
++
+Wenn beim Entfernen eines Controllers ein Problem auftritt, können Sie die gespeicherte Datei verwenden, um Ihre Konfiguration wiederherzustellen. Das System speichert den aktuellen Status der RAID-Konfigurationsdatenbank, die alle Daten für Volume-Gruppen und Festplatten-Pools auf dem Controller enthält.
+
++
+** Über System Manager:
++
+... Wählen Sie MENU:Support[Support Center > Diagnose].
+... Wählen Sie *Konfigurationsdaten Erfassen*.
+... Klicken Sie Auf *Collect*.
++
+Die Datei wird im Ordner Downloads für Ihren Browser mit dem Namen *configurationData-<arrayName>-<dateTime>.7z* gespeichert.
+
+
+
+
+
+. Vergewissern Sie sich, dass zwischen dem Storage-Array und allen verbundenen Hosts keine I/O-Vorgänge stattfinden. Sie können beispielsweise die folgenden Schritte durchführen:
++
+** Beenden Sie alle Prozesse, die die LUNs umfassen, die den Hosts vom Storage zugeordnet sind.
+** Stellen Sie sicher, dass keine Applikationen Daten auf LUNs schreiben, die vom Storage den Hosts zugeordnet sind.
+** Heben Sie die Bereitstellung aller Dateisysteme auf, die mit den Volumes im Array verbunden sind, auf.
++
+
+NOTE: Die genauen Schritte zur Stoerung von Host-I/O-Vorgängen hängen vom Host-Betriebssystem und der Konfiguration ab, die den Umfang dieser Anweisungen übersteigen. Wenn Sie nicht sicher sind, wie Sie I/O-Vorgänge für Hosts in Ihrer Umgebung anhalten, sollten Sie das Herunterfahren des Hosts in Betracht ziehen.
+
++
+
+CAUTION: *Möglicher Datenverlust* -- Wenn Sie diesen Vorgang während der I/O-Vorgänge fortsetzen, kann die Host-Anwendung den Zugriff auf die Daten verlieren, da der Speicher nicht zugänglich ist.
+
+
+
+. Warten Sie, bis alle Daten im Cache-Speicher auf die Laufwerke geschrieben werden.
++
+Die grüne LED „Cache aktiv“ auf der Rückseite jedes Controllers leuchtet, wenn die Daten im Cache auf die Laufwerke geschrieben werden müssen. Sie müssen warten, bis diese LED ausgeschaltet ist.
+
+. Wählen Sie auf der Startseite des SANtricity System Managers die Option *Vorgänge in Bearbeitung anzeigen*. Warten Sie, bis alle Vorgänge abgeschlossen sind, bevor Sie mit dem nächsten Schritt fortfahren.
+. Schalten Sie das Controller-Shelf aus.
++
+.. Legen Sie beide Netzkabel vom Controller-Shelf ab und ziehen Sie sie ab.
+.. Warten Sie, bis alle LEDs am Controller-Shelf ausgeschaltet sind.
+
+
+
+
+
+
+== Schritt 2: Controller-Behälter entfernen
+
+Entfernen Sie den Controller-Behälter, damit Sie die neue SAS-Erweiterungskarte hinzufügen können.
+
+.Schritte
+. Setzen Sie ein ESD-Armband an oder ergreifen Sie andere antistatische Vorsichtsmaßnahmen.
+. Beschriften Sie jedes Kabel, das am Controller-Behälter befestigt ist.
+. Trennen Sie alle Kabel vom Controller-Behälter.
++
+
+CAUTION: Um eine verminderte Leistung zu vermeiden, dürfen die Kabel nicht verdreht, gefaltet, gequetscht oder treten.
+
+. Vergewissern Sie sich, dass die LED Cache Active auf der Rückseite des Controllers ausgeschaltet ist.
+. Drücken Sie die Griffe auf beiden Seiten des Controllers, und ziehen Sie sie nach hinten, bis sie sich aus dem Shelf lösen.
++
+image::../media/remove_controller_5.png[Controller 5 ausbauen]
+
+. Schieben Sie den Controller-Behälter mit zwei Händen und den Griffen aus dem Regal. Wenn sich die Vorderseite des Controllers nicht im Gehäuse befindet, ziehen Sie sie mit zwei Händen vollständig heraus.
++
+
+CAUTION: Verwenden Sie immer zwei Hände, um das Gewicht eines Reglerkanisters zu unterstützen.
+
++
+image::../media/remove_controller_6.png[Controller 6 ausbauen]
+
+. Setzen Sie den Steuerungsbehälter auf eine flache, statisch freie Oberfläche.
+
+
+
+
+== Schritt 3: Fügen Sie die neue SAS-Erweiterungskarte hinzu
+
+Installieren Sie die SAS-Erweiterungskarte, um die Erweiterung des Laufwerksfachs zu ermöglichen.
+
+.Schritte
+. Entfernen Sie die Abdeckung des Reglerkanisters, indem Sie die einzelne Rändelschraube lösen und den Deckel öffnen.
+. Stellen Sie sicher, dass die grüne LED im Controller aus ist.
++
+Wenn diese grüne LED leuchtet, wird der Controller weiterhin mit Strom versorgt. Sie müssen warten, bis diese LED erlischt, bevor Sie Komponenten entfernen.
+
+. Entfernen Sie mit einem #1 Kreuzschlitzschraubendreher die beiden Schrauben, mit denen die Frontplatte am Controller-Behälter befestigt ist, und entfernen Sie die Frontplatte.
+. Richten Sie die einzelne Rändelschraube der SAS-Erweiterungskarte an der entsprechenden Öffnung am Controller aus, und richten Sie den Anschluss an der Unterseite der Erweiterungskarte am Erweiterungskartenanschluss auf der Controllerkarte aus.
++
+Achten Sie darauf, dass die Komponenten auf der Unterseite der SAS-Erweiterungskarte oder auf der Oberseite der Controller-Karte nicht neu kratzen oder stößt.
+
+. Senken Sie die SAS-Erweiterungskarte vorsichtig ab, und setzen Sie den Erweiterungskartenanschluss fest, indem Sie vorsichtig auf die Erweiterungskarte drücken.
+. Ziehen Sie die SAS-Erweiterungskartenschraube manuell fest.
++
+Verwenden Sie keinen Schraubendreher, oder ziehen Sie die Schrauben möglicherweise zu fest.
+
+. Befestigen Sie mit einem #1 Kreuzschlitzschraubendreher die Frontplatte, die Sie aus dem ursprünglichen Controller-Behälter entfernt haben, mit den beiden Schrauben am neuen Controller-Behälter.
+
+
+
+
+== Schritt 4: Montieren Sie den Controller-Behälter wieder
+
+Setzen Sie nach dem Installieren der neuen SAS-Erweiterungskarte den Controller-Behälter wieder in das Controller-Shelf ein.
+
+.Schritte
+. Senken Sie die Abdeckung am Controller-Behälter ab, und befestigen Sie die Daumenschraube.
+. Schieben Sie den Controller-Behälter vorsichtig ganz in das Reglerregal, während Sie die Controller-Griffe zusammendrücken.
++
+
+NOTE: Der Controller klickt hörbar, wenn er richtig in das Regal eingebaut ist.
+
++
+image::../media/remove_controller_7.png[Controller 7 ausbauen]
+
+
+
+
+
+== Schritt 5: Ergänzung der SAS-Erweiterungskarte abschließen
+
+Platzieren Sie den Controller online, sammeln Sie Support-Daten und setzen Sie den Betrieb fort.
+
+.Schritte
+. Schließen Sie die Stromkabel an, um den Controller online zu stellen.
+. Überprüfen Sie beim Booten des Controllers die Controller-LEDs.
++
+** Die gelbe Warn-LED leuchtet weiterhin.
+** Je nach Host-Schnittstelle leuchtet, blinkt oder leuchtet die LED für Host-Link möglicherweise nicht.
+
+
+. Wenn der Controller wieder online ist, bestätigen Sie, dass sein Status optimal lautet, und überprüfen Sie die Warn-LEDs für das Controller-Shelf.
++
+Wenn der Status nicht optimal ist oder eine der Warn-LEDs leuchtet, vergewissern Sie sich, dass alle Kabel richtig eingesetzt sind und der Controller-Behälter richtig installiert ist. Gegebenenfalls den Controller-Behälter ausbauen und wieder einbauen.
+
++
+
+NOTE: Wenden Sie sich an den technischen Support, wenn das Problem nicht gelöst werden kann.
+
+. Klicken Sie auf Menü:Hardware[Support > Upgrade Center], um sicherzustellen, dass die neueste Version des SANtricity-Betriebssystems installiert ist.
++
+Installieren Sie bei Bedarf die neueste Version.
+
+. Überprüfen Sie, ob alle Volumes an den bevorzugten Eigentümer zurückgegeben wurden.
++
+.. Wählen Sie Menü:Storage[Volumes]. Überprüfen Sie auf der Seite * All Volumes*, ob die Volumes an die bevorzugten Eigentümer verteilt werden. Wählen Sie MENU:Mehr[Eigentumsrechte ändern], um Volumeneigentümer anzuzeigen.
+.. Wenn alle Volumes Eigentum des bevorzugten Eigentümers sind, fahren Sie mit Schritt 6 fort.
+.. Wenn keines der Volumes zurückgegeben wird, müssen Sie die Volumes manuell zurückgeben. Wechseln Sie zum Menü:Mehr[Umverteilung von Volumes].
+.. Wenn nach der automatischen Verteilung oder manuellen Verteilung nur einige der Volumes an ihre bevorzugten Eigentümer zurückgegeben werden, muss der Recovery Guru auf Probleme mit der Host-Konnektivität prüfen.
+.. Wenn kein Recovery Guru zur Verfügung steht oder wenn Sie den Recovery-Guru-Schritten folgen, werden die Volumes immer noch nicht an ihren bevorzugten Besitzer zurückgegeben.
+
+
+. Support-Daten für Ihr Storage Array mit SANtricity System Manager erfassen
++
+.. Wählen Sie MENU:Support[Support Center > Diagnose].
+.. Wählen Sie *Support-Daten Erfassen* Aus.
+.. Klicken Sie Auf *Collect*.
++
+Die Datei wird im Ordner Downloads für Ihren Browser mit dem Namen *Support-Data.7z* gespeichert.
+
+
+
+. Wiederholen Sie diese Aufgabe mit Ihrem zweiten Controller-Behälter.
+
+
+
+NOTE: Informationen zur Verkabelung Ihrer SAS-Erweiterung finden Sie unter link:../install-hw-cabling/index.html["Verkabelung der E-Series Hardware"] Weitere Anweisungen.
+
+Das Hinzufügen einer SAS-Erweiterungskarte in Ihrem Speicher-Array ist abgeschlossen. Sie können den normalen Betrieb fortsetzen.

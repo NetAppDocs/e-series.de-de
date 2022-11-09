@@ -1,0 +1,99 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/san-spvc-ic-overview.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter, VMware vSphere Client 
+summary: Das SANtricity Storage Plug-in für vCenter ermöglicht das integrierte Management von E-Series Storage-Arrays innerhalb einer VMware vSphere Client-Session. 
+---
+= Überblick über das Storage Plug-in für vCenter
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+
+
+[role="lead"]
+Das SANtricity Storage Plug-in für vCenter ermöglicht das integrierte Management von E-Series Storage-Arrays innerhalb einer VMware vSphere Client-Session.
+
+
+
+== Verfügbare Aufgaben
+
+Sie können das Plugin verwenden, um die folgenden Aufgaben auszuführen:
+
+* Anzeigen und Verwalten erkannter Speicher-Arrays im Netzwerk.
+* Führen Sie Batch-Vorgänge auf Gruppen mehrerer Storage-Arrays durch.
+* Führen Sie Upgrades auf dem Software-Betriebssystem durch.
+* Einstellungen von einem Speicher-Array in ein anderes importieren.
+* Konfiguration von Volumes, SSD-Cache, Hosts, Host-Clustern, Pools Und Volume-Gruppen.
+* Starten Sie die System Manager-Schnittstelle, um zusätzliche Managementaufgaben auf einem Array auszuführen.
+
+
+
+NOTE: Das Plug-in ist kein direkter Ersatz für die System Manager Schnittstelle, die in jeden Controller für ein Storage Array integriert ist. System Manager bietet zusätzliche Management-Funktionen. Wenn gewünscht, können Sie den System Manager öffnen, indem Sie ein Speicher-Array in der Hauptansicht des Plugins auswählen und dann auf *Start* klicken.
+
+Das Plug-in erfordert eine in der VMware-Umgebung implementierte VMware vCenter Server Appliance und einen Anwendungshost, um den Plug-in-Webserver zu installieren und auszuführen.
+
+Weitere Informationen zur Kommunikation in der vCenter Umgebung finden Sie in der folgenden Abbildung.
+
+image:../media/vcenter_communication2.png[""]
+
+
+
+== Schnittstellenübersicht
+
+Wenn Sie sich beim Plugin anmelden, öffnet sich die Hauptseite zu *Verwalten - Alle*. Auf dieser Seite können Sie alle erkannten Speicher-Arrays im Netzwerk anzeigen und verwalten.
+
+
+
+=== Navigationsleiste rechts in der Seitenleiste
+
+In der Navigationsleiste wird Folgendes angezeigt:
+
+* *Verwalten* -- Entdecken Sie Speicher-Arrays in Ihrem Netzwerk, starten Sie System Manager für ein Array, importieren Sie Einstellungen von einem Array auf mehrere Arrays, managen Sie Array-Gruppen, aktualisieren Sie das SANtricity-Betriebssystem und stellen Sie Speicher bereit.
+* *Zertifikatverwaltung* -- Verwalten von Zertifikaten zur Authentifizierung zwischen Browsern und Clients.
+* *Operationen* -- Zeigen Sie den Fortschritt von Batch-Operationen, wie das Importieren von Einstellungen von einem Array in ein anderes.
+
+
+
+NOTE: Einige Vorgänge sind nicht verfügbar, wenn ein Speicherarray einen nicht optimalen Status hat.
+
+* *Support* -- Technische Support-Optionen, Ressourcen und Kontakte anzeigen.
+
+
+
+
+=== Unterstützte Browser
+
+Auf das Storage Plug-in für vCenter kann über verschiedene Browsertypen zugegriffen werden. Die folgenden Browser und Versionen werden unterstützt.
+
+* Google Chrome 89 oder höher
+* Mozilla Firefox 80 oder höher
+* Microsoft Edge 90 oder höher
+
+
+
+
+=== Benutzerrollen und Berechtigungen
+
+Für den Zugriff auf Aufgaben im Storage Plugin für vCenter muss der Benutzer über Lese-/Schreibberechtigungen verfügen. Standardmäßig verfügen alle definierten VMware vCenter-Benutzer-IDs über keine Berechtigungen zum Ausführen von Aufgaben im Plug-in.
+
+
+
+== Konfigurationsübersicht
+
+Die Konfiguration umfasst folgende Schritte:
+
+. link:san-spvc-ic-installation.html["Installieren und registrieren Sie das Plugin"].
+. link:san-spvc-ic-user-access.html["Konfigurieren Sie die Berechtigungen für den Plugin-Zugriff"].
+. link:san-spvc-ic-login-and-navigation.html["Melden Sie sich bei der Plug-in-Schnittstelle an"].
+. link:san-spvc-ic-storage-array-discovery.html["Erkennen Sie Storage-Arrays"].
+. link:san-spvc-ic-storage-provisioning.html["Bereitstellung von Storage"].
+
+
+
+
+== Weitere Informationen
+
+Weitere Informationen zum Verwalten von Datastores im vSphere Client finden Sie unter https://docs.vmware.com/en/VMware-vSphere/index.html["Dokumentation zu VMware vSphere"^].

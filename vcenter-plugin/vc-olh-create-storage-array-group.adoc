@@ -1,0 +1,26 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/vc-olh-create-storage-array-group.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
+summary: Die Speichergruppe definiert, welche Laufwerke den Speicher bereitstellen, aus dem das Volume besteht. 
+---
+= Speicherarray-Gruppe erstellen
+:hardbreaks:
+:allow-uri-read: 
+:experimental: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Sie erstellen Speichergruppen und fügen dann Speicher-Arrays zu den Gruppen hinzu. Die Speichergruppe definiert, welche Laufwerke den Speicher bereitstellen, aus dem das Volume besteht.
+
+*Schritte*
+
+. Wählen Sie auf der Seite Verwalten die Option MENU:Gruppen verwalten[Speicherarray-Gruppe erstellen].
+. Geben Sie im Feld *Name* einen Namen für die neue Gruppe ein.
+. Wählen Sie die Speicher-Arrays aus, die Sie der neuen Gruppe hinzufügen möchten.
+. Klicken Sie Auf *Erstellen*.
+

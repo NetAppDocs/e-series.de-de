@@ -1,0 +1,67 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/vc-olh-import-storage-configuration-settings.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
+summary: Importieren Sie die Speicherkonfiguration von einem Speicher-Array in andere Speicher-Arrays. 
+---
+= Importieren der Speicherkonfigurationseinstellungen
+:hardbreaks:
+:allow-uri-read: 
+:experimental: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Sie können die Speicherkonfiguration von einem Speicher-Array in andere Speicher-Arrays importieren. Dieser Batch-Betrieb spart Zeit, wenn Sie mehrere Arrays im Netzwerk konfigurieren müssen.
+
+Stellen Sie sicher, dass:
+
+* Storage ist in System Manager für das Storage-Array konfiguriert, das Sie als Quelle verwenden möchten.
+* Die vorhandene Konfiguration für die Ziel-Speicher-Arrays wird in System Manager gesichert (Menü:Einstellungen[System > Speicherarray-Konfiguration speichern]).
+* Sie haben die Anforderungen für die Replizierung von Speicherkonfigurationen in überprüft link:vc-olh-import-settings-overview.html["Überblick über die Einstellungen importieren"].
+* Quell- und Ziel-Arrays müssen die folgenden Anforderungen erfüllen:
++
+** Die Shelfs, in denen sich die Controller befinden, müssen identisch sein.
+** Shelf-IDs müssen identisch sein.
+** Erweiterungs-Shelfs müssen in denselben Steckplätzen mit denselben Laufwerkstypen bestückt werden.
+** Der Typ des RBOD-Gehäuses muss identisch sein.
+** Die HICs, einschließlich der Data Assurance-Funktionen des Hosts, müssen identisch sein.
+** Die Ziel-Arrays müssen den optimalen Status haben.
+** Die Volume-Kapazität auf dem Ziel-Array ist größer als die Kapazität des Quell-Arrays.
+
+
+* Sie verstehen die folgenden Einschränkungen:
++
+** Der Import von einer Duplex-Konfiguration in eine Simplex-Konfiguration wird nicht unterstützt. Der Import von Simplex in Duplex ist jedoch zulässig.
+** Laufwerk-Pool-Volumes mit einer Größe von mindestens 64 TB auf dem Quell-Array verhindern den Importvorgang auf den Zielen.
+
+
+
+
+Zu den importierten Einstellungen gehören konfigurierte Volumes (nur Thick- und nicht-Repository-Volumes), Volume-Gruppen, Pools und Hot-Spare-Laufwerkszuordnungen.
+
+.Schritte
+. Klicken Sie auf der Seite Verwalten auf Menü:Aktionen[Einstellungen importieren].
++
+Der Assistent für Importeinstellungen wird geöffnet.
+
+. Wählen Sie im Dialogfeld Einstellungen auswählen die Option *Speicherkonfiguration* aus und klicken Sie dann auf *Weiter*.
++
+Zum Auswählen des Quell-Arrays wird ein Dialogfeld geöffnet.
+
+. Wählen Sie im Dialogfeld Quelle auswählen das Array mit den zu importierenden Einstellungen aus, und klicken Sie dann auf *Weiter*.
+. Wählen Sie im Dialogfeld Ziele auswählen ein oder mehrere Arrays aus, um die neuen Einstellungen zu erhalten.
++
+
+NOTE: Speicher-Arrays mit Firmware unter 8.50 stehen nicht zur Auswahl. Darüber hinaus wird in diesem Dialogfeld kein Array angezeigt, wenn das Plug-in nicht mit diesem Array kommunizieren kann (z. B. wenn es offline ist oder wenn es Probleme mit Zertifikat, Kennwort oder Netzwerk hat).
+
+. Klicken Sie Auf *Fertig Stellen*.
++
+Auf der Seite Operationen werden die Ergebnisse des Importvorgangs angezeigt. Wenn der Vorgang fehlschlägt, können Sie auf die Zeile klicken, um weitere Informationen anzuzeigen.
+
+
+
+Die Ziel-Storage-Arrays sind nun mit derselben Storage-Konfiguration wie das Quell-Array konfiguriert.

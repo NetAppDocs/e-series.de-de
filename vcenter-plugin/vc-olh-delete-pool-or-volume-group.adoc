@@ -1,0 +1,45 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/vc-olh-delete-pool-or-volume-group.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
+summary: Löschen Sie einen Pool oder eine Volume-Gruppe, um mehr nicht zugewiesene Kapazität zu erstellen. Diese können Sie neu konfigurieren, um die Storage-Anforderungen Ihrer Applikationen zu erfüllen 
+---
+= Pool oder Volume-Gruppe löschen
+:hardbreaks:
+:allow-uri-read: 
+:experimental: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Sie können einen Pool oder eine Volume-Gruppe löschen, um mehr nicht zugewiesene Kapazität zu erstellen. Diese können Sie neu konfigurieren, um die Storage-Anforderungen Ihrer Applikation zu erfüllen.
+
+.Bevor Sie beginnen
+* Sie müssen die Daten auf allen Volumes im Pool oder in der Volume-Gruppe gesichert haben.
+* Sie müssen alle ein-/Ausgänge (E/A) angehalten haben.
+* Sie müssen die Bereitstellung von Dateisystemen auf den Volumes aufheben.
+* Sie müssen alle Spiegelbeziehungen im Pool oder in der Volume-Gruppe gelöscht haben.
+* Sie müssen alle laufenden Volume-Kopiervorgang für den Pool oder die Volume-Gruppe angehalten haben.
+* Der Pool oder die Volume-Gruppe darf nicht an einem asynchronen Spiegelungsvorgang teilnehmen.
+* Die Laufwerke in der Volume-Gruppe dürfen nicht über eine dauerhafte Reservierung verfügen.
+
+
+.Schritte
+. Wählen Sie auf der Seite Verwalten das Speicher-Array mit dem Pool oder der Volume-Gruppe aus.
+. Wählen Sie Menü:Provisioning[Pools und Volume-Gruppen konfigurieren].
+. Wählen Sie einen Pool oder eine Volume-Gruppe aus der Liste aus.
++
+Sie können jeweils nur einen Pool oder eine Volume-Gruppe auswählen. Scrollen Sie in der Liste nach unten, um weitere Pools oder Volume-Gruppen zu sehen.
+
+. Wählen Sie Menü:Sonstige Aufgaben[Löschen] und bestätigen Sie.
+
+
+Das System führt die folgenden Aktionen durch:
+
+* Löscht alle Daten im Pool oder der Volume-Gruppe.
+* Löscht alle Laufwerke, die dem Pool oder der Volume-Gruppe zugeordnet sind.
+* Hebt die Zuweisung der zugehörigen Laufwerke auf und ermöglicht die Wiederverwendung in neuen oder vorhandenen Pools oder Volume-Gruppen.
+

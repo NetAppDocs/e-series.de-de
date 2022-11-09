@@ -1,0 +1,260 @@
+---
+permalink: upgrade-santricity/upgrade-single-controller-task.html 
+sidebar: sidebar 
+keywords: E-Series, eseries, E2800, E5700, EF300, EF600, SANtricity, upgrade SANtricity, upgrade OS, upgrade E-Series, upgrade firmware, upgrading, upgrade IOM firmware, upgrade NVSRAM, upgrade controller 
+summary: Software- und Firmware-Upgrades für einen einzelnen E-Series Controller 
+---
+= Aktualisieren Sie Software und Firmware für einen einzigen Controller
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können ein einzelnes Controller-Upgrade durchführen, wodurch sichergestellt wird, dass Sie über alle neuesten Funktionen und Fixes verfügen.
+
+Im Rahmen dieses Prozesses wird die Software des Storage-Arrays und, optional, die IOM-Firmware und der nichtflüchtigen, statischen Random-Access-Speicher (NVSRAM) aktualisiert.
+
+.Bevor Sie beginnen
+* Prüfen link:overview-upgrade-consider-task.html["Upgrade-Überlegungen"].
+* Bestimmen Sie, ob Sie die NVSRAM-Datei des Controllers gleichzeitig mit der Betriebssystem-Firmware aktualisieren möchten.
++
+In der Regel sollten Sie alle Komponenten gleichzeitig aktualisieren. Sie entscheiden sich jedoch möglicherweise nicht, die NVSRAM-Controller-Datei zu aktualisieren, wenn Ihre Datei entweder gepatcht wurde oder eine benutzerdefinierte Version ist und Sie sie nicht überschreiben möchten.
+
+* Bestimmen Sie, ob Sie Ihre IOM-Firmware aktualisieren möchten.
++
+In der Regel sollten Sie alle Komponenten gleichzeitig aktualisieren. Sie können jedoch entscheiden, die IOM-Firmware nicht zu aktualisieren, wenn Sie sie nicht als Teil des Upgrades der SANtricity OS Software aktualisieren möchten oder wenn Sie vom technischen Support aufgefordert wurden, Ihre IOM-Firmware herunterzustufen (Sie können nur die Firmware über die Befehlszeilenschnittstelle herunterstufen).
+
+* Entscheiden Sie, ob Sie Ihr Betriebssystem-Upgrade jetzt oder später aktivieren möchten.
++
+Gründe für eine spätere Aktivierung sind u. a.:
+
++
+** *Tageszeit* – die Aktivierung von Software und Firmware kann lange dauern, sodass Sie warten möchten, bis die E/A-Last leichter ist. Der Controller-Failover während der Aktivierung, sodass die Performance möglicherweise niedriger ist als üblich, bis das Upgrade abgeschlossen ist.
+** *Paketyp* – möglicherweise möchten Sie die neue Software und Firmware auf einem Speicher-Array testen, bevor Sie die Dateien auf anderen Speicher-Arrays aktualisieren.
+
+
+
+
+
+
+== Schritt 1: Laden Sie Software-Dateien von der Support-Website
+
+In diesem Schritt speichern Sie auf der NetApp Support Site die neuen DLP-Dateien (Download Package) in Ihrem Management-Host-System.
+
+Wie lange das Upgrade erforderlich ist, hängt von der Konfiguration des Storage-Arrays und den Upgrade-Komponenten ab.
+
+.Schritte
+. Wenn Ihr Storage-Array nur einen Controller enthält oder kein Multipath-Treiber installiert ist, beenden Sie die I/O-Aktivität des Storage-Arrays, um Applikationsfehler zu vermeiden. Wenn Ihr Storage Array über zwei Controller verfügt und Sie einen Multipath-Treiber installiert haben, müssen Sie die I/O-Aktivität nicht stoppen.
++
+
+CAUTION: Bei einem Upgrade von SANtricity OS auf einer StorageGRID Appliance (z. B. SG5612 oder SG5760) müssen I/O-Aktivitäten angehalten werden, indem die Appliance in den Wartungsmodus versetzt wird, bevor Sie mit diesem Verfahren fortfahren. Andernfalls könnten die Daten verloren gehen. Ausführliche Schritte finden Sie in der Installations- und Wartungsanleitung für Ihre StorageGRID-Appliance.
+
+. Wählen Sie in der System Manager-Benutzeroberfläche Menü:Support[Upgrade Center].
+. Klicken Sie im Bereich „SANtricity OS Software Upgrade“ auf *NetApp SANtricity OS Downloads*, um die NetApp Support Site zu öffnen.
+. Wählen Sie auf der Seite Downloads die Option *E-Series SANtricity OS Controller Software* aus.
++
+
+NOTE: In Version 8.42 und höher ist digital signierte Firmware erforderlich. Wenn Sie versuchen, nicht signierte Firmware herunterzuladen, wird ein Fehler angezeigt und der Download wird abgebrochen.
+
+. Folgen Sie den Anweisungen auf dem Bildschirm, um die neueste OS-Software für Ihr Controller-Modell herunterzuladen. Wenn Sie auch die NVSRAM aktualisieren möchten, laden Sie die NVSRAM-Datei für einen einzelnen Controller herunter.
+
+
+
+
+== Schritt 2: Übertragen Sie Software-Dateien auf die Controller
+
+In diesem Schritt übertragen Sie die Software-Dateien auf Ihren Controller, damit Sie mit dem Upgrade-Prozess beginnen können. Die Komponenten werden vom Management-Client auf die Controller kopiert und in einen Staging-Bereich im Flash-Speicher platziert.
+
+
+CAUTION: *Risiko eines Datenverlustes oder eines Schadensrisikos am Speicher-Array* -- nehmen Sie während des Upgrades keine Änderungen am Speicher-Array vor. Halten Sie den Strom für das Speicher-Array aufrecht.
+
+.Schritte
+. (Optional). Wenn Sie während eines bestimmten Wartungsfensters ein Upgrade durchführen möchten, sollten Sie möglicherweise eine Integritätsprüfung vor dem Upgrade durchführen, um festzustellen, ob im Voraus größere Probleme mit dem Storage-Array auftreten. Wenn dies der Fall ist, wählen Sie im Upgrade Center in System Manager im System Manager die Option *Integritätsprüfung vor dem Upgrade* aus (Menü:Support[Upgrade Center]) und befolgen Sie die Anweisungen auf dem Bildschirm. Andernfalls können Sie diesen Schritt überspringen, da eine Integritätsprüfung Teil des Upgrade-Prozesses ist.
+. Wenn Sie die IOM-Firmware derzeit NICHT aktualisieren möchten, klicken Sie auf *EAM-Auto-Synchronisierung unterbrechen* und befolgen Sie die Anweisungen im Dialogfeld.
++
+Wenn Sie über ein Speicher-Array mit einem einzelnen Controller verfügen, wird die IOM-Firmware nicht aktualisiert.
+
+. Klicken Sie im Upgrade Center im System Manager auf *Upgrade starten* unter „SANtricity OS Software Upgrade“.
++
+Das Dialogfeld SANtricity OS-Software aktualisieren wird angezeigt.
+
+. Wählen Sie eine oder mehrere Dateien aus, um den Upgrade-Prozess zu starten:
++
+.. Wählen Sie die SANtricity OS-Softwaredatei aus, indem Sie auf *Durchsuchen* klicken und zur Betriebssystemsoftware navigieren, die Sie von der Support-Website heruntergeladen haben.
+.. Wählen Sie die NVSRAM-Controller-Datei aus, indem Sie auf *Durchsuchen* klicken und zur NVSRAM-Datei navigieren, die Sie von der Support-Website heruntergeladen haben. Controller-NVSRAM-Dateien haben einen ähnlichen Dateinamen wie `N2800-830000-000.dlp`.
+
+
++
+Diese Aktionen treten auf:
+
++
+** Standardmäßig werden nur die Dateien angezeigt, die mit der aktuellen Speicherarray-Konfiguration kompatibel sind.
+** Wenn Sie eine Datei für die Aktualisierung auswählen, werden Name und Größe der Datei angezeigt.
+
+
+. (Optional) Wenn Sie eine SANtricity OS-Softwaredatei zum Upgrade ausgewählt haben, können Sie die Dateien auf den Controller übertragen, ohne sie zu aktivieren, indem Sie das Kontrollkästchen *Dateien übertragen auswählen, aber nicht aktualisieren (später aktualisieren)* aktivieren.
+. Klicken Sie auf *Start* und bestätigen Sie, dass Sie den Vorgang ausführen möchten.
++
+Sie können den Vorgang während der Integritätsprüfung vor dem Upgrade abbrechen, jedoch nicht während der Übertragung oder Aktivierung.
+
+. (Optional) um eine Liste der aktualisierten Versionen anzuzeigen, klicken Sie auf *Protokoll speichern*.
++
+Die Datei wird im Ordner Downloads für Ihren Browser mit dem Namen gespeichert. `drive_upgrade_log-timestamp.txt`.
+
+
+
+Wenn Sie Ihre Softwaredateien bereits aktiviert haben, gehen Sie zu  4: Complete software and firmware upgrade; Sonst, gehen Sie zu  3: Activate software files.
+
+
+
+== Schritt 3: Aktivieren Sie Software-Dateien
+
+Führen Sie diesen Schritt nur aus, wenn Sie über Software oder Firmware verfügen, die zwar übertragen, aber nicht aktiviert wurde. Um diesen Status zu überprüfen, suchen Sie im Bereich Benachrichtigungen auf der System Manager-Startseite oder auf der Seite Upgrade Center nach einer Benachrichtigung.
+
+Wenn Sie den Aktivierungsvorgang durchführen, wird die aktuelle Software und Firmware durch die neue Software und Firmware ersetzt. Sie können den Aktivierungsvorgang nach dem Start nicht beenden.
+
+.Schritte
+. Wählen Sie in der System Manager-Benutzeroberfläche Menü:Support[Upgrade Center].
+. Klicken Sie im Bereich „SANtricity OS Software Upgrade“ auf *Aktivieren* und bestätigen Sie, dass Sie den Vorgang ausführen möchten.
+. (Optional) um eine Liste der aktualisierten Versionen anzuzeigen, klicken Sie auf *Protokoll speichern*.
++
+Die Datei wird im Ordner Downloads für Ihren Browser mit dem Namen gespeichert. `drive_upgrade_log-timestamp.txt`.
+
+
+
+
+
+== Schritt 4: Software- und Firmware-Upgrade abschließen
+
+Führen Sie das Software- und Firmware-Upgrade durch, indem Sie die Versionen im Dialogfeld Software- und Firmware-Bestandsaufnahme überprüfen.
+
+.Bevor Sie beginnen
+* Sie müssen Ihre Software oder Firmware aktiviert haben.
+
+
+.Schritte
+. Stellen Sie in System Manager sicher, dass alle Komponenten auf der Seite Hardware angezeigt werden.
+. Überprüfen Sie die neuen Software- und Firmware-Versionen, indem Sie das Dialogfeld Software- und Firmware-Bestandsaufnahme aktivieren (gehen Sie zu Menü:Support[Upgrade Center] und klicken Sie dann auf den Link für *Software- und Firmware-Bestandsaufnahme*).
+. Wenn Sie den Controller NVSRAM aktualisiert haben, gehen während der Aktivierung alle benutzerdefinierten Einstellungen, die Sie auf den vorhandenen NVSRAM angewendet haben, verloren. Sie müssen die benutzerdefinierten Einstellungen erneut auf den NVSRAM anwenden, nachdem der Aktivierungsvorgang abgeschlossen ist.
+. Wenn während des Aktualisierungsvorgangs eines der folgenden Fehler auftritt, ergreifen Sie die entsprechende empfohlene Maßnahme.
++
+|===
+| Wenn dieser Fehler beim Herunterladen der Firmware auftritt... | Führen Sie dann folgende Schritte aus... 
+
+
+ a| 
+Ausgefallene zugewiesene Laufwerke
+ a| 
+Ein Grund für den Fehler könnte sein, dass das Laufwerk nicht über die entsprechende Signatur verfügt. Stellen Sie sicher, dass es sich bei dem betroffenen Laufwerk um ein autorisiertes Laufwerk handelt. Weitere Informationen erhalten Sie vom technischen Support.
+
+Stellen Sie beim Austausch eines Laufwerks sicher, dass das Ersatzlaufwerk eine Kapazität hat, die der des ausgefallenen Laufwerks entspricht oder größer ist als das ausgefallene Laufwerk, das Sie ersetzen.
+
+Sie können das ausgefallene Laufwerk ersetzen, während das Speicher-Array I/O-Vorgänge erhält
+
+
+
+ a| 
+Prüfen Sie das Speicher-Array
+ a| 
+** Stellen Sie sicher, dass jedem Controller eine IP-Adresse zugewiesen wurde.
+** Stellen Sie sicher, dass alle an den Controller angeschlossenen Kabel nicht beschädigt sind.
+** Stellen Sie sicher, dass alle Kabel fest angeschlossen sind.
+
+
+
+
+ a| 
+Integrierte Hot-Spare-Laufwerke
+ a| 
+Diese Fehlerbedingung muss korrigiert werden, bevor Sie die Firmware aktualisieren können. Starten Sie System Manager und beheben Sie das Problem mit dem Recovery Guru.
+
+
+
+ a| 
+Unvollständige Volume-Gruppen
+ a| 
+Wenn eine oder mehrere Volume-Gruppen oder Disk Pools unvollständig sind, müssen Sie diese Fehlerbedingung korrigieren, bevor Sie die Firmware aktualisieren können. Starten Sie System Manager und beheben Sie das Problem mit dem Recovery Guru.
+
+
+
+ a| 
+Exklusive Vorgänge (nicht für Medien-/Paritäts-Scan im Hintergrund), die derzeit auf Volume-Gruppen ausgeführt werden
+ a| 
+Wenn ein oder mehrere exklusive Vorgänge ausgeführt werden, müssen die Vorgänge abgeschlossen sein, bevor die Firmware aktualisiert werden kann. Überwachen Sie den Fortschritt des Betriebs mit System Manager.
+
+
+
+ a| 
+Fehlende Volumes
+ a| 
+Sie müssen den fehlenden Datenträgerzustand korrigieren, bevor die Firmware aktualisiert werden kann. Starten Sie System Manager und beheben Sie das Problem mit dem Recovery Guru.
+
+
+
+ a| 
+Beide Controller befinden sich in einem anderen Zustand als optimal
+ a| 
+Einer der Controller des Storage Arrays muss Aufmerksamkeit schenken. Diese Bedingung muss korrigiert werden, bevor die Firmware aktualisiert werden kann. Starten Sie System Manager und beheben Sie das Problem mit dem Recovery Guru.
+
+
+
+ a| 
+Falsche Informationen zur Speicherpartition zwischen Controller-Objektgrafiken
+ a| 
+Beim Validieren der Daten auf den Controllern ist ein Fehler aufgetreten. Wenden Sie sich an den technischen Support, um dieses Problem zu lösen.
+
+
+
+ a| 
+Die SPM-Überprüfung des Datenbank-Controllers schlägt fehl
+ a| 
+Auf einem Controller ist ein Fehler bei der Zuordnung von Speicherpartitionen zur Datenbank aufgetreten. Wenden Sie sich an den technischen Support, um dieses Problem zu lösen.
+
+
+
+ a| 
+Überprüfung der Konfigurationsdatenbank (sofern von der Controller-Version des Speicherarrays unterstützt)
+ a| 
+Auf einem Controller ist ein Fehler in der Konfigurationsdatenbank aufgetreten. Wenden Sie sich an den technischen Support, um dieses Problem zu lösen.
+
+
+
+ a| 
+MEL-bezogene Prüfungen
+ a| 
+Wenden Sie sich an den technischen Support, um dieses Problem zu lösen.
+
+
+
+ a| 
+In den letzten 7 Tagen wurden mehr als 10 DDE-Informations- oder kritische MEL-Ereignisse gemeldet
+ a| 
+Wenden Sie sich an den technischen Support, um dieses Problem zu lösen.
+
+
+
+ a| 
+In den letzten 7 Tagen wurden mehr als 2 Seiten 2C kritische MEL-Ereignisse gemeldet
+ a| 
+Wenden Sie sich an den technischen Support, um dieses Problem zu lösen.
+
+
+
+ a| 
+In den letzten 7 Tagen wurden mehr als 2 heruntergestuften Drive Channel-kritische MEL-Ereignisse gemeldet
+ a| 
+Wenden Sie sich an den technischen Support, um dieses Problem zu lösen.
+
+
+
+ a| 
+Mehr als 4 kritische MEL-Einträge in den letzten 7 Tagen
+ a| 
+Wenden Sie sich an den technischen Support, um dieses Problem zu lösen.
+
+|===
+
+
+Das Upgrade der Controller-Software ist abgeschlossen. Sie können den normalen Betrieb fortsetzen.

@@ -1,0 +1,28 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/vc-olh-what-settings-are-imported.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
+summary: Die Funktion „Importeinstellungen“ ist ein Batch-Vorgang, bei dem Konfigurationen von einem Speicher-Array auf mehrere Speicher-Arrays geladen werden. Die während dieses Vorgangs importierten Einstellungen hängen davon ab, wie das Quell-Speicher-Array in System Manager konfiguriert ist. 
+---
+= Welche Einstellungen werden importiert?
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Die Funktion „Importeinstellungen“ ist ein Batch-Vorgang, bei dem Konfigurationen von einem Speicher-Array auf mehrere Speicher-Arrays geladen werden.
+
+Die während dieses Vorgangs importierten Einstellungen hängen davon ab, wie das Quell-Speicher-Array in System Manager konfiguriert ist. Die folgenden Einstellungen können in mehrere Speicher-Arrays importiert werden:
+
+* *E-Mail-Alarme* -- Einstellungen beinhalten eine E-Mail-Server-Adresse und die E-Mail-Adressen der Warnungsempfänger.
+* *Syslog Alerts* -- Einstellungen beinhalten eine Syslog-Serveradresse und einen UDP-Port.
+* *SNMP Alerts* -- Einstellungen beinhalten einen Community-Namen und eine IP-Adresse für den SNMP-Server.
+* *AutoSupport* -- Einstellungen umfassen die separaten Funktionen (Basic AutoSupport, AutoSupport OnDemand und Remote Diagnostics), das Wartungsfenster, die Bereitstellungsmethode, Und dem Versandplan.
+* *Directory Services* -- die Konfiguration umfasst den Domänennamen und die URL eines LDAP-Servers (Lightweight Directory Access Protocol) sowie die Zuordnungen für die Benutzergruppen des LDAP-Servers zu den vordefinierten Rollen des Speicher-Arrays.
+* *Speicherkonfiguration* -- Konfigurationen umfassen Volumes (nur dicke und nur nicht-Repository-Volumes), Volume-Gruppen, Pools und Hot-Spare-Laufwerkszuordnungen.
+* *Systemeinstellungen* -- Konfigurationen umfassen Medien-Scan-Einstellungen für ein Volume, SSD-Cache für Controller und automatischen Lastausgleich (ohne Berichterstellung über Hostkonnektivität).
+

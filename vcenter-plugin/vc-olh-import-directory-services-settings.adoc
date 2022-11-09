@@ -1,0 +1,50 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/vc-olh-import-directory-services-settings.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
+summary: Importieren einer Verzeichnisdienstkonfiguration von einem Speicher-Array in andere Speicher-Arrays. 
+---
+= Einstellungen für Verzeichnisdienste importieren
+:hardbreaks:
+:allow-uri-read: 
+:experimental: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Sie können eine Konfiguration für Verzeichnisdienste von einem Speicher-Array in andere Speicher-Arrays importieren. Dieser Batch-Betrieb spart Zeit, wenn Sie mehrere Arrays im Netzwerk konfigurieren müssen.
+
+Stellen Sie sicher, dass:
+
+* Verzeichnisdienste werden in System Manager (Menü:Einstellungen[Zugriffsverwaltung]) für das Speicherarray konfiguriert, das als Quelle verwendet werden soll.
+* Die vorhandene Konfiguration für die Ziel-Speicher-Arrays wird in System Manager gesichert (Menü:Einstellungen[System > Speicherarray-Konfiguration speichern]).
+* Sie haben die Anforderungen für die Replizierung von Speicherkonfigurationen in überprüft link:vc-olh-import-settings-overview.html["Überblick über die Einstellungen importieren"].
+
+
+Zu den importierten Einstellungen gehören der Domänenname und die URL eines LDAP-Servers (Lightweight Directory Access Protocol) sowie die Zuordnungen der Benutzergruppen des LDAP-Servers zu den vordefinierten Rollen des Speicher-Arrays.
+
+.Schritte
+. Klicken Sie auf der Seite Verwalten auf Menü:Aktionen[Einstellungen importieren].
++
+Der Assistent für Importeinstellungen wird geöffnet.
+
+. Wählen Sie im Dialogfeld Einstellungen auswählen die Option *Verzeichnisdienste* aus und klicken Sie dann auf *Weiter*.
++
+Zum Auswählen des Quell-Arrays wird ein Dialogfeld geöffnet.
+
+. Wählen Sie im Dialogfeld Quelle auswählen das Array mit den zu importierenden Einstellungen aus, und klicken Sie dann auf *Weiter*.
+. Wählen Sie im Dialogfeld Ziele auswählen ein oder mehrere Arrays aus, um die neuen Einstellungen zu erhalten.
++
+
+NOTE: Speicher-Arrays mit Firmware unter 8.50 stehen nicht zur Auswahl. Darüber hinaus wird in diesem Dialogfeld kein Array angezeigt, wenn das Plug-in nicht mit diesem Array kommunizieren kann (z. B. wenn es offline ist oder wenn es Probleme mit Zertifikat, Kennwort oder Netzwerk hat).
+
+. Klicken Sie Auf *Fertig Stellen*.
++
+Auf der Seite Operationen werden die Ergebnisse des Importvorgangs angezeigt. Wenn der Vorgang fehlschlägt, können Sie auf die Zeile klicken, um weitere Informationen anzuzeigen.
+
+
+
+Die Ziel-Storage-Arrays sind nun mit denselben Verzeichnisdiensten konfiguriert wie das Quell-Array.

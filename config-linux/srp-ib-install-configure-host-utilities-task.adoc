@@ -1,0 +1,26 @@
+---
+permalink: config-linux/srp-ib-install-configure-host-utilities-task.html 
+sidebar: sidebar 
+keywords: Unified Host Utilities, express linux configuration, software configuration, linux host, E2800, E5700, EF300, EF600, E-Series, eseries 
+summary: Linux Unified Host Utilities 7.1 enthält Tools für das Management von NetApp Storage, einschließlich Failover-Richtlinien und physischen Pfaden. 
+---
+= Installieren und konfigurieren Sie Linux Host Utilities
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Das Paket Linux Unified Host Utilities enthält Tools für die Verwaltung von NetApp Storage, einschließlich Failover-Richtlinien und physischen Pfaden.
+
+.Schritte
+. Verwenden Sie die https://mysupport.netapp.com/matrix["NetApp Interoperabilitäts-Matrix-Tool"^] Bestimmen der entsprechenden Version der zu installierenden Unified Host Utilities.
++
+Die Versionen werden in jeder unterstützten Konfiguration in einer Spalte aufgelistet.
+
+. Laden Sie die Unified Host Utilities von herunter https://mysupport.netapp.com/site/["NetApp Support"^].
++
+
+NOTE: Alternativ können Sie das Dienstprogramm SANtricity SMDevices verwenden, um die gleichen Funktionen wie das Unified Host Utility-Tool auszuführen. Das Dienstprogramm SMDevices ist Teil des SMutils-Pakets. Das SMutils-Paket ist eine Sammlung von Dienstprogrammen, um zu überprüfen, was der Host vom Speicher-Array sieht. Sie ist Teil der SANtricity Softwareinstallation.
+
+

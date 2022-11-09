@@ -1,0 +1,126 @@
+---
+permalink: config-linux/nvme-roce-access-virtual-targets-concept.html 
+sidebar: sidebar 
+keywords: NVMe volume virtual, express linux configuration, software configuration, linux host, E2800, E5700, EF300, EF600, E-Series, eseries 
+summary: Sie können den auf das Geräteziel gerichteten I/O basierend auf Ihrer Linux-Version konfigurieren. 
+---
+= Auf NVMe Volumes für Virtual-Device-Ziele zugreifen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können die I/O-Vorgänge, die auf das Geräteziel geleitet werden, basierend auf dem Betriebssystem (und der Multipathing-Methode mit der Erweiterung) konfigurieren.
+
+Für RHEL 7 und SLES 12 wird I/O vom Linux-Host auf virtuelle Geräteziele geleitet. DM-MP verwaltet die physischen Pfade, die diesen virtuellen Zielen zugrunde liegen.
+
+
+
+== Virtuelle Geräte sind I/O-Ziele
+
+Stellen Sie sicher, dass Sie I/O nur zu den virtuellen Geräten ausführen, die von DM-MP erstellt wurden, und nicht zu den physischen Gerätepfaden. Wenn Sie I/O zu den physischen Pfaden ausführen, kann DM-MP kein Failover-Ereignis verwalten, und die I/O schlägt fehl.
+
+Über den können Sie auf diese Blockgeräte zugreifen `dm` Gerät oder der `symlink` In /dev/mapper. Beispiel:
+
+[listing]
+----
+/dev/dm-1
+/dev/mapper/eui.00001bc7593b7f5f00a0980000af4462
+----
+
+
+== Beispiel
+
+Die Ausgabe des folgenden Beispiels aus dem `nvme list` Der Befehl zeigt den Namen des Host-Node und seine Korrelation mit der Namespace-ID an.
+
+[listing]
+----
+
+NODE         SN           MODEL           NAMESPACE
+
+/dev/nvme1n1 021648023072 NetApp E-Series 10
+/dev/nvme1n2 021648023072 NetApp E-Series 11
+/dev/nvme1n3 021648023072 NetApp E-Series 12
+/dev/nvme1n4 021648023072 NetApp E-Series 13
+/dev/nvme2n1 021648023151 NetApp E-Series 10
+/dev/nvme2n2 021648023151 NetApp E-Series 11
+/dev/nvme2n3 021648023151 NetApp E-Series 12
+/dev/nvme2n4 021648023151 NetApp E-Series 13
+----
+|===
+| Spalte | Beschreibung 
+
+
+ a| 
+`Node`
+ a| 
+Der Node-Name enthält zwei Teile:
+
+* Die Schreibweise `nvme1` Steht für Controller A und `nvme2` Zeigt Controller B an
+* Die Schreibweise `n1`, `n2`, Und so weiter repräsentieren die Namespace-Kennung aus der Host-Perspektive. Diese Kennungen werden in der Tabelle einmal für Controller A und einmal für Controller B wiederholt
+
+
+
+
+ a| 
+`Namespace`
+ a| 
+In der Spalte Namespace wird die Namespace-ID (NSID) aufgelistet, die die Kennung aus der Perspektive des Speicher-Arrays darstellt.
+
+|===
+Im Folgenden `multipath -ll` Ausgabe, die optimierten Pfade werden mit einem angezeigt `prio` Der Wert 50, während die nicht-optimierten Pfade mit einem dargestellt werden `prio` Wert von 10.
+
+Das Linux-Betriebssystem leitet I/O zur Pfadgruppe weiter, die als angezeigt wird `status=active`, Während die Pfadgruppen als aufgeführt `status=enabled` Sind für Failover verfügbar.
+
+[listing]
+----
+eui.00001bc7593b7f500a0980000af4462 dm-0 NVME,NetApp E-Series
+size=15G features='1 queue_if_no_path' hwhandler='0' wp=rw
+|-+- policy='service-time 0' prio=50 status=active
+| `- #:#:#:# nvme1n1 259:5 active ready running
+`-+- policy='service-time 0' prio=10 status=enabled
+  `- #:#:#:# nvme2n1 259:9  active ready running
+
+eui.00001bc7593b7f5f00a0980000af4462 dm-0 NVME,NetApp E-Series
+size=15G features='1 queue_if_no_path' hwhandler='0' wp=rw
+|-+- policy='service-time 0' prio=0 status=enabled
+| `- #:#:#:# nvme1n1 259:5 failed faulty running
+`-+- policy='service-time 0' prio=10 status=active
+  `- #:#:#:# nvme2n1 259:9  active ready running
+----
+|===
+| Position | Beschreibung 
+
+
+ a| 
+`policy='service-time 0' prio=50 status=active`
+ a| 
+Diese Zeile und die folgende Zeile zeigen das `nvme1n1`, Das ist der Namespace mit einer NSID von 10, ist auf dem Pfad mit einem optimiert `prio` Wert 50 und A `status` Der Wert von `active`.
+
+Dieser Namespace gehört zu Controller A.
+
+
+
+ a| 
+`policy='service-time 0' prio=10 status=enabled`
+ a| 
+Diese Zeile zeigt den Failover-Pfad für Namespace 10, mit einem `prio` Wert 10 und A `status` Der Wert von `enabled`. I/O wird derzeit nicht zum Namespace auf diesem Pfad geleitet.
+
+Dieser Namespace gehört zu Controller B.
+
+
+
+ a| 
+`policy='service-time 0' prio=0 status=enabled`
+ a| 
+Dieses Beispiel zeigt ``multipath -ll``Ausgabe von einem anderen Zeitpunkt, während Controller A neu gebootet wird Der Pfad zu Namespace 10 wird als angezeigt Mit einem `prio` Wert 0 und A `status` Der Wert von `enabled`.
+
+
+
+ a| 
+`policy='service-time 0' prio=10 status=active`
+ a| 
+Beachten Sie, dass die `active` Pfad bezieht sich auf `nvme2`, Also wird die I/O auf diesem Pfad zu Controller B geleitet.
+
+|===

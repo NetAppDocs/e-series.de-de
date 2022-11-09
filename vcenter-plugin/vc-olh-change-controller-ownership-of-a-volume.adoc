@@ -1,0 +1,39 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/vc-olh-change-controller-ownership-of-a-volume.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
+summary: Ändern Sie den bevorzugten Controller-Besitz eines Volumes, sodass I/O für Host-Applikationen durch den neuen Pfad geleitet wird. 
+---
+= Ändern Sie den Controller-Eigentum eines Volumes
+:hardbreaks:
+:allow-uri-read: 
+:experimental: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Sie können den bevorzugten Controller-Besitz eines Volumes ändern, sodass die I/O-Vorgänge für Host-Applikationen durch den neuen Pfad geleitet werden.
+
+Falls Sie keinen Multipath-Treiber verwenden, müssen alle Host-Applikationen, die derzeit das Volume verwenden, heruntergefahren werden. Dadurch werden Anwendungsfehler verhindert, wenn sich der I/O-Pfad ändert.
+
+Sie können die Controller-Eigentumsrechte für ein oder mehrere Volumes in einem Pool oder einer Volume-Gruppe ändern.
+
+.Schritte
+. Wählen Sie auf der Seite Verwalten das Storage-Array aus, das die Volumes enthält, für die Sie den Controller-Besitz ändern möchten.
+. Wählen Sie MENU:Provisioning[Volumes verwalten].
+. Wählen Sie ein beliebiges Volume aus, und wählen Sie dann Menü:Mehr[Eigentümerschaft ändern].
++
+Das Dialogfeld Volume-Eigentümer ändern wird angezeigt. In diesem Dialogfeld werden alle Volumes im Speicher-Array angezeigt.
+
+. Verwenden Sie die Dropdown-Liste *bevorzugter Eigentümer*, um den bevorzugten Controller für jedes zu ändernden Volume zu ändern, und bestätigen Sie, dass Sie den Vorgang ausführen möchten.
+
+
+.Ergebnisse
+* Das System ändert den Controller-Eigentümer des Volume. Die I/O-Vorgänge zum Volume werden jetzt durch diesen I/O-Pfad geleitet.
+* Auf dem Volume wird möglicherweise der neue I/O-Pfad erst dann verwendet, wenn der Multipath-Treiber den neuen Pfad erkennt.
+
+
+Diese Aktion dauert in der Regel weniger als fünf Minuten.

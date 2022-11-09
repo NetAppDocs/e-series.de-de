@@ -1,0 +1,167 @@
+---
+permalink: config-linux/iser-ib-configure-network-attached-hosts-task.html 
+sidebar: sidebar 
+keywords: configure network Linux, configure hosts linux, express linux configuration, linux host, 
+summary: Der InfiniBand-OFED-Treiber-Stack unterstützt sowohl iSER als auch SRP gleichzeitig auf den gleichen Ports, sodass keine zusätzliche Hardware erforderlich ist. 
+---
+= Konfigurieren Sie das Netzwerk für Storage-verbundene Hosts
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Wenn Ihre Konfiguration das iSER-over-InfiniBand-Protokoll verwendet, führen Sie die in diesem Abschnitt beschriebenen Schritte aus.
+
+Der InfiniBand-OFED-Treiber-Stack unterstützt sowohl iSER als auch SRP gleichzeitig auf den gleichen Ports, sodass keine zusätzliche Hardware erforderlich ist.
+
+Ein von NetApp empfohlenes OFED, das auf dem System installiert ist. Weitere Informationen finden Sie im https://mysupport.netapp.com/matrix["NetApp Interoperabilitäts-Matrix-Tool"^].
+
+.Schritte
+. Aktivieren und Starten von iSCSI-Diensten auf den Hosts:
++
+* Red hat Enterprise Linux 7, 8 und 9 (RHEL 7, RHEL 8 und RHEL 9)*
+
++
+[listing]
+----
+
+# systemctl start iscsi
+# systemctl start iscsid
+# systemctl enable iscsi
+# systemctl enable iscsid
+----
++
+*SUSE Linux Enterprise Server 12 und 15 (SLES 12 und SLES 15)*
+
++
+[listing]
+----
+
+# systemctl start iscsid.service
+# systemctl enable iscsid.service
+----
+. Konfigurieren von Netzwerkschnittstellen der InfiniBand-Karte:
++
+.. Geben Sie die verwendeten InfiniBand-Ports an. Dokumentieren Sie die HW-Adresse (MAC-Adresse) jedes Ports.
+.. Konfigurieren Sie persistente Namen für die Geräte der InfiniBand-Netzwerkschnittstelle.
+.. Konfigurieren Sie die IP-Adresse und Netzwerkinformationen für die angegebenen InfiniBand-Schnittstellen.
++
+Die erforderliche Schnittstellenkonfiguration kann je nach verwendetem Betriebssystem variieren. Weitere Informationen zur Implementierung finden Sie in der Dokumentation des Betriebssystems Ihres Anbieters.
+
+.. Starten Sie die IB-Netzwerkschnittstellen, indem Sie den Netzwerkdienst neu starten oder jede Schnittstelle manuell neu starten. Beispiel:
++
+[listing]
+----
+systemctl restart network
+----
+.. Überprüfen Sie die Verbindung zu den Ziel-Ports. Vom Host aus pingen Sie die IP-Adressen, die Sie beim Konfigurieren von Netzwerkverbindungen konfiguriert haben.
+
+
+. Starten Sie die Dienste neu, um das iSER-Modul zu laden.
+. Bearbeiten Sie die iSCSI-Einstellungen in /etc/iscsi/iscsid.conf.
++
+[listing]
+----
+node.startup = automatic
+replacement_timeout = 20
+----
+. Erstellen von iSCSI-Sitzungskonfigurationen:
++
+.. Erstellen Sie iface-Konfigurationsdateien für jede InfiniBand-Schnittstelle.
++
+
+NOTE: Der Verzeichnis für die iSCSI-iface-Dateien ist vom Betriebssystem abhängig. Dieses Beispiel ist für die Verwendung von Red hat Enterprise Linux:
+
++
+[listing]
+----
+iscsiadm -m iface -I iser > /var/lib/iscsi/ifaces/iface-ib0
+iscsiadm -m iface -I iser > /var/lib/iscsi/ifaces/iface-ib1
+----
+.. Bearbeiten Sie die einzelnen iface-Dateien, um den Schnittstellennamen und den Initiator-IQN festzulegen. Legen Sie für jede iface-Datei die folgenden Parameter fest:
++
+|===
+| Option | Wert 
+
+
+ a| 
+iface.net_ifacename
+ a| 
+Der Name des Schnittstellengeräts (z. B. ib0).
+
+
+
+ a| 
+iface.initiatorname
+ a| 
+Der Host-Initiator-IQN wurde im Arbeitsblatt dokumentiert.
+
+|===
+.. Erstellen Sie iSCSI-Sitzungen zum Ziel.
++
+Die bevorzugte Methode, um die Sitzungen zu erstellen, ist die SendTargets-Ermittlungsmethode zu verwenden. Bei einigen Betriebssystemversionen funktioniert diese Methode jedoch nicht.
+
++
+
+NOTE: Verwenden Sie *Method 2* für RHEL 6.x oder SLES 11.3 oder höher.
+
++
+*** *Methode 1 - SendTargets Discovery:* Verwenden Sie den SendTargets Discovery-Mechanismus zu einer der Zielportal-IP-Adressen. Auf diese Weise werden Sitzungen für jedes Zielportale erstellt.
++
+[listing]
+----
+iscsiadm -m discovery -t st -p 192.168.130.101 -I iser
+----
+*** *Methode 2 - Manuelle Erstellung:* für jede Zielportal-IP-Adresse erstellen Sie eine Sitzung mit der entsprechenden Hostschnittstelle iface-Konfiguration. In diesem Beispiel befindet sich die Schnittstelle ib0 im Subnetz A und die Schnittstelle ib1 befindet sich im Subnetz B. Ersetzen Sie für diese Variablen den entsprechenden Wert aus dem Arbeitsblatt:
++
+**** <Ziel-IQN> = Speicher-Array-Ziel-IQN
+**** <Zielport-IP> = auf dem angegebenen Zielport konfigurierte IP-Adresse
+
+
+
+
+
+
++
+[listing]
+----
+# Controller A Port 1
+iscsiadm -m node --target <Target IQN> -I iface-ib0 -p <Target Port IP\> -l -o new
+# Controller B Port 1
+iscsiadm -m node --target <Target IQN> -I iface-ib0 -p <Target Port IP\> -l -o new
+# Controller A Port 2
+iscsiadm -m node --target <Target IQN> -I iface-ib1 -p <Target Port IP\> -l -o new
+# Controller B Port 2
+iscsiadm -m node --target <Target IQN> -I iface-ib1 -p <Target Port IP\> -l -o new
+----
+. Melden Sie sich bei iSCSI-Sitzungen an.
++
+Führen Sie für jede Sitzung den Befehl iscsiadm aus, um sich bei der Sitzung anzumelden.
+
++
+[listing]
+----
+# Controller A Port 1
+iscsiadm -m node --target <Target IQN> -I iface-ib0 -p <Target Port IP\> -l
+# Controller B Port 1
+iscsiadm -m node --target <Target IQN> -I iface-ib0 -p <Target Port IP\> -l
+# Controller A Port 2
+iscsiadm -m node --target <Target IQN> -I iface-ib1 -p <Target Port IP\> -l
+# Controller B Port 2
+iscsiadm -m node --target <Target IQN> -I iface-ib1 -p <Target Port IP\> -l
+----
+. Überprüfen Sie die iSER/iSCSI-Sitzungen.
++
+.. Überprüfen Sie den iscsi-Sitzungsstatus vom Host:
++
+[listing]
+----
+iscsiadm -m session
+----
+.. Überprüfen Sie den iscsi-Sitzungsstatus vom Array. Navigieren Sie vom SANtricity-System-Manager zu *Storage-Array* > *iSER* > *Ansicht/End-Sitzungen*.
+
+
+
+
+Wenn der OFED/RDMA-Service gestartet wird, werden die iSER-Kernelmodule standardmäßig geladen, wenn die iSCSI-Dienste ausgeführt werden. Um das iSER-Verbindungsaufbau abzuschließen, sollten die iSER-Module geladen werden. Derzeit ist ein Neustart des Hosts erforderlich.

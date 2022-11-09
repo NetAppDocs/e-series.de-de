@@ -1,0 +1,46 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/vc-olh-resolve-untrusted-certificates.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
+summary: 'Lösen Sie nicht vertrauenswürdige Zertifikate, indem Sie ein selbstsigniertes Zertifikat aus dem Speicher-Array importieren oder ein Zertifikat einer Zertifizierungsstelle (CA) importieren, das von einem vertrauenswürdigen Dritten ausgestellt wurde.' 
+---
+= Lösen Sie nicht vertrauenswürdige Zertifikate
+:hardbreaks:
+:allow-uri-read: 
+:experimental: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Auf der Zertifikatsseite können Sie nicht vertrauenswürdige Zertifikate auflösen, indem Sie ein selbstsigniertes Zertifikat aus dem Speicher-Array importieren oder ein Zertifikat der Zertifizierungsstelle importieren, das von einem vertrauenswürdigen Dritten ausgestellt wurde.
+
+Wenn Sie ein Zertifikat importieren möchten, muss Folgendes sichergestellt sein:
+
+* Sie haben für jeden Controller im Speicher-Array eine Zertifikatsignierungsanforderung (.CSR-Datei) generiert und an die CA gesendet.
+* Die CA hat vertrauenswürdige Zertifikatdateien zurückgegeben.
+* Die Zertifikatdateien sind auf Ihrem lokalen System verfügbar.
+
+
+Nicht vertrauenswürdige Zertifikate treten auf, wenn ein Speicher-Array versucht, eine sichere Verbindung zum Plugin herzustellen, aber die Verbindung wird nicht als sicher bestätigt. Möglicherweise müssen Sie zusätzliche vertrauenswürdige CA-Zertifikate installieren, wenn eine der folgenden Optionen zutrifft:
+
+* Sie haben kürzlich ein Speicher-Array hinzugefügt.
+* Ein oder beide Zertifikate sind abgelaufen oder widerrufen.
+* Ein oder beide Zertifikate fehlen ein Stammzertifikat oder ein Zwischenzertifikat.
+
+
+.Schritte
+. Wählen Sie *Zertifikatverwaltung*.
+. Wählen Sie die Registerkarte * Trusted* aus.
++
+Auf dieser Seite werden alle Zertifikate angezeigt, die für die Speicher-Arrays gemeldet wurden.
+
+. Wählen Sie entweder Menü:Import[Certificates], um ein CA-Zertifikat oder Menü zu importieren:Importieren[Self-signierte Speicher-Array-Zertifikate], um ein selbstsigniertes Zertifikat zu importieren.
+. Um die Ansicht einzuschränken, können Sie das Filterfeld *Zertifikate anzeigen verwenden, das...* ist, oder Sie können die Zertifikatzeilen sortieren, indem Sie auf eine der Spaltenüberschrift klicken.
+. Wählen Sie im Dialogfeld das Zertifikat aus und klicken Sie dann auf *Import*.
++
+Das Zertifikat wird hochgeladen und validiert.
+
+

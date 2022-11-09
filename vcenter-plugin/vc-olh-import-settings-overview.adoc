@@ -1,0 +1,95 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/vc-olh-import-settings-overview.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
+summary: 'Die Funktion „Importeinstellungen“ ist ein Batch-Vorgang, mit dem Sie die Einstellungen in einem einzelnen Speicher-Array (der Quelle) auf mehrere Arrays (die Ziele) replizieren können.' 
+---
+= Überblick über die Einstellungen importieren
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Die Funktion „Importeinstellungen“ ist ein Batch-Vorgang, mit dem Sie die Einstellungen in einem einzelnen Speicher-Array (der Quelle) auf mehrere Arrays (die Ziele) im Storage Plug-in für vCenter replizieren können.
+
+
+
+== Für den Import verfügbare Einstellungen
+
+Die folgenden Konfigurationen können von einem Array in ein anderes importiert werden:
+
+* *Alerts* -- Alerting-Methoden, um wichtige Ereignisse mithilfe von E-Mail, Syslog-Server oder SNMP-Server an Administratoren zu senden.
+* *AutoSupport* -- Eine Funktion, die den Zustand eines Speicherarrays überwacht und automatische Entsendungen an den technischen Support sendet.
+* *Directory Services* -- eine Methode der Benutzerauthentifizierung, die über einen LDAP-Server (Lightweight Directory Access Protocol) und einen Verzeichnisdienst, wie Microsoft Active Directory verwaltet wird.
+* *Systemeinstellungen* -- Konfigurationen in Bezug auf folgende Komponenten:
++
+** Medien-Scan-Einstellungen für ein Volume
+** SSD-Einstellungen
+** Automatischer Lastausgleich (ohne Berichterstellung für Hostkonnektivität)
+
+
+* *Speicherkonfiguration* -- Konfigurationen im Zusammenhang mit folgenden:
++
+** Volumes (nur Thick Volumes und nicht Repository Volumes)
+** Volume-Gruppen und -Pools
+** Zuweisung von Hot-Spare-Laufwerken
+
+
+
+
+
+
+== Konfigurationsworkflow
+
+So importieren Sie Einstellungen:
+
+. Konfigurieren Sie die Einstellungen in einem Speicher-Array, das als Quelle verwendet werden soll, mit System Manager.
+. Sichern Sie auf den Storage Arrays, die als Ziele verwendet werden sollen, ihre Konfiguration mit System Manager.
+. Gehen Sie von der Plugin-Schnittstelle zur Seite *Verwalten* und importieren Sie die Einstellungen.
+. Überprüfen Sie auf der Seite „Vorgänge“ die Ergebnisse des Vorgangs „Importeinstellungen“.
+
+
+
+
+== Anforderungen für die Replizierung von Storage-Konfigurationen
+
+Bevor Sie eine Speicherkonfiguration von einem Speicher-Array in ein anderes importieren, überprüfen Sie die Anforderungen und Richtlinien.
+
+
+
+=== Shelfs
+
+* Die Shelfs, in denen sich die Controller befinden, müssen auf den Quell- und Ziel-Arrays identisch sein.
+* Shelf IDs müssen auf den Quell- und Ziel-Arrays identisch sein.
+* Erweiterungs-Shelfs müssen in denselben Steckplätzen mit denselben Laufwerktypen bestückt werden (wenn das Laufwerk in der Konfiguration verwendet wird, ist die Position nicht verwendeter Laufwerke unwichtig).
+
+
+
+
+=== Controller
+
+* Der Controllertyp kann zwischen Quell- und Ziel-Arrays unterschiedlich sein, aber der RBOD-Gehäusetyp muss identisch sein.
+* Die HICs, einschließlich der da-Fähigkeiten des Hosts, müssen identisch sein zwischen den Quell- und Ziel-Arrays.
+* Der Import von einer Duplex-Konfiguration in eine Simplex-Konfiguration wird nicht unterstützt. Der Import von Simplex in Duplex ist jedoch zulässig.
+* FDE-Einstellungen sind beim Importvorgang nicht enthalten.
+
+
+
+
+=== Status
+
+* Die Ziel-Arrays müssen den optimalen Status haben.
+* Das Quell-Array muss nicht im optimalen Status sein.
+
+
+
+
+=== Storage
+
+* Die Laufwerkskapazität kann zwischen den Quell- und Ziel-Arrays variieren, solange die Volume-Kapazität auf dem Ziel größer ist als die Quelle. (In einem Ziel-Array sind unter Umständen neuere Laufwerke mit höherer Kapazität enthalten, die durch den Replizierungsvorgang nicht vollständig in Volumes konfiguriert wären.)
+* Laufwerk-Pool-Volumes mit einer Größe von mindestens 64 TB auf dem Quell-Array verhindern den Importvorgang auf den Zielen.
+

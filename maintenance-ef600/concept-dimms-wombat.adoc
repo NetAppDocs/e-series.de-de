@@ -1,0 +1,14 @@
+---
+permalink: maintenance-ef600/concept-dimms-wombat.html 
+sidebar: sidebar 
+keywords: replace, dimm, memory, mismatch, fail 
+summary: Sie müssen ein DIMM ersetzen, wenn eine Speicherabweichung vorliegt oder ein ausgefallenes DIMM vorliegt. 
+---
+= DIMMs
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie müssen ein DIMM ersetzen, wenn eine Speicherabweichung vorliegt oder ein ausgefallenes DIMM vorliegt.

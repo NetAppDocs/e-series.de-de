@@ -1,0 +1,90 @@
+---
+permalink: web-services-proxy/install-reqs-task.html 
+sidebar: sidebar 
+keywords: installation, download, install proxy, 
+summary: Installations- und Upgrade-Anforderungen und Überlegungen für Web Services Proxy. 
+---
+= Installations- und Upgrade-Anforderungen prüfen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Überprüfen Sie vor der Installation des Web Services Proxy die Installationsanforderungen und die Upgrade-Überlegungen.
+
+
+
+== Installationsvoraussetzungen
+
+Sie können den Web Services Proxy auf einem Windows- oder Linux-Host-System installieren und konfigurieren.
+
+Die Proxy-Installation umfasst die folgenden Anforderungen.
+
+|===
+| Anforderungen | Beschreibung 
+
+
+ a| 
+Host-Einschränkungen
+ a| 
+Stellen Sie sicher, dass der Hostname des Servers, auf dem Sie den Web Services Proxy installieren möchten, nur ASCII-Buchstaben, numerische Ziffern und Bindestriche (-) enthält. Diese Anforderung ist auf eine Beschränkung von Java Keytool zurückzuführen, das bei der Generierung eines selbst signierten Zertifikats für den Server verwendet wird. Wenn der Hostname Ihres Servers andere Zeichen wie z. B. einen Unterstrich (_) enthält, kann der Webserver nach der Installation nicht gestartet werden.
+
+
+
+ a| 
+Betriebssysteme
+ a| 
+Sie können den Proxy auf den folgenden Betriebssystemen installieren:
+
+* Linux
+* Windows
+
+
+Eine vollständige Liste der Betriebssysteme und der Firmware-Kompatibilität finden Sie unter http://mysupport.netapp.com/matrix["NetApp Interoperabilitäts-Matrix-Tool"^].
+
+
+
+ a| 
+Linux: Zusätzliche Überlegungen
+ a| 
+Linux Standard Base Bibliotheken (init-Funktionen) sind erforderlich, damit der Webserver ordnungsgemäß funktioniert. Sie müssen die lsb/insserv-Pakete für Ihr Betriebssystem installieren. Weitere Informationen finden Sie im Abschnitt „zusätzliche Pakete erforderlich“ der Readme-Datei.
+
+
+
+ a| 
+Mehrere Instanzen
+ a| 
+Sie können nur eine Instanz von Web Services Proxy auf einem Server installieren. Sie können den Proxy jedoch auf mehreren Servern in Ihrem Netzwerk installieren.
+
+
+
+ a| 
+Kapazitätsplanung
+ a| 
+Für die Protokollierung von Web Services Proxy ist ausreichend Speicherplatz erforderlich. Stellen Sie sicher, dass Ihr System die folgenden Anforderungen an den verfügbaren Speicherplatz erfüllt:
+
+* Erforderlicher Installationsspeicherplatz -- 275 MB
+* Minimaler Protokollierungspeicherplatz -- 200 MB
+* Systemspeicher -- 2 GB; Heap-Speicherplatz ist standardmäßig 1 GB
+
+
+Sie können ein Tool zum Monitoring des Festplattenspeichers verwenden, um den verfügbaren Festplattenspeicher für persistenten Speicher und die Protokollierung zu überprüfen.
+
+
+
+ a| 
+Lizenz
+ a| 
+Der Web Services Proxy ist ein kostenloses eigenständiges Produkt, das keinen Lizenzschlüssel erfordert. Es gelten jedoch geltende Urheberrechte und Nutzungsbedingungen. Wenn Sie den Proxy entweder im Graphical- oder im Konsolenmodus installieren, müssen Sie die Endbenutzer-Lizenzvereinbarung (Endbenutzer License Agreement, EULA) akzeptieren.
+
+|===
+
+
+== Upgrade-Überlegungen
+
+Wenn Sie ein Upgrade von einer vorherigen Version durchführen, beachten Sie, dass einige Elemente beibehalten oder entfernt werden.
+
+* Für den Web Services Proxy bleiben die früheren Konfigurationseinstellungen erhalten. Diese Einstellungen umfassen Benutzerpasswörter, alle erkannten Speichersysteme, Serverzertifikate, vertrauenswürdige Zertifikate und die Konfiguration der Serverlaufzeit.
+* Bei Unified Manager werden alle zuvor im Repository geladenen SANtricity-Betriebssystemdateien während des Upgrades entfernt.
+

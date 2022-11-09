@@ -1,0 +1,141 @@
+---
+permalink: install-hw-e2800-e5700/e2860-e5760-prepare-task.html 
+sidebar: sidebar 
+keywords: E2860, E5760, DE460, installation 
+summary: Erstellen Sie zum Installieren der E2860, E5760 oder DE460 ein Konto und registrieren Sie Ihre Hardware. 
+---
+= Installation vorbereiten
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Erfahren Sie, wie Sie die Installation Ihres E2860, E5760 oder DE460 Storage-Systems vorbereiten.
+
+.Schritte
+. Erstellen Sie ein Konto und registrieren Sie Ihre Hardware unter http://mysupport.netapp.com/["mysupport.netapp.com"^].
+. Stellen Sie sicher, dass die folgenden Elemente in dem Feld enthalten sind, das Sie erhalten haben.
++
+|===
+
+
+ a| 
+image:../media/trafford_overview.png[""]
+ a| 
+Shelf, Blende und Rack-Mount-Hardware
+
+
+
+ a| 
+image:../media/handles_counted.png[""]
+ a| 
+4 Shelf-Griffe
+
+|===
++
+In der folgenden Tabelle sind die Kabeltypen aufgeführt, die Sie möglicherweise erhalten können. Wenn Sie ein Kabel erhalten, das nicht in der Tabelle aufgeführt ist, lesen Sie https://hwu.netapp.com/["Hardware Universe"^] Um das Kabel zu lokalisieren und dessen Verwendung zu identifizieren.
+
++
+|===
+| Steckverbindertyp | Kabeltyp | Nutzung 
+
+
+ a| 
+image:../media/cable_ethernet_inst-hw-e2800-e5700.png[""]
+ a| 
+Ethernet-Kabel
+
+(Bei Bestellung)
+ a| 
+Management-Verbindung
+
+
+
+ a| 
+image:../media/cable_io_inst-hw-e2800-e5700.png[""]
+ a| 
+E/A-Kabel
+
+(Bei Bestellung)
+ a| 
+Verkabelung der Daten-Hosts
+
+
+
+ a| 
+image:../media/cable_power_inst-hw-e2800-e5700.png[""]
+ a| 
+Stromkabel
+
+x2 pro Shelf
+
+(Bei Bestellung)
+ a| 
+Einschalten des Storage-Systems
+
+
+
+ a| 
+image:../media/sas_cable.png[""]
+ a| 
+SAS-Kabel (nur in den Festplatten-Shelfs enthalten)
+ a| 
+Verkabelung der Shelfs
+
+|===
+. Stellen Sie sicher, dass Sie die folgenden Angaben machen.
++
+|===
+
+
+ a| 
+image:../media/screwdriver_inst-hw-e2800-e5700.png[""]
+ a| 
+Kreuzschlitzschraubendreher #2
+
+
+
+ a| 
+image:../media/flashlight_inst-hw-e2800-e5700.png[""]
+ a| 
+Taschenlampe
+
+
+
+ a| 
+image:../media/wrist_strap_inst-hw-e2800-e5700.png[""]
+ a| 
+ESD-Riemen
+
+
+
+ a| 
+image:../media/4u_dummy.png[""]
+ a| 
+4-HE-Rack-Fläche: Eine Standardfläche von 19 Zoll 48.30 cm Rack für 4-HE-Shelfs mit folgenden Abmessungen:
+
+*Tiefe*: 38.25 Zoll (97.16 cm)
+
+*Breite*: 17.66 Zoll (44.86 cm)
+
+*Höhe*: 6.87 Zoll (17.46 cm)
+
+*Höchstgewicht*: 250 lb (113 kg)
+
+
+
+ a| 
+image:../media/management_station_inst-hw-e2800-e5700_g60b3.png[""]
+ a| 
+Ein unterstützter Browser für die Verwaltungssoftware:
+
+** Google Chrome (Version 47 und höher)
+** Microsoft Internet Explorer (Version 11 und höher)
+** Microsoft Edge (EdgeHTML 12 und höher)
+** Mozilla Firefox (Version 31 und höher)
+** Safari (Version 9 und höher)
+
+
+|===
+

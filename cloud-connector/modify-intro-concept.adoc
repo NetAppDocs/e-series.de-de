@@ -1,0 +1,134 @@
+---
+permalink: cloud-connector/modify-intro-concept.html 
+sidebar: sidebar 
+keywords: Cloud Connector settings 
+summary: Sie können die Option Einstellungen im linken Navigationsbereich der SANtricity-Cloud-Connector-Anwendung aufrufen. Mit der Option Einstellungen können Sie die aktuellen Konfigurationen der Anwendung für das S3-Konto, verwaltete Speicher-Arrays und Hosts sowie Web Services Proxy-Anmeldeinformationen ändern. Sie können das Passwort für den SANtricity-Cloud-Konnektor auch über die Option Einstellungen ändern. 
+---
+= Ändern Sie die Einstellungen für den SANtricity-Cloud-Konnektor
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Mit der Option Einstellungen können Sie die aktuellen Konfigurationen der Anwendung für das S3-Konto, verwaltete Speicher-Arrays und Hosts sowie Web Services Proxy-Anmeldeinformationen ändern. Sie können das Passwort für den SANtricity-Cloud-Konnektor auch über die Option Einstellungen ändern.
+
+
+
+== Ändern Sie die S3-Kontoeinstellungen
+
+Vorhandene S3-Einstellungen für die Anwendung SANtricity Cloud Connector können Sie im Fenster S3-Kontoeinstellungen ändern.
+
+Beachten Sie beim Ändern der URL- oder S3-Bucket-Label-Einstellungen, dass der Zugriff auf vorhandene Backups, die über den SANtricity Cloud Connector konfiguriert wurden, beeinträchtigt wird.
+
+.Schritte
+. Klicken Sie in der linken Symbolleiste auf *Einstellungen > Konfiguration*.
++
+Die Seite Einstellungen - Konfiguration wird angezeigt.
+
+. Klicken Sie auf *Einstellungen anzeigen/bearbeiten* für S3-Kontoeinstellungen.
++
+Die Seite S3-Kontoeinstellungen wird angezeigt.
+
+. Geben Sie in der URL-Datei die URL für den S3-Cloud-Service ein.
+. Geben Sie im Feld *Zugriffsschlüssel-ID* die Zugriffs-ID für das S3-Ziel ein.
+. Geben Sie im Feld *Secret Access Key* den Zugriffsschlüssel für das S3-Ziel ein.
+. Geben Sie im Feld *S3 Bucket Name* den Bucket-Namen für das S3-Ziel ein.
+. Aktivieren Sie bei Bedarf das Kontrollkästchen * Pfad-Stil-Zugriff verwenden*.
+. Klicken Sie auf *Verbindung testen*, um die Verbindung zu den eingegebenen S3-Anmeldeinformationen zu überprüfen.
+. Klicken Sie auf *Speichern*, um die Änderungen anzuwenden.
++
+Die geänderten S3-Kontoeinstellungen werden angewendet.
+
+
+
+
+
+== Managen Sie Storage-Arrays
+
+Sie können Speicher-Arrays von dem Web-Services-Proxy hinzufügen oder entfernen, der auf der Seite Speicherarrays managen beim SANtricity-Cloud-Connector-Host registriert ist.
+
+Auf der Seite Speicherarrays managen wird eine Liste der Speicher-Arrays aus dem Web-Services-Proxy angezeigt, der für die Registrierung beim SANtricity-Cloud-Connector-Host verfügbar ist.
+
+.Schritte
+. Klicken Sie in der linken Symbolleiste auf *Einstellungen > Speicherarrays*.
++
+Der Bildschirm Einstellungen - Speicherarrays wird angezeigt.
+
+. Um dem SANtricity Cloud Connector Speicher-Arrays hinzuzufügen, klicken Sie auf *Hinzufügen*.
++
+.. Aktivieren Sie im Fenster Speicher-Arrays hinzufügen jedes Kontrollkästchen neben den gewünschten Speicher-Arrays in der Ergebnisliste.
+.. Klicken Sie Auf *Hinzufügen*.
++
+Das ausgewählte Speicher-Array wird dem SANtricity-Cloud-Konnektor hinzugefügt und im Ergebnislistenbereich des Bildschirms Einstellungen - Speicherarrays angezeigt.
+
+
+
+. Um den Host für ein hinzugefügtes Speicher-Array zu ändern, klicken Sie auf *Bearbeiten* für den Zeileneintrag im Ergebnislistenbereich des Bildschirms Einstellungen - Speicher-Arrays.
++
+.. Wählen Sie im Dropdown-Menü „Associated Host“ den gewünschten Host für das Speicher-Array aus.
+.. Klicken Sie Auf *Speichern*.
++
+Der ausgewählte Host wird dem Speicher-Array zugewiesen.
+
+
+
+. Um ein vorhandenes Speicher-Array aus dem SANtricity Cloud Connector-Host zu entfernen, wählen Sie die gewünschten Speicher-Arrays aus der unteren Ergebnisliste aus, und klicken Sie auf *Entfernen*.
++
+.. Geben Sie im Feld Speicher-Array bestätigen die Eingabe ein `REMOVE`.
+.. Klicken Sie Auf *Entfernen*.
++
+Das ausgewählte Speicher-Array wird aus dem SANtricity-Cloud-Konnektor-Host entfernt.
+
+
+
+
+
+
+
+== Ändern Sie die Proxy-Einstellungen für Web Services
+
+Sie können vorhandene Webdienste-Proxy-Einstellungen für die SANtricity Cloud Connector-Anwendung im Fenster Internetdienste-Proxy-Einstellungen ändern.
+
+Der mit dem SANtricity-Cloud-Connector verwendete Web-Services-Proxy muss die entsprechenden Arrays hinzugefügt und das entsprechende Passwort gesetzt haben.
+
+.Schritte
+. Klicken Sie in der linken Symbolleiste auf *menu:Einstellungen[Konfiguration]*.
++
+Der Bildschirm Einstellungen - Konfiguration wird angezeigt.
+
+. Klicken Sie für Web Services Proxy auf *Einstellungen anzeigen/bearbeiten*.
++
+Der Bildschirm Web Services Proxy-Einstellungen wird angezeigt.
+
+. Geben Sie im Feld URL die URL des für den SANtricity-Cloud-Konnektor verwendeten Webservices-Proxys ein.
+. Geben Sie im Feld Benutzername den Benutzernamen für die Webdienste-Proxy-Verbindung ein.
+. Geben Sie im Feld Kennwort das Kennwort für die Web Services Proxy-Verbindung ein.
+. Klicken Sie auf *Verbindung testen*, um die Verbindung für die eingegebenen Web Services Proxy-Anmeldedaten zu überprüfen.
+. Klicken Sie auf *Speichern*, um die Änderungen anzuwenden.
+
+
+
+
+== Passwort für den SANtricity Cloud Connector ändern
+
+Sie können das Kennwort für den SANtricity-Cloud-Konnektor im Bildschirm Kennwort ändern ändern.
+
+.Schritte
+. Klicken Sie in der linken Symbolleiste auf *menu:Einstellungen[Konfiguration]*.
++
+Der Bildschirm Einstellungen - Konfiguration wird angezeigt.
+
+. Klicken Sie auf *Passwort ändern* für SANtricity Cloud Connector.
++
+Der Bildschirm Kennwort ändern wird angezeigt.
+
+. Geben Sie im Feld Aktuelles Passwort Ihr aktuelles Kennwort für die SANtricity-Cloud-Connector-Anwendung ein.
+. Geben Sie im Feld Neues Kennwort Ihr neues Kennwort für die Anwendung SANtricity Cloud Connector ein.
+. Geben Sie im Feld Neues Kennwort bestätigen das neue Kennwort erneut ein.
+. Klicken Sie auf *Ändern*, um das neue Passwort anzuwenden.
++
+Das geänderte Passwort wird auf die SANtricity Cloud Connector Anwendung angewendet.
+
+

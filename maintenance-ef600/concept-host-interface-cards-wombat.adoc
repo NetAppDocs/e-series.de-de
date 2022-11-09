@@ -1,0 +1,14 @@
+---
+permalink: maintenance-ef600/concept-host-interface-cards-wombat.html 
+sidebar: sidebar 
+keywords: host, interface, card, hic, install, controller, canister, ef600, port 
+summary: 'Eine Host-Schnittstellenkarte \(HIC\) muss innerhalb eines Controller-Kanisters installiert werden. Der EF600 Controller umfasst Host Ports auf der optionalen HIC. In die HIC integrierte Host Ports werden HIC Ports genannt.' 
+---
+= Host-Schnittstellenkarten
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Eine Host Interface Card (HIC) muss innerhalb eines Controller-Kanisters installiert sein. Der EF600 Controller umfasst Host Ports auf der optionalen HIC. In die HIC integrierte Host Ports werden HIC Ports genannt.

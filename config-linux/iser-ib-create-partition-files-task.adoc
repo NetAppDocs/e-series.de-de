@@ -1,0 +1,87 @@
+---
+permalink: config-linux/iser-ib-create-partition-files-task.html 
+sidebar: sidebar 
+keywords: configure partitions Linux, configure filesystems linux, express linux configuration, linux host, 
+summary: Eine neue LUN besitzt keine Partition oder kein Dateisystem, wenn der Linux-Host sie zuerst erkennt. Sie müssen die LUN formatieren, bevor sie verwendet werden kann. 
+---
+= Erstellen von Partitionen und Dateisystemen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Da eine neue LUN keine Partition oder kein Dateisystem hat, wenn der Linux-Host sie zuerst erkennt, müssen Sie die LUN formatieren, bevor sie verwendet werden kann. Optional können Sie ein Dateisystem auf der LUN erstellen.
+
+.Was Sie und#8217;ll benötigen
+* Eine LUN, die vom Host erkannt wird.
+* Eine Liste der verfügbaren Festplatten. (Um verfügbare Festplatten anzuzeigen, führen Sie den aus `ls` Befehl im Ordner /dev/mapper.)
+
+
+Sie können den Datenträger als Basislaufwerk mit einer GUID-Partitionstabelle (GPT) oder einem Master Boot Record (MBR) initialisieren.
+
+Formatieren Sie die LUN mit einem Dateisystem wie ext4. Für einige Applikationen ist dieser Schritt nicht erforderlich.
+
+.Schritte
+. Rufen Sie die SCSI-ID des zugeordneten Laufwerks ab, indem Sie den ausgeben `sanlun lun show -p` Befehl.
++
+Die SCSI-ID ist eine 33-stellige Zeichenfolge aus Hexadezimalziffern, die mit der Zahl 3 beginnt. Wenn benutzerfreundliche Namen aktiviert sind, meldet Device Mapper Festplatten als mpath anstatt über eine SCSI-ID.
+
++
+[listing]
+----
+# sanlun lun show -p
+
+                E-Series Array: ictm1619s01c01-SRP(60080e50002908b40000000054efb9d2)
+                   Volume Name:
+               Preferred Owner: Controller in Slot B
+                 Current Owner: Controller in Slot B
+                          Mode: RDAC (Active/Active)
+                       UTM LUN: None
+                           LUN: 116
+                      LUN Size:
+                       Product: E-Series
+                   Host Device: mpathr(360080e50004300ac000007575568851d)
+              Multipath Policy: round-robin 0
+            Multipath Provider: Native
+--------- ---------- ------- ------------ ----------------------------------------------
+host      controller                      controller
+path      path       /dev/   host         target
+state     type       node    adapter      port
+--------- ---------- ------- ------------ ----------------------------------------------
+up        secondary  sdcx    host14       A1
+up        secondary  sdat    host10       A2
+up        secondary  sdbv    host13       B1
+----
+. Erstellen Sie eine neue Partition gemäß der für Ihre Linux-Betriebssystemversion geeigneten Methode.
++
+Normalerweise werden Zeichen, die die Partition eines Laufwerks kennzeichnen, an die SCSI-ID angehängt (z. B. die Nummer 1 oder p3).
+
++
+[listing]
+----
+# parted -a optimal -s -- /dev/mapper/360080e5000321bb8000092b1535f887a mklabel
+gpt mkpart primary ext4 0% 100%
+----
+. Erstellen Sie ein Dateisystem auf der Partition.
++
+Die Methode zum Erstellen eines Dateisystems variiert je nach gewähltem Dateisystem.
+
++
+[listing]
+----
+# mkfs.ext4 /dev/mapper/360080e5000321bb8000092b1535f887a1
+----
+. Erstellen Sie einen Ordner, um die neue Partition zu mounten.
++
+[listing]
+----
+# mkdir /mnt/ext4
+----
+. Mounten Sie die Partition.
++
+[listing]
+----
+# mount /dev/mapper/360080e5000321bb8000092b1535f887a1 /mnt/ext4
+----
+

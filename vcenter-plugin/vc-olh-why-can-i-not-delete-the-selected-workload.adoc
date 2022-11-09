@@ -1,0 +1,17 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/vc-olh-why-can-i-not-delete-the-selected-workload.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
+summary: Volumes in diesem Workload sind keinem applikationsspezifischen Workload zugeordnet, sodass der Workload nicht gelöscht werden kann. 
+---
+= Warum kann ich den ausgewählten Workload nicht löschen?
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Dieser Workload besteht aus einer Gruppe von Volumes, die mithilfe der Befehlszeilenschnittstelle (CLI) erstellt oder von einem anderen Storage Array migriert (importiert/exportiert) wurden. Daher sind die Volumes in diesem Workload keinem applikationsspezifischen Workload zugeordnet, sodass der Workload nicht gelöscht werden kann.

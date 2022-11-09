@@ -1,0 +1,35 @@
+---
+permalink: install-hw-cabinet/move-cabinet-task.html 
+sidebar: sidebar 
+keywords: 3040 40U cabinet, cabinet installation, drive tray installation, controller installation, shelf installation, E2800, E5700, EF300, EF600 
+summary: Den Schrank an seinen festen Standort bringen. 
+---
+= Schaltschrank an seinen festen Standort bringen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Der 3040-HE-Schrank verfügt über hochleistungsfähige Rollen, mit denen Sie den Schrank an seinen festen Standort verlegen können.
+
+.Bevor Sie beginnen
+* Lesen Sie die Anweisungen zum Abrollen des Schranks von der Palette ohne Verwendung eines Gabelstaplers durch.
++
+Versandkisten stellen integrierte Rampen und Anweisungen bereit. Beachten Sie die Anweisungen zum Auspacken auf der Vorderseite der Versandkiste.
+
+* Alle Rampen zwischen Laderampe und Endziel des Schaltschranks prüfen.
++
+Sie müssen alle Rampen auswerten, um sicherzustellen, dass der Schwerpunkt des Schranks (wenn sich der Schrank auf einer Rampe befindet und in einem Winkel sitzt) nicht über den Platzbedarf des Schranks hinaus reicht.
+
+
+
+Viele der Racks sind mit Laufwerksfächern bestückt. Diese Situation führt zu einem Großteil des Gewichts im vorderen Teil des Schranks, wodurch der Schwerpunkt näher an der Vorderseite.
+
+.Schritte
+. Entfernen Sie die obersten Geräte in Ihrem Schrank, um sicherzustellen, dass der Schrank sicher an seinen endgültigen Standort transportiert wird. Dies ist besonders wichtig, wenn eine Rampe eine Steigung oder einen Rückgang über 10 Grad hat.
+. Bewegen Sie den Schrank mit der richtigen Methode in der folgenden Abbildung an seinen festen Standort. Achten Sie darauf, dass Sie auf die Vorderseite des Gehäuses und nicht auf die Rückseite drücken.
++
+image::../media/83004_01.gif[83004 01]
+
+

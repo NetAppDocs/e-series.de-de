@@ -1,0 +1,61 @@
+---
+permalink: web-services-proxy/overview-compat-concept.html 
+sidebar: sidebar 
+keywords: Web Services, WSP, SANtricity API, 
+summary: Kompatibilität und Einschränkungen für WSP. 
+---
+= Kompatibilität und Einschränkungen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Die folgenden Kompatibilitätsbeschränkungen und Einschränkungen gelten für die Verwendung des Web Services Proxy.
+
+|===
+| Überlegungen | Kompatibilität oder Einschränkungen 
+
+
+ a| 
+HTTP-Unterstützung
+ a| 
+Der Web Services Proxy ermöglicht die Verwendung von HTTP oder HTTPS. (Die eingebettete Version von Web Services erfordert aus Sicherheitsgründen HTTPS.)
+
+
+
+ a| 
+Storage-Systeme und Firmware
+ a| 
+Der Web Services Proxy kann alle E-Series Storage-Systeme managen. Dazu zählen eine Mischung aus älteren Systemen und den aktuellen E2800, EF280, E5700, EF570, EF300 Und die Systeme der EF600 Serie.
+
+
+
+ a| 
+IP-Support
+ a| 
+Der Web Services Proxy unterstützt entweder das IPv4-Protokoll oder das IPv6-Protokoll.
+
+
+NOTE: Das IPv6-Protokoll schlägt möglicherweise fehl, wenn der Web Services Proxy versucht, die Verwaltungsadresse von der Controller-Konfiguration automatisch zu ermitteln. Mögliche Ursachen für den Ausfall sind u. a. Probleme bei der IP-Adressweiterleitung oder bei der Aktivierung von IPv6 auf den Speichersystemen, jedoch nicht auf dem Server.
+
+
+
+ a| 
+Einschränkungen bei NVSRAM-Dateinamen
+ a| 
+Der Web Services Proxy verwendet NVSRAM-Dateinamen, um Versionsinformationen korrekt zu identifizieren. Daher können Sie NVSRAM-Dateinamen nicht ändern, wenn sie mit dem Web Services Proxy verwendet werden. Der Web Services Proxy erkennt möglicherweise keine umbenannte NVSRAM-Datei als gültige Firmware-Datei.
+
+
+
+ a| 
+Symbol Web
+ a| 
+Symbol Web ist eine URL in DER REST-API. Sie ermöglicht den Zugriff auf fast alle Symbolrufe. Die Symbolfunktion ist Teil der folgenden URL:
+
+`+http://host:port/devmgr/storage-system/storage array ID/symbol/symbol function+`
+
+
+NOTE: Symboldeaktivierte Speichersysteme werden über den Web Services Proxy unterstützt.
+
+|===

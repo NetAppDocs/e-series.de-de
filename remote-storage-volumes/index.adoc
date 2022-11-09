@@ -1,0 +1,35 @@
+---
+permalink: remote-storage-volumes/index.html 
+sidebar: sidebar 
+keywords: Remote Storage Volumes, RTV, remote volumes, remote storage E-Series 
+summary: Verwenden Sie die Funktion Remote Storage Volumes, um Daten von einem Remote-Storage-Gerät direkt in ein lokales E-Series Volume zu importieren. 
+---
+= Remote Storage Volumes: Überblick
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Verwenden Sie die SANtricity® Funktion Remote Storage Volumes, um Daten von einem Remote-Speichergerät direkt in ein lokales E-Series Volume zu importieren. Diese Funktion optimiert die Prozesse für Geräte-Upgrades und bietet Funktionen zur Datenmigration, mit denen Daten von Geräten der nicht-E-Series auf E-Series Systeme verschoben werden können.
+
+
+
+== Konfigurationsübersicht
+
+Die Funktion Remote Storage Volumes ist mit SANtricity System Manager für ausgewählte Untermodell-IDs verfügbar. Zur Verwendung dieser Funktion müssen Sie ein Remote-Storage-System und ein E-Series Storage-System konfigurieren, damit sie miteinander kommunizieren können.
+
+Verwenden Sie den folgenden Workflow:
+
+. link:system-reqs-concept.html["Anforderungen und Einschränkungen prüfen"].
+. link:setup-remote-volumes-concept.html["Hardware konfigurieren"].
+. link:import-remote-storage-task.html["Remote-Speicher importieren"].
+
+
+
+
+== Weitere Informationen
+
+* Die Online-Hilfe von ist auf der Benutzeroberfläche von System Manager oder auf der verfügbar https://docs.netapp.com/us-en/e-series-santricity/index.html["SANtricity Software-Dokument-Site"^].
+* Weitere technische Informationen zur Funktion Remote Storage Volumes finden Sie im https://www.netapp.com/pdf.html?item=/media/28697-tr-4893-deploy.pdf["Technischer Bericht Zu Remote Storage Volumes"^].
+

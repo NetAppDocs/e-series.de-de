@@ -1,0 +1,14 @@
+---
+permalink: maintenance-ef600/concept-fans-wombat.html 
+sidebar: sidebar 
+keywords: ef300, ef600, controller, shelf, drive, fan, cooling 
+summary: Jedes EF300- oder EF600 Controller-Shelf oder Laufwerk-Shelf enthält fünf Lüfter zum Kühlen des Controllers. 
+---
+= Lüfter
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Jedes EF300- oder EF600 Controller-Shelf oder Laufwerk-Shelf enthält fünf Lüfter zum Kühlen des Controllers.

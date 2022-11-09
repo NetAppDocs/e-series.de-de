@@ -1,0 +1,154 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/vc-olh-change-settings-for-a-volume.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
+summary: Ändern der Einstellungen eines Volume, z. B. Name, Host-Zuweisung, Segmentgröße, Änderungspriorität, Caching, Und so weiter. 
+---
+= Ändern Sie die Einstellungen für ein Volume
+:hardbreaks:
+:allow-uri-read: 
+:experimental: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Sie können die Einstellungen eines Volume ändern, z. B. Name, Host-Zuweisung, Segmentgröße, Änderungspriorität, Caching, Und so weiter.
+
+Stellen Sie sicher, dass das Volume, das Sie ändern möchten, im optimalen Status ist.
+
+.Schritte
+. Wählen Sie auf der Seite Verwalten das Speicher-Array aus, das die Volumes enthält, die Sie ändern möchten.
+. Wählen Sie MENU:Provisioning[Volumes verwalten].
+. Wählen Sie das gewünschte Volume aus und wählen Sie dann *Einstellungen anzeigen/bearbeiten*.
++
+Das Dialogfeld Volume-Einstellungen wird angezeigt. Die Konfigurationseinstellungen für das ausgewählte Volume werden in diesem Dialogfeld angezeigt.
+
+. Wählen Sie die Registerkarte *Basic* aus, um den Namen des Volumes und die Host-Zuweisung zu ändern.
++
+.Felddetails
+====
+[cols="25h,~"]
+|===
+| Einstellung | Beschreibung 
+
+
+ a| 
+Name
+ a| 
+Zeigt den Namen des Volumes an. Ändern Sie den Namen eines Volumes, wenn der aktuelle Name nicht mehr aussagekräftig oder anwendbar ist.
+
+
+
+ a| 
+Kapazität
+ a| 
+Zeigt die gemeldete und zugewiesene Kapazität für das ausgewählte Volume an.
+
+
+
+ a| 
+Pool-/Volume-Gruppe
+ a| 
+Zeigt den Namen und das RAID-Level der Pool- oder Volume-Gruppe an. Gibt an, ob der Pool oder die Volume-Gruppe sicher-fähig und sicher aktiviert ist.
+
+
+
+ a| 
+Host
+ a| 
+Zeigt die Volumenzuweisung an. Sie weisen einem Host oder Host-Cluster ein Volume zu, damit I/O-Vorgänge darauf zugreifen können. Diese Zuweisung gewährt einem Host oder Host-Cluster Zugriff auf ein bestimmtes Volume oder auf eine Reihe von Volumes in einem Storage-Array.
+
+** *Zugeordnet zu* -- identifiziert den Host oder Host-Cluster, der Zugriff auf das ausgewählte Volume hat.
+** *LUN* -- Eine logische Gerätenummer (LUN) ist die Nummer, die dem Adressraum zugewiesen ist, den ein Host für den Zugriff auf ein Volume verwendet. Das Volume wird dem Host als Kapazität in Form einer LUN präsentiert. Jeder Host verfügt über seinen eigenen LUN-Adressraum. Daher kann dieselbe LUN von unterschiedlichen Hosts für den Zugriff auf verschiedene Volumes verwendet werden.
+
+
+Für NVMe-Schnittstellen wird in dieser Spalte die Namespace-ID angezeigt. Ein Namespace ist NVM Storage, der für Blockzugriff formatiert ist. Es gleicht einer logischen Einheit in SCSI, die ein Volume im Storage Array bezieht. Die Namespace-ID ist die eindeutige Kennung des NVMe Controllers für den Namespace und kann auf einen Wert zwischen 1 und 255 gesetzt werden. Sie entspricht einer Logical Unit Number (LUN) in SCSI.
+
+
+
+ a| 
+Identifikatoren
+ a| 
+Zeigt die Kennungen für das ausgewählte Volume an.
+
+** Weltweite Kennung (WWID). Eine eindeutige Hexadezimalkennung für das Volume
+** Erweiterte eindeutige Kennung (EUI). Eine EUI-64-Kennung für das Volume.
+** Subsystem Identifier (SSID). Die Speicher-Array-Subsystem-Kennung eines Volumes.
+
+
+|===
+====
+. Wählen Sie die Registerkarte *Erweitert* aus, um zusätzliche Konfigurationseinstellungen für ein Volume in einem Pool oder in einer Volume-Gruppe zu ändern.
++
+.Felddetails
+====
+[cols="25h,~"]
+|===
+| Einstellung | Beschreibung 
+
+
+ a| 
+Applikations- und Workload-Informationen
+ a| 
+Während der Volume-Erstellung können applikationsspezifische oder andere Workloads erstellt werden. Falls zutreffend, werden für das ausgewählte Volume der Workload-Name, der Applikationstyp und der Volume-Typ angezeigt. Bei Bedarf können Sie den Workload-Namen ändern.
+
+
+
+ a| 
+Quality of Service-Einstellungen
+ a| 
+*Data Assurance dauerhaft deaktivieren* -- Diese Einstellung wird nur angezeigt, wenn das Volume Data Assurance (da) aktiviert ist. DA überprüft und korrigiert Fehler, die auftreten können, wenn Daten durch die Controller zu den Laufwerken übertragen werden. Verwenden Sie diese Option, um da auf dem ausgewählten Volume dauerhaft zu deaktivieren. Wenn diese Option deaktiviert ist, kann da für dieses Volume nicht erneut aktiviert werden. *VorableseRedundanzprüfung aktivieren* -- Diese Einstellung wird nur angezeigt, wenn das Volumen ein dickes Volumen ist. Die vorab gelesene Redundanz prüft, ob die Daten auf einem Volume konsistent sind, jederzeit, wenn ein Lesevorgang durchgeführt wird. Ein Volume, auf dem diese Funktion aktiviert ist, gibt Lesefehler zurück, wenn die Daten von der Controller-Firmware als unvereinbar erkannt werden.
+
+
+
+ a| 
+Controller-Eigentum
+ a| 
+Definiert den Controller, der als Eigentümer des Volume oder als primärer Controller des Volume bezeichnet wird. Die Eigentümerschaft der Controller ist sehr wichtig und sollte sorgfältig geplant werden. Controller sollten für eine GesamtI/OS so eng wie möglich ausgeglichen werden.
+
+
+
+ a| 
+Segmentgrößen
+ a| 
+Zeigt die Einstellung für die Segmentgrößen, die nur für Volumes in einer Volume-Gruppe angezeigt wird. Sie können die Segmentgröße ändern, um die Leistung zu optimieren. *Zulässige Segmentgrößen-Übergänge* -- das System bestimmt die zulässigen Segmentgrößen-Übergänge. Segmentgrößen, bei denen es sich um unangemessene Übergänge aus der aktuellen Segmentgröße handelt, sind in der Dropdown-Liste nicht verfügbar. Zulässige Übergänge sind in der Regel doppelt oder halb so groß wie das aktuelle Segment. Wenn die aktuelle Volume-Segmentgröße beispielsweise 32 KiB beträgt, ist eine neue Volume-Segmentgröße von entweder 16 KiB oder 64 KiB zulässig. *SSD Cache-fähige Volumes* -- Sie können eine 4-KiB-Segmentgröße für SSD Cache-fähige Volumes angeben. Vergewissern Sie sich, dass Sie die 4-KiB-Segmentgröße nur für SSD-Cache-fähige Volumes auswählen, die I/O-Vorgänge mit kleinen Blöcken bearbeiten (beispielsweise 16 KiB-I/O-Blockgrößen oder kleiner). Die Performance könnte beeinträchtigt werden, wenn Sie 4 als Segmentgröße für SSD Cache-fähige Volumes auswählen, die sequenzielle Operationen von großen Blöcken bearbeiten. *Zeitdauer zum Ändern der Segmentgröße.* die Zeit, die zur Änderung der Segmentgröße eines Volumes erforderlich ist, hängt von diesen Variablen ab:
+
+** Die I/O-Last vom Host
+** Die Änderungspriorität des Volumes
+** Die Anzahl der Laufwerke in der Volume-Gruppe
+** Die Anzahl der Laufwerkskanäle
+** Die Verarbeitungsleistung der Speicher-Array-Controller
+
+
+Wenn Sie die Segmentgröße für ein Volume ändern, wirkt sich die I/O-Performance auf die I/O-Performance aus, doch die Daten bleiben verfügbar.
+
+
+
+ a| 
+Priorität für Änderungen
+ a| 
+Zeigt die Einstellung für die Änderungspriorität an, die nur für Volumes in einer Volume-Gruppe angezeigt wird. Die Änderungspriorität definiert, wie viel Verarbeitungszeit im Verhältnis zur Systemperformance für Volume-Änderungsprozesse zugewiesen wird. Sie können die Änderungspriorität für das Volume erhöhen, obwohl dies unter Umständen die System-Performance beeinträchtigen kann. Verschieben Sie die Schieberegler, um eine Prioritätsebene auszuwählen. *Modifizierung Prioritätsstufen* -- die niedrigste Prioritätsrate profitiert von der Systemleistung, aber der Änderungsvorgang dauert länger. Die höchste Prioritätsstufe führt zu Änderungen, die System-Performance kann jedoch beeinträchtigt werden.
+
+
+
+ a| 
+Caching
+ a| 
+Zeigt die Caching-Einstellung, die Sie ändern können, um die gesamte I/O-Performance eines Volumes zu beeinträchtigen.
+
+
+
+ a| 
+SSD Cache
+ a| 
+(Diese Funktion ist auf dem EF600 oder EF300-Speichersystem nicht verfügbar.) Zeigt die Einstellung für SSD Cache, die Sie auf kompatiblen Volumes aktivieren können, um die schreibgeschützte Performance zu verbessern. Volumes sind kompatibel, wenn sie sich dieselben Laufwerkssicherheitsfunktionen und Data Assurance nutzen. Die SSD Cache Funktion verwendet eine oder mehrere Solid State Disks (SSDs) zur Implementierung eines Lese-Caches. Die Applikations-Performance wird durch die schnelleren Lesezeiten für SSDs verbessert. Da sich der Lese-Cache im Storage Array befindet, wird das Caching von allen Applikationen genutzt, die das Storage Array verwenden. Wählen Sie einfach das Volume aus, das Sie zwischenspeichern möchten. Caching erfolgt dann automatisch und dynamisch.
+
+|===
+====
+. Klicken Sie Auf *Speichern*.
+
+
+Die Lautstärkeeinstellungen werden basierend auf Ihrer Auswahl geändert.

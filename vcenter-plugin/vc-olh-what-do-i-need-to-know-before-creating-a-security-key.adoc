@@ -1,0 +1,56 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/vc-olh-what-do-i-need-to-know-before-creating-a-security-key.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
+summary: Ein Sicherheitsschlüssel wird von Controllern und sicheren Laufwerken innerhalb eines Storage-Arrays gemeinsam verwendet. 
+---
+= Was muss ich vor der Erstellung eines Sicherheitsschlüssels wissen?
+:hardbreaks:
+:allow-uri-read: 
+:experimental: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Ein Sicherheitsschlüssel wird von Controllern und sicheren Laufwerken innerhalb eines Storage-Arrays gemeinsam verwendet. Wenn ein sicheres Laufwerk aus dem Speicher-Array entfernt wird, schützt der Sicherheitsschlüssel die Daten vor unberechtigtem Zugriff.
+
+Sie können Sicherheitsschlüssel mit einer der folgenden Methoden erstellen und verwalten:
+
+* Internes Verschlüsselungsmanagement auf dem persistenten Speicher des Controllers.
+* Externes Verschlüsselungskeymanagement auf einem externen Verschlüsselungsmanagement-Server.
+
+
+
+
+== Internes Verschlüsselungsmanagement
+
+Interne Schlüssel werden in einem nicht zugänglichen Ort im persistenten Speicher des Controllers gepflegt und „versteckt“. Bevor Sie einen internen Sicherheitsschlüssel erstellen, müssen Sie Folgendes tun:
+
+. Installieren Sie sichere Laufwerke im Speicher-Array. Es können sich bei diesen Laufwerken um vollständige Festplattenverschlüsselung (Full Disk Encryption, FDE) oder FIPS-Laufwerke (Federal Information Processing Standard) handelt.
+. Stellen Sie sicher, dass die Laufwerksicherheit aktiviert ist. Wenden Sie sich bei Bedarf an Ihren Storage-Anbieter, um Anweisungen zur Aktivierung der Laufwerkssicherheitsfunktion zu erhalten.
+
+
+Sie können dann einen internen Sicherheitsschlüssel erstellen, der die Definition einer Kennung und einer Passphrase beinhaltet. Die Kennung ist eine Zeichenfolge, die dem Sicherheitsschlüssel zugeordnet ist und auf dem Controller und allen Laufwerken gespeichert ist, die mit dem Schlüssel verknüpft sind. Der Passphrase wird verwendet, um den Sicherheitsschlüssel für Sicherungszwecke zu verschlüsseln. Wenn Sie fertig sind, wird der Sicherheitsschlüssel auf dem Controller an einem nicht zugänglichen Ort gespeichert. Anschließend können sichere Volume-Gruppen und -Pools erstellt oder die Sicherheit für vorhandene Volume-Gruppen und -Pools aktiviert werden.
+
+
+
+== Externes Verschlüsselungskeymanagement
+
+Externe Schlüssel werden mithilfe eines Key Management Interoperability Protocol (KMIP) auf einem separaten Verschlüsselungsmanagement-Server aufbewahrt. Bevor Sie einen externen Sicherheitsschlüssel erstellen, müssen Sie Folgendes tun:
+
+. Installieren Sie sichere Laufwerke im Speicher-Array. Es können sich bei diesen Laufwerken um vollständige Festplattenverschlüsselung (Full Disk Encryption, FDE) oder FIPS-Laufwerke (Federal Information Processing Standard) handelt.
+. Stellen Sie sicher, dass die Laufwerksicherheit aktiviert ist. Wenden Sie sich bei Bedarf an Ihren Storage-Anbieter, um Anweisungen zur Aktivierung der Laufwerkssicherheitsfunktion zu erhalten
+. Abrufen einer signierten Client-Zertifikatdatei. Ein Client-Zertifikat validiert die Controller des Storage-Arrays, damit der Verschlüsselungsmanagement-Server ihren KMIP-Anforderungen vertrauen kann.
++
+.. Zunächst haben Sie eine Client Certificate Signing Request (CSR) abgeschlossen und heruntergeladen. Wechseln Sie zum Menü:Einstellungen[Zertifikate > Schlüsselverwaltung > CSR abschließen].
+.. Als Nächstes fordern Sie ein signiertes Clientzertifikat von einer Zertifizierungsstelle an, die vom Schlüsselverwaltungsserver vertrauenswürdig ist. (Sie können auch mithilfe der heruntergeladenen CSR-Datei ein Client-Zertifikat vom Schlüsselverwaltungsserver erstellen und herunterladen.)
+.. Sobald Sie über eine Clientzertifikatdatei verfügen, kopieren Sie diese Datei auf den Host, auf dem Sie auf System Manager zugreifen.
+
+
+. Rufen Sie eine Zertifikatdatei vom Verschlüsselungsmanagement-Server ab, und kopieren Sie diese Datei dann auf den Host, auf dem Sie auf System Manager zugreifen. Ein Zertifikat für den Schlüsselmanagementserver validiert den Schlüsselmanagementserver, damit das Storage-Array seiner IP-Adresse vertrauen kann. Sie können für den Schlüsselverwaltungsserver ein Root-, Intermediate- oder Serverzertifikat verwenden.
+
+
+Anschließend können Sie einen externen Schlüssel erstellen, der die IP-Adresse des Verschlüsselungsmanagement-Servers und die für die KMIP Kommunikation verwendete Port-Nummer umfasst. Während dieses Prozesses laden Sie auch Zertifikatdateien. Nach Abschluss des Vorgangs stellt das System eine Verbindung zum Schlüsselverwaltungsserver mit den von Ihnen eingegebenen Anmeldedaten her. Anschließend können sichere Volume-Gruppen und -Pools erstellt oder die Sicherheit für vorhandene Volume-Gruppen und -Pools aktiviert werden.

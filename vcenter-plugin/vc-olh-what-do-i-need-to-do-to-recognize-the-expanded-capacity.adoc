@@ -1,0 +1,23 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/vc-olh-what-do-i-need-to-do-to-recognize-the-expanded-capacity.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
+summary: Wenn Sie die Kapazität für ein Volume erhöhen, erkennt der Host möglicherweise nicht sofort den Anstieg der Volume-Kapazität. 
+---
+= Was muss ich tun, um die erweiterte Kapazität erkennen zu können?
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Wenn Sie die Kapazität für ein Volume erhöhen, erkennt der Host möglicherweise nicht sofort den Anstieg der Volume-Kapazität.
+
+Die meisten Betriebssysteme erkennen die erweiterte Volume-Kapazität und werden nach dem Start der Volume-Erweiterung automatisch erweitert. Einige könnten jedoch nicht. Wenn Ihr Betriebssystem die erweiterte Volume-Kapazität nicht automatisch erkennt, müssen Sie möglicherweise eine erneute Festplattenüberprüfung durchführen oder einen Neustart durchführen.
+
+Nachdem Sie die Volume-Kapazität erweitert haben, müssen Sie die Größe des Dateisystems manuell erhöhen, um sie anzupassen. Wie Sie dies tun, hängt von dem Dateisystem ab, das Sie verwenden.
+
+Weitere Informationen finden Sie in der Dokumentation Ihres Host-Betriebssystems.

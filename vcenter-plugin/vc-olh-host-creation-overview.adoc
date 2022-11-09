@@ -1,0 +1,53 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/vc-olh-host-creation-overview.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
+summary: Für das Storage-Management mit dem Storage Plug-in für vCenter müssen Sie jeden Host im Netzwerk ermitteln oder definieren. 
+---
+= Übersicht über die Hosterstellung
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Für das Storage-Management mit dem Storage Plug-in für vCenter müssen Sie jeden Host im Netzwerk ermitteln oder definieren. Ein Host ist ein Server, der I/O an ein Volume auf einem Storage-Array sendet.
+
+
+
+== Automatische vs. Manuelle Host-Erstellung
+
+Das Erstellen eines Hosts ist einer der Schritte, die erforderlich sind, damit das Storage-Array wissen kann, an welche Hosts angeschlossen sind und um den I/O-Zugriff auf die Volumes zu ermöglichen. Ein Host kann automatisch oder manuell erstellt werden.
+
+* *Automatic* -- die automatische Hosterstellung für SCSI-basierte (nicht NVMe-of) Hosts wird vom Host Context Agent (HCA) initiiert. Die HCA ist ein Dienstprogramm, das Sie auf jedem Host installieren können, der mit dem Speicher-Array verbunden ist. Jeder Host, auf dem die HCA installiert ist, sendet seine Konfigurationsinformationen über den I/O-Pfad an die Speicher-Array-Controller. Basierend auf den Host-Informationen erstellen die Controller automatisch den Host und die zugehörigen Host-Ports und legen den Host-Typ fest. Bei Bedarf können Sie alle zusätzlichen Änderungen an der Hostkonfiguration vornehmen. Nachdem der HCA die automatische Erkennung durchgeführt hat, wird der Host automatisch mit den folgenden Attributen konfiguriert:
++
+** Der Hostname, der vom Systemnamen des Hosts abgeleitet wurde.
+** Die dem Host zugeordneten Host-Identifikator-Ports.
+** Der Host-Betriebssystem-Typ des Hosts.
+
+
+
+
+
+NOTE: Hosts werden als eigenständige Hosts erstellt. Das HCA erstellt oder fügt nicht automatisch zu Host-Clustern hinzu.
+
+* *Manuell* -- während der manuellen Hosterstellung verknüpfen Sie Host-Port-IDs, indem Sie sie aus einer Liste auswählen oder manuell eingeben. Nachdem Sie einen Host erstellt haben, können Sie ihm Volumes zuweisen oder einem Host Cluster hinzufügen, wenn Sie den Zugriff auf Volumes freigeben möchten.
+
+
+
+
+== Wie Volumes zugewiesen werden
+
+Damit ein Host I/O an ein Volume sendet, müssen Sie das Volume ihm zuweisen. Sie können entweder einen Host oder ein Host-Cluster auswählen, wenn Sie ein Volume erstellen, oder Sie können ein Volume später einem Host oder Host-Cluster zuweisen. Ein Host-Cluster ist eine Gruppe von Hosts. Sie erstellen ein Host-Cluster, damit Sie mehrere Hosts dieselben Volumes ganz einfach zuweisen können.
+
+Das Zuweisen von Volumes zu Hosts ist flexibel und somit an Ihre spezifischen Storage-Anforderungen angepasst.
+
+* *Stand-alone Host, nicht Teil eines Host Clusters* -- Sie können ein Volume einem einzelnen Host zuweisen. Auf das Volume kann nur von einem Host zugegriffen werden.
+* *Host Cluster* -- Sie können ein Volume einem Host-Cluster zuweisen. Auf das Volume kann von allen Hosts im Host-Cluster zugegriffen werden.
+* *Host innerhalb eines Host-Clusters* -- Sie können ein Volume einem einzelnen Host zuweisen, der Teil eines Host-Clusters ist. Obwohl der Host Teil eines Host Clusters ist, kann das Volume nur vom individuellen Host und nicht von anderen Hosts im Host-Cluster abgerufen werden.
+
+
+Bei Erstellung von Volumes werden automatisch LUNs (Logical Unit Numbers) zugewiesen. Die LUN dient als Adresse zwischen dem Host und dem Controller während I/O-Vorgängen. Sie können LUNs nach der Erstellung des Volume ändern.

@@ -1,0 +1,62 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/vc-olh-assign-volumes-to-hosts.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
+summary: Sie müssen ein Volume einem Host oder Host-Cluster zuweisen, damit es für I/O-Vorgänge verwendet werden kann. 
+---
+= Weisen Sie Hosts Volumes zu
+:hardbreaks:
+:allow-uri-read: 
+:experimental: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Sie müssen ein Volume einem Host oder Host-Cluster zuweisen, damit es für I/O-Vorgänge verwendet werden kann.
+
+Beachten Sie bei der Zuweisung von Volumes zu Hosts die folgenden Richtlinien:
+
+* Sie können ein Volume gleichzeitig nur einem Host oder Host-Cluster zuweisen.
+* Zugewiesene Volumes werden von den Controllern im Storage-Array gemeinsam genutzt.
+* Die gleiche Logical Unit Number (LUN) kann nicht zweimal von einem Host oder einem Host-Cluster verwendet werden, um auf ein Volume zuzugreifen. Sie müssen eine eindeutige LUN verwenden.
+* Wenn Sie bei neuen Volume-Gruppen warten, bis alle Volumes erstellt und initialisiert wurden, bevor Sie sie einem Host zuweisen, wird die Initialisierungszeit des Volumes verkürzt. Beachten Sie, dass sobald ein mit der Volume-Gruppe assoziiertes Volume zugeordnet ist, alle Volumes auf die langsamere Initialisierung zurückgesetzt werden.
+
+
+Eine Volume-Zuweisung gewährt einem Host oder Host-Cluster Zugriff auf dieses Volume in einem Storage-Array.
+
+Während dieser Aufgabe werden alle nicht zugewiesenen Volumes angezeigt, aber Funktionen für Hosts mit oder ohne Data Assurance (da) gelten wie folgt:
+
+* Für einen da-fähigen Host können Sie Volumes auswählen, die entweder als da aktiviert oder nicht als da-aktiviert aktiviert sind.
+* Wenn Sie bei einem Host, der nicht für das da-fähig ist, ein Volume auswählen, das für das da-aktiviert ist, wird in einer Warnung angegeben, dass das System vor der Zuweisung des Volumes automatisch das da-on-Volume ausschalten muss.
++
+Unter diesen Bedingungen schlägt die Zuweisung eines Volumes fehl:
+
+* Alle Volumes werden zugewiesen.
+* Das Volume ist bereits einem anderen Host oder Host-Cluster zugewiesen. Die Möglichkeit, ein Volume zuzuweisen, ist unter folgenden Bedingungen nicht verfügbar:
+* Es sind keine gültigen Hosts oder Host Cluster vorhanden.
+* Für den Host wurden keine Host-Port-IDs definiert.
+* Alle Volume-Zuweisungen wurden definiert.
+
+
+.Schritte
+. Wählen Sie auf der Seite Verwalten das Speicher-Array mit der Hostverbindung aus.
+. Wählen Sie Menü:Bereitstellung [Hosts konfigurieren].
++
+Die Seite Hosts konfigurieren wird geöffnet.
+
+. Wählen Sie den Host oder Host-Cluster aus, dem Sie Volumes zuweisen möchten, und klicken Sie dann auf *Volumes zuweisen*.
++
+Es wird ein Dialogfeld angezeigt, in dem alle Volumes aufgelistet werden, die zugewiesen werden können. Sie können jede der Spalten sortieren oder etwas in das Filter-Feld eingeben, um bestimmte Volumes einfacher zu finden.
+
+. Aktivieren Sie das Kontrollkästchen neben jedem Volume, das Sie zuweisen möchten, oder aktivieren Sie das Kontrollkästchen in der Tabellenüberschrift, um alle Volumes auszuwählen.
+. Klicken Sie auf *Zuweisen*, um den Vorgang abzuschließen.
+
+
+Nachdem ein Volume oder ein Volume erfolgreich einem Host oder Host-Cluster zugewiesen wurde, führt das System folgende Aktionen durch:
+
+* Das zugewiesene Volume erhält die nächste verfügbare LUN-Nummer. Der Host verwendet die LUN-Nummer für den Zugriff auf das Volume.
+* Der vom Benutzer bereitgestellte Volume-Name wird in den Volume-Listen angezeigt, die dem Host zugeordnet sind. Falls zutreffend, wird das werkseitig konfigurierte Zugriffsvolume auch in den Volume-Listen angezeigt, die dem Host zugeordnet sind.
+

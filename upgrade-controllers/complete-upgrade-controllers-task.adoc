@@ -1,0 +1,203 @@
+---
+permalink: upgrade-controllers/complete-upgrade-controllers-task.html 
+sidebar: sidebar 
+keywords: E-Series, eseries, E2800, E5700, EF300, EF600, upgrade controller, upgrading controller, vendor ID, upgrade status, upgrade validate 
+summary: Führen Sie das Controller-Upgrade durch, indem Sie das Controller Shelf einschalten und die Controller-Softwareversion validieren. Anschließend können Sie Supportdaten erfassen und den Betrieb fortsetzen. 
+---
+= Führen Sie das Controller-Upgrade durch
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Führen Sie das Controller-Upgrade durch, indem Sie das Controller Shelf einschalten und die Controller-Softwareversion validieren. Anschließend können Sie Supportdaten erfassen und den Betrieb fortsetzen.
+
+Wenn Sie Controller in einem Duplex-Controller-Laufwerksfach aktualisieren, wiederholen Sie alle Schritte, um das Upgrade für den zweiten Controller abzuschließen.
+
+
+
+== Schritt 1: Controller einschalten
+
+Sie müssen das Controller-Shelf einschalten, um sicherzustellen, dass es ordnungsgemäß funktioniert.
+
+.Schritte
+. Schalten Sie den Netzschalter auf der Rückseite jedes Laufwerksfachs ein, das mit dem Controller-Laufwerksfach verbunden ist
+. Warten Sie zwei Minuten, bis die Laufwerke hochfahren.
+. Schalten Sie den Netzschalter auf der Rückseite des Controller-Laufwerksfachs ein
+. Warten Sie drei Minuten, bis der Einschalvorgang abgeschlossen ist.
+. Wenn Sie einen vollständigen Controller-Austausch für E2800 oder E5700 Controller durchführen, fahren Sie je nach Sicherheitsszenario mit einem der folgenden Verfahren fort:
++
+|===
+| Den Austausch des Controllers abschließen | Verfahren und Voraussetzungen 
+
+
+ a| 
+Alle ungesicherten Laufwerke, weder externe noch interne Schlüsselverwaltung
+ a| 
+Fahren Sie mit dem nächsten Schritt fort.
+
+
+
+ a| 
+Mischung aus gesicherten und ungesicherten Laufwerken, internes Schlüsselmanagement
+ a| 
+Sie müssen zunächst einen internen Sicherheitsschlüssel erstellen und dann den Sicherheitsschlüssel manuell importieren, um die gesicherten Laufwerke zu entsperren. Nachdem die Laufwerke entsperrt sind, können Sie auf die Laufwerke zugreifen.
+
+.. Interner Sicherheitsschlüssel erstellen
+.. Der Controller kann durch internes Verschlüsselungsmanagement und ein oder mehrere gesicherte Laufwerke ausgetauscht werden
+
+
+
+
+ a| 
+Alle gesicherten Laufwerke, internes Schlüsselmanagement
+ a| 
+Der Controller kann durch internes Verschlüsselungsmanagement und ein oder mehrere gesicherte Laufwerke ausgetauscht werden
+
+
+
+ a| 
+Mischung aus gesicherten und ungesicherten Laufwerken, External Key Management
+ a| 
+Fahren Sie mit dem nächsten Schritt fort.
+
+Nach dem Austausch des Controllers werden die Controller automatisch mit dem External Key Management Server resynchronisiert, sodass die Laufwerke entsperrt werden und auf sie zugegriffen werden kann.
+
+
+NOTE: Wenn Sie einen Sperrcode für sieben Segmente erhalten `L5` Nachdem Sie einen Controller-Austausch von gemischten gesicherten Laufwerken mit internem Verschlüsselungsmanagement durchgeführt haben, wenden Sie sich an den technischen Support.
+
+
+
+ a| 
+Alle gesicherten Laufwerke, External Key Management, haben Sie vorübergehend zum internen Schlüsselmanagement für das Controller-Ersatzverfahren zurückgekehrt
+ a| 
+Sie müssen die gesicherten Laufwerke zuerst mithilfe des Verfahrens zur internen Schlüsselverwaltung entsperren. Nachdem die Laufwerke entsperrt sind, wechseln Sie zurück zur externen Schlüsselverwaltung, indem Sie einen neuen externen Sicherheitsschlüssel für das Speicherarray erstellen.
+
+.. Der Controller kann durch internes Verschlüsselungsmanagement und ein oder mehrere gesicherte Laufwerke ausgetauscht werden
+.. Externen Sicherheitsschlüssel erstellen
+
+
+
+
+ a| 
+Alle gesicherten Laufwerke, External Key Management, haben Sie nicht vorübergehend zur internen Schlüsselverwaltung für das Controller-Ersatzverfahren gewechselt
+ a| 
+Der Controller kann durch externes Verschlüsselungsmanagement und alle Laufwerke gesichert werden
+
+|===
+
+
+
+
+== Schritt 2: Überprüfen Sie den Status der Controller und Fächer
+
+Sie können die LEDs und die Speicherverwaltungssoftware verwenden, um den Status Ihrer Controller und Fächer zu überprüfen.
+
+.Schritte
+. Schauen Sie sich die LEDs an Controller A an, um sicherzustellen, dass sie ordnungsgemäß gebootet werden.
++
+Während des Neubootens werden die erforderlichen LEDs für den Host Link Service grün angezeigt. Auf der 7-Segment-Anzeige wird die Sequenz OS+ SD+ leer angezeigt, um anzuzeigen, dass der Controller die SOD-Verarbeitung (Start-of-day) ausführt.
+
++
+Nachdem der Controller erfolgreich neu gebootet wurde, wird auf der Anzeige für sieben Segmente die Fach-ID angezeigt, die der Anzeige für sieben Segmente des zweiten Controllers entspricht. Sie können den neuen Controller-Behälter dann mit der Speichermanagement-Software entdecken.
+
+. Wenn eine der Service Action required LEDs des Controller-Laufwerksfachs _on_ leuchtet oder wenn die LED für die Service-Aktion des Controllers _ON_ leuchtet:
++
+.. Prüfen Sie, ob der Controller-Behälter richtig eingesetzt wurde und alle Kabel richtig eingesetzt sind. Setzen Sie ggf. den Controller-Behälter wieder ein.
+.. Überprüfen Sie die Action Action required LEDs des Controller-Laufwerksfachs und die Action-LED für den Controller-Service erneut. Wenn das Problem nicht behoben wird, wenden Sie sich an den technischen Support.
+
+
+. Wiederholen Sie für eine Duplexkonfiguration Schritt 1 bis Schritt 2 für Controller B
+. Überprüfen Sie mithilfe der LEDs und der Speicherverwaltungssoftware den Status aller Fächer im Speicher-Array. Wenn eine Komponente einen Aufmerksamkeitsstatus benötigt, verwenden Sie den Recovery Guru, um Probleme zu beheben. Wenn das Problem nicht behoben wird, wenden Sie sich an den technischen Support.
+
+
+
+
+== Schritt 3: Validieren der Controller-Softwareversion
+
+Sie müssen sicherstellen, dass Ihre neuen Controller mit dem richtigen Betriebssystem (Controller-Firmware) und NVSRAM ausgeführt werden.
+
+.Schritte
+. Führen Sie einen der folgenden Schritte aus:
++
+** Wenn Sie ein Upgrade auf Controller durchführen, die SANtricity 11.30 und die Controller-Firmware 8.30 nicht unterstützen, stellen Sie sicher, dass die auf den neuen Controllern ausgeführte Version mit der Version übereinstimmt, die zuletzt auf den ursprünglichen Controllern ausgeführt wurde. Normalerweise wird dies die letzte Version sein, die von den alten Controllern unterstützt wird. Installieren Sie gegebenenfalls die entsprechende Version auf den neuen Controllern.
+** Wenn Sie ein Upgrade auf Controller durchführen, auf denen SANtricity 11.30 und die Controller-Firmware 8.30 ausgeführt werden, laden Sie die neuesten NVSRAM herunter, und installieren Sie sie, nachdem Sie die neuen Controller eingeschaltet haben.
+
+
+. Wenn bei Ihrem Controller-Upgrade eine Protokolländerung (z. B. Fibre Channel zu iSCSI) vorgenommen wird und bereits Hosts für Ihr Storage Array definiert sind, verknüpfen Sie die neuen Host-Ports mit Ihren Hosts:
++
+.. Wählen Sie im System Manager Menü:Storage[Hosts] aus.
+.. Wählen Sie den Host aus, dem die Ports zugeordnet werden sollen, und klicken Sie dann auf *Einstellungen anzeigen/bearbeiten*.
++
+Es wird ein Dialogfeld angezeigt, in dem die aktuellen Hosteinstellungen angezeigt werden.
+
+.. Klicken Sie auf die Registerkarte *Host Ports*.
++
+Im Dialogfeld werden die aktuellen Host-Port-IDs angezeigt.
+
+.. Um die Informationen zur Host-Port-Kennung zu aktualisieren, die jedem Host zugeordnet sind, ersetzen Sie die Host-Port-IDs der alten Hostadapter durch die neuen Host-Port-IDs für den neuen Hostadapter.
+.. Wiederholen Sie Schritt d für jeden Host.
+.. Klicken Sie Auf *Speichern*.
+
+
++
+Informationen über kompatible Hardware finden Sie im https://mysupport.netapp.com/NOW/products/interoperability["NetApp Interoperabilitätsmatrix"^] Und das http://hwu.netapp.com/home.aspx["NetApp Hardware Universe"^].
+
+. Wenn die Write Back-Cache-Speicherung für alle Thin-Volumes deaktiviert wurde, die sich auf den Headswap vorbereiten, aktivieren Sie das Write Back-Caching erneut.
++
+.. Wählen Sie im System Manager Menü:Storage[Volumes] aus.
+.. Wählen Sie ein beliebiges Volume aus, und wählen Sie dann Menü:Mehr[Cache-Einstellungen ändern].
++
+Das Dialogfeld Cache-Einstellung ändern wird angezeigt. In diesem Dialogfeld werden alle Volumes im Speicher-Array angezeigt.
+
+.. Wählen Sie die Registerkarte *Basic* und ändern Sie die Einstellungen für Lese-Cache und Schreib-Caching.
+.. Klicken Sie Auf *Speichern*.
+
+
+. Wenn SAML bei der Vorbereitung auf das Kopftausch deaktiviert wurde, aktivieren Sie SAML neu.
++
+.. Wählen Sie im System Manager Menü:Einstellungen[Zugriffsverwaltung].
+.. Wählen Sie die Registerkarte *SAML* aus, und befolgen Sie die Anweisungen auf der Seite.
+
+
+. Sie können Support-Daten über Ihr Storage Array über die grafische Benutzeroberfläche oder die CLI erfassen:
++
+** Verwenden Sie entweder System Manager oder das Array Management-Fenster des Storage Managers, um ein Support Bundle Ihres Storage Arrays zu sammeln und zu speichern.
++
+*** Wählen Sie in System Manager im Menü:Support[Support Center > Registerkarte Diagnose]. Wählen Sie dann *Support-Daten sammeln* und klicken Sie auf *Collect*.
+*** Wählen Sie in der Symbolleiste Array Management Window die Option MENU:Überwachen[Systemzustand > Support-Daten manuell erfassen]. Geben Sie dann einen Namen ein und geben Sie einen Speicherort auf Ihrem System an, auf dem Sie das Supportpaket speichern möchten.
++
+Die Datei wird im Ordner Downloads für Ihren Browser mit dem Namen gespeichert `support-data.7z`.
+
++
+Wenn Ihr Regal Schubladen enthält, werden die Diagnosedaten für dieses Shelf in einer separaten Datei mit dem Namen gezippt archiviert `tray-component-state-capture.7z`
+
+
+
+** Verwenden Sie die CLI, um die auszuführen `save storageArray supportData` Befehl zum Sammeln umfassender Support-Daten zum Storage Array.
++
+
+NOTE: Das Sammeln von Support-Daten kann vorübergehend Auswirkungen auf die Performance Ihres Storage Arrays haben.
+
+
+
+. Benachrichtigen Sie den technischen Support von NetApp über die Änderungen, die Sie an der Konfiguration Ihres Storage-Arrays vorgenommen haben.
++
+.. Holen Sie sich die Seriennummer des in notierten Controller-Laufwerksfachs xref:prepare-upgrade-controllers-task.adoc[Controller-Upgrades vorbereiten].
+.. Loggen Sie sich auf der NetApp Support Site unter ein http://mysupport.netapp.com/eservice/assistant["mysupport.netapp.com/eservice/assistant"^].
+.. Wählen Sie in der Dropdown-Liste unter *Kategorie 1* die Option *Produktregistrierung* aus.
+.. Geben Sie den folgenden Text in das Textfeld **Kommentare** ein und ersetzen Sie die Seriennummer Ihres Controller-Laufwerksfachs für die Seriennummer:
++
+`Please create alert against Serial Number: serial number. The alert name should be “E-Series Upgrade”. The alert text should read as follows:`
+
++
+`“Attention: The controllers in this system have been upgraded from the original configuration. Verify the controller configuration before ordering replacement controllers and notify dispatch that the system has been upgraded.”`
+
+.. Klicken Sie unten im Formular auf die Schaltfläche *Senden*.
+
+
+
+
+Wenn Ihr Controller-Upgrade dazu führt, die Anbieter-ID von LSI zu NETAPP zu ändern, gehen Sie zu link:remount-volumes-lsi-task.html["Volumes neu einbinden nach Anbieterwechsel von LSI zu NETAPP"]; Andernfalls ist Ihr Controller-Upgrade abgeschlossen und Sie können den normalen Betrieb wieder aufnehmen.

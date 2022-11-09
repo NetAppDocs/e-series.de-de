@@ -1,0 +1,118 @@
+---
+permalink: remote-storage-volumes/system-reqs-concept.html 
+sidebar: sidebar 
+keywords: Remote Storage Volumes requirements, RTV requirements, RTV restrictions, remote volumes, remote storage E-Series 
+summary: Ihr System muss die Kompatibilitätsanforderungen für Remote Storage Volumes erfüllen. 
+---
+= Anforderungen und Beschränkungen für Remote Storage
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Überprüfen Sie vor der Konfiguration der Remote Storage Volumes-Funktion die folgenden Anforderungen und Einschränkungen.
+
+
+
+== Hardwareanforderungen
+
+
+
+=== Unterstützte Protokolle
+
+Für die erste Version der Funktion Remote Storage Volumes wird nur Unterstützung für iSCSI- und IPv4-Protokolle geboten.
+
+Siehe http://mysupport.netapp.com/matrix["NetApp Interoperabilitäts-Matrix-Tool"^] Sie erhalten aktuelle Informationen zur Unterstützung und Konfiguration zwischen dem Host und dem E-Series (Ziel)-Array, das für die Funktion Remote Storage Volumes verwendet wird.
+
+
+
+=== Storage-Systemanforderungen
+
+Das E-Series Storage-System muss Folgendes umfassen:
+
+* Zwei Controller (Duplexmodus)
+* ISCSI-Verbindungen für E-Series Controller zur Kommunikation mit dem Remote-Storage-System über eine oder mehrere iSCSI-Verbindungen
+* SANtricity OS 11.71 oder höher
+* Remote Storage-Funktion in Submodell-ID (SMID) aktiviert
+
+
+Das Remote-System kann entweder ein E-Series Storage-System oder ein System eines anderen Anbieters sein. Es müssen iSCSI-fähige Schnittstellen enthalten.
+
+
+
+== Volume-Anforderungen
+
+Für Importe verwendete Volumes müssen die Anforderungen für Größe, Status und andere Kriterien erfüllen.
+
+
+
+=== Remote Storage Volume
+
+Das Quell-Volume eines Imports wird als „Remote-Storage-Volume“ bezeichnet. Dieses Volume muss die folgenden Kriterien erfüllen:
+
+* Darf nicht Teil eines anderen Imports sein
+* Muss einen Online-Status haben
+
+
+Nach dem Import erstellt die Controller-Firmware im Hintergrund ein Remote-Speicher-Volume. Aufgrund dieses Hintergrundprozesses ist das Remote Storage Volume in System Manager nicht verwaltbar und kann nur für den Importvorgang verwendet werden.
+
+Nach der Erstellung wird das Remote Storage Volume wie jedes andere Standard-Volume des E-Series Systems behandelt. Folgende Ausnahmen gelten:
+
+* Kann als Proxys für das Remote-Speichergerät verwendet werden.
+* Kann nicht als Kandidaten für andere Volume-Kopien oder Snapshots verwendet werden.
+* Während des Imports kann die Data Assurance-Einstellung nicht geändert werden.
+* Es können keine Hosts zugeordnet werden, da sie ausschließlich für den Importvorgang reserviert sind.
+
+
+Jedes Remote-Storage-Volume ist nur einem Remote-Storage-Objekt zugewiesen. Ein Remote-Storage-Objekt kann jedoch mehreren Remote-Storage Volumes zugewiesen werden. Das Remote Storage Volume wird anhand folgender Elemente eindeutig identifiziert:
+
+* Objekt-ID für Remote-Storage
+* LUN-Nummer des Remote-Speichergeräts
+
+
+
+
+=== Kandidaten für Zielvolumen
+
+Das Ziel-Volume ist das Ziel-Volume auf dem lokalen E-Series System.
+
+Das Ziel-Volume muss die folgenden Kriterien erfüllen:
+
+* Muss ein RAID/DDP-Volume sein.
+* Muss eine Kapazität aufweisen, die dem Remote-Storage-Volume entspricht oder größer ist.
+* Es müssen Blöcke vorhanden sein, die mit dem Remote-Storage-Volume identisch sind.
+* Muss einen gültigen Zustand (optimal) aufweisen.
+* Es können keine der folgenden Beziehungen vorhanden sein: Volume-Kopie, Snapshot-Kopien, asynchrones oder synchrones Spiegeln.
+* Keine Neukonfiguration möglich: Dynamische Volume-Erweiterung, dynamische Kapazitätserweiterung, dynamische Segmentgröße, dynamische RAID-Migration, dynamische Kapazitätsreduzierung, Oder Defragmentierung.
+* Vor dem Import kann einem Host nicht zugeordnet werden (er kann jedoch nach Importstart zugeordnet werden).
+* Flash Read (FRC) kann nicht aktiviert sein.
+
+
+System Manager überprüft diese Anforderungen automatisch im Assistenten zum Importieren von Remote Storage. Für die Auswahl des Ziel-Volumes werden nur Volumes angezeigt, die alle Anforderungen erfüllen.
+
+
+
+== Einschränkungen
+
+Die Remote-Speicherfunktion verfügt über folgende Einschränkungen:
+
+* Die Spiegelung muss deaktiviert werden.
+* Auf dem Ziel-Volume des E-Series Systems dürfen keine Snapshots vorhanden sein.
+* Das Ziel-Volume auf dem E-Series System darf vor dem Start des Imports keinen Hosts zugeordnet werden.
+* Auf dem Ziel-Volume des E-Series Systems muss die Ressourcen-Bereitstellung deaktiviert sein.
+* Direkte Zuordnungen des Remote-Storage-Volumes zu einem oder mehreren Hosts werden nicht unterstützt.
+* Web Services Proxy wird nicht unterstützt.
+* ISCSI-CHAP-Schlüssel werden nicht unterstützt.
+* SMcli wird nicht unterstützt.
+* VMware Datastore wird nicht unterstützt.
+* Ein Upgrade von nur einem Speichersystem im Verhältnis-/Importpaar kann zu einem Zeitpunkt durchgeführt werden, an dem ein Importpaar vorhanden ist.
+
+
+
+
+== Vorbereitung für Produktionsimporte
+
+Sie sollten vor dem Produktionsimport einen Test oder einen „Probelauf“ durchführen, um die ordnungsgemäße Storage- und Fabric-Konfiguration zu überprüfen.
+
+Viele Variablen können sich auf den Importvorgang und die Abschlusszeit auswirken. Um sicherzustellen, dass ein Produktionsimport erfolgreich ist und eine Schätzung der Dauer erhalten wird, können Sie diese Testimporte verwenden, um sicherzustellen, dass alle Verbindungen wie erwartet funktionieren und der Importvorgang in angemessener Zeit abgeschlossen wird. Anschließend können Sie Anpassungen vornehmen, um die gewünschten Ergebnisse zu erzielen, bevor der Produktionsimport gestartet wird.

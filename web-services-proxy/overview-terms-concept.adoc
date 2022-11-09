@@ -1,0 +1,88 @@
+---
+permalink: web-services-proxy/overview-terms-concept.html 
+sidebar: sidebar 
+keywords: Web Services terms, WSP concepts 
+summary: Erfahren Sie mehr über die Web Services API 
+---
+= Begriffe und Konzepte
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Die folgenden Begriffe gelten für den Web Services Proxy.
+
+|===
+| Laufzeit | Definition 
+
+
+ a| 
+API
+ a| 
+Eine API (Application Programming Interface) besteht aus Protokollen und Methoden, die es Entwicklern ermöglichen, mit Geräten zu kommunizieren. Die Web Services API dient zur Kommunikation mit E-Series Storage-Systemen.
+
+
+
+ a| 
+ASUP
+ a| 
+Die AutoSupport (ASUP) Funktion sammelt Daten in einem Kunden-Support-Bundle und sendet die Nachrichtendatei automatisch an den technischen Support, um die Remote-Fehlerbehebung und Problemanalyse zu durchführen.
+
+
+
+ a| 
+Endpunkt
+ a| 
+Endpunkte sind Funktionen, die über die API verfügbar sind. Ein Endpunkt enthält ein HTTP-Verb sowie den URI-Pfad. In Web Services können Endpunkte Aufgaben wie das Erkennen von Storage-Systemen und das Erstellen von Volumes ausführen.
+
+
+
+ a| 
+HTTP-Verb
+ a| 
+Ein HTTP-Verb ist eine entsprechende Aktion für einen Endpunkt, wie z. B. das Abrufen und Erstellen von Daten. In Web Services umfassen HTTP-Verben POST, GET und DELETE.
+
+
+
+ a| 
+JSON
+ a| 
+JavaScript Object Notation (JSON) ist ein strukturiertes Datenformat ähnlich wie XML, das ein minimales, lesbares Format verwendet. Daten in Web Services werden über JSON verschlüsselt.
+
+
+
+ a| 
+REST/Ruhe
+ a| 
+Representational State Transfer (REST) ist eine lose Spezifikation, die einen Architekturstil für eine API definiert. Da die meisten REST-APIs nicht vollständig der Spezifikation entsprechen, werden sie als „`reSTful`“ oder „`re` ST-Like“ beschrieben. Im Allgemeinen ist eine "`reSTful`"-API unabhängig von Programmiersprachen und hat die folgenden Eigenschaften:
+
+* HTTP-basiert, die der allgemeinen Semantik des Protokolls folgt
+* Hersteller und Verbraucher strukturierter Daten (JSON, XML, etc.)
+* Objektorientiert (im Gegensatz zu betriebsorientiert)
+
+
+Web Services ist eine RESTful API, die Zugriff auf nahezu alle SANtricity Managementfunktionen bietet.
+
+
+
+ a| 
+Storage-System
+ a| 
+Ein Storage-System ist ein E-Series Array, das Shelfs, Controller, Laufwerke, Software Und Firmware.
+
+
+
+ a| 
+Symbol-API
+ a| 
+Symbol ist eine ältere API für das Management von E-Series Storage-Systemen. Die zugrunde liegende Implementierung der Web Services API verwendet Symbol.
+
+
+
+ a| 
+Web-Services
+ a| 
+Web Services ist eine API, die NetApp für Entwickler zum Management von E-Series Storage-Systemen entwickelt hat. Es gibt zwei Implementierungen von Web Services: Eingebettet in den Controller und einen separaten Proxy, der auf Linux oder Windows installiert werden kann.
+
+|===

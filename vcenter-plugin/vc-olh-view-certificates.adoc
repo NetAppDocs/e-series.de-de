@@ -1,0 +1,28 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/vc-olh-view-certificates.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
+summary: 'Zusammenfassende Informationen für ein Zertifikat anzeigen, einschließlich Organisation, die das Zertifikat verwendet, Behörde, die das Zertifikat ausgestellt hat, Gültigkeitsdauer und Fingerabdrücke (eindeutige Kennungen)' 
+---
+= Anzeigen von Zertifikaten
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Sie können zusammenfassende Informationen für ein Zertifikat anzeigen, das die Organisation, die das Zertifikat verwendet, die Behörde, die das Zertifikat ausgestellt hat, den Gültigkeitszeitraum und die Fingerabdrücke (eindeutige Kennungen) umfasst.
+
+.Schritte
+. Wählen Sie *Zertifikatverwaltung*.
+. Wählen Sie eine der folgenden Registerkarten aus:
++
+** *Management* -- zeigt das Zertifikat für das System, das das Plugin hostet. Ein Managementzertifikat kann von einer Zertifizierungsstelle (CA) selbst signiert oder genehmigt werden. Es ermöglicht sicheren Zugriff auf das Plugin.
+** *Trusted* -- zeigt Zertifikate, auf die das Plugin für Speicher-Arrays und andere Remote-Server zugreifen kann, z. B. einen LDAP-Server. Die Zertifikate können von einer Zertifizierungsstelle (CA) ausgestellt oder selbst signiert werden.
+
+
+. Um weitere Informationen zu einem Zertifikat anzuzeigen, wählen Sie seine Zeile aus, wählen Sie die Ellipsen am Zeilenende aus und klicken Sie dann auf *Ansicht* oder *Export*.
+

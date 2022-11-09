@@ -1,0 +1,32 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/vc-olh-export-certificates.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
+summary: Exportieren Sie ein Zertifikat, um die vollständigen Details anzuzeigen. 
+---
+= Exportieren von Zertifikaten
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Sie können ein Zertifikat exportieren, um die vollständigen Details anzuzeigen.
+
+Um die exportierte Datei zu öffnen, müssen Sie über eine Zertifikatanzeige-Anwendung verfügen.
+
+.Schritte
+. Wählen Sie *Zertifikatverwaltung*.
+. Wählen Sie eine der folgenden Registerkarten aus:
++
+** *Management* -- zeigt das Zertifikat für das System, das das Plugin hostet. Ein Managementzertifikat kann von einer Zertifizierungsstelle (CA) selbst signiert oder genehmigt werden. Es ermöglicht sicheren Zugriff auf das Plugin.
+** *Trusted* -- zeigt Zertifikate, auf die das Plugin für Speicher-Arrays und andere Remote-Server zugreifen kann, z. B. einen LDAP-Server. Die Zertifikate können von einer Zertifizierungsstelle (CA) ausgestellt oder selbst signiert werden.
+
+
+. Wählen Sie auf der Seite ein Zertifikat aus, und klicken Sie dann am Ende der Zeile auf die Ellipsen.
+. Klicken Sie auf *Exportieren* und speichern Sie dann die Zertifikatdatei.
+. Öffnen Sie die Datei in Ihrer Zertifikatanzeige-Anwendung.
+

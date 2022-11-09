@@ -1,0 +1,53 @@
+---
+permalink: install-hw-ef600/power-controller-shelves-task.html 
+sidebar: sidebar 
+keywords: EF300, EF600, installation, power on, power cables 
+summary: Schließen Sie die Stromkabel an, und schalten Sie die Laufwerk-Shelfs ein. 
+---
+= Schaltet die Controller-Shelfs ein
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Erfahren Sie, wie Sie die Stromkabel anschließen und die Laufwerk-Shelfs einschalten.
+
+Bevor Sie die Controller-Shelfs einschalten, stellen Sie Folgendes sicher:
+
+* Installieren Sie Ihre Hardware.
+* Treffen Sie antistatische Vorsichtsmaßnahmen.
+
+
+.Schritte
+. Schließen Sie das Stromkabel an jeden Controller an (siehe Abbildung EF600).
++
+|===
+
+
+ a| 
+image:../media/power_cable_inst-hw-ef600.png[""]
+ a| 
+*Stromkabel*
+
+|===
++
+|===
+
+
+ a| 
+image:../media/cabling_power.png[""]
+
+|===
+. Verbinden Sie die beiden Netzkabel, eines von jedem Controller, mit zwei separaten Stromverteilereinheiten (PDUs) im Schrank oder Rack.
++
+
+CAUTION: Der Zugriff auf einen EF300- oder EF600 Controller-Behälter über das Shelf kann durch PDUs anderer Hersteller blockiert werden. Steckdosen nicht direkt hinter dem Controller-Behälter verwenden.
+
+. Lassen Sie den Controller fünf Minuten lang booten, bevor Sie die Einrichtung und Konfiguration des Storage-Systems abgeschlossen haben.
+
+
+Der Controller wird automatisch gebootet. Die LEDs leuchten auf, und die Lüfter beginnen zu zeigen, dass der Controller eingeschaltet wird.
+
+
+NOTE: Die Lüfter sind beim ersten Einschalten sehr laut.

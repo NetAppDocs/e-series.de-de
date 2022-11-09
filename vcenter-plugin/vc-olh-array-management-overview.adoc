@@ -1,0 +1,142 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/vc-olh-array-management-overview.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
+summary: Verwenden Sie die Funktion Add/Discover, um die zu verwaltenden Speicher-Arrays im Netzwerk Ihres Unternehmens zu suchen und hinzuzufügen. 
+---
+= Array-Management – Überblick
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Verwenden Sie die Funktion Add/Discover, um die zu managenden Storage-Arrays im Storage Plug-in für vCenter zu finden und hinzuzufügen. Auf der Seite Verwalten können Sie auch neue Passwörter für diese ermittelten Arrays umbenennen, entfernen und bereitstellen.
+
+
+
+== Überlegungen bei der Array-Ermittlung
+
+Damit das Plug-in Storage-Ressourcen anzeigen und verwalten kann, müssen Sie die Storage-Arrays ermitteln, die Sie im Netzwerk Ihres Unternehmens managen möchten. Sie können entweder ein oder mehrere Arrays ermitteln und dann hinzufügen.
+
+
+
+=== Mehrere Storage-Arrays
+
+Wenn Sie mehrere Arrays ermitteln möchten, geben Sie einen Netzwerk-IP-Adressbereich ein, und das System versucht dann individuelle Verbindungen zu jeder IP-Adresse in diesem Bereich. Jedes erfolgreich erreichte Storage Array wird im Plug-in angezeigt und Sie können sie dann Ihrer Management-Domäne hinzufügen.
+
+
+
+=== Einzelnes Storage Array
+
+Wenn Sie ein einzelnes Array ermitteln möchten, geben Sie die einzelne IP-Adresse für einen der Controller im Storage Array ein und fügen Sie anschließend dieses Array zur Management-Domäne hinzu.
+
+
+NOTE: Das Plugin erkennt und zeigt nur die einzige IP-Adresse oder IP-Adresse innerhalb eines Bereichs an, der einem Controller zugewiesen ist. Wenn diesen Controllern alternative Controller oder IP-Adressen zugewiesen sind, die außerhalb dieser einzelnen IP-Adresse oder des IP-Adressbereichs liegen, werden sie durch das Plugin nicht ermittelt oder angezeigt. Sobald Sie jedoch das Speicher-Array hinzufügen, werden alle zugehörigen IP-Adressen ermittelt und in der Ansicht Verwalten angezeigt.
+
+
+
+=== Benutzeranmeldeinformationen
+
+Sie müssen für jedes Speicherarray, das Sie hinzufügen möchten, das Administratorkennwort angeben.
+
+
+
+=== Zertifikate
+
+Im Rahmen der Bestandsaufnahme überprüft das System, ob die erkannten Speicher-Arrays Zertifikate von einer vertrauenswürdigen Quelle verwenden. Das System verwendet zwei Arten von zertifikatbasierter Authentifizierung für alle Verbindungen, die es mit dem mit dem Browser herstellt:
+
+* *Vertrauenswürdige Zertifikate* -- möglicherweise müssen Sie zusätzliche vertrauenswürdige Zertifikate installieren, die von der Zertifizierungsstelle bereitgestellt werden, wenn ein oder beide Controller-Zertifikate abgelaufen, widerrufen oder ein Zertifikat in der Kette fehlt.
+* *Selbstsignierte Zertifikate* -- Arrays können auch selbstsignierte Zertifikate verwenden. Wenn Sie versuchen, Arrays zu entdecken, ohne signierte Zertifikate zu importieren, bietet das Plugin einen zusätzlichen Schritt, mit dem Sie das selbstsignierte Zertifikat akzeptieren können. Das selbstsignierte Zertifikat des Speicherarrays wird als vertrauenswürdig markiert und das Speicherarray wird dem Plugin hinzugefügt. Wenn Sie den Verbindungen zum Speicher-Array nicht vertrauen, wählen Sie *Abbrechen* und validieren Sie die Sicherheitszertifikatstrategie des Speicherarrays, bevor Sie das Speicher-Array zum Plugin hinzufügen.
+
+
+
+
+== Status des Storage-Arrays
+
+Wenn Sie das Storage Plug-in für vCenter öffnen, wird die Kommunikation mit jedem Speicher-Array hergestellt und der Status jedes Speicher-Arrays wird angezeigt.
+
+Auf der Seite *Verwalten - Alle* können Sie den Status des Speicherarrays und den Status der Speicherarray-Verbindung anzeigen.
+
+|===
+| Status | Zeigt An 
+
+
+| Optimal | Das Storage-Array befindet sich in einem optimalen Zustand. Es gibt keine Zertifikatprobleme und das Passwort ist gültig. 
+
+
+| Ungültiges Kennwort | Es wurde ein ungültiges Kennwort für das Speicher-Array angegeben. 
+
+
+| Nicht Vertrauenswürdiges Zertifikat | Eine oder mehrere Verbindungen mit dem Speicher-Array sind nicht vertrauenswürdig, da das HTTPS-Zertifikat entweder selbst signiert ist und noch nicht importiert wurde, oder das Zertifikat eine CA-Signatur hat und die Stamm- und Intermediate-CA-Zertifikate nicht importiert wurden. 
+
+
+| Erfordert Aufmerksamkeit | Es liegt ein Problem mit dem Speicher-Array vor, das Ihr Eingreifen erfordert, um es zu beheben. 
+
+
+| Verriegeln | Das Storage-Array befindet sich in einem gesperrten Zustand. 
+
+
+| Unbekannt | Das Speicher-Array wurde noch nie kontaktiert. Dies kann passieren, wenn das Plugin gestartet wird und noch keinen Kontakt zum Speicher-Array hergestellt hat oder das Speicher-Array offline ist und seit dem Start des Plugins nie kontaktiert wurde. 
+
+
+| Offline | Das Plug-in hatte bereits zuvor Kontakt mit dem Storage-Array hergestellt, doch jetzt gingen sämtliche Verbindungen verloren. 
+|===
+
+
+== Plug-in-Schnittstelle verglichen mit System Manager
+
+Sie können Storage Plug-in für vCenter für grundlegende Betriebsaufgaben in Ihrem Speicher-Array verwenden. Es kann jedoch zu Zeiten kommen, in denen Sie System Manager starten müssen, um Aufgaben auszuführen, die im Plug-in nicht verfügbar sind.
+
+System Manager ist eine eingebettete Anwendung auf dem Controller des Storage-Arrays, die über einen Ethernet-Management-Port mit dem Netzwerk verbunden ist. System Manager enthält alle Array-basierten Funktionen.
+
+Die folgende Tabelle hilft Ihnen bei der Entscheidung, ob Sie die Plug-in-Schnittstelle oder die System Manager-Schnittstelle für eine bestimmte Aufgabe des Speicherarrays verwenden können.
+
+|===
+| Funktion | Plug-in-Schnittstelle | Benutzeroberfläche von System Manager 
+
+
+| Batch-Operationen in Gruppen von mehreren Storage-Arrays | Ja. | Nein Operationen werden auf einem einzelnen Array durchgeführt. 
+
+
+| Upgrades für die SANtricity OS Firmware | Ja. Ein oder mehrere Arrays im Batch-Betrieb | Ja. Nur Single Array. 
+
+
+| Einstellungen von einem Array in mehrere Arrays importieren | Ja. | Nein 
+
+
+| Host- und Host-Cluster-Management (Erstellung, Zuweisung von Volumes, Aktualisierung und Löschen) | Ja. | Ja. 
+
+
+| Pools und Volume-Gruppen-Management (Erstellung, Aktualisierung, Aktivierung und Löschen) | Ja. | Ja. 
+
+
+| Volume-Management (Erstellen, Skalieren, Aktualisieren und Löschen) | Ja. | Ja. 
+
+
+| SSD Cache-Management (Erstellen, Aktualisieren und Löschen) | Ja. | Ja. 
+
+
+| Spiegelung und Snapshot Management | Nein | Ja. 
+
+
+| Hardware-Management (Controller-Status anzeigen, Port-Verbindungen konfigurieren, Controller offline schalten, Hot Spares aktivieren, Laufwerke löschen, Usw.) | Nein | Ja. 
+
+
+| Management von Warnmeldungen (E-Mail, SNMP und Syslog) | Nein | Ja. 
+
+
+| Sicherheitsschlüsselmanagement | Nein | Ja. 
+
+
+| Zertifikatsmanagement für Controller | Nein | Ja. 
+
+
+| Zugriffsmanagement für Controller (LDAP, SAML usw.) | Nein | Ja. 
+
+
+| AutoSupport Management | Nein | Ja. 
+|===

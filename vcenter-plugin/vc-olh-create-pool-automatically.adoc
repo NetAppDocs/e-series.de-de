@@ -1,0 +1,61 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/vc-olh-create-pool-automatically.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
+summary: Sie können Pools automatisch erstellen, wenn das System mindestens 11 nicht zugewiesene Laufwerke erkennt oder ein nicht zugewiesenes Laufwerk erkennt, das für einen vorhandenen Pool geeignet ist. 
+---
+= Pool automatisch erstellen
+:hardbreaks:
+:allow-uri-read: 
+:experimental: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Sie können Pools automatisch erstellen, wenn das System mindestens 11 nicht zugewiesene Laufwerke erkennt oder ein nicht zugewiesenes Laufwerk erkennt, das für einen vorhandenen Pool geeignet ist. Ein Pool ist eine Gruppe von logisch gruppierten Laufwerken.
+
+Sie können das Dialogfeld „automatische Konfiguration des Pools“ starten, wenn eine der folgenden Bedingungen zutrifft:
+
+* Es wurde mindestens ein nicht zugewiesenes Laufwerk erkannt, das einem vorhandenen Pool mit ähnlichen Laufwerktypen hinzugefügt werden kann.
+* Es wurden elf (11) oder mehr nicht zugewiesene Laufwerke erkannt, die zur Erstellung eines neuen Pools verwendet werden können (wenn sie aufgrund unterschiedlicher Antriebstypen nicht zu einem vorhandenen Pool hinzugefügt werden können).
+
+
+Mithilfe der automatischen Pool-Erstellung können alle nicht zugewiesenen Laufwerke im Speicher-Array in einem Pool konfiguriert und Laufwerke zu vorhandenen Pools hinzugefügt werden.
+
+Beachten Sie Folgendes:
+
+* Wenn Sie einem Speicher-Array Laufwerke hinzufügen, erkennt das System automatisch die Laufwerke und fordert Sie auf, basierend auf dem Laufwerkstyp und der aktuellen Konfiguration einen einzelnen Pool oder mehrere Pools zu erstellen.
+* Wenn zuvor Pools definiert wurden, fordert das System Sie automatisch auf, die kompatiblen Laufwerke einem vorhandenen Pool hinzuzufügen. Wenn zu einem vorhandenen Pool neue Laufwerke hinzugefügt werden, verteilt das System die Daten automatisch auf die neue Kapazität, die jetzt die neuen Laufwerke enthält, die Sie hinzugefügt haben.
+* Wenn Sie ein EF600 oder EF300 Storage-Array konfigurieren, stellen Sie sicher, dass jeder Controller in den ersten 12 Steckplätzen und in den letzten 12 Steckplätzen Zugriff auf eine gleiche Anzahl von Laufwerken hat. Mit dieser Konfiguration können die Controller beide PCIe-Busse auf der Laufwerkseite effektiver nutzen. Für die Erstellung von Pools sollten Sie alle Laufwerke im Speicher-Array verwenden.
+
+
+.Schritte
+. Wählen Sie auf der Seite Verwalten das Speicher-Array für den Pool aus.
+. Wählen Sie Menü:Provisioning[Pools und Volume-Gruppen konfigurieren].
+. Wählen Sie MENU:Mehr[Pool Auto-Configuration starten].
++
+In der Ergebnistabelle werden neue Pools, vorhandene Pools mit hinzugefügten Laufwerken oder beides aufgeführt. Ein neuer Pool wird standardmäßig mit einer sequenziellen Nummer benannt.
+
++
+Beachten Sie, dass das System folgende Schritte vornimmt:
+
++
+** Erstellt einen einzelnen Pool, wenn es eine ausreichende Anzahl von Laufwerken mit demselben Laufwerkstyp (HDD oder SSD) und ähnliche Kapazität gibt.
+** Erstellt mehrere Pools, wenn die nicht zugewiesene Kapazität aus verschiedenen Laufwerkstypen besteht.
+** Fügt die Laufwerke einem vorhandenen Pool hinzu, wenn bereits ein Pool im Speicher-Array definiert ist, und Sie fügen dem Pool neue Laufwerke desselben Laufwerkstyps hinzu.
+** Fügt dem vorhandenen Pool die Laufwerke desselben Laufwerkstyps hinzu und erstellt mithilfe der anderen Laufwerktypen verschiedene Pools, wenn die neuen Laufwerke unterschiedliche Laufwerkstypen haben.
+
+
+. Um den Namen eines neuen Pools zu ändern, klicken Sie auf das Symbol *Bearbeiten* (der Stift).
+. Um zusätzliche Merkmale des Pools anzuzeigen, positionieren Sie den Cursor über oder berühren Sie das Symbol Details (die Seite).
++
+Es werden Informationen zum Laufwerkstyp, zur Sicherheitsfunktion, zur Data Assurance (da)-Funktion, zum Schutz vor Shelf-Verlust und zum Schutz vor Schubladenverlust angezeigt.
+
++
+Bei EF600 und EF300 Storage-Arrays werden die Einstellungen auch für die Ressourcenbereitstellung und Volume-Blockgrößen angezeigt.
+
+. Klicken Sie Auf *Akzeptieren*.
+

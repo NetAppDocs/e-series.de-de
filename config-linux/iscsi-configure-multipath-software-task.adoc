@@ -1,0 +1,66 @@
+---
+permalink: config-linux/iscsi-configure-multipath-software-task.html 
+sidebar: sidebar 
+keywords: multipath software for Linux, express linux configuration, software configuration, linux host, E2800, E5700, EF300, EF600, E-Series, eseries 
+summary: Konfigurieren Sie die Multipath-Software, die einen redundanten Pfad zum Storage Array bereitstellt, falls einer der physischen Pfade unterbrochen wird. 
+---
+= Konfigurieren Sie die Multipath-Software
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Um einen redundanten Pfad zum Storage Array bereitzustellen, können Sie die Multipath-Software konfigurieren.
+
+Sie müssen die erforderlichen Pakete auf Ihrem System installieren.
+
+* Überprüfen Sie für Red hat-Hosts (RHEL), ob die Pakete durch Ausführen installiert wurden `rpm -q device-mapper-multipath`.
+* Überprüfen Sie bei SLES-Hosts, ob die Pakete durch Ausführen installiert wurden `rpm -q multipath-tools`.
+
+
+Wenn Sie das Betriebssystem noch nicht installiert haben, verwenden Sie die von Ihrem Betriebssystemanbieter bereitgestellten Medien.
+
+Die Multipath-Software liefert einen redundanten Pfad zum Storage Array, falls ein physischer Pfad unterbrochen wird. Die Multipath-Software präsentiert das Betriebssystem mit einem einzigen virtuellen Gerät, das die aktiven physischen Pfade zum Storage darstellt. Die Multipath-Software managt auch den Failover-Prozess zur Aktualisierung des virtuellen Geräts.
+
+Sie verwenden das Device Mapper Multipath (DM-MP)-Tool für Linux-Installationen. DM-MP ist in RHEL und SLES standardmäßig deaktiviert. Führen Sie die folgenden Schritte durch, um DM-MP-Komponenten auf dem Host zu aktivieren.
+
+.Schritte
+. Wenn eine Multipath.conf-Datei nicht bereits erstellt wird, führen Sie den aus `# touch /etc/multipath.conf` Befehl.
+. Verwenden Sie die standardmäßigen Multipath-Einstellungen, indem Sie die Multipath.conf-Datei leer lassen.
+. Starten Sie den Multipath Service.
++
+[listing]
+----
+# systemctl start multipathd
+----
+. Speichern Sie Ihre Kernel-Version, indem Sie die ausführen `uname -r` Befehl.
++
+[listing]
+----
+# uname -r
+3.10.0-327.el7.x86_64
+----
++
+Diese Informationen werden verwendet, wenn Sie dem Host Volumes zuweisen.
+
+. Aktivieren Sie die `multipathd` Daemon beim Booten.
++
+[listing]
+----
+systemctl enable multipathd
+----
+. Bauen Sie den neu auf `initramfs` Bild oder das `initrd` Image unter /Boot-Verzeichnis:
++
+[listing]
+----
+dracut --force --add multipath
+----
+. Verwenden Sie die https://docs.netapp.com/us-en/e-series-santricity/sm-storage/create-host-manually.html["Host manuell erstellen"] Verfahren Sie in der Online-Hilfe, um zu überprüfen, ob die Hosts definiert sind. Überprüfen Sie, ob die einzelnen Einstellungen des Hosttyps auf den in erfassten Kernelinformationen basieren ,Schritt 4.
+
+
+
+NOTE: Der automatische Lastausgleich ist für alle Volumes deaktiviert, die Hosts mit Kernel 3.9 oder früher zugeordnet sind.
+
+. Starten Sie den Host neu.
+

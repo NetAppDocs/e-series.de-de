@@ -1,0 +1,113 @@
+---
+permalink: cloud-connector/restore-intro-concept.html 
+sidebar: sidebar 
+keywords: Cloud Connector restore, 
+summary: Sie können die Option Wiederherstellen im linken Navigationsbereich der SANtricity-Cloud-Connector-Anwendung aufrufen. Mit der Option Wiederherstellen wird die Seite Wiederherstellen angezeigt, auf der Sie neue abbilbasierte oder dateibasierte Wiederherstellungsaufträge erstellen können. 
+---
+= Wiederherstellungen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können die Option Wiederherstellen im linken Navigationsbereich der SANtricity-Cloud-Connector-Anwendung aufrufen. Mit der Option Wiederherstellen wird die Seite Wiederherstellen angezeigt, auf der Sie neue abbilbasierte oder dateibasierte Wiederherstellungsaufträge erstellen können.
+
+Der SANtricity Cloud Connector nutzt das Jobkonzept, um die tatsächliche Wiederherstellung eines E-Series Volume durchzuführen. Bevor Sie eine Wiederherstellung durchführen, müssen Sie angeben, welches E-Series Volume für den Vorgang verwendet wird. Nachdem Sie ein E-Series Volume zur Wiederherstellung zum SANtricity Cloud Connector-Host hinzugefügt haben, können Sie das verwenden `Restore` Seite der SANtricity-Cloud-Connector-Anwendung zum Erstellen und Verarbeiten von Wiederherstellungen.
+
+
+NOTE: Alle Zeitstempel für Backup- und Wiederherstellungsjobs, die unter der Anwendung SANtricity Cloud Connector aufgeführt sind, verwenden lokale Zeit.
+
+
+
+== Erstellen Sie eine neue Image-basierte Wiederherstellung
+
+Sie können neue bildbasierte Wiederherstellungen über die Funktion Erstellen auf der Seite Wiederherstellen der SANtricity-Cloud-Connector-Anwendung erstellen.
+
+Stellen Sie sicher, dass über den SANtricity Cloud Connector ein Image-basiertes Backup verfügbar ist.
+
+.Schritte
+. Klicken Sie auf der Seite Wiederherstellen der Anwendung SANtricity Cloud Connector auf *Erstellen*.
++
+Das Fenster Wiederherstellen wird angezeigt.
+
+. Wählen Sie das gewünschte Backup aus.
+. Klicken Sie Auf *Weiter*.
++
+Die Seite Sicherungspunkt auswählen wird im Fenster Wiederherstellen angezeigt.
+
+. Wählen Sie die gewünschte vollständige Sicherung aus.
+. Klicken Sie Auf *Weiter*.
++
+Die Seite Restore Target auswählen wird im Fenster Wiederherstellen angezeigt.
+
+. Wählen Sie das Wiederherstellungsvolume aus und klicken Sie auf *Weiter*.
++
+Die Seite „Prüfen“ wird im Fenster „Wiederherstellen“ angezeigt.
+
+. Überprüfen Sie den ausgewählten Wiederherstellungsvorgang und klicken Sie auf *Fertig stellen*.
++
+Die Wiederherstellung für das ausgewählte Ziel-Host-Volume wird gestartet, und der Status für die Aufgabe wird im Abschnitt Ergebnisliste der Seite Wiederherstellen angezeigt.
+
+
+
+
+
+== Erstellen Sie eine neue dateibasierte Wiederherstellung
+
+Sie können neue dateibasierte Wiederherstellungen über die Funktion Erstellen auf der Seite Wiederherstellen der Anwendung SANtricity Cloud Connector erstellen.
+
+Stellen Sie sicher, dass über den SANtricity Cloud Connector ein dateibasiertes Backup zur Verfügung steht.
+
+.Schritte
+. Klicken Sie auf der Seite Wiederherstellen der Anwendung SANtricity Cloud Connector auf *Erstellen*.
++
+Das Fenster Wiederherstellen wird angezeigt.
+
+. Wählen Sie im Fenster Wiederherstellen das gewünschte dateibasierte Backup aus.
+. Klicken Sie Auf *Weiter*.
++
+Die Seite Sicherungspunkt auswählen wird im Fenster Job erstellen angezeigt.
+
+. Wählen Sie auf der Seite Sicherungspunkt auswählen die gewünschte vollständige Sicherung aus.
+. Klicken Sie Auf *Weiter*.
++
+Im Fenster Wiederherstellen wird eine Liste der verfügbaren Dateisysteme oder Ordner/Dateien angezeigt.
+
+. Wählen Sie die gewünschten Ordner oder Dateien, die wiederhergestellt werden sollen, und klicken Sie auf *Weiter*.
++
+Die Seite Restore Target auswählen wird im Fenster Wiederherstellen angezeigt.
+
+. Wählen Sie das Wiederherstellungsvolume aus und klicken Sie auf *Weiter*.
++
+Die Seite „Prüfen“ wird im Fenster „Wiederherstellen“ angezeigt.
+
+. Überprüfen Sie den ausgewählten Wiederherstellungsvorgang und klicken Sie auf *Fertig stellen*.
++
+Die Wiederherstellung für das ausgewählte Ziel-Host-Volume wird gestartet, und der Status für die Aufgabe wird im Abschnitt Ergebnisliste der Seite Wiederherstellen angezeigt.
+
+
+
+
+
+== Löschen Sie eine Wiederherstellung
+
+Mit der Funktion Löschen können Sie ein ausgewähltes Wiederherstellungselement aus dem Listenbereich Ergebnis der Seite Wiederherstellen löschen.
+
+Stellen Sie sicher, dass ein Wiederherstellungsauftrag mit dem Status „Abgeschlossen“, „Fehlgeschlagen“ oder „abgebrochen“ vorhanden ist.
+
+.Schritte
+. Klicken Sie auf der Seite Wiederherstellen auf *Löschen*.
++
+Das Fenster Löschen bestätigen wird angezeigt.
+
+. Geben Sie im Feld *Typ delete* ein `delete` Um die Löschaktion zu bestätigen.
+. Klicken Sie Auf *Löschen*.
++
+
+NOTE: Sie können eine unterbrochene Wiederherstellung nicht löschen.
+
++
+Die ausgewählte Wiederherstellung wird gelöscht.
+
+

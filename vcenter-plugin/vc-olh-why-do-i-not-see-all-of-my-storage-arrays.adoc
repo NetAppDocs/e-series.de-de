@@ -1,0 +1,24 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/vc-olh-why-do-i-not-see-all-of-my-storage-arrays.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
+summary: Während des Vorgangs „Importeinstellungen“ stehen einige Ihrer Speicherarrays möglicherweise nicht im Dialogfeld „Zielauswahl“ zur Verfügung. 
+---
+= Warum sehe ich nicht alle meine Storage Arrays?
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Während des Vorgangs „Importeinstellungen“ stehen einige Ihrer Speicherarrays möglicherweise nicht im Dialogfeld „Zielauswahl“ zur Verfügung.
+
+Speicher-Arrays werden möglicherweise aus den folgenden Gründen nicht angezeigt:
+
+* Die Firmware-Version ist unter 8.50.
+* Das Speicher-Array ist offline.
+* Das System kann nicht mit diesem Array kommunizieren (z. B. verfügt das Array über Zertifikat-, Passwort- oder Netzwerkprobleme).
+

@@ -1,0 +1,93 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/vc-olh-change-ssd-cache-settings.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
+summary: Bearbeiten Sie den Namen des SSD-Caches, und zeigen Sie den Status, die maximale und aktuelle Kapazität, den Status der Laufwerksicherheit und Data Assurance sowie die zugehörigen Volumes und Laufwerke an. 
+---
+= Ändern Sie die SSD-Cache-Einstellungen
+:hardbreaks:
+:allow-uri-read: 
+:experimental: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Sie können den Namen des SSD-Caches bearbeiten und seinen Status, die maximale und aktuelle Kapazität, den Status der Laufwerksicherheit und Data Assurance sowie die zugehörigen Volumes und Laufwerke anzeigen.
+
+
+NOTE: Diese Funktion steht nicht auf dem EF600 oder EF300-Storage-System zur Verfügung.
+
+.Schritte
+. Wählen Sie auf der Seite Verwalten das Speicher-Array mit SSD-Cache aus.
+. Wählen Sie Menü:Provisioning[Pools und Volume-Gruppen konfigurieren].
+. Wählen Sie den SSD-Cache aus, den Sie bearbeiten möchten, und klicken Sie dann auf *Einstellungen anzeigen/bearbeiten*.
++
+Das Dialogfeld SSD-Cache-Einstellungen wird angezeigt.
+
+. Überprüfen oder bearbeiten Sie die SSD-Cache-Einstellungen nach Bedarf.
++
+.Felddetails
+====
+[cols="25h,~"]
+|===
+| Einstellung | Beschreibung 
+
+
+ a| 
+Name
+ a| 
+Zeigt den Namen des SSD-Caches an, den Sie ändern können. Ein Name für den SSD-Cache ist erforderlich.
+
+
+
+ a| 
+Merkmale
+ a| 
+Zeigt den Status des SSD-Caches an. Mögliche Status sind:
+
+** Optimal
+** Unbekannt
+** Beeinträchtigt
+** Fehlgeschlagen (ein fehlgeschlagener Zustand führt zu einem kritischen MEL-Ereignis.)
+** Ausgesetzt
+
+
+
+
+ a| 
+Kapazität
+ a| 
+Zeigt die aktuelle Kapazität und die maximale Kapazität, die für den SSD-Cache zulässig ist. Die maximale für den SSD-Cache zulässige Kapazität hängt von der Größe des primären Caches des Controllers ab:
+
+** Bis zu 1 gib
+** 1 gib bis 2 gib
+** 2 gib bis 4 gib
+** Mehr als 4 gib
+
+
+
+
+ a| 
+Sicherheit und da
+ a| 
+Zeigt den Status der Laufwerksicherheit und Data Assurance für den SSD-Cache an.
+
+** *Secure-fähig* --gibt an, ob der SSD Cache vollständig aus sicheren Laufwerken besteht. Bei einem sicheren Laufwerk handelt es sich um ein Self-Encrypting Drive, das seine Daten vor unberechtigtem Zugriff schützt.
+** *Secure-Enabled* -- gibt an, ob die Sicherheit auf dem SSD Cache aktiviert ist.
+** *Da-fähig* -- zeigt an, ob der SSD-Cache vollständig aus da-fähigen Laufwerken besteht. Ein da-fähiges Laufwerk kann auf Fehler überprüfen und beheben, die auftreten können, wenn Daten zwischen dem Host und dem Speicher-Array kommuniziert werden.
+
+
+
+
+ a| 
+Zugeordnete Objekte
+ a| 
+Zeigt die Volumes und Laufwerke, die dem SSD-Cache zugeordnet sind.
+
+|===
+====
+. Klicken Sie Auf *Speichern*.
+

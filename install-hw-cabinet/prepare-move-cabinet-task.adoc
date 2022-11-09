@@ -1,0 +1,317 @@
+---
+permalink: install-hw-cabinet/prepare-move-cabinet-task.html 
+sidebar: sidebar 
+keywords: 3040 40U cabinet, cabinet installation, drive tray installation, controller installation, shelf installation, E2800, E5700, EF300, EF600 
+summary: Bereiten Sie das Verschieben des Schranks vor. 
+---
+= Vorbereitung zum Verschieben des Schranks
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Bereiten Sie sich darauf vor, den Schrank von seinem Standort in Ihrem Empfangsbereich zu bewegen, indem Sie das Gesamtgewicht abschätzen, den Schrank akklimatisieren, das Verpackungsmaterial entfernen und den Versandinhalt überprüfen.
+
+
+
+== Schritt 1: Schätzen Sie das Gewicht des Gehäuses ab
+
+Der Schrank transportiert zuverlässig und sicher bis zu 909.1 kg (2000 lb) Kapazität. Sie müssen das ungefähre Gewicht des Schranks kennen, damit Sie ihn sicher bewegen können.
+
+.Schritte
+. Verwenden Sie die folgende Tabelle, um das ungefähre Gesamtgewicht Ihres Schranks zu berechnen.
++
+Das Gesamtgewicht des Gehäuses hängt von der Anzahl und dem Typ der Fächer ab, die im Schrank installiert sind.
+
++
+|===
+| Komponente | Gewicht | Hinweise 
+
+
+ a| 
+Rack
+ a| 
+138.80 kg (306.0 lb)
+ a| 
+Leer bei installierter Hintertür
+
+
+
+ a| 
+Stromverteiler (PDUs [Paar])
+ a| 
+19.96 kg (44.0 lb)
+ a| 
+
+
+
+ a| 
+Befestigungsschienen (Paar)
+ a| 
+1.59 kg (3.50 lb)
+ a| 
+
+
+
+ a| 
+E2612 Fach für Controller-Laufwerke
+ a| 
+27 kg (59.52 lb)
+ a| 
+Maximalkonfiguration
+
+
+
+ a| 
+E2624 Fach für Controller-Laufwerke
+ a| 
+26.12 kg (57.32 lb)
+ a| 
+Maximalkonfiguration
+
+
+
+ a| 
+E2660 Fach für Controller-Laufwerke
+ a| 
+105.2 kg (232 lb)
+ a| 
+Maximalkonfiguration
+
+
+
+ a| 
+E2712 Controller-Laufwerksfach
+ a| 
+27.12 kg (59.8 lb)
+ a| 
+Maximalkonfiguration
+
+
+
+ a| 
+E2724 Laufwerksfach für Controller
+ a| 
+26 kg (57.32 lb)
+ a| 
+Maximalkonfiguration
+
+
+
+ a| 
+E2760 Controller-Laufwerksfach
+ a| 
+105.2 kg (232 lb)
+ a| 
+Maximalkonfiguration
+
+
+
+ a| 
+E5412 Controller-Laufwerksfach
+ a| 
+27.92 (61.52 lb)
+ a| 
+Maximalkonfiguration
+
+
+
+ a| 
+E5424 Controller-Laufwerksfach
+ a| 
+26.92 kg (59.32 lb)
+ a| 
+Maximalkonfiguration
+
+
+
+ a| 
+E5460 Controller-Laufwerksfach
+ a| 
+105.2 kg (232 lb)
+ a| 
+Maximalkonfiguration
+
+
+
+ a| 
+E5512 Controller-Laufwerksfach
+ a| 
+28.89 kg (63.7 lb)
+ a| 
+Maximalkonfiguration
+
+
+
+ a| 
+E5524 Fach für Controller-Laufwerke
+ a| 
+27.9 kg (61.52 lb)
+ a| 
+Maximalkonfiguration
+
+
+
+ a| 
+E5560 Controller-Laufwerksfach
+ a| 
+107.13 kg (236.2 lb)
+ a| 
+Maximalkonfiguration
+
+
+
+ a| 
+E5612 Controller-Laufwerksfach
+ a| 
+28.89 kg (63.7 lb)
+ a| 
+Maximalkonfiguration
+
+
+
+ a| 
+E5624 Controller-Laufwerksfach
+ a| 
+27.9 kg (61.52 lb)
+ a| 
+Maximalkonfiguration
+
+
+
+ a| 
+E5660 Controller-Laufwerksfach
+ a| 
+107.13 kg (236.2 lb)
+ a| 
+Maximalkonfiguration
+
+
+
+ a| 
+EF540 Flash Array
+ a| 
+23.64 kg (52.12 lb)
+ a| 
+Maximalkonfiguration
+
+
+
+ a| 
+EF550 Flash-Array
+ a| 
+24.63 kg (54.32 lb)
+ a| 
+Maximalkonfiguration
+
+
+
+ a| 
+EF560 Flash-Array
+ a| 
+24.63 kg (54.32 lb)
+ a| 
+Maximalkonfiguration
+
+
+
+ a| 
+DE1600 Laufwerksfach
+ a| 
+26.3 kg (58 lb)
+ a| 
+Maximalkonfiguration
+
+
+
+ a| 
+DE5600 Laufwerksfach
+ a| 
+25.31 kg (55.8 lb)
+ a| 
+Maximalkonfiguration
+
+
+
+ a| 
+DE6600-Laufwerksfach
+ a| 
+104.1 kg (229.6 lb)
+ a| 
+Maximalkonfiguration
+
+|===
+. Lesen Sie sich die folgenden Hinweise durch.
++
+
+CAUTION: Entfernen Sie alle Laufwerke aus dem DE6600-Laufwerksfach, bevor Sie den Schrank in die Endposition bringen.
+
++
+
+CAUTION: *Mögliche Geräteschäden* -- Schränke mit DE6600 Laufwerksfächern werden ohne Laufwerke geliefert, um das Versandgewicht zu verringern. Da ein vollständig bestückter Schrank mit DE6600-Laufwerksfächern mehr als 1247.3 kg wiegen 2750 kann, müssen Sie das Gehäuse vor dem Laden der Laufwerke an die richtige Stelle verschieben und sicherstellen, dass die Bodenlastfähigkeit des Zielsystems dieses Gewicht unterstützt.
+
++
+
+CAUTION: *Mögliche Beschädigung von Tray Components* -- Platzieren Sie kein DE6600-Laufwerksfach auf einer flachen Oberfläche. Installieren Sie das DE6600-Laufwerkschacht vor dem Bedien- oder Verschieben der Schubladen in den Schrank.
+
+
+
+
+
+== Schritt 2: Acklimate Kabinett
+
+Stellen Sie sicher, dass der Schrank und die Tabletts in der Innenumgebung akklimatisiert sind, bevor Sie das Verpackungsmaterial entfernen.
+
+.Schritte
+. Wenn die Außentemperatur unter 32 Grad liegt, lassen Sie das Gehäuse und die Tabletts mindestens 24 Stunden in den Behältern drinnen, um Kondensation zu vermeiden.
+. Erhöhen oder verringern Sie die 24-Stunden-Stabilisierungszeit je nach Außentemperatur bei der Ankunft.
++
+
+CAUTION: *Eventuelle Schäden an den Behältern* -- Wenn die Außentemperatur unter 32 Grad liegt, wenn Sie Ihr Gehäuse und die Tabletts erhalten, entpacken oder entpacken Sie sie nicht sofort. Wenn kalte Bauteile warmen Innentemperaturen ausgesetzt sind, kann dies zu Kondensation führen, was zu Schäden oder Ausfällen der Komponenten führt.
+
+
+
+
+
+== Schritt 3: Verpackungsmaterial entfernen
+
+Das Verpackungsmaterial erst entfernen, nachdem sich das Gehäuse auf die Innentemperatur eingestellt hat.
+
+.Schritte
+. Beachten Sie die Anweisungen zum Auspacken auf der Vorderseite der Versandkiste.
+. Das Verpackungsmaterial gemäß den beiliegenden Anweisungen entfernen.
+
+
+
+
+== Schritt 4: Prüfen Sie den Versandinhalt
+
+Überprüfen Sie den Versandinhalt, um sicherzustellen, dass alle Geräte am Standort angekommen sind.
+
+.Schritte
+. Vergleichen Sie die Packliste mit den erhaltenen Geräten.
+. Stellen Sie sicher, dass alle Geräte am Standort angekommen sind.
+. Sollten etwas fehlen, wenden Sie sich an Ihren Ansprechpartner.
+
+
+
+
+== Schritt 5: Entfernen Sie schwere Bauteile aus dem Schrank
+
+Entfernen Sie einige der schwereren Komponenten, die sich oben im Gehäuse befinden, um eine maximale Stabilität zu gewährleisten.
+
+.Bevor Sie beginnen
+* Stellen Sie sicher, dass das maximale Gewicht nicht mehr als 2000 kg beträgt, bevor Sie den Schrank bewegen.
+* Notieren Sie sich die Position der einzelnen Fächer, Komponenten und Kabel, bevor Sie sie entfernen, damit Sie jedes Element an seiner ursprünglichen Position neu installieren können.
+
+
+.Schritte
+. Notieren Sie die Kabelkonfiguration für die spätere Montage, wenn Kabel getrennt werden müssen.
+. Entfernen Sie die Laufwerksfächer und die Controller-Laufwerksfächer in der oberen Hälfte des Gehäuses. Halten Sie alle Komponenten aus dem gleichen Fach zusammen.
++
+
+NOTE: Sie müssen die Netzteile oder andere Komponenten nicht von der Rückseite jedes Fachs entfernen
+
+. Legen Sie jede Komponente in einen separaten antistatischen Beutel. Wenn die Original-Versandkisten verfügbar sind, verwenden Sie diese zum Transport der Komponenten.
+

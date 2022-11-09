@@ -1,0 +1,94 @@
+---
+permalink: maintenance-ef600/power-replace-supertask-task.html 
+sidebar: sidebar 
+keywords: replace EF300 power supply, replace EF600 power supply, 
+summary: Ersetzen Sie die Netzteile, wenn sie im EF300- oder EF600-Controller ausfallen. 
+---
+= Ersetzen Sie ein EF300- oder EF600-Netzteil
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können ein Netzteil austauschen, wenn es in Ihrem EF300- oder EF600-Controller ausfällt.
+
+Wenn ein Netzteil ausfällt, müssen Sie es so schnell wie möglich ersetzen, damit das Controller Shelf über eine redundante Stromversorgung verfügt.
+
+.Bevor Sie beginnen
+* Prüfen Sie die Details im Recovery Guru, um zu bestätigen, dass ein Problem mit der Stromversorgung vorliegt. Wählen Sie *recheck* aus dem Recovery Guru, um sicherzustellen, dass keine weiteren Punkte zuerst angesprochen werden müssen.
+* Stellen Sie sicher, dass die gelbe Warn-LED am Netzteil leuchtet und anzeigt, dass ein Fehler im Netzteil oder dem integrierten Lüfter vorliegt.
+
+
+.Was Sie und#8217;ll benötigen
+* Ein Netzteil, das für Ihr Controller Shelf unterstützt wird.
+* Ein ESD-Armband, oder Sie haben andere antistatische Vorsichtsmaßnahmen getroffen.
+* Eine Management Station mit einem Browser, der für den Controller auf den SANtricity System Manager zugreifen kann. (Zeigen Sie zum Öffnen der System Manager-Schnittstelle den Domain-Namen oder die IP-Adresse des Controllers im Browser.)
+
+
+
+
+== Schritt 1: Entfernen Sie das fehlerhafte Netzteil
+
+Entfernen Sie ein ausgefallenes Netzteil, damit Sie es durch ein neues ersetzen können.
+
+.Schritte
+. Packen Sie das neue Netzteil aus, und stellen Sie es auf eine Ebene Fläche in der Nähe des Laufwerks-Shelfs ein.
++
+Bewahren Sie alle Verpackungsmaterialien auf, wenn Sie das defekte Netzteil zurücksenden.
+
+. Trennen Sie die Stromkabel:
++
+.. Öffnen Sie die Netzkabelhalterung, und ziehen Sie dann das Netzkabel vom Netzteil ab.
+.. Ziehen Sie das Netzkabel von der Stromversorgung ab.
+
+
+. Suchen Sie die Lasche rechts neben dem Netzteil, und drücken Sie sie in Richtung Netzteil.
++
+image::../media/psup_2.png[psup 2]
+
+. Suchen Sie den Griff an der Vorderseite des Netzteils.
+. Schieben Sie das Netzteil mit dem Griff gerade aus dem System heraus.
++
+
+CAUTION: Wenn Sie ein Netzteil entfernen, verwenden Sie immer zwei Hände, um sein Gewicht zu stützen.
+
++
+image::../media/psup_3.png[psup 3]
+
+
+
+
+
+== Schritt 2: Neues Netzteil installieren und den Austausch abschließen
+
+Installieren Sie nach dem Entfernen des fehlerhaften Netzteils ein neues.
+
+.Schritte
+. Halten und richten Sie die Kanten des Netzteils mit beiden Händen an der Öffnung im Systemgehäuse aus, und drücken Sie dann vorsichtig das Netzteil mithilfe des Nockengriffs in das Gehäuse.
++
+Die Netzteile sind codiert und können nur auf eine Weise installiert werden.
+
++
+
+CAUTION: Beim Einschieben des Netzteils in das System keine übermäßige Kraft verwenden, da der Anschluss beschädigt werden kann.
+
++
+image::../media/psup_4.png[psup 4]
+
+. Vergewissern Sie sich, dass der Status optimal lautet, und überprüfen Sie die Warn-LEDs für das Controller-Shelf.
++
+Wenn der Status nicht optimal ist oder eine der Warn-LEDs leuchtet, vergewissern Sie sich, dass alle Kabel richtig eingesetzt sind und der Controller-Behälter richtig installiert ist. Gegebenenfalls den Controller-Behälter ausbauen und wieder einbauen.
+
++
+
+NOTE: Wenden Sie sich an den technischen Support, wenn das Problem nicht gelöst werden kann.
+
+. Klicken Sie im SANtricity System Manager auf MENU:Support[Upgrade Center], um sicherzustellen, dass die neueste Version des SANtricity Betriebssystems installiert ist.
++
+Installieren Sie bei Bedarf die neueste Version.
+
+
+
+Der Austausch des Netzteils ist abgeschlossen. Sie können den normalen Betrieb fortsetzen.

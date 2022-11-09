@@ -1,0 +1,30 @@
+---
+permalink: config-linux/fc-verify-linux-config-support-task.html 
+sidebar: sidebar 
+keywords: express linux configuration, software configuration, linux host, 
+summary: Vergewissern Sie sich, dass die Linux-Konfiguration unterstützt wird. 
+---
+= Überprüfen Sie, ob die Linux-Konfiguration unterstützt wird
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Um einen zuverlässigen Betrieb zu gewährleisten, erstellen Sie einen Implementierungsplan und überprüfen mit dem NetApp Interoperabilitäts-Matrix-Tool (IMT) die Unterstützung der gesamten Konfiguration.
+
+.Schritte
+. Wechseln Sie zum https://mysupport.netapp.com/matrix["NetApp Interoperabilitäts-Matrix-Tool"^].
+. Klicken Sie auf die Kachel * Solution Search*.
+. Klicken Sie im Menü:Protokolle[SAN Host] auf die Schaltfläche *Hinzufügen* neben *E-Series SAN-Host*.
+. Klicken Sie Auf *Suchkriterien Verfeinern*.
++
+Der Abschnitt Suchkriterien verfeinern wird angezeigt. In diesem Abschnitt können Sie das zutreffende Protokoll sowie andere Kriterien für die Konfiguration auswählen, z. B. Betriebssystem, NetApp OS und Host Multipath-Treiber.
+
+. Wählen Sie die Kriterien aus, die Sie für Ihre Konfiguration kennen, und sehen Sie dann, welche kompatiblen Konfigurationselemente gelten.
+. Führen Sie bei Bedarf die Updates für Ihr Betriebssystem und Protokoll durch, die im Tool vorgeschrieben sind.
++
+Detaillierte Informationen zu der von Ihnen gewählten Konfiguration finden Sie auf der Seite Unterstützte Konfigurationen anzeigen, indem Sie auf den rechten Seitenpfeil klicken.
+
+

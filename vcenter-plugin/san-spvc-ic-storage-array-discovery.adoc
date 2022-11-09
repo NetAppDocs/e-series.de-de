@@ -1,0 +1,89 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/san-spvc-ic-storage-array-discovery.html 
+keywords: discover arrays vCenter plugin, discover storage resources Plugin for vCenter, resolve certificates vCenter plugin 
+summary: Verwenden Sie das Plug-in für vCenter Interface, um die IP-Adressen von Arrays in Ihrem Netzwerk zu ermitteln. 
+---
+= Nutzen Sie Storage-Arrays im Plug-in
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Um Speicherressourcen anzuzeigen und zu verwalten, müssen Sie die IP-Adressen von Arrays in Ihrem Netzwerk über die Schnittstelle Storage Plug-in für vCenter ermitteln.
+
+.Bevor Sie beginnen
+* Sie müssen die Netzwerk-IP-Adressen (oder den Adressbereich) der Array-Controller kennen.
+* Die Speicher-Arrays müssen ordnungsgemäß eingerichtet und konfiguriert sein, und Sie müssen die Anmeldedaten des Speicher-Arrays (Benutzername und Passwort) kennen.
+
+
+
+
+== Schritt 1: Geben Sie Netzwerkadressen für die Ermittlung ein
+
+.Schritte
+. Wählen Sie auf der Seite Verwalten die Option *Hinzufügen/Entdecken*.
++
+Das Dialogfeld Netzwerkadressbereich eingeben wird angezeigt.
+
+. Führen Sie einen der folgenden Schritte aus:
++
+** Um ein Array zu ermitteln, wählen Sie die Optionsschaltfläche *Entdecken eines einzelnen Speicherarrays* aus und geben dann die IP-Adresse für einen der Controller im Speicher-Array ein.
+** Um mehrere Speicher-Arrays zu entdecken, wählen Sie die Optionsschaltfläche *Alle Speicher-Arrays in einem Netzwerkbereich* aus. Geben Sie dann die Startnetzwerkadresse und die Netzwerkadresse ein, um das lokale Subnetzwerk zu durchsuchen.
+
+
+. Klicken Sie Auf *Erkennung Starten*.
++
+Beim Beginn des Erkennungsvorgangs werden die Speicher-Arrays im Dialogfeld angezeigt, wenn sie erkannt werden. Der Erkennungsvorgang kann mehrere Minuten dauern.
+
++
+Wenn keine verwaltbaren Arrays erkannt werden, überprüfen Sie, ob die Speicher-Arrays ordnungsgemäß mit Ihrem Netzwerk verbunden sind und die zugewiesenen Adressen innerhalb der Reichweite liegen. Klicken Sie auf *Neue Ermittlungsparameter*, um zur Seite Hinzufügen/Entdecken zurückzukehren.
+
+. Aktivieren Sie das Kontrollkästchen neben einem beliebigen Speicher-Array, das Sie Ihrer Management-Domäne hinzufügen möchten.
++
+Das System führt für jedes Array, das Sie der Management-Domäne hinzufügen, eine Anmeldeinformationsprüfung durch. Möglicherweise müssen Sie Probleme mit nicht vertrauenswürdigen Zertifikaten beheben, bevor Sie fortfahren.
+
+. Klicken Sie auf *Weiter*, um mit dem nächsten Schritt im Assistenten fortzufahren.
++
+Wenn die Speicher-Arrays über gültige Zertifikate verfügen, gehen Sie zu  3: Provide passwords.
+
++
+Wenn keine Speicherarrays über gültige Zertifikate verfügen, wird das Dialogfeld Selbstsignierte Zertifikate auflösen angezeigt. Gehen Sie zu  2: Resolve untrusted certificates during discovery.
+
++
+Wenn Sie CA-signierte Zertifikate importieren möchten, löschen Sie den Ermittlungsassistenten und klicken Sie im linken Bereich auf *Zertifikatverwaltung*. Weitere Anweisungen finden Sie in der Online-Hilfe.
+
+
+
+
+
+== Schritt 2: Lösen Sie nicht vertrauenswürdige Zertifikate während der Ermittlung
+
+Sie müssen Probleme mit dem Zertifikat lösen, bevor Sie mit der Ermittlung fortfahren.
+
+. Wenn das Dialogfeld selbst signierte Zertifikate auflösen geöffnet wird, überprüfen Sie die Informationen, die für die nicht vertrauenswürdigen Zertifikate angezeigt werden. Für weitere Informationen können Sie auch auf die Ellipsen am äußersten Ende der Tabelle klicken und im Kontextmenü *Ansicht* wählen.
+. Führen Sie einen der folgenden Schritte aus:
++
+** Wenn Sie den Verbindungen zu den erkannten Speicherarrays vertrauen, klicken Sie auf *Weiter* und klicken Sie dann auf *Ja*, um den nächsten Dialog im Assistenten zu bestätigen. Die selbstsignierten Zertifikate werden als vertrauenswürdig gekennzeichnet und die Speicher-Arrays werden dem Plugin hinzugefügt.
+** Wenn Sie den Verbindungen zu den Speicher-Arrays nicht vertrauen, wählen Sie *Abbrechen* und validieren Sie die Sicherheitszertifikatstrategie jedes Speicherarrays, bevor Sie einen dieser Verbindungen hinzufügen.
+
+
+. Klicken Sie auf *Weiter*, um mit dem nächsten Schritt im Assistenten fortzufahren.
+
+
+
+
+== Schritt 3: Geben Sie Passwörter ein
+
+Als letzter Schritt zur Ermittlung müssen Sie die Passwörter für die Speicherarrays eingeben, die Sie Ihrer Management-Domäne hinzufügen möchten.
+
+. Geben Sie für jedes erkannte Array sein Administratorkennwort in die Felder ein.
+. Klicken Sie Auf *Fertig Stellen*.
++
+Es kann mehrere Minuten dauern, bis das System eine Verbindung zu den angegebenen Speicherarrays herstellt. Nach Abschluss des Prozesses werden die Speicherarrays Ihrer Verwaltungsdomäne hinzugefügt und der ausgewählten Gruppe zugeordnet (falls angegeben).
+
+

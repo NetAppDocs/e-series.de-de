@@ -1,0 +1,53 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/vc-olh-delete-host-or-host-cluster.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
+summary: Sie können einen Host oder Host-Cluster entfernen, sodass Volumes diesem Host nicht mehr zugewiesen sind. 
+---
+= Host oder Host-Cluster löschen
+:hardbreaks:
+:allow-uri-read: 
+:experimental: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Sie können einen Host oder Host-Cluster entfernen, sodass Volumes diesem Host nicht mehr zugewiesen sind.
+
+Beachten Sie beim Löschen eines Hosts oder Host-Clusters folgende Richtlinien:
+
+* Alle spezifischen Volume-Zuweisungen werden gelöscht, und die zugeordneten Volumes stehen für eine neue Zuweisung zur Verfügung.
+* Wenn der Host Teil eines Hostclusters ist, das seine eigenen spezifischen Zuweisungen hat, ist der Host-Cluster nicht betroffen. Wenn der Host jedoch Teil eines Host-Clusters ist, das keine anderen Zuweisungen besitzt, übernehmen der Host-Cluster und andere zugeordnete Hosts oder Host-Port-IDs die Standardzuweisungen.
+* Alle dem Host zugeordneten Host-Port-IDs werden undefiniert.
+
+
+.Schritte
+. Wählen Sie auf der Seite Verwalten das Speicher-Array mit der Hostverbindung aus.
+. Wählen Sie Menü:Bereitstellung [Hosts konfigurieren].
++
+Die Seite Hosts konfigurieren wird geöffnet.
+
+. Wählen Sie den Host oder Host-Cluster aus, den Sie löschen möchten, und klicken Sie dann auf *Löschen*.
++
+Das Bestätigungsdialogfeld wird angezeigt.
+
+. Bestätigen Sie, dass Sie den Vorgang ausführen möchten, und klicken Sie dann auf *Löschen*.
+
+
+Wenn Sie einen Host gelöscht haben, führt das System die folgenden Aktionen durch:
+
+* Löscht den Host und entfernt ihn ggf. aus dem Host-Cluster.
+* Entfernt den Zugriff auf alle zugewiesenen Volumes.
+* Gibt die zugeordneten Volumes in einen nicht zugewiesenen Status zurück.
+* Gibt alle dem Host zugeordneten Host-Port-IDs in einen nicht zugeordneten Status zurück. Wenn Sie ein Host-Cluster gelöscht haben, führt das System die folgenden Aktionen aus:
++
+** Löscht das Host-Cluster und die zugehörigen Hosts (falls vorhanden).
+** Entfernt den Zugriff auf alle zugewiesenen Volumes.
+** Gibt die zugeordneten Volumes in einen nicht zugewiesenen Status zurück.
+** Gibt alle Host-Port-IDs zurück, die den Hosts zugeordnet sind, in einen nicht zugeordneten Status.
+
+
+

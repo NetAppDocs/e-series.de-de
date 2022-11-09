@@ -1,0 +1,50 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/vc-olh-increase-capacity-of-a-volume.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
+summary: Die Größe eines Volumes wird angepasst, um die gemeldete Kapazität zu erhöhen. 
+---
+= Erhöhte Kapazität eines Volumes
+:hardbreaks:
+:allow-uri-read: 
+:experimental: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Sie können die Größe eines Volumes anpassen, um die gemeldete Kapazität zu erhöhen.
+
+Stellen Sie sicher, dass:
+
+* Im zugewiesenen Pool bzw. der Volume-Gruppe des Volumes steht genügend freie Kapazität zur Verfügung.
+* Das Volume ist optimal und nicht in einem Zustand der Änderung.
+* Im Volume werden keine Hot-Spare-Laufwerke verwendet. (Gilt nur für Volumes in Volume-Gruppen.)
+
+
+Diese Aufgabe beschreibt, wie Sie die gemeldete Kapazität (die Kapazität, die Hosts gemeldet werden) eines Volumes erhöhen, indem Sie die freie Kapazität nutzen, die in dem Pool oder der Volume-Gruppe verfügbar ist. Denken Sie daran, zukünftige Kapazitätsanforderungen für andere Volumes in diesem Pool oder dieser Volume-Gruppe zu berücksichtigen.
+
+
+NOTE: Eine Erhöhung der Kapazität eines Volumens wird nur auf bestimmten Betriebssystemen unterstützt. Wenn Sie die Volume-Kapazität auf einem nicht unterstützten Host-Betriebssystem erhöhen, kann die erweiterte Kapazität nicht verwendet werden, und Sie können die ursprüngliche Volume-Kapazität nicht wiederherstellen.
+
+.Schritte
+. Wählen Sie auf der Seite *Verwalten* das Speicher-Array aus, das die Volumes enthält, die Sie ändern möchten.
+. Wählen Sie MENU:Provisioning[Volumes verwalten].
+. Wählen Sie das Volumen aus, für das Sie die Kapazität erhöhen möchten, und wählen Sie dann *Kapazität erhöhen*.
++
+Das Dialogfeld Kapazität erhöhen bestätigen wird angezeigt.
+
+. Wählen Sie *Ja*, um fortzufahren.
++
+Das Dialogfeld gemeldete Kapazität erhöhen wird angezeigt. In diesem Dialogfeld wird die aktuell gemeldete Kapazität des Volumes und die freie Kapazität angezeigt, die im zugeordneten Pool oder der Volume-Gruppe verfügbar ist.
+
+. Verwenden Sie das Feld * gemeldete Kapazität erhöhen, indem Sie...* hinzufügen, um die Kapazität der aktuell verfügbaren gemeldeten Kapazität hinzuzufügen. Sie können den Kapazitätswert ändern, um entweder in Mebibyte (MiB), Gibibyte (gib) oder Tebibyte (tib) anzuzeigen.
+. Klicken Sie Auf *Erhöhen*.
++
+Die Kapazität des Volumes wird je nach Auswahl erhöht. Dieser Vorgang kann langwierig sein und die System-Performance beeinträchtigen.
+
+
+
+Nachdem Sie die Volume-Kapazität erweitert haben, müssen Sie die Größe des Dateisystems manuell erhöhen, um sie anzupassen. Wie Sie dies tun, hängt von dem Dateisystem ab, das Sie verwenden. Weitere Informationen finden Sie in der Dokumentation Ihres Host-Betriebssystems.

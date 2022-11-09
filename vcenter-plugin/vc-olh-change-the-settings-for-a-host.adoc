@@ -1,0 +1,102 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/vc-olh-change-the-settings-for-a-host.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
+summary: Sie können den Namen, den Host-Betriebssystem-Typ und die zugehörigen Host-Cluster für einen Host oder Host-Cluster ändern. 
+---
+= Ändern Sie die Einstellungen für einen Host
+:hardbreaks:
+:allow-uri-read: 
+:experimental: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Sie können den Namen, den Host-Betriebssystem-Typ und die zugehörigen Host-Cluster für einen Host oder Host-Cluster ändern.
+
+.Schritte
+. Wählen Sie auf der Seite Verwalten das Speicher-Array mit der Hostverbindung aus.
+. Wählen Sie Menü:Bereitstellung [Hosts konfigurieren].
++
+Die Seite Hosts konfigurieren wird geöffnet.
+
+. Wählen Sie den Host aus, den Sie bearbeiten möchten, und klicken Sie dann auf *Einstellungen anzeigen/bearbeiten*.
++
+Es wird ein Dialogfeld angezeigt, in dem die aktuellen Hosteinstellungen angezeigt werden.
+
+. Um die Host-Eigenschaften zu ändern, stellen Sie sicher, dass die Registerkarte *Eigenschaften* ausgewählt ist, und ändern Sie dann die entsprechenden Einstellungen.
++
+.Felddetails
+====
+[cols="25h,~"]
+|===
+| Einstellung | Beschreibung 
+
+
+ a| 
+Name
+ a| 
+Sie können den vom Benutzer bereitgestellten Namen des Hosts ändern. Die Angabe eines Namens für den Host ist erforderlich.
+
+
+
+ a| 
+Zugehöriger Host-Cluster
+ a| 
+Sie können eine der folgenden Optionen auswählen:
+
+** *Keine* -- der Host bleibt ein eigenständiger Host. Wenn der Host einem Host-Cluster zugewiesen war, wird der Host vom Cluster entfernt.
+** *<Host Cluster>* -- das System ordnet den Host dem ausgewählten Cluster zu.
+
+
+
+
+ a| 
+Host-Betriebssystem-Typ
+ a| 
+Sie können den Typ des Betriebssystems ändern, das auf dem von Ihnen definierten Host ausgeführt wird.
+
+|===
+====
+. Um die Porteinstellungen zu ändern, klicken Sie auf die Registerkarte *Host Ports* und ändern Sie dann die entsprechenden Einstellungen.
++
+.Felddetails
+====
+[cols="25h,~"]
+|===
+| Einstellung | Beschreibung 
+
+
+ a| 
+Host Port
+ a| 
+Sie können eine der folgenden Optionen auswählen:
+
+** *Add* -- Verwenden Sie Add, um dem Host eine neue Host-Port-ID zuzuordnen. Die Länge des Namens der Host-Port-Kennung wird durch die Host-Schnittstellentechnologie bestimmt. Die Namen der Fibre Channel- und InfiniBand-Host-Port-ID müssen 16 Zeichen lang sein. Die Namen der iSCSI-Host-Port-ID dürfen maximal 223 Zeichen lang sein. Der Port muss eindeutig sein. Eine bereits konfigurierte Portnummer ist nicht zulässig.
+** *Löschen* -- Verwenden Sie Löschen, um eine Host-Port-ID zu entfernen (Zuordnung aufheben). Mit der Option Löschen wird der Host-Port nicht physisch entfernt. Mit dieser Option wird die Zuordnung zwischen dem Host-Port und dem Host entfernt. Sofern Sie den Host Bus Adapter oder den iSCSI-Initiator nicht entfernen, wird der Host-Port noch vom Controller erkannt.
+
+
+
+CAUTION: Wenn Sie eine Host-Port-ID löschen, ist sie diesem Host nicht mehr zugeordnet. Darüber hinaus verliert der Host über diese Host-Port-Kennung den Zugriff auf jedes seiner zugewiesenen Volumes.
+
+
+
+ a| 
+Etikett
+ a| 
+Um den Namen der Portbezeichnung zu ändern, klicken Sie auf das Symbol *Bearbeiten* (Bleistift). Der Name des Port-Etiketts muss eindeutig sein. Ein bereits konfigurierter Etikettenname ist nicht zulässig.
+
+
+
+ a| 
+CHAP-Schlüssel
+ a| 
+Erscheint nur für iSCSI-Hosts. Sie können den CHAP-Schlüssel für die Initiatoren (iSCSI-Hosts) festlegen oder ändern. Das System verwendet die CHAP-Methode (Challenge Handshake Authentication Protocol), mit der die Identität von Zielen und Initiatoren während der ersten Verbindung überprüft wird. Die Authentifizierung basiert auf einem gemeinsamen Sicherheitsschlüssel, dem CHAP-Schlüssel.
+
+|===
+====
+. Klicken Sie Auf *Speichern*.
+

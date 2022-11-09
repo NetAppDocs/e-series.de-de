@@ -1,0 +1,14 @@
+---
+permalink: maintenance-e2800/concept-canisters-wombat.html 
+sidebar: sidebar 
+keywords: canister, power-fan, power, supplies, supply, redundant, source, adequate, cooling, 12-drive, 24-drive, controller, shelf, redundancy 
+summary: 'Behälter bestehen aus drei verschiedenen Typen: Stromverlüfter-Behälter \ (Netzteile\), die eine redundante Stromquelle und eine ausreichende Kühlung in einem Controller-Shelf mit 12 Laufwerken oder 24 Laufwerken bzw. einem Festplatten-Shelf liefern. Stromversorgungs-Behälter, die für Redundanz in einem Controller-Shelf mit 60 Laufwerken oder einem Festplatten-Shelf verwendet werden. Und Lüfter-Kanister, die zum Kühlen des Controller-Shelfs für 60 Laufwerke oder des Laufwerks-Shelfs verwendet werden.' 
+---
+= Kanister
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Behälter bestehen aus drei verschiedenen Typen: Stromverlüfter (Netzteile), die eine redundante Stromversorgung und eine ausreichende Kühlung in einem Controller-Shelf mit 12 Laufwerken oder 24 Laufwerken bereitstellen. Stromversorgungs-Behälter, die für Redundanz in einem Controller-Shelf für 60 Laufwerke oder Festplatten-Shelf verwendet werden. Und Lüfter-Kanister, die zum Kühlen des Controller-Shelfs für 60 Laufwerke oder des Laufwerks-Shelfs verwendet werden.

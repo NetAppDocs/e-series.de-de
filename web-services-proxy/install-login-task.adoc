@@ -1,0 +1,161 @@
+---
+permalink: web-services-proxy/install-login-task.html 
+sidebar: sidebar 
+keywords: log in API, log in Unified Manager 
+summary: Greifen Sie auf die Web Services API und Unified Manager zu und melden Sie sich an. 
+---
+= Melden Sie sich bei API und Unified Manager an
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Web Services umfasst die API-Dokumentation, mit der Sie direkt mit DER REST API interagieren können. Das System umfasst zudem Unified Manager, eine browserbasierte Schnittstelle zum Management mehrerer Storage-Systeme der E-Series.
+
+
+
+== Melden Sie sich bei der Web Services-API an
+
+Nach der Installation des Web Services Proxy können Sie in einem Browser auf die interaktive API-Dokumentation zugreifen.
+
+Die API-Dokumentation läuft mit jeder Instanz von Web Services und ist über die NetApp Support-Website auch im statischen PDF-Format verfügbar. Um auf die interaktive Version zuzugreifen, öffnen Sie einen Browser und geben die URL ein, auf die der Speicherort von Web Services verweist (entweder ein Controller für die eingebettete Version oder ein Server für den Proxy).
+
+
+NOTE: Die Web Services API implementiert die OpenAPI-Spezifikation (ursprünglich Swagger-Spezifikation genannt).
+
+Zur ersten Anmeldung verwenden Sie die „admin“-Anmeldedaten. „Admin“ gilt als Superadministrator mit Zugriff auf alle Funktionen und Rollen.
+
+.Schritte
+. Öffnen Sie einen Browser.
+. Geben Sie die URL für die eingebettete oder Proxy-Implementierung ein:
++
+** Eingebettet: `+https://<controller>:<port>/devmgr/docs/+`
++
+In dieser URL `<controller>` Ist die IP-Adresse oder der FQDN des Controllers, und `<port>` Die Management-Port-Nummer des Controllers (standardmäßig 8443).
+
+** Proxy: `+http[s]://<server>:<port>/devmgr/docs/+`
++
+In dieser URL `<server>` Ist die IP-Adresse oder der FQDN des Servers, auf dem der Proxy installiert ist, und `<port>` Ist die Nummer des Listening-Ports (standardmäßig 8080 für HTTP oder 8443 für HTTPS).
+
++
+
+NOTE: Wenn der Listening-Port bereits verwendet wird, erkennt der Proxy den Konflikt und fordert Sie auf, einen anderen Listening-Port auszuwählen.
+
++
+Die API-Dokumentation wird im Browser geöffnet.
+
+
+
+. Wenn die interaktive API-Dokumentation geöffnet wird, gehen Sie zum Dropdown-Menü oben rechts auf der Seite und wählen Sie *utils*.
+. Klicken Sie auf die Kategorie *Login*, um die verfügbaren Endpunkte anzuzeigen.
+. Klicken Sie auf den Endpunkt *POST: /Login* und dann auf *Try it out*.
+. Geben Sie bei der ersten Anmeldung „admin“ für den Benutzernamen und das Kennwort ein.
+. Klicken Sie Auf *Ausführen*.
+. Um auf die Endpunkte für die Speicherverwaltung zuzugreifen, gehen Sie zum Dropdown-Menü oben rechts und wählen Sie *v2*.
++
+Die übergeordneten Kategorien für Endpunkte werden angezeigt. Sie können die API-Dokumentation wie in der Tabelle beschrieben navigieren.
+
++
+|===
+| Werden | Beschreibung 
+
+
+ a| 
+Dropdown-Menü
+ a| 
+Rechts oben auf der Seite bietet ein Dropdown-Menü Optionen zum Wechseln zwischen Version 2 der API-Dokumentation (V2), Symbol-Schnittstelle (Symbol V2) und API-Dienstprogrammen (Utils) zur Anmeldung.
+
+
+NOTE: Da Version 1 der API-Dokumentation ein Vorrecht war und nicht allgemein verfügbar ist, ist V1 nicht im Dropdown-Menü enthalten.
+
+
+
+ a| 
+Kategorien
+ a| 
+Die API-Dokumentation ist nach übergeordneten Kategorien organisiert (z. B. Administration, Konfiguration). Klicken Sie auf eine Kategorie, um die zugehörigen Endpunkte anzuzeigen.
+
+
+
+ a| 
+Endpunkte
+ a| 
+Wählen Sie einen Endpunkt aus, um seine URL-Pfade, erforderlichen Parameter, Antwortkörper und Statuscodes anzuzeigen, die die URLs wahrscheinlich zurückgeben werden.
+
+
+
+ a| 
+Probieren Sie Es Aus
+ a| 
+Interagieren Sie direkt mit dem Endpunkt, indem Sie auf *Try IT Out* klicken. Diese Schaltfläche ist in jeder erweiterten Ansicht für Endpunkte enthalten.
+
+Wenn Sie auf die Schaltfläche klicken, werden Felder zur Eingabe von Parametern angezeigt (falls zutreffend). Sie können dann Werte eingeben und auf *Ausführen* klicken.
+
+Die interaktive Dokumentation verwendet JavaScript, um die Anfrage direkt an die API zu stellen; es handelt sich nicht um eine Testanforderung.
+
+|===
+
+
+
+
+== Melden Sie sich bei Unified Manager an
+
+Nach der Installation des Web Services Proxy können Sie auf Unified Manager zugreifen, um mehrere Speichersysteme in einer webbasierten Schnittstelle zu verwalten.
+
+Um auf Unified Manager zuzugreifen, öffnen Sie einen Browser und geben die URL ein, die auf die installierte Proxy-Adresse verweist. Die folgenden Browser und Versionen werden unterstützt.
+
+|===
+| Browser | Mindestversion 
+
+
+ a| 
+Google Chrome
+ a| 
+79
+
+
+
+ a| 
+Microsoft Internet Explorer
+ a| 
+11
+
+
+
+ a| 
+Microsoft Edge
+ a| 
+79
+
+
+
+ a| 
+Mozilla Firefox
+ a| 
+70
+
+
+
+ a| 
+Safari
+ a| 
+12
+
+|===
+.Schritte
+. Öffnen Sie einen Browser, und geben Sie die folgende URL ein:
++
+`+http[s]://<server>:<port>/um+`
+
++
+In dieser URL `<server>` Stellt die IP-Adresse oder den FQDN des Servers dar, auf dem der Web Services Proxy installiert ist, und `<port>` Gibt die Nummer des Listening-Ports an (standardmäßig 8080 für HTTP oder 8443 für HTTPS).
+
++
+Die Anmeldeseite für Unified Manager wird geöffnet.
+
+. Geben Sie für die erste Anmeldung ein `admin` Geben Sie für den Benutzernamen ein und bestätigen Sie dann ein Passwort für den Admin-Benutzer.
++
+Das Passwort kann bis zu 30 Zeichen umfassen. Weitere Informationen zu Benutzern und Passwörtern finden Sie im Abschnitt Zugriffsmanagement der Online-Hilfe von Unified Manager.
+
+

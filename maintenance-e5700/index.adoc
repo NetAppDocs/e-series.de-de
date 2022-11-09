@@ -1,0 +1,50 @@
+---
+permalink: maintenance-e5700/index.html 
+sidebar: sidebar 
+keywords: E5700 maintenance, repair E5700, replace E5700 components, E5724, EF570, E5760 
+summary: Instandhaltung der E5700 Hardware 
+---
+= Wartung von E5700 Hardware
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Für das E5700 Storage-System können Sie Wartungsvorgänge für die folgenden Komponenten durchführen.
+
+
+
+== Batterien
+
+Ein Akku ist im Lieferumfang eines Controller-Kanisters enthalten und behält die Daten im Cache bei Ausfall der Wechselstromversorgung bei.
+
+
+
+== Controller
+
+Ein Controller besteht aus einer Hauptplatine, Firmware und Software. Sie steuert die Laufwerke und implementiert die Funktionen von System Manager.
+
+
+
+== Kanister
+
+Behälter bestehen aus drei verschiedenen Typen: Stromverlüfter (Netzteile), die eine redundante Stromversorgung und eine ausreichende Kühlung in einem Controller-Shelf mit 12 Laufwerken oder 24 Laufwerken bereitstellen. Stromversorgungs-Behälter, die für Redundanz in einem Controller-Shelf für 60 Laufwerke oder Festplatten-Shelf verwendet werden. Und Lüfter-Kanister, die zum Kühlen des Controller-Shelfs für 60 Laufwerke oder des Laufwerks-Shelfs verwendet werden.
+
+
+
+== Laufwerke
+
+Ein Laufwerk ist ein elektromagnetisches mechanisches Gerät, das die physischen Speichermedien für Daten zur Verfügung stellt.
+
+
+
+== Host-Schnittstellenkarten (HICs)
+
+Eine Host Interface Card (HIC) kann optional in einem Controller-Behälter installiert werden. Der E5700 Controller enthält integrierte Host-Ports auf der Controller-Karte selbst sowie Host-Ports auf der optionalen HIC. Host Ports, die in den Controller integriert sind, werden als Baseboard Host Ports bezeichnet. In die HIC integrierte Host Ports werden HIC Ports genannt.
+
+
+
+== Host-Port-Protokoll
+
+Sie können das Host-Protokoll in ein anderes Protokoll umwandeln, um Kompatibilität und Kommunikation herzustellen.

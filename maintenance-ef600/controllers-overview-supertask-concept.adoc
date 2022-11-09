@@ -1,0 +1,39 @@
+---
+permalink: maintenance-ef600/controllers-overview-supertask-concept.html 
+sidebar: sidebar 
+keywords: replace EF300 controller, replace EF600 controller, 
+summary: Anforderungen und Überlegungen für den Austausch des EF300- oder EF600 Controllers 
+---
+= Anforderungen für den Austausch des EF300- oder EF600 Controllers
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Überprüfen Sie vor dem Austausch eines EF300- oder EF600-Controllers die Anforderungen und Überlegungen.
+
+Ein Controller besteht aus einer Hauptplatine, Firmware und Software. Sie steuert die Laufwerke und implementiert die Funktionen des SANtricity-System-Managers.
+
+
+
+== Anforderungen für den Austausch des Controllers
+
+Bevor Sie einen Controller austauschen, müssen folgende Funktionen erforderlich sein:
+
+* Ein Ersatzcontroller-Behälter mit der gleichen Teilenummer wie der Controller-Behälter, den Sie austauschen.
+* Ein ESD-Armband, oder Sie haben andere antistatische Vorsichtsmaßnahmen getroffen.
+* Etiketten, um jedes Kabel zu identifizieren, das mit dem Controller-Behälter verbunden ist.
+* A #1 Kreuzschlitzschraubendreher.
+* Eine Management Station mit einem Browser, der für den Controller auf den SANtricity System Manager zugreifen kann. (Zeigen Sie zum Öffnen der System Manager-Schnittstelle den Domain-Namen oder die IP-Adresse des Controllers im Browser.)
+
+
+
+
+== Ersatz beim Einschalten
+
+Sie können einen Controller-Behälter ersetzen, während Ihr Speicher-Array eingeschaltet ist und Host-I/O-Vorgänge ausführt, wenn die folgenden Bedingungen erfüllt sind:
+
+* Der zweite Reglerbehälter im Regal hat optimalen Status.
+* Im Feld *OK to remove* im Bereich Details des Recovery Guru im SANtricity System Manager wird *Ja* angezeigt, was darauf hinweist, dass es sicher ist, diese Komponente zu entfernen.
+

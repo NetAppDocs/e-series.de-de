@@ -1,0 +1,22 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/vc-olh-what-is-fde-fips-security.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
+summary: FDE/FIPS-Sicherheit bezieht sich auf sichere Laufwerke, die Daten bei Schreibvorgängen verschlüsseln und während Lesevorgängen mit einem eindeutigen Verschlüsselungsschlüssel entschlüsseln. 
+---
+= Was ist FDE/FIPS-Sicherheit?
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+FDE/FIPS-Sicherheit bezieht sich auf sichere Laufwerke, die Daten bei Schreibvorgängen verschlüsseln und während Lesevorgängen mit einem eindeutigen Verschlüsselungsschlüssel entschlüsseln.
+
+Diese sicheren Laufwerke verhindern unbefugten Zugriff auf die Daten auf einem Laufwerk, das physisch vom Storage-Array entfernt wird. Sichere Laufwerke können entweder vollständige Festplattenverschlüsselung (Full Disk Encryption, FDE) oder FIPS-Laufwerke (Federal Information Processing Standard) sein. FIPS-Laufwerke wurden getestet.
+
+
+NOTE: Für Volumes, die FIPS-Unterstützung erfordern, verwenden Sie nur FIPS-Laufwerke. Durch das Mischen von FIPS- und FDE-Laufwerken in einer Volume-Gruppe oder einem Pool werden alle Laufwerke als FDE-Laufwerke behandelt. Außerdem kann ein FDE-Laufwerk nicht zu einer Ersatzfestplatte in einer reinen FIPS-Volume-Gruppe oder einem Pool hinzugefügt oder verwendet werden.

@@ -1,0 +1,131 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/san-spvc-ic-user-access.html 
+keywords: user access vCenter plugin, user roles vCenter plugin, privileges vCenter plugin, access permissions vCenter plugin 
+summary: Konfigurieren Sie Zugriffsberechtigungen für Storage Plug-in für vCenter. 
+---
+= Konfigurieren Sie die Berechtigungen für den Plugin-Zugriff
+:hardbreaks:
+:allow-uri-read: 
+:experimental: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Sie können Zugriffsberechtigungen für das Storage Plugin für vCenter konfigurieren, das Benutzer, Rollen und Berechtigungen umfasst.
+
+
+
+== Erforderliche vSphere-Berechtigungen prüfen
+
+Um auf das Plug-in im vSphere Client zuzugreifen, müssen Sie einer Rolle zugewiesen werden, die über die entsprechenden vSphere-Berechtigungen verfügt. Benutzer mit der Berechtigung „Datastore konfigurieren“ vSphere haben Lese-Schreib-Zugriff auf das Plugin, während Benutzer mit der Berechtigung „Datastore durchsuchen“ nur Lesezugriff haben. Wenn ein Benutzer keine dieser Berechtigungen hat, zeigt das Plugin eine Meldung „unzureichende Berechtigungen“ an.
+
+|===
+| Plugin-Zugriffstyp | VSphere-Berechtigung erforderlich 
+
+
+| Lesen/Schreiben (Konfigurieren) | Datastore.Configure 
+
+
+| Schreibgeschützt (Anzeigen) | Datastore.Durchsuchen 
+|===
+
+
+== Storage Administrator-Rollen konfigurieren
+
+Um Lese-/Schreibberechtigungen für Plugin-Benutzer bereitzustellen, können Sie eine Rolle erstellen, klonen oder bearbeiten. Weitere Informationen zum Konfigurieren von Rollen im vSphere-Client finden Sie im VMware Doc Center unter folgendem Thema:
+
+* https://docs.vmware.com/en/VMware-vSphere/7.0/com.vmware.vsphere.security.doc/GUID-41E5E52E-A95B-4E81-9724-6AD6800BEF78.html["Erstellen Sie eine benutzerdefinierte Rolle"^]
+
+
+
+
+=== Auf Rollenaktionen zugreifen
+
+. Wählen Sie auf der Startseite des vSphere Clients im Bereich Access Control die Option *Administrator* aus.
+. Klicken Sie im Bereich Zugriffskontrolle auf *Rollen*.
+. Führen Sie eine der folgenden Aktionen aus:
++
+** *Neue Rolle erstellen*: Klicken Sie auf das Aktionssymbol *Rolle erstellen*.
+** *Clone Role*: Wählen Sie eine vorhandene Rolle aus und klicken Sie auf das Aktionssymbol *Clone Role*.
+** *Vorhandene Rolle bearbeiten*: Wählen Sie eine vorhandene Rolle aus und klicken Sie auf das Aktionssymbol *Rolle bearbeiten*.
+
+
+
+
+
+NOTE: Die Administratorrolle kann nicht bearbeitet werden.
+
+Abhängig von der oben genannten Auswahl wird der entsprechende Assistent angezeigt.
+
+
+
+=== Erstellen Sie eine neue Rolle
+
+. Wählen Sie in der Liste Berechtigungen die Zugriffsberechtigungen aus, die dieser Rolle zugewiesen werden sollen.
++
+Um schreibgeschützten Zugriff auf das Plugin zu ermöglichen, wählen Sie Menü:Datastore[Browse Datastore]. Um Lese-/Schreibzugriff zu ermöglichen, wählen Sie Menü:Datastore[Configure Datastore].
+
+. Weisen Sie bei Bedarf andere Berechtigungen für die Liste zu und klicken Sie dann auf *Weiter*.
+. Benennen Sie die Rolle und geben Sie eine Beschreibung ein.
+. Klicken Sie Auf *Fertig Stellen*.
+
+
+
+
+=== Rolle klonen
+
+. Benennen Sie die Rolle und geben Sie eine Beschreibung ein.
+. Klicken Sie auf *OK*, um den Assistenten zu beenden.
+. Wählen Sie die geklonte Rolle aus der Liste aus und klicken Sie dann auf *Rolle bearbeiten*.
+. Wählen Sie in der Liste Berechtigungen die Zugriffsberechtigungen aus, die dieser Rolle zugewiesen werden sollen.
++
+Um schreibgeschützten Zugriff auf das Plugin zu ermöglichen, wählen Sie Menü:Datastore[Browse Datastore]. Um Lese-/Schreibzugriff zu ermöglichen, wählen Sie Menü:Datastore[Configure Datastore].
+
+. Klicken Sie Auf *Weiter*.
+. Aktualisieren Sie ggf. den Namen und die Beschreibung.
+. Klicken Sie Auf *Fertig Stellen*.
+
+
+
+
+=== Bearbeiten Sie eine vorhandene Rolle
+
+. Wählen Sie in der Liste Berechtigungen die Zugriffsberechtigungen aus, die dieser Rolle zugewiesen werden sollen.
++
+Um schreibgeschützten Zugriff auf das Plugin zu ermöglichen, wählen Sie Menü:Datastore[Browse Datastore]. Um Lese-/Schreibzugriff zu ermöglichen, wählen Sie Menü:Datastore[Configure Datastore].
+
+. Klicken Sie Auf *Weiter*.
+. Aktualisieren Sie ggf. den Namen oder die Beschreibung.
+. Klicken Sie Auf *Fertig Stellen*.
+
+
+
+
+== Legen Sie Berechtigungen für vCenter Server Appliance fest
+
+Nachdem Sie Berechtigungen für eine Rolle festgelegt haben, müssen Sie der vCenter Server Appliance eine Berechtigung hinzufügen. Mit dieser Berechtigung kann ein Benutzer oder eine Gruppe auf das Plugin zugreifen.
+
+. Wählen Sie aus der Dropdown-Liste Menü die Option *Hosts und Cluster* aus.
+. Wählen Sie die *vCenter Server Appliance* aus dem Bereich Access Control aus.
+. Klicken Sie auf die Registerkarte *Berechtigungen*.
+. Klicken Sie auf das Aktionssymbol *Berechtigung hinzufügen*.
+. Wählen Sie die entsprechende Domäne und den entsprechenden Benutzer/die entsprechende Gruppe aus.
+. Wählen Sie die erstellte Rolle aus, die die Berechtigung zum Lese-/Schreib-Plugin ermöglicht.
+. Aktivieren Sie bei Bedarf die Option *auf Kinder übertragen*.
+. Klicken Sie auf *OK*.
+
+
+
+NOTE: Sie können eine vorhandene Berechtigung auswählen und ändern, um die erstellte Rolle zu verwenden. *Beachten Sie jedoch, dass die Rolle zusammen mit Lese-/Schreib-Plugin-Berechtigungen die gleichen Rechte haben muss, um eine Regress in Berechtigungen zu vermeiden.*
+
+Um auf das Plugin zuzugreifen, müssen Sie sich unter dem Benutzerkonto, das über die Lese-/Schreibberechtigungen für das Plugin verfügt, beim vSphere Client anmelden.
+
+Weitere Informationen zum Verwalten von Berechtigungen finden Sie in den folgenden Themen im VMware Doc Center:
+
+* https://docs.vmware.com/en/VMware-vSphere/7.0/com.vmware.vsphere.security.doc/GUID-3B78EEB3-23E2-4CEB-9FBD-E432B606011A.html["Verwalten von Berechtigungen für vCenter-Komponenten"^]
+* https://docs.vmware.com/en/VMware-vSphere/7.0/com.vmware.vsphere.security.doc/GUID-FAA074CC-E8C9-4F13-ABCF-6CF7F15F04EE.html["Best Practices für Rollen und Berechtigungen"^]
+

@@ -1,0 +1,128 @@
+---
+permalink: config-linux/iscsi-configure-array-side-network-task.html 
+sidebar: sidebar 
+keywords: configure iSCSI networking, express linux configuration, software configuration, linux host, E2800, E5700, EF300, EF600, E-Series, eseries 
+summary: Konfigurieren Sie das iSCSI-Netzwerk auf der Array-Seite. 
+---
+= Konfigurieren Sie Array-seitiges Netzwerk
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Mit der SANtricity System Manager GUI können Sie das iSCSI-Netzwerk auf der Array-Seite konfigurieren.
+
+.Was Sie und#8217;ll benötigen
+* Die IP-Adresse oder der Domänenname für einen der Speicher-Array-Controller.
+* Ein Passwort für die System Manager GUI, rollenbasierte Zugriffssteuerung (Role-Based Access Control, RBAC) oder LDAP und ein Verzeichnisdienst, der für den entsprechenden Sicherheitszugriff auf das Speicher-Array konfiguriert wurde. Weitere Informationen zur Zugriffsverwaltung finden Sie in der Online-Hilfe des SANtricity System Managers.
+
+
+Diese Aufgabe beschreibt den Zugriff auf die Konfiguration des iSCSI-Ports über die Hardware-Seite von System Manager. Sie können die Konfiguration auch über das Menü:System[Einstellungen > iSCSI-Ports konfigurieren] aufrufen.
+
+.Schritte
+. Geben Sie in Ihrem Browser die folgende URL ein: `+https://<DomainNameOrIPAddress>+`
++
+`IPAddress` Ist die Adresse für einen der Storage Array Controller.
+
++
+Wenn SANtricity System Manager zum ersten Mal auf einem Array geöffnet wird, das nicht konfiguriert wurde, wird die Eingabeaufforderung Administratorkennwort festlegen angezeigt. Rollenbasierte Zugriffsverwaltung konfiguriert vier lokale Rollen: Administration, Support, Sicherheit und Monitoring. Die letzten drei Rollen haben zufällige Passwörter, die nicht erraten werden können. Nachdem Sie ein Passwort für die Administratorrolle festgelegt haben, können Sie alle Passwörter mit den Admin-Anmeldedaten ändern. Weitere Informationen zu den vier lokalen Benutzerrollen finden Sie in der Online-Hilfe, die in der Benutzeroberfläche von SANtricity System Manager verfügbar ist.
+
+. Geben Sie in den Feldern Administratorpasswort festlegen und Passwort bestätigen das Passwort für die Administratorrolle ein und klicken Sie dann auf *Passwort festlegen*.
++
+Der Setup-Assistent wird gestartet, wenn keine Pools, Volume-Gruppen, Workloads oder Benachrichtigungen konfiguriert sind.
+
+. Schließen Sie den Setup-Assistenten.
++
+Sie verwenden den Assistenten später, um zusätzliche Setup-Aufgaben abzuschließen.
+
+. Wählen Sie *Hardware*.
+. Wenn die Grafik die Laufwerke anzeigt, klicken Sie auf *Zurück zum Regal anzeigen*.
++
+Die Grafik ändert sich, um die Controller anstelle der Laufwerke anzuzeigen.
+
+. Klicken Sie auf den Controller mit den iSCSI-Ports, die Sie konfigurieren möchten.
++
+Das Kontextmenü des Controllers wird angezeigt.
+
+. Wählen Sie *iSCSI-Ports konfigurieren*.
++
+Das Dialogfeld iSCSI-Ports konfigurieren wird geöffnet.
+
+. Wählen Sie in der Dropdown-Liste den Port aus, den Sie konfigurieren möchten, und klicken Sie dann auf *Weiter*.
+. Wählen Sie die Einstellungen für den Konfigurationsanschluss aus, und klicken Sie dann auf *Weiter*.
++
+Um alle Porteinstellungen anzuzeigen, klicken Sie rechts im Dialogfeld auf den Link *Weitere Porteinstellungen anzeigen*.
+
++
+|===
+| Port-Einstellung | Beschreibung 
+
+
+ a| 
+Konfigurierte Geschwindigkeit des ethernet-Ports
+ a| 
+Wählen Sie die gewünschte Geschwindigkeit. Die in der Dropdown-Liste angezeigten Optionen hängen von der maximalen Geschwindigkeit ab, die Ihr Netzwerk unterstützen kann (z. B. 10 Gbit/s).
+
+
+NOTE: Die auf den Controllern verfügbaren optionalen 25-GB-iSCSI-Host-Schnittstellenkarten verfügen nicht über die automatische Aushandlung von Geschwindigkeiten. Sie müssen die Geschwindigkeit für jeden Port entweder auf 10 GB oder auf 25 GB einstellen. Alle Ports müssen auf dieselbe Geschwindigkeit festgelegt sein.
+
+
+
+ a| 
+IPv4 aktivieren/IPv6 aktivieren
+ a| 
+Wählen Sie eine oder beide Optionen aus, um die Unterstützung für IPv4- und IPv6-Netzwerke zu aktivieren.
+
+
+
+ a| 
+TCP-Listening-Port (verfügbar durch Klicken auf *Weitere Port-Einstellungen anzeigen*.)
+ a| 
+Geben Sie bei Bedarf eine neue Portnummer ein.
+
+Der Listening-Port ist die TCP-Port-Nummer, die der Controller zum Abhören von iSCSI-Anmeldungen von Host-iSCSI-Initiatoren verwendet. Der standardmäßige Listenanschluss ist 3260. Sie müssen 3260 oder einen Wert zwischen 49152 und 65535 eingeben.
+
+
+
+ a| 
+MTU-Größe (verfügbar durch Klicken auf *Weitere Porteinstellungen anzeigen*.)
+ a| 
+Geben Sie bei Bedarf eine neue Größe in Byte für die maximale Übertragungseinheit (MTU) ein.
+
+Die Standardgröße für maximale Übertragungseinheit (Maximum Transmission Unit, MTU) beträgt 1500 Byte pro Frame. Sie müssen einen Wert zwischen 1500 und 9000 eingeben.
+
+
+
+ a| 
+ICMP PING-Antworten aktivieren
+ a| 
+Wählen Sie diese Option aus, um das ICMP (Internet Control Message Protocol) zu aktivieren. Die Betriebssysteme von vernetzten Computern verwenden dieses Protokoll zum Senden von Meldungen. Diese ICMP-Meldungen bestimmen, ob ein Host erreichbar ist und wie lange es dauert, bis Pakete von und zu diesem Host gelangen.
+
+|===
++
+Wenn Sie *IPv4 aktivieren* ausgewählt haben, wird ein Dialogfeld zur Auswahl von IPv4-Einstellungen geöffnet, nachdem Sie auf *Weiter* geklickt haben. Wenn Sie *IPv6* aktivieren ausgewählt haben, wird ein Dialogfeld zur Auswahl von IPv6-Einstellungen geöffnet, nachdem Sie auf *Weiter* geklickt haben. Wenn Sie beide Optionen ausgewählt haben, wird zuerst das Dialogfeld für IPv4-Einstellungen geöffnet, und nach dem Klicken auf *Weiter* wird das Dialogfeld für IPv6-Einstellungen geöffnet.
+
+. Konfigurieren Sie die IPv4- und/oder IPv6-Einstellungen automatisch oder manuell. Um alle Porteinstellungen anzuzeigen, klicken Sie rechts im Dialogfeld auf den Link *Weitere Einstellungen anzeigen*.
++
+|===
+| Port-Einstellung | Beschreibung 
+
+
+ a| 
+Automatische Ermittlung der Konfiguration
+ a| 
+Wählen Sie diese Option aus, um die Konfiguration automatisch abzurufen.
+
+
+
+ a| 
+Statische Konfiguration manuell festlegen
+ a| 
+Wählen Sie diese Option aus, und geben Sie dann eine statische Adresse in die Felder ein. Geben Sie bei IPv4 die Subnetzmaske und das Gateway des Netzwerks an. Geben Sie für IPv6 die routingfähige IP-Adresse und die Router-IP-Adresse ein.
+
+|===
+. Klicken Sie Auf *Fertig Stellen*.
+. Schließen Sie System Manager.
+

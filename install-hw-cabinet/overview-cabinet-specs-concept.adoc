@@ -1,0 +1,450 @@
+---
+permalink: install-hw-cabinet/overview-cabinet-specs-concept.html 
+sidebar: sidebar 
+keywords: 3040 40U cabinet specs, cabinet installation, drive tray installation, controller installation, shelf installation, E2800, E5700, EF300, EF600, 
+summary: Übersicht und Spezifikationen für die Schrankinstallation prüfen. 
+---
+= Rack-Spezifikationen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Der 40U-Schrank des Modells 3040 verfügt über folgende Standardfunktionen:
+
+* Eine hintere Tür, die verriegelt und verriegelt werden kann
+* Standard Electronic Industry Association (EIA) unterstützt Schienen mit Befestigungslöchern für die Installation von Geräten in einem 48.3 cm breiten Standardschrank (19 Zoll)
+* Vier Achterrollen und vier verstellbare Nivellierfüße, die sich unterhalb des Schranks befinden, um den Schrank zu bewegen und dann den Schrank in seiner endgültigen Position zu vergleichen
+* Ein stabiler Fuß, der den Schrank stabilisiert, nachdem er an seiner festen Position installiert wurde
+* Zutrittsöffnungen für Schnittstellenkabel
+* Zwei PDUs (AC Power Distribution Units), die integrierte Power Connection und Power Handling Kapazität bieten
+
+
+Die folgenden Abbildungen zeigen eine Vorderansicht (links) und eine Rückansicht (rechts) des Gehäuses.
+
+image::../media/83000_07_dwg_3040_cabinet_with_callouts.gif[83000 07 DWG 3040 Schrank mit Callouts]
+
+|===
+
+
+ a| 
+1.
+ a| 
+Lüftungsabdeckung
+
+
+
+ a| 
+2.
+ a| 
+Anschlusskabelöffnungen
+
+
+
+ a| 
+3.
+ a| 
+Hintere Platte
+
+
+
+ a| 
+4.
+ a| 
+EIA-Stützschienen
+
+
+
+ a| 
+5.
+ a| 
+Vertikale Stützschienen
+
+
+
+ a| 
+6.
+ a| 
+Befestigungsschienen für den Schrank
+
+
+
+ a| 
+7.
+ a| 
+Stabile Füße
+
+
+
+ a| 
+8.
+ a| 
+Verstellbare Nivellierfüße
+
+
+
+ a| 
+9.
+ a| 
+Stromverteilungs-Einheit (einer von zwei)
+
+
+
+ a| 
+10.
+ a| 
+Netzeingabefelder
+
+
+
+ a| 
+11.
+ a| 
+Vorderseite des Schranks
+
+
+
+ a| 
+12.
+ a| 
+Rückseite des Gehäuses
+
+|===
+
+CAUTION: *Verletzungsgefahr* -- Wenn die untere Hälfte des Schranks leer ist, setzen Sie keine Bauteile in der oberen Hälfte des Schranks ein. Wenn die obere Hälfte des Schranks für die untere Hälfte zu schwer ist, kann der Schrank fallen und zu Verletzungen führen. Installieren Sie immer eine Komponente in der niedrigsten verfügbaren Position im Schrank.
+
+
+CAUTION: *Verletzungsgefahr* -- Bewegen Sie nur einen besiedelten Schrank mit Gabelstapler oder angemessene Hilfe von anderen Personen. Schieben Sie den Schrank immer von vorne, um zu verhindern, dass er überfällt. Ein vollständig bestückter Schrank kann mehr als 2000 lb (909 kg) wiegen. Der Schrank ist auch auf einer flachen Oberfläche schwer zu bewegen. Wenn Sie den Schrank entlang einer geneigten Oberfläche bewegen müssen, entfernen Sie die Komponenten von der oberen Hälfte des Schranks und stellen Sie sicher, dass Sie über eine ausreichende Hilfe.
+
+
+NOTE: Sie können E2860 oder E5760 Controller-Shelfs oder ein DE460C Laufwerk-Shelf nicht in einem 3040-HE-Schrank installieren.
+
+
+NOTE: Ist ein 3040-Schrank vollständig mit DE6600-Tabletts bestückt, wiegt er mehr als 2756 lb (1250.1 kg).
+
+
+
+== Leistungsanforderungen und Wärmeableitung
+
+Der Schrank enthält die folgenden Spezifikationen für die Strom- und Wärmeableitung.
+
+
+
+=== Nennleistung
+
+Das 3040-HE-Gehäuse ist für 200 bis 240 V AC bei 50 Hz bis 60 Hz ausgelegt und arbeitet bis zu ±10 % dieses Bereichs.
+
+
+
+=== Stromverteiler (PDUs)
+
+Das Gehäuse enthält zwei identische PDUs (AC Power Distribution Units), wobei jede PDU bis zu 72 A Nutzleistung zur Verfügung stellt. Die PDUs sind vertikal an der Rückseite des Gehäuses montiert und jede PDU enthält sechs 12A-Leistungsbanken. Jede Powerbank verfügt über vier IEC 60320-C19-Steckdosen und einen 15A-Leistungsschalter. Jede PDU hat insgesamt 24 Steckdosen und 6 Leistungsschalter.
+
+Jede der beiden PDUs verfügt über drei Einschaltkästen, die sich unten im Schrank befinden. Jede Einsteckdose versorgt acht Steckdosen wie folgt mit Strom:
+
+* Netzeinschlusskasten 1, der über Netzkabel C1 verfügt, versorgt die unteren acht Ausgänge mit Strom
+* Netzeingabekasten 2, der über Netzkabel C2 verfügt, versorgt die mittleren acht Ausgänge mit Strom
+* Netzeinschlusskasten 3, der über Netzkabel C3 verfügt, versorgt die oberen acht Ausgänge mit Strom
+
+
+Die Einsteigerboxen sind mit C1, C2 und C3 gekennzeichnet, wo die Netzkabel an die Module angeschlossen werden.
+
+
+
+=== Leistungsberechnungen und Wärmeberechnungen für den Schrank
+
+|===
+| Komponente | KVA | Watt | BTU/h 
+
+
+ a| 
+Rack PDU (72A PDUs)
+ a| 
+14.4
+ a| 
+14400
+ a| 
+49176
+
+
+
+ a| 
+Schrank PDU/12A Bank (72A PDUs)
+ a| 
+2.40*
+ a| 
+2400*
+ a| 
+8196*
+
+
+
+ a| 
+E2612 Fach für Controller-Laufwerke
+ a| 
+0.437
+ a| 
+433
+ a| 
+1476
+
+
+
+ a| 
+E2624 Fach für Controller-Laufwerke
+ a| 
+0.487
+ a| 
+482
+ a| 
+1644
+
+
+
+ a| 
+E2660 Fach für Controller-Laufwerke
+ a| 
+1.128
+ a| 
+1117
+ a| 
+3810
+
+
+
+ a| 
+E2712 Controller-Laufwerksfach
+ a| 
+0.516
+ a| 
+511
+ a| 
+1744
+
+
+
+ a| 
+E2724 Laufwerksfach für Controller
+ a| 
+0.561
+ a| 
+555
+ a| 
+1894
+
+
+
+ a| 
+E2760 Controller-Laufwerksfach
+ a| 
+1.205
+ a| 
+1193
+ a| 
+4072
+
+
+
+ a| 
+E5412 Controller-Laufwerksfach
+ a| 
+0.558
+ a| 
+552
+ a| 
+1883
+
+
+
+ a| 
+E5424 Controller-Laufwerksfach und das EF540 Flash-Array
+ a| 
+0.607
+ a| 
+601
+ a| 
+2051
+
+
+
+ a| 
+E5460 Controller-Laufwerksfach
+ a| 
+1.254
+ a| 
+1242
+ a| 
+4237
+
+
+
+ a| 
+E5512 Controller-Laufwerksfach
+ a| 
+0.587
+ a| 
+581
+ a| 
+1982
+
+
+
+ a| 
+E5524 Controller-Laufwerksfach und das EF550 Flash-Array
+ a| 
+0.637
+ a| 
+630
+ a| 
+2150
+
+
+
+ a| 
+E5560 Controller-Laufwerksfach
+ a| 
+1.285
+ a| 
+1272
+ a| 
+4342
+
+
+
+ a| 
+E5612 Controller-Laufwerksfach
+ a| 
+0.625
+ a| 
+619
+ a| 
+2111
+
+
+
+ a| 
+E5624 Controller-Laufwerksfach und das EF560 Flash-Array
+ a| 
+0.675
+ a| 
+668
+ a| 
+2279
+
+
+
+ a| 
+E5660 Controller-Laufwerksfach
+ a| 
+1.325
+ a| 
+1312
+ a| 
+4477
+
+
+
+ a| 
+DE1600 Laufwerksfach
+ a| 
+0.325
+ a| 
+322
+ a| 
+1099
+
+
+
+ a| 
+DE5600 Laufwerksfach
+ a| 
+0.375
+ a| 
+371
+ a| 
+1267
+
+
+
+ a| 
+DE6600-Laufwerksfach
+ a| 
+0.1.011
+ a| 
+1001
+ a| 
+3415
+
+|===
+
+
+== Maximale Anzahl der Fächer
+
+Die maximale Anzahl der Fächer, die in einem 3040-HE-Schrank installiert werden können, hängt von der Höhe der einzelnen Fächer in den Höheneinheiten ab.
+
+
+
+=== Ablagehöhen in Regaleinheiten (U)
+
+Jede Rack-Einheit ist 1.75 Zoll (4.45 cm). So können Sie beispielsweise bis zu zehn 4-HE-Fächer, bis zu zwanzig 2-HE-Fächer oder eine Kombination aus 2-HE- und 4-HE-Fächern bis zu 40 HE installieren.
+
+|===
+| Fach | Höheneinheiten (HE) 
+
+
+ a| 
+E2x12- oder E2x24-Controller-Laufwerksfach
+ a| 
+2 HE
+
+
+
+ a| 
+E2x60 Controller-Laufwerksfach
+ a| 
+4 HE
+
+
+
+ a| 
+E5x12- oder E5x24-Fach für Controller-Laufwerke
+ a| 
+2 HE
+
+
+
+ a| 
+E5x60 Controller-Laufwerksfach
+ a| 
+4 HE
+
+
+
+ a| 
+EF540 0 Flash-Array
+ a| 
+2 HE
+
+
+
+ a| 
+DE1600 Laufwerksfach
+ a| 
+2 HE
+
+
+
+ a| 
+DE5600 Laufwerksfach
+ a| 
+2 HE
+
+
+
+ a| 
+DE6600-Laufwerksfach
+ a| 
+4 HE
+
+|===

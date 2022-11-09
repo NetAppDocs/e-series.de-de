@@ -1,0 +1,35 @@
+---
+sidebar: sidebar 
+permalink: security-tech-reports.html 
+keywords: security technical reports, e-series, hardware, santricity, os 
+summary: Technische Berichte der E-Series 
+---
+= Lesen Sie technische Berichte zu Sicherheitsfragen
+:allow-uri-read: 
+
+
+
+
+== SicherheitsTR
+
+[cols="9,9,9"]
+|===
+
+
+| https://www.netapp.com/pdf.html?item=/media/17162-tr4474pdf.pdf["*TR-4474: SANtricity Drive Security Feature Guide*"] | https://www.netapp.com/pdf.html?item=/media/17079-tr4712pdf.pdf["*TR-4712: SANtricity Management Sicherheitsfunktionen*"] | https://www.netapp.com/pdf.html?item=/media/17218-tr4813pdf.pdf["*TR-4813: Verwalten von Zertifikaten für E-Series Systeme*"] 
+
+
+| In wird die vollständige Festplattenverschlüsselung für E-Series Systeme beschrieben. Diese unterstützt FIPS 140-2-2-zertifizierte Laufwerke sowie interne und externe Verschlüsselungsmanagementunterstützung. | Beschreibung der SANtricity Sicherheitsfunktionen für die NetApp E-Series E2800, E5700, EF280, EF570, EF300 Und EF600 Storage-Systeme. | Eine Beschreibung des Managements von Sicherheitszertifikaten mit den neuesten Controllern und Applikationen der E-Series. 
+
+
+|  |  |  
+
+
+|  |  |  
+
+
+| https://www.netapp.com/pdf.html?item=/media/19422-tr-4855.pdf["*TR-4855: Security Hardening Guide for SANtricity*"] | https://www.netapp.com/media/19404-tr-4853.pdf["*TR-4853: Zugriffsmanagement für E-Series Systeme*"] |  
+
+
+| Beschreibt die Implementierung von SANtricity zur Einhaltung vorschriftsmäßigen Sicherheitszielen für die Vertraulichkeit, Integrität und Verfügbarkeit von Informationssystemen. | In wird die Konfiguration des Zugriffsmanagements beschrieben, einschließlich rollenbasierter Zugriffssteuerung (Role-Based Access Control, RBAC), Lightweight Directory Access Protocol (LDAP) und Security Assertion Markup Language (SAML). |  
+|===

@@ -1,0 +1,66 @@
+---
+permalink: getting-started/learn-shelf-concept.html 
+sidebar: sidebar 
+keywords: E-Series, eseries, E2800, E5700, EF300, EF600, E-series hardware, E-Series shelf, DE212C, DE224C, DE460C, NE224, 
+summary: E-Series Systeme sind in verschiedenen Shelf-Größen erhältlich. 
+---
+= Shelf-Typen der E-Series
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+E-Series Systeme sind in verschiedenen Shelf-Größen erhältlich.
+
+|===
+| Shelf-Typ | Abbildung 
+
+
+ a| 
+*DE212C:*
+
+* 2u12 (2 Rack-Einheiten; 12 Laufwerke)
+* 3.5-Zoll-HDDs und/oder 2.5-Zoll-SSDs (mit Adapter)
+* Nur E2800 Controller
+
+ a| 
+image:../media/e2812_front.gif[""]
+
+
+
+ a| 
+*DE224C:*
+
+* 2 he/24 (2 Rack-Einheiten; 24 Laufwerke)
+* 2.5-Zoll-HDD und/oder 2.5-Zoll-SSD-Laufwerke
+* E2800, EF280, E5700 und EF570 Controller
+
+ a| 
+image:../media/e2824_front.gif[""]
+
+
+
+ a| 
+*DE460C:*
+
+* 4 he/60 (4 Rack-Einheiten; 60 Laufwerke)
+* 3.5- und 2.5-Zoll-Laufwerke (NL-SAS, SAS und SSD)
+* E2800 und E5700 Controller
+
+ a| 
+image:../media/de460c.gif[""]
+
+
+
+ a| 
+*NE224:*
+
+* 2 he/24 (2 Rack-Einheiten; 24 Laufwerke)
+* 2.5-Zoll-NVMe-SSD-Laufwerke
+* EF300- und EF600-Controller
+
+ a| 
+image:../media/ne224.gif[""]
+
+|===

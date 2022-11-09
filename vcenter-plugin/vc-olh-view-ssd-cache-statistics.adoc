@@ -1,0 +1,64 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/vc-olh-view-ssd-cache-statistics.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
+summary: Anzeigen von Statistiken für den SSD-Cache, z. B. Lesen, Schreiben, Cache-Treffer, Cache-Zuweisung in Prozent, Und Cache-Auslastung in Prozent. 
+---
+= Anzeigen von SSD-Cache-Statistiken
+:hardbreaks:
+:allow-uri-read: 
+:experimental: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Sie können Statistiken für den SSD-Cache anzeigen, z. B. Lese-, Schreib-, Cache-Treffer, Cache-Zuweisung in Prozent, Und Cache-Auslastung in Prozent.
+
+
+NOTE: Diese Funktion steht nicht auf dem EF600 oder EF300-Storage-System zur Verfügung.
+
+Die nominalen Statistiken, bei denen es sich um eine Untergruppe der detaillierten Statistiken handelt, werden im Dialogfeld „View SSD Cache Statistics“ angezeigt. Sie können detaillierte Statistiken für den SSD-Cache nur anzeigen, wenn Sie alle SSD-Statistiken in eine .csv-Datei exportieren.
+
+Während Sie die Statistiken überprüfen und interpretieren, beachten Sie, dass einige Interpretationen durch die Prüfung einer Kombination von Statistiken abgeleitet werden.
+
+.Schritte
+. Wählen Sie auf der Seite Verwalten das Speicher-Array mit SSD-Cache aus.
+. Wählen Sie Menü:Provisioning[Pools und Volume-Gruppen konfigurieren].
+. Wählen Sie den SSD-Cache aus, für den Sie Statistiken anzeigen möchten, und klicken Sie dann auf Menü:Mehr Statistik[View SSD Cache].
++
+Das Dialogfeld SSD-Cache-Statistiken anzeigen wird angezeigt und zeigt die nominalen Statistiken für den ausgewählten SSD-Cache an.
+
++
+.Felddetails
+====
+[cols="25h,~"]
+|===
+| Einstellung | Beschreibung 
+
+
+| Lesezugriffe | Zeigt die Gesamtzahl der Host-Lesevorgänge aus den SSD Volumes mit Cache-Aktivierung an. Je mehr das Verhältnis von Lese- zu Schreibzugriffen ist, desto besser ist der Betrieb des Cache. 
+
+
+| Schreibvorgänge | Die Gesamtzahl der Host-Schreibvorgänge auf den SSD-Cache-fähigen Volumes, Je mehr das Verhältnis von Lese- zu Schreibzugriffen ist, desto besser ist der Betrieb des Cache. 
+
+
+| Cache-Treffer | Zeigt die Anzahl der Cache-Treffer an. 
+
+
+| Cache-Treffer % | Zeigt den Prozentsatz von Cache-Treffern an. Diese Zahl leitet sich aus Cache-Hits / (Lese- + Schreibvorgänge) ab. Der Cache-Trefferprozentsatz sollte im Hinblick auf einen effektiven SSD-Cache-Vorgang größer als 50 Prozent sein. 
+
+
+| Cache-Zuweisung % | Zeigt den Prozentsatz des zugewiesenen SSD-Cache-Speichers an, ausgedrückt als Prozentsatz des SSD-Cache-Speichers, der für diesen Controller verfügbar ist und aus zugewiesenen Bytes/verfügbaren Bytes abgeleitet wird. 
+
+
+| Cache-Auslastung in % | Zeigt den Prozentsatz von SSD-Cache-Storage, der Daten von aktivierten Volumes enthält, die in Prozent des zugewiesenen SSD-Cache-Storage angegeben sind. Diese Menge stellt die Auslastung oder Dichte des SSD-Cache dar. Abgeleitet von zugewiesenen Bytes/verfügbaren Bytes. 
+
+
+| Alle Exportieren | Exportiert alle SSD-Cache-Statistiken in ein CSV-Format. Die exportierte Datei enthält alle verfügbaren Statistiken für den SSD-Cache (nominal und detailliert). 
+|===
+====
+. Klicken Sie auf *Abbrechen*, um das Dialogfeld zu schließen.
+

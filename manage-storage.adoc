@@ -1,0 +1,30 @@
+---
+sidebar: sidebar 
+permalink: manage-storage.html 
+keywords: online help, System Manager, Unified Manager 
+summary: Storage-Management 
+---
+= Storage-Management
+:allow-uri-read: 
+
+
+[role="lead"]
+Über die nachfolgenden Links gelangen Sie zu Dokumentation, in der Sie beschreibt, wie Storage-Objekte und E-Series Storage-Systeme konfiguriert, gemanagt und überwacht werden. Die Links führen Sie zu einer anderen Dokumentationswebsite.
+
+
+
+== Online-Hilfe für System Manager 11.7
+
+Auf das zugreifen https://docs.netapp.com/us-en/e-series-santricity/system-manager/index.html["Online-Hilfe von SANtricity System Manager 11.7"^], Hier finden Sie Informationen zur Planung, Konfiguration, Verwaltung und Fehlerbehebung für Ihr Storage Array.
+
+
+
+== Online-Hilfe für Unified Manager 5
+
+Auf das zugreifen https://docs.netapp.com/us-en/e-series-santricity/unified-manager/index.html["Online-Hilfe von SANtricity Unified Manager 5"^], Wo Sie erfahren, wie Sie Speichermanagement-Befehle auf mehreren Netzwerk-Storage-Arrays ausführen.
+
+
+
+== Befehlsreferenz
+
+Auf das zugreifen https://docs.netapp.com/us-en/e-series-cli/index.html["Befehlsreferenz"^], Wo Sie lernen, wie Sie Ihre Speicher-Arrays mit Hilfe von CLI-Befehlen (Command Line Interface) konfigurieren und überwachen können.

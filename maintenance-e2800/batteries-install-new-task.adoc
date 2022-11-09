@@ -1,0 +1,62 @@
+---
+permalink: maintenance-e2800/batteries-install-new-task.html 
+sidebar: sidebar 
+keywords: E2800 battery fail, E2800 battery, E2800 battery replacement, replace E2800 battery, replacing E2800 battery, E2800, E-Series, eseries 
+summary: Setzen Sie einen neuen Akku ein. 
+---
+= Den neuen E2800 Akku installieren
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Nach dem Entfernen der fehlerhaften Batterie können Sie den neuen installieren.
+
+.Was Sie und#8217;ll benötigen
+* Der Ersatzakku.
+* Eine flache, statische Oberfläche.
+
+
+.Schritte
+. Packen Sie den neuen Akku aus, und stellen Sie ihn auf eine flache, statische Oberfläche.
++
+
+NOTE: Zur sicheren Einhaltung der IATA-Vorschriften werden Ersatzbatterien mit einem Ladestatus von 30 Prozent oder weniger (SoC) ausgeliefert. Wenn Sie die Stromversorgung wieder einschalten, beachten Sie, dass das Schreib-Caching erst wieder aufgenommen wird, wenn der Ersatzakku vollständig geladen ist und der erste Lernzyklus abgeschlossen wurde.
+
+. Richten Sie den Controller-Behälter so aus, dass der Steckplatz für die Batterie zu Ihnen zeigt.
+. Setzen Sie den Akku in einem leichten Abwärtswinkel in den Controller-Behälter ein.
++
+Sie müssen den Metallflansch an der Vorderseite der Batterie in den Schlitz an der Unterseite des Controller-Kanisters stecken und die Oberseite der Batterie unter den kleinen Ausrichtstift auf der linken Seite des Kanisters schieben.
+
+. Schieben Sie die Akkuverriegelung nach oben, um die Batterie zu sichern.
++
+Wenn die Verriegelung einrastet, Haken unten an der Verriegelung in einen Metallschlitz am Gehäuse.
+
++
+image::../media/28_dwg_e2800_insert_battery_maint-e2800.gif[28-m-e2800-Batterieeinschub e2800]
+
++
+*(1)* _Entriegelung der Batterie_
+
++
+*(2)* _Akku_
+
+. Drehen Sie den Controller-Behälter um, um zu bestätigen, dass der Akku ordnungsgemäß installiert ist.
++
+
+CAUTION: *Möglicher Hardwareschaden* -- der Metallflansch an der Vorderseite der Batterie muss vollständig in den Schlitz am Controller-Behälter eingesetzt werden (wie in der ersten Abbildung dargestellt). Wenn der Akku nicht richtig eingesetzt ist (wie in der zweiten Abbildung dargestellt), kann der Metallflansch die Controllerplatine kontaktieren, was beim Einschalten der Stromversorgung zu einer Beschädigung des Controllers führt.
+
++
+** *Korrekt* -- der Metallflansch der Batterie ist vollständig in den Steckplatz am Controller eingesetzt:
+
+
++
+image:../media/28_dwg_e2800_battery_flange_ok_maint-e2800.gif[""]
+
++
+** *Incorrect* -- der Metallflansch der Batterie ist nicht in den Steckplatz an der Steuerung eingelegt: +image:../media/28_dwg_e2800_battery_flange_not_ok_maint-e2800.gif[""]
+
+
+. Gehen Sie zu link:batteries-reinstall-controller-canister-task.html["E2800 Controller-Behälter neu installieren"].
+

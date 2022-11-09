@@ -1,0 +1,102 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/vc-olh-use-ca-signed-certificates.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
+summary: Abrufen und Importieren von CA-signierten Zertifikaten für sicheren Zugriff auf das Managementsystem, das das Storage Plug-in für vCenter hostet 
+---
+= CA-signierte Zertifikate verwenden
+:hardbreaks:
+:allow-uri-read: 
+:experimental: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Sie können CA-signierte Zertifikate für den sicheren Zugriff auf das Managementsystem abrufen und importieren, das das Storage Plugin für vCenter hostet.
+
+Die Verwendung von CA-signierten Zertifikaten ist ein dreistufiges Verfahren:
+
+*  1: Complete a CSR file.
+*  2: Submit CSR file.
+*  3: Import management certificates.
+
+
+
+
+== Schritt 1: Eine CSR-Datei ausfüllen
+
+Sie müssen zuerst eine CSR-Datei (Certificate Signing Request) generieren, die Ihre Organisation und das Host-System identifiziert, auf dem das Plugin ausgeführt wird. Alternativ können Sie eine CSR-Datei mit einem Tool wie OpenSSL generieren und zu überspringen  2: Submit CSR file.
+
+.Schritte
+. Wählen Sie *Zertifikatverwaltung*.
+. Wählen Sie auf der Registerkarte *Management* die Option *CSR abschließen* aus.
+. Geben Sie die folgenden Informationen ein, und klicken Sie dann auf *Weiter*:
++
+** *Organisation* -- der vollständige, rechtliche Name Ihres Unternehmens oder Ihrer Organisation. Fügen Sie Suffixe wie Inc. Oder Corp. Mit ein
+** *Organisationseinheit (optional)* -- die Abteilung Ihrer Organisation, die das Zertifikat bearbeitet.
+** *Stadt/Ort* -- die Stadt, in der sich Ihr Hostsystem oder Ihr Geschäft befindet.
+** *Bundesland/Region (optional)* -- der Staat oder die Region, in der sich Ihr Hostsystem oder Ihr Geschäft befindet.
+** *Land ISO Code* -- der zweistellige ISO-Code Ihres Landes (International Organization for Standardization), wie z. B. die USA.
+
+
+. Geben Sie die folgenden Informationen über das Hostsystem ein, auf dem das Plugin ausgeführt wird:
++
+** *Allgemeiner Name* -- die IP-Adresse oder der DNS-Name des Hostsystems, auf dem das Plugin läuft. Stellen Sie sicher, dass diese Adresse korrekt ist; sie muss genau mit dem übereinstimmen, was Sie eingeben, um auf das Plugin im Browser zugreifen. Verwenden Sie kein http:// oder https://. Der DNS-Name kann nicht mit einem Platzhalter beginnen.
+** *Alternative IP-Adressen* -- Wenn der allgemeine Name eine IP-Adresse ist, können Sie optional weitere IP-Adressen oder Aliase für das Host-System eingeben. Verwenden Sie für mehrere Einträge ein kommagetrenntes Format.
+** *Alternative DNS-Namen* -- Wenn der gemeinsame Name ein DNS-Name ist, geben Sie weitere DNS-Namen für das Host-System ein. Verwenden Sie für mehrere Einträge ein kommagetrenntes Format. Falls es keine alternativen DNS-Namen gibt, aber Sie im ersten Feld einen DNS-Namen eingegeben haben, kopieren Sie diesen Namen hier. Der DNS-Name kann nicht mit einem Platzhalter beginnen.
+
+
+. Stellen Sie sicher, dass die Host-Informationen richtig sind. Wenn dies nicht der Fall ist, schlagen die von der Zertifizierungsstelle zurückgegebenen Zertifikate fehl, wenn Sie versuchen, sie zu importieren.
+. Klicken Sie Auf *Fertig Stellen*.
+
+
+
+
+== Schritt 2: CSR-Datei senden
+
+Nachdem Sie eine CSR-Datei (Certificate Signing Request) erstellt haben, senden Sie die generierte CSR-Datei an eine CA, um signierte Management-Zertifikate für das System zu erhalten, das das Plugin hostet.
+
+Systeme der E-Series erfordern ein PEM-Format (Base64 ASCII-Kodierung) für signierte Zertifikate, das die folgenden Dateitypen umfasst: .Pem, .crt, .cer oder .key.
+
+.Schritte
+. Suchen Sie die heruntergeladene CSR-Datei.
++
+Der Speicherort des Downloads hängt von Ihrem Browser ab.
+
+. Senden Sie die CSR-Datei an eine CA (z. B. Verisign oder DigiCert), und fordern Sie signierte Zertifikate im PEM-Format an.
+
+
+
+CAUTION: Nachdem Sie eine CSR-Datei an die CA gesendet haben, erstellen SIE keine weitere CSR-Datei erneut.
+
+Immer wenn Sie eine CSR erstellen, erstellt das System ein privates und öffentliches Schlüsselpaar. Der öffentliche Schlüssel ist Teil der CSR, während der private Schlüssel im Schlüsselspeicher des Systems aufbewahrt wird. Wenn Sie die signierten Zertifikate erhalten und importieren, stellt das System sicher, dass sowohl der private als auch der öffentliche Schlüssel das ursprüngliche Paar sind. Wenn die Schlüssel nicht übereinstimmen, funktionieren die signierten Zertifikate nicht und Sie müssen neue Zertifikate von der CA anfordern.
+
+
+
+== Schritt 3: Import Management Zertifikate
+
+Nachdem Sie von der Zertifizierungsstelle (CA) signierte Zertifikate erhalten haben, importieren Sie die Zertifikate in das Hostsystem, auf dem das Plugin installiert ist.
+
+.Bevor Sie beginnen
+* Sie müssen über die signierten Zertifikate der Zertifizierungsstelle verfügen. Diese Dateien umfassen das Stammzertifikat, ein oder mehrere Zwischenzertifikate und das Serverzertifikat.
+* Wenn die CA eine verkettete Zertifikatdatei (z. B. eine .p7b-Datei) lieferte, müssen Sie die verkettete Datei in einzelne Dateien entpacken: Das Stammzertifikat, ein oder mehrere Zwischenzertifikate und das Serverzertifikat. Sie können das Windows-certmgr-Dienstprogramm zum Entpacken der Dateien verwenden (Rechtsklick und Menü wählen:Alle Aufgaben[Export]). Base-64-Kodierung wird empfohlen. Wenn die Exporte abgeschlossen sind, wird für jede Zertifikatdatei in der Kette eine CER-Datei angezeigt.
+* Sie müssen die Zertifikatdateien auf das Hostsystem kopieren, auf dem das Plugin ausgeführt wird.
+
+
+.Schritte
+. Wählen Sie *Zertifikatverwaltung*.
+. Wählen Sie auf der Registerkarte * Management* die Option *Import*.
++
+Es wird ein Dialogfeld zum Importieren der Zertifikatdateien geöffnet.
+
+. Klicken Sie auf *Durchsuchen*, um zuerst die Stamm- und Zwischenzertifikatdateien auszuwählen und dann das Serverzertifikat auszuwählen. Wenn Sie die CSR aus einem externen Tool generiert haben, müssen Sie auch die private Schlüsseldatei importieren, die zusammen mit der CSR erstellt wurde.
++
+Die Dateinamen werden im Dialogfeld angezeigt.
+
+. Klicken Sie Auf *Import*.
+
+
+Die Dateien werden hochgeladen und validiert. Die Zertifikatinformationen werden auf der Seite Zertifikatverwaltung angezeigt.

@@ -1,0 +1,55 @@
+---
+permalink: config-linux/iscsi-verify-ip-network-connections-task.html 
+sidebar: sidebar 
+keywords: express linux configuration, software configuration, linux host, E2800, E5700, EF300, EF600, E-Series, eseries 
+summary: 'Sie überprüfen Internet Protocol \(IP\)-Netzwerkverbindungen, indem Sie Ping-Tests verwenden, um sicherzustellen, dass Host und Array kommunizieren können.' 
+---
+= Überprüfen Sie die IP-Netzwerkverbindungen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie überprüfen IP-Netzwerkverbindungen des Internet Protocol (Internet Protocol), indem Sie Ping-Tests verwenden, um sicherzustellen, dass Host und Array kommunizieren können.
+
+.Schritte
+. Führen Sie auf dem Host einen der folgenden Befehle aus, je nachdem, ob Jumbo Frames aktiviert sind:
++
+** Wenn Jumbo Frames nicht aktiviert sind, führen Sie den folgenden Befehl aus:
++
+[listing]
+----
+ping -I <hostIP\> <targetIP\>
+----
+** Wenn Jumbo Frames aktiviert sind, führen Sie den Ping-Befehl mit einer Nutzlastgröße von 8,972 Byte aus. Die kombinierten IP- und ICMP-Header sind 28 Bytes, was, wenn sie der Nutzlast hinzugefügt werden, 9,000 Bytes entspricht. Der -s-Schalter legt den Wert fest `packet size` Bit. Der -d Schalter setzt die Debug-Option. Mit diesen Optionen können Jumbo-Frames mit 9,000 Byte erfolgreich zwischen iSCSI-Initiator und Ziel übertragen werden.
++
+[listing]
+----
+ping -I <hostIP\> -s 8972 -d <targetIP\>
+----
++
+In diesem Beispiel lautet die iSCSI-Ziel-IP-Adresse `192.0.2.8`.
+
++
+[listing]
+----
+#ping -I 192.0.2.100 -s 8972 -d 192.0.2.8
+Pinging 192.0.2.8 with 8972 bytes of data:
+Reply from 192.0.2.8: bytes=8972 time=2ms TTL=64
+Reply from 192.0.2.8: bytes=8972 time=2ms TTL=64
+Reply from 192.0.2.8: bytes=8972 time=2ms TTL=64
+Reply from 192.0.2.8: bytes=8972 time=2ms TTL=64
+Ping statistics for 192.0.2.8:
+  Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+  Minimum = 2ms, Maximum = 2ms, Average = 2ms
+----
+
+
+. Geben Sie A aus `ping` Befehl von der Initiatoradresse jedes Hosts (die IP-Adresse des für iSCSI verwendeten Host-Ethernet-Ports) an jeden Controller-iSCSI-Port. Führen Sie diese Aktion von jedem Host-Server in der Konfiguration aus, wobei die IP-Adressen bei Bedarf geändert werden.
++
+
+NOTE: Wenn der Befehl fehlschlägt (z. B. gibt er zurück `Packet needs to be fragmented but DF set`), überprüfen Sie die MTU-Größe (Jumbo Frame-Unterstützung) für die Ethernet-Schnittstellen auf dem Hostserver, dem Storage Controller und den Switch-Ports.
+
+

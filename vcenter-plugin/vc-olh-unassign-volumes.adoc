@@ -1,0 +1,43 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/vc-olh-unassign-volumes.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
+summary: Wenn Sie keinen I/O-Zugriff mehr auf ein Volume benötigen, können Sie die Zuweisung vom Host oder Host-Cluster aufheben. 
+---
+= Zuweisung von Volumes aufheben
+:hardbreaks:
+:allow-uri-read: 
+:experimental: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Wenn Sie keinen I/O-Zugriff mehr auf ein Volume benötigen, können Sie die Zuweisung vom Host oder Host-Cluster aufheben.
+
+Beachten Sie bei der Zuweisung von Volumes die folgenden Richtlinien:
+
+* Wenn Sie das zuletzt zugewiesene Volume aus einem Host-Cluster entfernen und zudem über Hosts mit spezifischen zugewiesenen Volumes verfügen, stellen Sie sicher, dass Sie diese Zuweisungen entfernen oder verschieben, bevor Sie die letzte Zuweisung für den Host-Cluster entfernen.
+* Wenn ein Host-Cluster, ein Host oder ein Host-Port einem Volume zugewiesen ist, das beim Betriebssystem registriert ist, müssen Sie diese Registrierung löschen, bevor Sie diese Knoten entfernen können.
+
+
+.Schritte
+. Wählen Sie auf der Seite Verwalten das Speicher-Array mit der Hostverbindung aus.
+. Wählen Sie Menü:Bereitstellung [Hosts konfigurieren].
++
+Die Seite Hosts konfigurieren wird geöffnet.
+
+. Wählen Sie den Host oder Host-Cluster aus, den Sie bearbeiten möchten, und klicken Sie dann auf *Zuweisen von Volumes*.
++
+Es wird ein Dialogfeld angezeigt, in dem alle Volumes angezeigt werden, die derzeit zugewiesen sind.
+
+. Aktivieren Sie das Kontrollkästchen neben jedem Volume, das Sie aufheben möchten, oder aktivieren Sie das Kontrollkästchen in der Tabellenüberschrift, um alle Volumes auszuwählen.
+. Klicken Sie Auf *Zuweisung Aufheben*.
+
+
+.Ergebnisse
+* Die nicht zugewiesenen Volumes sind für eine neue Zuweisung verfügbar.
+* Bis die Änderungen auf dem Host konfiguriert sind, wird das Volume weiterhin vom Host-Betriebssystem erkannt.
+

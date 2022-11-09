@@ -1,0 +1,145 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/vc-olh-pools-and-volume-group-overview.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
+summary: 'Um Speicher bereitzustellen, erstellen Sie entweder einen Pool oder eine Volume-Gruppe, die die Festplatten (HDD) oder Solid State Disk (SSD) Laufwerke enthalten, die Sie in Ihrem Speicher-Array verwenden möchten.' 
+---
+= Pools und Volume-Gruppen im Überblick
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Um Speicher im Speicher-Plugin für vCenter bereitzustellen, erstellen Sie entweder einen Pool oder eine Volume-Gruppe, die die Festplatten (HDD) oder Solid State Disk (SSD) Laufwerke enthalten, die Sie in Ihrem Speicher-Array verwenden möchten.
+
+
+
+== Bereitstellung
+
+Physische Hardware wird in logischen Komponenten bereitgestellt, sodass Daten organisiert und einfach abgerufen werden können. Es werden zwei Arten von Gruppierungen unterstützt:
+
+* Pools
+* Volume-Gruppen
+
+
+Pools und Volume-Gruppen sind die obersten Storage-Einheiten in einem Storage Array: Sie teilen die Kapazität von Laufwerken in einfach zu verwaltende Abteilungen. Innerhalb dieser logischen Unterteilungen sind die einzelnen Volumes oder LUNs, in denen die Daten gespeichert werden.
+
+Wenn ein Storage-System implementiert wird, müssen die verschiedenen Hosts über die verfügbare Laufwerkskapazität verfügen:
+
+* Erstellen von Pools oder Volume-Gruppen mit ausreichender Kapazität
+* Fügen Sie die Anzahl der erforderlichen Laufwerke hinzu, um den Performance-Anforderungen des Pools oder der Volume-Gruppe zu entsprechen
+* Wählen Sie die gewünschte RAID-Schutzstufe (bei Nutzung der Volume-Gruppen) aus, um den spezifischen geschäftlichen Anforderungen gerecht zu werden
+
+
+Es können zwar Pools oder Volume-Gruppen auf demselben Speichersystem vorhanden sein, ein Laufwerk kann jedoch nicht mehr als ein Pool oder eine Volume-Gruppe umfassen. Volumes, die Hosts für I/O-Vorgänge zur Verfügung gestellt werden, werden dann unter Verwendung des Speicherplatzes im Pool oder der Volume-Gruppe erstellt.
+
+
+
+== Pools
+
+Pools wurden entwickelt, um physische Festplatten in einem großen Storage-Bereich zu aggregieren und bieten dafür besseren RAID-Schutz. Ein Pool erstellt viele virtuelle RAID-Sätze von der Gesamtzahl der Laufwerke, die dem Pool zugewiesen sind. Dabei werden die Daten gleichmäßig auf alle teilnehmenden Laufwerke verteilt. Wenn ein Laufwerk verloren geht oder hinzugefügt wird, gleicht das System die Daten dynamisch über alle aktiven Laufwerke aus.
+
+Pools funktionieren als weitere RAID-Ebene und virtualisieren die zugrunde liegende RAID-Architektur, um die Performance und Flexibilität bei Aufgaben wie Neuaufbau, Laufwerkserweiterung und Handhabung von Laufwerksausfällen zu optimieren. Das System legt den RAID-Level in einer 8+2-Konfiguration automatisch auf 6 fest (acht Datenfestplatten plus zwei Paritätslaufwerke).
+
+
+
+=== Abstimmung des Laufwerks
+
+Es besteht die Möglichkeit, entweder HDDs oder SSDs zur Nutzung in Pools zur Verfügung zu stellen. Allerdings müssen wie bei Volume-Gruppen alle Laufwerke im Pool dieselbe Technologie verwenden. Die Controller wählen automatisch aus, welche Laufwerke enthalten sollen. Sie müssen daher sicherstellen, dass Sie über eine ausreichende Anzahl an Laufwerken für die von Ihnen gewählte Technologie verfügen.
+
+
+
+=== Verwalten ausgefallener Laufwerke
+
+Pools haben eine minimale Kapazität von 11 Laufwerken; allerdings ist die Kapazität eines Laufwerks im Wert von einer Ersatzkapazität bei einem Laufwerksausfall reserviert. Diese freie Kapazität wird als „Erhaltungskapazität“ bezeichnet.
+
+Wenn Pools erstellt werden, wird eine bestimmte Menge an Kapazität für den Notfall-Einsatz erhalten. Diese Kapazität wird in Form einer Anzahl von Laufwerken ausgedrückt, die tatsächliche Implementierung wird jedoch über alle Festplatten-Pools hinweg verteilt. Die vorbehaltenen Kapazitätsmengen basieren auf der Anzahl der Laufwerke im Pool.
+
+Nach der Erstellung des Pools können Sie den Wert der Erhaltungskapazität auf mehr oder weniger Kapazität ändern oder sogar auf keine Erhaltungskapazität einstellen (Wert 0 Laufwerk). Die maximale Kapazität, die erhalten bleiben kann (ausgedrückt als Anzahl an Laufwerken), ist 10, die verfügbare Kapazität kann jedoch aufgrund der Gesamtzahl der Laufwerke im Pool kleiner sein.
+
+
+
+== Volume-Gruppen
+
+Volume-Gruppen definieren, wie Kapazität im Storage-System Volumes zugewiesen wird. Festplattenlaufwerke sind in RAID-Gruppen eingeteilt und Volumes befinden sich über die Laufwerke in einer RAID-Gruppe hinweg. Aus diesem Grund identifizieren die Konfigurationseinstellungen der Volume-Gruppe, welche Laufwerke Teil der Gruppe sind und welches RAID-Level verwendet wird.
+
+Wenn Sie eine Volume-Gruppe erstellen, wählen Controller automatisch die Laufwerke aus, die in die Gruppe aufgenommen werden sollen. Sie müssen manuell die RAID-Ebene für die Gruppe auswählen. Die Kapazität der Volume-Gruppe entspricht der Gesamtzahl der ausgewählten Laufwerke, multipliziert mit ihrer Kapazität.
+
+
+
+=== Abstimmung des Laufwerks
+
+Für die Größe und Performance müssen die Laufwerke in der Volume-Gruppe übereinstimmen. Wenn in der Volume-Gruppe kleinere und größere Laufwerke vorhanden sind, werden alle Laufwerke als die kleinste Kapazitätsgröße erkannt. Wenn es langsamere und schnellere Laufwerke in der Volume-Gruppe gibt, werden alle Laufwerke mit der langsamsten Geschwindigkeit erkannt. Diese Faktoren wirken sich auf die Performance und die Gesamtkapazität des Storage-Systems aus.
+
+Es ist nicht möglich, unterschiedliche Laufwerktechnologien (HDD- und SSD-Laufwerke) miteinander zu kombinieren. RAID 3, 5 und 6 sind auf maximal 30 Laufwerke begrenzt. RAID 1 und RAID 10 verwenden eine Spiegelung, daher müssen diese Volume-Gruppen eine gleichmäßige Anzahl an Festplatten aufweisen.
+
+
+
+=== Verwalten ausgefallener Laufwerke
+
+Volume-Gruppen verwenden Hot-Spare-Laufwerke als Standby, falls ein Laufwerk in RAID 1/10-, RAID 3-, RAID 5- oder RAID 6-Volumes einer Volume-Gruppe ausfällt. Ein Hot-Spare-Laufwerk enthält keine Daten und fügt Ihrem Speicher-Array eine weitere Ebene von Redundanz hinzu.
+
+Wenn ein Laufwerk im Speicher-Array ausfällt, wird das Hot-Spare-Laufwerk automatisch durch das ausgefallene Laufwerk ersetzt, ohne dass ein physischer Austausch erforderlich ist. Wenn das Hot-Spare-Laufwerk verfügbar ist, wenn ein Laufwerk ausfällt, verwendet der Controller Redundanzdaten, um die Daten von dem ausgefallenen Laufwerk auf dem Hot-Spare-Laufwerk zu rekonstruieren.
+
+
+
+== Entscheiden Sie, ob Pools oder Volume-Gruppen verwendet werden sollen
+
+
+
+=== Wählen Sie einen Pool aus
+
+* Wenn Sie schnellere Laufwerk-Rebuilds und eine vereinfachte Storage-Administration benötigen, und/oder einen hochzufälligen Workload haben.
+* Wenn Sie die Daten für jedes Volume zufällig über eine Gruppe von Laufwerken verteilen möchten, die den Pool umfassen.Sie können das RAID-Level von Pools oder die Volumes in den Pools nicht festlegen oder ändern. Pools verwenden RAID Level 6.
+
+
+
+
+=== Wählen Sie eine Volume-Gruppe aus
+
+* Wenn Sie die maximale Netzwerkbandbreite des Systems benötigen, die Möglichkeit zur Anpassung von Storage-Einstellungen und einen stark sequenziellen Workload benötigen.
+* Wenn Sie die Daten basierend auf RAID-Level über die Laufwerke verteilen möchten. Sie können den RAID-Level beim Erstellen der Volume-Gruppe angeben.
+* Wenn Sie die Daten für jedes Volume sequenziell über die Laufwerke schreiben möchten, die die Volume-Gruppe umfassen.
+
+
+
+NOTE: Da Pools mit Volume-Gruppen nebeneinander bestehen können, kann ein Storage-Array sowohl Pools als auch Volume-Gruppen enthalten.
+
+
+
+== Automatische Erstellung von Pools gegenüber manueller Poolanlage
+
+Je nach Ihrer Storage-Konfiguration können Sie es dem System ermöglichen, automatisch Pools zu erstellen, oder Sie können sie manuell selbst erstellen. Ein Pool ist eine Gruppe von logisch gruppierten Laufwerken.
+
+Bevor Sie Pools erstellen und verwalten, prüfen Sie die folgenden Abschnitte, wie Pools automatisch erstellt werden und wann Sie sie möglicherweise manuell erstellen müssen.
+
+
+
+=== Automatische Erstellung
+
+Wenn das System nicht zugewiesene Kapazitäten im Speicher-Array erkennt, wird die automatische Poolerstellung initiiert, wenn das System nicht zugewiesene Kapazitäten in einem Speicher-Array erkennt. Sie werden automatisch aufgefordert, einen oder mehrere Pools zu erstellen, oder die nicht zugewiesene Kapazität einem vorhandenen oder beiden Pool hinzuzufügen.
+
+Automatische Poolerstellung tritt auf, wenn eine dieser Bedingungen zutrifft:
+
+* Pools sind nicht im Speicher-Array vorhanden, und es gibt genügend ähnliche Laufwerke, um einen neuen Pool zu erstellen.
+* Neue Laufwerke werden einem Storage-Array hinzugefügt, das mindestens einen Pool hat.jedes Laufwerk in einem Pool muss vom gleichen Laufwerkstyp (HDD oder SSD) sein und eine ähnliche Kapazität haben. Sie werden vom System aufgefordert, die folgenden Aufgaben auszuführen:
+* Erstellen Sie einen einzelnen Pool, wenn eine ausreichende Anzahl von Laufwerken dieser Typen vorhanden ist.
+* Erstellen Sie mehrere Pools, wenn die nicht zugewiesene Kapazität aus verschiedenen Laufwerkstypen besteht.
+* Fügen Sie die Laufwerke zum vorhandenen Pool hinzu, wenn bereits ein Pool im Speicher-Array definiert ist, und fügen Sie dem Pool neue Laufwerke desselben Laufwerkstyps hinzu.
+* Fügen Sie die Laufwerke desselben Laufwerkstyps zum vorhandenen Pool hinzu. Erstellen Sie dann mithilfe der anderen Laufwerktypen verschiedene Pools, wenn die neuen Laufwerke unterschiedliche Laufwerkstypen haben.
+
+
+
+
+=== Manuelle Erstellung
+
+Sie möchten möglicherweise einen Pool manuell erstellen, wenn die automatische Erstellung die beste Konfiguration nicht bestimmen kann. Diese Situation kann aus einem der folgenden Gründe auftreten:
+
+* Die neuen Laufwerke können potenziell mehr als einem Pool hinzugefügt werden.
+* Mindestens eine der neuen Poolkandidaten kann einen Shelf-Verlust-Schutz oder Schubladenschutz verwenden.
+* Ein oder mehrere der aktuellen Poolkandidaten können ihren Schutz vor Shelf-Verlust oder den Schutz vor Schubladenverlust nicht beibehalten.möglicherweise möchten Sie auch einen Pool manuell erstellen, wenn Sie mehrere Anwendungen auf Ihrem Speicher-Array haben und nicht möchten, dass sie mit denselben Laufwerkressourcen konkurrieren. In diesem Fall könnten Sie erwägen, manuell einen kleineren Pool für eine oder mehrere Anwendungen zu erstellen. Sie können nur ein oder zwei Volumes zuweisen, statt den Workload einem großen Pool mit vielen Volumes zuzuweisen, über die die Daten verteilt werden sollen. Durch die manuelle Erstellung eines separaten Pools, der dem Workload einer bestimmten Applikation zugewiesen ist, kann die Performance von Storage-Array-Operationen mit weniger Konflikten schneller erfolgen.
+

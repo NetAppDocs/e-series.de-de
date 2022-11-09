@@ -1,0 +1,54 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/vc-olh-delete-volume.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
+summary: Löschen Sie ein oder mehrere Volumes, um die freie Kapazität eines Pools oder einer Volume-Gruppe zu erhöhen. 
+---
+= Volume löschen
+:hardbreaks:
+:allow-uri-read: 
+:experimental: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Sie können ein oder mehrere Volumes löschen, um die freie Kapazität eines Pools oder einer Volume-Gruppe zu erhöhen.
+
+Stellen Sie bei den zu löschenden Volumes Folgendes sicher:
+
+* Alle Daten werden gesichert.
+* Alle Eingänge/Ausgänge (E/A) werden angehalten.
+* Alle Geräte und Dateisysteme werden abgehängt.
+
+
+Normalerweise löschen Sie Volumes, wenn die Volumes mit falschen Parametern oder Kapazität erstellt wurden oder die Anforderungen der Storage-Konfiguration nicht mehr erfüllt werden. Durch das Löschen eines Volumes wird die freie Kapazität im Pool oder der Volume-Gruppe erhöht.
+
+
+CAUTION: Das Löschen eines Volumes verursacht den Verlust aller Daten auf diesen Volumes.
+
+Beachten Sie, dass Sie * ein Volume mit einer der folgenden Bedingungen nicht löschen können:
+
+* Das Volume wird initialisiert.
+* Das Volume wird wiederhergestellt.
+* Das Volume ist Teil einer Volume-Gruppe, die ein Laufwerk enthält, das einen Copyback-Vorgang durchläuft.
+* Das Volume wird in einem Änderungsvorgang wie z. B. einer Änderung der Segmentgröße ausgeführt, sofern sich das Volume jetzt nicht mehr im Status „ausgefallen“ befindet.
+* Das Volume hält jede Art von persistenter Reservierung.
+* Das Volume ist ein Quell-Volume oder ein Ziel-Volume in einem Copy-Volume mit dem Status „Ausstehend“, „in Bearbeitung“ oder „fehlgeschlagen“.
+
+
+
+NOTE: Wenn ein Volume eine bestimmte Größe überschreitet (derzeit 128 TB), wird der Löschvorgang im Hintergrund durchgeführt, wobei der freigegebene Speicherplatz möglicherweise nicht sofort verfügbar ist.
+
+.Schritte
+. Wählen Sie auf der Seite *Verwalten* das Speicher-Array aus, das die Volumes enthält, die Sie löschen möchten.
+. Wählen Sie MENU:Provisioning[Volumes verwalten].
+. Klicken Sie Auf *Löschen*.
++
+Das Dialogfeld Volumes löschen wird angezeigt.
+
+. Wählen Sie ein oder mehrere Volumes aus, die Sie löschen möchten, und bestätigen Sie anschließend, dass Sie den Vorgang ausführen möchten.
+. Klicken Sie Auf *Löschen*.
+

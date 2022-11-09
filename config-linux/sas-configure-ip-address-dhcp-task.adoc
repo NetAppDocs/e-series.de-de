@@ -1,0 +1,48 @@
+---
+permalink: config-linux/sas-configure-ip-address-dhcp-task.html 
+sidebar: sidebar 
+keywords: IP address, DHCP, express linux configuration, software configuration, linux host, E2800, E5700, EF300, EF600, E-Series, eseries 
+summary: 'Verwenden Sie das dynamische Host Configuration Protocol \ (DHCP\), um IP-Adressen bereitzustellen.' 
+---
+= Konfigurieren Sie IP-Adressen mit DHCP
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Um die Kommunikation zwischen Management Station und Speicher-Array zu konfigurieren, verwenden Sie DHCP (Dynamic Host Configuration Protocol), um IP-Adressen bereitzustellen.
+
+Ein DHCP-Server wird in demselben Subnetz wie die Storage Management-Ports installiert und konfiguriert.
+
+Jedes Storage-Array verfügt entweder über einen Controller (Simplexkonfiguration) oder zwei Controller (Duplexkonfiguration) und jeder Controller über zwei Storage-Management-Ports. Jedem Management-Port wird eine IP-Adresse zugewiesen.
+
+Die folgenden Anweisungen beziehen sich auf ein Speicher-Array mit zwei Controllern (eine Duplexkonfiguration).
+
+.Schritte
+. Falls noch nicht geschehen, verbinden Sie ein Ethernet-Kabel mit der Management Station und mit Management-Port 1 an jedem Controller (A und B).
++
+Der DHCP-Server weist Port 1 jedes Controllers eine IP-Adresse zu.
+
++
+
+NOTE: Verwenden Sie nicht Management Port 2 auf beiden Controllern. Port 2 ist ausschließlich zur Verwendung durch technische Mitarbeiter von NetApp vorgesehen.
+
++
+
+NOTE: Wenn Sie das Ethernet-Kabel trennen und wieder anschließen oder wenn das Storage-Array aus- und wieder eingeschaltet wird, weist DHCP IP-Adressen erneut zu. Dieser Prozess läuft bis zum Konfigurieren statischer IP-Adressen. Es wird empfohlen, das Kabel nicht zu trennen oder das Array aus- und wieder anzuschließen.
+
++
+Wenn das Speicher-Array keine DHCP-zugewiesenen IP-Adressen innerhalb von 30 Sekunden abrufen kann, werden die folgenden Standard-IP-Adressen festgelegt:
+
++
+** Controller A, Port 1: 169.254.128.101
+** Controller B, Port 1: 169.254.128.102
+** Subnetzmaske: 255.255.0.0
+
+
+. Suchen Sie das MAC-Adressenetikett auf der Rückseite jedes Controllers und geben Sie dann Ihrem Netzwerkadministrator die MAC-Adresse für Port 1 jedes Controllers an.
++
+Der Netzwerkadministrator benötigt die MAC-Adressen, um die IP-Adresse für jeden Controller zu bestimmen. Sie benötigen die IP-Adressen, um über Ihren Browser eine Verbindung mit Ihrem Speichersystem herzustellen.
+
+

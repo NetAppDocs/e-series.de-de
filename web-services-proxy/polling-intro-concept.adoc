@@ -1,0 +1,100 @@
+---
+permalink: web-services-proxy/polling-intro-concept.html 
+sidebar: sidebar 
+keywords: polling Web Services Proxy, WSP statistics, poll WSP, 
+summary: Sie können die automatische Abfrage für alle Festplatten- und Volume-Statistiken auf ermittelte Speichersysteme konfigurieren. 
+---
+= Verwalten der automatischen Abfrage für Web Services-Proxy-Statistiken
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können die automatische Abfrage für alle Festplatten- und Volume-Statistiken auf ermittelte Speichersysteme konfigurieren.
+
+
+
+== Übersicht über die Statistiken
+
+Statistiken enthalten Informationen zu den Erfassungsraten und der Performance der Storage-Systeme.
+
+Der Web Services Proxy bietet Zugriff auf die folgenden Arten von Statistiken:
+
+* Rohstatistik -- Zählwerte für Datenpunkte zum Zeitpunkt der Datenerfassung. Rohdaten können für Lesevorgänge insgesamt oder Schreibvorgänge verwendet werden.
+* Analysierte Statistik – berechnete Informationen für ein Intervall Beispiele analysierte Statistiken sind Lese-Input/Output-Operationen (IOPS) pro Sekunde oder Schreibdurchsatz.
+
+
+Rohdaten sind linear, da sie in der Regel mindestens zwei gesammelte Datenpunkte benötigen, um daraus nutzbare Daten abzuleiten. Die analysierten Statistiken sind eine Ableitung der Rohstatistik, die wichtige Kennzahlen liefert. Viele Werte, die sich aus den Rohstatistiken ergeben können, werden in den analysierten Statistiken für Ihren Komfort in einem nutzbaren Point-in-Time-Format angezeigt.
+
+Sie können RAW-Statistiken abrufen, unabhängig davon, ob die automatische Abfrage aktiviert ist oder nicht. Sie können die hinzufügen `usecache=true` Abfragezeichenfolge am Ende der URL, um zwischengespeicherte Statistiken aus der letzten Umfrage abzurufen. Die Verwendung von gecachten Ergebnissen führt zu einer deutlichen Steigerung der Performance beim Abrufen von Statistiken. Mehrere Anrufe mit einer Rate von mindestens oder gleich dem konfigurierten Abrufintervall Cache werden jedoch dieselben Daten abgerufen.
+
+
+
+== Statistikfunktion
+
+Der Web Services Proxy bietet API-Endpunkte, die den Abruf von RAW- und analysierten Controller- und Schnittstellenstatistiken von unterstützten Hardware-Modellen und Softwareversionen ermöglichen.
+
+
+
+=== RAW Statistics APIs
+
+* `+/storage-systems/{system-id}/controller-statistics+`
+* `+/storage-systems/{system-id}/drive-statistics/{optional list of disk ids}+`
+* `+/storage-systems/{system-id}/interface-statistics/{optional list of interface ids}+`
+* `+/storage-systems/{system-id}/volume-statistics/{optional list of volume ids}+`
+
+
+
+
+=== Analysierte Statistik-APIs
+
+* `+/storage-systems/{id}/analysed-controller-statistics/+`
+* `+/storage-systems/{id}/analysed-drive-statistics/{optional list of disk ids}+`
+* `+/storage-systems/{id}/analysed-interface-statistics/{optional list of interface ids}+`
+* `+/storage-systems/{id}/analysed-volume-statistics/{optional list of volume ids}+`
+
+
+Diese URLs rufen die analysierten Statistiken aus der letzten Umfrage ab und sind nur verfügbar, wenn die Abfrage aktiviert ist. Diese URLs umfassen die folgenden Daten für die Input-Ausgabe:
+
+* Operationen pro Sekunde
+* Durchsatz in Megabyte pro Sekunde
+* Antwortzeiten in Millisekunden
+
+
+Die Berechnungen basieren auf den Unterschieden zwischen statistischen Abfrageinterationen, bei denen es sich um die häufigsten Kennzahlen zur Storage-Performance handelt. Diese Statistiken sind den nicht analysierten Statistiken vorzuziehen.
+
+
+NOTE: Wenn das System startet, gibt es keine vorherige Statistiksammlung zur Berechnung der verschiedenen Metriken. Die analysierten Statistiken benötigen also mindestens einen Abfragezyklus nach dem Start, um die Daten zurückzugeben. Wenn die kumulativen Zähler zurückgesetzt werden, enthält der nächste Abfragezyklus zudem unvorhersehbare Zahlen für die Daten.
+
+
+
+== Konfigurieren von Abfrageintervallen
+
+Um Abfrageintervalle zu konfigurieren, ändern Sie die Datei wsconfig.xml, um ein Abrufintervall in Sekunden festzulegen.
+
+
+NOTE: Da die Statistiken im Arbeitsspeicher zwischengespeichert werden, kann der Speicherverbrauch für jedes Storage-System möglicherweise um ca. 1.5 MB höher liegen.
+
+.Bevor Sie beginnen
+* Die Speichersysteme müssen vom Proxy erkannt werden.
+
+
+.Schritte
+. Öffnen Sie die Datei wsconfig.xml unter:
++
+** (Windows) -- C:\Program Files\NetApp\SANtricity Web Services Proxy
+** (Linux) -- /opt/netapp/santricity_Web_Services_Proxy
+
+
+. Fügen Sie die folgende Zeile in das hinzu `<env-entries>` Tag, in dem `n` Ist die Anzahl der Sekunden für das Intervall zwischen Abfragungsanträgen:
++
+[listing]
+----
+<env key="stats.poll.interval">n</env>
+----
++
+Wenn beispielsweise 60 eingegeben wird, beginnt die Abfrage in Intervallen von 60 Sekunden. Das heißt, das System fordert die Abfrage an, 60 Sekunden nach Abschluss des vorherigen Abfragzeitraums zu starten (unabhängig von der Dauer des vorherigen Abfrageperiode). Alle Statistiken werden mit dem genauen Zeitpunkt, zu dem sie abgerufen wurden, zeitlich gestempelt. Das System verwendet den Zeitstempel oder die Zeitdifferenz, auf der die 60-Sekunden-Berechnung basiert.
+
+. Speichern Sie die Datei.
+

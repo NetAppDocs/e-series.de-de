@@ -1,0 +1,56 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/vc-olh-consolidate-free-capacity-for-a-volume-group.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
+summary: Verwenden Sie die Option freie Kapazität konsolidieren, um vorhandene freie Erweiterungen auf einer ausgewählten Volume-Gruppe zu konsolidieren. Durch diese Aktion können Sie aus der maximalen freien Kapazität in einer Volume-Gruppe zusätzliche Volumes erstellen. 
+---
+= Konsolidieren Sie freie Kapazitäten für eine Volume-Gruppe
+:hardbreaks:
+:allow-uri-read: 
+:experimental: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Verwenden Sie die Option freie Kapazität konsolidieren, um vorhandene freie Erweiterungen auf einer ausgewählten Volume-Gruppe zu konsolidieren. Durch diese Aktion können Sie aus der maximalen freien Kapazität in einer Volume-Gruppe zusätzliche Volumes erstellen.
+
+.Bevor Sie beginnen
+* Die Volume-Gruppe muss mindestens einen freien Kapazitätsbereich enthalten.
+* Alle Volumes in der Volume-Gruppe müssen den Status „Online“ und „optimal“ aufweisen.
+* Volume-Änderungsvorgänge dürfen nicht ausgeführt werden, z. B. das Ändern der Segmentgröße eines Volumes.
+
+
+Sie können den Vorgang nach dem Start nicht mehr abbrechen. Der Zugriff auf Ihre Daten bleibt während des Konsolidierungsvorgangs erhalten.
+
+Sie können das Dialogfeld Freie Kapazität konsolidieren mit einer der folgenden Methoden starten:
+
+* Wenn für eine Volume-Gruppe mindestens ein freier Kapazitätsbereich erkannt wird, erscheint die Empfehlung zur Konsolidierung freier Kapazität auf der Startseite im Benachrichtigungsbereich. Klicken Sie auf den Link *freie Kapazität konsolidieren*, um das Dialogfeld zu starten.
+* Sie können das Dialogfeld „freie Kapazität konsolidieren“ auch auf der Seite Pools & Volume Groups starten, wie in der folgenden Aufgabe beschrieben.
+
+
+.Mehr über freie Kapazitätsbereiche
+====
+Ein freier Kapazitätsbereich stellt die freie Kapazität dar, die zum Löschen eines Volumes oder zum Nichtnutzen der gesamten verfügbaren freien Kapazität während der Volume-Erstellung führen kann. Wenn Sie ein Volume in einer Volume-Gruppe mit einem oder mehreren freien Kapazitätsbereichen erstellen, ist die Kapazität des Volumes auf den größten freien Kapazitätsbereich in dieser Volume-Gruppe beschränkt. Wenn beispielsweise eine Volume-Gruppe insgesamt 15 gib freie Kapazität besitzt und der größte Bereich der freien Kapazität 10 gib beträgt, beträgt das größte Volume, das Sie erstellen können, 10 gib.
+
+Sie konsolidieren freie Kapazitäten auf einer Volume-Gruppe, um die Schreib-Performance zu verbessern. Die freie Kapazität Ihrer Volume-Gruppe wird im Laufe der Zeit fragmentiert, wenn der Host Dateien schreibt, ändert und löscht. Schließlich befindet sich die verfügbare Kapazität nicht in einem einzigen zusammenhängenden Block, sondern wird in kleinen Fragmenten über die Volume-Gruppe verteilt. Dies führt zu einer weiteren Dateifragmentierung, da der Host neue Dateien als Fragmente schreiben muss, um sie in die verfügbaren Bereiche freier Cluster zu passen.
+
+Durch die Konsolidierung der freien Kapazität einer ausgewählten Volume-Gruppe wird eine verbesserte Performance des Filesystems erzielt, wenn der Host neue Dateien schreibt. Der Konsolidierungsvorgang wird auch dazu beitragen, dass neue Dateien in Zukunft nicht fragmentiert werden.
+
+====
+.Schritte
+. Wählen Sie auf der Seite Verwalten das Speicher-Array mit der Volume-Gruppe aus.
+. Wählen Sie Menü:Provisioning[Pools und Volume-Gruppen konfigurieren].
+. Wählen Sie die Volume-Gruppe mit freier Kapazität, die Sie konsolidieren möchten, und wählen Sie dann Menü:Sonstige Aufgaben[freie Kapazität der Volume-Gruppe konsolidieren].
++
+Das Dialogfeld Freie Kapazität konsolidieren wird angezeigt.
+
+. Typ `consolidate` Um zu bestätigen, dass Sie diesen Vorgang ausführen möchten.
+. Klicken Sie Auf *Konsolidieren*.
+
+
+Das System beginnt die Konsolidierung (Defragmentierung) der freien Kapazitätsbereiche der Volume-Gruppe in eine zusammenhängende Menge für nachfolgende Speicherkonfigurationsaufgaben.
+
+Wählen Sie in der Navigationsleiste *Operationen* aus, um den Fortschritt des Vorgangs „Freie Kapazität konsolidieren“ anzuzeigen. Dieser Vorgang kann langwierig sein und die System-Performance beeinträchtigen.

@@ -1,0 +1,26 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/vc-olh-delete-storage-array-group.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
+summary: Entfernen Sie eine oder mehrere Speicher-Array-Gruppen, die nicht mehr benötigt werden. 
+---
+= Speicherarray-Gruppe löschen
+:hardbreaks:
+:allow-uri-read: 
+:experimental: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Sie können eine oder mehrere Speicherarraygruppen entfernen, die nicht mehr benötigt werden.
+
+Bei diesem Vorgang wird nur die Speicherarraygruppe gelöscht. Die der gelöschten Gruppe zugeordneten Speicher-Arrays bleiben über die Ansicht Alle verwalten oder eine andere Gruppe, der sie zugeordnet ist, zugänglich.
+
+.Schritte
+. Wählen Sie auf der Seite Verwalten die Option MENU:Gruppen verwalten[Speicherarray-Gruppe löschen].
+. Wählen Sie eine oder mehrere Speicherarray-Gruppen aus, die Sie löschen möchten.
+. Klicken Sie Auf *Löschen*.
+

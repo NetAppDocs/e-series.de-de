@@ -1,0 +1,168 @@
+---
+permalink: upgrade-controllers/overview-requirements-concept.html 
+sidebar: sidebar 
+keywords: E-Series, eseries, E2800, E5700, EF300, EF600, upgrade controller, upgrading controller, upgrade controller requirements, upgrade compatibility, upgrade SAS shelf, upgrade SAS shelves, upgrade SAS enclosures, SAS-2 to SAS-3 
+summary: Überprüfen Sie die Anforderungen für Upgrade und Austausch von E-Series Controllern. 
+---
+= Upgrade-Überlegungen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Lesen Sie vor dem Controller-Upgrade die folgenden Überlegungen durch.
+
+
+
+== Hardware- und Firmware-Anforderungen erfüllen
+
+* *Duplex- und Simplex-Controller-Upgrades*
++
+Bei Duplex-Controller-Laufwerkseinschüben ersetzen Sie beide Controller. Bei simplex-Controller-Laufwerkseinschüben ersetzen Sie den einen Controller. In beiden Fällen müssen Sie das Controller-Laufwerksfach ausschalten Daher können Sie erst nach erfolgreichem Abschluss des Austauschs auf Daten auf dem Speicher-Array zugreifen.
+
+* *Fächer und Regale*
++
+Storage-Arrays mit einem E2800 oder E5700 Controller Shelf werden normalerweise über die Benutzeroberfläche von SANtricity System Manager gemanagt. Möglicherweise managen Sie auch E2800 oder E5700 Controller-Shelfs über die Schnittstelle von SANtricity Storage Manager. Alle anderen in diesem Verfahren referenzierten Controller-Laufwerksfächer verwenden SANtricity Storage Manager.
+
+* *Controller-Batterien*
++
+Ein neuer Controller wird ohne installierte Batterie geliefert. Wenn möglich, sollten Sie den Akku aus dem alten Controller entfernen und dann den Akku in den neuen Controller einsetzen. Bei einigen Controller-Upgrades ist der Akku des alten Controllers jedoch nicht mit dem neuen Controller kompatibel. In diesen Fällen müssen Sie einen Akku zusammen mit Ihrem neuen Controller bestellen und den Akku vor Beginn dieser Aufgaben zur Verfügung haben.
+
+* * Lieferantenidentifikation*
++
+Bei einigen Controller-Upgrades ändert sich die Anbieter-ID bei SCSI-Anfragedaten von `LSI` Bis `NETAPP`. Wenn sich die Anbieter-ID von ändert `LSI` Bis `NETAPP`, Zusätzliche Schritte sind auf den Windows-, VMware- und AIX-Betriebssystemen erforderlich, um Geräte zurückzugewinnen. Die Schritte für diese Betriebssysteme sind in diesem Upgrade-Verfahren enthalten.
+
+* *Synchronous Mirroring und Asynchronous Mirroring*
++
+Wenn Ihr Storage-Array an synchroner Spiegelung teilnimmt, werden nur iSCSI- oder Fibre Channel-Verbindungen zwischen dem primären Standort und dem Remote-Standort unterstützt. Wenn die Konfiguration der Host Interface Card (HIC) in Ihren neuen Controllern keine iSCSI- oder Fibre Channel-Verbindungen umfasst, wird Synchronous Mirroring nicht unterstützt.
+
++
+Für das asynchrone Spiegeln können auf dem lokalen Storage-Array und dem Remote-Storage-Array unterschiedliche Firmware-Versionen ausgeführt werden. Die unterstützte minimale Firmware-Version ist die SANtricity-Firmware-Version 7.84.
+
+* *Speicherobjektgrenzen*
++
+Wenn Sie Ihre Controller von 5x00-Modellen zu 2x00-Modellen ändern, unterstützt Ihre neue Speicherarray-Konfiguration eine geringere Anzahl von Storage-Objekten (z. B. Volumes) in der Storage-Managementsoftware als Ihre alte Konfiguration. Sie müssen sicherstellen, dass Ihre alte Konfiguration die Storage-Objektgrenzen nicht überschreitet. Siehe http://hwu.netapp.com/home.aspx["Hardware Universe"^] Finden Sie weitere Informationen.
+
+
+
+
+
+== Upgrade auf neuere Modelle
+
+Wenn Sie die Controller austauschen, um ein Upgrade auf ein neues Modell durchzuführen, sollten Sie beachten, dass Ihr aktuelles Storage Array möglicherweise über Premiumfunktionen verfügt, die das neue Modell nicht unterstützen kann. Beispielsweise unterstützen E2700 Controller nicht die ältere Snapshot Premium-Funktion.
+
+Wenn Sie E2600 Controller durch E2700 Controller ersetzen und Ihr Storage Array die ältere Snapshot Funktion nutzen würde, müssen Sie diese Funktion deaktivieren und alle mit dieser Funktion verknüpften Volumes (Snapshots, Repositorys) löschen oder konvertieren, bevor Sie die Controller ersetzen. Sie können ältere Snapshots in die aktualisierte Snapshot-Funktion konvertieren. Bevor Sie ein Controller-Laufwerksfach aktualisieren, sollten Sie alle Premium-Funktionen deaktivieren, die auf Ihrem Storage Array verwendet werden, die auf den neuen Controllern nicht unterstützt werden.
+
+
+
+== Upgrade-Kompatibilität
+
+[role="lead"]
+Unterstützte Upgrade-Pfade für jedes Storage-Array-Modell prüfen.
+
+
+
+=== Von E2x00 bis E2x00
+
+* *Akku*: Die alte Batterie wieder verwenden.
+* *Anbieter-ID*: Zusätzliche Schritte erforderlich.
+* *Funktionsunterstützung*: Ältere Snapshots werden auf der E2700 nicht unterstützt.
+* *SAS-2 Shelfs*: E2800 Controller dürfen nicht in SAS-2 Shelfs platziert werden.
+
+
+
+
+=== Von E2x00 bis E5X00
+
+* *Akku*: Bestellen Sie einen neuen Akku.
+* *Anbieter-ID*: Beim Upgrade von E2600 auf E5500 oder E5600 oder bei einem Upgrade von E2700 auf E5400 sind zusätzliche Schritte erforderlich.
+* *Funktionsunterstützung*:
++
+** Ältere Snapshots werden auf der E5500 oder der E5600 nicht unterstützt.
+** Ältere Remote Volume-Spiegelung (RVM) wird auf dem E5500 oder E5600 nicht mit iSCSI-HICs unterstützt.
+** Data Assurance wird von E5500 oder E5600 mit iSCSI-HICs nicht unterstützt.
+** E5700 Controller dürfen nicht in SAS-2 Shelfs platziert werden.
+
+
+* *SAS-3 Shelfs*: E5400, E5500 und E5600 Controller dürfen nicht in SAS-3 Shelfs platziert werden.
+
+
+
+
+=== Von E5X00 bis E2x00
+
+* *Akku*: Bestellen Sie einen neuen Akku.
+* *Anbieter-ID*: Für ein Upgrade von E5500 oder E5600 auf E2600 oder ein Upgrade von E5400 auf E2700 sind zusätzliche Schritte erforderlich.
+* *Funktionsunterstützung*: Ältere Snapshots werden auf der E2700 nicht unterstützt.
+* *SAS-3 Shelfs*: E5400, E5500 und E5600 Controller dürfen nicht in SAS-3 Shelfs platziert werden.
+
+
+
+
+=== Von E5X00 bis E5X00
+
+* *Akku*: Die alte Batterie wieder verwenden.
+* *Anbieter-ID*: Zusätzliche Schritte beim Upgrade von E5400 auf E5500 oder E5600 erforderlich.
+* *Funktionsunterstützung*:
++
+** Ältere Snapshots werden auf der E5500 oder der E5600 nicht unterstützt.
+** Ältere Remote Volume-Spiegelung (RVM) wird auf der E5400 oder E5500 mit iSCSI-HICs nicht unterstützt.
+** Data Assurance wird auf der E5400 oder E5500 mit iSCSI-HICs nicht unterstützt.
+** E5700 Controller dürfen nicht in SAS-2 Shelfs platziert werden.
+
+
+* *SAS-3 Shelfs*: E5400, E5500 und E5600 Controller dürfen nicht in SAS-3 Shelfs platziert werden.
+
+
+
+
+=== Von EF5x0 bis EF540
+
+* *Akku*: Die alte Batterie wieder verwenden.
+* *Anbieter-ID*: Weitere Schritte beim Upgrade von EF540 auf EF550 oder EF560 erforderlich.
+* *Funktionsunterstützung*:
++
+** Keine alten Snapshots für EF550/EF560.
+** Keine Data Assurance für EF550/EF560 mit iSCSI
+** EF570 Controller dürfen nicht in SAS-3 Shelfs integriert werden.
+
+
+* *SAS-3 Shelfs*: EF540, EF550 und EF560 Controller dürfen nicht in SAS-3 Shelfs platziert werden.
+
+
+
+
+=== SAS-Gehäuse
+
+Die E5700 unterstützt DE5600 und DE6600 SAS-2 Gehäuse über ein Head Upgrade. Wenn ein E5700 Controller in SAS-2-Gehäusen installiert ist, werden die Unterstützung der Basis-Host-Ports deaktiviert.
+
+|===
+| SAS-2-Shelfs | SAS-3 Shelfs 
+
+
+ a| 
+SAS-2-Shelves umfassen die folgenden Modelle:
+
+* DE1600, DE5600 und DE6600 Laufwerksfächern
+* E5400, E5500 und E5600 Controller-Laufwerksfächer
+* EF540, EF550 und EF560 Flash-Arrays
+* E2600 und E2700 Controller-Laufwerksfächer
+
+ a| 
+SAS-3-Shelves umfassen die folgenden Modelle:
+
+* E2800 Controller-Shelfs
+* E5700 Controller-Shelfs
+* DE212C, DE224C, DE460C Festplatten-Shelfs
+
+
+|===
+
+
+=== Investitionsschutz durch SAS-2 zu SAS-3
+
+Sie können Ihr SAS-2-System neu konfigurieren, damit Sie es hinter einem neuen SAS-3 Controller-Shelf (E57XX/EF570/E28XX) verwenden können.
+
+
+NOTE: Für diese Vorgehensweise ist eine FPVR (Feature Product Variance Request) erforderlich. Wenn Sie eine FPVR-Datei einreichen möchten, wenden Sie sich an Ihr Vertriebsteam.

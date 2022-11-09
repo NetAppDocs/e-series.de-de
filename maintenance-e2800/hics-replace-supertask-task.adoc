@@ -1,0 +1,501 @@
+---
+permalink: maintenance-e2800/hics-replace-supertask-task.html 
+sidebar: sidebar 
+keywords: replacing E2800 HIC, replace E2800 HIC, replace host interface card, E2800, E-Series, eseries 
+summary: 'Ersetzen Sie eine fehlerhafte Host Interface Card (HIC).' 
+---
+= E2800 Host-Schnittstellenkarte ersetzen (HIC)
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können eine ausgefallene Host-Schnittstellenkarte (HIC) ersetzen.
+
+Wenn Sie eine HIC ersetzen, setzen Sie den Controller offline, entfernen Sie den Controller-Behälter, installieren Sie die neue HIC, ersetzen Sie den Controller-Behälter, und bringen Sie dann den Controller online.
+
+.Bevor Sie beginnen
+* Prüfen link:hics-overview-supertask-concept.html["Anforderungen für den Austausch der E2800 HIC"].
+* Sie müssen für dieses Verfahren ein Wartungsfenster zur Ausfallzeit planen. Die Stromversorgung muss ausgeschaltet sein, wenn Sie HICs installieren. Daher können Sie erst dann auf Daten im Speicher-Array zugreifen, wenn Sie diesen Vorgang erfolgreich abgeschlossen haben. (In einer Duplexkonfiguration liegt dies daran, dass beide Controller beim Einschalten dieselbe HIC-Konfiguration haben müssen.)
+* Stellen Sie sicher, dass keine Volumes verwendet werden oder dass auf allen Hosts, die diese Volumes verwenden, ein Multipath-Treiber installiert ist.
+
+
+.Was Sie und#8217;ll benötigen
+* Ein oder zwei HICs, je nachdem, ob Sie einen oder zwei Controller im Storage-Array haben. Die HICs müssen mit Ihren Steuerungen kompatibel sein. Wenn zwei Controller vorhanden sind, muss jeder Controller über identische HICs verfügen.
+* Etiketten, um jedes Kabel zu identifizieren, das mit dem Controller-Behälter verbunden ist.
+* Ein ESD-Armband, oder Sie haben andere antistatische Vorsichtsmaßnahmen getroffen.
+* A #1 Kreuzschlitzschraubendreher.
+* Eine Management Station mit einem Browser, der für den Controller auf den SANtricity System Manager zugreifen kann. (Zeigen Sie zum Öffnen der System Manager-Schnittstelle den Domain-Namen oder die IP-Adresse des Controllers im Browser.)
+
+
+
+
+== Schritt 1: Controller offline schalten
+
+Die Schritte zum Offline-Schalten eines Controllers hängen davon ab, ob Sie über einen Controller (Simplexkonfiguration) oder zwei Controller (Duplexkonfiguration) verfügen. Gehen Sie zu den entsprechenden Anweisungen für:
+
+*  Place controller offline
+*  Power down the controller shelf
+
+
+
+
+=== Duplex: Controller offline schalten
+
+Wenn Sie über eine Duplexkonfiguration verfügen, führen Sie diesen Schritt aus, um den Controller offline zu schalten, damit Sie die ausgefallene HIC sicher entfernen können.
+
+
+NOTE: Führen Sie diese Aufgabe nur aus, wenn Ihr Speicher-Array über zwei Controller verfügt (Duplexkonfiguration).
+
+.Schritte
+. Stellen Sie im Bereich Details des Recovery Guru fest, welcher der Controller-Behälter über die ausgefallene HIC verfügt.
+. Sichern Sie die Konfigurationsdatenbank des Storage-Arrays mit SANtricity System Manager.
++
+Wenn während dieses Verfahrens ein Problem auftritt, können Sie die gespeicherte Datei verwenden, um Ihre Konfiguration wiederherzustellen. Das System speichert den aktuellen Status der RAID-Konfigurationsdatenbank, die alle Daten für Volume-Gruppen und Festplatten-Pools auf dem Controller enthält.
+
++
+** Über System Manager:
++
+... Wählen Sie MENU:Support[Support Center > Diagnose].
+... Wählen Sie *Konfigurationsdaten Erfassen*.
+... Klicken Sie Auf *Collect*.
++
+Die Datei wird im Ordner Downloads für Ihren Browser mit dem Namen *configurationData-<arrayName>-<dateTime>.7z* gespeichert.
+
+
+
+** Alternativ können Sie die Konfigurationsdatenbank mit dem folgenden CLI-Befehl sichern:
++
+`save storageArray dbmDatabase sourceLocation=onboard contentType=all file="filename";`
+
+
+
+. Support-Daten für Ihr Storage Array mit SANtricity System Manager erfassen
++
+Wenn während dieses Verfahrens ein Problem auftritt, können Sie die gespeicherte Datei verwenden, um das Problem zu beheben. Das System speichert Bestands-, Status- und Performancedaten Ihres Speicherarrays in einer einzelnen Datei.
+
++
+.. Wählen Sie MENU:Support[Support Center > Diagnose].
+.. Wählen Sie *Support-Daten Erfassen* Aus.
+.. Klicken Sie Auf *Collect*.
++
+Die Datei wird im Ordner Downloads für Ihren Browser mit dem Namen *Support-Data.7z* gespeichert.
+
+
+
+. Wenn der Controller nicht bereits offline ist, versetzen Sie ihn jetzt mithilfe von SANtricity System Manager in den Offline-Modus.
++
+** Über den SANtricity System Manager:
++
+... Wählen Sie *Hardware*.
+... Wenn die Grafik die Laufwerke anzeigt, wählen Sie *Zurück vom Shelf anzeigen* aus, um die Controller anzuzeigen.
+... Wählen Sie den Controller aus, den Sie in den Offline-Modus versetzen möchten.
+... Wählen Sie im Kontextmenü die Option *Offline platzieren* aus, und bestätigen Sie, dass Sie den Vorgang ausführen möchten.
++
+
+NOTE: Wenn Sie mit dem Controller auf SANtricity System Manager zugreifen, den Sie offline schalten möchten, wird eine Meldung vom SANtricity System Manager nicht verfügbar angezeigt. Wählen Sie *mit einer alternativen Netzwerkverbindung verbinden* aus, um automatisch über den anderen Controller auf SANtricity System Manager zuzugreifen.
+
+
+
+** Alternativ können Sie die Controller mit den folgenden CLI-Befehlen offline schalten:
++
+* Für Steuerung A:* `set controller [a] availability=offline`
+
++
+* Für Regler B:* `set controller [b] availability=offline`
+
+
+
+. Warten Sie, bis SANtricity System Manager den Status des Controllers auf „Offline“ aktualisiert.
+
+
+
+CAUTION: Beginnen Sie keine anderen Vorgänge, bis der Status aktualisiert wurde.
+
+
+
+=== Simplex: Schalten Sie das Controller-Shelf ein
+
+Wenn Sie eine Simplexkonfiguration haben, schalten Sie das Controller-Shelf aus, damit Sie die ausgefallene HIC sicher entfernen können.
+
+
+NOTE: Führen Sie diese Aufgabe nur aus, wenn Ihr Speicher-Array über einen Controller verfügt (Simplex-Konfiguration).
+
+.Schritte
+. Sehen Sie sich im SANtricity System Manager die Details im Recovery Guru an, um zu überprüfen, ob eine fehlerhafte HIC vorhanden ist, und um sicherzustellen, dass keine anderen Elemente behoben werden müssen, bevor Sie die HIC entfernen und ersetzen können.
+. Sichern Sie die Konfigurationsdatenbank des Storage-Arrays mit SANtricity System Manager.
++
+Wenn während dieses Verfahrens ein Problem auftritt, können Sie die gespeicherte Datei verwenden, um Ihre Konfiguration wiederherzustellen. Das System speichert den aktuellen Status der RAID-Konfigurationsdatenbank, die alle Daten für Volume-Gruppen und Festplatten-Pools auf dem Controller enthält.
+
++
+** Über System Manager:
++
+... Wählen Sie MENU:Support[Support Center > Diagnose].
+... Wählen Sie *Konfigurationsdaten Erfassen*.
+... Klicken Sie Auf *Collect*.
++
+Die Datei wird im Ordner Downloads für Ihren Browser mit dem Namen *configurationData-<arrayName>-<dateTime>.7z* gespeichert.
+
+
+
+** Alternativ können Sie die Konfigurationsdatenbank mit dem folgenden CLI-Befehl sichern:
++
+`save storageArray dbmDatabase sourceLocation=onboard contentType=all file="filename";`
+
+
+
+. Support-Daten für Ihr Storage Array mit SANtricity System Manager erfassen
++
+Wenn während dieses Verfahrens ein Problem auftritt, können Sie die gespeicherte Datei verwenden, um das Problem zu beheben. Das System speichert Bestands-, Status- und Performancedaten Ihres Speicherarrays in einer einzelnen Datei.
+
++
+.. Wählen Sie MENU:Support[Support Center > Diagnose].
+.. Wählen Sie *Support-Daten Erfassen* Aus.
+.. Klicken Sie Auf *Collect*.
++
+Die Datei wird im Ordner Downloads für Ihren Browser mit dem Namen *Support-Data.7z* gespeichert.
+
+
+
+. Vergewissern Sie sich, dass zwischen dem Storage-Array und allen verbundenen Hosts keine I/O-Vorgänge stattfinden. Sie können beispielsweise die folgenden Schritte durchführen:
++
+** Beenden Sie alle Prozesse, die die LUNs umfassen, die den Hosts vom Storage zugeordnet sind.
+** Stellen Sie sicher, dass keine Applikationen Daten auf LUNs schreiben, die vom Storage den Hosts zugeordnet sind.
+** Heben Sie die Bereitstellung aller Dateisysteme auf, die mit den Volumes im Array verbunden sind, auf.
++
+
+NOTE: Die genauen Schritte zur Stoerung von Host-I/O-Vorgängen hängen vom Host-Betriebssystem und der Konfiguration ab, die den Umfang dieser Anweisungen übersteigen. Wenn Sie nicht sicher sind, wie Sie I/O-Vorgänge für Hosts in Ihrer Umgebung anhalten, sollten Sie das Herunterfahren des Hosts in Betracht ziehen.
+
++
+
+CAUTION: *Möglicher Datenverlust* -- Wenn Sie diesen Vorgang während der I/O-Vorgänge fortsetzen, können Sie Daten verlieren.
+
+
+
+. Warten Sie, bis alle Daten im Cache-Speicher auf die Laufwerke geschrieben werden.
++
+Die grüne LED „Cache aktiv“ auf der Rückseite des Controllers leuchtet, wenn Daten im Cache auf die Laufwerke geschrieben werden müssen. Sie müssen warten, bis diese LED ausgeschaltet ist.
+
+. Wählen Sie auf der Startseite des SANtricity System Managers die Option *Vorgänge in Bearbeitung anzeigen*.
+. Bestätigen Sie, dass alle Vorgänge abgeschlossen wurden, bevor Sie mit dem nächsten Schritt fortfahren.
+. Schalten Sie beide Netzschalter am Controller Shelf aus.
+. Warten Sie, bis alle LEDs am Controller-Shelf ausgeschaltet sind.
+
+
+
+
+== Schritt 2: Controller-Behälter entfernen
+
+Entfernen Sie den Controller-Behälter, damit Sie die neue Host-Schnittstellenkarte (HIC) hinzufügen können.
+
+.Schritte
+. Beschriften Sie jedes Kabel, das am Controller-Behälter befestigt ist.
+. Trennen Sie alle Kabel vom Controller-Behälter.
++
+
+CAUTION: Um eine verminderte Leistung zu vermeiden, dürfen die Kabel nicht verdreht, gefaltet, gequetscht oder treten.
+
+. Vergewissern Sie sich, dass die LED Cache Active auf der Rückseite des Controllers ausgeschaltet ist.
++
+Die grüne LED „Cache aktiv“ auf der Rückseite des Controllers leuchtet, wenn Daten im Cache auf die Laufwerke geschrieben werden müssen. Sie müssen warten, bis diese LED ausgeschaltet ist, bevor Sie den Controller-Behälter entfernen.
+
++
+image::../media/28_dwg_2800_controller_attn_led_maint-e2800.gif[28 dwg 2800 Controller attn LED maint e2800]
+
++
+*(1)* _Cache Active LED_
+
+. Drücken Sie den Riegel am Nockengriff, bis er loslässt, und öffnen Sie dann den Nockengriff nach rechts, um den Steuerkanister aus dem Regal zu lösen.
++
+Die folgende Abbildung zeigt ein Beispiel für ein E2812 Controller-Shelf, ein E2824 Controller-Shelf oder ein EF280 Flash-Array:
+
++
+image::../media/28_dwg_e2824_remove_controller_canister_maint-e2800.gif[28 dwg e2824 Controller-Behälter meine2800 ausbauen]
+
++
+*(1)* _Controller-Behälter_
+
++
+*(2)* _Cam Griff_
+
++
+Die folgende Abbildung zeigt ein Beispiel für ein E2860 Controller-Shelf:
+
++
+image::../media/28_dwg_e2860_add_controller_canister_maint-e2800.gif[28 DWG e2860, Zusatz-Controller-Behälter, Version 2800]
+
++
+*(1)* _Controller-Behälter_
+
++
+*(2)* _Cam Griff_
+
+. Schieben Sie den Controller-Behälter mit zwei Händen und dem Nockengriff aus dem Regal.
++
+
+CAUTION: Verwenden Sie immer zwei Hände, um das Gewicht eines Reglerkanisters zu unterstützen.
+
++
+Wenn Sie den Controller-Behälter aus einem E2812-Controller-Shelf, einem E2824-Controller-Shelf oder einem EF280 Flash-Array entfernen, wird eine Klappe an ihre Stelle gewechselt, um den leeren Schacht zu blockieren. Dadurch wird der Luftstrom und die Kühlung aufrechterhalten.
+
+. Drehen Sie den Controller-Behälter so um, dass die abnehmbare Abdeckung nach oben zeigt.
+. Setzen Sie den Steuerungsbehälter auf eine flache, statisch freie Oberfläche.
+
+
+
+
+== Schritt 3: Installieren einer HIC
+
+Installieren Sie eine HIC, um das fehlerhafte durch eine neue HIC zu ersetzen.
+
+
+CAUTION: *Möglicher Verlust des Datenzugriffs* -- Installieren Sie nie eine HIC in einem E2800 Controller-Behälter, wenn dieser HIC für einen anderen E-Series Controller entworfen wurde. Bei einer Duplexkonfiguration müssen außerdem beide Controller und beide HICs identisch sein. Wenn inkompatible oder nicht übereinstimmende HICs vorhanden sind, werden die Controller gesperrt, wenn Sie Strom verwenden.
+
+.Schritte
+. Packen Sie die neue HIC und die neue HIC-Frontplatte aus.
+. Drücken Sie die Taste an der Abdeckung des Controllerkanisters, und schieben Sie die Abdeckung ab.
+. Vergewissern Sie sich, dass die grüne LED im Controller (durch die DIMMs) aus ist.
++
+Wenn diese grüne LED leuchtet, wird der Controller weiterhin mit Strom versorgt. Sie müssen warten, bis diese LED erlischt, bevor Sie Komponenten entfernen.
+
++
+image::../media/28_dwg_e2800_internal_cache_active_led_maint-e2800.gif[28 DWG e2800 interner Cache, aktiver LED maint e2800]
+
++
+*(1)* _LED Interner Cache aktiv_
+
++
+*(2)* _Akku_
+
+. Entfernen Sie mit einem #1 Kreuzschlitzschraubendreher die vier Schrauben, mit denen die leere Frontplatte am Controller-Behälter befestigt ist, und entfernen Sie die Frontplatte.
+. Richten Sie die drei Rändelschrauben der HIC an den entsprechenden Löchern am Controller aus, und richten Sie den Anschluss an der Unterseite der HIC an dem HIC-Schnittstellenanschluss auf der Controllerkarte aus.
++
+Achten Sie darauf, dass die Komponenten auf der Unterseite der HIC oder auf der Oberseite der Controller-Karte nicht verkratzen oder stoßen.
+
+. Senken Sie die HIC vorsichtig ab, und setzen Sie den HIC-Anschluss ein, indem Sie vorsichtig auf die HIC drücken.
++
+
+CAUTION: *Mögliche Geräteschäden* -- vorsichtig sein, den goldenen Ribbon-Anschluss für die Controller-LEDs zwischen der HIC und den Daumenschrauben nicht zu quetschen.
+
++
+image::../media/28_dwg_e2800_hic_thumbscrews_maint-e2800.gif[28 dwg e2800 HIC Rändelschrauben maint e2800]
+
++
+*(1)* _Host Interface Card_
+
++
+*(2)* _Gewindestifte_
+
+. Ziehen Sie die HIC-Rändelschrauben manuell fest.
++
+Verwenden Sie keinen Schraubendreher, oder ziehen Sie die Schrauben möglicherweise zu fest.
+
+. Befestigen Sie die neue HIC-Frontplatte mit einem #1 Kreuzschlitzschraubendreher mit den vier zuvor entfernten Schrauben am Controller-Behälter.
++
+image::../media/28_dwg_e2800_hic_faceplace_screws_maint-e2800.gif[28-wg-e2800-Gewindestifte für die Frontpartie maint e2800]
+
+
+
+
+
+== Schritt 4: Controller-Behälter wieder einbauen
+
+Setzen Sie nach der Installation der HIC den Controller-Behälter wieder in das Controller-Shelf ein.
+
+.Schritte
+. Drehen Sie den Controller-Behälter so um, dass die abnehmbare Abdeckung nach unten zeigt.
+. Schieben Sie den Steuerkanister bei geöffnetem Nockengriff vollständig in das Reglerregal.
++
+Die folgende Abbildung zeigt ein Beispiel für ein E2824 Controller-Shelf oder ein EF280 Flash-Array:
+
++
+image::../media/28_dwg_e2824_remove_controller_canister_maint-e2800.gif[28 dwg e2824 Controller-Behälter meine2800 ausbauen]
+
++
+*(1)* _Controller-Behälter_
+
++
+*(2)* _Cam Griff_
+
++
+Die folgende Abbildung zeigt ein Beispiel für ein E2860 Controller-Shelf:
+
++
+image::../media/28_dwg_e2860_add_controller_canister_maint-e2800.gif[28 DWG e2860, Zusatz-Controller-Behälter, Version 2800]
+
++
+*(1)* _Controller-Behälter_
+
++
+*(2)* _Cam Griff_
+
+. Bewegen Sie den Nockengriff nach links, um den Steuerkanister zu verriegeln.
+. Schließen Sie alle entfernten Kabel wieder an.
++
+
+NOTE: Schließen Sie derzeit keine Datenkabel an die neuen HIC-Ports an.
+
+. (Optional) Wenn Sie HICs zu einer Duplexkonfiguration hinzufügen, wiederholen Sie alle Schritte, um den zweiten Controller-Behälter zu entfernen, die zweite HIC zu installieren und den zweiten Controller-Behälter neu zu installieren.
+
+
+
+
+== Schritt 5: Controller online stellen
+
+Die Schritte zum Online-Platzieren eines Controllers hängen davon ab, ob Sie einen Controller (Simplexkonfiguration) oder zwei Controller (Duplexkonfiguration) haben.
+
+
+
+=== Duplex: Controller online stellen
+
+Versetzen Sie den Controller bei einer Duplexkonfiguration in den Online-Modus, sammeln Sie Support-Daten und setzen Sie den Betrieb fort.
+
+
+NOTE: Führen Sie diese Aufgabe nur aus, wenn Ihr Speicher-Array über zwei Controller verfügt.
+
+.Schritte
+. Überprüfen Sie beim Booten des Controllers die Controller-LEDs und die siebenSegment-Anzeige.
++
+
+NOTE: Die Abbildung zeigt einen Beispiel-Controller-Behälter. Ihr Controller kann über eine andere Anzahl und einen anderen Typ von Host-Ports verfügen.
+
++
+Wenn die Kommunikation mit der anderen Steuerung wiederhergestellt wird:
+
++
+** Die 7-Segment-Anzeige zeigt die sich wiederholende Sequenz *OS*, *OL*, *_blank_* an, um anzuzeigen, dass der Controller offline ist.
+** Die gelbe Warn-LED leuchtet weiterhin.
+** Je nach Host-Schnittstelle leuchtet, blinkt oder leuchtet die LED für Host-Link möglicherweise nicht.image:../media/28_dwg_attn_led_7s_display_maint-e2800.gif[""]
++
+*(1)* _Warn-LED (gelb)_
+
++
+*(2)* _Sieben-Segment-Anzeige_
+
++
+*(3)* _Host Link LEDs_
+
+
+
+. Stellen Sie den Controller mit SANtricity System Manager online.
++
+** Über den SANtricity System Manager:
++
+... Wählen Sie *Hardware*.
+... Wenn die Grafik die Laufwerke anzeigt, wählen Sie *Zurück von Regal anzeigen*.
+... Wählen Sie den Controller aus, den Sie online platzieren möchten.
+... Wählen Sie im Kontextmenü * Online platzieren* aus, und bestätigen Sie, dass Sie den Vorgang ausführen möchten.
++
+Das System stellt den Controller online.
+
+
+
+** Alternativ können Sie die folgenden CLI-Befehle verwenden:
++
+* Für Steuerung A:* `set controller [a] availability=online;`
+
++
+* Für Regler B:* `set controller [b] availability=online;`
+
+
+
+. Überprüfen Sie die Codes auf der 7-Segment-Anzeige des Controllers, wenn sie wieder online angezeigt werden. Wenn auf der Anzeige eine der folgenden sich wiederholenden Sequenzen angezeigt wird, entfernen Sie sofort die Steuerung.
++
+** *OE*, *L0*, *_blank_* (nicht übereinstimmende Controller)
+** *OE*, *L6*, *_blank_* (nicht unterstützte HIC)
++
+
+CAUTION: *Möglicher Verlust des Datenzugangs* -- Wenn der gerade installierte Controller einen dieser Codes anzeigt und der andere Controller aus irgendeinem Grund zurückgesetzt wird, könnte auch der zweite Regler gesperrt werden.
+
+
+
+. Wenn der Controller wieder online ist, bestätigen Sie, dass sein Status optimal lautet, und überprüfen Sie die Warn-LEDs für das Controller-Shelf.
++
+Wenn der Status nicht optimal ist oder eine der Warn-LEDs leuchtet, vergewissern Sie sich, dass alle Kabel richtig eingesetzt sind, und überprüfen Sie, ob die HIC und der Controller-Behälter richtig installiert sind. Entfernen Sie gegebenenfalls den Controller-Behälter und die HIC, und setzen Sie ihn wieder ein.
+
++
+
+NOTE: Wenden Sie sich an den technischen Support, wenn das Problem nicht gelöst werden kann.
+
+. Support-Daten für Ihr Storage Array mit SANtricity System Manager erfassen
++
+.. Wählen Sie MENU:Support[Support Center > Diagnose].
+.. Wählen Sie *Support-Daten Erfassen* Aus.
+.. Klicken Sie Auf *Collect*.
++
+Die Datei wird im Ordner Downloads für Ihren Browser mit dem Namen *Support-Data.7z* gespeichert.
+
+
+
+. Senden Sie das fehlerhafte Teil wie in den dem Kit beiliegenden RMA-Anweisungen beschrieben an NetApp zurück.
++
+Wenden Sie sich an den technischen Support unter http://mysupport.netapp.com["NetApp Support"^], 888-463-8277 (Nordamerika), 00-800-44-638277 (Europa) oder +800-800-80-800 (Asien/Pazifik) wenn Sie die RMA-Nummer benötigen.
+
+
+
+
+
+=== Simplex: Schalten Sie das Controller-Shelf ein
+
+Wenden Sie bei einer Simplexkonfiguration die Stromversorgung auf das Controller Shelf an, erfassen Sie Support-Daten und setzen Sie den Betrieb fort.
+
+
+NOTE: Führen Sie diese Aufgabe nur aus, wenn Ihr Speicher-Array über einen Controller verfügt.
+
+.Schritte
+. Schalten Sie die beiden Netzschalter an der Rückseite des Controller-Shelf ein.
++
+** Schalten Sie die Netzschalter während des Einschaltvorgangs nicht aus, was in der Regel 90 Sekunden oder weniger dauert.
+** Die Lüfter in jedem Regal sind beim ersten Start sehr laut. Das laute Geräusch beim Anfahren ist normal.
+
+
+. Überprüfen Sie beim Booten des Controllers die Controller-LEDs und die Anzeige für sieben Segmente.
++
+** Das 7-Segment-Display zeigt die sich wiederholende Sequenz *OS*, *SD*, *_blank_* an, um anzuzeigen, dass der Controller die SOD-Verarbeitung (Start-of-day) durchführt. Nachdem ein Controller erfolgreich gestartet wurde, sollte auf seinem siebenstelligen Display die Fach-ID angezeigt werden.
+** Die gelbe Warn-LED am Controller leuchtet und schaltet sich dann aus, sofern kein Fehler vorliegt.
+** Die grünen Host-Link-LEDs leuchten auf.
++
+
+NOTE: Die Abbildung zeigt einen Beispiel-Controller-Behälter. Ihr Controller kann über eine andere Anzahl und einen anderen Typ von Host-Ports verfügen.
+
++
+image::../media/28_dwg_attn_led_7s_display_maint-e2800.gif[28-Sekunden-LED 7s Display maint e2800]
+
++
+*(1)* _Warn-LED (gelb)_
+
++
+*(2)* _Sieben-Segment-Anzeige_
+
++
+*(3)* _Host Link LEDs_
+
+
+
+. Vergewissern Sie sich, dass der Status des Controllers optimal lautet und überprüfen Sie die Warn-LEDs für das Controller-Shelf.
++
+Wenn der Status nicht optimal ist oder eine der Warn-LEDs leuchtet, vergewissern Sie sich, dass alle Kabel richtig eingesetzt sind, und überprüfen Sie, ob die HIC und der Controller-Behälter richtig installiert sind. Entfernen Sie gegebenenfalls den Controller-Behälter und die HIC, und setzen Sie ihn wieder ein.
+
++
+
+NOTE: Wenden Sie sich an den technischen Support, wenn das Problem nicht gelöst werden kann.
+
+. Support-Daten für Ihr Storage Array mit SANtricity System Manager erfassen
++
+.. Wählen Sie MENU:Support[Support Center > Diagnose].
+.. Wählen Sie *Support-Daten Erfassen* Aus.
+.. Klicken Sie Auf *Collect*.
++
+Die Datei wird im Ordner Downloads für Ihren Browser mit dem Namen *Support-Data.7z* gespeichert.
+
+
+
+. Senden Sie das fehlerhafte Teil wie in den dem Kit beiliegenden RMA-Anweisungen beschrieben an NetApp zurück.
++
+Wenden Sie sich an den technischen Support unter http://mysupport.netapp.com["NetApp Support"^], 888-463-8277 (Nordamerika), 00-800-44-638277 (Europa) oder +800-800-80-800 (Asien/Pazifik) wenn Sie die RMA-Nummer benötigen.
+
+
+
+Der Austausch der HIC ist abgeschlossen. Sie können den normalen Betrieb fortsetzen.

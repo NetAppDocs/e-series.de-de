@@ -1,0 +1,186 @@
+---
+permalink: web-services-proxy/install-config-task.html 
+sidebar: sidebar 
+keywords: configure Web Services Proxy, WSP configuration, start stop Webserver, start stop WSP service 
+summary: Sie können die Web Services Proxy-Einstellungen ändern, um die spezifischen Betriebs- und Performance-Anforderungen für Ihre Umgebung zu erfüllen. 
+---
+= Konfigurieren Sie Web Services Proxy
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können die Web Services Proxy-Einstellungen ändern, um die spezifischen Betriebs- und Performance-Anforderungen für Ihre Umgebung zu erfüllen.
+
+
+
+== Stoppen oder starten Sie den Webserver neu
+
+Der Webserver-Dienst wird während der Installation gestartet und läuft im Hintergrund. Während einiger Konfigurationsaufgaben müssen Sie den Webserver-Dienst möglicherweise anhalten oder neu starten.
+
+.Schritte
+. Führen Sie einen der folgenden Schritte aus:
++
+** Öffnen Sie für Windows das Menü *Start* und wählen Sie MENU:Administrative Tools[Dienste], suchen Sie *NetApp SANtricity Webservices* und wählen Sie dann entweder *Stopp* oder *Neustart* aus.
+** Wählen Sie unter Linux die Methode zum Stoppen und Neustarten des Webservers für Ihre Betriebssystemversion aus. Während der Installation wurde in einem Popup-Dialog angezeigt, welcher Daemon gestartet hat. Beispiel:
++
+`web_services_proxy webserver installed and started. You can interact with it using systemctl start|stop|restart|status web_services_proxy.service`
+
++
+Die am häufigsten verwendete Methode für die Interaktion mit dem Dienst ist die Verwendung `systemctl` Befehle.
+
+
+
+
+
+
+
+== Beheben von Port-Konflikten
+
+Wenn der Web Services Proxy ausgeführt wird, während eine andere Anwendung an der definierten Adresse oder dem festgelegten Port verfügbar ist, können Sie den Portkonflikt in der Datei wsconfig.xml beheben.
+
+.Schritte
+. Öffnen Sie die Datei wsconfig.xml unter:
++
+** (Windows) -- C:\Program Files\NetApp\SANtricity Web Services Proxy
+** (Linux) -- /opt/netapp/santricity_Web_Services_Proxy
+
+
+. Fügen Sie der Datei wsconfig.xml die folgende Zeile hinzu, in der _n_ die Portnummer ist:
++
+[listing]
+----
+<sslport clientauth=”request”>*n*</sslport>
+<port>n</port>
+----
++
+In der folgenden Tabelle werden die Attribute aufgeführt, die HTTP-Ports und HTTPS-Ports steuern.
+
++
+|===
+| Name | Beschreibung | Übergeordnetes Node | Merkmale | Erforderlich 
+
+
+ a| 
+Konfigurations
+ a| 
+Der Root-Node für die Konfiguration
+ a| 
+Null
+ a| 
+Version - die Version des Konfigurationsschemas ist derzeit 1.0.
+ a| 
+Ja.
+
+
+
+ a| 
+Sslport
+ a| 
+Der TCP-Port zum Abhören von SSL-Anforderungen. Die Standardeinstellung ist 8443.
+ a| 
+Konfigurations
+ a| 
+Clientauth
+ a| 
+Nein
+
+
+
+ a| 
+Port
+ a| 
+Der TCP-Port zum Abhören von HTTP-Anfragen ist standardmäßig auf 8080 eingestellt.
+ a| 
+Konfigurations
+ a| 
+-
+ a| 
+Nein
+
+|===
+. Speichern und schließen Sie die Datei.
+. Starten Sie den Webserver-Dienst neu, damit die Änderung wirksam wird.
+
+
+
+
+== Konfiguration von Load Balancing und/oder Hochverfügbarkeit
+
+Wenn Sie den Web Services Proxy in einer hochverfügbaren (HA) Konfiguration verwenden möchten, können Sie den Lastausgleich konfigurieren. In einer HA-Konfiguration erhält normalerweise entweder ein einzelner Node alle Anfragen, während die anderen im Standby-Verhältnis sind oder bei den Anforderungen ein Lastausgleich über alle Nodes hinweg erfolgt.
+
+Der Web Services Proxy kann in einer hochverfügbaren (HA) Umgebung vorhanden sein, wobei die meisten APIs unabhängig vom Empfänger der Anfrage korrekt funktionieren. Metadaten-Tags und Ordner sind zwei Ausnahmen, da Tags und Ordner in einer lokalen Datenbank gespeichert und nicht zwischen Web Services Proxy-Instanzen freigegeben werden.
+
+Es gibt jedoch einige bekannte Zeitprobleme, die in einem kleinen Prozentsatz von Anforderungen auftreten. Insbesondere kann eine Instanz des Proxy neuere Daten schneller als eine zweite Instanz für ein kleines Fenster haben. Der Web Services Proxy enthält eine spezielle Konfiguration, die dieses Timing-Problem beseitigt. Diese Option ist standardmäßig nicht aktiviert, da sie die benötigte Zeit für Serviceanfragen erhöht (für Datenkonsistenz). Um diese Option zu aktivieren, müssen Sie einer INI-Datei (für Windows) oder einer .SH-Datei (für Linux) eine Eigenschaft hinzufügen.
+
+.Schritte
+. Führen Sie einen der folgenden Schritte aus:
++
+** Windows: Öffnen Sie die Datei appserver64.ini, und fügen Sie dann die hinzu `Dload-balance.enabled=true` Eigenschaft.
++
+Beispiel: `vmarg.7=-Dload-balance.enabled=true`
+
+** Linux: Öffnen Sie die Datei webserver.sh, und fügen Sie dann die hinzu `Dload-balance.enabled=true` Eigenschaft.
++
+Beispiel: `DEBUG_START_OPTIONS="-Dload-balance.enabled=true"`
+
+
+
+. Speichern Sie die Änderungen.
+. Starten Sie den Webserver-Dienst neu, damit die Änderung wirksam wird.
+
+
+
+
+== Symbol HTTPS deaktivieren
+
+Sie können Symbolbefehle (Standardeinstellung) deaktivieren und Befehle über einen Remote-Prozeduraufruf (RPC) senden. Diese Einstellung kann in der Datei wsconfig.xml geändert werden.
+
+Standardmäßig sendet der Web Services Proxy für alle Storage-Systeme der E2800 Serie und der E5700 Serie mit SANtricity OS Version 08.40 oder höher Symbolbefehle über HTTPS. Über HTTPS gesendete Symbolbefehle werden an das Speichersystem authentifiziert. Bei Bedarf können Sie die HTTPS-Symbolunterstützung deaktivieren und Befehle über RPC senden. Immer wenn das Symbol über RPC konfiguriert ist, sind alle passiven Befehle des Speichersystems ohne Authentifizierung aktiviert.
+
+
+NOTE: Wenn Symbol über RPC verwendet wird, kann der Web Services Proxy keine Verbindung zu Systemen herstellen, bei denen der Port für die Symbolverwaltung deaktiviert ist.
+
+.Schritte
+. Öffnen Sie die Datei wsconfig.xml unter:
++
+** (Windows) -- C:\Program Files\NetApp\SANtricity Web Services Proxy
+** (Linux) -- /opt/netapp/santricity_Web_Services_Proxy
+
+
+. Im `devicemgt.symbolclientstrategy` Eingabe, ersetzen Sie den `httpsPreferred` Wert mit `rpcOnly`.
++
+Beispiel:
+
++
+``<env key="devicemgt.symbolclientstrategy">rpcOnly</env>``
+
+. Speichern Sie die Datei.
+
+
+
+
+== Konfigurieren der Cross-Origin-Ressourcen-Sharing
+
+Sie können CORS (Cross-Origin Resource Sharing) konfigurieren. Hierbei handelt es sich um einen Mechanismus, der zusätzliche HTTP-Header verwendet, um eine Web-Anwendung bereitzustellen, die an einem Ursprung ausgeführt wird und über die Berechtigung zum Zugriff auf ausgewählte Ressourcen von einem Server mit einem anderen Ursprung verfügt.
+
+CORS wird von der Datei cors.cfg im Arbeitsverzeichnis bearbeitet. Die CORS-Konfiguration ist standardmäßig geöffnet, sodass der bereichsübergreifende Zugriff nicht eingeschränkt ist.
+
+Wenn keine Konfigurationsdatei vorhanden ist, ist CORS geöffnet. Aber wenn die Datei cors.cfg vorhanden ist, wird sie verwendet. Wenn die Datei cors.cfg leer ist, können Sie keine CORS-Anforderung erstellen.
+
+.Schritte
+. Öffnen Sie die Datei cors.cfg, die sich im Arbeitsverzeichnis befindet.
+. Fügen Sie die gewünschten Zeilen der Datei hinzu.
++
+Jede Zeile in der CORS-Konfigurationsdatei ist ein regelmäßiges Ausdrucksmuster, das übereinstimmen muss. Die Ursprungsüberschrift muss mit einer Zeile in der Datei cors.cfg übereinstimmen. Wenn ein Linienmuster mit der Ursprungsüberschrift übereinstimmt, ist die Anforderung zulässig. Der vollständige Ursprung wird verglichen, nicht nur das Host-Element.
+
+. Speichern Sie die Datei.
+
+
+Anforderungen werden auf dem Host und dem Protokoll zugeordnet, z. B.:
+
+* Localhost mit jedem Protokoll abstimmen -- `\*localhost*`
+* Localhost nur für HTTPS abstimmen -- `+https://localhost*+`
+

@@ -1,0 +1,42 @@
+---
+permalink: install-hw-cabling/host-cable-task.html 
+sidebar: sidebar 
+keywords: cabling, cables, host cabling, direct-attached topology, switch topology, E-Series, eseries, E2800, E5700, EF300, EF600, DE212C, DE224C, DE460C, 
+summary: Sie können einen Host direkt an einen Controller anschließen oder Switches verwenden. 
+---
+= Host-Verkabelung
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Host kann direkt mit einem Controller (Direct-Attached Topology) verbunden oder mithilfe von Switches (Switch-Topologie) eine Host-Verbindung mit einem Controller hergestellt werden.
+
+
+
+== Verkabelung für eine direkt angeschlossene Topologie
+
+Über eine Direct-Attached-Topologie werden Host-Adapter direkt mit Controllern in Ihrem Storage-System verbunden.
+
+Die folgende Abbildung zeigt eine Beispielverbindung. Verwenden Sie alle verfügbaren Host-Adapter-Ports, um eine maximale Performance zu gewährleisten.
+
+.Zwei Hosts und zwei Controller
+image::../media/topology_host_direct_generic_web_low.png[Topologie-Host direkt generisches Web niedrig]
+
+*(1)* _Verbinden Sie jeden Host-Adapter-Port direkt mit den Host-Ports der Controller._
+
+
+
+== Verkabelung für eine Switch-Topologie
+
+Eine Switch-Topologie verwendet Switches, um Hosts mit den Controllern im Storage-System zu verbinden. Der Switch muss den Verbindungstyp unterstützen, der zwischen dem Host und dem Controller verwendet wird.
+
+Die folgende Abbildung zeigt eine Beispielverbindung. Bei Switches, die Provisioning-Fähigkeit bieten, sollten Sie alle Initiator- und Zielpaare isolieren.
+
+.Zwei Hosts und zwei Switches
+image::../media/topology_host_fabric_generic.png[Topologie-Host-Fabric allgemein]
+
+*(1)* _Schließen Sie jeden Hostadapter direkt an den Switch an._
+
+*(2)* _Schließen Sie jeden Switch direkt an die Host-Ports der Controller an. Um eine maximale Leistung zu gewährleisten, verwenden Sie alle verfügbaren Host Adapter Ports._

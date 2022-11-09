@@ -1,0 +1,23 @@
+---
+permalink: maintenance-ef600/power-overview-requirements2-concept.html 
+sidebar: sidebar 
+keywords: replace EF300 power supply, replace EF600 power supply, 
+summary: Prüfen Sie die Anforderungen und Überlegungen, bevor Sie ein EF300- oder EF600-Netzteil ersetzen. 
+---
+= Anforderungen für den Austausch des EF300- oder EF600 Netzteils
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Bevor Sie ein Netzteil in einem EF300- oder EF600-Array ersetzen, überprüfen Sie die folgenden Anforderungen.
+
+* Sie müssen ein Ersatz-Netzteil haben, das für Ihr Controller-Shelf- oder Festplatten-Shelf-Modell unterstützt wird.
+
+
+
+NOTE: Vermischen Sie die Netzteile verschiedener Spannungsarten nicht. Immer ersetzen wie für „Gefällt mir“.
+
+* Sie müssen über ein ESD-Armband verfügen oder andere antistatische Vorsichtsmaßnahmen getroffen haben.
+

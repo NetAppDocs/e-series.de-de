@@ -1,0 +1,23 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/vc-olh-what-is-data-assurance.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
+summary: 'Data Assurance (da) implementiert den T10 Protection Information (PI)-Standard. Dies erhöht die Datenintegrität, indem Fehler geprüft und korrigiert werden, die bei der Datenübertragung entlang des I/O-Pfads auftreten können.' 
+---
+= Was ist Data Assurance?
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Data Assurance (da) implementiert den T10 Protection Information (PI)-Standard. Dies erhöht die Datenintegrität, indem Fehler geprüft und korrigiert werden, die bei der Datenübertragung entlang des I/O-Pfads auftreten können.
+
+Die typische Nutzung der Data Assurance Funktion überprüft den Teil des I/O-Pfads zwischen den Controllern und Laufwerken. DA-Funktionen werden auf Pool- und Volume-Gruppenebene präsentiert.
+
+Wenn diese Funktion aktiviert ist, hängt das Speicherarray die Fehlerprüfungscodes (auch zyklische Redundanzprüfungen oder CRCs genannt) an jeden Datenblock im Volume an. Nach dem Verschieben eines Datenblocks ermittelt das Speicher-Array anhand dieser CRC-Codes, ob während der Übertragung Fehler aufgetreten sind. Potenziell beschädigte Daten werden weder auf Festplatte geschrieben noch an den Host zurückgegeben. Wenn Sie die da-Funktion verwenden möchten, wählen Sie einen Pool oder eine Volume-Gruppe aus, die bei der Erstellung eines neuen Volumes unterstützt wird (suchen Sie in der Tabelle mit den Kandidaten für Pool- und Volume-Gruppen nach *ja* neben *da*).
+
+Stellen Sie sicher, dass Sie diese DA-fähigen Volumes einem Host über eine E/A-Schnittstelle zuweisen, die über eine da-fähige Schnittstelle verfügt. Zu den I/O-Schnittstellen, die da fähig sind, gehören Fibre Channel, SAS, iSCSI über TCP/IP, NVMe/FC, NVMe/IB, NVME/RoCE und iSER over InfiniBand (iSCSI-Erweiterungen für RDMA/IB). DA wird von SRP nicht über InfiniBand unterstützt.

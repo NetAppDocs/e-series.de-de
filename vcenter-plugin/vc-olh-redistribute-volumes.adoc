@@ -1,0 +1,37 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/vc-olh-redistribute-volumes.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
+summary: Neuverteilung von Volumes zur Verschiebung von Volumes zurück zu ihren bevorzugten Controller-Besitzern 
+---
+= Neuverteilung von Volumes
+:hardbreaks:
+:allow-uri-read: 
+:experimental: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Sie verteilen Volumes neu, um Volumes zurück zu ihren bevorzugten Controller-Besitzern zu verschieben. In der Regel verschieben Multipath-Treiber Volumes vom bevorzugten Controller-Eigentümer, wenn entlang des Datenpfads zwischen dem Host und dem Storage Array ein Problem auftritt.
+
+.Bevor Sie beginnen
+* Die Volumes, die neu verteilt werden sollen, werden nicht verwendet, sonst treten I/O-Fehler auf.
+* Ein Multipath-Treiber wird auf allen Hosts installiert, die die Volumes verwenden, die Sie neu verteilen möchten, sonst treten I/O-Fehler auf. Wenn Sie Volumes ohne Multipath-Treiber auf den Hosts neu verteilen möchten, müssen alle I/O-Aktivitäten auf die Volumes während der Umverteilung unterbrochen werden, um Applikationsfehler zu vermeiden.
+
+
+Die meisten Host Multipath-Treiber versuchen, auf jedes Volume auf einem Pfad zu seinem bevorzugten Controller-Eigentümer zuzugreifen. Falls dieser bevorzugte Pfad jedoch nicht mehr verfügbar ist, erfolgt ein Failover des Multipath-Treibers auf dem Host zu einem alternativen Pfad. Dieser Failover kann dazu führen, dass sich die Volume-Inhaberschaft auf den alternativen Controller ändert. Nachdem Sie die Bedingung behoben haben, die den Failover verursacht hat, verschieben einige Hosts möglicherweise automatisch die Volume-Eigentümerschaft zurück zu dem bevorzugten Controller-Eigentümer. In einigen Fällen müssen Sie die Volumes jedoch möglicherweise manuell neu verteilen.
+
+.Schritte
+. Wählen Sie auf der Seite Verwalten das Storage-Array aus, das die Volumes enthält, die Sie neu verteilen möchten.
+. Wählen Sie MENU:Provisioning[Volumes verwalten].
+. Wählen Sie Menü:Mehr[Umverteilung von Volumes].
++
+Das Dialogfeld Volumes neu verteilen wird angezeigt. Alle Volumes im Storage-Array, deren bevorzugter Controller-Eigentümer nicht mit dem aktuellen Eigentümer übereinstimmt, werden in diesem Dialogfeld angezeigt.
+
+. Wählen Sie ein oder mehrere Volumes aus, die Sie neu verteilen möchten, und bestätigen Sie, dass Sie den Vorgang ausführen möchten.
+
+
+Das System verschiebt die ausgewählten Volumes in die bevorzugten Controller-Eigentümer oder ein Dialogfeld zum Neuverteilen von Volumes ist nicht erforderlich.

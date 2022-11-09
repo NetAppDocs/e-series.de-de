@@ -1,0 +1,28 @@
+---
+permalink: config-linux/fc-configure-switches-task.html 
+sidebar: sidebar 
+keywords: FC switches, zoning, express linux configuration, software configuration, linux host, 
+summary: Konfigurieren Sie die Fibre Channel-Switches, damit die Hosts eine Verbindung zum Storage-Array herstellen und die Anzahl der Pfade begrenzen können. 
+---
+= Konfigurieren Sie die FC-Switches
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Konfigurieren (Zoning) der Fibre Channel (FC)-Switches ermöglicht es den Hosts, eine Verbindung zum Storage-Array herzustellen, und begrenzt die Anzahl der Pfade. Sie Zonen der Switches mithilfe der Managementoberfläche für die Switches.
+
+.Was Sie und#8217;ll benötigen
+* Administrator-Anmeldeinformationen für die Switches.
+* Der WWPN jedes Host-Initiator-Ports und jedes Controller-Zielports, der mit dem Switch verbunden ist. (Verwenden Sie Ihr HBA Utility für die Erkennung.)
+
+
+Jeder Initiator-Port muss sich in einer separaten Zone mit allen entsprechenden Ziel-Ports befinden. Informationen zum Zoning der Switches finden Sie in der Dokumentation des Switch-Anbieters.
+
+.Schritte
+. Melden Sie sich beim FC Switch-Administrationsprogramm an und wählen Sie dann die Zoning-Konfigurationsoption aus.
+. Erstellen Sie eine neue Zone, die den ersten Host-Initiator-Port enthält, und die auch alle Ziel-Ports umfasst, die mit demselben FC-Switch wie der Initiator verbunden sind.
+. Erstellen Sie zusätzliche Zonen für jeden FC-Host-Initiator-Port im Switch.
+. Speichern Sie die Zonen, und aktivieren Sie dann die neue Zoning-Konfiguration.
+

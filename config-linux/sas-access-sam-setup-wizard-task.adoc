@@ -1,0 +1,95 @@
+---
+permalink: config-linux/sas-access-sam-setup-wizard-task.html 
+sidebar: sidebar 
+keywords: access System Manager Linux, express linux configuration, software configuration, linux host, E2800, E5700, EF300, EF600, E-Series, eseries 
+summary: Mit dem Setup-Assistenten in SANtricity System Manager konfigurieren Sie das Storage-Array. 
+---
+= Greifen Sie auf SANtricity System Manager zu und verwenden Sie den Setup-Assistenten
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Zum Konfigurieren des Speicher-Arrays können Sie den Setup-Assistenten in SANtricity System Manager verwenden.
+
+SANtricity System Manager ist eine webbasierte Schnittstelle, die in jeden Controller integriert ist. Um auf die Benutzeroberfläche zuzugreifen, zeigen Sie einen Browser auf die IP-Adresse des Controllers. Ein Setup-Assistent hilft Ihnen beim Einstieg in die Systemkonfiguration.
+
+.Was Sie und#8217;ll benötigen
+* Out-of-Band-Management:
+* Eine Management Station für den Zugriff auf SANtricity System Manager, die einen der folgenden Browser umfasst:
++
+|===
+| Browser | Mindestversion 
+
+
+ a| 
+Google Chrome
+ a| 
+79
+
+
+
+ a| 
+Microsoft Internet Explorer
+ a| 
+11
+
+
+
+ a| 
+Microsoft Edge
+ a| 
+79
+
+
+
+ a| 
+Mozilla Firefox
+ a| 
+70
+
+
+
+ a| 
+Safari
+ a| 
+12
+
+|===
+
+
+Der Assistent wird automatisch neu gestartet, wenn Sie den System Manager öffnen oder den Browser aktualisieren, und mindestens eine der folgenden Bedingungen erfüllt ist:
+
+* Es werden keine Pools und Volume-Gruppen erkannt.
+* Es werden keine Workloads erkannt.
+* Es werden keine Benachrichtigungen konfiguriert.
+
+
+.Schritte
+. Geben Sie in Ihrem Browser die folgende URL ein: `+https://<DomainNameOrIPAddress>+`
++
+`IPAddress` Ist die Adresse für einen der Storage Array Controller.
+
++
+Wenn SANtricity System Manager zum ersten Mal auf einem Array geöffnet wird, das nicht konfiguriert wurde, wird die Eingabeaufforderung Administratorkennwort festlegen angezeigt. Rollenbasierte Zugriffsverwaltung konfiguriert vier lokale Rollen: Administration, Support, Sicherheit und Monitoring. Die letzten drei Rollen haben zufällige Passwörter, die nicht erraten werden können. Nachdem Sie ein Passwort für die Administratorrolle festgelegt haben, können Sie alle Passwörter mit den Admin-Anmeldedaten ändern. Weitere Informationen zu den vier lokalen Benutzerrollen finden Sie in der Online-Hilfe, die in der Benutzeroberfläche von SANtricity System Manager verfügbar ist.
+
+. Geben Sie in den Feldern Administratorpasswort festlegen und Passwort bestätigen das Passwort für die Administratorrolle ein und klicken Sie dann auf *Passwort festlegen*.
++
+Der Setup-Assistent wird gestartet, wenn keine Pools, Volume-Gruppen, Workloads oder Benachrichtigungen konfiguriert sind.
+
+. Mit dem Setup-Assistenten können Sie die folgenden Aufgaben ausführen:
++
+** *Überprüfung der Hardware (Controller und Laufwerke)* - Überprüfen Sie die Anzahl der Controller und Laufwerke im Speicher-Array. Weisen Sie dem Array einen Namen zu.
+** *Überprüfung der Hosts und Betriebssysteme* - Überprüfen Sie die Host- und Betriebssystemtypen, auf die das Speicherarray zugreifen kann.
+** *Pools akzeptieren* -- Akzeptieren Sie die empfohlene Poolkonfiguration für die Express-Installationsmethode. Ein Pool ist eine logische Laufwerksgruppe.
+** *Warnungen konfigurieren* -- System Manager kann automatische Benachrichtigungen erhalten, wenn ein Problem mit dem Speicher-Array auftritt.
+** *AutoSupport aktivieren* -- überwacht automatisch den Zustand Ihres Speicherarrays und sendet Entsendungen an den technischen Support.
+
+
+. Falls Sie noch kein Volume erstellt haben, klicken Sie im Menü:Storage[Volumes > Create > Volume] auf.
++
+Weitere Informationen finden Sie in der Online-Hilfe von SANtricity System Manager.
+
+

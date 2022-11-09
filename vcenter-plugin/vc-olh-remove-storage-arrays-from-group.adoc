@@ -1,0 +1,26 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/vc-olh-remove-storage-arrays-from-group.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
+summary: Entfernen Sie ein oder mehrere verwaltete Speicher-Arrays aus einer Gruppe, wenn Sie sie nicht mehr aus einer bestimmten Speichergruppe verwalten möchten. 
+---
+= Entfernen Sie Speicher-Arrays aus der Gruppe
+:hardbreaks:
+:allow-uri-read: 
+:experimental: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Sie können ein oder mehrere verwaltete Speicher-Arrays aus einer Gruppe entfernen, wenn Sie sie nicht mehr aus einer bestimmten Speichergruppe verwalten möchten.
+
+Das Entfernen von Speicher-Arrays aus einer Gruppe hat keinerlei Auswirkungen auf das Speicher-Array oder seine Daten. Wenn das Storage Array von System Manager gemanagt wird, können Sie es weiterhin mit Ihrem Browser verwalten. Wenn ein Speicher-Array versehentlich aus einer Gruppe entfernt wird, kann es erneut hinzugefügt werden.
+
+.Schritte
+. Wählen Sie auf der Seite Verwalten die Option MENU:Gruppen verwalten[Speicher-Arrays aus Gruppe entfernen].
+. Wählen Sie im Dropdown-Menü die Gruppe aus, die die zu entfernenden Speicher-Arrays enthält, und klicken Sie dann auf das Kontrollkästchen neben jedem Speicher-Array, das Sie aus der Gruppe entfernen möchten.
+. Klicken Sie Auf *Entfernen*.
+

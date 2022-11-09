@@ -1,0 +1,310 @@
+---
+permalink: config-vmware/iscsi-perform-specific-task.html 
+sidebar: sidebar 
+keywords: iscsi, express vmware configuration, software configuration, vmware host, E2800, E5700, EF300, EF600, E-Series, eseries 
+summary: Für das iSCSI-Protokoll konfigurieren Sie die Switches und konfigurieren das Netzwerk auf der Array-Seite und auf der Host-Seite. Anschließend überprüfen Sie die IP-Netzwerkverbindungen. 
+---
+= Führen Sie iSCSI-spezifische Aufgaben aus
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Für das iSCSI-Protokoll konfigurieren Sie die Switches und konfigurieren das Netzwerk auf der Array-Seite und auf der Host-Seite. Anschließend überprüfen Sie die IP-Netzwerkverbindungen.
+
+
+
+== Schritt: Switches konfigurieren – ​iSCSI, VMware
+
+Sie konfigurieren die Switches entsprechend den Empfehlungen des Anbieters für iSCSI. Diese Empfehlungen können sowohl Konfigurationsrichtlinien als auch Code-Updates enthalten.
+
+.Was Sie und#8217;ll benötigen
+* Zwei separate Netzwerke für Hochverfügbarkeit, Vergewissern Sie sich, dass Sie den iSCSI-Datenverkehr in getrennten Netzwerksegmenten isolieren.
+* Hardware-Flusssteuerung zum Senden und Empfangen aktiviert *Ende bis Ende*.
+* Flusskontrolle mit Priorität deaktiviert.
+* Gegebenenfalls aktivierten Jumbo Frames.
+
+
+
+NOTE: Port-Kanäle/LACP werden von den Switch-Ports des Controllers nicht unterstützt. Host-seitiges LACP wird nicht empfohlen; Multipathing bietet dieselben Vorteile oder noch besser.
+
+Informieren Sie sich in der Dokumentation des Switch-Anbieters.
+
+
+
+== Schritt: Netzwerk konfigurieren – ​iSCSI VMware
+
+Je nach Ihren Datenspeicheranforderungen können Sie Ihr iSCSI-Netzwerk auf unterschiedliche Weise einrichten. Wenden Sie sich an Ihren Netzwerkadministrator, wenn Sie Tipps zur Auswahl der für Ihre Umgebung am besten geeigneten Konfiguration benötigen.
+
+.Was Sie und#8217;ll benötigen
+* Hardware-Flusssteuerung zum Senden und Empfangen aktiviert *Ende bis Ende*.
+* Flusskontrolle mit Priorität deaktiviert.
+* Gegebenenfalls aktivierten Jumbo Frames.
++
+Wenn Sie aus Performance-Gründen Jumbo Frames im IP SAN verwenden, stellen Sie sicher, dass Sie das Array, die Switches und Hosts für die Verwendung von Jumbo Frames konfigurieren. Informationen zum Aktivieren von Jumbo-Frames auf den Hosts und Switches finden Sie in der Dokumentation zum Betriebssystem und Switch. Führen Sie die Schritte in Schritt 3 aus, um Jumbo Frames auf dem Array zu aktivieren.
+
+
+
+Denken Sie bei der Planung Ihrer iSCSI-Netzwerke daran, dass die https://configmax.vmware.com/home["VMware Konfigurationsmaxima"^] „Guide“ gibt an, dass die maximal unterstützten iSCSI-Speicherpfade 8 sind. Sie müssen diese Anforderung berücksichtigen, um nicht zu viele Pfade zu konfigurieren.
+
+Standardmäßig erstellt der VMware iSCSI Software Initiator eine einzelne Sitzung pro iSCSI-Ziel, wenn Sie keine iSCSI-Port-Bindung verwenden.
+
+
+NOTE: Bei der Bindung von VMware iSCSI-Ports handelt es sich um eine Funktion, bei der alle gebundenen VMkernel-Ports an alle Zielports angemeldet werden, auf die in den konfigurierten Netzwerksegmenten zugegriffen werden kann. Sie soll für Arrays verwendet werden, die eine einzige Netzwerkadresse für das iSCSI-Ziel enthalten. NetApp empfiehlt, die iSCSI-Portbindung nicht zu verwenden. Weitere Informationen finden Sie im http://kb.vmware.com/["VMware Knowledge Base"] Beziehen Sie den Artikel über Überlegungen bei der Verwendung von Software-iSCSI-Port-Bindung in ESX/ESXi ein. Wenn der ESXi Host an den Storage eines anderen Anbieters angeschlossen ist, empfiehlt NetApp, separate iSCSI VMkernel-Ports zu verwenden, um einen Konflikt mit Port-Bindung zu vermeiden.
+
+Als Best Practice sollten Sie BEI E-Series Storage-Arrays nicht die Portbindung verwenden.
+
+Verwenden Sie für eine gute Multipathing-Konfiguration mehrere Netzwerksegmente für das iSCSI-Netzwerk. Platzieren Sie mindestens einen Host-seitigen Port und mindestens einen Port jedes Array-Controllers in einem Netzwerksegment und eine identische Gruppe von Host- und Array-seitigen Ports in einem anderen Netzwerksegment. Verwenden Sie, falls möglich, mehrere Ethernet Switches, um zusätzliche Redundanz bereitzustellen.
+
+Informieren Sie sich in der Dokumentation des Switch-Anbieters.
+
+
+NOTE: Für IP-Overhead müssen viele Netzwerk-Switches über 9,000 Bytes konfiguriert werden. Weitere Informationen finden Sie in der Switch-Dokumentation.
+
+
+
+== Schritt 3: Array-seitiges Netzwerk konfigurieren – ​iSCSI, VMware
+
+Mit der SANtricity System Manager GUI können Sie das iSCSI-Netzwerk auf der Array-Seite konfigurieren.
+
+.Was Sie und#8217;ll benötigen
+* Die IP-Adresse oder der Domänenname für einen der Speicher-Array-Controller.
+* Das Passwort für die System Manager GUI, die rollenbasierte Zugriffssteuerung (Role-Based Access Control, RBAC) oder LDAP und ein Verzeichnisdienst werden so konfiguriert, dass der Sicherheitszugriff auf das Speicher-Array gewährleistet ist. Weitere Informationen zur Zugriffsverwaltung finden Sie in der Online-Hilfe des SANtricity System Managers.
+
+
+Dieser Task beschreibt den Zugriff auf die Konfiguration des iSCSI-Ports über die Seite Hardware. Sie können die Konfiguration auch über das Menü:System[Einstellungen > iSCSI-Ports konfigurieren] aufrufen.
+
+
+NOTE: Weitere Informationen zur Einrichtung des Array-seitigen Netzwerks bei Ihrer VMware Konfiguration finden Sie im folgenden technischen Bericht: https://www.netapp.com/us/media/tr-4789.pdf["Konfigurationsleitfaden für VMware E-Series SANtricity: ISCSI-Integration mit ESXi 6.x und 7.x"].
+
+.Schritte
+. Geben Sie in Ihrem Browser die folgende URL ein: `+https://<DomainNameOrIPAddress>+`
++
+`IPAddress` Ist die Adresse für einen der Storage Array Controller.
+
++
+Wenn SANtricity System Manager zum ersten Mal auf einem Array geöffnet wird, das nicht konfiguriert wurde, wird die Eingabeaufforderung Administratorkennwort festlegen angezeigt. Rollenbasierte Zugriffsverwaltung konfiguriert vier lokale Rollen: Administration, Support, Sicherheit und Monitoring. Die letzten drei Rollen haben zufällige Passwörter, die nicht erraten werden können. Nachdem Sie ein Passwort für die Administratorrolle festgelegt haben, können Sie alle Passwörter mit den Admin-Anmeldedaten ändern. Weitere Informationen zu den vier lokalen Benutzerrollen finden Sie in der Online-Hilfe des SANtricity-System-Managers.
+
+. Geben Sie in den Feldern Administratorpasswort festlegen und Passwort bestätigen das Passwort für die Administratorrolle ein und klicken Sie dann auf *Passwort festlegen*.
++
+Der Setup-Assistent wird gestartet, wenn keine Pools, Volume-Gruppen, Workloads oder Benachrichtigungen konfiguriert sind.
+
+. Schließen Sie den Setup-Assistenten.
++
+Sie verwenden den Assistenten später, um zusätzliche Setup-Aufgaben abzuschließen.
+
+. Wählen Sie *Hardware*.
+. Wenn die Grafik die Laufwerke anzeigt, klicken Sie auf *Zurück zum Regal anzeigen*.
++
+Die Grafik ändert sich, um die Controller anstelle der Laufwerke anzuzeigen.
+
+. Klicken Sie auf den Controller mit den iSCSI-Ports, die Sie konfigurieren möchten.
++
+Das Kontextmenü des Controllers wird angezeigt.
+
+. Wählen Sie *iSCSI-Ports konfigurieren*.
++
+Das Dialogfeld iSCSI-Ports konfigurieren wird geöffnet.
+
+. Wählen Sie in der Dropdown-Liste den Port aus, den Sie konfigurieren möchten, und klicken Sie dann auf *Weiter*.
+. Wählen Sie die Einstellungen für den Konfigurationsanschluss aus, und klicken Sie dann auf *Weiter*.
++
+Um alle Porteinstellungen anzuzeigen, klicken Sie rechts im Dialogfeld auf den Link *Weitere Porteinstellungen anzeigen*.
+
++
+|===
+| Port-Einstellung | Beschreibung 
+
+
+ a| 
+Konfigurierte Geschwindigkeit des ethernet-Ports
+ a| 
+Wählen Sie die gewünschte Geschwindigkeit. Die in der Dropdown-Liste angezeigten Optionen hängen von der maximalen Geschwindigkeit ab, die Ihr Netzwerk unterstützen kann (z. B. 10 Gbit/s).
+
+
+NOTE: Die auf den Controllern verfügbaren optionalen 25-GB-iSCSI-Host-Schnittstellenkarten verfügen nicht über die automatische Aushandlung von Geschwindigkeiten. Sie müssen die Geschwindigkeit für jeden Port entweder auf 10 GB oder auf 25 GB einstellen. Alle Ports müssen auf dieselbe Geschwindigkeit festgelegt sein.
+
+
+
+ a| 
+IPv4 aktivieren/IPv6 aktivieren
+ a| 
+Wählen Sie eine oder beide Optionen aus, um die Unterstützung für IPv4- und IPv6-Netzwerke zu aktivieren.
+
+
+
+ a| 
+TCP-Listening-Port (verfügbar durch Klicken auf *Weitere Port-Einstellungen anzeigen*.)
+ a| 
+Geben Sie bei Bedarf eine neue Portnummer ein.
+
+Der Listening-Port ist die TCP-Port-Nummer, die der Controller zum Abhören von iSCSI-Anmeldungen von Host-iSCSI-Initiatoren verwendet. Der standardmäßige Listenanschluss ist 3260. Sie müssen 3260 oder einen Wert zwischen 49152 und 65535 eingeben.
+
+
+
+ a| 
+MTU-Größe (verfügbar durch Klicken auf *Weitere Porteinstellungen anzeigen*.)
+ a| 
+Geben Sie bei Bedarf eine neue Größe in Byte für die maximale Übertragungseinheit (MTU) ein.
+
+Die Standardgröße für maximale Übertragungseinheit (Maximum Transmission Unit, MTU) beträgt 1500 Byte pro Frame. Sie müssen einen Wert zwischen 1500 und 9000 eingeben.
+
+
+
+ a| 
+ICMP PING-Antworten aktivieren
+ a| 
+Wählen Sie diese Option aus, um das ICMP (Internet Control Message Protocol) zu aktivieren. Die Betriebssysteme von vernetzten Computern verwenden dieses Protokoll zum Senden von Meldungen. Diese ICMP-Meldungen bestimmen, ob ein Host erreichbar ist und wie lange es dauert, bis Pakete von und zu diesem Host gelangen.
+
+|===
++
+Wenn Sie *IPv4 aktivieren* ausgewählt haben, wird ein Dialogfeld zur Auswahl von IPv4-Einstellungen geöffnet, nachdem Sie auf *Weiter* geklickt haben. Wenn Sie *IPv6* aktivieren ausgewählt haben, wird ein Dialogfeld zur Auswahl von IPv6-Einstellungen geöffnet, nachdem Sie auf *Weiter* geklickt haben. Wenn Sie beide Optionen ausgewählt haben, wird zuerst das Dialogfeld für IPv4-Einstellungen geöffnet, und nach dem Klicken auf *Weiter* wird das Dialogfeld für IPv6-Einstellungen geöffnet.
+
+. Konfigurieren Sie die IPv4- und/oder IPv6-Einstellungen automatisch oder manuell. Um alle Porteinstellungen anzuzeigen, klicken Sie rechts im Dialogfeld auf den Link *Weitere Einstellungen anzeigen*.
++
+|===
+| Port-Einstellung | Beschreibung 
+
+
+ a| 
+Automatische Ermittlung der Konfiguration
+ a| 
+Wählen Sie diese Option aus, um die Konfiguration automatisch abzurufen.
+
+
+
+ a| 
+Statische Konfiguration manuell festlegen
+ a| 
+Wählen Sie diese Option aus, und geben Sie dann eine statische Adresse in die Felder ein. Geben Sie bei IPv4 die Subnetzmaske und das Gateway des Netzwerks an. Geben Sie für IPv6 die routingfähige IP-Adresse und die Router-IP-Adresse ein.
+
+|===
+. Klicken Sie Auf *Fertig Stellen*.
+. Schließen Sie System Manager.
+
+
+
+
+== Schritt 4: Host-seitiges Netzwerk konfigurieren – ​iSCSI
+
+Durch die Konfiguration des iSCSI-Netzwerkes auf der Hostseite kann der VMware iSCSI-Initiator eine Sitzung mit dem Array einrichten.
+
+In dieser Express-Methode zur Konfiguration von iSCSI-Netzwerken auf der Hostseite ermöglichen Sie dem ESXi Host, iSCSI-Datenverkehr über vier redundante Pfade zum Speicher zu übertragen.
+
+Nach Abschluss dieser Aufgabe ist der Host mit einem einzigen vSwitch konfiguriert, der sowohl VMkernel-Ports als auch vmnics enthält.
+
+Weitere Informationen zum Konfigurieren von iSCSI-Netzwerken für VMware finden Sie im https://docs.vmware.com/en/VMware-vSphere/index.html["Dokumentation zu VMware vSphere"^] Für Ihre Version von vSphere.
+
+.Schritte
+. Konfigurieren Sie die Switches, die für iSCSI-Speicherdatenverkehr verwendet werden.
+. Aktivieren Sie die Steuerung des Hardware-Ablaufs senden und empfangen *Ende bis Ende*.
+. Deaktivieren Sie die Steuerung des Prioritätsflusses.
+. Führen Sie die Array-seitige iSCSI-Konfiguration durch.
+. Verwenden Sie zwei NIC-Ports für iSCSI-Datenverkehr.
+. Verwenden Sie den vSphere-Client oder den vSphere-Webclient, um die Host-seitige Konfiguration durchzuführen.
++
+Die Schnittstellen variieren in der Funktionalität und der genaue Workflow wird unterschiedlich.
+
+
+
+
+
+== Schritt 5: Überprüfen Sie IP-Netzwerkverbindungen – ​iSCSI, VMware
+
+Sie überprüfen IP-Netzwerkverbindungen des Internet Protocol (Internet Protocol), indem Sie Ping-Tests verwenden, um sicherzustellen, dass Host und Array kommunizieren können.
+
+.Schritte
+. Führen Sie auf dem Host einen der folgenden Befehle aus, je nachdem, ob Jumbo Frames aktiviert sind:
++
+** Wenn Jumbo Frames nicht aktiviert sind, führen Sie den folgenden Befehl aus:
++
+[listing]
+----
+vmkping <iSCSI_target_IP_address\>
+----
+** Wenn Jumbo Frames aktiviert sind, führen Sie den Ping-Befehl mit einer Nutzlastgröße von 8,972 Byte aus. Die kombinierten IP- und ICMP-Header sind 28 Bytes, was, wenn sie der Nutzlast hinzugefügt werden, 9,000 Bytes entspricht. Der -s-Schalter legt den Wert fest `packet size` Bit. Der -d Schalter setzt das DF-Bit (nicht fragment) auf das IPv4-Paket. Mit diesen Optionen können Jumbo-Frames mit 9,000 Byte erfolgreich zwischen iSCSI-Initiator und Ziel übertragen werden.
++
+[listing]
+----
+vmkping -s 8972 -d <iSCSI_target_IP_address\>
+----
++
+In diesem Beispiel lautet die iSCSI-Ziel-IP-Adresse `192.0.2.8`.
+
++
+[listing]
+----
+vmkping -s 8972 -d 192.0.2.8
+Pinging 192.0.2.8 with 8972 bytes of data:
+Reply from 192.0.2.8: bytes=8972 time=2ms TTL=64
+Reply from 192.0.2.8: bytes=8972 time=2ms TTL=64
+Reply from 192.0.2.8: bytes=8972 time=2ms TTL=64
+Reply from 192.0.2.8: bytes=8972 time=2ms TTL=64
+Ping statistics for 192.0.2.8:
+  Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+  Minimum = 2ms, Maximum = 2ms, Average = 2ms
+----
+
+
+. Geben Sie A aus `vmkping` Befehl von der Initiatoradresse jedes Hosts (die IP-Adresse des für iSCSI verwendeten Host-Ethernet-Ports) an jeden Controller-iSCSI-Port. Führen Sie diese Aktion von jedem Host-Server in der Konfiguration aus, wobei die IP-Adressen bei Bedarf geändert werden.
++
+
+NOTE: Wenn der Befehl mit der Meldung fehlschlägt `sendto() failed (Message too long)`, Überprüfen Sie die MTU-Größe (Jumbo Frame-Unterstützung) für die Ethernet-Schnittstellen auf dem Host-Server, dem Storage-Controller und den Switch-Ports.
+
+. Kehren Sie zum Verfahren iSCSI-Konfiguration zurück, um die Zielerkennung zu beenden.
+
+
+
+
+== Schritt 6: Notieren Sie Ihre Konfiguration
+
+Sie können eine PDF-Datei auf dieser Seite erstellen und drucken und dann mithilfe des folgenden Arbeitsblatts Ihre protokollspezifischen Speicherkonfigurationsinformationen aufzeichnen. Sie benötigen diese Informationen für Bereitstellungsaufgaben.
+
+
+
+=== Empfohlene Konfiguration
+
+Empfohlene Konfigurationen bestehen aus zwei Initiator-Ports und vier Ziel-Ports mit einem oder mehreren VLANs.
+
+image::../media/50001_01_conf-vmw.gif[50001 01 conf vmw]
+
+
+
+=== Ziel-IQN
+
+|===
+| Nummer Der Legende | Ziel-Port-Verbindung | IQN 
+
+
+ a| 
+2
+ a| 
+Ziel-Port
+ a| 
+
+|===
+
+
+=== Zuordnung des Hostnamens
+
+|===
+| Nummer Der Legende | Host-Informationen | Name und Typ 
+
+
+ a| 
+1
+ a| 
+Zuordnung des Hostnamens
+ a| 
+
+
+
+ a| 
+ a| 
+Host-OS-Typ
+ a| 
+
+|===

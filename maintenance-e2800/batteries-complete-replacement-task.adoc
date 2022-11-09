@@ -1,0 +1,157 @@
+---
+permalink: maintenance-e2800/batteries-complete-replacement-task.html 
+sidebar: sidebar 
+keywords: E2800 battery fail, E2800 battery, E2800 battery replacement, replace E2800 battery, replacing E2800 battery, E2800, E-Series, eseries 
+summary: Schließen Sie einen Batteriewechsel ab. 
+---
+= Den Austausch der E2800 Batterie abschließen
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Die Schritte zum vollständigen Batterieaustausch hängen davon ab, ob Sie über eine Duplexkonfiguration (zwei Controller) oder eine Simplex-Konfiguration (ein Controller) verfügen.
+
+* Informationen zu Duplexkonfigurationen finden Sie unter  controller online (duplex).
+* Informationen zu Simplexkonfigurationen finden Sie unter  up controller (simplex).
+
+
+
+
+== Controller online schalten (Duplex)
+
+Stellen Sie den Controller online, um sicherzustellen, dass das Speicher-Array ordnungsgemäß funktioniert. Anschließend können Sie Supportdaten erfassen und den Betrieb fortsetzen.
+
+
+NOTE: Führen Sie diese Aufgabe nur aus, wenn Ihr Speicher-Array über zwei Controller verfügt.
+
+.Schritte
+. Überprüfen Sie beim Booten des Controllers die Controller-LEDs und die siebenSegment-Anzeige.
++
+
+NOTE: Die Abbildung zeigt einen Beispiel-Controller-Behälter. Ihr Controller kann über eine andere Anzahl und einen anderen Typ von Host-Ports verfügen.
+
++
+Wenn die Kommunikation mit der anderen Steuerung wiederhergestellt wird:
+
++
+** Die 7-Segment-Anzeige zeigt die sich wiederholende Sequenz *OS*, *OL*, *_blank_* an, um anzuzeigen, dass der Controller offline ist.
+** Die gelbe Warn-LED leuchtet weiterhin.
+** Je nach Host-Schnittstelle leuchtet, blinkt oder leuchtet die LED für Host-Link möglicherweise nicht.image:../media/28_dwg_attn_led_7s_display_maint-e2800.gif[""]
++
+*(1)* _Warn-LED (gelb)_
+
++
+*(2)* _Sieben-Segment-Anzeige_
+
++
+*(3)* _Host Link LEDs_
+
+
+
+. Stellen Sie den Controller mit SANtricity System Manager online.
++
+** Über den SANtricity System Manager:
++
+... Wählen Sie *Hardware*.
+... Wenn die Grafik die Laufwerke anzeigt, wählen Sie *Zurück von Regal anzeigen*.
+... Wählen Sie den Controller aus, den Sie online platzieren möchten.
+... Wählen Sie im Kontextmenü * Online platzieren* aus, und bestätigen Sie, dass Sie den Vorgang ausführen möchten.
++
+Das System stellt den Controller online.
+
+
+
+** Alternativ können Sie den Controller mithilfe der folgenden CLI-Befehle wieder online schalten:
++
+* Für Steuerung A:* `set controller [a] availability=online;`
+
++
+* Für Regler B:* `set controller [b] availability=online;`
+
+
+
+. Wenn der Controller wieder online ist, bestätigen Sie, dass sein Status optimal lautet, und überprüfen Sie die Warn-LEDs für das Controller-Shelf.
++
+Wenn der Status nicht optimal ist oder eine der Warn-LEDs leuchtet, vergewissern Sie sich, dass alle Kabel richtig eingesetzt sind, und überprüfen Sie, ob die Batterie und der Controller-Behälter richtig installiert sind. Gegebenenfalls den Controller-Behälter und die Batterie ausbauen und wieder einbauen.
+
++
+
+NOTE: Wenden Sie sich an den technischen Support, wenn das Problem nicht gelöst werden kann.
+
+. Falls nötig, erfassen Sie mit SANtricity System Manager Support-Daten für Ihr Storage Array.
++
+.. Wählen Sie MENU:Support[Support Center > Diagnose].
+.. Wählen Sie *Support-Daten Erfassen* Aus.
+.. Klicken Sie Auf *Collect*.
++
+Die Datei wird im Ordner Downloads für Ihren Browser mit dem Namen *Support-Data.7z* gespeichert.
+
+
+
+
+
+Der Austausch des Akkus ist abgeschlossen. Sie können den normalen Betrieb fortsetzen.
+
+
+
+== Controller einschalten (Simplexkonfiguration)
+
+Schalten Sie das Controller-Shelf ein, um zu überprüfen, ob es ordnungsgemäß funktioniert. Anschließend können Sie Supportdaten erfassen und den Betrieb fortsetzen.
+
+
+NOTE: Führen Sie diese Aufgabe nur aus, wenn Ihr Speicher-Array über einen Controller verfügt.
+
+.Schritte
+. Schalten Sie die beiden Netzschalter an der Rückseite des Controller-Shelf ein.
++
+** Schalten Sie die Netzschalter während des Einschaltvorgangs nicht aus, was in der Regel 90 Sekunden oder weniger dauert.
+** Die Lüfter in jedem Regal sind beim ersten Start sehr laut. Das laute Geräusch beim Anfahren ist normal.
+
+
+. Überprüfen Sie beim Booten des Controllers die Controller-LEDs und die Anzeige für sieben Segmente.
++
+** Das 7-Segment-Display zeigt die sich wiederholende Sequenz *OS*, *SD*, *_blank_* an, um anzuzeigen, dass der Controller die SOD-Verarbeitung (Start-of-day) durchführt. Nachdem ein Controller erfolgreich gestartet wurde, sollte auf seinem siebenstelligen Display die Fach-ID angezeigt werden.
+** Die gelbe Warn-LED am Controller leuchtet und schaltet sich dann aus, sofern kein Fehler vorliegt.
+** Die grünen Host-Link-LEDs leuchten auf.
++
+
+NOTE: Die Abbildung zeigt einen Beispiel-Controller-Behälter. Ihr Controller kann über eine andere Anzahl und einen anderen Typ von Host-Ports verfügen.
+
++
+image::../media/28_dwg_attn_led_7s_display_maint-e2800.gif[28-Sekunden-LED 7s Display maint e2800]
+
++
+*(1)* _Warn-LED (gelb)_
+
++
+*(2)* _Sieben-Segment-Anzeige_
+
++
+*(3)* _Host Link LEDs_
+
+
+
+. Vergewissern Sie sich, dass der Status des Controllers optimal lautet und überprüfen Sie die Warn-LEDs für das Controller-Shelf.
++
+Wenn der Status nicht optimal ist oder eine der Warn-LEDs leuchtet, vergewissern Sie sich, dass alle Kabel richtig eingesetzt sind, und überprüfen Sie, ob die Batterie und der Controller-Behälter richtig installiert sind. Gegebenenfalls den Controller-Behälter und die Batterie ausbauen und wieder einbauen.
+
++
+
+NOTE: Wenden Sie sich an den technischen Support, wenn das Problem nicht gelöst werden kann.
+
+. Falls nötig, erfassen Sie mit SANtricity System Manager Support-Daten für Ihr Storage Array.
++
+.. Wählen Sie MENU:Support[Support Center > Diagnose].
+.. Wählen Sie *Support-Daten Erfassen* Aus.
+.. Klicken Sie Auf *Collect*.
++
+Die Datei wird im Ordner Downloads für Ihren Browser mit dem Namen *Support-Data.7z* gespeichert.
+
+
+
+
+
+Der Austausch des Akkus ist abgeschlossen. Sie können den normalen Betrieb fortsetzen.

@@ -1,0 +1,33 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/vc-olh-change-workload-settings.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
+summary: Ändern Sie den Namen für einen Workload und zeigen Sie den zugehörigen Applikationstyp an. 
+---
+= Workload-Einstellungen ändern
+:hardbreaks:
+:allow-uri-read: 
+:experimental: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Sie können den Namen für einen Workload ändern und den zugehörigen Applikationstyp anzeigen.
+
+.Schritte
+. Wählen Sie auf der Seite Verwalten das Speicher-Array aus, das den Workload enthält, den Sie ändern möchten.
+. Wählen Sie MENU:Provisioning[Volumes verwalten].
+. Wählen Sie die Registerkarte * Anwendungen & Workloads* aus.
++
+Die Ansicht Applikationen und Workloads wird angezeigt.
+
+. Wählen Sie den Workload aus, den Sie ändern möchten, und wählen Sie dann *Einstellungen anzeigen/bearbeiten* aus.
++
+Das Dialogfeld „Anwendungen und Workloads-Einstellungen“ wird angezeigt.
+
+. (Optional) Ändern Sie den vom Benutzer bereitgestellten Namen des Workloads.
+. Klicken Sie Auf *Speichern*.
+

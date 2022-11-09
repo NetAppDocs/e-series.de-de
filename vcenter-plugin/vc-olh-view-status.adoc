@@ -1,0 +1,65 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/vc-olh-view-status.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
+summary: Zeigen Sie den Systemstatus über das Storage Plug-in für vCenter oder über den vSphere Client an 
+---
+= Status anzeigen
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Sie können den Systemstatus über das Storage Plug-in für vCenter oder über den vSphere Client anzeigen.
+
+. Öffnen Sie das Plug-in aus dem vSphere Client.
+. Status aus den folgenden Bereichen anzeigen:
++
+** *Storage Array Status* -- Gehen Sie zum Fenster *Manage-All*. Für jedes erkannte Array wird in der Zeile eine Spalte Status angezeigt.
+** *Operationen in Bearbeitung* -- Klicken Sie auf *Operationen* auf der Seitenleiste, um alle lang laufenden Aufgaben, wie das Importieren von Einstellungen, anzuzeigen. Über das Dropdown-Menü Provisioning können Sie auch langlebige Vorgänge anzeigen. Für jeden Vorgang, der im Dialogfeld „laufende Vorgänge“ aufgeführt wird, werden ein Prozentsatz des Fertigstellungsvorgangs und die geschätzte verbleibende Zeit bis zum Abschluss des Vorgangs angezeigt. In einigen Fällen können Sie einen Vorgang anhalten oder eine höhere oder niedrigere Priorität zuweisen. Verwenden Sie die Links in der Spalte Aktionen, um die Priorität für einen Vorgang zu beenden oder zu ändern.
+
+
+
+
+
+CAUTION: Lesen Sie alle in den Dialogfeldern angegebenen Vorsichtstexte, insbesondere wenn Sie einen Vorgang unterbrechen.
+
+Operationen, die für das Plugin angezeigt werden können, sind in der folgenden Tabelle aufgelistet. Möglicherweise werden auch weitere Vorgänge in der Benutzeroberfläche von System Manager angezeigt.
+
+|===
+| Betrieb | Möglicher Status des Vorgangs | Maßnahmen, die Sie ergreifen können 
+
+
+| Volume-Erstellung (nur Thick Pool Volumes über 64 tib) | In Bearbeitung | Keine 
+
+
+| Volume-Löschen (nur Thick Pool Volumes über 64 tib) | In Bearbeitung | Keine 
+
+
+| Hinzufügen von Kapazitäten für den Pool oder die Volume-Gruppe | In Bearbeitung | Keine 
+
+
+| Ändern Sie einen RAID-Level für ein Volume | In Bearbeitung | Keine 
+
+
+| Reduktion der Kapazität für einen Pool | In Bearbeitung | Keine 
+
+
+| Prüfen Sie die verbleibende Zeit für einen IAF-Betrieb (Instant Availability Format) für Pool Volumes | In Bearbeitung | Keine 
+
+
+| Prüfen Sie die Datenredundanz einer Volume-Gruppe | In Bearbeitung | Keine 
+
+
+| Initialisieren Sie ein Volume | In Bearbeitung | Keine 
+
+
+| Höhere Kapazität für ein Volume | In Bearbeitung | Keine 
+
+
+| Ändern Sie die Segmentgröße für ein Volume | In Bearbeitung | Keine 
+|===

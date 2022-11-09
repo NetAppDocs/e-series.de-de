@@ -1,0 +1,14 @@
+---
+permalink: maintenance-e2800/concept-host-interface-cards-wombat.html 
+sidebar: sidebar 
+keywords: host, interface, card, hic, install, controller, canister, e2800, built-in, host, port, baseboard 
+summary: 'Eine Host-Schnittstellenkarte \(HIC\) kann optional in einem Controller-Behälter installiert werden. Der E2800 Controller enthält integrierte Host-Ports auf der Controller-Karte selbst sowie Host-Ports auf der optionalen HIC. Host Ports, die in den Controller integriert sind, werden als Baseboard Host Ports bezeichnet. In die HIC integrierte Host Ports werden HIC Ports genannt.' 
+---
+= Host-Schnittstellenkarten
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Eine Host Interface Card (HIC) kann optional in einem Controller-Behälter installiert werden. Der E2800 Controller enthält integrierte Host-Ports auf der Controller-Karte selbst sowie Host-Ports auf der optionalen HIC. Host Ports, die in den Controller integriert sind, werden als Baseboard Host Ports bezeichnet. In die HIC integrierte Host Ports werden HIC Ports genannt.

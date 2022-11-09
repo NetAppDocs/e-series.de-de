@@ -1,0 +1,126 @@
+---
+permalink: config-linux/fc-worksheet-concept.html 
+sidebar: sidebar 
+keywords: FC worksheet Linux, express linux configuration, software configuration, linux host, 
+summary: Verwenden Sie dieses Arbeitsblatt, um Informationen zur FC-Storage-Konfiguration aufzunehmen. 
+---
+= Notieren Sie Ihre FC-Konfiguration
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können eine PDF-Datei auf dieser Seite erstellen und drucken und anschließend die Konfigurationsinformationen für den FC-Speicher mithilfe des folgenden Arbeitsblatts erfassen. Sie benötigen diese Informationen für Bereitstellungsaufgaben.
+
+Die Abbildung zeigt einen Host, der in zwei Zonen mit einem Storage-Array der E-Series verbunden ist. Eine Zone wird durch die blaue Linie angezeigt; die andere Zone wird durch die rote Linie angezeigt. Jeder einzelne Port verfügt über zwei Pfade zum Storage (einen zu jedem Controller).
+
+image::../media/port_identifiers_host_and_target_conf-lin.gif[Port-IDs Host- und Ziel-conf lin]
+
+
+
+== Host-IDs
+
+|===
+| Nummer Der Legende | Host-Port-Verbindungen (Initiator) | WWPN 
+
+
+ a| 
+1
+ a| 
+Host
+ a| 
+_Nicht zutreffend_
+
+
+
+ a| 
+2
+ a| 
+Host-Port 0 zu FC-Switch-Zone 0
+ a| 
+
+
+
+ a| 
+7
+ a| 
+Host Port 1 zu FC Switch Zone 1
+ a| 
+
+|===
+
+
+== Zielkennungen
+
+|===
+| Nummer Der Legende | Port-Verbindungen für Array-Controller (Ziel | WWPN 
+
+
+ a| 
+3
+ a| 
+Switch
+ a| 
+_Nicht zutreffend_
+
+
+
+ a| 
+6
+ a| 
+Array-Controller (Ziel)
+ a| 
+_Nicht zutreffend_
+
+
+
+ a| 
+5
+ a| 
+Controller A, Port 1 zu FC Switch 1
+ a| 
+
+
+
+ a| 
+9
+ a| 
+Controller A, Port 2 zu FC Switch 2
+ a| 
+
+
+
+ a| 
+4
+ a| 
+Controller B, Port 1 zu FC Switch 1
+ a| 
+
+
+
+ a| 
+8
+ a| 
+Controller B, Port 2 zu FC Switch 2
+ a| 
+
+|===
+
+
+== Host wird zugeordnet
+
+|===
+
+
+ a| 
+Zuordnung des Hostnamens
+ a| 
+
+
+
+ a| 
+Host-OS-Typ
+ a| 
+
+|===

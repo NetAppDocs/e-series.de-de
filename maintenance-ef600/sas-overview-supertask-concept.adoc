@@ -1,0 +1,26 @@
+---
+permalink: maintenance-ef600/sas-overview-supertask-concept.html 
+sidebar: sidebar 
+keywords: replace EF300 SAS expansion card, replacing SAS card, drive tray expansion, expansion card 
+summary: Prüfen Sie die Anforderungen und Überlegungen, bevor Sie eine EF300-SAS-Erweiterungskarte ersetzen. 
+---
+= Anforderungen für den Austausch der EF300- und EF600-SAS-Erweiterungskarten
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Wenn Sie eine SAS-Erweiterungskarte zu einer EF300 oder EF600 hinzufügen möchten, prüfen Sie die folgenden Anforderungen.
+
+* Sie müssen dem folgen link:../install-hw-ef600/index.html["Installation und Einrichtung von EF300- und EF600-Storage-Systemen"] Um den Controller einzurichten.
+* Sie müssen Ihre Firmware auf die neueste Version aktualisieren. Befolgen Sie zum Aktualisieren der Firmware die Anweisungen im link:../upgrade-santricity/index.html["Aktualisieren des SANtricity Betriebssystems"].
+* Sie müssen für dieses Verfahren ein Wartungsfenster zur Ausfallzeit planen. Sie können erst nach erfolgreichem Abschluss dieses Verfahrens auf Daten im Speicher-Array zugreifen.
+* Sie müssen diese Aufgabe mit beiden Controller-Kanistern durchführen.
+* Sie haben ein ESD-Armband oder andere antistatische Vorsichtsmaßnahmen getroffen.
+* Sie haben einen #1 Kreuzschlitzschraubendreher.
+* Sie haben Etiketten, um jedes Kabel zu identifizieren, das mit dem Controller-Behälter verbunden ist.
+* Sie verfügen über eine Management Station mit einem Browser, der für den Controller auf den SANtricity System Manager zugreifen kann. (Zeigen Sie zum Öffnen der System Manager-Schnittstelle den Domain-Namen oder die IP-Adresse des Controllers im Browser.)
+* Für EF300-Controller ist möglicherweise eine SAS-Erweiterungskarte in Port 1 installiert, um die Laufwerksfacherweiterung zu ermöglichen.
+* Informationen zur Verkabelung Ihrer SAS-Erweiterung finden Sie unter link:../install-hw-cabling/index.html["Verkabelung der E-Series Hardware"] Weitere Anweisungen.
+

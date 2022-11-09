@@ -1,0 +1,82 @@
+---
+permalink: remote-storage-volumes/import-remote-storage-task.html 
+sidebar: sidebar 
+keywords: import Remote Storage Volumes, RTV import, import remote volumes, remote storage E-Series 
+summary: Der Import des Remote-Speichergeräts erfolgt über den Assistenten zum Importieren von Remote-Speicher im SANtricity-System Manager. Mit der Funktion Remote Storage Import können Daten von einem Remote-Speichergerät in das lokale E-Series Array verschoben werden. 
+---
+= Remote-Speicher importieren
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Um einen Storage-Import von einem Remote-System auf ein lokales E-Series Storage-System zu initiieren, verwenden Sie den Assistenten zum Importieren von Remote Storage in der Benutzeroberfläche von SANtricity System Manager.
+
+.Was Sie und#8217;ll benötigen
+* Das E-Series Storage-System muss so konfiguriert sein, dass es mit dem Remote-Storage-System kommunizieren kann. Siehe link:setup-remote-volumes-concept.html["Hardware konfigurieren"].
+* Erfassen Sie für das Remote-Speichersystem die folgenden Informationen:
++
+** ISCSI-IQN
+** ISCSI-IP-Adressen
+** LUN-Nummer des Remote Storage-Geräts (Quell-Volume)
+
+
+* Erstellen oder wählen Sie für das lokale E-Series Storage-System ein Volume aus, das für den Datenimport verwendet werden soll. Das Ziel-Volume muss die folgenden Anforderungen erfüllen:
++
+** Entspricht der Blockgröße des Remote-Speichergeräts (dem Quell-Volume).
+** Verfügt über eine Kapazität, die dem Remote-Speichergerät entspricht oder größer ist.
+** Zustand optimal und verfügbar Eine vollständige Liste der Anforderungen finden Sie unter link:system-reqs-concept.html["Anforderungen und Einschränkungen zu erfüllen"].
+
+
+* Empfohlen: Sichern Sie Volumes auf dem Remote-Speichersystem, bevor Sie den Importvorgang starten.
+
+
+In dieser Aufgabe erstellen Sie eine Zuordnung zwischen dem Remote-Storage-Gerät und einem Volume auf dem lokalen E-Series Storage-System. Wenn Sie die Konfiguration abgeschlossen haben, beginnt der Import.
+
+
+NOTE: Da viele Variablen sich auf den Importvorgang und seine Abschlusszeit auswirken können, sollten Sie zuerst kleinere Importe für „Test“ durchführen. Mit diesen Tests stellen Sie sicher, dass alle Verbindungen wie erwartet funktionieren und dass der Importvorgang in einem angemessenen Zeitraum abgeschlossen wird.
+
+.Schritte
+. Klicken Sie im SANtricity System Manager auf *Storage > Remote-Speicher*.
+. Klicken Sie Auf *Remote Storage Importieren*.
++
+Ein Assistent zum Importieren von Remote-Speicher wird angezeigt.
+
+. Geben Sie in Schritt 1a des Bedienfelds „Quelle konfigurieren“ Verbindungsinformationen ein.
++
+.. Geben Sie unter dem Feld *Name* den Namen für das Remote-Speichergerät ein.
+.. Geben Sie unter *iSCSI-Verbindungseigenschaften* für das Remote-Speichergerät Folgendes ein: IQN, IP-Adresse und Portnummer (Standard: 3260).
++
+Wenn Sie eine weitere iSCSI-Verbindung hinzufügen möchten, klicken Sie auf *+Weitere IP-Adresse hinzufügen*, um eine zusätzliche IP-Adresse für den Remote-Speicher hinzuzufügen. Wenn Sie fertig sind, klicken Sie auf *Weiter*.
+
++
+Nachdem Sie auf Weiter geklickt haben, wird Schritt 1b des Bedienfelds „Quelle konfigurieren“ angezeigt.
+
+
+
+. Wählen Sie im Feld *LUN* die gewünschte Quell-LUN für das Remote-Speichergerät aus, und klicken Sie dann auf *Weiter*.
++
+Das Fenster „Ziel konfigurieren“ wird geöffnet und zeigt Volume-Kandidaten an, die als Ziel für den Import dienen sollen. Einige Volumes werden aufgrund von Blockgröße, Kapazität oder Volume-Verfügbarkeit nicht in der Liste der Kandidaten angezeigt.
+
+. Wählen Sie aus der Tabelle ein Ziel-Volume auf dem E-Series Storage-System aus. Verwenden Sie bei Bedarf den Schieberegler, um die Importpriorität zu ändern. Klicken Sie Auf *Weiter*. Bestätigen Sie den Vorgang im nächsten Dialogfeld, indem Sie eingeben `continue`, Und dann auf *Weiter* klicken.
++
+Wenn das Ziel-Volume eine Kapazität besitzt, die größer als das Quell-Volume ist, wird diese zusätzliche Kapazität nicht dem mit dem E-Series System verbundenen Host gemeldet. Um die neue Kapazität zu verwenden, müssen Sie auf dem Host nach Abschluss des Importvorgangs eine Dateisystemerweiterung durchführen und die Verbindung trennen.
+
++
+Nachdem Sie die Konfiguration im Dialogfeld bestätigt haben, wird das Fenster Überprüfung angezeigt.
+
+. Überprüfen Sie auf dem Bildschirm Überprüfung, ob die angegebenen Einstellungen für Remote-Speicher, Ziel und Import korrekt sind. Klicken Sie auf *Fertig stellen*, um die Erstellung des Remote-Speichers abzuschließen.
++
+Es wird ein weiteres Dialogfeld geöffnet, in dem Sie gefragt werden, ob Sie einen anderen Import starten möchten.
+
+. Klicken Sie bei Bedarf auf *Ja*, um einen anderen Remote-Speicherimport zu erstellen. Wenn Sie auf Ja klicken, gelangen Sie zu Schritt 1a des Bedienfelds „Quelle konfigurieren“, in dem Sie die vorhandene Konfiguration auswählen oder eine neue hinzufügen können. Wenn Sie keinen weiteren Import erstellen möchten, klicken Sie auf *Nein*, um das Dialogfeld zu schließen.
++
+Sobald der Importvorgang beginnt, wird das gesamte Zielvolume mit den kopierten Daten überschrieben. Wenn der Host während dieses Prozesses neue Daten auf das Ziel-Volume schreibt, werden diese neuen Daten wieder an das Remote-Gerät (Quell-Volume) übertragen.
+
+. Zeigen Sie den Fortschritt des Vorgangs im Dialogfeld „Anzeigevorgänge“ im Fenster „Remote-Speicher“ an.
++
+Wie lange der Importvorgang abgeschlossen werden muss, hängt von der Größe des Remote-Speichersystems, der Prioritätseinstellung für den Import und der Menge der I/O-Last auf beiden Storage-Systemen und den zugehörigen Volumes ab. Nach Abschluss des Imports handelt es sich bei dem lokalen Volume um ein Duplikat des Remote-Speichergeräts.
+
+. Wenn Sie bereit sind, die Beziehung zwischen den beiden Volumes zu brechen, wählen Sie im Importobjekt in der Ansicht Operationen in Progress *Disconnect* aus. Sobald die Beziehung getrennt ist, kehrt die Performance des lokalen Volumes wieder in den Normalzustand zurück und wird nicht mehr von der Remote-Verbindung beeinträchtigt.
+

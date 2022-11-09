@@ -1,0 +1,54 @@
+---
+permalink: cloud-connector/index.html 
+sidebar: sidebar 
+keywords: Cloud Connector 
+summary: SANtricity Cloud Connector 
+---
+= Überblick über den SANtricity® Cloud Connector
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SANtricity Cloud Connector ist eine Host-basierte Linux Applikation, die vollständige Block- und dateibasierte Backups und Recoverys von E-Series Volumes auf S3-Reklamationskonten (z. B. Amazon Simple Storage Service und NetApp StorageGRID) sowie eine NetApp AltaVault Appliance ermöglicht.
+
+Der SANtricity Cloud Connector ist für die Installation auf RedHat- und SUSE Linux-Plattformen verfügbar und ist eine Paketlösung (.bin-Datei). Nach der Installation von SANtricity Cloud Connector können Sie die Applikation so konfigurieren, dass Backup- und Restore-Jobs für E-Series Volumes auf einer AltaVault Appliance oder Ihren vorhandenen Amazon S3 oder StorageGRID Konten ausgeführt werden. Alle Jobs, die über den SANtricity-Cloud-Connector ausgeführt werden, verwenden REST-basierte APIs.
+
+
+NOTE: Das SANtricity Cloud Connector-Tool ist veraltet und kann nicht mehr heruntergeladen werden.
+
+
+
+== Überlegungen
+
+Beachten Sie bei der Verwendung dieser Verfahren Folgendes:
+
+* Konfigurations- und Sicherungs-/Wiederherstellungsaufträge, die in diesen Verfahren beschrieben werden, gelten für die grafische Benutzeroberflächenversion des SANtricity Cloud Connectors.
+* REST-API-Workflows für die Applikation SANtricity Cloud Connector werden in diesen Verfahren nicht beschrieben. Bei erfahrenen Entwicklern stehen Endpunkte für jeden SANtricity Cloud Connector-Vorgang unter der API-Dokumentation zur Verfügung. Auf die API-Dokumentation kann zugegriffen werden, indem Sie zu navigieren ``http://<hostname.domain>:<port>/docs`` Über einen Browser öffnen.
+
+
+
+
+== Arten von Backups
+
+Der SANtricity Cloud Connector bietet zwei Arten von Backups: Image- und dateibasierte Backups.
+
+* *Image-basiertes Backup*
++
+Ein Backup auf Image-Basis liest die rohen Datenblöcke von einem Snapshot-Volume und sichert sie in eine Datei, die als Image bezeichnet wird. Alle Datenblöcke auf dem Snapshot-Volume werden gesichert, einschließlich leerer Blöcke, von gelöschten Dateien belegten Blöcken, mit Partitionierung verbundenen Blöcken und Dateisystemmetadaten. Image-Backups haben den Vorteil, alle Informationen mit dem Snapshot-Volumen zu speichern, unabhängig vom Partitionierungsschema oder Dateisystem darauf.
+
++
+Das Bild wird nicht als einzelne Datei im Backup Target gespeichert, sondern in eine Reihe von Datenblöcken unterteilt, die 64MB groß sind. Durch die Datenblöcke kann SANtricity Cloud Connector mehrere Verbindungen zum Backup-Ziel verwenden und so die Performance des Backup-Prozesses verbessern.
+
++
+Für Backups in StorageGRID und Amazon Web Services (S3) verwendet jeder Datenblock einen separaten Verschlüsselungsschlüssel zur Verschlüsselung des Blocks. Der Schlüssel ist ein SHA256-Hash, der aus der Kombination einer vom Benutzer bereitgestellten Passphrase und dem SHA256-Hash der Benutzerdaten besteht. Bei Backups zu AltaVault verschlüsselt der SANtricity Cloud Connector die Datenblöcke nicht, wenn AltaVault diesen Vorgang durchführt.
+
+* * File-basiertes Backup*
++
+Ein dateibasiertes Backup liest die mit einer Dateisystempartition enthaltenen Dateien und sichert sie in eine Reihe von Datenblöcken, die 64 MB groß sind. Ein dateibasiertes Backup sichert keine gelöschten Dateien oder Partitionierungen und Dateisystem-Metadaten. Wie bei Image-basierten Backups können auch bei den Daten-Chunks SANtricity Cloud Connector mehrere Verbindungen zum Backup-Ziel verwenden und so die Performance des Backup-Prozesses verbessern.
+
++
+Für Backups in StorageGRID und Amazon Web Services verwendet jedes Datenpaket einen separaten Verschlüsselungsschlüssel zur Verschlüsselung des Blocks. Der Schlüssel ist ein SHA256-Hash, der aus der Kombination von benutzerbereitem Passphrase und dem SHA256-Hash der Benutzerdaten besteht. Bei Backups auf AltaVault werden die Datenblöcke nicht durch SANtricity Cloud Connector verschlüsselt, da AltaVault diesen Vorgang durchführt.
+
+

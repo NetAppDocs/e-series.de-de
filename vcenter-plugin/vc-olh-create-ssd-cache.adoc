@@ -1,0 +1,75 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/vc-olh-create-ssd-cache.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
+summary: 'Zur dynamischen Beschleunigung der System-Performance können Sie die SSD Cache Funktion verwenden, um die am häufigsten abgerufenen Daten („heiße“ Daten) auf Solid State Drives (SSDs) mit niedrigerer Latenz zu zwischenspeichern.' 
+---
+= Erstellen Sie SSD-Cache
+:hardbreaks:
+:allow-uri-read: 
+:experimental: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Zur dynamischen Beschleunigung der System-Performance können Sie die SSD Cache Funktion verwenden, um die am häufigsten abgerufenen Daten („heiße“ Daten) auf Solid State Drives (SSDs) mit niedrigerer Latenz zu zwischenspeichern. SSD Cache wird ausschließlich für Host-Lesevorgänge verwendet.
+
+Ihr Speicher-Array muss einige SSD-Laufwerke enthalten.
+
+
+NOTE: SSD-Cache ist auf dem EF600 oder EF300 Storage-System nicht verfügbar.
+
+Wenn Sie SSD Cache erstellen, können Sie ein oder mehrere Laufwerke verwenden. Da sich der Lese-Cache im Storage Array befindet, wird das Caching von allen Applikationen genutzt, die das Storage Array verwenden. Sie wählen die Volumes aus, die zwischengespeichert werden sollen. Das Caching erfolgt dann automatisch und dynamisch.
+
+Beachten Sie bei der Erstellung von SSD Cache die folgenden Richtlinien.
+
+* Sie können die Sicherheit im SSD-Cache nur aktivieren, wenn Sie sie erstellen, und nicht später.
+* Pro Storage Array wird nur ein SSD-Cache unterstützt.
+* Die maximale nutzbare SSD-Cache-Kapazität auf einem Speicher-Array hängt von der primären Cache-Kapazität des Controllers ab.
+* SSD Cache wird von Snapshot Images nicht unterstützt.
+* Wenn Sie Volumes importieren oder exportieren, die SSD Cache aktiviert oder deaktiviert sind, werden die zwischengespeicherten Daten nicht importiert oder exportiert.
+* Jedes Volume, das der Nutzung des SSD-Caches eines Controllers zugewiesen ist, kann keine automatische Lastverteilung durchführen.
+* Wenn die zugehörigen Volumes für die Sicherheit aktiviert sind, erstellen Sie einen sicheren SSD-Cache.
+
+
+.Schritte
+. Wählen Sie auf der Seite Verwalten das Speicher-Array für den Cache aus.
+. Wählen Sie Menü:Provisioning[Pools und Volume-Gruppen konfigurieren].
+. Klicken Sie auf Menü:Create[SSD Cache].
++
+Das Dialogfeld SSD-Cache erstellen wird angezeigt.
+
+. Geben Sie einen Namen für den SSD-Cache ein.
+. Wählen Sie den Kandidaten für den SSD-Cache aus, den Sie basierend auf folgenden Merkmalen verwenden möchten.
++
+.Felddetails
+====
+[cols="25h,~"]
+|===
+| Charakteristisch | Nutzung 
+
+
+| Kapazität | Zeigt die verfügbare Kapazität in gib an. Wählen Sie die Kapazität für die Speicheranforderungen Ihrer Anwendung aus. Die maximale Kapazität für SSD Cache hängt von der primären Cache-Kapazität des Controllers ab. Wenn Sie SSD-Cache mehr als die maximale Menge zuweisen, ist diese zusätzliche Kapazität nicht nutzbar. Die SSD-Cache-Kapazität wird für die Ihrer gesamten zugewiesenen Kapazität gezählt. 
+
+
+| Laufwerke insgesamt | Zeigt die Anzahl der für diesen SSD-Cache verfügbaren Laufwerke an. Wählen Sie den SSD-Kandidaten mit der Anzahl der gewünschten Laufwerke aus 
+
+
+| Sicher | Gibt an, ob SSD Cache Kandidaten vollständig aus sicheren Laufwerken bestehen, bei denen es sich entweder um vollständige Festplattenverschlüsselung (Full Disk Encryption, FDE)-Laufwerke oder um FIPS-Laufwerke (Federal Information Processing Standard) handeln kann. Wenn Sie einen sicheren aktivierten SSD-Cache erstellen möchten, suchen Sie in der Spalte mit sicherem Zugriff „Ja – FDE“ oder „Ja – FIPS“. 
+
+
+| Sicherheit aktivieren? | Bietet die Möglichkeit, die Sicherheitsfunktion des Laufwerks mit sicheren Laufwerken zu aktivieren. Wenn Sie einen sicheren SSD-Cache erstellen möchten, aktivieren Sie das Kontrollkästchen *Sicherheit aktivieren*. HINWEIS: Sobald die Option aktiviert ist, kann die Sicherheit nicht deaktiviert werden. Sie können die Sicherheit im SSD-Cache nur aktivieren, wenn Sie sie erstellen, und nicht später. 
+
+
+| DA-fähig | Gibt an, ob Data Assurance (da) für diesen SSD-Cache-Kandidaten verfügbar ist. Data Assurance (da) überprüft und korrigiert Fehler, die auftreten können, wenn Daten durch die Controller zu den Laufwerken übertragen werden. Wenn Sie da verwenden möchten, wählen Sie einen SSD-Cache-Kandidaten aus, der für da geeignet ist. Diese Option ist nur verfügbar, wenn die da-Funktion aktiviert wurde. SSD Cache kann sowohl da-fähige als auch nicht-da-fähige Laufwerke enthalten, aber alle Laufwerke müssen für Sie da-fähig sein, da zu verwenden. 
+|===
+====
+. Verbinden Sie den SSD-Cache mit den Volumes, für die Sie SSD-Lese-Caching implementieren möchten. Um SSD-Cache auf kompatiblen Volumes sofort zu aktivieren, aktivieren Sie das Kontrollkästchen *SSD-Cache aktivieren auf vorhandenen kompatiblen Volumes, die Hosts zugeordnet sind*.
++
+Volumes sind kompatibel, wenn sie die gleichen Laufwerksicherheit- und da-Funktionen nutzen.
+
+. Klicken Sie Auf *Erstellen*.
+
