@@ -2246,6 +2246,8 @@
 
 
 
+
+
         </li>
       </ul>
     
@@ -5398,6 +5400,13 @@
       <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
+      data-pdf-filename="Prüfen Sie die Anforderungen"
+      data-li-level="4#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/de-de/e-series/vcenter-plugin/san-spvc-ic-reqs.html">
+        Prüfen Sie die Anforderungen
+      </a></li><li 
+      data-pdf-exists="true" 
       data-pdf-filename="Installieren Sie das Plug-in"
       data-li-level="4#" 
       class=" "
@@ -6418,7 +6427,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-11-15 14:48:56 +0000">11/15/2022</time>
+    <time datetime="2022-12-06 22:58:41 +0000">12/06/2022</time>
     
   
 
@@ -6432,6 +6441,7 @@
 <p>Zur dynamischen Beschleunigung der System-Performance können Sie die SSD Cache Funktion verwenden, um die am häufigsten abgerufenen Daten („heiße“ Daten) auf Solid State Drives (SSDs) mit niedrigerer Latenz zu zwischenspeichern. SSD Cache wird ausschließlich für Host-Lesevorgänge verwendet.</p>
 </div>
 <div class="paragraph">
+<div class="title">Bevor Sie beginnen</div>
 <p>Ihr Speicher-Array muss einige SSD-Laufwerke enthalten.</p>
 </div>
 <div class="admonitionblock note">
@@ -6447,6 +6457,7 @@ SSD-Cache ist auf dem EF600 oder EF300 Storage-System nicht verfügbar.
 </table>
 </div>
 <div class="paragraph">
+<div class="title">Über diese Aufgabe</div>
 <p>Wenn Sie SSD Cache erstellen, können Sie ein oder mehrere Laufwerke verwenden. Da sich der Lese-Cache im Storage Array befindet, wird das Caching von allen Applikationen genutzt, die das Storage Array verwenden. Sie wählen die Volumes aus, die zwischengespeichert werden sollen. Das Caching erfolgt dann automatisch und dynamisch.</p>
 </div>
 <div class="paragraph">
@@ -6497,8 +6508,8 @@ SSD-Cache ist auf dem EF600 oder EF300 Storage-System nicht verfügbar.
 </li>
 <li>
 <p>Wählen Sie den Kandidaten für den SSD-Cache aus, den Sie basierend auf folgenden Merkmalen verwenden möchten.</p>
-<div class="exampleblock">
-<div class="title">Beispiel 1. Felddetails</div>
+<details>
+<summary class="title">Felddetails</summary>
 <div class="content">
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
@@ -6535,7 +6546,7 @@ SSD-Cache ist auf dem EF600 oder EF300 Storage-System nicht verfügbar.
 </tbody>
 </table>
 </div>
-</div>
+</details>
 </li>
 <li>
 <p>Verbinden Sie den SSD-Cache mit den Volumes, für die Sie SSD-Lese-Caching implementieren möchten. Um SSD-Cache auf kompatiblen Volumes sofort zu aktivieren, aktivieren Sie das Kontrollkästchen <strong>SSD-Cache aktivieren auf vorhandenen kompatiblen Volumes, die Hosts zugeordnet sind</strong>.</p>

@@ -2246,6 +2246,8 @@
 
 
 
+
+
         </li>
       </ul>
     
@@ -5398,6 +5400,13 @@
       <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
+      data-pdf-filename="Prüfen Sie die Anforderungen"
+      data-li-level="4#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/de-de/e-series/vcenter-plugin/san-spvc-ic-reqs.html">
+        Prüfen Sie die Anforderungen
+      </a></li><li 
+      data-pdf-exists="true" 
       data-pdf-filename="Installieren Sie das Plug-in"
       data-li-level="4#" 
       class=" "
@@ -6418,7 +6427,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-11-15 14:48:56 +0000">11/15/2022</time>
+    <time datetime="2022-12-06 22:58:41 +0000">12/06/2022</time>
     
   
 
@@ -6442,6 +6451,7 @@
 <p>Ein Workload ist ein Storage-Objekt, das eine Applikation unterstützt. Sie können einen oder mehrere Workloads oder Instanzen pro Applikation definieren.</p>
 </div>
 <div class="paragraph">
+<div class="title">Über diese Aufgabe</div>
 <p>Bei einigen Applikationen konfiguriert das System den Workload so, dass er Volumes mit ähnlichen zugrunde liegenden Volume-Merkmalen enthält. Diese Volume-Merkmale werden basierend auf dem Applikationstyp optimiert, den der Workload unterstützt. Wenn Sie beispielsweise einen Workload erstellen, der eine Microsoft SQL Server Applikation unterstützt und anschließend Volumes für diesen Workload erstellt, werden die zugrunde liegenden Volume-Merkmale zur Unterstützung von Microsoft SQL Server optimiert.</p>
 </div>
 <div class="paragraph">
@@ -6495,6 +6505,7 @@
 <p>Sie erstellen Volumes, um einem applikationsspezifischen Workload Storage-Kapazität hinzuzufügen und die erstellten Volumes für einen bestimmten Host oder Host-Cluster sichtbar zu machen.</p>
 </div>
 <div class="paragraph">
+<div class="title">Über diese Aufgabe</div>
 <p>Bei den meisten Applikationstypen wird standardmäßig eine benutzerdefinierte Volume-Konfiguration verwendet, während bei anderen Typen eine intelligente Konfiguration bei der Volume-Erstellung angewendet wird. Wenn Sie beispielsweise Volumes für eine Microsoft Exchange Applikation erstellen, werden Sie gefragt, wie viele Mailboxen Sie benötigen, wie viele Mailboxen Ihre durchschnittlichen Anforderungen an die Mailbox-Kapazität sind und wie viele Kopien der Datenbank Sie benötigen. Das System erstellt anhand dieser Informationen eine optimale Volume-Konfiguration für Sie, die Sie nach Bedarf bearbeiten können.</p>
 </div>
 <div class="paragraph">
@@ -6509,6 +6520,7 @@
 <p>Im ersten Schritt können Sie einen bestimmten Host oder Host-Cluster für das Volume auswählen oder den Host später zuweisen.</p>
 </div>
 <div class="paragraph">
+<div class="title">Bevor Sie beginnen</div>
 <p>Stellen Sie sicher, dass:</p>
 </div>
 <div class="ulist">
@@ -6525,6 +6537,7 @@
 </ul>
 </div>
 <div class="paragraph">
+<div class="title">Über diese Aufgabe</div>
 <p>Beachten Sie bei der Zuweisung von Volumes die folgenden Richtlinien:</p>
 </div>
 <div class="ulist">
@@ -6591,6 +6604,7 @@ Die Zuweisung eines Volumes zu einem Host schlägt fehl, wenn Sie versuchen, ein
 <p>Im zweiten Schritt wählen Sie einen Workload aus, um die Storage-Array-Konfiguration für eine bestimmte Applikation wie VMware anzupassen.</p>
 </div>
 <div class="paragraph">
+<div class="title">Über diese Aufgabe</div>
 <p>In dieser Aufgabe wird die Erstellung von Volumes für einen Workload beschrieben. Ein Workload enthält normalerweise Volumes mit ähnlichen Merkmalen, die entsprechend dem von dem Workload unterstützten Applikationstyp optimiert werden. Sie können in diesem Schritt einen Workload definieren oder vorhandene Workloads auswählen.</p>
 </div>
 <div class="paragraph">
@@ -6709,6 +6723,7 @@ Die Zuweisung eines Volumes zu einem Host schlägt fehl, wenn Sie versuchen, ein
 </ul>
 </div>
 <div class="paragraph">
+<div class="title">Über diese Aufgabe</div>
 <p>Sie erstellen Volumes aus geeigneten Pools oder Volume-Gruppen, die im Dialogfeld Volumes hinzufügen/bearbeiten angezeigt werden. Für jeden infrage kommenden Pool und jede Volume-Gruppe wird die Anzahl der verfügbaren Laufwerke und die gesamte freie Kapazität angezeigt.</p>
 </div>
 <div class="paragraph">
@@ -6723,8 +6738,8 @@ Die Zuweisung eines Volumes zu einem Host schlägt fehl, wenn Sie versuchen, ein
 <ul>
 <li>
 <p><strong>Other</strong>&#8201;&#8212;&#8201;Klicken Sie <strong>Neues Volume hinzufügen</strong> in jedem Pool oder Volume-Gruppe, die Sie verwenden möchten, um ein oder mehrere Volumes zu erstellen.</p>
-<div class="exampleblock">
-<div class="title">Beispiel 1. Felddetails</div>
+<details>
+<summary class="title">Felddetails</summary>
 <div class="content">
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
@@ -6829,12 +6844,12 @@ Die Zuweisung eines Volumes zu einem Host schlägt fehl, wenn Sie versuchen, ein
 </tbody>
 </table>
 </div>
-</div>
+</details>
 </li>
 <li>
 <p><strong>Anwendungsspezifischer Workload</strong>&#8201;&#8212;&#8201;Klicken Sie entweder auf <strong>Weiter</strong>, um die vom System empfohlenen Volumes und Merkmale für den ausgewählten Workload zu akzeptieren, oder klicken Sie auf <strong>Volumes bearbeiten</strong>, um die vom System empfohlenen Volumes und Merkmale für den ausgewählten Workload zu ändern, hinzuzufügen oder zu löschen.</p>
-<div class="exampleblock">
-<div class="title">Beispiel 2. Felddetails</div>
+<details>
+<summary class="title">Felddetails</summary>
 <div class="content">
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
@@ -6947,7 +6962,7 @@ Die Zuweisung eines Volumes zu einem Host schlägt fehl, wenn Sie versuchen, ein
 </tbody>
 </table>
 </div>
-</div>
+</details>
 </li>
 </ul>
 </div>

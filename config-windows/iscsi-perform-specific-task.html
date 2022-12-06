@@ -2248,6 +2248,8 @@
 
 
 
+
+
         </li>
       </ul>
     
@@ -5398,6 +5400,13 @@
       <ul style="display: none;">
         <li 
       data-pdf-exists="true" 
+      data-pdf-filename="Prüfen Sie die Anforderungen"
+      data-li-level="4#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/de-de/e-series/vcenter-plugin/san-spvc-ic-reqs.html">
+        Prüfen Sie die Anforderungen
+      </a></li><li 
+      data-pdf-exists="true" 
       data-pdf-filename="Installieren Sie das Plug-in"
       data-li-level="4#" 
       class=" "
@@ -6418,7 +6427,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-11-15 14:48:56 +0000">11/15/2022</time>
+    <time datetime="2022-12-06 22:58:41 +0000">12/06/2022</time>
     
   
 
@@ -6436,13 +6445,13 @@
 </div>
 </div>
 <div class="sect1">
-<h2 id="schritt-1-konfigurieren-sie-die-switches-iscsi-windows">Schritt 1: Konfigurieren Sie die Switches – ​iSCSI, Windows</h2>
+<h2 id="schritt-die-switches-konfigurieren-iscsi-windows">Schritt: Die Switches konfigurieren --iSCSI, Windows</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Sie konfigurieren die Switches entsprechend den Empfehlungen des Anbieters für iSCSI. Diese Empfehlungen können sowohl Konfigurationsrichtlinien als auch Code-Updates enthalten.</p>
 </div>
 <div class="ulist">
-<div class="title">Was Sie und#8217;ll benötigen</div>
+<div class="title">Was Sie benötigen</div>
 <ul>
 <li>
 <p>Zwei separate Netzwerke für Hochverfügbarkeit, Stellen Sie sicher, dass Sie Ihren iSCSI-Datenverkehr durch VLANs oder zwei separate Netzwerke in getrennte Netzwerksegmente isolieren.</p>
@@ -6471,12 +6480,13 @@ Port-Kanäle/LACP werden von den Switch-Ports des Controllers nicht unterstützt
 </table>
 </div>
 <div class="paragraph">
+<div class="title">Schritte</div>
 <p>Informieren Sie sich in der Dokumentation des Switch-Anbieters.</p>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="schritt-netzwerk-konfigurieren-iscsi-windows">Schritt: Netzwerk konfigurieren – ​iSCSI Windows</h2>
+<h2 id="schritt-netzwerk-iscsi-windows-konfigurieren">Schritt: Netzwerk-iSCSI Windows konfigurieren</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Je nach Ihren Datenspeicheranforderungen können Sie Ihr iSCSI-Netzwerk auf unterschiedliche Weise einrichten. Wenden Sie sich an Ihren Netzwerkadministrator, wenn Sie Tipps zur Auswahl der für Ihre Umgebung am besten geeigneten Konfiguration benötigen.</p>
@@ -6485,7 +6495,7 @@ Port-Kanäle/LACP werden von den Switch-Ports des Controllers nicht unterstützt
 <p>Eine effektive Strategie zur Konfiguration des iSCSI-Netzwerks mit grundlegender Redundanz besteht darin, jeden Host-Port und einen Port jedes Controllers miteinander zu verbinden, um getrennte Switches zu verbinden und jeden Host- und Controller-Satz in separaten Netzwerksegmenten mithilfe von VLANs zu partitionieren.</p>
 </div>
 <div class="ulist">
-<div class="title">Was Sie und#8217;ll benötigen</div>
+<div class="title">Was Sie benötigen</div>
 <ul>
 <li>
 <p>Hardware-Flusssteuerung zum Senden und Empfangen aktiviert <strong>Ende bis Ende</strong>.</p>
@@ -6502,6 +6512,7 @@ Port-Kanäle/LACP werden von den Switch-Ports des Controllers nicht unterstützt
 </ul>
 </div>
 <div class="paragraph">
+<div class="title">Schritte</div>
 <p>Informieren Sie sich in der Dokumentation des Switch-Anbieters.</p>
 </div>
 <div class="admonitionblock note">
@@ -6519,13 +6530,13 @@ Für IP-Overhead müssen viele Netzwerk-Switches über 9,000 Bytes konfiguriert 
 </div>
 </div>
 <div class="sect1">
-<h2 id="schritt-3-array-seitiges-netzwerk-konfigurieren-iscsi-windows">Schritt 3: Array-seitiges Netzwerk konfigurieren – ​iSCSI, Windows</h2>
+<h2 id="schritt-3-array-seitiges-netzwerk-konfigurieren-iscsi-windows">Schritt 3: Array-seitiges Netzwerk konfigurieren – iSCSI, Windows</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Mit der SANtricity System Manager GUI können Sie das iSCSI-Netzwerk auf der Array-Seite konfigurieren.</p>
 </div>
 <div class="ulist">
-<div class="title">Was Sie und#8217;ll benötigen</div>
+<div class="title">Was Sie benötigen</div>
 <ul>
 <li>
 <p>Die IP-Adresse oder der Domänenname für einen der Speicher-Array-Controller.</p>
@@ -6536,6 +6547,7 @@ Für IP-Overhead müssen viele Netzwerk-Switches über 9,000 Bytes konfiguriert 
 </ul>
 </div>
 <div class="paragraph">
+<div class="title">Über diese Aufgabe</div>
 <p>Dieser Task beschreibt den Zugriff auf die Konfiguration des iSCSI-Ports über die Seite Hardware. Sie können die Konfiguration auch über das Menü:System[Einstellungen &gt; iSCSI-Ports konfigurieren] aufrufen.</p>
 </div>
 <div class="olist arabic">
@@ -6745,13 +6757,13 @@ Diese Option ist nur in einer iSCSI-Umgebung verfügbar. In einer NVMe over RoCE
 </div>
 </div>
 <div class="sect1">
-<h2 id="schritt-4-host-seitiges-netzwerk-konfigurieren-iscsi">Schritt 4: Host-seitiges Netzwerk konfigurieren – ​iSCSI</h2>
+<h2 id="schritt-4-host-seitiges-netzwerk-konfigurieren-iscsi">Schritt 4: Host-seitiges Netzwerk konfigurieren – iSCSI</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Sie müssen das iSCSI-Netzwerk auf der Hostseite konfigurieren, damit der Microsoft iSCSI-Initiator Sitzungen mit dem Array einrichten kann.</p>
 </div>
 <div class="ulist">
-<div class="title">Was Sie und#8217;ll benötigen</div>
+<div class="title">Was Sie benötigen</div>
 <ul>
 <li>
 <p>Vollständig konfigurierte Switches, die für den iSCSI-Speicherdatenverkehr verwendet werden.</p>
@@ -6771,6 +6783,7 @@ Diese Option ist nur in einer iSCSI-Umgebung verfügbar. In einer NVMe over RoCE
 </ul>
 </div>
 <div class="paragraph">
+<div class="title">Über diese Aufgabe</div>
 <p>Bei diesen Anweisungen wird davon ausgegangen, dass für den iSCSI-Datenverkehr zwei NIC-Ports verwendet werden.</p>
 </div>
 <div class="olist arabic">
@@ -6822,7 +6835,7 @@ Diese Option ist nur in einer iSCSI-Umgebung verfügbar. In einer NVMe over RoCE
 </div>
 </div>
 <div class="sect1">
-<h2 id="schritt-5-überprüfen-sie-ip-netzwerkverbindungen-iscsi-windows">Schritt 5: Überprüfen Sie IP-Netzwerkverbindungen – ​iSCSI, Windows</h2>
+<h2 id="schritt-5-überprüfen-sie-ip-netzwerkverbindungen-iscsi-windows">Schritt 5: Überprüfen Sie IP-Netzwerkverbindungen - iSCSI, Windows</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Sie überprüfen IP-Netzwerkverbindungen des Internet Protocol (Internet Protocol), indem Sie Ping-Tests verwenden, um sicherzustellen, dass Host und Array kommunizieren können.</p>
