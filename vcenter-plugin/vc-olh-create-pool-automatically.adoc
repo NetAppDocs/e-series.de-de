@@ -17,12 +17,14 @@ summary: Sie können Pools automatisch erstellen, wenn das System mindestens 11 
 [role="lead"]
 Sie können Pools automatisch erstellen, wenn das System mindestens 11 nicht zugewiesene Laufwerke erkennt oder ein nicht zugewiesenes Laufwerk erkennt, das für einen vorhandenen Pool geeignet ist. Ein Pool ist eine Gruppe von logisch gruppierten Laufwerken.
 
+.Bevor Sie beginnen
 Sie können das Dialogfeld „automatische Konfiguration des Pools“ starten, wenn eine der folgenden Bedingungen zutrifft:
 
 * Es wurde mindestens ein nicht zugewiesenes Laufwerk erkannt, das einem vorhandenen Pool mit ähnlichen Laufwerktypen hinzugefügt werden kann.
 * Es wurden elf (11) oder mehr nicht zugewiesene Laufwerke erkannt, die zur Erstellung eines neuen Pools verwendet werden können (wenn sie aufgrund unterschiedlicher Antriebstypen nicht zu einem vorhandenen Pool hinzugefügt werden können).
 
 
+.Über diese Aufgabe
 Mithilfe der automatischen Pool-Erstellung können alle nicht zugewiesenen Laufwerke im Speicher-Array in einem Pool konfiguriert und Laufwerke zu vorhandenen Pools hinzugefügt werden.
 
 Beachten Sie Folgendes:

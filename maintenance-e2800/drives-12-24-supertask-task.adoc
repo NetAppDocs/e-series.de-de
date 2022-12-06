@@ -13,13 +13,14 @@ summary: Ein Laufwerk in einer E2800 kann durch ein Shelf mit 12 Laufwerken oder
 [role="lead"]
 Ein Laufwerk in einer E2800 kann durch ein Shelf mit 12 Laufwerken oder 24 Laufwerken ersetzt werden.
 
+.Über diese Aufgabe
 Der Recovery Guru in SANtricity System Manager überwacht die Laufwerke im Storage Array und benachrichtigt Sie über einen bevorstehenden Laufwerksausfall oder tatsächlichen Laufwerksausfall. Wenn ein Laufwerk ausfällt, leuchtet die gelbe Warn-LED. Sie können ein ausgefallenes Laufwerk im laufenden Betrieb austauschen, während das Speicher-Array I/O-Vorgänge empfängt
 
 .Bevor Sie beginnen
 * Überprüfen Sie die Anforderungen für die Laufwerksabwicklung in link:drives-overview-supertask-concept.html["Anforderungen für den Austausch von E2800 Laufwerken"].
 
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Ein von NetApp unterstütztes Ersatzlaufwerk für Ihr Controller Shelf oder Festplatten-Shelf.
 * Ein ESD-Armband, oder Sie haben andere antistatische Vorsichtsmaßnahmen getroffen.
 * Eine Management Station mit einem Browser, der für den Controller auf den SANtricity System Manager zugreifen kann. (Zeigen Sie zum Öffnen der System Manager-Schnittstelle den Domain-Namen oder die IP-Adresse des Controllers im Browser.)
@@ -141,4 +142,5 @@ Nach Abschluss der Laufwerkswiederherstellung befindet sich die Volume-Gruppe in
 . Senden Sie das fehlerhafte Teil wie in den dem Kit beiliegenden RMA-Anweisungen beschrieben an NetApp zurück.
 
 
+.Was kommt als Nächstes?
 Der Austausch des Laufwerks ist abgeschlossen. Sie können den normalen Betrieb fortsetzen.

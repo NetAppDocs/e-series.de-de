@@ -15,10 +15,11 @@ Für das SAS-Protokoll bestimmen Sie Host-Port-Adressen und nehmen die entsprech
 
 
 
-== Schritt: SAS-Host-IDs bestimmen – ​Windows
+== Schritt: Bestimmen Sie die SAS-Host-IDs – Windows
 
 Suchen Sie mithilfe des HBA-Dienstprogramms die SAS-Adressen und verwenden Sie das HBA-BIOS, um die entsprechenden Konfigurationseinstellungen vorzunehmen.
 
+.Über diese Aufgabe
 Lesen Sie die Richtlinien für HBA Utilities:
 
 * Die meisten HBA-Anbieter bieten ein HBA-Dienstprogramm an. Verwenden Sie je nach Host-Betriebssystem und CPU entweder das LSI-sas2flash (6G) oder sas3flash (12G) Utility.

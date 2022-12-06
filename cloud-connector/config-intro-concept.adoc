@@ -19,6 +19,7 @@ Nach der erfolgreichen Installation können Sie die SANtricity Cloud Connector-A
 
 Wenn Sie den SANtricity-Cloud-Connector zum ersten Mal initialisieren, müssen Sie ein Standardpasswort für den Zugriff auf die Anwendung eingeben.
 
+.Bevor Sie beginnen
 Stellen Sie sicher, dass Sie Zugriff auf einen mit dem Internet verbundenen Browser haben.
 
 .Schritte
@@ -86,6 +87,7 @@ Der eingegebene Passphrase für die SANtricity-Cloud-Konnektor-Anwendung wird ak
 
 Backup- und Restore-Funktionen sind für Zieltypen von Amazon S3, AltaVault und StorageGRID über den SANtricity Cloud Connector verfügbar. Sie können den gewünschten Speicherzieltyp für die Anwendung SANtricity Cloud Connector auf der Seite Zieltyp auswählen angeben.
 
+.Bevor Sie beginnen
 Stellen Sie sicher, dass Sie über eines der folgenden Elemente verfügen: AltaVault Mount Point, Amazon AWS Konto oder StorageGRID Konto.
 
 .Schritte
@@ -213,6 +215,7 @@ Der angegebene Zieltyp für den SANtricity-Cloud-Konnektor wird akzeptiert, und 
 
 Die Anmelde- und Verbindungsinformationen für den in Verbindung mit dem SANtricity-Cloud-Connector verwendeten Web-Services-Proxy werden über die Seite Webservices-Proxy-URL und -Anmeldeinformationen eingeben eingegeben.
 
+.Bevor Sie beginnen
 Stellen Sie sicher, dass eine Verbindung zum SANtricity Webservices Proxy hergestellt ist.
 
 .Schritte
@@ -233,6 +236,7 @@ Die Anmeldeinformationen für den SANtricity-Cloud-Konnektor für Webdienste wer
 
 Basierend auf den über den Konfigurationsassistenten eingegebenen SANtricity Webservices-Proxy-Anmeldeinformationen wird unter der Seite Speicherarrays auswählen eine Liste der verfügbaren Speicher-Arrays angezeigt. Über diese Seite können Sie auswählen, welche Speicher-Arrays der SANtricity-Cloud-Connector für Backup- und Wiederherstellungsaufträge verwendet.
 
+.Bevor Sie beginnen
 Stellen Sie sicher, dass die Speicherarrays für Ihre SANtricity Web Services Proxy-Anwendung konfiguriert sind.
 
 
@@ -256,6 +260,7 @@ NOTE: Sie müssen ein gültiges Kennwort für jedes Speicherarray konfigurieren,
 
 Basierend auf den über den Konfigurationsassistenten ausgewählten Proxy-gehosteten Webservices-Speicherarrays können Sie einen verfügbaren Host auswählen, der auf der Seite Hosts auswählen die Backup- und Restore-Kandidaten-Volumes der SANtricity Cloud Connector-Anwendung zuordnen kann.
 
+.Bevor Sie beginnen
 Stellen Sie sicher, dass über den SANtricity Web Services Proxy ein Host zur Verfügung steht.
 
 .Schritte

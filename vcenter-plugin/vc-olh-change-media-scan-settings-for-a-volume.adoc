@@ -17,6 +17,7 @@ summary: Ein Medien-Scan ist ein Hintergrundvorgang, der alle Daten und Redundan
 [role="lead"]
 Ein Medien-Scan ist ein Hintergrundvorgang, der alle Daten und Redundanzinformationen auf dem Volume scannt. Verwenden Sie diese Option, um die Einstellungen für den Medienscan für ein oder mehrere Volumes zu aktivieren oder zu deaktivieren oder die Scandauer zu ändern.
 
+.Bevor Sie beginnen
 Verstehen Sie Folgendes:
 
 * Die Medien-Scans werden kontinuierlich mit konstanter Geschwindigkeit ausgeführt, basierend auf der zu scannenden Kapazität und der Scandauer. Hintergrundscans können vorübergehend durch eine Hintergrundaufgabe mit höherer Priorität ausgesetzt werden (z. B. Rekonstruktion), werden aber mit derselben konstanten Geschwindigkeit fortgesetzt.
@@ -28,6 +29,7 @@ So stehen beispielsweise Informationen zur Redundanz in optimalen RAID 5-Volumes
 * Wenn die Redundanzprüfung eine Inkonsistenz zwischen Daten und den Redundanzinformationen findet, wird sie dem Ereignisprotokoll gemeldet.
 
 
+.Über diese Aufgabe
 Medienprüfungen erkennen und reparieren Medienfehler auf Festplattenlaufwerken, die selten von Applikationen gelesen werden. Dadurch wird Datenverlust bei einem Laufwerksausfall verhindert, da die Daten der ausgefallenen Laufwerke durch Redundanzinformationen und die Daten anderer Laufwerke in der Volume-Gruppe oder dem Pool rekonstruiert werden.
 
 Sie können folgende Aktionen ausführen:
@@ -51,4 +53,5 @@ Das Dialogfeld Einstellungen für Laufwerkmedienscan ändern wird angezeigt. In 
 . Klicken Sie Auf *Speichern*.
 
 
+.Ergebnis
 Das System wendet basierend auf Ihrer Auswahl Änderungen an Medien-Scans im Hintergrund an.

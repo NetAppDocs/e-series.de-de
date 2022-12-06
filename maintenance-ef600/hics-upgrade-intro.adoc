@@ -24,7 +24,7 @@ Sie können die Host-Schnittstellenkarten (HIC) aktualisieren, um die Anzahl der
 * Planen Sie für dieses Verfahren ein Wartungsfenster zur Ausfallzeit. Sie können erst nach erfolgreichem Abschluss dieses Verfahrens auf Daten im Speicher-Array zugreifen. Da beide Controller beim Einschalten die gleiche HIC-Konfiguration aufweisen müssen, muss beim Installieren der HICs die Stromversorgung ausgeschaltet sein.
 
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Zwei HICs, die mit Ihren Controllern kompatibel sind.
 * Ein ESD-Armband, oder Sie haben andere antistatische Vorsichtsmaßnahmen getroffen.
 * Ein flacher, statischer freier Arbeitsbereich.
@@ -288,4 +288,5 @@ Die Datei wird im Ordner Downloads für Ihren Browser mit dem Namen *Support-Dat
 
 
 
+.Was kommt als Nächstes?
 Das Upgrade einer Host-Schnittstellenkarte in Ihrem Speicher-Array ist abgeschlossen. Sie können den normalen Betrieb fortsetzen.

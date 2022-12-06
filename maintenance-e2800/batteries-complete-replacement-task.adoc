@@ -14,8 +14,8 @@ summary: Schließen Sie einen Batteriewechsel ab.
 [role="lead"]
 Die Schritte zum vollständigen Batterieaustausch hängen davon ab, ob Sie über eine Duplexkonfiguration (zwei Controller) oder eine Simplex-Konfiguration (ein Controller) verfügen.
 
-* Informationen zu Duplexkonfigurationen finden Sie unter  controller online (duplex).
-* Informationen zu Simplexkonfigurationen finden Sie unter  up controller (simplex).
+* Informationen zu Duplexkonfigurationen finden Sie unter <<Controller online schalten (Duplex)>>.
+* Informationen zu Simplexkonfigurationen finden Sie unter <<Controller einschalten (Simplexkonfiguration)>>.
 
 
 
@@ -93,6 +93,7 @@ Die Datei wird im Ordner Downloads für Ihren Browser mit dem Namen *Support-Dat
 
 
 
+.Was kommt als Nächstes?
 Der Austausch des Akkus ist abgeschlossen. Sie können den normalen Betrieb fortsetzen.
 
 
@@ -154,4 +155,5 @@ Die Datei wird im Ordner Downloads für Ihren Browser mit dem Namen *Support-Dat
 
 
 
+.Was kommt als Nächstes?
 Der Austausch des Akkus ist abgeschlossen. Sie können den normalen Betrieb fortsetzen.

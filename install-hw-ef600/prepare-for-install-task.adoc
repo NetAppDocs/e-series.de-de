@@ -13,6 +13,7 @@ summary: Um eine EF300 oder EF600 zu installieren, erstellen Sie ein Konto und r
 [role="lead"]
 Erfahren Sie, wie Sie die Installation Ihres EF300- oder EF600-Storage-Systems vorbereiten.
 
+.Bevor Sie beginnen
 Wenn Sie die Erweiterung EF300 für SAS verkabeln, lesen Sie die folgenden Informationen:
 
 * link:../maintenance-ef600/sas-add-supertask-task.html["Fügen Sie SAS-Erweiterungskarten hinzu"^] Für die Installation von SAS-Erweiterungskarten.

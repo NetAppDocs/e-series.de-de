@@ -13,6 +13,7 @@ summary: Konfigurieren Sie die Multipath-Software, die einen redundanten Pfad zu
 [role="lead"]
 Um einen redundanten Pfad zum Storage Array bereitzustellen, können Sie die Multipath-Software konfigurieren.
 
+.Was Sie benötigen
 Sie müssen die erforderlichen Pakete auf Ihrem System installieren.
 
 * Überprüfen Sie für Red hat-Hosts (RHEL), ob die Pakete durch Ausführen installiert wurden `rpm -q device-mapper-multipath`.
@@ -21,6 +22,7 @@ Sie müssen die erforderlichen Pakete auf Ihrem System installieren.
 
 Wenn Sie das Betriebssystem noch nicht installiert haben, verwenden Sie die von Ihrem Betriebssystemanbieter bereitgestellten Medien.
 
+.Über diese Aufgabe
 Die Multipath-Software liefert einen redundanten Pfad zum Storage Array, falls ein physischer Pfad unterbrochen wird. Die Multipath-Software präsentiert das Betriebssystem mit einem einzigen virtuellen Gerät, das die aktiven physischen Pfade zum Storage darstellt. Die Multipath-Software managt auch den Failover-Prozess zur Aktualisierung des virtuellen Geräts.
 
 Sie verwenden das Device Mapper Multipath (DM-MP)-Tool für Linux-Installationen. DM-MP ist in RHEL und SLES standardmäßig deaktiviert. Führen Sie die folgenden Schritte durch, um DM-MP-Komponenten auf dem Host zu aktivieren.
@@ -60,7 +62,7 @@ dracut --force --add multipath
 +
 Zum Beispiel, für grub ist es `/boot/grub/menu.lst` Und für grub2 ist es `/boot/grub2/menu.cfg`.
 
-. Verwenden Sie die https://docs.netapp.com/us-en/e-series-santricity/sm-storage/create-host-manually.html["Host manuell erstellen"] Verfahren Sie in der Online-Hilfe, um zu überprüfen, ob die Hosts definiert sind. Überprüfen Sie, ob die einzelnen Einstellungen des Hosttyps auf den in erfassten Kernelinformationen basieren ,Schritt 4.
+. Verwenden Sie die https://docs.netapp.com/us-en/e-series-santricity/sm-storage/create-host-manually.html["Host manuell erstellen"] Verfahren Sie in der Online-Hilfe, um zu überprüfen, ob die Hosts definiert sind. Überprüfen Sie, ob die einzelnen Einstellungen des Hosttyps auf den in erfassten Kernelinformationen basieren <<step4,Schritt 4>>.
 
 
 

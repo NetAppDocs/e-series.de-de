@@ -13,6 +13,7 @@ summary: EF300 oder EF600 System-Rack in einem 2er-Säulen-Rack oder NetApp Syst
 [role="lead"]
 Ein EF300- oder EF600 Storage-System kann in einem Rack mit zwei Säulen oder einem NetApp Systemschrank installiert werden.
 
+.Bevor Sie beginnen
 Stellen Sie vor der Installation eines EF300- oder EF600-Storage-Systems Folgendes sicher:
 
 * Registrieren Sie Ihre Hardware unter http://mysupport.netapp.com/["mysupport.netapp.com"^].

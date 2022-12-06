@@ -14,6 +14,7 @@ summary: Ersetzen Sie eine Laufwerksschublade in einer E5700.
 [role="lead"]
 Sie können eine Laufwerksschublade in einem E5700 Array ersetzen.
 
+.Über diese Aufgabe
 Die Schritte zum Ersetzen einer fehlerhaften Laufwerksschublade in einem E5760 Controller-Shelf oder einem DE460C Festplatten-Shelf hängen davon ab, ob die Volumes in der Schublade durch Abschubladenschutz geschützt sind. Wenn sich alle Volumes in der Laufwerksschublade in Festplattenpools oder Volume-Gruppen befinden, die einen Schubladenschutz besitzen, können Sie diesen Vorgang online ausführen. Andernfalls müssen Sie alle Host-I/O-Aktivitäten beenden und das Shelf ausschalten, bevor Sie das Laufwerkschublade ersetzen.
 
 .Bevor Sie beginnen
@@ -31,7 +32,7 @@ Die Schritte zum Ersetzen einer fehlerhaften Laufwerksschublade in einem E5760 C
 
 CAUTION: *Möglicher Verlust des Datenzugriffs* -- Wenn ein Volume sich bereits im beeinträchtigten Zustand befindet und Sie Laufwerke aus der Laufwerkschublade entfernen, kann das Volume fehlschlagen.
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Ein von NetApp unterstütztes Ersatzlaufwerk für Ihr Controller Shelf oder Festplatten-Shelf.
 * Ein ESD-Armband, oder Sie haben andere antistatische Vorsichtsmaßnahmen getroffen.
 * Eine Taschenlampe.
@@ -53,7 +54,7 @@ Bereiten Sie den Austausch einer Laufwerkschublade vor, indem Sie feststellen, o
 .Schritte
 . Ermitteln, ob das Festplatten-Shelf eingeschaltet ist.
 +
-** Wenn die Stromversorgung ausgeschaltet ist, müssen Sie den CLI-Befehl nicht ausgeben. Gehen Sie zu  2: Remove cable chains.
+** Wenn die Stromversorgung ausgeschaltet ist, müssen Sie den CLI-Befehl nicht ausgeben. Gehen Sie zu <<Schritt 2: Die Kabelketten entfernen>>.
 ** Wenn der Strom eingeschaltet ist, fahren Sie mit dem nächsten Schritt fort.
 
 
@@ -82,7 +83,7 @@ serviceAllowedIndicator=forceOnWarning;"
 ----
 . Ermitteln Sie wie folgt, ob Sie die Host-I/O-Aktivität anhalten müssen:
 +
-** Wenn der Befehl erfolgreich ist, müssen Sie die Host-I/O-Aktivität nicht beenden. Alle Laufwerke in der Schublade befinden sich in Pools oder Volume-Gruppen mit Schubladenschutz. Gehen Sie zu  2: Remove cable chains.
+** Wenn der Befehl erfolgreich ist, müssen Sie die Host-I/O-Aktivität nicht beenden. Alle Laufwerke in der Schublade befinden sich in Pools oder Volume-Gruppen mit Schubladenschutz. Gehen Sie zu <<Schritt 2: Die Kabelketten entfernen>>.
 +
 
 CAUTION: *Möglicher Schaden an Laufwerken* -- Warten Sie 30 Sekunden, nachdem der Befehl abgeschlossen ist, bevor Sie die Laufwerkschublade öffnen. Durch das Warten von 30 Sekunden können die Laufwerke heruntergefahren werden, um mögliche Hardware-Schäden zu vermeiden.
@@ -151,6 +152,7 @@ Sie können das Verfahren zum Austauschen durchführen, während das Laufwerksfa
 
 Entfernen Sie beide Kabelketten, damit Sie eine fehlerhafte Laufwerksschublade entfernen und ersetzen können. Die linken und rechten Kabelketten ermöglichen es den Schubladen ein- und auszuschieben.
 
+.Über diese Aufgabe
 Jede Antriebsschublade hat linke und rechte Kabelketten. Die Metallenden an den Kabelketten gleiten wie folgt in die entsprechenden vertikalen und horizontalen Führungsschienen im Gehäuse:
 
 * Die linken und rechten vertikalen Führungsschienen verbinden die Kabelkette mit der Mittelplatine des Gehäuses.
@@ -525,4 +527,5 @@ CAUTION: *Gefahr einer Gerätestörung* -- Verschließen Sie die Antriebsschubla
 
 
 
+.Was kommt als Nächstes?
 Der Austausch der Laufwerksschublade ist abgeschlossen. Sie können den normalen Betrieb fortsetzen.

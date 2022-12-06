@@ -15,15 +15,16 @@ Für das Fibre Channel-Protokoll konfigurieren Sie die Switches und bestimmen di
 
 
 
-== Schritt: Konfigurieren Sie die FC-Switches – ​Windows
+== Schritt: Konfigurieren Sie die FC Switches--Windows
 
 Konfigurieren (Zoning) der Fibre Channel (FC)-Switches ermöglicht es den Hosts, eine Verbindung zum Storage-Array herzustellen, und begrenzt die Anzahl der Pfade. Sie Zonen der Switches mithilfe der Managementoberfläche für die Switches.
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Administrator-Anmeldeinformationen für die Switches.
 * Der WWPN jedes Host-Initiator-Ports und jedes Controller-Zielports, der mit dem Switch verbunden ist. (Verwenden Sie Ihr HBA Utility für die Erkennung.)
 
 
+.Über diese Aufgabe
 Sie müssen die Zone nach WWPN und nicht nach physischem Port angeben. Jeder Initiator-Port muss sich in einer separaten Zone mit allen entsprechenden Ziel-Ports befinden. Informationen zum Zoning der Switches finden Sie in der Dokumentation des Switch-Anbieters.
 
 .Schritte
@@ -35,10 +36,11 @@ Sie müssen die Zone nach WWPN und nicht nach physischem Port angeben. Jeder Ini
 
 
 
-== Schritt 2: Bestimmen Sie Host-WWPNs und nehmen Sie empfohlene Einstellungen vor – ​FC, Windows
+== Schritt 2: Bestimmen Sie Host-WWPNs und nehmen Sie die empfohlenen Einstellungen vor – FC, Windows
 
 Sie installieren ein FC HBA Utility, damit Sie den weltweiten Port-Namen (WWPN) jedes Host-Ports anzeigen können. Darüber hinaus können Sie das HBA-Dienstprogramm verwenden, um alle Einstellungen zu ändern, die in der Spalte Hinweise des empfohlen werden http://mysupport.netapp.com/matrix["NetApp Interoperabilitäts-Matrix-Tool"^] Für die unterstützte Konfiguration.
 
+.Über diese Aufgabe
 Prüfen Sie diese Richtlinien für HBA Utilities:
 
 * Die meisten HBA-Anbieter bieten ein HBA-Dienstprogramm an. Sie benötigen die richtige HBA-Version für Ihr Hostbetriebssystem und Ihre CPU. Beispiele für FC HBA Utilities:

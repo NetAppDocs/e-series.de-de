@@ -20,6 +20,7 @@ Mit der Option Einstellungen können Sie die aktuellen Konfigurationen der Anwen
 
 Vorhandene S3-Einstellungen für die Anwendung SANtricity Cloud Connector können Sie im Fenster S3-Kontoeinstellungen ändern.
 
+.Bevor Sie beginnen
 Beachten Sie beim Ändern der URL- oder S3-Bucket-Label-Einstellungen, dass der Zugriff auf vorhandene Backups, die über den SANtricity Cloud Connector konfiguriert wurden, beeinträchtigt wird.
 
 .Schritte
@@ -91,6 +92,7 @@ Das ausgewählte Speicher-Array wird aus dem SANtricity-Cloud-Konnektor-Host ent
 
 Sie können vorhandene Webdienste-Proxy-Einstellungen für die SANtricity Cloud Connector-Anwendung im Fenster Internetdienste-Proxy-Einstellungen ändern.
 
+.Bevor Sie beginnen
 Der mit dem SANtricity-Cloud-Connector verwendete Web-Services-Proxy muss die entsprechenden Arrays hinzugefügt und das entsprechende Passwort gesetzt haben.
 
 .Schritte

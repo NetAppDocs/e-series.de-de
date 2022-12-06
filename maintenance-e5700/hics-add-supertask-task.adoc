@@ -14,6 +14,7 @@ summary: Fügen Sie eine HIC in einer E5700 hinzu.
 [role="lead"]
 Über Baseboard-Host-Ports können Sie eine Host-Schnittstellenkarte (HIC) zum E5700 Controller-Behälter hinzufügen. Darüber hinaus erhöht sich die Anzahl der Host Ports in Ihrem Storage Array und bietet zusätzliche Host-Protokolle.
 
+.Über diese Aufgabe
 Wenn Sie HIC hinzufügen, müssen Sie das Speicher-Array ausschalten, die HIC installieren und wieder Strom einschalten.
 
 .Bevor Sie beginnen
@@ -21,7 +22,7 @@ Wenn Sie HIC hinzufügen, müssen Sie das Speicher-Array ausschalten, die HIC in
 * Planen Sie für dieses Verfahren ein Wartungsfenster zur Ausfallzeit. Die Stromversorgung muss ausgeschaltet sein, wenn Sie HICs installieren. Daher können Sie erst dann auf Daten im Speicher-Array zugreifen, wenn Sie diesen Vorgang erfolgreich abgeschlossen haben. (In einer Duplexkonfiguration müssen beide Controller beim Einschalten die gleiche HIC-Konfiguration aufweisen.)
 
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Ein oder zwei HICs, je nachdem, ob Sie einen oder zwei Controller im Storage-Array haben. Die HICs müssen mit Ihren Steuerungen kompatibel sein.
 * Neue Host-Hardware, die für die neuen Host-Ports installiert ist, z. B. Switches oder Host Bus Adapter (HBAs).
 * Alle Kabel, Transceiver, Switches und Host Bus Adapter (HBAs), die für den Anschluss der neuen Host-Ports benötigt werden.
@@ -343,4 +344,5 @@ Wenn Sie Anweisungen zur Konfiguration und Verwendung eines neuen Host-Protokoll
 
 
 
+.Was kommt als Nächstes?
 Das Hinzufügen einer Host-Schnittstellenkarte zum Speicher-Array ist abgeschlossen. Sie können den normalen Betrieb fortsetzen.

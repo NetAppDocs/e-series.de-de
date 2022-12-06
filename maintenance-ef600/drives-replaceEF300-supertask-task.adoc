@@ -15,8 +15,8 @@ Sie können ein Laufwerk in einem EF300-Array ersetzen.
 
 Die EF300 unterstützt SAS-Erweiterung mit Shelfs mit 24 Laufwerken und 60 Laufwerken. Das folgende Verfahren hängt davon ab, ob Sie ein Shelf mit 24 Laufwerken oder ein Shelf mit 60 Laufwerken haben:
 
-*  drive in an EF300 (24-drive shelf)
-*  drive in an EF300 (60-drive shelf)
+* <<Ersetzen Sie das Laufwerk in einem EF300 (Shelf mit 24 Laufwerken).>>
+* <<Ersetzen Sie das Laufwerk in einem EF300 (Shelf mit 60 Laufwerken).>>
 
 
 
@@ -25,13 +25,14 @@ Die EF300 unterstützt SAS-Erweiterung mit Shelfs mit 24 Laufwerken und 60 Laufw
 
 Gehen Sie folgendermaßen vor, um ein Laufwerk in einem Shelf mit 24 Laufwerken zu ersetzen.
 
+.Über diese Aufgabe
 Der Recovery Guru in SANtricity System Manager überwacht die Laufwerke im Storage Array und benachrichtigt Sie über einen bevorstehenden Laufwerksausfall oder tatsächlichen Laufwerksausfall. Wenn ein Laufwerk ausfällt, leuchtet die gelbe Warn-LED. Sie können ein ausgefallenes Laufwerk im laufenden Betrieb austauschen, während das Speicher-Array I/O-Vorgänge empfängt
 
 .Bevor Sie beginnen
 * Überprüfen Sie die Anforderungen für die Festplattenbehandlung in link:drives-overview-supertask-concept.html["Anforderungen für den Austausch von EF300- oder EF600-Laufwerken"].
 
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Ein von NetApp unterstütztes Ersatzlaufwerk für Ihr Controller Shelf oder Festplatten-Shelf.
 * Ein ESD-Armband, oder Sie haben andere antistatische Vorsichtsmaßnahmen getroffen.
 * Eine flache, statische Arbeitsfläche.
@@ -153,6 +154,7 @@ Nach Abschluss der Laufwerkswiederherstellung befindet sich die Volume-Gruppe in
 . Senden Sie das fehlerhafte Teil wie in den dem Kit beiliegenden RMA-Anweisungen beschrieben an NetApp zurück.
 
 
+.Was kommt als Nächstes?
 Der Austausch des Laufwerks ist abgeschlossen. Sie können den normalen Betrieb fortsetzen.
 
 
@@ -161,13 +163,14 @@ Der Austausch des Laufwerks ist abgeschlossen. Sie können den normalen Betrieb 
 
 Gehen Sie folgendermaßen vor, um ein Laufwerk in einem Shelf mit 60 Laufwerken zu ersetzen.
 
+.Über diese Aufgabe
 Der Recovery Guru in SANtricity System Manager überwacht die Laufwerke im Storage Array und benachrichtigt Sie über einen bevorstehenden Laufwerksausfall oder tatsächlichen Laufwerksausfall. Wenn ein Laufwerk ausfällt, leuchtet die gelbe Warn-LED. Sie können ein ausgefallenes Laufwerk im laufenden Betrieb austauschen, während das Speicher-Array I/O-Vorgänge empfängt.
 
 .Bevor Sie beginnen
 * Überprüfen Sie die Anforderungen für die Festplattenbehandlung in link:drives-overview-supertask-concept.html["Anforderungen für den Austausch von EF300- oder EF600-Laufwerken"].
 
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Ein von NetApp unterstütztes Ersatzlaufwerk für Ihr Controller Shelf oder Festplatten-Shelf.
 * Ein ESD-Armband, oder Sie haben andere antistatische Vorsichtsmaßnahmen getroffen.
 * Eine Management Station mit einem Browser, der für den Controller auf den SANtricity System Manager zugreifen kann. (Zeigen Sie zum Öffnen der System Manager-Schnittstelle den Domain-Namen oder die IP-Adresse des Controllers im Browser.)
@@ -330,4 +333,5 @@ Nach Abschluss der Laufwerkswiederherstellung befindet sich die Volume-Gruppe in
 . Senden Sie das fehlerhafte Teil wie in den dem Kit beiliegenden RMA-Anweisungen beschrieben an NetApp zurück.
 
 
+.Was kommt als Nächstes?
 Der Austausch des Laufwerks ist abgeschlossen. Sie können den normalen Betrieb fortsetzen.

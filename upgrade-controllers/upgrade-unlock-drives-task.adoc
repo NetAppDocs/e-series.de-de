@@ -15,8 +15,8 @@ Wenn Sie E2800 und E5700 Controller aktualisieren, werden die Laufwerke durch di
 
 Befolgen Sie das entsprechende Verfahren für:
 
-*  key management
-*  key management
+* <<Internes Verschlüsselungsmanagement>>
+* <<Externes Verschlüsselungskeymanagement>>
 
 
 
@@ -25,6 +25,7 @@ Befolgen Sie das entsprechende Verfahren für:
 
 Führen Sie diese Schritte für das interne Verschlüsselungsmanagement aus, wenn alle Laufwerke gesperrt sind.
 
+.Über diese Aufgabe
 Die neu getauschten Controller werden mit einem siebensegmentreichen Anzeigefeld von *L5* gesperrt. Diese Sperre tritt auf, wenn keine Laufwerke die Autocodierung (ACS) durchführen können. Nach dem Import des Sicherheitsschlüssels wird ACS die neuen Controller wieder aufgenommen und aktualisiert.
 
 
@@ -54,6 +55,7 @@ Die Controller werden mit der Synchronisierung von Autocodes von den Laufwerken 
 
 Führen Sie diese Schritte für externes Verschlüsselungsmanagement aus, wenn alle Laufwerke gesperrt sind.
 
+.Über diese Aufgabe
 Die neu getauschten Controller werden mit einem siebensegmentreichen Anzeigefeld von *L5* gesperrt. Diese Sperre tritt auf, wenn keine Laufwerke die Autocodierung (ACS) durchführen können. Nach dem Import des Sicherheitsschlüssels wird ACS die neuen Controller wieder aufgenommen und aktualisiert.
 
 

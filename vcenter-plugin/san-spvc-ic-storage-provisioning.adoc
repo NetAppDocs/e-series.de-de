@@ -226,6 +226,7 @@ In der Tabelle werden die automatisch erstellten Hosts aufgeführt.
 
 === Manuelles Erstellen des Hosts
 
+.Bevor Sie beginnen
 Lesen Sie folgende Richtlinien:
 
 * Sie müssen bereits Storage Arrays in Ihrer Umgebung hinzugefügt oder erkannt haben.
@@ -340,6 +341,7 @@ Um einen Datastore im vSphere Client zu erstellen, lesen Sie das folgende Thema 
 
 Sie können die gemeldete Kapazität (die gemeldete Kapazität an Hosts) eines Volumes erhöhen, indem Sie die freie Kapazität nutzen, die in dem Pool bzw. der Volume-Gruppe verfügbar ist.
 
+.Bevor Sie beginnen
 Stellen Sie sicher, dass:
 
 * Im zugewiesenen Pool bzw. der Volume-Gruppe des Volumes steht genügend freie Kapazität zur Verfügung.
@@ -379,7 +381,7 @@ In diesem Dialogfeld wird die aktuell gemeldete Kapazität des Volumes und die f
 
 === Erhöhen Sie die Kapazität vorhandener Datastores durch Hinzufügen von Volumes
 
-. Sie können die Kapazität eines Datastores durch Hinzufügen von Volumes erhöhen. Befolgen Sie die Schritte unter  1: Create volumes.
+. Sie können die Kapazität eines Datastores durch Hinzufügen von Volumes erhöhen. Befolgen Sie die Schritte unter <<Schritt: Volumes erstellen>>.
 . Weisen Sie dann die Volumes dem gewünschten Host zu, um die Kapazität des Datenspeichers zu erhöhen. Siehe folgendes Thema:
 +
 ** https://docs.vmware.com/en/VMware-vSphere/6.0/com.vmware.vsphere.hostclient.doc/GUID-B0D89816-02E5-4C42-AAFC-19751800A284.html["Erhöhen Sie die VMFS-Datenspeicherkapazität im vSphere-Client"^]

@@ -45,6 +45,7 @@ image:../media/sas_cable.png[""]
 
 |===
 +
+.Beispiel A: E5700 Controller-Shelf mit drei DE212C/DE24 Festplatten-Shelfs in einer standardmäßigen SAS-Konfiguration
 image:../media/example_a_28_57.png[""]
 
 +
@@ -57,6 +58,7 @@ image:../media/example_a_28_57.png[""]
 
 
 +
+.Beispiel B: Ein E5700 Controller-Shelf mit einem DE212C/DE24 Festplatten-Shelf in einer standardmäßigen SAS-Konfiguration.
 image:../media/example_b_57_28.png[""]
 
 +

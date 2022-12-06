@@ -13,9 +13,10 @@ summary: Nachdem Sie die alten Controller entfernt haben, können Sie neue Contr
 [role="lead"]
 Nachdem Sie die alten Controller entfernt haben, können Sie neue Controller in das Controller-Laufwerksfach installieren
 
+.Über diese Aufgabe
 Führen Sie für jeden Controller im Fach für das Controller-Laufwerk die folgenden Schritte aus Wenn Sie Controller in einem Duplex-Controller-Laufwerksfach aktualisieren, wiederholen Sie alle Schritte, um den zweiten Controller-Behälter zu installieren.
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Ein ESD-Armband oder andere antistatische Vorsichtsmaßnahmen treffen.
 * Eine Batterie aus dem Original-Controller-Behälter oder ein neuer Akku, den Sie bestellt haben.
 * Der neue Reglerbehälter.
@@ -88,4 +89,5 @@ NOTE: Wenn Sie ein Upgrade von einem früheren Modell auf E2700 Controller durch
 
 
 
+.Was kommt als Nächstes?
 Wenn Sie E2800 und E5700 Controller aktualisieren und die Laufwerkssicherheitsfunktion aktiviert ist, gehen Sie zu link:upgrade-unlock-drives-task.html["Entsperren von Laufwerken"]. Andernfalls fahren Sie mit fort link:complete-upgrade-controllers-task.html["Führen Sie das Controller-Upgrade durch"].

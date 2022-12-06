@@ -18,6 +18,7 @@ Sie können ein Netzteil in einem E5700 Array durch ein Shelf mit 60 Laufwerken 
 * DE460C Festplatten-Shelf
 
 
+.Über diese Aufgabe
 Jedes Controller-Shelf oder Festplatten-Shelf für 60 Laufwerke enthält zwei Stromankanister für Redundanz. Wenn ein Netzbehälter ausfällt, müssen Sie ihn so schnell wie möglich austauschen, um sicherzustellen, dass das Regal über eine redundante Stromquelle verfügt.
 
 Sie können einen Netzbehälter ersetzen, während Ihr Speicher-Array eingeschaltet ist und Host-I/O-Vorgänge durchführt. Solange der zweite Leistungsbehälter im Regal einen optimalen Status hat und das Feld *OK to remove* im Detailbereich des Recovery Guru im SANtricity System Manager *Ja* angezeigt wird.
@@ -30,7 +31,7 @@ Während Sie diese Aufgabe ausführen, versorgt der andere Netzbehälter beide L
 * Überprüfen Sie, ob die gelbe Warn-LED am Netzbehälter leuchtet und dass der Behälter über einen Fehler verfügt. Wenden Sie sich an den technischen Support, wenn die Warn-LEDs für beide Strombehälter im Regal gelb leuchten.
 
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Ein Leistungsbehälter, der installiert ist und in Betrieb ist.
 * Ein Ersatznetzbehälter, der für Ihr Controller-Shelf- oder Festplatten-Shelf-Modell unterstützt wird.
 * Ein ESD-Armband, oder Sie haben andere antistatische Vorsichtsmaßnahmen getroffen.
@@ -144,7 +145,7 @@ CAUTION: Verwenden Sie keine übermäßige Kraft, wenn Sie den Netzbehälter in 
 .Schritte
 . Überprüfen Sie am neuen Netzbehälter, ob die grüne LED für die Stromversorgung leuchtet und die gelbe Warn-LED NICHT LEUCHTET.
 . Wählen Sie im Recovery Guru im SANtricity System Manager *recheck* aus, um sicherzustellen, dass das Problem behoben wurde.
-. Wenn noch ein nicht geschildeter Strombehälter gemeldet wird, wiederholen Sie die Schritte in  2: Remove failed power canister Und ein  3: Install new power canister. Wenn das Problem weiterhin besteht, wenden Sie sich an den technischen Support.
+. Wenn noch ein nicht geschildeter Strombehälter gemeldet wird, wiederholen Sie die Schritte in <<Schritt 2: Entfernen Sie den defekten Netzbehälter>> Und ein <<Schritt 3: Installieren Sie einen neuen Leistungsbehälter>>. Wenn das Problem weiterhin besteht, wenden Sie sich an den technischen Support.
 . Entfernen Sie den antistatischen Schutz.
 . Support-Daten für Ihr Storage Array mit SANtricity System Manager erfassen
 +
@@ -162,4 +163,5 @@ Die Datei wird im Ordner Downloads für Ihren Browser mit dem Namen *Support-Dat
 . Senden Sie das fehlerhafte Teil wie in den dem Kit beiliegenden RMA-Anweisungen beschrieben an NetApp zurück.
 
 
+.Was kommt als Nächstes?
 Der Austausch des Netzkanals ist abgeschlossen. Sie können den normalen Betrieb fortsetzen.

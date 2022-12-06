@@ -17,6 +17,7 @@ summary: Sie können eine Volume-Gruppe für ein oder mehrere Volumes erstellen,
 [role="lead"]
 Sie können eine Volume-Gruppe für ein oder mehrere Volumes erstellen, auf die der Host zugreifen kann. Eine Volume-Gruppe ist ein Container für Volumes mit gemeinsam genutzten Merkmalen wie RAID-Level und Kapazität.
 
+.Bevor Sie beginnen
 Lesen Sie sich die folgenden Richtlinien durch:
 
 * Sie benötigen mindestens ein nicht zugewiesenes Laufwerk.
@@ -32,6 +33,7 @@ Lesen Sie sich die folgenden Richtlinien durch:
 * Wenn Sie RAID 6 auswählen, müssen Sie mindestens fünf Laufwerke hinzufügen, um die Volume-Gruppe zu erstellen.
 
 
+.Über diese Aufgabe
 Bei der Erstellung von Volume-Gruppen bestimmen Sie die Gruppenmerkmale, z. B. die Anzahl an Laufwerken, die Sicherheitsfunktion, die Data Assurance (da)-Funktion, den Schutz vor Shelf-Datenverlusten und den Schutz vor Schubladenverlust.
 
 Für EF600 und EF300 Storage-Arrays umfassen die Einstellungen auch die Ressourcenbereitstellung, die Laufwerksblockgrößen und die Volume-Blockgrößen.

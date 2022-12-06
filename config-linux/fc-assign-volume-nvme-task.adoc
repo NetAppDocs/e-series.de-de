@@ -14,6 +14,7 @@ summary: 'Sie müssen einem Host oder Host-Cluster ein Volume \(Namespace\) zuwe
 [role="lead"]
 Sie müssen einem Host oder Host-Cluster ein Volume (Namespace) zuweisen, damit es für I/O-Vorgänge verwendet werden kann. Diese Zuweisung gewährt einem Host oder Host-Cluster Zugriff auf einen oder mehrere Namespaces in einem Storage-Array.
 
+.Über diese Aufgabe
 Beachten Sie bei der Zuweisung von Volumes die folgenden Richtlinien:
 
 * Sie können ein Volume gleichzeitig nur einem Host oder Host-Cluster zuweisen.
@@ -49,6 +50,7 @@ Es wird ein Dialogfeld angezeigt, in dem alle Volumes aufgelistet werden, die zu
 . Klicken Sie auf *Zuweisen*, um den Vorgang abzuschließen.
 
 
+.Ergebnis
 Nachdem ein Volume oder ein Volume erfolgreich einem Host oder Host-Cluster zugewiesen wurde, führt das System folgende Aktionen durch:
 
 * Das zugewiesene Volume erhält die nächste verfügbare NSID. Der Host verwendet die NSID für den Zugriff auf das Volume.

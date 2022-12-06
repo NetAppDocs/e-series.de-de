@@ -24,6 +24,7 @@ Sie müssen alle Rampen auswerten, um sicherzustellen, dass der Schwerpunkt des 
 
 
 
+.Über diese Aufgabe
 Viele der Racks sind mit Laufwerksfächern bestückt. Diese Situation führt zu einem Großteil des Gewichts im vorderen Teil des Schranks, wodurch der Schwerpunkt näher an der Vorderseite.
 
 .Schritte

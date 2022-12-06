@@ -36,6 +36,6 @@ Datenzugriff https://mysupport.netapp.com/ecm/ecm_download_file/ECMLP2484194["In
 
 
 
-== Vierpolige-Rack – SuperRail
+== Vierpolige-Rack -- SuperRail
 
 Datenzugriff https://docs.netapp.com/us-en/ontap-systems/platform-supplemental/superrail-install.html["Installation von SuperRail in einem 4-Säulen-Rack (DE224C/DE460C Shelfs)"^].

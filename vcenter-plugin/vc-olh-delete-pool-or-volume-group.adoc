@@ -37,6 +37,7 @@ Sie können jeweils nur einen Pool oder eine Volume-Gruppe auswählen. Scrollen 
 . Wählen Sie Menü:Sonstige Aufgaben[Löschen] und bestätigen Sie.
 
 
+.Ergebnisse
 Das System führt die folgenden Aktionen durch:
 
 * Löscht alle Daten im Pool oder der Volume-Gruppe.

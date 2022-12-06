@@ -14,6 +14,7 @@ summary: Mit dem SANtricity System Manager definieren Sie die Hosts, die Daten a
 [role="lead"]
 Mit dem SANtricity System Manager definieren Sie die Hosts, die Daten an das Storage Array senden. Die Definition eines Hosts ist einer der Schritte, die erforderlich sind, damit das Storage-Array wissen kann, an welche Hosts angeschlossen sind, und um den I/O-Zugriff auf die Volumes zu ermöglichen.
 
+.Über diese Aufgabe
 Beachten Sie beim Definieren eines Hosts die folgenden Richtlinien:
 
 * Sie müssen die dem Host zugeordneten Host-Identifier-Ports definieren.
@@ -84,6 +85,7 @@ Sie müssen eine Host-Port-ID gleichzeitig hinzufügen, um sie dem Host zuzuordn
 . Klicken Sie Auf *Erstellen*.
 
 
+.Ergebnis
 Nach der erfolgreichen Erstellung des Hosts erstellt SANtricity System Manager für jeden für den Host konfigurierten Host-Port einen Standardnamen.
 
 Der Standard-Alias ist `<Hostname_Port Number>`. Beispiel: Der Standard-Alias für den ersten Port, für den erstellt wurde `host IPT is IPT_1`.

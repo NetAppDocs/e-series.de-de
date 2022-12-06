@@ -17,6 +17,7 @@ summary: Sie müssen ein Volume einem Host oder Host-Cluster zuweisen, damit es 
 [role="lead"]
 Sie müssen ein Volume einem Host oder Host-Cluster zuweisen, damit es für I/O-Vorgänge verwendet werden kann.
 
+.Bevor Sie beginnen
 Beachten Sie bei der Zuweisung von Volumes zu Hosts die folgenden Richtlinien:
 
 * Sie können ein Volume gleichzeitig nur einem Host oder Host-Cluster zuweisen.
@@ -25,6 +26,7 @@ Beachten Sie bei der Zuweisung von Volumes zu Hosts die folgenden Richtlinien:
 * Wenn Sie bei neuen Volume-Gruppen warten, bis alle Volumes erstellt und initialisiert wurden, bevor Sie sie einem Host zuweisen, wird die Initialisierungszeit des Volumes verkürzt. Beachten Sie, dass sobald ein mit der Volume-Gruppe assoziiertes Volume zugeordnet ist, alle Volumes auf die langsamere Initialisierung zurückgesetzt werden.
 
 
+.Über diese Aufgabe
 Eine Volume-Zuweisung gewährt einem Host oder Host-Cluster Zugriff auf dieses Volume in einem Storage-Array.
 
 Während dieser Aufgabe werden alle nicht zugewiesenen Volumes angezeigt, aber Funktionen für Hosts mit oder ohne Data Assurance (da) gelten wie folgt:
@@ -55,6 +57,7 @@ Es wird ein Dialogfeld angezeigt, in dem alle Volumes aufgelistet werden, die zu
 . Klicken Sie auf *Zuweisen*, um den Vorgang abzuschließen.
 
 
+.Ergebnisse
 Nachdem ein Volume oder ein Volume erfolgreich einem Host oder Host-Cluster zugewiesen wurde, führt das System folgende Aktionen durch:
 
 * Das zugewiesene Volume erhält die nächste verfügbare LUN-Nummer. Der Host verwendet die LUN-Nummer für den Zugriff auf das Volume.

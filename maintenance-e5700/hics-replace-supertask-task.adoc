@@ -14,6 +14,7 @@ summary: Ersetzen Sie eine HIC in einer E5700.
 [role="lead"]
 Sie können eine ausgefallene Host-Schnittstellenkarte (HIC) ersetzen.
 
+.Über diese Aufgabe
 Wenn Sie eine HIC ersetzen, setzen Sie den Controller offline (für Duplexkonfigurationen), entfernen Sie den Controller-Behälter, installieren Sie die neue HIC und ersetzen Sie dann den Controller-Behälter.
 
 .Bevor Sie beginnen
@@ -23,7 +24,7 @@ Wenn Sie eine HIC ersetzen, setzen Sie den Controller offline (für Duplexkonfig
 * Überprüfen Sie im SANtricity System Manager die Details im Recovery Guru, um zu überprüfen, ob eine fehlerhafte HIC vorhanden ist, und um sicherzustellen, dass keine anderen Elemente behoben werden müssen, bevor Sie die HIC entfernen und ersetzen können.
 
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Zwei HICs, die mit Ihren Controllern kompatibel sind.
 +
 Bei Duplexkonfigurationen (zwei Controller) müssen die HICs, die in den beiden Controller-Kanistern installiert sind, identisch sein. Wenn nicht übereinstimmende HIC vorhanden sind, wird der Controller mit der Ersatz-HIC gesperrt, wenn Sie ihn online schalten.
@@ -347,4 +348,5 @@ Wenden Sie sich an den technischen Support unter http://mysupport.netapp.com["Ne
 
 
 
+.Was kommt als Nächstes?
 Der Austausch der HIC ist abgeschlossen. Sie können den normalen Betrieb fortsetzen.

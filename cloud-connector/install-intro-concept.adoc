@@ -18,6 +18,7 @@ Sie können die Anwendung SANtricity Cloud Connector über den Grafikmodus oder 
 
 NOTE: Das SANtricity Cloud Connector-Tool ist veraltet und kann nicht mehr heruntergeladen werden.
 
+.Bevor Sie beginnen
 Lesen Sie die folgenden Hinweise:
 
 * Wenn SANtricity Webservices Proxy bereits auf demselben Server wie der SANtricity Cloud Connector installiert ist, treten Konflikte zwischen nicht-SSL-Portnummern und Konflikten bei SSL-Port-Nummern auf. Wählen Sie in diesem Fall während der Installation des SANtricity Cloud Connectors die entsprechenden Nummern für den nicht-SSL-Port und den SSL-Port aus.
@@ -45,6 +46,7 @@ Sie können SANtricity Cloud Connector entweder im grafischen Modus oder im Kons
 
 Sie können den SANtricity-Cloud-Connector im grafischen Modus auf einem Linux-Betriebssystem installieren.
 
+.Bevor Sie beginnen
 Bestimmen Sie einen Host-Standort für die Installation des SANtricity Cloud Connectors.
 
 .Schritte
@@ -114,6 +116,7 @@ Die Meldung Installation abgeschlossen wird angezeigt.
 
 Im Konsolenmodus können Sie den SANtricity-Cloud-Connector auf einem Linux-Betriebssystem installieren.
 
+.Bevor Sie beginnen
 Bestimmen Sie einen Host-Standort für die Installation des SANtricity Cloud Connectors.
 
 .Schritte
@@ -192,6 +195,7 @@ Die Meldung Installation abgeschlossen wird angezeigt.
 
 Um eine sichere HTTPS-Verbindung vom Browser zum SANtricity Cloud Connector-Host zu verwenden, können Sie das selbstsignierte Zertifikat vom SANtricity Cloud Connector-Host akzeptieren oder ein Zertifikat und eine Vertrauenskette hinzufügen, die sowohl vom Browser als auch von der SANtricity Cloud Connector-Anwendung erkannt wird.
 
+.Bevor Sie beginnen
 Die SANtricity Cloud Connector-Anwendung muss auf einem Host installiert sein.
 
 .Schritte

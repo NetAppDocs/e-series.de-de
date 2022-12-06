@@ -17,6 +17,7 @@ summary: Importieren einer Verzeichnisdienstkonfiguration von einem Speicher-Arr
 [role="lead"]
 Sie können eine Konfiguration für Verzeichnisdienste von einem Speicher-Array in andere Speicher-Arrays importieren. Dieser Batch-Betrieb spart Zeit, wenn Sie mehrere Arrays im Netzwerk konfigurieren müssen.
 
+.Bevor Sie beginnen
 Stellen Sie sicher, dass:
 
 * Verzeichnisdienste werden in System Manager (Menü:Einstellungen[Zugriffsverwaltung]) für das Speicherarray konfiguriert, das als Quelle verwendet werden soll.
@@ -24,6 +25,7 @@ Stellen Sie sicher, dass:
 * Sie haben die Anforderungen für die Replizierung von Speicherkonfigurationen in überprüft link:vc-olh-import-settings-overview.html["Überblick über die Einstellungen importieren"].
 
 
+.Über diese Aufgabe
 Zu den importierten Einstellungen gehören der Domänenname und die URL eines LDAP-Servers (Lightweight Directory Access Protocol) sowie die Zuordnungen der Benutzergruppen des LDAP-Servers zu den vordefinierten Rollen des Speicher-Arrays.
 
 .Schritte
@@ -47,4 +49,5 @@ Auf der Seite Operationen werden die Ergebnisse des Importvorgangs angezeigt. We
 
 
 
+.Ergebnis
 Die Ziel-Storage-Arrays sind nun mit denselben Verzeichnisdiensten konfiguriert wie das Quell-Array.

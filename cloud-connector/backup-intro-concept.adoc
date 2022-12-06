@@ -24,6 +24,7 @@ NOTE: Alle Zeitstempel für Backup- und Wiederherstellungsjobs, die unter der An
 
 Über die Funktion Erstellen können Sie neue abbilderbasierte Backups auf der Backup-Seite der SANtricity Cloud Connector-Anwendung erstellen.
 
+.Bevor Sie beginnen
 Stellen Sie sicher, dass Sie Speicherarrays aus dem Webservices Proxy auf dem SANtricity Cloud Connector registriert haben.
 
 .Schritte
@@ -76,6 +77,7 @@ Das Backup für das ausgewählte E-Series Volume wird gestartet, und der Status 
 
 Sie können neue Ordner-/dateibasierte Backups über die Funktion Erstellen auf der Backup-Seite der SANtricity Cloud Connector-Anwendung erstellen.
 
+.Bevor Sie beginnen
 Stellen Sie sicher, dass Sie Speicherarrays aus dem Webservices Proxy auf dem SANtricity Cloud Connector registriert haben.
 
 Ein dateibasiertes Backup sichert bedingungslos alle Dateien auf dem von Ihnen angegebenen Dateisystem. Sie können jedoch eine selektive Wiederherstellung von Dateien und Ordnern durchführen.
@@ -138,6 +140,7 @@ Das Backup für das ausgewählte E-Series-Volume wird gestartet, und der Status 
 
 Sie können über die Funktion Ausführen auf der Seite Backups vollständige und inkrementelle Backups durchführen. Inkrementelle Backups sind nur für dateibasierte Backups verfügbar.
 
+.Bevor Sie beginnen
 Stellen Sie sicher, dass Sie über den SANtricity Cloud Connector einen Backup-Job erstellt haben.
 
 .Schritte
@@ -171,6 +174,7 @@ Die Backup-Anfrage wird gestartet.
 
 Mit der Funktion Löschen werden gesicherte Daten am angegebenen Zielspeicherort für die ausgewählte Sicherung zusammen mit dem Backup-Satz gelöscht.
 
+.Bevor Sie beginnen
 Stellen Sie sicher, dass ein Backup mit dem Status „Abgeschlossen“, „Fehlgeschlagen“ oder „abgebrochen“ vorhanden ist.
 
 .Schritte

@@ -34,6 +34,7 @@ Der Web Services Proxy verwendet Secure Sockets Layer (SSL) für die Sicherheit,
 ----
 
 
+.Ergebnis
 Wenn der Server mit konfiguriertem SSL gestartet wird, sucht der Server nach den KeyStore- und Truststore-Dateien.
 
 * Wenn der Server keinen Schlüsselspeicher findet, verwendet der Server die IP-Adresse der ersten erkannten nicht-Loopback-IPv4-Adresse, um einen Schlüsselspeicher zu generieren und anschließend ein selbstsigniertes Zertifikat zum Schlüsselspeicher hinzuzufügen.

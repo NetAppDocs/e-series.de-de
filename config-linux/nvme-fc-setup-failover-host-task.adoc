@@ -13,12 +13,14 @@ summary: Konfigurieren Sie den Host für das Failover.
 [role="lead"]
 Um einen redundanten Pfad zum Speicher-Array bereitzustellen, können Sie den Host so konfigurieren, dass ein Failover ausgeführt wird.
 
+.Was Sie benötigen
 Sie müssen die erforderlichen Pakete auf Ihrem System installieren.
 
 * Überprüfen Sie für Red hat-Hosts (RHEL), ob die Pakete durch Ausführen installiert wurden `rpm -q device-mapper-multipath`
 * Überprüfen Sie bei SLES-Hosts, ob die Pakete durch Ausführen installiert wurden `rpm -q multipath-tools`
 
 
+.Über diese Aufgabe
 RHEL 7 und SLES 12 verwenden Device Mapper Multipath (DMMP) für Multipathing bei Verwendung von NVMe over Fibre Channel. RHEL 8, RHEL 9 und SLES 15 verwenden ein integriertes natives NVMe Failover. Je nachdem, welches Betriebssystem Sie ausführen, ist eine zusätzliche Multipath-Konfiguration erforderlich, um es ordnungsgemäß ausführen zu können.
 
 
@@ -67,6 +69,7 @@ devices {
 
 == Natives NVMe-Multipathing für RHEL 8 einrichten
 
+.Über diese Aufgabe
 Natives NVMe-Multipathing ist in RHEL 8 standardmäßig deaktiviert und muss mit den folgenden Schritten aktiviert werden.
 
 .Schritte

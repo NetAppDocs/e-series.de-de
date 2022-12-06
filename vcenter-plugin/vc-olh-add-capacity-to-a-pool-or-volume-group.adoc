@@ -26,6 +26,7 @@ Sie können Laufwerke hinzufügen, um die freie Kapazität in einem vorhandenen 
 
 Sichere Laufwerke können entweder vollständige Festplattenverschlüsselung (Full Disk Encryption, FDE) oder FIPS-Laufwerke (Federal Information Processing Standard) sein.
 
+.Über diese Aufgabe
 Bei dieser Aufgabe können Sie die freie Kapazität hinzufügen, die in den Pool bzw. die Volume-Gruppe integriert werden kann. Sie können diese freie Kapazität nutzen, um zusätzliche Volumes zu erstellen. Der Zugriff auf die Daten in den Volumes bleibt während dieses Vorgangs erhalten.
 
 Für Pools können Sie maximal 60 Laufwerke gleichzeitig hinzufügen. Für Volume-Gruppen können Sie maximal zwei Laufwerke gleichzeitig hinzufügen. Wenn Sie mehr als die maximale Anzahl an Laufwerken hinzufügen müssen, wiederholen Sie das Verfahren. (Ein Pool darf nicht mehr Laufwerke enthalten als das Höchstlimit eines Speicher-Arrays.)
@@ -49,6 +50,7 @@ Die Controller-Firmware ordnet die nicht zugewiesenen Laufwerke den besten Optio
 
 +
 .Felddetails
+[%collapsible]
 ====
 [cols="25h,~"]
 |===
@@ -127,4 +129,5 @@ Wenn Sie Laufwerke zu einem Pool oder einer Volume-Gruppe hinzufügen, wird ein 
 . Klicken Sie zum Fortfahren auf *Ja*, oder klicken Sie auf *Abbrechen*.
 
 
+.Ergebnis
 Nachdem Sie die nicht zugewiesenen Laufwerke einem Pool oder einer Volume-Gruppe hinzugefügt haben, werden die Daten in jedem Volume des Pools oder der Volume-Gruppe neu verteilt, um auch die zusätzlichen Laufwerke einzubeziehen.

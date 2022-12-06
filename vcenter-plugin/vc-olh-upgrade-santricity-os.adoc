@@ -17,6 +17,7 @@ summary: Aktualisieren Sie ein oder mehrere Storage-Arrays mit der neuesten Soft
 [role="lead"]
 Aktualisieren Sie ein oder mehrere Storage-Arrays mit der neuesten Software und NVSRAM, um sicherzustellen, dass Sie über alle neuesten Funktionen und Fehlerbehebungen verfügen. Der NVSRAM-Controller ist eine Controller-Datei, die die Standardeinstellungen für die Controller angibt.
 
+.Bevor Sie beginnen
 Stellen Sie sicher, dass:
 
 * Die neuesten SANtricity OS-Dateien sind auf dem Host-System verfügbar, auf dem das Plugin ausgeführt wird.

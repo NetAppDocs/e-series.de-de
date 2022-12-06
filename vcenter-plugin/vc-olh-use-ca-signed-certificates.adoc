@@ -19,16 +19,16 @@ Sie können CA-signierte Zertifikate für den sicheren Zugriff auf das Managemen
 
 Die Verwendung von CA-signierten Zertifikaten ist ein dreistufiges Verfahren:
 
-*  1: Complete a CSR file.
-*  2: Submit CSR file.
-*  3: Import management certificates.
+* <<Schritt 1: Eine CSR-Datei ausfüllen>>.
+* <<Schritt 2: CSR-Datei senden>>.
+* <<Schritt 3: Import Management Zertifikate>>.
 
 
 
 
 == Schritt 1: Eine CSR-Datei ausfüllen
 
-Sie müssen zuerst eine CSR-Datei (Certificate Signing Request) generieren, die Ihre Organisation und das Host-System identifiziert, auf dem das Plugin ausgeführt wird. Alternativ können Sie eine CSR-Datei mit einem Tool wie OpenSSL generieren und zu überspringen  2: Submit CSR file.
+Sie müssen zuerst eine CSR-Datei (Certificate Signing Request) generieren, die Ihre Organisation und das Host-System identifiziert, auf dem das Plugin ausgeführt wird. Alternativ können Sie eine CSR-Datei mit einem Tool wie OpenSSL generieren und zu überspringen <<Schritt 2: CSR-Datei senden>>.
 
 .Schritte
 . Wählen Sie *Zertifikatverwaltung*.
@@ -99,4 +99,5 @@ Die Dateinamen werden im Dialogfeld angezeigt.
 . Klicken Sie Auf *Import*.
 
 
+.Ergebnis
 Die Dateien werden hochgeladen und validiert. Die Zertifikatinformationen werden auf der Seite Zertifikatverwaltung angezeigt.

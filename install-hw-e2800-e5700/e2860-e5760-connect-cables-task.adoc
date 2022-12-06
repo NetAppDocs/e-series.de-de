@@ -45,6 +45,7 @@ image:../media/sas_cable.png[""]
 
 |===
 +
+.Beispiel A: Ein E2860 Controller-Shelf mit zwei DE460C Festplatten-Shelfs in einer Standard-SAS-Konfiguration.
 image:../media/example_a_2860.png[""]
 
 +
@@ -55,6 +56,7 @@ image:../media/example_a_2860.png[""]
 
 
 +
+.Beispiel B: Ein E2860 Controller-Shelf mit einem DE460C Festplatten-Shelf in einer Standard-SAS-Konfiguration.
 image:../media/example_b_2860.png[""]
 
 +

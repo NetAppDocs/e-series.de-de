@@ -13,13 +13,15 @@ summary: Fügen Sie ein neues Festplatten-Shelf hinzu, während die Stromversorg
 [role="lead"]
 Sie können ein neues Festplatten-Shelf hinzufügen, während die Stromversorgung weiterhin auf die anderen Komponenten des Storage-Systems angewendet wird. Sie können Storage-Systemkapazität konfigurieren, neu konfigurieren, hinzufügen oder verschieben, ohne den Benutzerzugriff auf Daten zu unterbrechen.
 
+.Bevor Sie beginnen
 Aufgrund der Komplexität dieses Verfahrens wird Folgendes empfohlen:
 
 * Lesen Sie alle Schritte vor Beginn des Verfahrens durch.
 * Stellen Sie sicher, dass das Hinzufügen eines Festplatten-Shelfs während des laufenden Vorgangs erfolgt.
 
 
-Dieses Verfahren gilt für das Hinzufügen eines DE212C, DE224C oder DE460C Festplatten-Shelf zu einem E2800, E2800B, EF280, E5700, E5700B, EF570 oder EF300 Controller-Shelf.
+.Über diese Aufgabe
+Dieses Verfahren gilt für das Hinzufügen eines DE212C, DE224C oder DE460C Festplatten-Shelf zu einem E2800, E2800B, EF280, E5700, E5700B, EF570, EF300 oder EF600 Controller-Shelf
 
 Dieses Verfahren gilt für die IOM12- und IOM12B-Laufwerkseinschübe.
 
@@ -107,17 +109,17 @@ NOTE: In der Installationsanleitung Ihres Modells finden Sie das vollständige V
 
 == Schritt 3: Verkabeln Sie Ihr System
 
-Wählen Sie je nachdem, ob Sie ein E2800 und E5700 Storage-System oder ein EF300 Storage-System verkabeln, eine der folgenden Optionen.
+Wählen Sie eine der folgenden Optionen:
 
-*  1: Connect the drive shelf for E2800 and E5700
-*  2: Connect the drive shelf for EF300
+* <<Option 1: Verbinden Sie das Laufwerk-Shelf für die E2800 oder E5700>>
+* <<Option 2: Verbinden Sie das Laufwerk-Shelf für das EF300 oder EF600 System>>
 
 
 Wenn Sie ein älteres Controller-Shelf mit einem DE212C, DE224C oder DE460 verkabeln, finden Sie unter https://mysupport.netapp.com/ecm/ecm_download_file/ECMLP2859057["Hinzufügen von IOM-Laufwerk-Shelfs zu einem vorhandenen E27XX-, E56XX- oder EF560-Controller-Shelf"^].
 
 
 
-=== Option 1: Verbinden Sie das Laufwerk-Shelf für die E2800 und E5700
+=== Option 1: Verbinden Sie das Laufwerk-Shelf für die E2800 oder E5700
 
 Sie verbinden das Festplatten-Shelf mit Controller A, bestätigen den IOM-Status und verbinden dann das Festplatten-Shelf mit Controller B
 
@@ -170,7 +172,7 @@ NOTE: Der Status „optimal“ zeigt an, dass der Verlust eines Redundanzfehlers
 
 
 
-=== Option 2: Schließen Sie das Laufwerk-Shelf für EF300 an
+=== Option 2: Verbinden Sie das Laufwerk-Shelf für das EF300 oder EF600 System
 
 Sie verbinden das Festplatten-Shelf mit Controller A, bestätigen den IOM-Status und verbinden dann das Festplatten-Shelf mit Controller B
 

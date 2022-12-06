@@ -13,9 +13,9 @@ summary: Sie mounten Volumes neu, wenn Ihr Controller-Upgrade dazu führt, dass 
 [role="lead"]
 Wenn Ihr Controller-Upgrade dazu führt, die Anbieter-ID von LSI zu NETAPP zu ändern, befolgen Sie das entsprechende Verfahren für Ihren Host-Typ:
 
-*  volumes on an AIX host
-*  volumes on a VMware host
-*  volumes on a Windows host
+* <<Volumes neu auf einem AIX-Host mounten>>
+* <<Volumes neu auf einem VMware Host mounten>>
+* <<Volumes neu auf einem Windows Host mounten>>
 
 
 
@@ -24,6 +24,7 @@ Wenn Ihr Controller-Upgrade dazu führt, die Anbieter-ID von LSI zu NETAPP zu ä
 
 Nachdem Sie die Controller ersetzt haben, stellen Sie möglicherweise fest, dass der Host die neuen Volumes im Speicher-Array anzeigt, aber auch die ursprünglichen Volumes als fehlgeschlagen angezeigt werden.
 
+.Schritt
 Wenn fehlerhafte Volumes angezeigt werden, führen Sie den aus `cfgmgr` Befehl.
 
 

@@ -17,6 +17,7 @@ summary: Importieren von Alarmkonfigurationen aus einem Speicher-Array in andere
 [role="lead"]
 Sie können Alarmkonfigurationen von einem Speicher-Array in andere Speicher-Arrays importieren. Dieser Batch-Betrieb spart Zeit, wenn Sie mehrere Arrays im Netzwerk konfigurieren müssen.
 
+.Bevor Sie beginnen
 Stellen Sie sicher, dass:
 
 * Warnmeldungen werden in System Manager (Menü:Einstellungen[Warnungen]) für das Speicherarray konfiguriert, das als Quelle verwendet werden soll.
@@ -24,6 +25,7 @@ Stellen Sie sicher, dass:
 * Sie haben die Anforderungen für die Replizierung von Speicherkonfigurationen in überprüft link:vc-olh-import-settings-overview.html["Überblick über die Einstellungen importieren"].
 
 
+.Über diese Aufgabe
 Sie können E-Mail-, SNMP- oder Syslog-Warnungen für den Importvorgang auswählen:
 
 * *E-Mail-Benachrichtigungen* -- Eine E-Mail-Server-Adresse und die E-Mail-Adressen der Alarmempfänger.
@@ -52,4 +54,5 @@ Auf der Seite Operationen werden die Ergebnisse des Importvorgangs angezeigt. We
 
 
 
+.Ergebnis
 Die Ziel-Storage-Arrays sind jetzt so konfiguriert, dass sie Warnmeldungen per E-Mail, SNMP oder Syslog an Administratoren senden.

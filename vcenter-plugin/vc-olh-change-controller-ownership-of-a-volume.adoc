@@ -17,8 +17,10 @@ summary: Ändern Sie den bevorzugten Controller-Besitz eines Volumes, sodass I/O
 [role="lead"]
 Sie können den bevorzugten Controller-Besitz eines Volumes ändern, sodass die I/O-Vorgänge für Host-Applikationen durch den neuen Pfad geleitet werden.
 
+.Bevor Sie beginnen
 Falls Sie keinen Multipath-Treiber verwenden, müssen alle Host-Applikationen, die derzeit das Volume verwenden, heruntergefahren werden. Dadurch werden Anwendungsfehler verhindert, wenn sich der I/O-Pfad ändert.
 
+.Über diese Aufgabe
 Sie können die Controller-Eigentumsrechte für ein oder mehrere Volumes in einem Pool oder einer Volume-Gruppe ändern.
 
 .Schritte

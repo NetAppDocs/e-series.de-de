@@ -15,6 +15,7 @@ Da eine neue LUN offline ist und über keine Partition oder ein Dateisystem verf
 
 Sie können den Datenträger als Basislaufwerk mit einer GPT- oder MBR-Partitionstabelle initialisieren. In der Regel formatieren Sie die LUN mit einem Dateisystem wie z. B. New Technology File System (NTFS).
 
+.Was Sie benötigen
 Eine LUN, die vom Host erkannt wurde.
 
 .Schritte

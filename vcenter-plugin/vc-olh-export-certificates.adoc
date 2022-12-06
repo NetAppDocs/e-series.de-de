@@ -16,6 +16,7 @@ summary: Exportieren Sie ein Zertifikat, um die vollständigen Details anzuzeige
 [role="lead"]
 Sie können ein Zertifikat exportieren, um die vollständigen Details anzuzeigen.
 
+.Bevor Sie beginnen
 Um die exportierte Datei zu öffnen, müssen Sie über eine Zertifikatanzeige-Anwendung verfügen.
 
 .Schritte

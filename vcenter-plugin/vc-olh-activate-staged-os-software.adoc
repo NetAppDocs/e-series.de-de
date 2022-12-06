@@ -17,6 +17,7 @@ summary: Sie können wählen, ob Sie die Software-Datei zu einem angenehmeren Ze
 [role="lead"]
 Sie können die Software-Datei sofort aktivieren oder bis zu einem angenehmeren Zeitpunkt warten. Bei diesem Verfahren wird davon ausgegangen, dass Sie die Softwaredatei zu einem späteren Zeitpunkt aktivieren.
 
+.Über diese Aufgabe
 Sie können die Firmware-Dateien übertragen, ohne sie zu aktivieren. Aus folgenden Gründen können Sie sich später aktivieren:
 
 * *Tageszeit* -- die Aktivierung der Software kann eine lange Zeit dauern, so dass Sie möglicherweise warten möchten, bis I/O-Lasten leichter sind. Die Controller starten neu und führen einen Failover während der Aktivierung durch. Dadurch kann die Performance bis zum Abschluss des Upgrades unter Umständen niedriger sein als üblich.

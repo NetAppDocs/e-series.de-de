@@ -16,11 +16,11 @@ Für das iSCSI-Protokoll konfigurieren Sie die Switches und konfigurieren das Ne
 
 
 
-== Schritt: Switches konfigurieren – ​iSCSI, VMware
+== Schritt: Die Switches konfigurieren – iSCSI, VMware
 
 Sie konfigurieren die Switches entsprechend den Empfehlungen des Anbieters für iSCSI. Diese Empfehlungen können sowohl Konfigurationsrichtlinien als auch Code-Updates enthalten.
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Zwei separate Netzwerke für Hochverfügbarkeit, Vergewissern Sie sich, dass Sie den iSCSI-Datenverkehr in getrennten Netzwerksegmenten isolieren.
 * Hardware-Flusssteuerung zum Senden und Empfangen aktiviert *Ende bis Ende*.
 * Flusskontrolle mit Priorität deaktiviert.
@@ -30,15 +30,16 @@ Sie konfigurieren die Switches entsprechend den Empfehlungen des Anbieters für 
 
 NOTE: Port-Kanäle/LACP werden von den Switch-Ports des Controllers nicht unterstützt. Host-seitiges LACP wird nicht empfohlen; Multipathing bietet dieselben Vorteile oder noch besser.
 
+.Schritte
 Informieren Sie sich in der Dokumentation des Switch-Anbieters.
 
 
 
-== Schritt: Netzwerk konfigurieren – ​iSCSI VMware
+== Schritt: Netzwerk-iSCSI VMware konfigurieren
 
 Je nach Ihren Datenspeicheranforderungen können Sie Ihr iSCSI-Netzwerk auf unterschiedliche Weise einrichten. Wenden Sie sich an Ihren Netzwerkadministrator, wenn Sie Tipps zur Auswahl der für Ihre Umgebung am besten geeigneten Konfiguration benötigen.
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Hardware-Flusssteuerung zum Senden und Empfangen aktiviert *Ende bis Ende*.
 * Flusskontrolle mit Priorität deaktiviert.
 * Gegebenenfalls aktivierten Jumbo Frames.
@@ -47,6 +48,7 @@ Wenn Sie aus Performance-Gründen Jumbo Frames im IP SAN verwenden, stellen Sie 
 
 
 
+.Über diese Aufgabe
 Denken Sie bei der Planung Ihrer iSCSI-Netzwerke daran, dass die https://configmax.vmware.com/home["VMware Konfigurationsmaxima"^] „Guide“ gibt an, dass die maximal unterstützten iSCSI-Speicherpfade 8 sind. Sie müssen diese Anforderung berücksichtigen, um nicht zu viele Pfade zu konfigurieren.
 
 Standardmäßig erstellt der VMware iSCSI Software Initiator eine einzelne Sitzung pro iSCSI-Ziel, wenn Sie keine iSCSI-Port-Bindung verwenden.
@@ -58,6 +60,7 @@ Als Best Practice sollten Sie BEI E-Series Storage-Arrays nicht die Portbindung 
 
 Verwenden Sie für eine gute Multipathing-Konfiguration mehrere Netzwerksegmente für das iSCSI-Netzwerk. Platzieren Sie mindestens einen Host-seitigen Port und mindestens einen Port jedes Array-Controllers in einem Netzwerksegment und eine identische Gruppe von Host- und Array-seitigen Ports in einem anderen Netzwerksegment. Verwenden Sie, falls möglich, mehrere Ethernet Switches, um zusätzliche Redundanz bereitzustellen.
 
+.Schritte
 Informieren Sie sich in der Dokumentation des Switch-Anbieters.
 
 
@@ -65,15 +68,16 @@ NOTE: Für IP-Overhead müssen viele Netzwerk-Switches über 9,000 Bytes konfigu
 
 
 
-== Schritt 3: Array-seitiges Netzwerk konfigurieren – ​iSCSI, VMware
+== Schritt 3: Array-seitiges Netzwerk konfigurieren – iSCSI, VMware
 
 Mit der SANtricity System Manager GUI können Sie das iSCSI-Netzwerk auf der Array-Seite konfigurieren.
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Die IP-Adresse oder der Domänenname für einen der Speicher-Array-Controller.
 * Das Passwort für die System Manager GUI, die rollenbasierte Zugriffssteuerung (Role-Based Access Control, RBAC) oder LDAP und ein Verzeichnisdienst werden so konfiguriert, dass der Sicherheitszugriff auf das Speicher-Array gewährleistet ist. Weitere Informationen zur Zugriffsverwaltung finden Sie in der Online-Hilfe des SANtricity System Managers.
 
 
+.Über diese Aufgabe
 Dieser Task beschreibt den Zugriff auf die Konfiguration des iSCSI-Ports über die Seite Hardware. Sie können die Konfiguration auch über das Menü:System[Einstellungen > iSCSI-Ports konfigurieren] aufrufen.
 
 
@@ -187,10 +191,11 @@ Wählen Sie diese Option aus, und geben Sie dann eine statische Adresse in die F
 
 
 
-== Schritt 4: Host-seitiges Netzwerk konfigurieren – ​iSCSI
+== Schritt 4: Host-seitiges Netzwerk konfigurieren – iSCSI
 
 Durch die Konfiguration des iSCSI-Netzwerkes auf der Hostseite kann der VMware iSCSI-Initiator eine Sitzung mit dem Array einrichten.
 
+.Über diese Aufgabe
 In dieser Express-Methode zur Konfiguration von iSCSI-Netzwerken auf der Hostseite ermöglichen Sie dem ESXi Host, iSCSI-Datenverkehr über vier redundante Pfade zum Speicher zu übertragen.
 
 Nach Abschluss dieser Aufgabe ist der Host mit einem einzigen vSwitch konfiguriert, der sowohl VMkernel-Ports als auch vmnics enthält.
@@ -211,7 +216,7 @@ Die Schnittstellen variieren in der Funktionalität und der genaue Workflow wird
 
 
 
-== Schritt 5: Überprüfen Sie IP-Netzwerkverbindungen – ​iSCSI, VMware
+== Schritt 5: Überprüfen Sie IP-Netzwerkverbindungen - iSCSI, VMware
 
 Sie überprüfen IP-Netzwerkverbindungen des Internet Protocol (Internet Protocol), indem Sie Ping-Tests verwenden, um sicherzustellen, dass Host und Array kommunizieren können.
 

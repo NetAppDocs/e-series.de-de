@@ -13,6 +13,7 @@ summary: Vergewissern Sie sich, dass der Host Daten auf die LUN schreiben und si
 [role="lead"]
 Bevor Sie das Volume verwenden, vergewissern Sie sich, dass der Host Daten auf die LUN schreiben und wieder lesen kann.
 
+.Was Sie benötigen
 Sie müssen die LUN initialisiert und mit einem Dateisystem formatiert haben.
 
 .Schritte

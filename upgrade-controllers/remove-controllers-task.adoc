@@ -19,11 +19,12 @@ Nach der Vorbereitung der Aktualisierung können Sie die Controller entfernen un
 
 Entfernen Sie den Controller-Behälter, damit Sie ihn mit einem neuen aktualisieren können. Sie müssen alle Kabel trennen und alle SFP-Transceiver entfernen. Anschließend können Sie den Controller-Behälter aus dem Controller-Regal schieben.
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Ein ESD-Armband oder andere antistatische Vorsichtsmaßnahmen treffen.
 * Etiketten, um jedes Kabel zu identifizieren, das mit dem Controller-Behälter verbunden ist.
 
 
+.Über diese Aufgabe
 Führen Sie für jeden Controller im Fach für das Controller-Laufwerk die folgenden Schritte aus
 
 Wenn Sie Controller in einem Duplex-Controller-Laufwerksfach aktualisieren, wiederholen Sie alle Schritte, um den zweiten Controller-Behälter zu entfernen.
@@ -81,4 +82,5 @@ Entfernen Sie den Akku nur, wenn Sie beabsichtigen, den Akku aus dem alten Contr
 . Entfernen Sie die Batterie, indem Sie sie zur Rückseite des alten Reglerkanisters schieben.
 
 
+.Was kommt als Nächstes?
 Gehen Sie zu link:install-controllers-task.html["Installieren Sie neue Controller"].

@@ -17,6 +17,7 @@ summary: Entfernen Sie eine oder mehrere Speicher-Array-Gruppen, die nicht mehr 
 [role="lead"]
 Sie können eine oder mehrere Speicherarraygruppen entfernen, die nicht mehr benötigt werden.
 
+.Über diese Aufgabe
 Bei diesem Vorgang wird nur die Speicherarraygruppe gelöscht. Die der gelöschten Gruppe zugeordneten Speicher-Arrays bleiben über die Ansicht Alle verwalten oder eine andere Gruppe, der sie zugeordnet ist, zugänglich.
 
 .Schritte

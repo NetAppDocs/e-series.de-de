@@ -17,6 +17,7 @@ summary: Fügen Sie einem vorhandenen oder neuen Workload nicht zugewiesene Volu
 [role="lead"]
 Sie können einem vorhandenen oder neuen Workload nicht zugewiesene Volumes hinzufügen.
 
+.Über diese Aufgabe
 Volumes sind keinem Workload zugeordnet, wenn sie mithilfe der Befehlszeilenschnittstelle (CLI) erstellt wurden oder aus einem anderen Storage-Array migriert (importiert/exportiert) wurden.
 
 .Schritte

@@ -102,14 +102,14 @@ Ein Benutzer mit schreibgeschütztem Zugriff auf das System. Dieser Benutzer ent
 
 
  a| 
-rw
+rw (alt für ältere Arrays)
  a| 
 der rw-Benutzer (Lese/Schreib) umfasst die folgenden Rollen: Storage.admin, Support.admin und Storage.Monitor. Dieses Konto wird deaktiviert, bis ein Kennwort festgelegt ist.
 
 
 
  a| 
-ro
+ro (Altsysteme für ältere Arrays)
  a| 
 Der Benutzer ro (schreibgeschützt) enthält nur die Rolle „Storage.Monitor“. Dieses Konto wird deaktiviert, bis ein Kennwort festgelegt ist.
 

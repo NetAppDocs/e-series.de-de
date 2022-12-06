@@ -21,6 +21,7 @@ Ein Netzteil kann in einem E2800 Array durch ein Shelf mit 12 Laufwerken oder 24
 * DE224C Festplatten-Shelf
 
 
+.Über diese Aufgabe
 Jedes Controller-Shelf oder Laufwerk-Shelf für 12 oder 24 Laufwerke enthält zwei Netzteile mit integrierten Lüftern. Diese werden im SANtricity-System-Manager als _Power-Fan-Behälter_ bezeichnet. Wenn ein Lüfter-Behälter ausfällt, müssen Sie ihn so schnell wie möglich austauschen, um sicherzustellen, dass das Regal über eine redundante Stromquelle und eine ausreichende Kühlung verfügt.
 
 Sie können ein Netzteil ersetzen, während Ihr Speicher-Array eingeschaltet ist und Host-I/O-Vorgänge durchführt. Solange die zweite Stromversorgung im Regal einen optimalen Status hat und das Feld *OK to remove* im Detailbereich des Recovery Guru im SANtricity System Manager *Ja* angezeigt wird.
@@ -31,7 +32,7 @@ Sie können ein Netzteil ersetzen, während Ihr Speicher-Array eingeschaltet ist
 * Stellen Sie sicher, dass die gelbe Warn-LED am Netzteil leuchtet und anzeigt, dass ein Fehler im Netzteil oder dem integrierten Lüfter vorliegt. Wenden Sie sich an den technischen Support, um Unterstützung zu erhalten, wenn die beiden Netzteile im Shelf ihre gelbe Warn-LEDs leuchten.
 
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Ein Ersatz-Netzteil, das für Ihr Controller-Shelf- oder Festplatten-Shelf-Modell unterstützt wird.
 * Ein ESD-Armband, oder Sie haben andere antistatische Vorsichtsmaßnahmen getroffen.
 
@@ -156,7 +157,7 @@ CAUTION: Beim Einschieben des Netzteils in das System keine übermäßige Kraft 
 .Schritte
 . Überprüfen Sie beim neuen Netzteil, ob die grüne LED für die Stromversorgung leuchtet und die gelbe Warn-LED LEUCHTET NICHT.
 . Wählen Sie im Recovery Guru im SANtricity System Manager *recheck* aus, um sicherzustellen, dass das Problem behoben wurde.
-. Wenn noch ein ausgefallenes Netzteil gemeldet wird, wiederholen Sie die Schritte in  2: Remove failed power supply, Und in  3: Install new power supply. Wenn das Problem weiterhin besteht, wenden Sie sich an den technischen Support.
+. Wenn noch ein ausgefallenes Netzteil gemeldet wird, wiederholen Sie die Schritte in <<Schritt 2: Entfernen Sie das defekte Netzteil>>, Und in <<Schritt 3: Neues Netzteil installieren>>. Wenn das Problem weiterhin besteht, wenden Sie sich an den technischen Support.
 . Entfernen Sie den antistatischen Schutz.
 . Support-Daten für Ihr Storage Array mit SANtricity System Manager erfassen
 +
@@ -171,4 +172,5 @@ Die Datei wird im Ordner Downloads für Ihren Browser mit dem Namen *Support-Dat
 . Senden Sie das fehlerhafte Teil wie in den dem Kit beiliegenden RMA-Anweisungen beschrieben an NetApp zurück.
 
 
+.Was kommt als Nächstes?
 Der Austausch des Netzteils ist abgeschlossen. Sie können den normalen Betrieb fortsetzen.

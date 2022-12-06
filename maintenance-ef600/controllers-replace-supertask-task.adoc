@@ -14,6 +14,7 @@ summary: Ersetzen Sie einen Single Controller in einem EF300- oder EF600 Control
 [role="lead"]
 Ein einzelner Controller kann in einem EF300- oder EF600 Controller-Shelf ersetzt werden.
 
+.Über diese Aufgabe
 Wenn Sie einen defekten Controller-Behälter ersetzen, müssen Sie den Akku, das Netzteil, die DIMMs, die Lüfter und die Host Interface Card (HIC) aus dem ursprünglichen Controller-Behälter entfernen und dann im Ersatzcontroller-Behälter installieren.
 
 .Bevor Sie beginnen
@@ -26,7 +27,7 @@ Wenn Sie einen defekten Controller-Behälter ersetzen, müssen Sie den Akku, das
 
 
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Ein Ersatzcontroller-Behälter mit der gleichen Teilenummer wie der Controller-Behälter, den Sie austauschen.
 * Ein ESD-Armband, oder Sie haben andere antistatische Vorsichtsmaßnahmen getroffen.
 * Ein flacher, statischer freier Arbeitsbereich.
@@ -485,4 +486,5 @@ Die Datei wird im Ordner Downloads für Ihren Browser mit dem Namen *Support-Dat
 
 
 
+.Was kommt als Nächstes?
 Der Austausch des Controllers ist abgeschlossen. Sie können den normalen Betrieb fortsetzen.

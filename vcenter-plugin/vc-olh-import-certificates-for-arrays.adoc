@@ -17,6 +17,7 @@ summary: Importieren von Zertifikaten für die Speicher-Arrays, damit sie sich m
 [role="lead"]
 Bei Bedarf können Zertifikate für die Speicher-Arrays importiert werden, sodass sie sich mit dem System authentifizieren können, das das Storage Plug-in für vCenter hostet. Zertifikate können von einer Zertifizierungsstelle (CA) signiert oder selbst signiert werden.
 
+.Bevor Sie beginnen
 Wenn Sie vertrauenswürdige Zertifikate importieren, müssen die Zertifikate für die Speicher-Array-Controller mit System Manager importiert werden.
 
 .Schritte

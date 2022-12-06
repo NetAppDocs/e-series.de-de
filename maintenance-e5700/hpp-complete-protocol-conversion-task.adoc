@@ -22,6 +22,7 @@ Die Schritte, die Sie möglicherweise abschließen müssen, hängen von den Star
 
 Wenn Sie zuvor FC-Host-Ports hatten und Sie zu iSCSI konvertiert haben, müssen Sie möglicherweise Ihre vorhandene Konfiguration ändern, um iSCSI zu unterstützen. Das folgende Verfahren gilt nur, wenn keine iSCSI-HIC vorhanden ist.
 
+.Über diese Aufgabe
 Diese Aufgabe gilt nur, wenn Sie ein bereits in Gebrauch getes Speicher-Array konvertieren.
 
 Diese Aufgabe gilt nicht, wenn Sie ein neues Speicher-Array konvertieren, das noch keine Hosts und Volumes definiert hat. Wenn Sie das Host-Port-Protokoll eines neuen Speicher-Arrays konvertiert haben, lesen Sie den link:../install-hw-cabling/index.html["Verkabelungsverfahren"] Für die Installation von Kabeln und SFPs. Befolgen Sie dann die Anweisungen im link:../config-linux/index.html["Linux Express-Konfiguration"], link:../config-windows/index.html["Windows Express-Konfiguration"], Oder link:../config-vmware/index.html["VMware Express-Konfiguration"] Zum Abschluss der Einrichtung für die einzelnen Protokolle.
@@ -67,6 +68,7 @@ Mit der Option *Löschen* wird der Host-Port nicht physisch entfernt. Mit dieser
 . Volumes neu mounten oder mit Block-Volume beginnen
 
 
+.Was kommt als Nächstes?
 Die Konvertierung Ihres Host-Protokolls ist abgeschlossen. Sie können den normalen Betrieb fortsetzen.
 
 
@@ -112,6 +114,7 @@ Mit der Option *Löschen* wird der Host-Port nicht physisch entfernt. Mit dieser
 . Volumes neu mounten oder mit Block-Volume beginnen
 
 
+.Was kommt als Nächstes?
 Die Konvertierung Ihres Host-Protokolls ist abgeschlossen. Sie können den normalen Betrieb fortsetzen.
 
 
@@ -131,4 +134,5 @@ Die spezifischen Einstellungen können zwischen Linux-Distributionen variieren. 
 
 
 
+.Was kommt als Nächstes?
 Die Konvertierung Ihres Host-Protokolls ist abgeschlossen. Sie können den normalen Betrieb fortsetzen.

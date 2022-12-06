@@ -105,7 +105,7 @@ Die Datei wird im Ordner Downloads für Ihren Browser mit dem Namen gespeichert.
 
 
 
-Wenn Sie Ihre Softwaredateien bereits aktiviert haben, gehen Sie zu  4: Complete software and firmware upgrade; Sonst, gehen Sie zu  3: Activate software files.
+Wenn Sie Ihre Softwaredateien bereits aktiviert haben, gehen Sie zu <<Schritt 4: Software- und Firmware-Upgrade abschließen>>; Sonst, gehen Sie zu <<Schritt 3: Aktivieren Sie Software-Dateien>>.
 
 
 
@@ -257,4 +257,5 @@ Wenden Sie sich an den technischen Support, um dieses Problem zu lösen.
 |===
 
 
+.Was kommt als Nächstes?
 Das Upgrade der Controller-Software ist abgeschlossen. Sie können den normalen Betrieb fortsetzen.

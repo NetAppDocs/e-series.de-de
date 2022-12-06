@@ -13,8 +13,10 @@ summary: 'Verwenden Sie das dynamische Host Configuration Protocol \ (DHCP\), um
 [role="lead"]
 Um die Kommunikation zwischen Management Station und Speicher-Array zu konfigurieren, verwenden Sie DHCP (Dynamic Host Configuration Protocol), um IP-Adressen bereitzustellen.
 
+.Was Sie benötigen
 Ein DHCP-Server wird in demselben Subnetz wie die Storage Management-Ports installiert und konfiguriert.
 
+.Über diese Aufgabe
 Jedes Storage-Array verfügt entweder über einen Controller (Simplexkonfiguration) oder zwei Controller (Duplexkonfiguration) und jeder Controller über zwei Storage-Management-Ports. Jedem Management-Port wird eine IP-Adresse zugewiesen.
 
 Die folgenden Anweisungen beziehen sich auf ein Speicher-Array mit zwei Controllern (eine Duplexkonfiguration).

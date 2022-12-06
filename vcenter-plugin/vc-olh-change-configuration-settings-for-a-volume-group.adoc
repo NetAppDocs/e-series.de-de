@@ -17,6 +17,7 @@ summary: Bearbeiten Sie die Einstellungen für eine Volume-Gruppe, einschließli
 [role="lead"]
 Sie können die Einstellungen für eine Volume-Gruppe einschließlich Name und RAID-Level bearbeiten.
 
+.Bevor Sie beginnen
 Wenn Sie die RAID-Ebene ändern, um die Performance-Anforderungen der Applikationen, die auf die Volume-Gruppe zugreifen, zu erfüllen, müssen Sie die folgenden Voraussetzungen erfüllen:
 
 * Die Volume-Gruppe muss den optimalen Status haben.
@@ -33,6 +34,7 @@ Das Dialogfeld Volume Group Settings wird angezeigt.
 . Wählen Sie die Registerkarte *Einstellungen* aus, und bearbeiten Sie anschließend die Einstellungen für die Volume-Gruppe.
 +
 .Felddetails
+[%collapsible]
 ====
 [cols="25h,~"]
 |===
@@ -72,4 +74,5 @@ Wenn eine Volume-Gruppe erstellt wird, wird eine empfohlene Optimierungskapazit�
 
 Wenn die Kapazität reduziert wird, die Volume-Redundanz verloren geht oder der Schutz vor Shelf-/Schubladenverlust infolge einer Änderung auf RAID-Ebene verloren geht, wird ein Bestätigungsdialogfeld mit dem Kunden angezeigt. Wählen Sie *Ja*, um fortzufahren. Klicken Sie andernfalls auf *Nein*.
 
+.Ergebnis
 Wenn Sie den RAID-Level für eine Volume-Gruppe ändern, ändert das Plugin die RAID-Level jedes Volumes, das die Volume-Gruppe enthält. Die Leistung kann während des Betriebs leicht beeinträchtigt werden.

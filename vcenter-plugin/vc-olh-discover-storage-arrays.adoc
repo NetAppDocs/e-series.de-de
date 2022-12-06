@@ -22,11 +22,12 @@ Um Speicherressourcen im Storage Plug-in für vCenter anzuzeigen und zu verwalte
 * Passwörter für das Storage-Array müssen mithilfe der Kachel „System Manager Access Management“ eingerichtet werden.
 
 
+.Über diese Aufgabe
 Die Array-Erkennung ist ein mehrstufiges Verfahren:
 
-*  1: Enter network addresses for discovery
-*  2: Resolve untrusted certificates during discovery
-*  3: Provide passwords
+* <<Schritt 1: Geben Sie Netzwerkadressen für die Ermittlung ein>>
+* <<Schritt 2: Lösen Sie nicht vertrauenswürdige Zertifikate während der Ermittlung>>
+* <<Schritt 3: Geben Sie Passwörter ein>>
 
 
 
@@ -59,7 +60,7 @@ NOTE: Wenn keine verwaltbaren Arrays erkannt werden, überprüfen Sie, ob die Sp
 Das System führt eine Anmeldeinformationen für jedes Array aus, das Sie der Management-Domäne hinzufügen. Möglicherweise müssen Sie Probleme mit nicht vertrauenswürdigen Zertifikaten beheben, bevor Sie fortfahren.
 
 . Klicken Sie auf *Weiter*, um mit dem nächsten Schritt im Assistenten fortzufahren.
-. Wenn die Speicher-Arrays über gültige Zertifikate verfügen, gehen Sie zu  3: Provide passwords. Wenn keine Speicherarrays über gültige Zertifikate verfügen, wird das Dialogfeld Selbstsignierte Zertifikate auflösen angezeigt. Gehen Sie zu  2: Resolve untrusted certificates during discovery. Wenn Sie CA-signierte Zertifikate importieren möchten, löschen Sie die Ermittlungsdialoge und gehen Sie zu link:vc-olh-import-certificates-for-arrays.html["Importieren Sie Zertifikate für Arrays"].
+. Wenn die Speicher-Arrays über gültige Zertifikate verfügen, gehen Sie zu <<Schritt 3: Geben Sie Passwörter ein>>. Wenn keine Speicherarrays über gültige Zertifikate verfügen, wird das Dialogfeld Selbstsignierte Zertifikate auflösen angezeigt. Gehen Sie zu <<Schritt 2: Lösen Sie nicht vertrauenswürdige Zertifikate während der Ermittlung>>. Wenn Sie CA-signierte Zertifikate importieren möchten, löschen Sie die Ermittlungsdialoge und gehen Sie zu link:vc-olh-import-certificates-for-arrays.html["Importieren Sie Zertifikate für Arrays"].
 
 
 
@@ -95,6 +96,7 @@ Als letzter Schritt zur Ermittlung müssen Sie die Passwörter für die Speicher
 
 NOTE: Es kann mehrere Minuten dauern, bis das System eine Verbindung zu den angegebenen Speicherarrays herstellt.
 
+.Ergebnis
 Die Speicher-Arrays werden Ihrer Management-Domäne hinzugefügt und der ausgewählten Gruppe zugeordnet (falls angegeben).
 
 

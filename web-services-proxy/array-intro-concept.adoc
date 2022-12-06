@@ -31,6 +31,7 @@ Sie müssen nur eine Management-IP- oder DNS-Adresse angeben, um ein Storage-Sys
 
 NOTE: Wenn Sie versuchen, ein IPv6-Protokoll zu verwenden, um Speichersysteme nach der ersten Verbindung automatisch von der Controller-Konfiguration zu erkennen, schlägt der Vorgang möglicherweise fehl. Mögliche Ursachen für den Ausfall sind u. a. Probleme bei der IP-Adressweiterleitung oder bei der Aktivierung von IPv6 auf den Speichersystemen, die jedoch nicht auf dem Server aktiviert werden.
 
+.Bevor Sie beginnen
 Bevor Sie die IPv6-Erkennungseinstellungen aktivieren, überprüfen Sie, ob Ihre Infrastruktur die IPv6-Konnektivität zu den Speichersystemen unterstützt, um eventuelle Verbindungsprobleme zu beheben.
 
 .Schritte
@@ -62,6 +63,7 @@ NOTE: Wenn die Pfade konfiguriert, aber nicht so konfiguriert sind, dass der Ser
 
 NOTE: In dieser Aufgabe wird beschrieben, wie Storage-Systeme mithilfe der REST API ermittelt und hinzugefügt werden. So können Sie diese Systeme in der interaktiven API-Dokumentation managen. Es ist jedoch möglicherweise sinnvoll, Storage-Systeme im Unified Manager zu managen, wodurch eine benutzerfreundliche Oberfläche bereitgestellt wird. Weitere Informationen finden Sie in der Online-Hilfe von Unified Manager.
 
+.Bevor Sie beginnen
 Bei Storage-Systemen mit SANtricity Version 11.30 und höher muss über die SANtricity System Manager-Schnittstelle die alte Managementoberfläche für Symbol aktiviert sein. Andernfalls schlagen die Endpunkte der Erkennung fehl. Sie können diese Einstellung finden, indem Sie System Manager öffnen und dann im Menü:Einstellungen[System > zusätzliche Einstellungen > Managementoberfläche ändern] wechseln.
 
 .Schritte

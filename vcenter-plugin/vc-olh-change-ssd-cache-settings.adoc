@@ -30,6 +30,7 @@ Das Dialogfeld SSD-Cache-Einstellungen wird angezeigt.
 . Überprüfen oder bearbeiten Sie die SSD-Cache-Einstellungen nach Bedarf.
 +
 .Felddetails
+[%collapsible]
 ====
 [cols="25h,~"]
 |===

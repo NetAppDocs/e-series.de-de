@@ -17,8 +17,10 @@ summary: Sie können ein Software-Repository anzeigen und managen, in dem alle S
 [role="lead"]
 Sie können ein Software-Repository anzeigen und managen, in dem alle Softwaredateien aufgelistet sind, die mit dem Storage Plug-in für vCenter verknüpft sind.
 
+.Bevor Sie beginnen
 Wenn Sie das Repository zum Hinzufügen von SANtricity OS-Dateien verwenden, stellen Sie sicher, dass die Betriebssystemdateien auf Ihrem lokalen System verfügbar sind.
 
+.Über diese Aufgabe
 Sie können die Option SANtricity OS Software Repository verwalten verwenden, um eine oder mehrere Betriebssystemdateien auf das Hostsystem zu importieren, auf dem das Plugin ausgeführt wird. Sie können auch wählen, ob Sie eine oder mehrere Betriebssystemdateien löschen möchten, die im Software-Repository verfügbar sind.
 
 .Schritte
@@ -45,4 +47,5 @@ Das Dialogfeld SANtricity OS Software-Repository verwalten wird angezeigt.
 
 
 
+.Ergebnis
 Wenn Sie den Import ausgewählt haben, werden die Dateien hochgeladen und validiert. Wenn Sie „Löschen“ ausgewählt haben, werden die Dateien aus dem Software-Repository entfernt.

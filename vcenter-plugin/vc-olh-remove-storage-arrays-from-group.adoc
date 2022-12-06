@@ -17,6 +17,7 @@ summary: Entfernen Sie ein oder mehrere verwaltete Speicher-Arrays aus einer Gru
 [role="lead"]
 Sie können ein oder mehrere verwaltete Speicher-Arrays aus einer Gruppe entfernen, wenn Sie sie nicht mehr aus einer bestimmten Speichergruppe verwalten möchten.
 
+.Über diese Aufgabe
 Das Entfernen von Speicher-Arrays aus einer Gruppe hat keinerlei Auswirkungen auf das Speicher-Array oder seine Daten. Wenn das Storage Array von System Manager gemanagt wird, können Sie es weiterhin mit Ihrem Browser verwalten. Wenn ein Speicher-Array versehentlich aus einer Gruppe entfernt wird, kann es erneut hinzugefügt werden.
 
 .Schritte

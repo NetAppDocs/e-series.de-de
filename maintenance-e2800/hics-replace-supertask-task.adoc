@@ -14,6 +14,7 @@ summary: 'Ersetzen Sie eine fehlerhafte Host Interface Card (HIC).'
 [role="lead"]
 Sie können eine ausgefallene Host-Schnittstellenkarte (HIC) ersetzen.
 
+.Über diese Aufgabe
 Wenn Sie eine HIC ersetzen, setzen Sie den Controller offline, entfernen Sie den Controller-Behälter, installieren Sie die neue HIC, ersetzen Sie den Controller-Behälter, und bringen Sie dann den Controller online.
 
 .Bevor Sie beginnen
@@ -22,7 +23,7 @@ Wenn Sie eine HIC ersetzen, setzen Sie den Controller offline, entfernen Sie den
 * Stellen Sie sicher, dass keine Volumes verwendet werden oder dass auf allen Hosts, die diese Volumes verwenden, ein Multipath-Treiber installiert ist.
 
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Ein oder zwei HICs, je nachdem, ob Sie einen oder zwei Controller im Storage-Array haben. Die HICs müssen mit Ihren Steuerungen kompatibel sein. Wenn zwei Controller vorhanden sind, muss jeder Controller über identische HICs verfügen.
 * Etiketten, um jedes Kabel zu identifizieren, das mit dem Controller-Behälter verbunden ist.
 * Ein ESD-Armband, oder Sie haben andere antistatische Vorsichtsmaßnahmen getroffen.
@@ -36,8 +37,8 @@ Wenn Sie eine HIC ersetzen, setzen Sie den Controller offline, entfernen Sie den
 
 Die Schritte zum Offline-Schalten eines Controllers hängen davon ab, ob Sie über einen Controller (Simplexkonfiguration) oder zwei Controller (Duplexkonfiguration) verfügen. Gehen Sie zu den entsprechenden Anweisungen für:
 
-*  Place controller offline
-*  Power down the controller shelf
+* <<Duplex: Controller offline schalten>>
+* <<Simplex: Schalten Sie das Controller-Shelf ein>>
 
 
 
@@ -498,4 +499,5 @@ Wenden Sie sich an den technischen Support unter http://mysupport.netapp.com["Ne
 
 
 
+.Was kommt als Nächstes?
 Der Austausch der HIC ist abgeschlossen. Sie können den normalen Betrieb fortsetzen.

@@ -17,6 +17,7 @@ summary: Löschen Sie ein oder mehrere Volumes, um die freie Kapazität eines Po
 [role="lead"]
 Sie können ein oder mehrere Volumes löschen, um die freie Kapazität eines Pools oder einer Volume-Gruppe zu erhöhen.
 
+.Bevor Sie beginnen
 Stellen Sie bei den zu löschenden Volumes Folgendes sicher:
 
 * Alle Daten werden gesichert.
@@ -24,6 +25,7 @@ Stellen Sie bei den zu löschenden Volumes Folgendes sicher:
 * Alle Geräte und Dateisysteme werden abgehängt.
 
 
+.Über diese Aufgabe
 Normalerweise löschen Sie Volumes, wenn die Volumes mit falschen Parametern oder Kapazität erstellt wurden oder die Anforderungen der Storage-Konfiguration nicht mehr erfüllt werden. Durch das Löschen eines Volumes wird die freie Kapazität im Pool oder der Volume-Gruppe erhöht.
 
 

@@ -24,8 +24,8 @@ Dies sind zwei verschiedene Schritte, die Sie in jeder Reihenfolge durchführen 
 
 Um das Plugin von einer vCenter Server Appliance zu registrieren, wählen Sie eine der folgenden Methoden aus:
 
-*  1: Execute the registration script
-*  2: Use the vCenter Server Mob pages
+* <<Methode 1: Führen Sie das Registrierungsskript aus>>
+* <<Methode 2: Verwenden Sie die vCenter Server Mob Seiten>>
 
 
 

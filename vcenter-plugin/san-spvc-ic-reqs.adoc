@@ -1,0 +1,73 @@
+---
+permalink: vcenter-plugin/san-spvc-ic-reqs.html 
+sidebar: sidebar 
+keywords: upgrade vCenter 
+summary: Installations- und Upgrade-Anforderungen und Überlegungen für das vCenter Plug-in 
+---
+= Installations- und Upgrade-Anforderungen prüfen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Prüfen Sie vor der Installation oder dem Upgrade des SANtricity Storage Plug-ins für vCenter die Installationsanforderungen und die Upgrade-Überlegungen.
+
+
+
+== Installationsvoraussetzungen
+
+Sie können das Storage Plug-in für vCenter auf einem Windows Host-System installieren und konfigurieren. Die Plugin-Installation umfasst die folgenden Anforderungen.
+
+[cols="35h,~"]
+|===
+| Anforderungen | Beschreibung 
+
+
+ a| 
+Unterstützte Versionen
+ a| 
+* Von der VMware vCenter Server Appliance unterstützte Versionen: 6.7U3J, 7.0U1, 7.0U2, 7.0U3 und 8.0.
+* NetApp SANtricity OS Version: 11.60.2 oder höher
+* Unterstützte Applikations-Host-Versionen: Windows 2016, Windows 2019, Windows 2022.
+
+
+Weitere Informationen zur Kompatibilität finden Sie im http://mysupport.netapp.com/matrix["NetApp Interoperabilitäts-Matrix-Tool"^].
+
+
+
+ a| 
+Mehrere Instanzen
+ a| 
+Sie können nur eine Instanz des Speicher-Plug-ins für vCenter auf einem Windows-Host installieren und können es nur bei einem vCSA registrieren.
+
+
+
+ a| 
+Kapazitätsplanung
+ a| 
+Das Storage Plug-in für vCenter benötigt ausreichend Platz für die Ausführung und Protokollierung. Stellen Sie sicher, dass Ihr System die folgenden Anforderungen an den verfügbaren Speicherplatz erfüllt:
+
+* Erforderlicher Installationsspeicherplatz: 275 MB
+* Speicherplatz – 275 MB + 200 MB (Protokollierung)
+* Systemspeicher – 512 MB
+
+
+
+
+ a| 
+Lizenz
+ a| 
+Das Storage Plug-in für vCenter ist ein kostenloses eigenständiges Produkt, für das kein Lizenzschlüssel erforderlich ist. Es gelten jedoch geltende Urheberrechte und Nutzungsbedingungen.
+
+|===
+
+
+== Upgrade-Überlegungen
+
+Wenn Sie ein Upgrade von einer früheren Version durchführen, beachten Sie, dass das Plugin vor dem Upgrade von der vCSA nicht registriert werden muss.
+
+* Während des Upgrades werden die meisten früheren Konfigurationseinstellungen des Plug-ins beibehalten. Diese Einstellungen umfassen Benutzerpasswörter, alle erkannten Speichersysteme, Serverzertifikate, vertrauenswürdige Zertifikate und die Konfiguration der Serverlaufzeit.
+* Der Upgrade-Prozess nicht erhalten die *vcenter.properties*-Dateien, so müssen Sie das Plugin vor dem Upgrade zu registrieren. Sobald das Upgrade erfolgreich abgeschlossen wurde, können Sie das Plugin wieder bei der vCSA registrieren.
+* Alle zuvor im Repository geladenen SANtricity-OS-Dateien werden während des Upgrades entfernt.
+

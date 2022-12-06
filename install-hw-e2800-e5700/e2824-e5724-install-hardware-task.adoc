@@ -13,6 +13,7 @@ summary: Installation der E2800 oder E5700 in einem zweiposten Rack oder in eine
 [role="lead"]
 Wie Sie eine E5724, EF570, EF280, E2812, E2824, DE212C oder DE224C Storage-System in einem Rack mit zwei Säulen oder einem NetApp System-Rack.
 
+.Bevor Sie beginnen
 Bevor Sie die Hardware installieren, stellen Sie sicher, dass Sie die folgenden Schritte ausführen:
 
 * Registrieren Sie Ihre Hardware unter http://mysupport.netapp.com/["mysupport.netapp.com"^].

@@ -14,6 +14,7 @@ summary: 'Aktualisieren einer Host Interface Card (HIC) in einem E2800 Array'
 [role="lead"]
 Sie können ein Upgrade einer Host Interface Card (HIC) in einem E2800 Array durchführen, um die Anzahl der Host-Ports zu erhöhen oder um Host-Protokolle zu ändern.
 
+.Über diese Aufgabe
 Wenn Sie die HIC-Upgrades durchführen, müssen Sie das Storage Array ausschalten, die vorhandene HIC aus jedem Controller entfernen, eine neue HIC installieren und wieder Strom einschalten.
 
 .Bevor Sie beginnen
@@ -21,7 +22,7 @@ Wenn Sie die HIC-Upgrades durchführen, müssen Sie das Storage Array ausschalte
 * Planen Sie für dieses Verfahren ein Wartungsfenster zur Ausfallzeit. Die Stromversorgung muss ausgeschaltet sein, wenn Sie HICs installieren. Daher können Sie erst dann auf Daten im Speicher-Array zugreifen, wenn Sie diesen Vorgang erfolgreich abgeschlossen haben. (In einer Duplexkonfiguration liegt dies daran, dass beide Controller beim Einschalten dieselbe HIC-Konfiguration haben müssen.)
 
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Ein oder zwei HICs, je nachdem, ob Sie einen oder zwei Controller im Storage-Array haben. Die HICs müssen mit Ihren Steuerungen kompatibel sein.
 * Etiketten, um jedes Kabel zu identifizieren, das mit dem Controller-Behälter verbunden ist.
 * Ein ESD-Armband, oder Sie haben andere antistatische Vorsichtsmaßnahmen getroffen.
@@ -356,4 +357,5 @@ NOTE: Wenden Sie sich an den technischen Support, wenn das Problem nicht gelöst
 . Verbinden Sie die Kabel der Host-Ports des Controllers mit den Daten-Hosts.
 
 
+.Was kommt als Nächstes?
 Das Upgrade einer Host-Schnittstellenkarte in Ihrem Speicher-Array ist abgeschlossen. Sie können den normalen Betrieb fortsetzen.

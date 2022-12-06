@@ -16,11 +16,11 @@ Für das iSCSI-Protokoll konfigurieren Sie die Switches, konfigurieren das Netzw
 
 
 
-== Schritt 1: Konfigurieren Sie die Switches – ​iSCSI, Windows
+== Schritt: Die Switches konfigurieren --iSCSI, Windows
 
 Sie konfigurieren die Switches entsprechend den Empfehlungen des Anbieters für iSCSI. Diese Empfehlungen können sowohl Konfigurationsrichtlinien als auch Code-Updates enthalten.
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Zwei separate Netzwerke für Hochverfügbarkeit, Stellen Sie sicher, dass Sie Ihren iSCSI-Datenverkehr durch VLANs oder zwei separate Netzwerke in getrennte Netzwerksegmente isolieren.
 * Hardware-Flusssteuerung zum Senden und Empfangen aktiviert *Ende bis Ende*.
 * Flusskontrolle mit Priorität deaktiviert.
@@ -30,17 +30,18 @@ Sie konfigurieren die Switches entsprechend den Empfehlungen des Anbieters für 
 
 NOTE: Port-Kanäle/LACP werden von den Switch-Ports des Controllers nicht unterstützt. Host-seitiges LACP wird nicht empfohlen; Multipathing bietet dieselben Vorteile oder noch besser.
 
+.Schritte
 Informieren Sie sich in der Dokumentation des Switch-Anbieters.
 
 
 
-== Schritt: Netzwerk konfigurieren – ​iSCSI Windows
+== Schritt: Netzwerk-iSCSI Windows konfigurieren
 
 Je nach Ihren Datenspeicheranforderungen können Sie Ihr iSCSI-Netzwerk auf unterschiedliche Weise einrichten. Wenden Sie sich an Ihren Netzwerkadministrator, wenn Sie Tipps zur Auswahl der für Ihre Umgebung am besten geeigneten Konfiguration benötigen.
 
 Eine effektive Strategie zur Konfiguration des iSCSI-Netzwerks mit grundlegender Redundanz besteht darin, jeden Host-Port und einen Port jedes Controllers miteinander zu verbinden, um getrennte Switches zu verbinden und jeden Host- und Controller-Satz in separaten Netzwerksegmenten mithilfe von VLANs zu partitionieren.
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Hardware-Flusssteuerung zum Senden und Empfangen aktiviert *Ende bis Ende*.
 * Flusskontrolle mit Priorität deaktiviert.
 * Gegebenenfalls aktivierten Jumbo Frames.
@@ -49,6 +50,7 @@ Wenn Sie aus Performance-Gründen Jumbo Frames im IP SAN verwenden, stellen Sie 
 
 
 
+.Schritte
 Informieren Sie sich in der Dokumentation des Switch-Anbieters.
 
 
@@ -56,15 +58,16 @@ NOTE: Für IP-Overhead müssen viele Netzwerk-Switches über 9,000 Bytes konfigu
 
 
 
-== Schritt 3: Array-seitiges Netzwerk konfigurieren – ​iSCSI, Windows
+== Schritt 3: Array-seitiges Netzwerk konfigurieren – iSCSI, Windows
 
 Mit der SANtricity System Manager GUI können Sie das iSCSI-Netzwerk auf der Array-Seite konfigurieren.
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Die IP-Adresse oder der Domänenname für einen der Speicher-Array-Controller.
 * Ein Passwort für die System Manager GUI, rollenbasierte Zugriffssteuerung (Role-Based Access Control, RBAC) oder LDAP und ein Verzeichnisdienst, der für den entsprechenden Sicherheitszugriff auf das Speicher-Array konfiguriert wurde. Weitere Informationen zur Zugriffsverwaltung finden Sie in der Online-Hilfe des SANtricity System Managers.
 
 
+.Über diese Aufgabe
 Dieser Task beschreibt den Zugriff auf die Konfiguration des iSCSI-Ports über die Seite Hardware. Sie können die Konfiguration auch über das Menü:System[Einstellungen > iSCSI-Ports konfigurieren] aufrufen.
 
 .Schritte
@@ -191,11 +194,11 @@ Wählen Sie diese Option aus, um den Parameter zu aktivieren, der die Priorität
 
 
 
-== Schritt 4: Host-seitiges Netzwerk konfigurieren – ​iSCSI
+== Schritt 4: Host-seitiges Netzwerk konfigurieren – iSCSI
 
 Sie müssen das iSCSI-Netzwerk auf der Hostseite konfigurieren, damit der Microsoft iSCSI-Initiator Sitzungen mit dem Array einrichten kann.
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Vollständig konfigurierte Switches, die für den iSCSI-Speicherdatenverkehr verwendet werden.
 * Hardware-Flusssteuerung zum Senden und Empfangen aktiviert *Ende bis Ende*
 * Flusskontrolle mit Priorität deaktiviert.
@@ -203,6 +206,7 @@ Sie müssen das iSCSI-Netzwerk auf der Hostseite konfigurieren, damit der Micros
 * Die IP-Adresse der einzelnen Ports am Controller.
 
 
+.Über diese Aufgabe
 Bei diesen Anweisungen wird davon ausgegangen, dass für den iSCSI-Datenverkehr zwei NIC-Ports verwendet werden.
 
 .Schritte
@@ -227,7 +231,7 @@ image::../media/82012_00.gif[82012 00]
 
 
 
-== Schritt 5: Überprüfen Sie IP-Netzwerkverbindungen – ​iSCSI, Windows
+== Schritt 5: Überprüfen Sie IP-Netzwerkverbindungen - iSCSI, Windows
 
 Sie überprüfen IP-Netzwerkverbindungen des Internet Protocol (Internet Protocol), indem Sie Ping-Tests verwenden, um sicherzustellen, dass Host und Array kommunizieren können.
 

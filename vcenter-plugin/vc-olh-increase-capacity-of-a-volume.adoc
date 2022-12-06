@@ -17,6 +17,7 @@ summary: Die Größe eines Volumes wird angepasst, um die gemeldete Kapazität z
 [role="lead"]
 Sie können die Größe eines Volumes anpassen, um die gemeldete Kapazität zu erhöhen.
 
+.Bevor Sie beginnen
 Stellen Sie sicher, dass:
 
 * Im zugewiesenen Pool bzw. der Volume-Gruppe des Volumes steht genügend freie Kapazität zur Verfügung.
@@ -24,6 +25,7 @@ Stellen Sie sicher, dass:
 * Im Volume werden keine Hot-Spare-Laufwerke verwendet. (Gilt nur für Volumes in Volume-Gruppen.)
 
 
+.Über diese Aufgabe
 Diese Aufgabe beschreibt, wie Sie die gemeldete Kapazität (die Kapazität, die Hosts gemeldet werden) eines Volumes erhöhen, indem Sie die freie Kapazität nutzen, die in dem Pool oder der Volume-Gruppe verfügbar ist. Denken Sie daran, zukünftige Kapazitätsanforderungen für andere Volumes in diesem Pool oder dieser Volume-Gruppe zu berücksichtigen.
 
 
@@ -47,4 +49,5 @@ Die Kapazität des Volumes wird je nach Auswahl erhöht. Dieser Vorgang kann lan
 
 
 
+.Nachdem Sie fertig sind
 Nachdem Sie die Volume-Kapazität erweitert haben, müssen Sie die Größe des Dateisystems manuell erhöhen, um sie anzupassen. Wie Sie dies tun, hängt von dem Dateisystem ab, das Sie verwenden. Weitere Informationen finden Sie in der Dokumentation Ihres Host-Betriebssystems.

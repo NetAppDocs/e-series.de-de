@@ -28,6 +28,7 @@ Redundanzdaten dienen der schnellen Rekonstruktion von Informationen über das E
 
 NOTE: Prüfen Sie die Volume-Redundanz nur dann, wenn Sie vom Recovery Guru zur Verfügung stehen und unter Anleitung des technischen Supports dies tun.
 
+.Über diese Aufgabe
 Sie können diese Prüfung nur für einen Pool oder eine Volume-Gruppe gleichzeitig durchführen. Bei einer Volume-Redundanzprüfung werden folgende Aktionen durchgeführt:
 
 * Scannt die Datenblöcke in einem RAID 3-Volume, einem RAID 5-Volume oder einem RAID 6-Volume und überprüft die Redundanzinformationen für jeden Block. (RAID 3 kann Volume-Gruppen nur über die Befehlszeilenschnittstelle zugewiesen werden.)
@@ -58,6 +59,7 @@ Der Vorgang „Volume-Redundanz prüfen“ wird gestartet. Die Volumes im Pool o
 
 +
 .Felddetails
+[%collapsible]
 ====
 [cols="25h,~"]
 |===

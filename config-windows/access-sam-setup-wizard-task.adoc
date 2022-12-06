@@ -16,7 +16,7 @@ Zum Konfigurieren des Speicher-Arrays können Sie den Setup-Assistenten in SANtr
 
 SANtricity System Manager ist eine webbasierte Schnittstelle, die in jeden Controller integriert ist. Um auf die Benutzeroberfläche zuzugreifen, zeigen Sie einen Browser auf die IP-Adresse des Controllers. Ein Setup-Assistent hilft Ihnen beim Einstieg in die Systemkonfiguration.
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Out-of-Band-Management:
 * Eine Management Station für den Zugriff auf SANtricity System Manager, die einen der folgenden Browser umfasst:
 +
@@ -60,6 +60,7 @@ Safari
 |===
 
 
+.Über diese Aufgabe
 Wenn Sie ein iSCSI-Benutzer sind, stellen Sie sicher, dass Sie den Setup-Assistenten während der Konfiguration von iSCSI geschlossen haben.
 
 Der Assistent wird automatisch neu gestartet, wenn Sie den System Manager öffnen oder den Browser aktualisieren, und mindestens eine der folgenden Bedingungen erfüllt ist:

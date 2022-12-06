@@ -20,9 +20,10 @@ Sie können einen Controller-Behälter in einer Duplex-Konfiguration (zwei-Contr
 * EF280 Flash-Array
 
 
+.Über diese Aufgabe
 Jeder Controller-Behälter enthält eine Controller-Karte, einen Akku und eine optionale Host-Schnittstellenkarte (HIC). Wenn Sie einen Controller-Behälter austauschen, müssen Sie die Batterie und die HIC, falls vorhanden, aus dem ursprünglichen Controller-Behälter entfernen und in den Ersatzcontroller-Behälter einsetzen.
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Ein Ersatzcontroller-Behälter mit der gleichen Teilenummer wie der Controller-Behälter, den Sie austauschen. (Siehe Schritt 1, um die Teilenummer zu überprüfen.)
 * Ein ESD-Armband, oder Sie haben andere antistatische Vorsichtsmaßnahmen getroffen.
 * #1 Kreuzschlitzschraubendreher.
@@ -459,4 +460,5 @@ Die Datei wird im Ordner Downloads für Ihren Browser mit dem Namen *Support-Dat
 
 
 
+.Was kommt als Nächstes?
 Der Austausch des Controllers ist abgeschlossen. Sie können den normalen Betrieb fortsetzen.

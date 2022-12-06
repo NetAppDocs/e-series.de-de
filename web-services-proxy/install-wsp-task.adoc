@@ -4,14 +4,14 @@ sidebar: sidebar
 keywords: installation, download, install proxy, 
 summary: Die Installation beinhaltet das Herunterladen der Datei und dann die Installation des Proxy-Pakets auf einem Linux- oder Windows-Server. 
 ---
-= Laden Sie die Web Services Proxy-Datei herunter und installieren Sie sie
+= Installieren oder Aktualisieren der Web Services Proxy-Datei
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Die Installation beinhaltet das Herunterladen der Datei und dann die Installation des Proxy-Pakets auf einem Linux- oder Windows-Server.
+Die Installation beinhaltet das Herunterladen der Datei und dann die Installation des Proxy-Pakets auf einem Linux- oder Windows-Server. Sie können den Proxy auch mit diesen Anweisungen aktualisieren.
 
 
 
@@ -67,6 +67,10 @@ Der Installationsprozess wird gestartet und der Begrüßungsbildschirm des NetAp
 +
 Während der Installation werden Sie aufgefordert, mehrere Funktionen zu aktivieren und einige Konfigurationsparameter einzugeben. Bei Bedarf können Sie eine dieser Optionen später in den Konfigurationsdateien ändern.
 
++
+
+NOTE: Während eines Upgrades werden keine Konfigurationsparameter angezeigt.
+
 . Wenn die Meldung Webserver gestartet angezeigt wird, klicken Sie auf *OK*, um die Installation abzuschließen.
 +
 Das Dialogfeld „Installation abgeschlossen“ wird angezeigt.
@@ -95,6 +99,10 @@ Der Installationsprozess wird gestartet, und die Meldung Installer starten -- Ei
 . Befolgen Sie die Anweisungen auf dem Bildschirm.
 +
 Während der Installation werden Sie aufgefordert, mehrere Funktionen zu aktivieren und einige Konfigurationsparameter einzugeben. Bei Bedarf können Sie eine dieser Optionen später in den Konfigurationsdateien ändern.
+
++
+
+NOTE: Während eines Upgrades werden keine Konfigurationsparameter angezeigt.
 
 . Wenn die Installation abgeschlossen ist, drücken Sie *Enter*, um das Installationsprogramm zu beenden.
 

@@ -20,6 +20,7 @@ Sie können Statistiken für den SSD-Cache anzeigen, z. B. Lese-, Schreib-, Cach
 
 NOTE: Diese Funktion steht nicht auf dem EF600 oder EF300-Storage-System zur Verfügung.
 
+.Über diese Aufgabe
 Die nominalen Statistiken, bei denen es sich um eine Untergruppe der detaillierten Statistiken handelt, werden im Dialogfeld „View SSD Cache Statistics“ angezeigt. Sie können detaillierte Statistiken für den SSD-Cache nur anzeigen, wenn Sie alle SSD-Statistiken in eine .csv-Datei exportieren.
 
 Während Sie die Statistiken überprüfen und interpretieren, beachten Sie, dass einige Interpretationen durch die Prüfung einer Kombination von Statistiken abgeleitet werden.
@@ -33,6 +34,7 @@ Das Dialogfeld SSD-Cache-Statistiken anzeigen wird angezeigt und zeigt die nomin
 
 +
 .Felddetails
+[%collapsible]
 ====
 [cols="25h,~"]
 |===

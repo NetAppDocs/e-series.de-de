@@ -14,6 +14,7 @@ summary: 'Fügen Sie eine Host Interface Card (HIC) zu einem E2800 Array hinzu.'
 [role="lead"]
 Über Baseboard-Host-Ports können Sie eine Host-Schnittstellenkarte (HIC) zum E2800 Controller-Behälter hinzufügen. Darüber hinaus erhöht sich in Ihrem E2800 Storage-Array die Anzahl der Host-Ports und bietet zusätzliche Host-Protokolle.
 
+.Über diese Aufgabe
 Während dieses Verfahrens müssen Sie das Speicher-Array ausschalten, die HIC installieren und wieder Strom einschalten.
 
 .Bevor Sie beginnen
@@ -21,7 +22,7 @@ Während dieses Verfahrens müssen Sie das Speicher-Array ausschalten, die HIC i
 * Planen Sie für dieses Verfahren ein Wartungsfenster zur Ausfallzeit. Die Stromversorgung muss ausgeschaltet sein, wenn Sie HICs installieren. Daher können Sie erst dann auf Daten im Speicher-Array zugreifen, wenn Sie diesen Vorgang erfolgreich abgeschlossen haben. (In einer Duplexkonfiguration liegt dies daran, dass beide Controller beim Einschalten dieselbe HIC-Konfiguration haben müssen.)
 
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Ein oder zwei HICs, je nachdem, ob Sie einen oder zwei Controller im Storage-Array haben. Die HICs müssen mit Ihren Steuerungen kompatibel sein.
 * Ein ESD-Armband, oder Sie haben andere antistatische Vorsichtsmaßnahmen getroffen.
 * A #1 Kreuzschlitzschraubendreher.
@@ -334,4 +335,5 @@ Wenn Sie Anweisungen zur Konfiguration und Verwendung eines neuen Host-Protokoll
 
 
 
+.Was kommt als Nächstes?
 Das Hinzufügen einer Host-Schnittstellenkarte zum Speicher-Array ist abgeschlossen. Sie können den normalen Betrieb fortsetzen.

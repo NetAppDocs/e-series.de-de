@@ -17,6 +17,7 @@ summary: 'Lösen Sie nicht vertrauenswürdige Zertifikate, indem Sie ein selbsts
 [role="lead"]
 Auf der Zertifikatsseite können Sie nicht vertrauenswürdige Zertifikate auflösen, indem Sie ein selbstsigniertes Zertifikat aus dem Speicher-Array importieren oder ein Zertifikat der Zertifizierungsstelle importieren, das von einem vertrauenswürdigen Dritten ausgestellt wurde.
 
+.Bevor Sie beginnen
 Wenn Sie ein Zertifikat importieren möchten, muss Folgendes sichergestellt sein:
 
 * Sie haben für jeden Controller im Speicher-Array eine Zertifikatsignierungsanforderung (.CSR-Datei) generiert und an die CA gesendet.
@@ -24,6 +25,7 @@ Wenn Sie ein Zertifikat importieren möchten, muss Folgendes sichergestellt sein
 * Die Zertifikatdateien sind auf Ihrem lokalen System verfügbar.
 
 
+.Über diese Aufgabe
 Nicht vertrauenswürdige Zertifikate treten auf, wenn ein Speicher-Array versucht, eine sichere Verbindung zum Plugin herzustellen, aber die Verbindung wird nicht als sicher bestätigt. Möglicherweise müssen Sie zusätzliche vertrauenswürdige CA-Zertifikate installieren, wenn eine der folgenden Optionen zutrifft:
 
 * Sie haben kürzlich ein Speicher-Array hinzugefügt.

@@ -14,8 +14,8 @@ summary: Bereiten Sie sich auf den Austausch der E2800-Batterie vor. Befolgen Si
 [role="lead"]
 Die Schritte zur Vorbereitung auf den Batterieaustausch hängen davon ab, ob Sie über eine Duplexkonfiguration (zwei Controller) oder eine Simplex-Konfiguration (ein Controller) verfügen.
 
-* Informationen zu Duplexkonfigurationen finden Sie unter  controller offline (duplex).
-* Informationen zu Simplexkonfigurationen finden Sie unter  down the controller shelf (simplex).
+* Informationen zu Duplexkonfigurationen finden Sie unter <<Controller offline schalten (Duplex)>>.
+* Informationen zu Simplexkonfigurationen finden Sie unter <<Controller-Shelf herunterfahren (Simplexkonfiguration)>>.
 
 
 .Bevor Sie beginnen

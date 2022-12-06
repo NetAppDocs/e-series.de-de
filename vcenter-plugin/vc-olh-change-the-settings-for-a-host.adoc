@@ -30,6 +30,7 @@ Es wird ein Dialogfeld angezeigt, in dem die aktuellen Hosteinstellungen angezei
 . Um die Host-Eigenschaften zu ändern, stellen Sie sicher, dass die Registerkarte *Eigenschaften* ausgewählt ist, und ändern Sie dann die entsprechenden Einstellungen.
 +
 .Felddetails
+[%collapsible]
 ====
 [cols="25h,~"]
 |===
@@ -64,6 +65,7 @@ Sie können den Typ des Betriebssystems ändern, das auf dem von Ihnen definiert
 . Um die Porteinstellungen zu ändern, klicken Sie auf die Registerkarte *Host Ports* und ändern Sie dann die entsprechenden Einstellungen.
 +
 .Felddetails
+[%collapsible]
 ====
 [cols="25h,~"]
 |===

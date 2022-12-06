@@ -200,4 +200,5 @@ NOTE: Das Sammeln von Support-Daten kann vorübergehend Auswirkungen auf die Per
 
 
 
+.Was kommt als Nächstes?
 Wenn Ihr Controller-Upgrade dazu führt, die Anbieter-ID von LSI zu NETAPP zu ändern, gehen Sie zu link:remount-volumes-lsi-task.html["Volumes neu einbinden nach Anbieterwechsel von LSI zu NETAPP"]; Andernfalls ist Ihr Controller-Upgrade abgeschlossen und Sie können den normalen Betrieb wieder aufnehmen.

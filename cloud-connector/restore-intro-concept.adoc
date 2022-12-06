@@ -24,6 +24,7 @@ NOTE: Alle Zeitstempel für Backup- und Wiederherstellungsjobs, die unter der An
 
 Sie können neue bildbasierte Wiederherstellungen über die Funktion Erstellen auf der Seite Wiederherstellen der SANtricity-Cloud-Connector-Anwendung erstellen.
 
+.Bevor Sie beginnen
 Stellen Sie sicher, dass über den SANtricity Cloud Connector ein Image-basiertes Backup verfügbar ist.
 
 .Schritte
@@ -57,6 +58,7 @@ Die Wiederherstellung für das ausgewählte Ziel-Host-Volume wird gestartet, und
 
 Sie können neue dateibasierte Wiederherstellungen über die Funktion Erstellen auf der Seite Wiederherstellen der Anwendung SANtricity Cloud Connector erstellen.
 
+.Bevor Sie beginnen
 Stellen Sie sicher, dass über den SANtricity Cloud Connector ein dateibasiertes Backup zur Verfügung steht.
 
 .Schritte
@@ -94,6 +96,7 @@ Die Wiederherstellung für das ausgewählte Ziel-Host-Volume wird gestartet, und
 
 Mit der Funktion Löschen können Sie ein ausgewähltes Wiederherstellungselement aus dem Listenbereich Ergebnis der Seite Wiederherstellen löschen.
 
+.Bevor Sie beginnen
 Stellen Sie sicher, dass ein Wiederherstellungsauftrag mit dem Status „Abgeschlossen“, „Fehlgeschlagen“ oder „abgebrochen“ vorhanden ist.
 
 .Schritte

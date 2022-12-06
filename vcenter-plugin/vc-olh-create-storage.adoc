@@ -23,6 +23,7 @@ Im Storage Plug-in für vCenter erstellen Sie Storage, indem Sie zuerst einen Wo
 
 Ein Workload ist ein Storage-Objekt, das eine Applikation unterstützt. Sie können einen oder mehrere Workloads oder Instanzen pro Applikation definieren.
 
+.Über diese Aufgabe
 Bei einigen Applikationen konfiguriert das System den Workload so, dass er Volumes mit ähnlichen zugrunde liegenden Volume-Merkmalen enthält. Diese Volume-Merkmale werden basierend auf dem Applikationstyp optimiert, den der Workload unterstützt. Wenn Sie beispielsweise einen Workload erstellen, der eine Microsoft SQL Server Applikation unterstützt und anschließend Volumes für diesen Workload erstellt, werden die zugrunde liegenden Volume-Merkmale zur Unterstützung von Microsoft SQL Server optimiert.
 
 Das System empfiehlt nur für die folgenden Applikationstypen eine optimierte Volume-Konfiguration:
@@ -50,6 +51,7 @@ Das Dialogfeld Anwendungs-Workload erstellen wird angezeigt.
 
 Sie erstellen Volumes, um einem applikationsspezifischen Workload Storage-Kapazität hinzuzufügen und die erstellten Volumes für einen bestimmten Host oder Host-Cluster sichtbar zu machen.
 
+.Über diese Aufgabe
 Bei den meisten Applikationstypen wird standardmäßig eine benutzerdefinierte Volume-Konfiguration verwendet, während bei anderen Typen eine intelligente Konfiguration bei der Volume-Erstellung angewendet wird. Wenn Sie beispielsweise Volumes für eine Microsoft Exchange Applikation erstellen, werden Sie gefragt, wie viele Mailboxen Sie benötigen, wie viele Mailboxen Ihre durchschnittlichen Anforderungen an die Mailbox-Kapazität sind und wie viele Kopien der Datenbank Sie benötigen. Das System erstellt anhand dieser Informationen eine optimale Volume-Konfiguration für Sie, die Sie nach Bedarf bearbeiten können.
 
 Sie können Volumes über das Menü:Provisioning[Manage Volumes > Create > Volumes] oder über das Menü:Provisioning[Configure Pools and Volume Groups > Create > Volumes] erstellen. Das Verfahren ist bei beiden Auswahlmöglichkeiten identisch.
@@ -62,6 +64,7 @@ Der Prozess zur Erstellung eines Volumes ist ein mehrstufiges Verfahren.
 
 Im ersten Schritt können Sie einen bestimmten Host oder Host-Cluster für das Volume auswählen oder den Host später zuweisen.
 
+.Bevor Sie beginnen
 Stellen Sie sicher, dass:
 
 * Es wurden gültige Hosts oder Host-Cluster definiert (unter Menü:Bereitstellung [Hosts konfigurieren]).
@@ -69,6 +72,7 @@ Stellen Sie sicher, dass:
 * Die Host-Verbindung muss Data Assurance (da) unterstützen, wenn Sie die Erstellung von da-fähigen Volumes planen. Wenn eine der Host-Verbindungen auf den Controllern im Speicher-Array keine Unterstützung für da bietet, können die zugeordneten Hosts auf da-fähige Volumes keinen Zugriff auf Daten haben.
 
 
+.Über diese Aufgabe
 Beachten Sie bei der Zuweisung von Volumes die folgenden Richtlinien:
 
 * Das Betriebssystem eines Hosts kann bestimmte Einschränkungen für die Zugriffsmöglichkeiten auf die Anzahl der Volumes haben, auf die der Host zugreifen kann. Beachten Sie diese Einschränkung bei der Erstellung von Volumes zur Verwendung durch einen bestimmten Host.
@@ -101,6 +105,7 @@ Das Dialogfeld „Workload auswählen“ wird angezeigt.
 
 Im zweiten Schritt wählen Sie einen Workload aus, um die Storage-Array-Konfiguration für eine bestimmte Applikation wie VMware anzupassen.
 
+.Über diese Aufgabe
 In dieser Aufgabe wird die Erstellung von Volumes für einen Workload beschrieben. Ein Workload enthält normalerweise Volumes mit ähnlichen Merkmalen, die entsprechend dem von dem Workload unterstützten Applikationstyp optimiert werden. Sie können in diesem Schritt einen Workload definieren oder vorhandene Workloads auswählen.
 
 Beachten Sie folgende Richtlinien:
@@ -158,6 +163,7 @@ Im dritten Schritt definieren Sie die Volume-Konfiguration.
 * Um ein Volume mit Ressourcenbereitstellung zu erstellen, müssen alle Laufwerke NVMe-Laufwerke mit der dezugewiesenen oder nicht geschriebenen Option Logical Block Error (DULBE) sein.
 
 
+.Über diese Aufgabe
 Sie erstellen Volumes aus geeigneten Pools oder Volume-Gruppen, die im Dialogfeld Volumes hinzufügen/bearbeiten angezeigt werden. Für jeden infrage kommenden Pool und jede Volume-Gruppe wird die Anzahl der verfügbaren Laufwerke und die gesamte freie Kapazität angezeigt.
 
 Für einige applikationsspezifische Workloads zeigt jede qualifizierte Pool- oder Volume-Gruppe die vorgeschlagene Kapazität basierend auf der vorgeschlagenen Volume-Konfiguration und zeigt die verbleibende freie Kapazität in gib an. Für andere Workloads wird die vorgeschlagene Kapazität angezeigt, wenn Sie Volumes zu einem Pool oder einer Volume-Gruppe hinzufügen und die gemeldete Kapazität angeben.
@@ -168,6 +174,7 @@ Für einige applikationsspezifische Workloads zeigt jede qualifizierte Pool- ode
 ** *Other* -- Klicken Sie *Neues Volume hinzufügen* in jedem Pool oder Volume-Gruppe, die Sie verwenden möchten, um ein oder mehrere Volumes zu erstellen.
 +
 .Felddetails
+[%collapsible]
 ====
 [cols="25h,~"]
 |===
@@ -239,6 +246,7 @@ Bereitgestellte Ressource (nur EF300 und EF600)
 ** *Anwendungsspezifischer Workload* -- Klicken Sie entweder auf *Weiter*, um die vom System empfohlenen Volumes und Merkmale für den ausgewählten Workload zu akzeptieren, oder klicken Sie auf *Volumes bearbeiten*, um die vom System empfohlenen Volumes und Merkmale für den ausgewählten Workload zu ändern, hinzuzufügen oder zu löschen.
 +
 .Felddetails
+[%collapsible]
 ====
 [cols="25h,~"]
 |===

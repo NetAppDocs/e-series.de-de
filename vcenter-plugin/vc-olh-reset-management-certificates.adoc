@@ -16,6 +16,7 @@ summary: Zurücksetzen des Managementzertifikats auf den ursprünglichen, werkse
 [role="lead"]
 Für das Managementsystem, das das Storage Plugin für vCenter hostet, können Sie das Managementzertifikat in den ursprünglichen, werkseitig selbstsignierten Zustand zurücksetzen.
 
+.Über diese Aufgabe
 Mit dieser Aufgabe wird das aktuelle Management-Zertifikat aus dem Hostsystem gelöscht, auf dem das Storage Plugin für vCenter ausgeführt wird. Nach dem Zurücksetzen des Zertifikats wird das Host-System auf das selbstsignierte Zertifikat zurückgesetzt.
 
 .Schritte
@@ -30,4 +31,5 @@ Nach der Aktualisierung Ihres Browsers kann der Browser den Zugriff auf die Ziel
 
 
 
+.Ergebnis
 Das System setzt auf die Verwendung des selbstsignierten Zertifikats des Servers zurück. Das System fordert Benutzer daher auf, das selbstsignierte Zertifikat für ihre Sitzungen manuell anzunehmen.

@@ -25,6 +25,7 @@ Verwenden Sie diese Option nur unter Anleitung des technischen Supports. Sie kö
 * Die Lautstärke ist optimal und es werden keine Änderungsvorgänge auf dem Volume ausgeführt.*Achtung: *Nach dem Start kann der Vorgang nicht mehr abgebrochen werden. Alle Volume-Daten werden gelöscht. Versuchen Sie diese Operation nur, wenn der Recovery Guru Sie dazu rät. Wenden Sie sich vor Beginn dieses Verfahrens an den technischen Support.
 
 
+.Über diese Aufgabe
 Bei der Initialisierung eines Volume bleiben die WWN, Host-Zuweisungen, zugewiesene Kapazität und reservierte Kapazität des Volume erhalten. Zudem werden dieselben Data Assurance (da)-Einstellungen und Sicherheitseinstellungen beibehalten.
 
 Die folgenden Volume-Typen können nicht initialisiert werden:
@@ -49,6 +50,7 @@ Das Dialogfeld Volumes initialisieren wird angezeigt. In diesem Dialogfeld werde
 . Wählen Sie ein oder mehrere Volumes aus, die Sie initialisieren möchten, und bestätigen Sie, dass Sie den Vorgang durchführen möchten.
 
 
+.Ergebnisse
 Das System führt die folgenden Aktionen durch:
 
 * Löscht alle Daten aus den Volumes, die initialisiert wurden.

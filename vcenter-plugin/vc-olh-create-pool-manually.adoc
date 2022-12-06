@@ -24,6 +24,7 @@ Sie können einen Pool manuell erstellen, wenn Ihr Setup die Anforderungen für 
 * Wenn Sie ein EF600 oder EF300 Storage-Array konfigurieren, stellen Sie sicher, dass jeder Controller in den ersten 12 Steckplätzen und in den letzten 12 Steckplätzen Zugriff auf eine gleiche Anzahl von Laufwerken hat. Mit dieser Konfiguration können die Controller beide PCIe-Busse auf der Laufwerkseite effektiver nutzen. Für die Erstellung von Pools sollten Sie alle Laufwerke im Speicher-Array verwenden.
 
 
+.Über diese Aufgabe
 Bei der Erstellung von Pools legen Sie deren Merkmale fest, z. B. Laufwerkstyp, Sicherheitsfunktionen, Data Assurance (da)-Funktion, Shelf-Verlust-Schutz und Schutz vor Schubladenverlust.
 
 Für EF600 und EF300 Storage-Arrays umfassen die Einstellungen auch die Ressourcen-Bereitstellung und Volume-Blockgrößen.
@@ -43,6 +44,7 @@ Die Ergebnistabelle enthält alle möglichen Pools, die Sie erstellen können.
 . Wählen Sie den Pool-Kandidaten aus, den Sie anhand der folgenden Eigenschaften verwenden möchten, und klicken Sie dann auf *Erstellen*.
 +
 .Felddetails
+[%collapsible]
 ====
 [cols="25h,~"]
 |===

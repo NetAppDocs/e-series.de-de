@@ -17,6 +17,7 @@ summary: Wenn Sie keinen I/O-Zugriff mehr auf ein Volume benötigen, können Sie
 [role="lead"]
 Wenn Sie keinen I/O-Zugriff mehr auf ein Volume benötigen, können Sie die Zuweisung vom Host oder Host-Cluster aufheben.
 
+.Über diese Aufgabe
 Beachten Sie bei der Zuweisung von Volumes die folgenden Richtlinien:
 
 * Wenn Sie das zuletzt zugewiesene Volume aus einem Host-Cluster entfernen und zudem über Hosts mit spezifischen zugewiesenen Volumes verfügen, stellen Sie sicher, dass Sie diese Zuweisungen entfernen oder verschieben, bevor Sie die letzte Zuweisung für den Host-Cluster entfernen.

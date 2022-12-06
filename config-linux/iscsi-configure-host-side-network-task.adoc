@@ -13,6 +13,7 @@ summary: Konfigurieren Sie das iSCSI-Netzwerk auf der Host-Seite.
 [role="lead"]
 Zur Konfiguration von Host-seitigem Netzwerk müssen Sie mehrere Schritte durchführen.
 
+.Über diese Aufgabe
 Sie konfigurieren das iSCSI-Netzwerk auf der Hostseite, indem Sie die Anzahl der Knotensitzungen pro physischem Pfad festlegen, die entsprechenden iSCSI-Dienste einschalten, das Netzwerk für die iSCSI-Ports konfigurieren, iSCSI-Face-Bindungen erstellen und die iSCSI-Sitzungen zwischen Initiatoren und Zielen einrichten.
 
 In den meisten Fällen können Sie den Inbox Software-Initiator für iSCSI CNA/NIC verwenden. Sie müssen den neuesten Treiber, die aktuelle Firmware und das BIOS nicht herunterladen. Siehe https://mysupport.netapp.com/matrix["NetApp Interoperabilitäts-Matrix-Tool"^] Um Codeanforderungen zu ermitteln.

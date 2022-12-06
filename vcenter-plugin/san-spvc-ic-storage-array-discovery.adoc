@@ -49,10 +49,10 @@ Das System führt für jedes Array, das Sie der Management-Domäne hinzufügen, 
 
 . Klicken Sie auf *Weiter*, um mit dem nächsten Schritt im Assistenten fortzufahren.
 +
-Wenn die Speicher-Arrays über gültige Zertifikate verfügen, gehen Sie zu  3: Provide passwords.
+Wenn die Speicher-Arrays über gültige Zertifikate verfügen, gehen Sie zu <<Schritt 3: Geben Sie Passwörter ein>>.
 
 +
-Wenn keine Speicherarrays über gültige Zertifikate verfügen, wird das Dialogfeld Selbstsignierte Zertifikate auflösen angezeigt. Gehen Sie zu  2: Resolve untrusted certificates during discovery.
+Wenn keine Speicherarrays über gültige Zertifikate verfügen, wird das Dialogfeld Selbstsignierte Zertifikate auflösen angezeigt. Gehen Sie zu <<Schritt 2: Lösen Sie nicht vertrauenswürdige Zertifikate während der Ermittlung>>.
 
 +
 Wenn Sie CA-signierte Zertifikate importieren möchten, löschen Sie den Ermittlungsassistenten und klicken Sie im linken Bereich auf *Zertifikatverwaltung*. Weitere Anweisungen finden Sie in der Online-Hilfe.

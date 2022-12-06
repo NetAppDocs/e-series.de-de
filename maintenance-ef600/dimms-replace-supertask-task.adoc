@@ -14,6 +14,7 @@ summary: Ersetzen Sie ein DIMM in einem EF300- oder EF600-Array.
 [role="lead"]
 Sie können ein DIMM in einem EF300- oder EF600-Array ersetzen.
 
+.Über diese Aufgabe
 Zum Austauschen eines DIMM müssen Sie die Cache-Größe des Controllers überprüfen, den Controller offline schalten, den Controller entfernen, die DIMMs entfernen und die neuen DIMMs in den Controller installieren. Anschließend können Sie Ihren Controller wieder online schalten und überprüfen, ob das Speicher-Array ordnungsgemäß funktioniert.
 
 .Bevor Sie beginnen
@@ -21,7 +22,7 @@ Zum Austauschen eines DIMM müssen Sie die Cache-Größe des Controllers überpr
 * Stellen Sie sicher, dass keine Volumes verwendet werden oder dass auf allen Hosts, die diese Volumes verwenden, ein Multipath-Treiber installiert ist.
 
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Ein Ersatz-DIMM.
 * Ein ESD-Armband, oder Sie haben andere antistatische Vorsichtsmaßnahmen getroffen.
 * Ein flacher, statischer freier Arbeitsbereich.
@@ -260,4 +261,5 @@ Die Datei wird im Ordner Downloads für Ihren Browser mit dem Namen *Support-Dat
 
 
 
+.Was kommt als Nächstes?
 Der DIMM-Austausch ist abgeschlossen. Sie können den normalen Betrieb fortsetzen.

@@ -17,6 +17,7 @@ summary: Ändern Sie den Namen einer Speicherarraygruppe, wenn der aktuelle Name
 [role="lead"]
 Sie können den Namen einer Speicherarraygruppe ändern, wenn der aktuelle Name nicht mehr aussagekräftig oder zutreffend ist.
 
+.Über diese Aufgabe
 Berücksichtigen Sie diese Richtlinien bitte.
 
 * Ein Name kann aus Buchstaben, Zahlen und den Sonderzeichen Unterstrich (_), Bindestrich (-) und Pfund (#) bestehen. Wenn Sie andere Zeichen auswählen, wird eine Fehlermeldung angezeigt. Sie werden aufgefordert, einen anderen Namen auszuwählen.

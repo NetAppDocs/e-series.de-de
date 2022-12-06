@@ -17,6 +17,7 @@ summary: Sie können einen Host oder Host-Cluster entfernen, sodass Volumes dies
 [role="lead"]
 Sie können einen Host oder Host-Cluster entfernen, sodass Volumes diesem Host nicht mehr zugewiesen sind.
 
+.Über diese Aufgabe
 Beachten Sie beim Löschen eines Hosts oder Host-Clusters folgende Richtlinien:
 
 * Alle spezifischen Volume-Zuweisungen werden gelöscht, und die zugeordneten Volumes stehen für eine neue Zuweisung zur Verfügung.
@@ -37,6 +38,7 @@ Das Bestätigungsdialogfeld wird angezeigt.
 . Bestätigen Sie, dass Sie den Vorgang ausführen möchten, und klicken Sie dann auf *Löschen*.
 
 
+.Ergebnisse
 Wenn Sie einen Host gelöscht haben, führt das System die folgenden Aktionen durch:
 
 * Löscht den Host und entfernt ihn ggf. aus dem Host-Cluster.

@@ -13,6 +13,7 @@ summary: Schließen Sie die Stromkabel an, und schalten Sie die Laufwerk-Shelfs 
 [role="lead"]
 Erfahren Sie, wie Sie die Stromkabel anschließen und die Laufwerk-Shelfs einschalten.
 
+.Bevor Sie beginnen
 Bevor Sie die Controller-Shelfs einschalten, stellen Sie Folgendes sicher:
 
 * Installieren Sie Ihre Hardware.
@@ -47,6 +48,7 @@ CAUTION: Der Zugriff auf einen EF300- oder EF600 Controller-Behälter über das 
 . Lassen Sie den Controller fünf Minuten lang booten, bevor Sie die Einrichtung und Konfiguration des Storage-Systems abgeschlossen haben.
 
 
+.Ergebnis
 Der Controller wird automatisch gebootet. Die LEDs leuchten auf, und die Lüfter beginnen zu zeigen, dass der Controller eingeschaltet wird.
 
 

@@ -19,7 +19,7 @@ Sie konfigurieren die Switches für das NVMe over Fibre Channel-Protokoll und be
 
 Beim Konfigurieren (Zoning) von NVMe over Fibre Channel (FC)-Switches können sich die Hosts mit dem Storage-Array verbinden, und die Anzahl der Pfade wird begrenzt. Sie Zonen der Switches mithilfe der Managementoberfläche für die Switches.
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Administrator-Anmeldeinformationen für die Switches.
 * Der WWPN jedes Host-Initiator-Ports und jedes Controller-Zielports, der mit dem Switch verbunden ist. (Verwenden Sie Ihr HBA Utility für die Erkennung.)
 
@@ -27,6 +27,7 @@ Beim Konfigurieren (Zoning) von NVMe over Fibre Channel (FC)-Switches können si
 
 NOTE: Das HBA-Dienstprogramm eines Anbieters kann zur Aktualisierung und Beschaffung spezifischer Informationen über den HBA verwendet werden. Anweisungen zum Erwerb des HBA-Dienstprogramms finden Sie im Support-Abschnitt der Website des Anbieters.
 
+.Über diese Aufgabe
 Jeder Initiator-Port muss sich in einer separaten Zone mit allen entsprechenden Ziel-Ports befinden. Informationen zum Zoning der Switches finden Sie in der Dokumentation des Switch-Anbieters.
 
 .Schritte
@@ -38,7 +39,7 @@ Jeder Initiator-Port muss sich in einer separaten Zone mit allen entsprechenden 
 
 
 
-== Schritt 2: Bestimmen Sie die Host-Ports-WWPNs – ​NVMe/FC VMware
+== Schritt: Bestimmen Sie die Host-Ports-WWPNs- NVMe/FC VMware
 
 Zum Konfigurieren des FC-Zoning müssen Sie den weltweiten Port-Namen (WWPN) jedes Initiator-Ports bestimmen.
 

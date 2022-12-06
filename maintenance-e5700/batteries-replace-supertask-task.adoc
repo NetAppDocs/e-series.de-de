@@ -14,6 +14,7 @@ summary: Tauschen Sie eine fehlerhafte Batterie in einem E5700 Storage-System au
 [role="lead"]
 Sie können eine fehlerhafte Batterie in einem E5700 Storage-System ersetzen.
 
+.Über diese Aufgabe
 Jeder E5700 Controller-Behälter enthält eine Batterie, die im Cache gespeicherte Daten erhält, wenn die Wechselstromversorgung ausfällt. Wenn der Recovery Guru im SANtricity System Manager entweder den Status „Batterie ausgefallen“ oder den Status „Batteriewechsel erforderlich“ meldet, müssen Sie die betroffene Batterie austauschen.
 
 .Bevor Sie beginnen
@@ -21,7 +22,7 @@ Jeder E5700 Controller-Behälter enthält eine Batterie, die im Cache gespeicher
 * Prüfen link:batteries-intro-concept.html["Anforderungen für den Austausch von E5700-Batterien"].
 
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Eine Ersatzbatterie.
 * Ein ESD-Armband, oder Sie haben andere antistatische Vorsichtsmaßnahmen getroffen.
 * Etiketten, um jedes Kabel zu identifizieren, das mit dem Controller-Behälter verbunden ist.
@@ -352,4 +353,5 @@ Die Datei wird im Ordner Downloads für Ihren Browser mit dem Namen *Support-Dat
 
 
 
+.Was kommt als Nächstes?
 Der Austausch des Akkus ist abgeschlossen. Sie können den normalen Betrieb fortsetzen.

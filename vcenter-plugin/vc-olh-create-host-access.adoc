@@ -17,6 +17,7 @@ summary: Für das Storage-Management mit dem Storage Plug-in für vCenter müsse
 [role="lead"]
 Für das Storage-Management mit dem Storage Plug-in für vCenter müssen Sie jeden Host im Netzwerk ermitteln oder definieren.
 
+.Über diese Aufgabe
 Durch die Erstellung eines Hosts definieren Sie die Hostparameter, um eine Verbindung zum Speicher-Array und I/O-Zugriff auf die Volumes herzustellen.
 
 Sie können dem Host Context Agent (HCA) erlauben, die Hosts automatisch zu erkennen und anschließend zu überprüfen, ob die Informationen korrekt sind, indem Sie auf der Seite Hosts konfigurieren *Einstellungen anzeigen/bearbeiten* die Option *Einstellungen anzeigen/bearbeiten* wählen. Die HCA ist jedoch nicht auf allen unterstützten Betriebssystemen verfügbar, und Sie müssen den Host manuell erstellen.
@@ -42,6 +43,7 @@ Das Dialogfeld Host erstellen wird angezeigt.
 . Wählen Sie die entsprechenden Einstellungen für den Host aus.
 +
 .Felddetails
+[%collapsible]
 ====
 [cols="25h,~"]
 |===
@@ -95,6 +97,8 @@ Legen Sie den CHAP-Initiatorschlüssel fest
 . Wenn Sie die Hostinformationen aktualisieren müssen, wählen Sie den Host aus der Tabelle aus und klicken Sie auf *Einstellungen anzeigen/bearbeiten*.
 
 
+.Ergebnis
 Nachdem der Host erfolgreich erstellt wurde, erstellt das System für jeden Host-Port, der für den Host konfiguriert wurde (Benutzungsbezeichnung) einen Standardnamen. Der Standard-Alias ist `<Hostname_Port Number>`. Der Standard-Alias für den ersten Port, der für das Host-IPT erstellt wurde, ist beispielsweise `IPT_1`.
 
+.Nachdem Sie fertig sind
 Sie müssen ein Volume einem Host zuweisen, damit es für I/O-Vorgänge verwendet werden kann. Gehen Sie zu link:vc-olh-assign-volumes-to-hosts.html["Weisen Sie Hosts Volumes zu"].

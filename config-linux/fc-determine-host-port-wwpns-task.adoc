@@ -15,6 +15,7 @@ Sie installieren ein FC HBA Utility, damit Sie den weltweiten Port-Namen (WWPN) 
 
 Darüber hinaus können Sie das HBA-Dienstprogramm verwenden, um alle Einstellungen zu ändern, die in der Spalte Hinweise des empfohlen werden https://mysupport.netapp.com/matrix["NetApp Interoperabilitäts-Matrix-Tool"^] Für die unterstützte Konfiguration.
 
+.Über diese Aufgabe
 Prüfen Sie diese Richtlinien für HBA Utilities:
 
 * Die meisten HBA-Anbieter bieten ein HBA-Dienstprogramm an. Sie benötigen die richtige HBA-Version für Ihr Hostbetriebssystem und Ihre CPU. Beispiele für FC HBA Utilities:

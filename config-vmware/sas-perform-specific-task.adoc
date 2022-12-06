@@ -15,10 +15,11 @@ Für das SAS-Protokoll bestimmen Sie Host-Port-Adressen und treffen die empfohle
 
 
 
-== Schritt: SAS-Host-IDs bestimmen – ​VMware
+== Schritt: SAS Host Identifikatoren bestimmen - VMware
 
 Suchen Sie mithilfe des HBA Utility die SAS-Adressen und nehmen Sie dann die entsprechenden Konfigurationseinstellungen mithilfe des HBA-BIOS vor.
 
+.Über diese Aufgabe
 Lesen Sie die Richtlinien für HBA Utilities:
 
 * Die meisten HBA-Anbieter bieten ein HBA-Dienstprogramm an.

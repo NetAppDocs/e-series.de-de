@@ -14,6 +14,7 @@ summary: Ersetzen Sie eine Batterie in einem EF300- oder EF600-Array.
 [role="lead"]
 Sie können einen Akku in einem EF300- oder EF600-Speichersystem ersetzen.
 
+.Über diese Aufgabe
 Jeder Controller-Behälter enthält eine Batterie, die zwischengespeicherte Daten behält, wenn die Wechselstromversorgung ausfällt. Wenn der Recovery Guru im SANtricity System Manager entweder den Status „Batterie ausgefallen“ oder den Status „Batteriewechsel erforderlich“ meldet, müssen Sie die betroffene Batterie austauschen.
 
 .Bevor Sie beginnen
@@ -21,7 +22,7 @@ Jeder Controller-Behälter enthält eine Batterie, die zwischengespeicherte Date
 * Überprüfen Sie die link:batteries-overview-requirements-concept.html["Anforderungen für den Austausch der EF300- oder EF600-Batterie"].
 
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Der Ersatzakku.
 * Ein ESD-Armband oder andere antistatische Vorsichtsmaßnahmen.
 * Ein flacher, statischer freier Arbeitsbereich.
@@ -234,4 +235,5 @@ Die Datei wird im Ordner Downloads für Ihren Browser mit dem Namen *Support-Dat
 
 
 
+.Was kommt als Nächstes?
 Der Austausch des Akkus ist abgeschlossen. Sie können den normalen Betrieb fortsetzen.

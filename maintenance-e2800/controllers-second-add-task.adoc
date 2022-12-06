@@ -14,9 +14,10 @@ summary: Fügen Sie einen zweiten Controller zu einem Controller-Shelf hinzu, da
 [role="lead"]
 Sie können einen zweiten Controller-Behälter im E2800 Array hinzufügen.
 
+.Über diese Aufgabe
 Diese Aufgabe beschreibt, wie Sie einem zweiten Controller-Behälter zur Simplex-Version eines E2812 Controller-Shelf, eines E2824 Controller-Shelf oder eines EF280 Flash-Arrays hinzufügen. Dieses Verfahren wird auch als Simplex-to-Duplex-Konvertierung bezeichnet, ein Online-Verfahren. Sie können auf Daten im Speicher-Array zugreifen, während Sie diesen Vorgang durchführen.
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Ein neuer Controller-Behälter mit der gleichen Teilenummer wie der derzeit installierte Controller-Behälter. (Siehe Schritt 1, um die Teilenummer zu überprüfen.)
 * Eine neue HIC, die identisch mit der HIC im derzeit installierten Controller-Behälter ist (nur nötig, wenn der derzeit installierte Controller-Behälter eine Host-Schnittstellenkarte enthält).
 * Ein ESD-Armband oder andere antistatische Vorsichtsmaßnahmen treffen.
@@ -396,4 +397,5 @@ Die Datei wird im Ordner Downloads für Ihren Browser mit dem Namen *Support-Dat
 
 
 
+.Was kommt als Nächstes?
 Der Vorgang des Hinzufügens eines zweiten Controllers ist abgeschlossen. Sie können den normalen Betrieb fortsetzen.

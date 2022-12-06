@@ -14,6 +14,7 @@ summary: Fügen Sie EF300-Controller eine SAS-Erweiterungskarte hinzu, um die La
 [role="lead"]
 Sie können eine SAS-Erweiterungskarte zu einem EF300- oder EF600 Controller hinzufügen, um ein Laufwerksfach zu erweitern.
 
+.Über diese Aufgabe
 Wenn Sie eine SAS-Erweiterungskarte hinzufügen, müssen Sie das Speicher-Array ausschalten, die neue SAS-Erweiterungskarte installieren und wieder einschalten.
 
 .Bevor Sie beginnen
@@ -24,7 +25,7 @@ Wenn Sie eine SAS-Erweiterungskarte hinzufügen, müssen Sie das Speicher-Array 
 
 CAUTION: Dieses Verfahren muss mit beiden Controller-Kanistern durchgeführt werden. Controller-HIC-Konfigurationen müssen genau übereinstimmen.
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Eine SAS-Erweiterungskarte, die mit Ihrem Controller kompatibel ist.
 * Ein ESD-Armband, oder Sie haben andere antistatische Vorsichtsmaßnahmen getroffen.
 * Ein flacher, statischer freier Arbeitsbereich.
@@ -213,4 +214,5 @@ Die Datei wird im Ordner Downloads für Ihren Browser mit dem Namen *Support-Dat
 
 NOTE: Informationen zur Verkabelung Ihrer SAS-Erweiterung finden Sie unter link:../install-hw-cabling/index.html["Verkabelung der E-Series Hardware"] Weitere Anweisungen.
 
+.Was kommt als Nächstes?
 Das Hinzufügen einer SAS-Erweiterungskarte in Ihrem Speicher-Array ist abgeschlossen. Sie können den normalen Betrieb fortsetzen.

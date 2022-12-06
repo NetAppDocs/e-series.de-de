@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: vcenter-plugin/san-spvc-ic-installation.html 
 keywords: install vCenter plugin, installing vCenter plugin, vCenter plugin, 
-summary: Installieren Sie das SANtricity Storage Plug-in für vCenter. 
+summary: SANtricity Storage Plug-in für vCenter installieren oder aktualisieren 
 ---
-= Installieren Sie das Storage Plug-in für vCenter
+= Installieren oder aktualisieren Sie das Storage Plug-in für vCenter
 :hardbreaks:
 :allow-uri-read: 
 :experimental: 
@@ -15,24 +15,16 @@ summary: Installieren Sie das SANtricity Storage Plug-in für vCenter.
 
 
 [role="lead"]
-Sie können das Storage Plugin für vCenter installieren und die Plugin-Registrierung überprüfen.
+Führen Sie diese Schritte aus, um das Storage Plug-in für vCenter zu installieren und die Plugin-Registrierung zu überprüfen. Sie können das Plugin auch mit diesen Anweisungen aktualisieren.
 
 
 
 == Installationsvoraussetzungen prüfen
 
-Stellen Sie sicher, dass Ihre Systeme die folgenden Anforderungen erfüllen:
-
-* Von der VMware vCenter Server Appliance unterstützte Versionen: 6.7U3J, 7.0U1, 7.0U2, 7.0U3 und 8.0.
-* NetApp SANtricity OS Version: 11.60.2 oder höher
-* Unterstützte Applikations-Host-Versionen: Windows 2016, Windows 2019, Windows 2022.
-* CPU-Anforderungen für das Host-System:
-+
-** Systemspeicher: 512 MB
-** Speicherplatz: 275 MB + 200 MB (Protokollierung)
+Stellen Sie sicher, dass Ihre Systeme die Anforderungen in erfüllen link:san-spvc-ic-reqs.html["Installations- und Upgrade-Anforderungen prüfen"].
 
 
-
+NOTE: Die *vcenter.properties*-Dateien werden durch den Aktualisierungsprozess nicht beibehalten. Wenn Sie ein Upgrade durchführen, müssen Sie die Registrierung des Plugins vor dem Upgrade aufheben. Sobald das Upgrade erfolgreich abgeschlossen wurde, können Sie das Plugin wieder bei der vCSA registrieren.
 
 
 
@@ -48,32 +40,22 @@ So installieren Sie die Plugin-Software:
 +
 Im obigen Dateinamen, `nn.nn.nn.nnnn` Stellt die Versionsnummer dar.
 
-. Folgen Sie beim Starten der Installation den Anweisungen auf dem Bildschirm.
+. Wenn die Installation beginnt, befolgen Sie die Anweisungen auf dem Bildschirm, um mehrere Funktionen zu aktivieren und einige Konfigurationsparameter einzugeben. Bei Bedarf können Sie eine dieser Optionen später in den Konfigurationsdateien ändern.
 +
-Während der Installation werden Sie aufgefordert, einige Konfigurationsparameter einzugeben.
+
+NOTE: Während eines Upgrades werden keine Konfigurationsparameter angezeigt.
 
 +
-.. Wählen Sie auf dem ersten Bildschirm Ihre bevorzugte Sprache für die Software aus und klicken Sie auf *OK*.
-.. Klicken Sie im Bildschirm Einführung auf *Weiter*.
-.. Klicken Sie im Bildschirm Copyright auf *Weiter*.
-.. Wählen Sie im Bildschirm Lizenzvereinbarung das Feld für die Annahme der Bedingungen aus, und klicken Sie dann auf *Weiter*.
-.. Wählen Sie den Ordner aus, in dem Sie die Software installieren möchten, und klicken Sie dann auf *Weiter*.
-.. Lassen Sie im Bildschirm Zertifikatvalidierung das Kontrollkästchen aktiviert, wenn Sie die Zertifikatvalidierung zwischen dem Plugin und den Speicher-Arrays erzwingen möchten. Bei dieser Durchsetzung werden die Speicherarrayzertifikate auf Vertrauen in das Plug-in geprüft. Wenn die Zertifikate nicht vertrauenswürdig sind, dürfen sie dem Plugin nicht hinzugefügt werden. Wenn Sie die Zertifikatvalidierung überschreiben möchten, deaktivieren Sie das Kontrollkästchen, damit alle Speicher-Arrays mit selbstsignierten Zertifikaten zum Plugin hinzugefügt werden können. Klicken Sie Auf *Weiter*.
-+
-Weitere Informationen zu Zertifikaten finden Sie in der Online-Hilfe, die über die Plug-in-Schnittstelle verfügbar ist.
 
-.. Verlassen Sie im Bildschirm HTTPS-Webservice-Port die Standardeinstellung unter 8445, oder ändern Sie ggf. die Portnummer. Klicken Sie Auf *Weiter*.
-.. Klicken Sie im Bildschirm Übersicht vor der Installation auf *Weiter*, um die Dateien zu installieren.
-.. Wenn die Meldung Webserver gestartet angezeigt wird, klicken Sie auf *OK*, um die Installation abzuschließen.
-.. Klicken Sie Auf *Fertig*.
+NOTE: Während der Installation werden Sie zur Zertifikatvalidierung aufgefordert. Aktivieren Sie das Kontrollkästchen, wenn Sie die Zertifikatvalidierung zwischen dem Plug-in und den Speicher-Arrays durchsetzen möchten. Bei dieser Durchsetzung werden die Speicherarrayzertifikate auf Vertrauen in das Plug-in geprüft. Wenn die Zertifikate nicht vertrauenswürdig sind, dürfen sie dem Plugin nicht hinzugefügt werden. Wenn Sie die Zertifikatvalidierung überschreiben möchten, deaktivieren Sie das Kontrollkästchen, damit alle Speicher-Arrays mit selbstsignierten Zertifikaten zum Plugin hinzugefügt werden können. Weitere Informationen zu Zertifikaten finden Sie in der Online-Hilfe, die über die Plug-in-Schnittstelle verfügbar ist.
+
+. Wenn die Meldung Webserver gestartet angezeigt wird, klicken Sie auf *OK*, um die Installation abzuschließen, und klicken Sie dann auf *Fertig*.
+. Überprüfen Sie, ob der Anwendungsserver erfolgreich installiert wurde, indem Sie den Befehl *Services.msc* ausführen.
+. Überprüfen Sie, ob der Application Server (VCP)-Service *NetApp SANtricity Storage Plug-in für vCenter* installiert war und der Service gestartet wurde.
 +
 
 NOTE: Bei Bedarf können Sie die Einstellungen für Zertifikatvalidierung und Webservice-Port nach der Installation ändern. Öffnen Sie im Installationsverzeichnis die Datei wsconfig.xml. Um die Zertifikatvalidierung auf Speicherarrays zu entfernen, ändern Sie das `env` Schlüssel, `trust.all.arrays`, An `true`. Ändern Sie den Web Services-Port, wenn Sie den ändern möchten `sslport` Wert bis zum gewünschten Portwert im Bereich von 0-65535. Stellen Sie sicher, dass die verwendete Portnummer keine Bindung an einen anderen Prozess hat. Wenn Sie fertig sind, speichern Sie die Änderungen und starten Sie den Plugin Webserver neu. Wenn der Portwert des Plugin-Webservers nach der Registrierung des Plugins in einem vCSA geändert wird, müssen Sie das Plugin unregistrieren und neu registrieren, damit der vCSA auf dem geänderten Port an den Plugin-Webserver kommuniziert.
 
-
-
-. Überprüfen Sie, ob der Anwendungsserver erfolgreich installiert wurde, indem Sie den Befehl *Services.msc* ausführen.
-. Überprüfen Sie, ob der Application Server (VCP)-Service *NetApp SANtricity Storage Plug-in für vCenter* installiert war und der Service gestartet wurde.
 
 
 
@@ -83,7 +65,7 @@ NOTE: Bei Bedarf können Sie die Einstellungen für Zertifikatvalidierung und We
 Nachdem die Plugin-Software installiert ist, registrieren Sie das Plugin mit einem vCSA.
 
 
-NOTE: Das Plugin kann nur jeweils auf einer vCSA registriert werden. Um sich bei einem anderen vCSA zu registrieren, müssen Sie das Plugin von der aktuellen vCSA deinstallieren und es vom Anwendungs-Host deinstallieren. Dann können Sie das Plugin wieder installieren und es auf dem anderen vCSA registrieren.
+NOTE: Das Plugin kann nur jeweils auf einer vCSA registriert werden. Um sich bei einem anderen vCSA zu registrieren, müssen Sie das Plugin von der aktuellen vCSA deinstallieren und es vom Anwendungs-Host deinstallieren. Sie können dann das Plugin neu installieren und es auf dem anderen vCSA registrieren.
 
 . Öffnen Sie eine Eingabeaufforderung über die Befehlszeile, und navigieren Sie zum folgenden Verzeichnis:
 +

@@ -13,11 +13,12 @@ summary: Eine neue LUN besitzt keine Partition oder kein Dateisystem, wenn der L
 [role="lead"]
 Da eine neue LUN keine Partition oder kein Dateisystem hat, wenn der Linux-Host sie zuerst erkennt, müssen Sie die LUN formatieren, bevor sie verwendet werden kann. Optional können Sie ein Dateisystem auf der LUN erstellen.
 
-.Was Sie und#8217;ll benötigen
+.Was Sie benötigen
 * Eine LUN, die vom Host erkannt wird.
 * Eine Liste der verfügbaren Festplatten. (Um verfügbare Festplatten anzuzeigen, führen Sie den aus `ls` Befehl im Ordner /dev/mapper.)
 
 
+.Über diese Aufgabe
 Sie können den Datenträger als Basislaufwerk mit einer GUID-Partitionstabelle (GPT) oder einem Master Boot Record (MBR) initialisieren.
 
 Formatieren Sie die LUN mit einem Dateisystem wie ext4. Für einige Applikationen ist dieser Schritt nicht erforderlich.

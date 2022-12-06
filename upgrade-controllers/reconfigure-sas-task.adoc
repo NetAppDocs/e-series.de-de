@@ -15,6 +15,7 @@ Falls erforderlich können Sie Ihr SAS-2-System neu konfigurieren, damit Sie es 
 
 Zu den genehmigten SAS-2 Arrays gehören die E2700, E550/EF5500 und die E5600/EF560. Genehmigte SAS-2-Festplatten-Shelfs umfassen DE1600, DE5600 und DE6600. Zu den genehmigten SAS-3 Arrays gehören die E2800 und E5700/EF570. Genehmigte SAS-3 Laufwerk-Shelfs umfassen DE212C, DE224C und DE460C.
 
+.Über diese Aufgabe
 Bei diesem Verfahren konvertieren Sie das Controller-Shelf in ein genehmigtes SAS-2 Array in ein Festplatten-Shelf und legen dieses Shelf anschließend ohne Erhalt der Daten hinter ein neu genehmigtes SAS-3 Array und Laufwerk-Shelfs.
 
 Dieses Verfahren gilt für die IOM12- und IOM12B-Laufwerkseinschübe.
@@ -22,6 +23,7 @@ Dieses Verfahren gilt für die IOM12- und IOM12B-Laufwerkseinschübe.
 
 NOTE: IOM12B-Module werden nur ab SANtricity OS 11.07.2 unterstützt. Stellen Sie sicher, dass die Firmware Ihres Controllers aktualisiert wurde, bevor Sie auf ein IOM12B installieren oder aktualisieren.
 
+.Bevor Sie beginnen
 Aufgrund der Komplexität dieses Verfahrens ist Folgendes erforderlich:
 
 * Sie benötigen eine FPVR (Feature Product Variance Request). Wenden Sie sich an NetApp Professional Services, wenn Sie eine FPVR-Datei erstellen möchten.

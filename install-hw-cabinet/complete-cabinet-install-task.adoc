@@ -235,6 +235,7 @@ NOTE: Die verbleibenden beiden Schraubenbohrungen werden zur Montage des Fachs v
 
 Um die Schrankinstallation abzuschließen, schalten Sie die Schaltschrankkomponenten ein.
 
+.Über diese Aufgabe
 Während die Fächer das Einschalten durchführen, blinken die LEDs an der Vorderseite und an der Rückseite der Fächer. Je nach Konfiguration kann es mehrere Minuten dauern, bis der Einschalvorgang abgeschlossen ist.
 
 .Schritte
@@ -281,4 +282,5 @@ NOTE: Warten Sie nach dem Einschalten der Laufwerksfächer 30 Sekunden, bevor Si
 . Warten Sie 30 Sekunden, nachdem Sie die Laufwerksfächer eingeschaltet haben, und schalten Sie dann alle Controller-Laufwerksfächer im Schrank ein.
 
 
+.Ergebnis
 Die Schrankinstallation ist abgeschlossen. Sie können den normalen Betrieb fortsetzen.

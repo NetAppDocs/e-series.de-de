@@ -63,6 +63,7 @@ image::../media/60_cabling.png[60 Verkabelung]
 
 Die folgenden Informationen gelten für die Verkabelung eines EF300- oder EF600 Controller-Shelf an ein DE212C, DE224C oder DE460-Festplatten-Shelf.
 
+.Bevor Sie beginnen
 Stellen Sie vor der Verkabelung einer EF300 oder EF600 sicher, dass die Firmware auf die neueste Version aktualisiert wird. Befolgen Sie zum Aktualisieren der Firmware die Anweisungen unter link:../upgrade-santricity/index.html["Aktualisieren des SANtricity Betriebssystems"^].
 
 

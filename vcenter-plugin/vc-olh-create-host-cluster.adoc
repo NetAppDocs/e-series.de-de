@@ -17,6 +17,7 @@ summary: Wenn zwei oder mehr Hosts I/O-Zugriff auf dieselben Volumes benötigen,
 [role="lead"]
 Wenn zwei oder mehr Hosts I/O-Zugriff auf dieselben Volumes benötigen, können Sie ein Host-Cluster erstellen.
 
+.Über diese Aufgabe
 Beachten Sie beim Erstellen eines Host-Clusters die folgenden Richtlinien:
 
 * Dieser Vorgang startet nicht, wenn zum Erstellen des Clusters zwei oder mehr Hosts zur Verfügung stehen.
@@ -60,6 +61,8 @@ DA erhöht die Datenintegrität im gesamten Storage-System. DA ermöglicht es de
 
 
 
+.Ergebnis
 Der neue Hostcluster wird in der Tabelle mit den zugewiesenen Hosts in den Zeilen darunter angezeigt.
 
+.Nachdem Sie fertig sind
 Sie müssen ein Volume einem Host-Cluster zuweisen, damit es für I/O-Vorgänge verwendet werden kann. Gehen Sie zu link:vc-olh-assign-volumes-to-hosts.html["Weisen Sie Hosts Volumes zu"].

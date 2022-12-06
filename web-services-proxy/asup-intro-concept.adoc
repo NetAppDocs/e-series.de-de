@@ -106,7 +106,7 @@ Die AutoSupport-Funktion ist während der Erstinstallation des Web Services Prox
 Sie können AutoSupport über die Datei ASUPConfig.xml aktivieren oder deaktivieren, wie in den nachstehenden Schritten beschrieben. Alternativ können Sie diese Funktion über die API mit *Konfiguration* und *POST/asup* aktivieren oder deaktivieren und dann "true" oder "false" eingeben.
 
 . Öffnen Sie die Datei ASUPConfig.xml im Arbeitsverzeichnis.
-. Suchen Sie die Zeilen für `<asupdata enabled="(Boolean)" timestamp=>`
+. Suchen Sie nach den Leitungen für <asupdata enable="Boolean_value" timestamp="timestamp">
 . Eingabe `true` (Aktivieren) oder `false` (Deaktivieren). Beispiel:
 +
 [listing]

@@ -17,6 +17,7 @@ keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter
 [role="lead"]
 Sie können die Einstellungen für den Lese-Cache und den Schreib-Cache ändern, um die gesamte I/O-Performance eines Volumes zu beeinträchtigen.
 
+.Über diese Aufgabe
 Beachten Sie bei der Änderung der Cache-Einstellungen für ein Volume die folgenden Richtlinien:
 
 * Nach dem Öffnen des Dialogfelds Cache-Einstellungen ändern wird möglicherweise ein Symbol neben den ausgewählten Cache-Eigenschaften angezeigt. Dieses Symbol zeigt an, dass der Controller vorübergehend Zwischenspeichervorgänge ausgesetzt hat. Diese Aktion kann auftreten, wenn ein neuer Akku geladen wird, wenn ein Controller entfernt wurde oder wenn vom Controller eine Diskrepanz bei den Cachegrößen festgestellt wurde. Nach dem Löschen der Bedingung werden die im Dialogfeld ausgewählten Cache-Eigenschaften aktiv. Wenn die ausgewählten Cache-Eigenschaften nicht aktiv werden, wenden Sie sich an den technischen Support.
@@ -33,6 +34,7 @@ Das Dialogfeld Cache-Einstellungen ändern wird angezeigt. In diesem Dialogfeld 
 . Wählen Sie die Registerkarte *Basic*, um die Einstellungen für Lese-Cache und Schreib-Caching zu ändern.
 +
 .Felddetails
+[%collapsible]
 ====
 [cols="25h,~"]
 |===
@@ -48,6 +50,7 @@ Das Dialogfeld Cache-Einstellungen ändern wird angezeigt. In diesem Dialogfeld 
 . Wählen Sie die Registerkarte *Erweitert* aus, um die erweiterten Einstellungen für Thick Volumes zu ändern. Die erweiterten Cache-Einstellungen sind nur für Thick Volumes verfügbar.
 +
 .Felddetails
+[%collapsible]
 ====
 [cols="25h,~"]
 |===

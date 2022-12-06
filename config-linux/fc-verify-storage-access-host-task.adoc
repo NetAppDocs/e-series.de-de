@@ -13,6 +13,7 @@ summary: Vor der Verwendung des Volumes überprüfen Sie, ob der Host Daten auf 
 [role="lead"]
 Bevor Sie das Volume verwenden, überprüfen Sie, ob der Host Daten auf das Volume schreiben und wieder lesen kann.
 
+.Was Sie benötigen
 Ein initialisiertes Volume, das mit einem Dateisystem formatiert ist.
 
 .Schritte
@@ -21,4 +22,5 @@ Ein initialisiertes Volume, das mit einem Dateisystem formatiert ist.
 . Führen Sie die aus `diff` Befehl zum Vergleichen der kopierten Dateien mit den Originalen.
 
 
+.Nachdem Sie fertig sind
 Entfernen Sie die kopierte Datei und den Ordner.
