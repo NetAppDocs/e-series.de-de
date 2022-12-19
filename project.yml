@@ -503,9 +503,9 @@ sidebar:
         - title: Überblick und Anforderungen
           url: "/maintenance-ef600/drives-overview-supertask-concept.html"
         - title: EF300-Laufwerk austauschen
-          url: "/maintenance-ef600/drives-replace-EF300-task.html"
+          url: "/maintenance-ef600/drives-replace-EF300-supertask-task.html"
         - title: EF600 Laufwerk ersetzen
-          url: "/maintenance-ef600/drives-replace-supertask-task.html"
+          url: "/maintenance-ef600/drives-replace-EF600-supertask-task.html"
         - title: Hot Add a Laufwerk-Shelf
           url: "/maintenance-ef600/drives-hotadd-drive-shelf-task.html"
       - title: Lüfter
