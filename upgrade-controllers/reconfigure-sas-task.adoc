@@ -21,7 +21,7 @@ Bei diesem Verfahren konvertieren Sie das Controller-Shelf in ein genehmigtes SA
 Dieses Verfahren gilt für die IOM12- und IOM12B-Laufwerkseinschübe.
 
 
-NOTE: IOM12B-Module werden nur ab SANtricity OS 11.07.2 unterstützt. Stellen Sie sicher, dass die Firmware Ihres Controllers aktualisiert wurde, bevor Sie auf ein IOM12B installieren oder aktualisieren.
+NOTE: IOM12B-Module werden nur ab SANtricity OS 11.70.2 unterstützt. Stellen Sie sicher, dass die Firmware Ihres Controllers aktualisiert wurde, bevor Sie auf ein IOM12B installieren oder aktualisieren.
 
 .Bevor Sie beginnen
 Aufgrund der Komplexität dieses Verfahrens ist Folgendes erforderlich:

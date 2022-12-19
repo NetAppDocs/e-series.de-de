@@ -310,7 +310,6 @@
   <block id="8322d8f6737b683258acd6d9233af80a" category="list-text">Lesen Sie alle Schritte vor Beginn des Verfahrens durch.</block>
   <block id="8567550b0509793441808f6c97ce695d" category="list-text">Stellen Sie sicher, dass das Hinzufügen eines Festplatten-Shelfs während des laufenden Vorgangs erfolgt.</block>
   <block id="e9983c2bf51c9aa8f38dce44157b9a2a" category="paragraph">Dieses Verfahren gilt für die IOM12- und IOM12B-Laufwerkseinschübe.</block>
-  <block id="c5d218090776dbcf38627065b13e6caa" category="admonition">IOM12B-Module werden nur ab SANtricity OS 11.07.2 unterstützt. Stellen Sie sicher, dass die Firmware Ihres Controllers aktualisiert wurde, bevor Sie auf ein IOM12B installieren oder aktualisieren.</block>
   <block id="2af3ffb0914986412fbce97033362ada" category="admonition">Dieses Verfahren gilt für EAM-Hot-Swaps oder Ersatz wie für Regal-ähnliche. So können Sie nur ein IOM12-Modul durch ein anderes IOM12-Modul ersetzen oder ein IOM12B-Modul durch ein anderes IOM12B-Modul ersetzen. (Ihr Shelf kann zwei IOM12-Module haben oder zwei IOM12B-Module haben.)</block>
   <block id="5a1179aaa65f35de522ce2a2ea82749a" category="inline-link">Hinzufügen von IOM-Laufwerk-Shelfs zu einem vorhandenen E27XX-, E56XX- oder EF560-Controller-Shelf</block>
   <block id="a6f3f1b5a23e23fffe14cffdfdd4e3e6" category="paragraph">Wenn Sie ein älteres Controller-Shelf mit einem DE212C, DE224C oder DE460 verkabeln, finden Sie unter<block ref="0198df91334a412ebbcbbf86e387ec1b" category="inline-link-rx"></block>.</block>
@@ -8556,7 +8555,6 @@
   <block id="e1e3f682a15638acc6104e20368ac56c" category="paragraph">Falls erforderlich können Sie Ihr SAS-2-System neu konfigurieren, damit Sie es hinter einem neuen SAS-3-Controller-Shelf verwenden können.</block>
   <block id="d5bfcfac792646a9cb8556a9dc0e1711" category="paragraph">Zu den genehmigten SAS-2 Arrays gehören die E2700, E550/EF5500 und die E5600/EF560. Genehmigte SAS-2-Festplatten-Shelfs umfassen DE1600, DE5600 und DE6600. Zu den genehmigten SAS-3 Arrays gehören die E2800 und E5700/EF570. Genehmigte SAS-3 Laufwerk-Shelfs umfassen DE212C, DE224C und DE460C.</block>
   <block id="8b8d78c67ae658c8f5789c07f6ec4ff5" category="paragraph">Bei diesem Verfahren konvertieren Sie das Controller-Shelf in ein genehmigtes SAS-2 Array in ein Festplatten-Shelf und legen dieses Shelf anschließend ohne Erhalt der Daten hinter ein neu genehmigtes SAS-3 Array und Laufwerk-Shelfs.</block>
-  <block id="e2acb831b00c32f1c83710aa634a7625" category="admonition">IOM12B-Module werden nur ab SANtricity OS 11.07.2 unterstützt. Stellen Sie sicher, dass die Firmware Ihres Controllers aktualisiert wurde, bevor Sie auf ein IOM12B installieren oder aktualisieren.</block>
   <block id="f71b20f3b0d45a3de46bfc2994245cef" category="paragraph">Aufgrund der Komplexität dieses Verfahrens ist Folgendes erforderlich:</block>
   <block id="58e56f993ed9dd2d088442ff59a40d30" category="list-text">Sie benötigen eine FPVR (Feature Product Variance Request). Wenden Sie sich an NetApp Professional Services, wenn Sie eine FPVR-Datei erstellen möchten.</block>
   <block id="a739f0261e28d98823a19d4400689648" category="admonition">Wird ein FPVR nicht erfasst, bevor dieser Vorgang durchgeführt wird, kann dies zu einem Laufwerksausfall und einer Controller-Sperre führen.</block>
@@ -8848,4 +8846,7 @@
   <block id="294b3397fedca884072c918fc613f61d" category="list-text"><block ref="b1d2c45bc75ed5d4a6faa0261f1569e8" category="inline-xref-macro-rx"></block></block>
   <block id="04c5c6e14f0bbd925f3877a16bc2c6a5" category="section-title">Option 1: Verbinden Sie das Laufwerk-Shelf für die E2800 oder E5700</block>
   <block id="3519a93182c0883a5ee2951208ede7c9" category="section-title">Option 2: Verbinden Sie das Laufwerk-Shelf für das EF300 oder EF600 System</block>
+  <block id="f2ad0f8f286ab81e3d2722fa3c383e9b" category="admonition">IOM12B-Module werden nur ab SANtricity OS 11.70.2 unterstützt. Stellen Sie sicher, dass die Firmware Ihres Controllers aktualisiert wurde, bevor Sie auf ein IOM12B installieren oder aktualisieren.</block>
+  <block id="562b06bc197dd94e4462675caa7022b0" category="admonition">IOM12B-Module werden nur ab SANtricity OS 11.70.2 unterstützt. Stellen Sie sicher, dass die Firmware Ihres Controllers aktualisiert wurde, bevor Sie auf ein IOM12B installieren oder aktualisieren.</block>
+  <block id="fe52478447b1fa9a4c7ec89de67fdf4d" category="sidebar">Hot Add a Laufwerk-Shelf</block>
 </blocks>

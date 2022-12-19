@@ -18,7 +18,7 @@ Jeder Controller-Behälter enthält eine Controller-Karte, einen Akku und eine o
 Diese Verfahren gelten für die IOM12- und IOM12B-Laufwerkseinschübe.
 
 
-NOTE: IOM12B-Module werden nur ab SANtricity OS 11.07.2 unterstützt. Stellen Sie sicher, dass die Firmware Ihres Controllers aktualisiert wurde, bevor Sie auf ein IOM12B installieren oder aktualisieren.
+NOTE: IOM12B-Module werden nur ab SANtricity OS 11.70.2 unterstützt. Stellen Sie sicher, dass die Firmware Ihres Controllers aktualisiert wurde, bevor Sie auf ein IOM12B installieren oder aktualisieren.
 
 
 NOTE: Diese Verfahren gelten für ähnliche IOM-Hot-Swap-ähnliche Regalfachteile oder für Ersatz. So können Sie nur ein IOM12-Modul durch ein anderes IOM12-Modul ersetzen oder ein IOM12B-Modul durch ein anderes IOM12B-Modul ersetzen. (Ihr Shelf kann zwei IOM12-Module haben oder zwei IOM12B-Module haben.)
