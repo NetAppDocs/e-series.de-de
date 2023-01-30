@@ -14,7 +14,7 @@ summary: Die Konfiguration eines NVMe-Initiators in einer InfiniBand-Umgebung um
 Die Konfiguration eines NVMe-Initiators in einer InfiniBand-Umgebung umfasst die Installation und Konfiguration der infiniband-, nvme-cli- und rdma-Pakete, die Konfiguration von Initiator-IP-Adressen und das Einrichten der NVMe-of-Ebene auf dem Host.
 
 .Was Sie benötigen
-Sie müssen das aktuelle kompatible Betriebssystem RHEL 7, RHEL 8, RHEL9, SUSE Linux Enterprise Server 12 oder 15 Service Pack ausführen. Siehe https://mysupport.netapp.com/matrix["NetApp Interoperabilitäts-Matrix-Tool"^] Für eine vollständige Liste der aktuellen Anforderungen.
+Sie müssen das neueste kompatible Betriebssystem RHEL 7, RHEL 8, RHEL 9, SUSE Linux Enterprise Server 12 oder 15 Service Pack ausführen. Siehe https://mysupport.netapp.com/matrix["NetApp Interoperabilitäts-Matrix-Tool"^] Für eine vollständige Liste der aktuellen Anforderungen.
 
 .Schritte
 . installation der rdma-, nvme-cli- und infiniband-Pakete:
@@ -40,7 +40,24 @@ Sie müssen das aktuelle kompatible Betriebssystem RHEL 7, RHEL 8, RHEL9, SUSE L
 # yum install rdma-core
 # yum install nvme-cli
 ----
-. Aktivieren `ipoib`. Bearbeiten Sie die Datei /etc/rdma/rdma.conf und ändern Sie den Eintrag zum Laden `ipoib`:
+. Installieren Sie für RHEL 8 oder RHEL 9 Netzwerkskripte:
++
+*RHEL 8*
+
++
+[listing]
+----
+# yum install network-scripts
+----
++
+*RHEL 9*
+
++
+[listing]
+----
+# yum install NetworkManager-initscripts-updown
+----
+. Aktivieren Sie für RHEL 7 `ipoib`. Bearbeiten Sie die Datei /etc/rdma/rdma.conf und ändern Sie den Eintrag zum Laden `ipoib`:
 +
 [listing]
 ----
@@ -52,7 +69,7 @@ IPOIB_LOAD=yes
 ----
 # cat /etc/nvme/hostnqn
 ----
-. Prüfen Sie, ob die Verbindungen zwischen den ib-Ports aktiviert sind und der Status = aktiv:
+. Überprüfen Sie, ob die IB-Port-Links aktiviert sind und der Status = aktiv:
 +
 [listing]
 ----
@@ -130,7 +147,7 @@ REMOTE_IPADDR=
 STARTMODE='auto'
 ----
 +
-*RHEL 7, RHEL 8 ODER RHEL 9*
+*RHEL 7 oder RHEL 8*
 
 +
 Erstellen Sie die Datei /etc/sysconfig/Network-scripts/ifcfg-ib0 mit folgendem Inhalt.
@@ -169,6 +186,59 @@ IPV4=FAILURE_FATAL=yes
 IPV6INIT=no
 NAME=ib1
 ONBOOT=yes
+----
++
+*RHEL 9*
+
++
+Verwenden Sie die `nmtui` Werkzeug zum Aktivieren und Bearbeiten einer Verbindung. Unten sehen Sie eine Beispieldatei `/etc/NetworkManager/system-connections/ib0.nmconnection` Das Tool generiert Folgendes:
+
++
+[listing]
+----
+[connection]
+id=ib0
+uuid=<unique uuid>
+type=infiniband
+interface-name=ib0
+
+[infiniband]
+mtu=4200
+
+[ipv4]
+address1=10.10.10.100/24
+method=manual
+
+[ipv6]
+addr-gen-mode=default
+method=auto
+
+[proxy]
+----
++
+Unten sehen Sie eine Beispieldatei `/etc/NetworkManager/system-connections/ib1.nmconnection` Das Tool generiert Folgendes:
+
++
+[listing]
+----
+[connection]
+id=ib1
+uuid=<unique uuid>
+type=infiniband
+interface-name=ib1
+
+[infiniband]
+mtu=4200
+
+[ipv4]
+address1=11.11.11.100/24'
+method=manual
+
+[ipv6]
+addr-gen-mode=default
+method=auto
+
+[proxy]
 ----
 . Aktivieren Sie die `ib` Schnittstelle:
 +
