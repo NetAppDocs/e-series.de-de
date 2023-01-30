@@ -3272,21 +3272,14 @@
   <block id="7e470e1466f12fa596adb6f0ed2e3983" category="list-text">Prüfen Sie die<block ref="67952ad32b5638e74c409cacc108ef4e" prefix=" " category="inline-code"></block> Variable in der Datei /etc/iscsi/iscsid.conf, um die Standardanzahl von Sitzungen pro physischem Pfad anzuzeigen. Ändern Sie bei Bedarf die Standardanzahl von Sitzungen in eine Sitzung.</block>
   <block id="dac50a4bf77e8de98c9f0ecbf1efd96c" category="list-text">Ändern Sie das<block ref="b7e6d8bff01730e41b7d91437e6a25d0" prefix=" " category="inline-code"></block> Variable in der Datei /etc/iscsi/iscsid.conf in<block ref="98f13708210194c475687be6106a3b84" prefix=" " category="inline-code"></block>, Von einem Standardwert von<block ref="da4fb5c6e93e74d3df8527599fa62642" prefix=" " category="inline-code"></block>.</block>
   <block id="79148913b006ee398551d3b206312f29" category="list-text">Stellen Sie sicher<block ref="3fe4dc8de876aca2c78fa0cd9c6d0b65" prefix=" " category="inline-code"></block> Und<block ref="6ddc4af490fdb98dbb3e0ae8905d0c5d" prefix=" " category="inline-code"></block> Dienste sind aktiviert und für das Booten aktiviert.</block>
-  <block id="52430bef221dfe0288778cdfd54cab9b" category="paragraph">* Red hat Enterprise Linux 7, 8 und 9 (RHEL 7, RHEL 8 und RHEL9)*</block>
   <block id="03255405207be9e847f2d898e05048a4" category="paragraph">*SUSE Linux Enterprise Server 12 und 15 (SLES 12 und SLES 15)*</block>
-  <block id="a41a1bbdcdc59cf69e7fb285339a9625" category="paragraph">Optional stellen Sie fest<block ref="68e21a6780edcb6acab77e2a42f4f506" prefix=" " category="inline-code"></block> In /etc/iscsi/iscsid.conf vor dem Ausführen von any<block ref="f88921f58beaaae5bcb9dffac54bf5ad" prefix=" " category="inline-code"></block> Befehle, für die Sessions gespeichert werden sollen, bleiben nach dem Neubooten bestehen.</block>
   <block id="22573cb1d3a24e811b00be3cdf11ed07" category="list-text">Ermitteln Sie den Host-IQN-Initiatornamen, mit dem der Host für ein Array konfiguriert wird.</block>
-  <block id="d707e35eeedda41c6a0cfa761fd2a07b" category="list-text">Konfigurieren Sie das Netzwerk für iSCSI-Ports:</block>
   <block id="d2ac38f00dee7d2a262b2bf0fa6f3b64" category="admonition">Zusätzlich zum öffentlichen Netzwerkport sollten iSCSI-Initiatoren zwei oder mehr NICs in separaten privaten Segmenten oder VLANs verwenden.</block>
   <block id="ca77b43383ee68c3baec39cef81b151e" category="list-text">Bestimmen Sie die iSCSI-Portnamen mit<block ref="461b4388c9d46369a6d7ec61ac63945f" prefix=" " category="inline-code"></block> Befehl.</block>
   <block id="a055f9d8150408cf1633c42de1d3c847" category="list-text">Legen Sie die IP-Adresse für die iSCSI-Initiator-Ports fest. Die Initiator-Ports sollten sich im gleichen Subnetz wie die iSCSI-Zielports befinden.</block>
-  <block id="c13ee4fd00cee57d25631dda7a3afcfc" category="paragraph">Bearbeiten:</block>
-  <block id="d43f0c1ac820c0cdc6a73e7a6f943df2" category="paragraph">Hinzufügen:</block>
   <block id="068968b47b209b5ab4b2bf2a892a53da" category="admonition">Stellen Sie sicher, dass Sie die Adresse für beide iSCSI-Initiator-Ports festlegen.</block>
   <block id="3ec57145ad99ba132ea5906182fa7d34" category="list-text">Starten Sie die Netzwerkdienste neu.</block>
   <block id="3aa61be860f27f859aed628c7d7a8783" category="list-text">Stellen Sie sicher, dass der Linux-Server alle -iSCSI-Zielports anpingen kann.</block>
-  <block id="a6575d77a64e40bfa8e81ab8ade7d7a1" category="list-text">Richten Sie die iSCSI-Sitzungen zwischen Initiatoren und Zielen (insgesamt vier) ein.</block>
-  <block id="65c76cf8b4c172d7378f288e8af8a08c" category="list-text">Konfigurieren Sie bei Verwendung von ifaces die iSCSI-Schnittstellen, indem Sie zwei iSCSI-iface-Bindungen erstellen.</block>
   <block id="64adb9e225feb356ed6ec628cd40671f" category="admonition">Verwenden Sie zum Auflisten der Schnittstellen<block ref="8579cd67e1d8df384c039668e78ac254" prefix=" " category="inline-code"></block>.</block>
   <block id="ac8ddbbb791a17c089f8b72f6801a3dc" category="list-text">ISCSI-Ziele erkennen Speichern Sie den IQN (er entspricht jeder Ermittlung) im Arbeitsblatt für den nächsten Schritt.</block>
   <block id="8329426ded9436d4fbff44b5e4b4c72c" category="admonition">Der IQN sieht wie folgt aus:</block>
@@ -8857,4 +8850,17 @@
   <block id="0cd1f8d86f769c38f1483db60702ae30" category="list-text">Überprüfen Sie, ob die IB-Port-Links aktiviert sind und der Status = aktiv:</block>
   <block id="b19174b79ffa987ea20abbce564e973e" category="paragraph">Verwenden Sie die<block ref="94f122660e8e80af7b93d6609515bc99" prefix=" " category="inline-code"></block> Werkzeug zum Aktivieren und Bearbeiten einer Verbindung. Unten sehen Sie eine Beispieldatei<block ref="9c2912b95ccba22459cf5353437988de" prefix=" " category="inline-code"></block> Das Tool generiert Folgendes:</block>
   <block id="2662a31940eac2df0a6809d02c631cbb" category="paragraph">Unten sehen Sie eine Beispieldatei<block ref="c9f0a91feab8e55b8d9d166acc79562e" prefix=" " category="inline-code"></block> Das Tool generiert Folgendes:</block>
+  <block id="b7577216b0e50cc5bbbbf4483bbc37cd" category="list-text">Optional können Sie einstellen<block ref="68e21a6780edcb6acab77e2a42f4f506" prefix=" " category="inline-code"></block> In /etc/iscsi/iscsid.conf vor dem Ausführen von any<block ref="f88921f58beaaae5bcb9dffac54bf5ad" prefix=" " category="inline-code"></block> Befehle, für die Sessions gespeichert werden sollen, bleiben nach dem Neubooten bestehen.</block>
+  <block id="d0c7f819a9c352ec47123255b7bea069" category="list-text">Konfigurieren Sie das Netzwerk für iSCSI-Ports. Dies sind Beispielanweisungen für RHEL und SLES:</block>
+  <block id="4578709b544309c3c129ddd77e647202" category="paragraph">* Red hat Enterprise Linux 7 und 8 (RHEL 7 und RHEL 8)*</block>
+  <block id="9dabae4a06d30c9c7f51e5f507819763" category="paragraph">Erstellen Sie die Beispieldatei<block ref="0d7d3fc433b1b9e503de96fc98959275" prefix=" " category="inline-code"></block> Mit folgendem Inhalt:</block>
+  <block id="d495950a6cee8eefb9fec72eb4759f52" category="paragraph">Optionale Ergänzungen zu IPv6:</block>
+  <block id="8a242e9b511ac07bc46f6d5758b40101" category="paragraph">* Red hat Enterprise Linux 9 (RHEL 9)*</block>
+  <block id="42b36daf2d76a2e6ced2edcf1ac0780c" category="paragraph">Verwenden Sie die<block ref="94f122660e8e80af7b93d6609515bc99" prefix=" " category="inline-code"></block> Werkzeug zum Aktivieren und Bearbeiten einer Verbindung. Das Werkzeug erzeugt einen<block ref="b9b1a8ef49e07c55d90e41f053c5f240" prefix=" " category="inline-code"></block> Datei in<block ref="1580a184ac85703ca1cfde026b32109e" prefix=" " category="inline-code"></block>.</block>
+  <block id="a708543f0c471392232ef363aa304233" category="paragraph">Erstellen Sie die Beispieldatei<block ref="07c8ad3b1f5865fe6e3186f131aad980" prefix=" " category="inline-code"></block> Mit folgendem Inhalt:</block>
+  <block id="2b9d337912530454459670ef2f6000d4" category="paragraph">Optionale Ergänzung zu IPv6:</block>
+  <block id="caa9c7e5ca67cc93af5e1a5af13b5f06" category="list-text">Richten Sie die iSCSI-Sitzungen zwischen Initiatoren und Zielen (insgesamt vier) mit einer von zwei Methoden ein.</block>
+  <block id="629d95b23c4787247cb60bd0d79ce58b" category="list-text">(Optional) Konfigurieren Sie bei Verwendung von ifaces die iSCSI-Schnittstellen, indem Sie zwei iSCSI-iface-Bindungen erstellen.</block>
+  <block id="c40ee4712318216da52bf38dda83bd0b" category="paragraph">*Methode 1 (mit ifaces)*</block>
+  <block id="340e742b206cd41d5a3527d53de73cf7" category="paragraph">*Methode 2 (ohne ifaces)*</block>
 </blocks>
