@@ -34,7 +34,7 @@ sidebar:
         url: "/getting-started/learn-software-concept.html"
       - title: E-Series Videos
         url: "/getting-started/learn-video-concept.html"
-    - title: Die Inbetriebnahme ist möglich mit E-Series
+    - title: Schnellstart
       url: "/getting-started/getup-run-concept.html"
   - title: Hardware installieren
     entries:
