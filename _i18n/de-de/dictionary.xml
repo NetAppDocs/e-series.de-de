@@ -8867,4 +8867,7 @@
   <block id="4d34b8dd475537b31eded726b5f109a4" category="paragraph-title"><block ref="99e8b2f00e172bfcff96afdce69907bc" category="inline-image-macro-rx" type="image"></block> Hosts konfigurieren</block>
   <block id="e6fbc0b9673f8c86726688d7607fc8f5" category="inline-image-macro">Sechs</block>
   <block id="8cb633130263590fcb215001ddbab715" category="paragraph-title"><block ref="ef78558f80439832e0f51cc22cee8b8c" category="inline-image-macro-rx" type="image"></block> Speicher konfigurieren</block>
+  <block id="17fbe20fbbd5b537dbcef5b0ec0d1dea" category="section-title">Neue Funktionen in Version 11.75</block>
+  <block id="a4b7d4d589fe2fdcc52596432d9392ed" category="paragraph">Upgrades auf 11.80.x zulassen</block>
+  <block id="7c2f19d039e9dc3e3394a748e8ac016e" category="paragraph">Systeme müssen mit 11.70.5 ausgeführt werden, um auf 11.80.x oder höher zu aktualisieren. FIPS 140-3 wird auf bestimmten Laufwerken sowohl für SAS- als auch für NVMe-basierte SSDs unterstützt. SSD-Laufwerke auf FIPS 140-3-2-Ebene können gleichzeitig mit SSD-Laufwerken der FIPS-140-2-Ebene bestehen, sofern die Laufwerke entweder nur NVMe-basiert oder ausschließlich SAS-basiert sind. Bei Verwendung einer Mischung dieser Ebenen in Volume-Gruppen und Festplatten-Pools ist zu beachten, dass die Gruppe oder der Pool dann auf der niedrigeren Sicherheitsstufe (140-2) arbeiten.</block>
 </blocks>

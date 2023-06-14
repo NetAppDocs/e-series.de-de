@@ -16,6 +16,21 @@ In der folgenden Tabelle werden die neuen Funktionen in SANtricity OS 11.7 für 
 
 
 
+== Neue Funktionen in Version 11.75
+
+[cols="35,65"]
+|===
+| Neues Feature | Beschreibung 
+
+
+ a| 
+Upgrades auf 11.80.x zulassen
+ a| 
+Systeme müssen mit 11.70.5 ausgeführt werden, um auf 11.80.x oder höher zu aktualisieren. FIPS 140-3 wird auf bestimmten Laufwerken sowohl für SAS- als auch für NVMe-basierte SSDs unterstützt. SSD-Laufwerke auf FIPS 140-3-2-Ebene können gleichzeitig mit SSD-Laufwerken der FIPS-140-2-Ebene bestehen, sofern die Laufwerke entweder nur NVMe-basiert oder ausschließlich SAS-basiert sind. Bei Verwendung einer Mischung dieser Ebenen in Volume-Gruppen und Festplatten-Pools ist zu beachten, dass die Gruppe oder der Pool dann auf der niedrigeren Sicherheitsstufe (140-2) arbeiten.
+
+|===
+
+
 == Neue Funktionen in Version 11.74
 
 [cols="35h,~"]
