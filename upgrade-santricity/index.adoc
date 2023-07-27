@@ -20,4 +20,4 @@ Diese Upgrade-Verfahren beinhalten separate Anweisungen für die folgenden Punkt
 * Laufwerk -- enthält Anweisungen zum Aktualisieren der Firmware des Laufwerks.
 
 
-Bevor Sie mit dem Upgrade beginnen, sollten Sie sich die ansehen link:overview-upgrade-consider-task.html["Upgrade-Überlegungen"].
+Bevor Sie mit dem Upgrade beginnen, sollten Sie sich die ansehen  link:overview-upgrade-consider-task.html["Upgrade-Überlegungen"^].

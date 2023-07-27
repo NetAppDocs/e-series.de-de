@@ -21,7 +21,9 @@ Sie können einen fehlerhaften Controller-Behälter in einer Simplex-Konfigurati
 .Über diese Aufgabe
 Der Controller-Behälter enthält eine Controllerkarte, einen Akku und eine optionale Host-Schnittstellenkarte (HIC). Wenn Sie einen defekten Controller-Behälter ersetzen, müssen Sie die Batterie und HIC, falls vorhanden, aus dem ursprünglichen Controller-Behälter entfernen und in den Ersatzcontroller-Behälter installieren.
 
-.Was Sie benötigen
+.Bevor Sie beginnen
+Stellen Sie sicher, dass Sie Folgendes haben:
+
 * Ein Ersatzcontroller-Behälter mit der gleichen Teilenummer wie der Controller-Behälter, den Sie austauschen.
 * Ein ESD-Armband, oder Sie haben andere antistatische Vorsichtsmaßnahmen getroffen.
 * Etiketten, um jedes Kabel zu identifizieren, das mit dem Controller-Behälter verbunden ist.

@@ -14,7 +14,7 @@ summary: Installation der E2800 oder E5700 in einem zweiposten Rack oder in eine
 So installieren Sie ein E2860, E5760 oder DE460 Storage-System in einem Rack mit zwei Säulen oder einem NetApp System-Rack.
 
 .Bevor Sie beginnen
-* Registrieren Sie Ihre Hardware unter http://mysupport.netapp.com/["mysupport.netapp.com"^].
+* Registrieren Sie Ihre Hardware unter http://mysupport.netapp.com/["NetApp Support"^].
 * Bereiten Sie einen flachen, statischen Arbeitsbereich vor.
 * Holen Sie sich ein ESD-Armband, und ergreifen Sie antistatische Vorsichtsmaßnahmen.
 

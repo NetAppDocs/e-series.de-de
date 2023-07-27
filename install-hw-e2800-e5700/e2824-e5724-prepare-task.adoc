@@ -14,7 +14,7 @@ summary: Für die Installation der E5724, EF570, EF280, E2812, E2824, DE212C ode
 Bereiten Sie sich auf die Installation Ihrer E5724, EF570, EF280, E2812, E2824, DE212C oder DE224C Storage-System.
 
 .Schritte
-. Erstellen Sie ein Konto und registrieren Sie Ihre Hardware unter http://mysupport.netapp.com/["mysupport.netapp.com"^].
+. Erstellen Sie ein Konto und registrieren Sie Ihre Hardware unter http://mysupport.netapp.com/["NetApp Support"^].
 . Stellen Sie sicher, dass die folgenden Elemente in dem Feld enthalten sind, das Sie erhalten haben.
 +
 |===
@@ -130,11 +130,10 @@ image:../media/management_station_inst-hw-e2800-e5700_g60b3.png[""]
  a| 
 Ein unterstützter Browser für die Verwaltungssoftware:
 
-** Google Chrome (Version 78 und höher)
-** Microsoft Internet Explorer (Version 11 und höher)
-** Microsoft Edge (88 und höher)
-** Mozilla Firefox (Version 70 und höher)
-** Safari (Version 12 und höher)
+** Google Chrome (Version 89 und höher)
+** Microsoft Edge (Version 90 und höher)
+** Mozilla Firefox (Version 80 und höher)
+** Safari (Version 14 und höher)
 
 
 |===

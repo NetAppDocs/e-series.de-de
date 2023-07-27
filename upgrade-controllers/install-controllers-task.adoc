@@ -16,7 +16,9 @@ Nachdem Sie die alten Controller entfernt haben, können Sie neue Controller in 
 .Über diese Aufgabe
 Führen Sie für jeden Controller im Fach für das Controller-Laufwerk die folgenden Schritte aus Wenn Sie Controller in einem Duplex-Controller-Laufwerksfach aktualisieren, wiederholen Sie alle Schritte, um den zweiten Controller-Behälter zu installieren.
 
-.Was Sie benötigen
+.Bevor Sie beginnen
+Stellen Sie sicher, dass Sie Folgendes haben:
+
 * Ein ESD-Armband oder andere antistatische Vorsichtsmaßnahmen treffen.
 * Eine Batterie aus dem Original-Controller-Behälter oder ein neuer Akku, den Sie bestellt haben.
 * Der neue Reglerbehälter.

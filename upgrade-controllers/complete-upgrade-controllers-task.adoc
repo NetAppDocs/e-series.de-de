@@ -47,6 +47,8 @@ Sie müssen zunächst einen internen Sicherheitsschlüssel erstellen und dann de
 
 .. Interner Sicherheitsschlüssel erstellen
 .. Der Controller kann durch internes Verschlüsselungsmanagement und ein oder mehrere gesicherte Laufwerke ausgetauscht werden
+.. Führen Sie den SMClient-Befehl aus, `set allDrives nativeState`.
+.. Warten Sie, bis beide Controller neu gebootet werden.
 
 
 
@@ -77,6 +79,8 @@ Sie müssen die gesicherten Laufwerke zuerst mithilfe des Verfahrens zur interne
 
 .. Der Controller kann durch internes Verschlüsselungsmanagement und ein oder mehrere gesicherte Laufwerke ausgetauscht werden
 .. Externen Sicherheitsschlüssel erstellen
+.. Führen Sie den SMClient-Befehl aus, `set allDrives nativeState`.
+.. Warten Sie, bis beide Controller neu gebootet werden.
 
 
 

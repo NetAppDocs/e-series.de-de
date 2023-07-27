@@ -20,19 +20,21 @@ Wenn Sie eine fehlerhafte HIC ersetzen, müssen Sie das Speicher-Array ausschalt
 .Bevor Sie beginnen
 * Prüfen link:hics-overview-supertask-concept.html["Anforderungen für EF300- oder EF600 HIC-Upgrades"].
 * Planen Sie für dieses Verfahren ein Wartungsfenster zur Ausfallzeit. Sie können erst nach erfolgreichem Abschluss dieses Verfahrens auf Daten im Speicher-Array zugreifen. Da beide Controller beim Einschalten die gleiche HIC-Konfiguration aufweisen müssen, muss beim Installieren der HICs die Stromversorgung ausgeschaltet sein.
-
-
-.Was Sie benötigen
-* HICs, die mit Ihren Controllern kompatibel sind.
-* Ein ESD-Armband, oder Sie haben andere antistatische Vorsichtsmaßnahmen getroffen.
-* Ein flacher, statischer freier Arbeitsbereich.
-* Etiketten, um jedes Kabel zu identifizieren, das mit dem Controller-Behälter verbunden ist.
-* A #1 Kreuzschlitzschraubendreher.
-* Eine Management Station mit einem Browser, der für den Controller auf den SANtricity System Manager zugreifen kann. (Zeigen Sie zum Öffnen der System Manager-Schnittstelle den Domain-Namen oder die IP-Adresse des Controllers im Browser.)
-
-
+* Stellen Sie sicher, dass Sie Folgendes haben:
++
+** HICs, die mit Ihren Controllern kompatibel sind.
+** Ein ESD-Armband, oder Sie haben andere antistatische Vorsichtsmaßnahmen getroffen.
+** Ein flacher, statischer freier Arbeitsbereich.
+** Etiketten, um jedes Kabel zu identifizieren, das mit dem Controller-Behälter verbunden ist.
+** A #1 Kreuzschlitzschraubendreher.
+** Eine Management Station mit einem Browser, der für den Controller auf den SANtricity System Manager zugreifen kann. (Zeigen Sie zum Öffnen der System Manager-Schnittstelle den Domain-Namen oder die IP-Adresse des Controllers im Browser.)
++
 
 CAUTION: *Möglicher Verlust des Datenzugriffs* -- Installieren Sie nie eine HIC in einem EF300 oder EF600 Controller-Behälter, wenn diese HIC für einen anderen E-Series Controller entwickelt wurde. Zudem müssen sowohl die Controller als auch beide HICs identisch sein. Wenn nicht kompatible oder nicht übereinstimmende HICs vorhanden sind, werden die Controller gesperrt, wenn Sie Strom verwenden.
+
+
+
+
 
 
 

@@ -17,7 +17,9 @@ Ein Lüfter kann in einem EF300- oder EF600-Array ersetzt werden.
 .Über diese Aufgabe
 Jedes EF300- und EF600 Controller-Shelf oder Laufwerk-Shelf enthält fünf Lüfter. Falls ein Lüfter ausfällt, müssen Sie ihn so schnell wie möglich austauschen, um sicherzustellen, dass die Kühlung des Shelfs ausreicht.
 
-.Was Sie benötigen
+.Bevor Sie beginnen
+Stellen Sie sicher, dass Sie Folgendes haben:
+
 * Ein Ersatzlüfter.
 * Ein ESD-Armband, oder Sie haben andere antistatische Vorsichtsmaßnahmen getroffen.
 * Ein flacher, statischer freier Arbeitsbereich.

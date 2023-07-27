@@ -13,8 +13,11 @@ summary: Installieren Sie das DSM-Paket, das Multipath-Software für Windows ent
 [role="lead"]
 Um einen redundanten Pfad zum Storage Array bereitzustellen, können Sie das SANtricity Windows DSM-Paket installieren und das Multipath-Paket für Windows verwenden.
 
-.Was Sie benötigen
-Die richtigen Administrator- oder Superuser-Berechtigungen.
+.Bevor Sie beginnen
+Stellen Sie sicher, dass Sie Folgendes haben:
+
+* Die richtigen Administrator- oder Superuser-Berechtigungen.
+
 
 .Über diese Aufgabe
 Die Multipath-Software liefert einen redundanten Pfad zum Storage Array, falls ein physischer Pfad unterbrochen wird. Bevor Sie Multipathing verwenden können, müssen Sie das SANtricity Windows DSM-Paket installieren. Dieses Paket enthält die Multipath-Software für Windows.

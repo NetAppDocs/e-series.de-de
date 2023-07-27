@@ -13,7 +13,7 @@ summary: Konfigurieren Sie die Multipath-Software, die einen redundanten Pfad zu
 [role="lead"]
 Um einen redundanten Pfad zum Storage Array bereitzustellen, können Sie die Multipath-Software konfigurieren.
 
-.Was Sie benötigen
+.Bevor Sie beginnen
 Sie müssen die erforderlichen Pakete auf Ihrem System installieren.
 
 * Überprüfen Sie für Red hat-Hosts (RHEL), ob die Pakete durch Ausführen installiert wurden `rpm -q device-mapper-multipath`.

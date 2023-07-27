@@ -30,11 +30,12 @@ Sie können ein Netzteil ersetzen, während Ihr Speicher-Array eingeschaltet ist
 * Überprüfen Sie die Anforderungen an die Stromversorgung in link:canisters-overview-supertask-concept.html["Anforderungen für den Austausch von Behälterschannissen"].
 * Prüfen Sie die Details im Recovery Guru, um zu bestätigen, dass ein Problem mit der Stromversorgung vorliegt. Wählen Sie *recheck* aus dem Recovery Guru, um sicherzustellen, dass keine weiteren Punkte zuerst angesprochen werden müssen.
 * Stellen Sie sicher, dass die gelbe Warn-LED am Netzteil leuchtet und anzeigt, dass ein Fehler im Netzteil oder dem integrierten Lüfter vorliegt. Wenden Sie sich an den technischen Support, um Unterstützung zu erhalten, wenn die beiden Netzteile im Shelf ihre gelbe Warn-LEDs leuchten.
+* Stellen Sie sicher, dass Sie Folgendes haben:
++
+** Ein Ersatz-Netzteil, das für Ihr Controller-Shelf- oder Festplatten-Shelf-Modell unterstützt wird.
+** Ein ESD-Armband, oder Sie haben andere antistatische Vorsichtsmaßnahmen getroffen.
 
 
-.Was Sie benötigen
-* Ein Ersatz-Netzteil, das für Ihr Controller-Shelf- oder Festplatten-Shelf-Modell unterstützt wird.
-* Ein ESD-Armband, oder Sie haben andere antistatische Vorsichtsmaßnahmen getroffen.
 
 
 

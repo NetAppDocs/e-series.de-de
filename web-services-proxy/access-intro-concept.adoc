@@ -27,6 +27,7 @@ Rollenbasierte Zugriffssteuerung (Role Based Access Control, RBAC) ordnet vordef
 
 In der folgenden Tabelle werden die einzelnen Rollen beschrieben.
 
+[cols="35h,~"]
 |===
 | Rolle | Beschreibung 
 
@@ -62,6 +63,7 @@ Standardbenutzerkonten sind in der Datei users.properties definiert. Sie können
 
 In der folgenden Tabelle sind die für den Web Services Proxy verfügbaren Benutzeranmeldungen aufgeführt.
 
+[cols="35h,~"]
 |===
 | Vordefinierte Benutzeranmeldung | Beschreibung 
 

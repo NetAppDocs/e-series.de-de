@@ -13,8 +13,11 @@ summary: Bevor Sie den Namespace verwenden, überprüfen Sie, ob der Host Daten 
 [role="lead"]
 Bevor Sie den Namespace verwenden, überprüfen Sie, ob der Host Daten in den Namespace schreiben und wieder lesen kann.
 
-.Was Sie benötigen
-Ein initialisierter Namespace, der mit einem Dateisystem formatiert ist.
+.Bevor Sie beginnen
+Stellen Sie sicher, dass Sie Folgendes haben:
+
+* Ein initialisierter Namespace, der mit einem Dateisystem formatiert ist.
+
 
 .Schritte
 . Kopieren Sie auf dem Host eine oder mehrere Dateien auf den Bereitstellungspunkt des Datenträgers.

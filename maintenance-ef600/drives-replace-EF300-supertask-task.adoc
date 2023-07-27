@@ -30,13 +30,14 @@ Der Recovery Guru in SANtricity System Manager überwacht die Laufwerke im Stora
 
 .Bevor Sie beginnen
 * Überprüfen Sie die Anforderungen für die Festplattenbehandlung in link:drives-overview-supertask-concept.html["Anforderungen für den Austausch von EF300- oder EF600-Laufwerken"].
+* Stellen Sie sicher, dass Sie Folgendes haben:
++
+** Ein von NetApp unterstütztes Ersatzlaufwerk für Ihr Controller Shelf oder Festplatten-Shelf.
+** Ein ESD-Armband, oder Sie haben andere antistatische Vorsichtsmaßnahmen getroffen.
+** Eine flache, statische Arbeitsfläche.
+** Eine Management Station mit einem Browser, der für den Controller auf den SANtricity System Manager zugreifen kann. (Zeigen Sie zum Öffnen der System Manager-Schnittstelle den Domain-Namen oder die IP-Adresse des Controllers im Browser.)
 
 
-.Was Sie benötigen
-* Ein von NetApp unterstütztes Ersatzlaufwerk für Ihr Controller Shelf oder Festplatten-Shelf.
-* Ein ESD-Armband, oder Sie haben andere antistatische Vorsichtsmaßnahmen getroffen.
-* Eine flache, statische Arbeitsfläche.
-* Eine Management Station mit einem Browser, der für den Controller auf den SANtricity System Manager zugreifen kann. (Zeigen Sie zum Öffnen der System Manager-Schnittstelle den Domain-Namen oder die IP-Adresse des Controllers im Browser.)
 
 
 
@@ -168,12 +169,13 @@ Der Recovery Guru in SANtricity System Manager überwacht die Laufwerke im Stora
 
 .Bevor Sie beginnen
 * Überprüfen Sie die Anforderungen für die Festplattenbehandlung in link:drives-overview-supertask-concept.html["Anforderungen für den Austausch von EF300- oder EF600-Laufwerken"].
+* Stellen Sie sicher, dass Sie Folgendes haben:
++
+** Ein von NetApp unterstütztes Ersatzlaufwerk für Ihr Controller Shelf oder Festplatten-Shelf.
+** Ein ESD-Armband, oder Sie haben andere antistatische Vorsichtsmaßnahmen getroffen.
+** Eine Management Station mit einem Browser, der für den Controller auf den SANtricity System Manager zugreifen kann. (Zeigen Sie zum Öffnen der System Manager-Schnittstelle den Domain-Namen oder die IP-Adresse des Controllers im Browser.)
 
 
-.Was Sie benötigen
-* Ein von NetApp unterstütztes Ersatzlaufwerk für Ihr Controller Shelf oder Festplatten-Shelf.
-* Ein ESD-Armband, oder Sie haben andere antistatische Vorsichtsmaßnahmen getroffen.
-* Eine Management Station mit einem Browser, der für den Controller auf den SANtricity System Manager zugreifen kann. (Zeigen Sie zum Öffnen der System Manager-Schnittstelle den Domain-Namen oder die IP-Adresse des Controllers im Browser.)
 
 
 

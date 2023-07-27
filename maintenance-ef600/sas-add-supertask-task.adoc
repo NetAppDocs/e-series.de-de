@@ -20,18 +20,20 @@ Wenn Sie eine SAS-Erweiterungskarte hinzufügen, müssen Sie das Speicher-Array 
 .Bevor Sie beginnen
 * Prüfen link:sas-overview-supertask-concept.html["Anforderungen für den Austausch der EF300- und EF600-SAS-Erweiterungskarten"].
 * Sie müssen für dieses Verfahren ein Wartungsfenster zur Ausfallzeit planen. Sie können erst nach erfolgreichem Abschluss dieses Verfahrens auf Daten im Speicher-Array zugreifen.
-
-
++
 
 CAUTION: Dieses Verfahren muss mit beiden Controller-Kanistern durchgeführt werden. Controller-HIC-Konfigurationen müssen genau übereinstimmen.
 
-.Was Sie benötigen
-* Eine SAS-Erweiterungskarte, die mit Ihrem Controller kompatibel ist.
-* Ein ESD-Armband, oder Sie haben andere antistatische Vorsichtsmaßnahmen getroffen.
-* Ein flacher, statischer freier Arbeitsbereich.
-* A #1 Kreuzschlitzschraubendreher.
-* Etiketten, um jedes Kabel zu identifizieren, das mit dem Controller-Behälter verbunden ist.
-* Eine Management Station mit einem Browser, der für den Controller auf den SANtricity System Manager zugreifen kann. (Zeigen Sie zum Öffnen der System Manager-Schnittstelle den Domain-Namen oder die IP-Adresse des Controllers im Browser.)
+* Stellen Sie sicher, dass Sie Folgendes haben:
++
+** Eine SAS-Erweiterungskarte, die mit Ihrem Controller kompatibel ist.
+** Ein ESD-Armband, oder Sie haben andere antistatische Vorsichtsmaßnahmen getroffen.
+** Ein flacher, statischer freier Arbeitsbereich.
+** A #1 Kreuzschlitzschraubendreher.
+** Etiketten, um jedes Kabel zu identifizieren, das mit dem Controller-Behälter verbunden ist.
+** Eine Management Station mit einem Browser, der für den Controller auf den SANtricity System Manager zugreifen kann. (Zeigen Sie zum Öffnen der System Manager-Schnittstelle den Domain-Namen oder die IP-Adresse des Controllers im Browser.)
+
+
 
 
 

@@ -13,7 +13,7 @@ summary: Der Import des Remote-Speichergeräts erfolgt über den Assistenten zum
 [role="lead"]
 Um einen Storage-Import von einem Remote-System auf ein lokales E-Series Storage-System zu initiieren, verwenden Sie den Assistenten zum Importieren von Remote Storage in der Benutzeroberfläche von SANtricity System Manager.
 
-.Was Sie benötigen
+.Was Sie brauchen
 * Das E-Series Storage-System muss so konfiguriert sein, dass es mit dem Remote-Storage-System kommunizieren kann. Siehe link:setup-remote-volumes-concept.html["Hardware konfigurieren"].
 * Erfassen Sie für das Remote-Speichersystem die folgenden Informationen:
 +

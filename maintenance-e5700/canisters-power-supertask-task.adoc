@@ -29,13 +29,14 @@ Während Sie diese Aufgabe ausführen, versorgt der andere Netzbehälter beide L
 * Prüfen link:canisters-overview-supertask-concept.html["Anforderungen für den Austausch des E5700 Kanisters"].
 * Überprüfen Sie die Details im Recovery Guru, um zu bestätigen, dass ein Problem mit einer Batterie vorliegt, und stellen Sie sicher, dass keine weiteren Punkte zuerst behoben werden müssen.
 * Überprüfen Sie, ob die gelbe Warn-LED am Netzbehälter leuchtet und dass der Behälter über einen Fehler verfügt. Wenden Sie sich an den technischen Support, wenn die Warn-LEDs für beide Strombehälter im Regal gelb leuchten.
+* Stellen Sie sicher, dass Sie Folgendes haben:
++
+** Ein Leistungsbehälter, der installiert ist und in Betrieb ist.
+** Ein Ersatznetzbehälter, der für Ihr Controller-Shelf- oder Festplatten-Shelf-Modell unterstützt wird.
+** Ein ESD-Armband, oder Sie haben andere antistatische Vorsichtsmaßnahmen getroffen.
+** Eine Management Station mit einem Browser, der für den Controller auf den SANtricity System Manager zugreifen kann. (Zeigen Sie zum Öffnen der System Manager-Schnittstelle den Domain-Namen oder die IP-Adresse des Controllers im Browser.)
 
 
-.Was Sie benötigen
-* Ein Leistungsbehälter, der installiert ist und in Betrieb ist.
-* Ein Ersatznetzbehälter, der für Ihr Controller-Shelf- oder Festplatten-Shelf-Modell unterstützt wird.
-* Ein ESD-Armband, oder Sie haben andere antistatische Vorsichtsmaßnahmen getroffen.
-* Eine Management Station mit einem Browser, der für den Controller auf den SANtricity System Manager zugreifen kann. (Zeigen Sie zum Öffnen der System Manager-Schnittstelle den Domain-Namen oder die IP-Adresse des Controllers im Browser.)
 
 
 

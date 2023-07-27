@@ -13,7 +13,9 @@ summary: Setzen Sie einen neuen Akku ein.
 [role="lead"]
 Nach dem Entfernen der fehlerhaften Batterie können Sie den neuen installieren.
 
-.Was Sie benötigen
+.Bevor Sie beginnen
+Stellen Sie sicher, dass Sie Folgendes haben:
+
 * Der Ersatzakku.
 * Eine flache, statische Oberfläche.
 

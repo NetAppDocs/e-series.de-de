@@ -28,11 +28,12 @@ CAUTION: *Möglicher Geräteschaden* -- Wenn Sie diesen Vorgang bei eingeschalte
 * Überprüfen Sie die Anforderungen der Lüfterbehälter in link:canisters-overview-supertask-concept.html["Anforderungen für den Austausch von Behälterschannissen"].
 * Überprüfen Sie die Details im Recovery Guru, um zu bestätigen, dass es ein Problem mit dem Lüfterbehälter gibt, und wählen Sie *recheck* vom Recovery Guru aus, um sicherzustellen, dass keine anderen Punkte zuerst angesprochen werden müssen.
 * Überprüfen Sie, ob die gelbe Warn-LED am Lüfterbehälter leuchtet und dass ein Fehler im Lüfter auftritt. Wenden Sie sich an den technischen Support, wenn die Warn-LEDs für beide Lüfterbehälter im Regal gelb leuchten.
+* Stellen Sie sicher, dass Sie Folgendes haben:
++
+** Ein Ersatzlüfterbehälter (Lüfter), der für Ihr Controller-Shelf- oder Festplatten-Shelf-Modell unterstützt wird.
+** Ein ESD-Armband, oder Sie haben andere antistatische Vorsichtsmaßnahmen getroffen.
 
 
-.Was Sie benötigen
-* Ein Ersatzlüfterbehälter (Lüfter), der für Ihr Controller-Shelf- oder Festplatten-Shelf-Modell unterstützt wird.
-* Ein ESD-Armband, oder Sie haben andere antistatische Vorsichtsmaßnahmen getroffen.
 
 
 

@@ -14,7 +14,9 @@ summary: Konfigurieren Sie das iSCSI-Netzwerk auf der Array-Seite.
 [role="lead"]
 Mit der SANtricity System Manager GUI können Sie das iSCSI-Netzwerk auf der Array-Seite konfigurieren.
 
-.Was Sie benötigen
+.Bevor Sie beginnen
+Stellen Sie sicher, dass Sie Folgendes haben:
+
 * Die IP-Adresse oder der Domänenname für einen der Speicher-Array-Controller.
 * Ein Passwort für die System Manager GUI, rollenbasierte Zugriffssteuerung (Role-Based Access Control, RBAC) oder LDAP und ein Verzeichnisdienst, der für den entsprechenden Sicherheitszugriff auf das Speicher-Array konfiguriert wurde. Weitere Informationen zur Zugriffsverwaltung finden Sie in der Online-Hilfe des SANtricity System Managers.
 

@@ -21,6 +21,7 @@ Sie können den Web Services Proxy auf einem Windows- oder Linux-Host-System ins
 
 Die Proxy-Installation umfasst die folgenden Anforderungen.
 
+[cols="35h,~"]
 |===
 | Anforderungen | Beschreibung 
 

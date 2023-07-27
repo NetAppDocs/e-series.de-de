@@ -20,14 +20,15 @@ Zum Austauschen eines DIMM müssen Sie die Cache-Größe des Controllers überpr
 .Bevor Sie beginnen
 * Prüfen link:dimms-overview-supertask-concept.html["Anforderungen für den Austausch eines EF300- oder EF600-DIMM"].
 * Stellen Sie sicher, dass keine Volumes verwendet werden oder dass auf allen Hosts, die diese Volumes verwenden, ein Multipath-Treiber installiert ist.
+* Stellen Sie sicher, dass Sie Folgendes haben:
++
+** Ein Ersatz-DIMM.
+** Ein ESD-Armband, oder Sie haben andere antistatische Vorsichtsmaßnahmen getroffen.
+** Ein flacher, statischer freier Arbeitsbereich.
+** Etiketten, um jedes Kabel zu identifizieren, das mit dem Controller-Behälter verbunden ist.
+** Eine Management Station mit einem Browser, der für den Controller auf den SANtricity System Manager zugreifen kann. (Zeigen Sie zum Öffnen der System Manager-Schnittstelle den Domain-Namen oder die IP-Adresse des Controllers im Browser.)
 
 
-.Was Sie benötigen
-* Ein Ersatz-DIMM.
-* Ein ESD-Armband, oder Sie haben andere antistatische Vorsichtsmaßnahmen getroffen.
-* Ein flacher, statischer freier Arbeitsbereich.
-* Etiketten, um jedes Kabel zu identifizieren, das mit dem Controller-Behälter verbunden ist.
-* Eine Management Station mit einem Browser, der für den Controller auf den SANtricity System Manager zugreifen kann. (Zeigen Sie zum Öffnen der System Manager-Schnittstelle den Domain-Namen oder die IP-Adresse des Controllers im Browser.)
 
 
 

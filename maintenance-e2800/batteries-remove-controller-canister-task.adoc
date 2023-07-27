@@ -15,7 +15,9 @@ Sie müssen den Controller-Behälter aus dem Controller-Regal entfernen, damit S
 
 Wenn Sie einen Controller-Behälter entfernen, müssen Sie alle Kabel trennen. Anschließend können Sie den Controller-Behälter aus dem Controller-Regal schieben.
 
-.Was Sie benötigen
+.Bevor Sie beginnen
+Stellen Sie sicher, dass Sie Folgendes haben:
+
 * Ein ESD-Armband, oder Sie haben andere antistatische Vorsichtsmaßnahmen getroffen.
 * Etiketten, um jedes Kabel zu identifizieren, das mit dem Controller-Behälter verbunden ist.
 

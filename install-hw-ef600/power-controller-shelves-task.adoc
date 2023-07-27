@@ -14,7 +14,7 @@ summary: Schließen Sie die Stromkabel an, und schalten Sie die Laufwerk-Shelfs 
 Erfahren Sie, wie Sie die Stromkabel anschließen und die Laufwerk-Shelfs einschalten.
 
 .Bevor Sie beginnen
-Bevor Sie die Controller-Shelfs einschalten, stellen Sie Folgendes sicher:
+Gehen Sie wie folgt vor:
 
 * Installieren Sie Ihre Hardware.
 * Treffen Sie antistatische Vorsichtsmaßnahmen.

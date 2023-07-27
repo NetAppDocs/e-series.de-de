@@ -102,6 +102,10 @@ image::../media/sam1130_ss_e2800_storage_array_profile_sn_smid_copy_maint-e2800.
 +
 .. Wählen Sie auf der Registerkarte Support Resources den Link *Storage Array Profile* aus.
 .. Geben Sie in das Textfeld * Feature Pack Submodel ID* ein, und klicken Sie auf *Suchen*.
++
+
+NOTE: „Submodel“ kann auch als „Submodel“ geschrieben werden.
+
 .. Suchen Sie die Submodel-ID für das Feature Pack für die Starting-Konfiguration.
 +
 image::../media/storage_array_profile2_maint-e2800.gif[Storage-Array-Profile2 Wartung e2800]

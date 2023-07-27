@@ -19,7 +19,9 @@ Nach der Vorbereitung der Aktualisierung können Sie die Controller entfernen un
 
 Entfernen Sie den Controller-Behälter, damit Sie ihn mit einem neuen aktualisieren können. Sie müssen alle Kabel trennen und alle SFP-Transceiver entfernen. Anschließend können Sie den Controller-Behälter aus dem Controller-Regal schieben.
 
-.Was Sie benötigen
+.Bevor Sie beginnen
+Stellen Sie sicher, dass Sie Folgendes haben:
+
 * Ein ESD-Armband oder andere antistatische Vorsichtsmaßnahmen treffen.
 * Etiketten, um jedes Kabel zu identifizieren, das mit dem Controller-Behälter verbunden ist.
 

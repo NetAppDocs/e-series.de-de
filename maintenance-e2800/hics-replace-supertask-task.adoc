@@ -21,14 +21,15 @@ Wenn Sie eine HIC ersetzen, setzen Sie den Controller offline, entfernen Sie den
 * Prüfen link:hics-overview-supertask-concept.html["Anforderungen für den Austausch der E2800 HIC"].
 * Sie müssen für dieses Verfahren ein Wartungsfenster zur Ausfallzeit planen. Die Stromversorgung muss ausgeschaltet sein, wenn Sie HICs installieren. Daher können Sie erst dann auf Daten im Speicher-Array zugreifen, wenn Sie diesen Vorgang erfolgreich abgeschlossen haben. (In einer Duplexkonfiguration liegt dies daran, dass beide Controller beim Einschalten dieselbe HIC-Konfiguration haben müssen.)
 * Stellen Sie sicher, dass keine Volumes verwendet werden oder dass auf allen Hosts, die diese Volumes verwenden, ein Multipath-Treiber installiert ist.
+* Stellen Sie sicher, dass Sie Folgendes haben:
++
+** Ein oder zwei HICs, je nachdem, ob Sie einen oder zwei Controller im Storage-Array haben. Die HICs müssen mit Ihren Steuerungen kompatibel sein. Wenn zwei Controller vorhanden sind, muss jeder Controller über identische HICs verfügen.
+** Etiketten, um jedes Kabel zu identifizieren, das mit dem Controller-Behälter verbunden ist.
+** Ein ESD-Armband, oder Sie haben andere antistatische Vorsichtsmaßnahmen getroffen.
+** A #1 Kreuzschlitzschraubendreher.
+** Eine Management Station mit einem Browser, der für den Controller auf den SANtricity System Manager zugreifen kann. (Zeigen Sie zum Öffnen der System Manager-Schnittstelle den Domain-Namen oder die IP-Adresse des Controllers im Browser.)
 
 
-.Was Sie benötigen
-* Ein oder zwei HICs, je nachdem, ob Sie einen oder zwei Controller im Storage-Array haben. Die HICs müssen mit Ihren Steuerungen kompatibel sein. Wenn zwei Controller vorhanden sind, muss jeder Controller über identische HICs verfügen.
-* Etiketten, um jedes Kabel zu identifizieren, das mit dem Controller-Behälter verbunden ist.
-* Ein ESD-Armband, oder Sie haben andere antistatische Vorsichtsmaßnahmen getroffen.
-* A #1 Kreuzschlitzschraubendreher.
-* Eine Management Station mit einem Browser, der für den Controller auf den SANtricity System Manager zugreifen kann. (Zeigen Sie zum Öffnen der System Manager-Schnittstelle den Domain-Namen oder die IP-Adresse des Controllers im Browser.)
 
 
 

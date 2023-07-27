@@ -13,8 +13,11 @@ summary: Vor der Verwendung des Volumes überprüfen Sie, ob der Host Daten auf 
 [role="lead"]
 Vor der Verwendung des Volumes überprüfen Sie, ob der Host Daten auf das Volume schreiben und wieder lesen kann.
 
-.Was Sie benötigen
-Ein initialisiertes Volume, das mit einem Dateisystem formatiert ist.
+.Bevor Sie beginnen
+Stellen Sie sicher, dass Sie Folgendes haben:
+
+* Ein initialisiertes Volume, das mit einem Dateisystem formatiert ist.
+
 
 .Schritte
 . Kopieren Sie auf dem Host eine oder mehrere Dateien auf den Bereitstellungspunkt des Datenträgers.

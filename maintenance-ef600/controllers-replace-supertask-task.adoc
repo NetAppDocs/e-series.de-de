@@ -25,15 +25,16 @@ Wenn Sie einen defekten Controller-Behälter ersetzen, müssen Sie den Akku, das
 ** Die gelbe Warn-LED am Controller-Behälter leuchtet und zeigt an, dass der Controller einen Fehler aufweist.
 
 
+* Stellen Sie sicher, dass Sie Folgendes haben:
++
+** Ein Ersatzcontroller-Behälter mit der gleichen Teilenummer wie der Controller-Behälter, den Sie austauschen.
+** Ein ESD-Armband, oder Sie haben andere antistatische Vorsichtsmaßnahmen getroffen.
+** Ein flacher, statischer freier Arbeitsbereich.
+** A #1 Kreuzschlitzschraubendreher
+** Etiketten, um jedes Kabel zu identifizieren, das mit dem Controller-Behälter verbunden ist.
+** Eine Management Station mit einem Browser, der für den Controller auf den SANtricity System Manager zugreifen kann. (Zeigen Sie zum Öffnen der System Manager-Schnittstelle den Domain-Namen oder die IP-Adresse des Controllers im Browser.)
 
 
-.Was Sie benötigen
-* Ein Ersatzcontroller-Behälter mit der gleichen Teilenummer wie der Controller-Behälter, den Sie austauschen.
-* Ein ESD-Armband, oder Sie haben andere antistatische Vorsichtsmaßnahmen getroffen.
-* Ein flacher, statischer freier Arbeitsbereich.
-* A #1 Kreuzschlitzschraubendreher
-* Etiketten, um jedes Kabel zu identifizieren, das mit dem Controller-Behälter verbunden ist.
-* Eine Management Station mit einem Browser, der für den Controller auf den SANtricity System Manager zugreifen kann. (Zeigen Sie zum Öffnen der System Manager-Schnittstelle den Domain-Namen oder die IP-Adresse des Controllers im Browser.)
 
 
 

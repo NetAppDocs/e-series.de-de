@@ -26,6 +26,9 @@ E-Series Arrays sind in den folgenden Modellen verfügbar:
 
 
 
+NOTE: Alle USB-Ports für E2800, EF280, E5700, EF570, EF600 Und EF300-Arrays.
+
+
 
 == E2800 – Modelle
 
@@ -132,6 +135,9 @@ Unterstützt folgende Laufwerke mit einer einzelnen Host Interface Card (HIC) pr
 * NL-SAS-Laufwerke mit Erweiterungs-Shelfs: Jede Mischung aus DE212C und DE460C Shelfs darf insgesamt 240 NL-SAS Laufwerksschächten und 4 Erweiterungs-Shelfs nicht überschreiten, wenn nur DE212C Shelfs verwendet werden; 8 DE212C Shelfs sind zulässig. Beispiel: 4 DE460C Shelfs oder 8 DE212C Shelfs oder 2 DE460C Shelfs plus 2 DE212 Shelfs.
 * SAS-SSD-Laufwerke mit Erweiterungs-Shelfs: Jede Mischung aus DE212C, DE224C und DE460C Shelfs darf insgesamt 96 SAS SSD-Laufwerksschächten und 4 Erweiterungs-Shelfs nicht überschreiten, sofern nur DE212C Shelfs verwendet werden; 8 DE212C Shelfs sind zulässig. Beispiel: 1 DE460C Shelf plus 1 DE224C Shelf plus 1 DE212C Shelf oder 4 DE224C Shelfs oder 8 DE212C Shelfs.
 
+
+
+NOTE: Der EF300 unterstützt Erweiterungs-Shelf-Konfigurationen ohne Laufwerke im Basisfach Stellen Sie bei Verwendung dieser Konfiguration sicher, dass die Laufwerke im Erweiterungs-Shelf bestückt und ordnungsgemäß mit dem Basissfach verbunden sind, bevor Sie das System einschalten.
 
 
 
@@ -264,8 +270,11 @@ Unterstützt folgende Laufwerke mit einer einzelnen Host Interface Card (HIC) pr
 
 * NVMe-SSD-Laufwerke: Bis zu 24 NVMe-SSD-Laufwerke im Controller-Shelf
 * NL-SAS-Laufwerke mit Erweiterungs-Shelfs: Jede Mischung aus DE212C und DE460C Shelfs darf insgesamt 420 NL-SAS Laufwerksschächten und 7 Erweiterungs-Shelfs nicht überschreiten, wenn nur DE212C Shelfs verwendet werden; 8 DE212C Shelfs sind zulässig. Beispiel: 7 DE460C Shelfs oder 8 DE212C Shelfs oder 5 DE460C Shelfs plus 2 DE212 Shelfs.
-* SAS-SSD-Laufwerke mit Erweiterungs-Shelfs: Jede Mischung aus DE212C, DE224C und DE460C Shelfs darf insgesamt 96 SAS SSD-Laufwerksschächten und 7 Erweiterungs-Shelfs nicht überschreiten, sofern nur DE212C Shelfs verwendet werden; 8 DE212C Shelfs sind zulässig. Beispiel: 1 DE460C Shelf plus 1 DE224C Shelf plus 1 DE212C Shelf oder 4 DE224C Shelfs oder 8 DE212C Shelfs.
+* SAS-SSD-Laufwerke mit Erweiterungs-Shelfs: Alle gemischten Shelfs DE212C, DE224C und DE460C dürfen insgesamt 96 SAS-SSD-Laufwerksschächte und 7 Erweiterungs-Shelfs nicht überschreiten, sofern nur DE212C Shelfs verwendet werden. Anschließend sind 8 DE212C Shelfs zulässig. Beispiel: 1 DE460C Shelf plus 1 DE224C Shelf plus 1 DE212C Shelf, 4 DE224C Shelfs oder 8 DE212C Shelfs
 
+
+
+NOTE: Die EF600 unterstützt Erweiterungs-Shelf-Konfigurationen ohne Laufwerke im Basisfach Stellen Sie bei Verwendung dieser Konfiguration sicher, dass die Laufwerke im Erweiterungs-Shelf bestückt und ordnungsgemäß mit dem Basissfach verbunden sind, bevor Sie das System einschalten.
 
 
 

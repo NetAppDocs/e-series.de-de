@@ -50,7 +50,7 @@ Das Storage Plug-in für vCenter benötigt ausreichend Platz für die Ausführun
 
 * Erforderlicher Installationsspeicherplatz: 275 MB
 * Speicherplatz – 275 MB + 200 MB (Protokollierung)
-* Systemspeicher – 512 MB
+* Systemspeicher – 1.5 GB
 
 
 

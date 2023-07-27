@@ -19,12 +19,13 @@ Wenn ein Netzteil ausfällt, müssen Sie es so schnell wie möglich ersetzen, da
 .Bevor Sie beginnen
 * Prüfen Sie die Details im Recovery Guru, um zu bestätigen, dass ein Problem mit der Stromversorgung vorliegt. Wählen Sie *recheck* aus dem Recovery Guru, um sicherzustellen, dass keine weiteren Punkte zuerst angesprochen werden müssen.
 * Stellen Sie sicher, dass die gelbe Warn-LED am Netzteil leuchtet und anzeigt, dass ein Fehler im Netzteil oder dem integrierten Lüfter vorliegt.
+* Stellen Sie sicher, dass Sie Folgendes haben:
++
+** Ein Netzteil, das für Ihr Controller Shelf unterstützt wird.
+** Ein ESD-Armband, oder Sie haben andere antistatische Vorsichtsmaßnahmen getroffen.
+** Eine Management Station mit einem Browser, der für den Controller auf den SANtricity System Manager zugreifen kann. (Zeigen Sie zum Öffnen der System Manager-Schnittstelle den Domain-Namen oder die IP-Adresse des Controllers im Browser.)
 
 
-.Was Sie benötigen
-* Ein Netzteil, das für Ihr Controller Shelf unterstützt wird.
-* Ein ESD-Armband, oder Sie haben andere antistatische Vorsichtsmaßnahmen getroffen.
-* Eine Management Station mit einem Browser, der für den Controller auf den SANtricity System Manager zugreifen kann. (Zeigen Sie zum Öffnen der System Manager-Schnittstelle den Domain-Namen oder die IP-Adresse des Controllers im Browser.)
 
 
 

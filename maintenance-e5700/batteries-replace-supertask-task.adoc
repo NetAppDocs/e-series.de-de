@@ -20,13 +20,14 @@ Jeder E5700 Controller-Behälter enthält eine Batterie, die im Cache gespeicher
 .Bevor Sie beginnen
 * Überprüfen Sie, ob keine Volumes verwendet werden oder ob auf allen Hosts, die diese Volumes verwenden, ein Multipath-Treiber installiert ist.
 * Prüfen link:batteries-intro-concept.html["Anforderungen für den Austausch von E5700-Batterien"].
+* Stellen Sie sicher, dass Sie Folgendes haben:
++
+** Eine Ersatzbatterie.
+** Ein ESD-Armband, oder Sie haben andere antistatische Vorsichtsmaßnahmen getroffen.
+** Etiketten, um jedes Kabel zu identifizieren, das mit dem Controller-Behälter verbunden ist.
+** Eine Management Station mit einem Browser, der für den Controller auf den SANtricity System Manager zugreifen kann. (Zeigen Sie zum Öffnen der System Manager-Schnittstelle den Domain-Namen oder die IP-Adresse des Controllers im Browser.)
 
 
-.Was Sie benötigen
-* Eine Ersatzbatterie.
-* Ein ESD-Armband, oder Sie haben andere antistatische Vorsichtsmaßnahmen getroffen.
-* Etiketten, um jedes Kabel zu identifizieren, das mit dem Controller-Behälter verbunden ist.
-* Eine Management Station mit einem Browser, der für den Controller auf den SANtricity System Manager zugreifen kann. (Zeigen Sie zum Öffnen der System Manager-Schnittstelle den Domain-Namen oder die IP-Adresse des Controllers im Browser.)
 
 
 

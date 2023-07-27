@@ -24,7 +24,9 @@ Jeder Controller-Behälter enthält eine Controller-Karte, einen Akku und eine o
 
 NOTE: Diese Aufgabe gilt nur für Speicher-Arrays mit zwei Controllern (Duplexkonfiguration).
 
-.Was Sie benötigen
+.Bevor Sie beginnen
+Stellen Sie sicher, dass Sie Folgendes haben:
+
 * Ein Ersatzcontroller-Behälter mit der gleichen Teilenummer wie der Controller-Behälter, den Sie austauschen. (Siehe Schritt 1, um die Teilenummer zu überprüfen.)
 * Ein ESD-Armband, oder Sie haben andere antistatische Vorsichtsmaßnahmen getroffen.
 * #1 Kreuzschlitzschraubendreher.

@@ -15,8 +15,11 @@ Wenn Ihre Konfiguration das iSER-over-InfiniBand-Protokoll verwendet, führen Si
 
 Der InfiniBand-OFED-Treiber-Stack unterstützt sowohl iSER als auch SRP gleichzeitig auf den gleichen Ports, sodass keine zusätzliche Hardware erforderlich ist.
 
-.Was Sie benötigen
-Ein von NetApp empfohlenes OFED, das auf dem System installiert ist. Weitere Informationen finden Sie im https://mysupport.netapp.com/matrix["NetApp Interoperabilitäts-Matrix-Tool"^].
+.Bevor Sie beginnen
+Stellen Sie sicher, dass Sie Folgendes haben:
+
+* Ein von NetApp empfohlenes OFED, das auf dem System installiert ist. Weitere Informationen finden Sie im https://mysupport.netapp.com/matrix["NetApp Interoperabilitäts-Matrix-Tool"^].
+
 
 .Schritte
 . Aktivieren und Starten von iSCSI-Diensten auf den Hosts:

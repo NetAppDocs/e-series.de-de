@@ -20,7 +20,9 @@ Für das iSCSI-Protokoll konfigurieren Sie die Switches, konfigurieren das Netzw
 
 Sie konfigurieren die Switches entsprechend den Empfehlungen des Anbieters für iSCSI. Diese Empfehlungen können sowohl Konfigurationsrichtlinien als auch Code-Updates enthalten.
 
-.Was Sie benötigen
+.Bevor Sie beginnen
+Stellen Sie sicher, dass Sie Folgendes haben:
+
 * Zwei separate Netzwerke für Hochverfügbarkeit, Stellen Sie sicher, dass Sie Ihren iSCSI-Datenverkehr durch VLANs oder zwei separate Netzwerke in getrennte Netzwerksegmente isolieren.
 * Hardware-Flusssteuerung zum Senden und Empfangen aktiviert *Ende bis Ende*.
 * Flusskontrolle mit Priorität deaktiviert.
@@ -41,7 +43,9 @@ Je nach Ihren Datenspeicheranforderungen können Sie Ihr iSCSI-Netzwerk auf unte
 
 Eine effektive Strategie zur Konfiguration des iSCSI-Netzwerks mit grundlegender Redundanz besteht darin, jeden Host-Port und einen Port jedes Controllers miteinander zu verbinden, um getrennte Switches zu verbinden und jeden Host- und Controller-Satz in separaten Netzwerksegmenten mithilfe von VLANs zu partitionieren.
 
-.Was Sie benötigen
+.Bevor Sie beginnen
+Stellen Sie sicher, dass Sie Folgendes haben:
+
 * Hardware-Flusssteuerung zum Senden und Empfangen aktiviert *Ende bis Ende*.
 * Flusskontrolle mit Priorität deaktiviert.
 * Gegebenenfalls aktivierten Jumbo Frames.
@@ -62,7 +66,7 @@ NOTE: Für IP-Overhead müssen viele Netzwerk-Switches über 9,000 Bytes konfigu
 
 Mit der SANtricity System Manager GUI können Sie das iSCSI-Netzwerk auf der Array-Seite konfigurieren.
 
-.Was Sie benötigen
+.Bevor Sie beginnen
 * Die IP-Adresse oder der Domänenname für einen der Speicher-Array-Controller.
 * Ein Passwort für die System Manager GUI, rollenbasierte Zugriffssteuerung (Role-Based Access Control, RBAC) oder LDAP und ein Verzeichnisdienst, der für den entsprechenden Sicherheitszugriff auf das Speicher-Array konfiguriert wurde. Weitere Informationen zur Zugriffsverwaltung finden Sie in der Online-Hilfe des SANtricity System Managers.
 
@@ -198,7 +202,9 @@ Wählen Sie diese Option aus, um den Parameter zu aktivieren, der die Priorität
 
 Sie müssen das iSCSI-Netzwerk auf der Hostseite konfigurieren, damit der Microsoft iSCSI-Initiator Sitzungen mit dem Array einrichten kann.
 
-.Was Sie benötigen
+.Bevor Sie beginnen
+Stellen Sie sicher, dass Sie Folgendes haben:
+
 * Vollständig konfigurierte Switches, die für den iSCSI-Speicherdatenverkehr verwendet werden.
 * Hardware-Flusssteuerung zum Senden und Empfangen aktiviert *Ende bis Ende*
 * Flusskontrolle mit Priorität deaktiviert.

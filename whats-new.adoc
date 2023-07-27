@@ -12,17 +12,11 @@ summary: Neue Funktionen im SANtricity OS.
 
 
 [role="lead"]
-In der folgenden Tabelle werden die neuen Funktionen in SANtricity OS 11.7 für das integrierte Management von EF300, EF600, E2800/EF280 und E5700/EF570 Controllern beschrieben.
+In der folgenden Tabelle werden die neuen Funktionen von SANtricity OS 11.8 für integriertes Management der EF300, EF600, E2800/EF280 und E5700/EF570 Controller beschrieben.
 
 
 
-== Neue Funktionen in Version 11.75
-
-Systeme müssen mit 11.70.5 ausgeführt werden, um auf 11.80.x oder höher zu aktualisieren.
-
-
-
-== Neue Funktionen in Version 11.74
+== Neue Funktionen in Version 11.80
 
 [cols="35h,~"]
 |===
@@ -30,231 +24,98 @@ Systeme müssen mit 11.70.5 ausgeführt werden, um auf 11.80.x oder höher zu ak
 
 
  a| 
-Unterstützung von FIPS 140-3
+Verbesserter Volume Parity Scan
  a| 
-FIPS 140-3 wird auf bestimmten Laufwerken sowohl für SAS- als auch für NVMe-basierte SSDs unterstützt. SSD-Laufwerke auf FIPS 140-3-2-Ebene können gleichzeitig mit SSD-Laufwerken der FIPS-140-2-Ebene bestehen, sofern die Laufwerke entweder nur NVMe-basiert oder ausschließlich SAS-basiert sind. Bei Verwendung einer Mischung dieser Ebenen in Volume-Gruppen und Festplatten-Pools ist zu beachten, dass die Gruppe oder der Pool dann auf der niedrigeren Sicherheitsstufe (140-2) arbeiten.
-
-
-
- a| 
-Unterstützung von MFA und SSH
- a| 
-Bei SANtricity Version 11.74 und höher können Sie mit der Funktion Remote-Anmeldung Multi-Faktor-Autorisierung (MFA) konfigurieren, da Benutzer einen SSH-Schlüssel und/oder SSH-Passwort eingeben müssen. Die Menüoption im Bereich Hardware hat sich von *Remote-Anmeldung ändern* auf *Remote-Anmeldung konfigurieren (SSH)* geändert.
+Der Volume-Paritäts-Scan kann nun als Hintergrundprozess entweder über die REST API oder über die CLI gestartet werden. Der daraus resultierende Paritäts-Scan wird im Hintergrund ausgeführt, solange er für den Abschluss des Scanvorgangs erforderlich ist. Scanvorgänge können den Neustart des Controllers und Failover-Vorgänge überdauern.
 
 
 
  a| 
-Auf Token zugreifen
+SAML-Unterstützung für Unified Manager
  a| 
-Diese Version enthält eine neue Funktion zum Erstellen von Access Tokens. Mit diesen Tokens können Sie sich mit DER REST-API oder der Befehlszeilenschnittstelle (CLI) authentifizieren, ohne Benutzernamen und Passwörter offenzulegen. Diese Funktion wird im Abschnitt Zugriffsverwaltung bereitgestellt.
-
-|===
-
-
-== Neue Funktionen in Version 11.73
-
-[cols="35h,~"]
-|===
-| Neues Feature | Beschreibung 
-
-
- a| 
-Ressourcen-Provisioning und DULBE-Support
- a| 
-Ressourcen-Provisioning-Funktionen und die DULBE-Laufwerkfunktionen werden jetzt vollständig in dieser Version unterstützt. Dies umfasst auch die stärkere Nutzung des Host-gesteuerten UNMAP auf ressourcenbereitgestellten Volumes.
+Unified Manager unterstützt jetzt SAML (Security Assertion Markup Language). Sobald SAML für Unified Manager aktiviert ist, müssen Benutzer eine Multi-Faktor-Authentifizierung für den Identitätsanbieter verwenden, um mit der Benutzeroberfläche zu interagieren. Beachten Sie, dass die REST-API nach der Aktivierung von SAML in Unified Manager nicht verwendet werden kann, ohne über das IdP zu gehen, um Anfragen zu authentifizieren.
 
 
 
  a| 
-EF600 SAS-Erweiterung (512 e
+Automatische Konfigurationsfunktion
  a| 
-Dieser Release unterstützt die Erweiterung auf SAS-3-Gehäuse für das EF600 Storage-System. Mit dieser Erweiterung können die NVMe-SSDs mit 4 KiB-Block parallel mit 512-GB-SAS-SSDs und HDDs eingesetzt werden. Laufwerke mit unterschiedlichen Blockgrößen können jedoch nicht im selben Pool oder einer Volume-Gruppe konfiguriert werden.
-
-
-
- a| 
-QLC SSD-Support
- a| 
-Diese Version unterstützt die aktuelle Generation von QLC-SSDs, die zwar ONTAP-Funktionen in der Laufwerk-Firmware enthalten, aber nicht über die vollständigen spezifischen Funktionen der E-Series verfügen. QLC-Laufwerke (nur NVMe) sind zwar kostengünstiger, weisen aber eine geringere Schreib-Performance und eine geringere Haltbarkeit auf, sodass sie nicht bei schreibintensiven Workloads verwendet werden sollten.
+Unterstützt jetzt die Möglichkeit, den Parameter für die Blockgröße des Volumens für die Verwendung mit der Funktion „Automatische Konfiguration“ für die Ersteinrichtung des Arrays festzulegen. Diese Funktion ist in der CLI nur als „blocksize“ Parameter verfügbar.
 
 
 
  a| 
-Unterstützung von TLS 1.3
+Kryptografische Signierung Der Controller-Firmware
  a| 
-TLS 1.3 wird jetzt für das eingebettete Management unterstützt. Diese Unterstützung gilt für System Manager und eingebettete Web-Services, die diese Funktion aktivieren oder deaktivieren können. (TLS 1.3-Unterstützung wurde in einer früheren Version für Web Services Proxy und Unified Manager hinzugefügt.)
-
-
-
- a| 
-RAID 1 DDP mit mindestens 8 Laufwerken
- a| 
-Mit dieser Version benötigt RAID 1 DDP nicht mehr mindestens 11 SSDs in einem Pool. Das Minimum erlaubt jetzt SSD-Pools mit 8 Laufwerken, wenn nur RAID 1-Volumes im Pool erstellt werden.
+Die Controller-Firmware ist kryptografisch signiert. Die Signaturen werden beim ersten Download und beim Booten des Controllers überprüft. Keine Auswirkungen für Endbenutzer zu erwarten. Signaturen werden durch ein von der Zertifizierungsstelle ausgestelltes Extended Validation-Zertifikat gesichert.
 
 
 
  a| 
-Löschen des EKMS-Schlüssels
+Kryptografische Signierung Der Laufwerksfirmware
  a| 
-Ein Storage-Administrator kann jetzt einen externen Verschlüsselungsmanagement-Server (EKMS) anfordern, um einen alten Schlüssel zu löschen. Das Löschen des Schlüssels erfolgt nur während eines Neuschlüssels, nachdem die installierten Laufwerke den neuen Schlüssel besitzen.
-
-|===
-
-
-== Neue Funktionen in Version 11.72
-
-[cols="35h,~"]
-|===
-| Neues Feature | Beschreibung 
-
-
- a| 
-SNMPv3-Unterstützung
- a| 
-SNMPv3 wird jetzt für Warnmeldungen unterstützt, die im Menü:Einstellungen[Warnmeldungen] konfiguriert werden können. SNMPv3 bietet Sicherheit durch starke Authentifizierung und Datenverschlüsselung.
+Die Festplatten-Firmware ist kryptografisch signiert. Die Signaturen werden beim ersten Download überprüft und durch ein von der Zertifizierungsstelle ausgestelltes Extended Validation-Zertifikat gesichert. Der Inhalt der Laufwerksfirmware wird nun als ZIP-Datei geliefert, die sowohl die ältere, nicht signierte Firmware als auch die neu signierte Firmware enthält. Der Benutzer muss die entsprechende Datei basierend auf der Versionsversion des Codes auswählen, der auf dem Zielsystem ausgeführt wird.
 
 
 
  a| 
-Unterstützung für die Replizierung von Schlüsseln auf mehreren Schlüsselservern
+Externe Schlüsselserver-Verwaltung - Zertifikatschlüsselgröße
  a| 
-Für die externe Schlüsselverwaltung von Self-Encrypting Drives bietet das Dialogfeld External Key Management erstellen eine neue Option zum Hinzufügen mehrerer Schlüsselserver.
-
-
-
- a| 
-Aktualisierte Browser-Versionen
- a| 
-Die minimalen Browserversionen von System Manager wurden aktualisiert.
-
-|===
-
-
-== Neue Funktionen in Version 11.71
-
-[cols="35h,~"]
-|===
-| Neues Feature | Beschreibung 
-
-
- a| 
-EF300-Erweiterung
-| Dieses Release unterstützt die Erweiterung von SAS-3-Gehäusen für das EF300-Speichersystem. Mit dieser Erweiterung können die NVMe-SSDs mit 4 KiB-Block parallel mit 512-GB-SAS-SSDs und HDDs eingesetzt werden. Laufwerke mit unterschiedlichen Blockgrößen können jedoch nicht im selben Pool oder einer Volume-Gruppe konfiguriert werden. 
-
-
- a| 
-FEC-Modus-Option in der iSCSI-Konfiguration
- a| 
-Für Speicher-Arrays, die die 25-GB-iSCSI-Host-Schnittstellenkarte verwenden, steht beim Konfigurieren von iSCSI-Ports eine neue Option zum Einstellen des FEC-Modus (Forward Error Correction) zur Verfügung.
+Die neue Standardgröße des Zertifikatschlüssels beträgt 3072 Bit (ab 2048). Schlüsselgrößen bis zu 4096 Bit werden unterstützt. Ein NVSRAM-Bit muss geändert werden, um die nicht standardmäßigen Schlüsselgrößen zu unterstützen.
 
 
 
  a| 
-Remote Storage Volumes
+Unterstützung für größere dynamische Festplatten-Pools mit Laufwerken mit 512 b Blockgrößen
  a| 
-Mit der optionalen Remote Storage Volumes-Funktion können Sie Volumes von einem Remote-Storage-System über eine iSCSI-Verbindung in ein lokales E-Series Storage-System importieren. Der Remote Storage kann im selben Design sein wie Ihr E-Series System oder von einem anderen Storage-Anbieter, sofern der Zugriff über iSCSI erfolgt.
-
-
-
- a| 
-Funktion zur Bereinigung (Löschen) für Laufwerke ohne FDE hinzugefügt
- a| 
-Die Laufwerkbereinigung umfasst jetzt Laufwerke ohne FDE. Auf der Seite Hardware können Sie das Kontextmenü des Laufwerks öffnen und „Löschen“ auswählen (zuvor war diese Auswahl „sicheres Löschen“).
+Kunden, die den Versionstyp des Pools der Version 1 verwenden, können nun einen Disk-Pool mit einer maximalen Größe von 48 TB haben. Die ältere Version unterstützt bis zu 24 TB Disk Pool Größe. Wenn vorhandene Festplatten-Pools in eine größere Größe umgewandelt werden sollen, müssen zuerst alle Volumes entfernt werden. Ein Downgrade-Vorgang ist eingeschränkt, wenn ein Laufwerkspool der Version 1 vorhanden ist.
 
 
 
  a| 
-Sichere Verbindung für E-Mail-Alarme
+System Manager und Unified Manager werden nur gestartet, wenn die Mindestanforderungen des Browsers erfüllt sind
  a| 
-Zum Aktivieren verschlüsselter E-Mail-Benachrichtigungen können Sie optional ausgehende E-Mails (Warnmeldungen, ASUP-Entsendungen) so konfigurieren, dass Authentifizierungsdaten angegeben werden. Zu den Verschlüsselungstypen gehören SMTPS und STARTTLS.
+Bevor System Manager oder Unified Manager gestartet wird, ist eine Mindestversion des Browsers erforderlich. Folgende Versionen werden mindestens unterstützt:
 
-
-
- a| 
-AutoSupport Zusätze
- a| 
-Wenn AutoSupport nicht aktiviert ist, wird jetzt eine Warnmeldung im Bereich Benachrichtigungen angezeigt.
-
-
-
- a| 
-Format für Syslog-Warnmeldungen ändern
- a| 
-Das Syslog-Alarmformat unterstützt jetzt RFC 5424.
-
-|===
-
-
-== Neue Funktionen in Version 11.70
-
-[cols="35h,~"]
-|===
-| Neues Feature | Beschreibung 
-
-
- a| 
-Neues Storage-Systemmodell – EF300
- a| 
-Mit dieser Version wird das kostengünstige All-NVMe-Flash-Storage-System EF300 vorgestellt. Das EF300 umfasst 24 NVME SSD-Laufwerke und eine einzelne Host Interface Card (HIC) pro Controller. Die unterstützten NVMe over Fabrics Host-Schnittstellen umfassen NVMe over IB, NVMe over RoCE und NVMe over FC. Zu den unterstützten SCSI-Schnittstellen gehören FC, IB über iSER und IB über SRP. Über Unified Manager lassen sich mehrere EF300 Storage-Systeme und andere E-Series Storage-Systeme anzeigen und managen.
-
-
-
- a| 
-Neue Ressource Provisioning-Funktion (nur EF300 und EF600)
- a| 
-Die Ressourcenbereitstellung ist neu für die EF300- und EF600-Speichersysteme. Ressourcen-bereitgestellte Volumes können sofort ohne Hintergrundinitialisierung verwendet werden.
-
-
-
- a| 
-Option mit 512 e Blockgröße hinzufügen (nur EF300 und EF600)
- a| 
-Bei den EF300- und EF600 Storage-Systemen kann ein Volume auf 512 Byte oder 4 KiB-Blockgrößen eingestellt werden. Die 512-Funktion wurde hinzugefügt, um die iSCSI-Host-Schnittstelle und das VMware Betriebssystem zu unterstützen. Falls möglich, schlägt der System Manager den entsprechenden Standardwert vor.
-
-
-
- a| 
-Neue Option zum Senden von AutoSupport-Dispatches nach Bedarf
- a| 
-Mit einer neuen Funktion zum Senden von AutoSupport können Sie Daten an den technischen Support senden, ohne auf einen geplanten Versand warten zu müssen. Diese Option ist im Support Center auf der Registerkarte „AutoSupport“ verfügbar.
-
-
-
- a| 
-Verbesserungen an externem Verschlüsselungsmanagement-Server
- a| 
-Die Funktion zum Anschließen an einen externen Schlüsselverwaltungsserver umfasst die folgenden Verbesserungen:
-
-* Umgehen Sie die Funktion zum Erstellen eines Sicherungsschlüssels.
-* Wählen Sie zusätzlich zu den Client- und Server-Zertifikaten ein Zwischenzertifikat für den Schlüsselverwaltungsserver aus.
+* Firefox Mindestversion 80
+* Chrome Mindestversion 89
+* Edge Mindestversion 90
+* Safari Mindestversion 14
 
 
 
 
  a| 
-Zertifikatsverbesserungen
+Unterstützung für FIPS 140-3 NVMe-SSD-Laufwerke
  a| 
-Dieses Release ermöglicht die Verwendung eines externen Tools wie OpenSSL zum Generieren einer Zertifikatsignierungsanforderung (CSR), die auch erfordert, dass Sie eine private Schlüsseldatei zusammen mit dem signierten Zertifikat importieren.
-
-
-
- a| 
-Neue Offline-Initialisierungsfunktion für Volume-Gruppen
- a| 
-Für die Volume-Erstellung bietet System Manager eine Methode zum Überspringen des Schritts der Host-Zuweisung, damit neu erstellte Volumes offline initialisiert werden. Diese Funktion ist nur für RAID-Volume-Gruppen auf SAS-Laufwerken anwendbar (d. h. nicht für Dynamic Disk Pools oder die NVMe-SSDs, die in den EF300- und EF600-Storage-Systemen enthalten sind). Diese Funktion ist für Workloads ausgelegt, die beim Start der Nutzung die volle Performance der Volumes benötigen, anstatt im Hintergrund die Initialisierung durchzuführen.
+NetApp-zertifizierte NVMe-SSD-Laufwerke nach FIPS 140-3 werden jetzt unterstützt. Diese werden im Speicher-Array-Profil und im System Manager korrekt identifiziert.
 
 
 
  a| 
-Neue Funktion zum Erfassen von Konfigurationsdaten
+Unterstützung für SSD-Lese-Cache auf EF300 und EF600
  a| 
-Diese neue Funktion speichert RAID-Konfigurationsdaten vom Controller. Dieser enthält alle Daten für Volume-Gruppen und Festplatten-Pools (dieselben Informationen wie der CLI-Befehl für `save storageArray dbmDatabase`). Diese Funktion wurde hinzugefügt, um technischen Support zu unterstützen. Sie befindet sich auf der Registerkarte Diagnose des Support Center.
+SSD-Lese-Cache wird jetzt auf EF300- und EF600-Controllern unterstützt, die HDD mit SAS-Erweiterung verwenden.
 
 
 
  a| 
-Ändern Sie die standardmäßige Festplattenkapazität für Festplatten-Pools in einem Laufwerksszenario mit 12 Laufwerken
+Unterstützung für asynchrone Remote-Spiegelung von iSCSI und Fibre Channel auf EF300 und EF600
  a| 
-Früher wurde ein Pool für 12 Festplatten mit ausreichend freier Kapazität für zwei Laufwerke erstellt. Der Standard wird nun geändert, um das Versagen eines einzelnen Laufwerks zu bearbeiten, um einen kostengünstigeren Standard für kleine Pools zu bieten.
+Asynchrone Remote-Spiegelung (ARVM) wird nun auf EF300- und EF600-Controllern mit NVMe und SAS-basierten Volumes unterstützt.
+
+
+
+ a| 
+Unterstützung für EF300 und EF600 ohne Laufwerke im Basifach
+ a| 
+EF300- und EF600-Controller-Konfigurationen ohne NVMe-Laufwerke in der Basis-Tray werden jetzt unterstützt.
+
+
+
+ a| 
+USB-Anschlüsse für alle Plattformen deaktiviert
+ a| 
+USB-Anschlüsse sind jetzt auf allen Plattformen deaktiviert.
 
 |===

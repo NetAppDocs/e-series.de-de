@@ -31,17 +31,18 @@ CAUTION: *Möglicher Verlust des Datenzugriffs* -- Wenn ein Volume sich bereits 
 
 
 
-
-
-.Was Sie benötigen
-* Ein Ersatzlauffach.
-* Ein ESD-Armband, oder Sie haben andere antistatische Vorsichtsmaßnahmen getroffen.
-* Eine Taschenlampe.
-* Eine permanente Markierung, um die genaue Position jedes Laufwerks zu notieren, während Sie das Laufwerk aus der Schublade entfernen.
-* Zugriff auf die Befehlszeilenschnittstelle (CLI) des Speicher-Arrays. Wenn Sie keinen Zugriff auf die CLI haben, können Sie einen der folgenden Aktionen ausführen:
+* Stellen Sie sicher, dass Sie Folgendes haben:
 +
-** *Für SANtricity System Manager (Version 11.60 und höher)* -- Laden Sie das CLI-Paket (ZIP-Datei) aus dem System Manager herunter. Wechseln Sie zum Menü:Einstellungen[System > Add-ons > Command Line Interface]. Sie können dann CLI-Befehle von einer Betriebssystemaufforderung ausgeben, z. B. von der DOS C:-Eingabeaufforderung.
-** *Für SANtricity Storage Manager/Enterprise Management Window (EMW)* -- Folgen Sie den Anweisungen im Express Guide, um die Software herunterzuladen und zu installieren. Sie können CLI-Befehle über EMW ausführen, indem Sie Menü:Extras[Skript ausführen] auswählen.
+** Ein Ersatzlauffach.
+** Ein ESD-Armband, oder Sie haben andere antistatische Vorsichtsmaßnahmen getroffen.
+** Eine Taschenlampe.
+** Eine permanente Markierung, um die genaue Position jedes Laufwerks zu notieren, während Sie das Laufwerk aus der Schublade entfernen.
+** Zugriff auf die Befehlszeilenschnittstelle (CLI) des Speicher-Arrays. Wenn Sie keinen Zugriff auf die CLI haben, können Sie einen der folgenden Aktionen ausführen:
++
+*** *Für SANtricity System Manager (Version 11.60 und höher)* -- Laden Sie das CLI-Paket (ZIP-Datei) aus dem System Manager herunter. Wechseln Sie zum Menü:Einstellungen[System > Add-ons > Command Line Interface]. Sie können dann CLI-Befehle von einer Betriebssystemaufforderung ausgeben, z. B. von der DOS C:-Eingabeaufforderung.
+*** *Für SANtricity Storage Manager/Enterprise Management Window (EMW)* -- Folgen Sie den Anweisungen im Express Guide, um die Software herunterzuladen und zu installieren. Sie können CLI-Befehle über EMW ausführen, indem Sie Menü:Extras[Skript ausführen] auswählen.
+
+
 
 
 

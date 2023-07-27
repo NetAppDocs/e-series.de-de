@@ -19,7 +19,9 @@ SANtricity Storage Manager enthält die Befehlszeilenschnittstelle (CLI) für we
 
 NOTE: Wenn Sie SANtricity Software 11.60 und höher verwenden, müssen Sie diese Schritte nicht ausführen. Die sichere SANtricity CLI (SMcli) ist im SANtricity Betriebssystem enthalten und kann über den SANtricity System Manager heruntergeladen werden. Weitere Informationen zum Herunterladen des SMcli über den SANtricity System Manager finden Sie im Thema _Download Befehlszeilenschnittstelle (CLI)_ unter der SANtricity System Manager Online-Hilfe.
 
-.Was Sie benötigen
+.Bevor Sie beginnen
+Stellen Sie sicher, dass Sie Folgendes haben:
+
 * SANtricity Software 11.53 oder früher.
 * Korrigieren Sie Administrator- oder Superuser-Berechtigungen.
 * Ein System für den SANtricity Storage Manager Client mit den folgenden Mindestanforderungen:

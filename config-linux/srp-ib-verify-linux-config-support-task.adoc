@@ -2,7 +2,7 @@
 permalink: config-linux/srp-ib-verify-linux-config-support-task.html 
 sidebar: sidebar 
 keywords: express linux configuration, software configuration, linux host, E2800, E5700, EF300, EF600, E-Series, eseries 
-summary: 'Um einen zuverlässigen Betrieb zu gewährleisten, erstellen Sie einen Implementierungsplan und überprüfen mit dem NetApp Interoperabilitäts-Matrix-Tool \ (IMT\), ob die gesamte Konfiguration unterstützt wird.' 
+summary: 'Um einen zuverlässigen Betrieb zu gewährleisten, erstellen Sie einen Implementierungsplan und überprüfen mit dem NetApp Interoperabilitäts-Matrix-Tool (IMT) die Unterstützung der gesamten Konfiguration.' 
 ---
 = Überprüfen Sie, ob die Linux-Konfiguration unterstützt wird
 :allow-uri-read: 

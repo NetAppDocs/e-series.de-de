@@ -13,7 +13,7 @@ summary: Wenn in Ihrer Konfiguration das SRP über InfiniBand-Protokoll verwende
 [role="lead"]
 Wenn in Ihrer Konfiguration das SRP über InfiniBand-Protokoll verwendet wird, befolgen Sie die Schritte in diesem Abschnitt.
 
-.Was Sie benötigen
+.Bevor Sie beginnen
 Um den Linux-Host mit dem Speicher-Array zu verbinden, müssen Sie den InfiniBand-Treiber-Stack mit den entsprechenden Optionen aktivieren. Die spezifischen Einstellungen können zwischen Linux-Distributionen variieren. Prüfen Sie die https://mysupport.netapp.com/matrix["NetApp Interoperabilitäts-Matrix-Tool"^] Genaue Anweisungen und zusätzliche empfohlene Einstellungen für Ihre Lösung.
 
 .Schritte

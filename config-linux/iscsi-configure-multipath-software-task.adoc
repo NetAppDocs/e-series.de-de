@@ -13,7 +13,7 @@ summary: Konfigurieren Sie die Multipath-Software, die einen redundanten Pfad zu
 [role="lead"]
 Um einen redundanten Pfad zum Storage Array bereitzustellen, können Sie die Multipath-Software konfigurieren.
 
-.Was Sie benötigen
+.Bevor Sie beginnen
 Sie müssen die erforderlichen Pakete auf Ihrem System installieren.
 
 * Überprüfen Sie für Red hat-Hosts (RHEL), ob die Pakete durch Ausführen installiert wurden `rpm -q device-mapper-multipath`.
@@ -59,8 +59,7 @@ systemctl enable multipathd
 dracut --force --add multipath
 ----
 . Verwenden Sie die https://docs.netapp.com/us-en/e-series-santricity/sm-storage/create-host-manually.html["Host manuell erstellen"] Verfahren Sie in der Online-Hilfe, um zu überprüfen, ob die Hosts definiert sind. Überprüfen Sie, ob die einzelnen Einstellungen des Hosttyps auf den in erfassten Kernelinformationen basieren <<step4,Schritt 4>>.
-
-
++
 
 NOTE: Der automatische Lastausgleich ist für alle Volumes deaktiviert, die Hosts mit Kernel 3.9 oder früher zugeordnet sind.
 

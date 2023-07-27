@@ -21,6 +21,7 @@ Die AutoSupport (ASUP)-Funktion überträgt automatisch basierend auf manuellen 
 
 Jede AutoSupport Meldung ist eine Sammlung von Log-Dateien, Konfigurationsdaten, Statusdaten und Performance-Kennzahlen. Standardmäßig überträgt AutoSupport einmal pro Woche die in der folgenden Tabelle aufgeführten Dateien an das NetApp Support-Team.
 
+[cols="35h,~"]
 |===
 | Dateiname | Beschreibung 
 
@@ -129,6 +130,7 @@ Sie können die AutoSupport-Funktion so konfigurieren, dass HTTPS-, HTTP- oder S
 . Auf die Datei ASUPConfig.xml im Arbeitsverzeichnis zugreifen.
 . In der Zeichenfolge, `<delivery type="n">`Geben Sie 1, 2 oder 3 ein, wie in der Tabelle beschrieben:
 +
+[cols="25h,~"]
 |===
 | Wert | Beschreibung 
 

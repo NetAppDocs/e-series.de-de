@@ -21,7 +21,7 @@ Wenn Sie die Erweiterung EF300 für SAS verkabeln, lesen Sie die folgenden Infor
 
 
 .Schritte
-. Erstellen Sie ein Konto und registrieren Sie Ihre Hardware unter http://mysupport.netapp.com/["mysupport.netapp.com"^].
+. Erstellen Sie ein Konto und registrieren Sie Ihre Hardware unter http://mysupport.netapp.com/["NetApp Support"^].
 . Stellen Sie sicher, dass die folgenden Elemente in dem Feld enthalten sind, das Sie erhalten haben.
 +
 |===
@@ -125,11 +125,10 @@ image:../media/management_station_inst-hw-ef600_g60b3.png[""]
  a| 
 Ein unterstützter Browser für die Verwaltungssoftware:
 
-** Google Chrome (Version 78 und höher)
-** Microsoft Internet Explorer (Version 11 und höher)
-** Microsoft Edge (88 und höher)
-** Mozilla Firefox (Version 70 und höher)
-** Safari (Version 12 und höher)
+** Google Chrome (Version 89 und höher)
+** Microsoft Edge (90 und höher)
+** Mozilla Firefox (Version 80 und höher)
+** Safari (Version 14 und höher)
 
 
 |===

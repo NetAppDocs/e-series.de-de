@@ -1929,9 +1929,6 @@
   <block id="c32d2f2a600be52dff5b6675ea4163e2" category="cell">Untermodell-ID des Controllers</block>
   <block id="2d9e8ffd5beeb436de047407b4134b6a" category="cell">HIC-Ports</block>
   <block id="13f3cf8c531952d72e5847c4183e6910" category="paragraph">443</block>
-  <block id="26bcb9f1cb6f391f4b2c18e676bb458d" category="paragraph">NVMe/FC</block>
-  <block id="e81c4e4f2b7b93b481e13a8553c2ae1b" category="paragraph">Oder</block>
-  <block id="bb0b9e255a3bf215a4f994ef912a5fd7" category="paragraph">NVMe/RoCE</block>
   <block id="550a141f12de6341fba65b0ad0433500" category="paragraph">444</block>
   <block id="10c103240eb7689c62b54e419902d174" category="paragraph">NVMe/IB</block>
   <block id="ec81c0ed52c5a94736046090d59f4c39" category="paragraph">DH5-HB4-ZK9QH</block>
@@ -1951,7 +1948,6 @@
   <block id="a0b1bce25bf7a94aa21101339f6a3843" category="paragraph">LHS-RB4-ZDV29</block>
   <block id="e44d6de45bb7cb73e6a01a992336541f" category="paragraph">FH6-975-Z7Q7H</block>
   <block id="4d1e8fc0882f290c9e2561465e9e6c69" category="paragraph">0HI-Z75-ZE4L5</block>
-  <block id="d7e5cfec25fe3fb66317ebf2e558a317" category="paragraph">NVMe/FC oder NVMe/RoCE</block>
   <block id="8187d1a072ddc99fdb2f9f038025d4ad" category="paragraph">MHQ-M85-ZIJNT</block>
   <block id="706be4b242185f32a6c7d7a71d9fd4cb" category="paragraph">NVMe/FC oder NVMe/IB</block>
   <block id="35b790bc7550e5221bca9853a4fb14f9" category="paragraph">4HS-685-ZJZ1U</block>
@@ -1986,7 +1982,6 @@
   <block id="666af42e109021e79993186039164ef0" category="paragraph">8HX-U95-Z5K6F</block>
   <block id="791acc53567cc150ccd705f42e68fd49" category="paragraph">UHZ-E95-Z71LH</block>
   <block id="dcc777a7b03231f109065e1444bb7a84" category="paragraph">SH2-X95-Z8IVS</block>
-  <block id="2a16fa59791f84533ec66e92db634cf7" category="paragraph">NVMe/FC oder</block>
   <block id="7343cf71ac168e95ba7a9736d35e848d" category="paragraph">UH5-H95-Z9Z58</block>
   <block id="dd767b9b76063bd2d8539c97aba6c64e" category="paragraph">XH7-195-ZBGJC</block>
   <block id="b99d53e698fc9df4219b55fbbfda1a25" category="paragraph">FHA-K95-ZCXX0</block>
@@ -2690,7 +2685,6 @@
   <block id="5a8ba98f6912dbeec9c6f235e96d8caa" category="list-text">Melden Sie sich als Administrator an.</block>
   <block id="9ebb7a663972464aea16aa74a7bda429" category="list-text">Um den Speicher zu ermitteln, führen Sie an einer Windows-Eingabeaufforderung den folgenden Befehl aus.</block>
   <block id="1e743b84897e50413102ba333a0cd647" category="list-text">Führen Sie den folgenden Befehl aus, um das Hinzufügen eines neuen Speichers zu überprüfen.</block>
-  <block id="89751b656ecdf8b63b8070935b0ff14a" category="paragraph">Microsoft Internet Explorer (MSE)</block>
   <block id="5a138d4de967691cc64add5999aa9ced" category="list-text">Es werden keine Pools oder Volume-Gruppen erkannt.</block>
   <block id="0c3f79a0168a623515b2c693becc646f" category="paragraph">Weitere Informationen finden Sie in der Online-Hilfe von SANtricity System Manager.</block>
   <block id="135d30ad6d2da4597cfa1d9690fba47a" category="summary">Für das SAS-Protokoll bestimmen Sie Host-Port-Adressen und treffen empfohlene Einstellungen.</block>
@@ -2859,7 +2853,6 @@
   <block id="68cd57fed05c917fe34e6a66040d3bd6" category="admonition">Wenn Sie mit diesem Befehl eine Portnummer angeben, schlägt die Verbindung fehl. Der Standardport ist der einzige Port, der für Verbindungen eingerichtet ist.</block>
   <block id="5814d031a198a94d2a46bf6e83390543" category="admonition">Die empfohlene Einstellung für die Warteschlangentiefe ist 1024. Überschreiben Sie die Standardeinstellung 128 mit 1024 mit dem <block ref="de9fa78a1a17016d0c9c1770c3bf15cf" prefix="" category="inline-code"></block>Die Befehlszeilenoption, wie im folgenden Beispiel gezeigt.</block>
   <block id="e11d5f2201c0be606810cbfc93d96891" category="admonition">Die empfohlene Zeit für den Controller-Verlust beträgt in Sekunden 60 Minuten (3600 Sekunden). Überschreiben Sie die Standardeinstellung von 600 Sekunden mit 3600 Sekunden mit dem<block ref="7b5c50977caf63926d443c9eae36a207" prefix=" " category="inline-code"></block> Die Befehlszeilenoption, wie im folgenden Beispiel gezeigt:</block>
-  <block id="f8110983d42b31fcea81a67a2d155ebd" category="list-text">Verwenden Sie die<block ref="b0f1705bbfcfb10368af21a019072318" prefix=" " category="inline-code"></block> Befehl, um eine Liste der derzeit verbundenen NVMe-Geräte anzuzeigen. Im unten stehenden Beispiel ist es<block ref="fefd27d5a94217470e63c84d9035d07a" prefix=" " category="inline-code"></block>.</block>
   <block id="74d1b12d5ed308f971911d78804f8e6e" category="list-text">Stellen Sie auf dem zweiten Pfad eine Verbindung zum erkannten Subsystem her:</block>
   <block id="f4aa860cb7f0d6983de8527030da8ac6" category="list-text">Verwenden Sie Linux<block ref="9d3de2981a7628c02076a5a69f0d0007" prefix=" " category="inline-code"></block> Und<block ref="4a037fbac753c858472c616f6ec6d498" prefix=" " category="inline-code"></block> Befehle, um zusätzliche Informationen zu jedem Blockgerät anzuzeigen:</block>
   <block id="dd5b930833e0c8dd64b64e8f609f510e" category="list-text">Verwenden Sie die<block ref="b0f1705bbfcfb10368af21a019072318" prefix=" " category="inline-code"></block> Befehl, um eine neue Liste der derzeit verbundenen NVMe-Geräte anzuzeigen. Im unten stehenden Beispiel ist es<block ref="fefd27d5a94217470e63c84d9035d07a" prefix=" " category="inline-code"></block> Und<block ref="fefd27d5a94217470e63c84d9035d07a" prefix=" " category="inline-code"></block>.</block>
@@ -2898,8 +2891,6 @@
   <block id="40efdf97c6552799245c0bb9c7156cae" category="list-text">Überprüfen Sie die IP-Adressen, die Sie für die Verbindung mit dem Array verwenden werden. Führen Sie diesen Befehl für beide aus<block ref="85ceed69d796aef1f91bdf57c7d0162a" prefix=" " category="inline-code"></block> Und<block ref="b731e651ca1284d02e93ae485c064736" prefix=" " category="inline-code"></block>:</block>
   <block id="7895a100cce2fb9f671116c88a243a18" category="paragraph">Wie im Beispiel unten gezeigt, die IP-Adresse für<block ref="85ceed69d796aef1f91bdf57c7d0162a" prefix=" " category="inline-code"></block> Ist<block ref="d1de27b99f5d5ff4a86f8922286a7ff9" prefix=" " category="inline-code"></block>.</block>
   <block id="0693aaa7965eda2507b31a871e54b133" category="paragraph">Wie im Beispiel unten gezeigt, die IP-Adresse für<block ref="b731e651ca1284d02e93ae485c064736" prefix=" " category="inline-code"></block> Ist<block ref="4827c74c5fea1b557adf2098f7b099d9" prefix=" " category="inline-code"></block>.</block>
-  <block id="1eab8c276623416692f2ab15fbfca861" category="list-text">Legen Sie auf dem Host den NVMe-of-Layer fest. Erstellen Sie die folgenden Dateien unter /etc/modules-load.d/, um die zu laden<block ref="72d47bf4462963407b48d69669f71e31" prefix=" " category="inline-code"></block> Kernel-Modul und stellen Sie sicher, dass das Kernel-Modul immer eingeschaltet ist, auch nach einem Neustart:</block>
-  <block id="86e856206affbccd36d96e0932a14510" category="paragraph">Um die zu überprüfen<block ref="72d47bf4462963407b48d69669f71e31" prefix=" " category="inline-code"></block> Kernel-Modul ist geladen, führen Sie diesen Befehl aus:</block>
   <block id="a50e35ff2f76c0ac349de732916c537b" category="summary">Für RHEL 8 und SLES 15 erstellen Sie ein Dateisystem auf dem nativen nvme-Gerät und mounten das Dateisystem.</block>
   <block id="7965a5bdacca6ec4414d73846a2effc0" category="doc">Erstellen von Dateisystemen (RHEL 8, RHEL 9, SLES 15)</block>
   <block id="709e243fec7f9a41a7ff766bf8716ce5" category="paragraph">Für RHEL 8, RHEL 9 und SLES 15 erstellen Sie ein Dateisystem auf dem nativen nvme-Gerät und mounten das Dateisystem.</block>
@@ -2909,7 +2900,6 @@
   <block id="40e29ed5274da40bd72279302b46f6e3" category="paragraph">Die Methode zum Erstellen eines Dateisystems variiert je nach gewähltem Dateisystem. Dieses Beispiel zeigt das Erstellen einer<block ref="40d1d2ce03569076bd0dc1e0ff90aa4c" prefix=" " category="inline-code"></block> File-System.</block>
   <block id="d247c4d969d8e2c4a6880f681da185d0" category="list-text">Erstellen Sie einen Ordner, um das neue Gerät zu mounten.</block>
   <block id="030ad219d724566a7bd92b16fb85c6a3" category="list-text">Montieren Sie das Gerät.</block>
-  <block id="ad4806aee44ec3656193fc16283c1d1b" category="summary">Um einen zuverlässigen Betrieb zu gewährleisten, erstellen Sie einen Implementierungsplan und überprüfen mit dem NetApp Interoperabilitäts-Matrix-Tool \ (IMT\), ob die gesamte Konfiguration unterstützt wird.</block>
   <block id="04b35290a95b14616378de4f695c51c8" category="summary">Sie installieren ein FC HBA-Dienstprogramm, damit Sie den weltweiten Port-Namen \(WWPN\) jedes Host-Ports anzeigen können. Darüber hinaus können Sie mit dem HBA Dienstprogramm alle Einstellungen ändern, die in der Spalte Notizen des NetApp Interoperabilitäts-Matrix-Tools für die unterstützte Konfiguration empfohlen werden.</block>
   <block id="a9a2bc7429cd0511eea6e8f73c12d572" category="doc">Host-WWPNs ermitteln und empfohlene Einstellungen vornehmen</block>
   <block id="8e35d8a3350e402818c3effc05400d13" category="paragraph">Sie installieren ein FC HBA Utility, damit Sie den weltweiten Port-Namen (WWPN) jedes Host-Ports anzeigen können.</block>
@@ -3389,7 +3379,6 @@
   <block id="f1d1c2a7d2a912bc6a5aa04e31b25d26" category="paragraph">Erstellen Sie die Beispieldatei<block ref="84d4331157c88986f2059c78cd6ef5d2" prefix=" " category="inline-code"></block> Mit folgendem Inhalt:</block>
   <block id="51be39b7e050efbe3d29b5d8c0430aa5" category="paragraph">Erstellen Sie dann die Beispieldatei<block ref="d9ced338a40260ebc1310fd3ab4b5ab7" prefix=" " category="inline-code"></block>:</block>
   <block id="28a17096963f5398d9b941a85c3ea321" category="list-text">Aktivieren der Netzwerkschnittstellen:</block>
-  <block id="ffbb9e9bc4bfe3481683088489b9c286" category="list-text">Legen Sie auf dem Host den NVMe-of-Layer fest. Erstellen Sie die folgende Datei unter<block ref="5b084c473f7842460c228cc4f4e08f98" prefix=" " category="inline-code"></block> Um die zu laden<block ref="72d47bf4462963407b48d69669f71e31" prefix=" " category="inline-code"></block> Kernel-Modul und stellen Sie sicher, dass das Kernel-Modul immer eingeschaltet ist, auch nach einem Neustart:</block>
   <block id="fa74964c5c74c111309afef2dec3ccb9" category="paragraph">Als ersten Schritt sollten Sie überprüfen, ob Ihre Linux-Konfiguration unterstützt wird, und auch die Einschränkungen für Controller, Switch, Host und Recovery prüfen.</block>
   <block id="c6179d2fb67eca2c2f51c1dd8a357e71" category="section-title">NVMe over RoCE-Einschränkungen überprüfen</block>
   <block id="4d3915f0eb3c916a8df33f24e29f1cf0" category="paragraph">Informationen zur Verwendung von NVMe over RoCE finden Sie im<block ref="0aaf04254af18646f3d246cd4a4b417d" category="inline-link-rx"></block> Um die aktuellen Einschränkungen hinsichtlich Controller, Host und Recovery zu prüfen.</block>
@@ -4226,8 +4215,6 @@
   <block id="110591307a30fe38d9a123895392650e" category="list-text">Wenn die Stromversorgung ausgeschaltet ist, müssen Sie manuell feststellen, welche der fünf Kabelketten getrennt werden sollen. Die Abbildung zeigt die rechte Seite des Antriebsregals, wobei der Lüfterbehälter entfernt wurde. Wenn der Lüfterbehälter entfernt wurde, sehen Sie die fünf Kabelketten und die vertikalen und horizontalen Anschlüsse für jede Schublade.</block>
   <block id="45cf6cdbf3770c81ac201cb107e00eaf" category="paragraph">Die obere Kabelkette ist an der Antriebsschublade 1 befestigt. Die untere Kabelkette ist an der Antriebsschublade 5 befestigt. Die Rufbereitungen für Laufwerksschublade 1 werden zur Verfügung gestellt.</block>
   <block id="893f37fd9fe04c8eed04d6e7e810b584" category="image-alt">trafford Kabelschiene 1 Mai e5700</block>
-  <block id="ddb7e82d39051012ec7c4fa3f231186f" category="paragraph">*(1)* _vertikaler Anschluss (an Midplane angeschlossen)_</block>
-  <block id="6e0b9db3328f962af7c2596bee521640" category="paragraph">*(2)* _Kabelkette_</block>
   <block id="e66a45e25286ebd6f89b037f813d2d97" category="paragraph">*(3)* _horizontaler Anschluss (an Schublade angeschlossen)_</block>
   <block id="d85c0e4b7f943005f1d369e2e79a43e5" category="list-text">Um den Zugang zu erleichtern, bewegen Sie die Kabelkette auf der rechten Seite nach links.</block>
   <block id="7a80980e0ab3c4a96cc4d5b19f3f93ff" category="list-text">Trennen Sie eine der rechten Kabelketten von der entsprechenden vertikalen Führungsschiene.</block>
@@ -4362,7 +4349,6 @@
   <block id="46bc8576a7815e8eb9a10ff5d59cac56" category="list-text">Mehrere Controller – umfasst Verfahren zum Aktualisieren der SANtricity OS Software auf mehreren Storage Arrays desselben Typs.</block>
   <block id="48c1ca5defe26b3e0c4d1e2e7368d701" category="list-text">Laufwerk -- enthält Anweisungen zum Aktualisieren der Firmware des Laufwerks.</block>
   <block id="4a77379e9fcc01e35b7933a91b02a2bb" category="inline-link-macro">Upgrade-Überlegungen</block>
-  <block id="296e602ec8cd8c899029840a49ce97ab" category="paragraph">Bevor Sie mit dem Upgrade beginnen, sollten Sie sich die ansehen <block ref="397a7b6697218a46323b6c580312f9dd" category="inline-link-macro-rx"></block>.</block>
   <block id="c3475988698991c53b1363a132d39565" category="summary">Sie aktualisieren die Firmware Ihrer Laufwerke, um sicherzustellen, dass Sie über alle neuesten Funktionen und Fehlerbehebungen verfügen.</block>
   <block id="c55b834e11341e1ae1654b547833e156" category="doc">Aktualisieren Sie die Laufwerk-Firmware</block>
   <block id="77070f27759f951f16820b5f622b9d03" category="paragraph">Befolgen Sie dieses Verfahren, um die Firmware Ihrer Laufwerke zu aktualisieren, sodass Sie über alle neuesten Funktionen und Fehlerbehebungen verfügen.</block>
@@ -5335,8 +5321,6 @@
   <block id="ae4728ced8957babaccab930d6730f18" category="inline-link-macro">Fügen Sie SAS-Erweiterungskarten hinzu</block>
   <block id="ed340a74210414952184f18bdea46abb" category="list-text"><block ref="59592944f1499a5ed0c513d73204b10a" category="inline-link-macro-rx"></block> Für die Installation von SAS-Erweiterungskarten.</block>
   <block id="03d8927d2b1d15f40bf2f3ed72e44a9e" category="list-text"><block ref="cd760802de300bde5638960df8d1f993" category="inline-link-macro-rx"></block> Für SAS-Erweiterungskabel.</block>
-  <block id="0373910e51252c7b97dcbea9f4942604" category="inline-link">mysupport.netapp.com</block>
-  <block id="9a1088df44acd632befae6a589d43474" category="list-text">Erstellen Sie ein Konto und registrieren Sie Ihre Hardware unter<block ref="28649c93049a329043d206ec7fa0c6f8" category="inline-link-rx"></block>.</block>
   <block id="eac0c4bdb6359eb499e188351f5a9f2d" category="list-text">Stellen Sie sicher, dass die folgenden Elemente in dem Feld enthalten sind, das Sie erhalten haben.</block>
   <block id="f63066afb77d7c003e18251ee221aefc" category="paragraph"><block ref="f63066afb77d7c003e18251ee221aefc" category="inline-image-macro-rx" type="image"></block></block>
   <block id="d6b6a1b586f8ed315e7d110da72191a0" category="paragraph">Shelf mit installierten Laufwerken (Blende und Endkappen separat verpackt)</block>
@@ -5371,15 +5355,9 @@
   <block id="900e4c394955e0720a8b42172aa18c8f" category="admonition">Wenn Sie Schränke von Drittanbietern verwenden, kann dies dazu führen, dass die Netzkabel den Zugriff auf den Controller einschränken.</block>
   <block id="49fc51b075dc8edf1412b9c9514e429f" category="paragraph"><block ref="49fc51b075dc8edf1412b9c9514e429f" category="inline-image-macro-rx" type="image"></block></block>
   <block id="dcc887df0958a24f414c58b89298bc9b" category="paragraph">Ein unterstützter Browser für die Verwaltungssoftware:</block>
-  <block id="4aed86ee8496175fd7faafa5c35fd6a1" category="list-text">Google Chrome (Version 78 und höher)</block>
-  <block id="9471ea9488231b3eec10e1195279e441" category="list-text">Microsoft Internet Explorer (Version 11 und höher)</block>
-  <block id="c3767efdeacb446b6fa6f38fb0ebcc8e" category="list-text">Microsoft Edge (88 und höher)</block>
-  <block id="97cd5d08f3ac321127d6b56ff35b6274" category="list-text">Mozilla Firefox (Version 70 und höher)</block>
-  <block id="412c6f332067d9b9f2a99e4bf825afdf" category="list-text">Safari (Version 12 und höher)</block>
   <block id="7664fe7044214c4315cb67d769e21a1a" category="summary">Schließen Sie die Stromkabel an, und schalten Sie die Laufwerk-Shelfs ein.</block>
   <block id="6113d267d99dfbff350dce7d26009671" category="doc">Schaltet die Controller-Shelfs ein</block>
   <block id="d2bc0d64dd760b202ec2907fd44810aa" category="paragraph">Erfahren Sie, wie Sie die Stromkabel anschließen und die Laufwerk-Shelfs einschalten.</block>
-  <block id="be957f4123963c8a3a4d8d8b36e8dc9e" category="paragraph">Bevor Sie die Controller-Shelfs einschalten, stellen Sie Folgendes sicher:</block>
   <block id="5ceb28979bbe59f9cfcee59ae10968dd" category="list-text">Installieren Sie Ihre Hardware.</block>
   <block id="672881f5c2cd0335072eb2cb47e8f2e5" category="list-text">Treffen Sie antistatische Vorsichtsmaßnahmen.</block>
   <block id="c61d7b3418bd253d4dcd746096fe1266" category="list-text">Schließen Sie das Stromkabel an jeden Controller an (siehe Abbildung EF600).</block>
@@ -5394,8 +5372,6 @@
   <block id="602581c7f4fef4e0ffc7c312b3efa341" category="summary">EF300 oder EF600 System-Rack in einem 2er-Säulen-Rack oder NetApp System-Rack installieren</block>
   <block id="923a86c9f908f09f61d33d7831905371" category="doc">Installieren Sie die Hardware</block>
   <block id="d751bcfe66df83ffc12435f4dd821d73" category="paragraph">Ein EF300- oder EF600 Storage-System kann in einem Rack mit zwei Säulen oder einem NetApp Systemschrank installiert werden.</block>
-  <block id="a8c48c071808ad2651b915b013b97fef" category="paragraph">Stellen Sie vor der Installation eines EF300- oder EF600-Storage-Systems Folgendes sicher:</block>
-  <block id="9d7ace3094547dba44a6a710e588173b" category="list-text">Registrieren Sie Ihre Hardware unter<block ref="28649c93049a329043d206ec7fa0c6f8" category="inline-link-rx"></block>.</block>
   <block id="2d25dc407855f99aa2a0fe96d3aaffc7" category="list-text">Bereiten Sie einen flachen, statischen Arbeitsbereich vor.</block>
   <block id="9ad20405ed7442681aff80b87cb2dba2" category="list-text">Packen Sie die Hardware aus.</block>
   <block id="ddaca6e351d1a3c9ab3d82db4c028ff5" category="list-text">Packen Sie den Inhalt aus und beinventarisieren Sie die enthaltene Hardware gegen den Verpackungsschein.</block>
@@ -5988,9 +5964,7 @@
   <block id="00c9f8995e9e372b1b21f15fc0c9001b" category="list-text">Das zugewiesene Volume erhält die nächste verfügbare LUN-Nummer. Der Host verwendet die LUN-Nummer für den Zugriff auf das Volume.</block>
   <block id="4faf06e0466760e50f45759abdf2041c" category="list-text">Der vom Benutzer bereitgestellte Volume-Name wird in den Volume-Listen angezeigt, die dem Host zugeordnet sind. Falls zutreffend, wird das werkseitig konfigurierte Zugriffsvolume auch in den Volume-Listen angezeigt, die dem Host zugeordnet sind.</block>
   <block id="b760518a86dddf39df6eb82062aa20f1" category="section-title">Schritt 3: Erstellen Sie einen Datastore in vSphere Client</block>
-  <block id="03fea832838d48ebb15f527aa6abd2cd" category="paragraph">Um einen Datastore im vSphere Client zu erstellen, lesen Sie das folgende Thema im VMware Doc Center:</block>
   <block id="7c7e75114a8c9222d975bdcf65b6e447" category="inline-link">Erstellen Sie einen VMFS-Datenspeicher im vSphere-Client</block>
-  <block id="23665d1daa8ffb139110bacef48d674f" category="list-text"><block ref="23665d1daa8ffb139110bacef48d674f" category="inline-link-rx"></block></block>
   <block id="3f6b953b35e3c46b4c78f3358ab087c5" category="section-title">Erhöhung der Kapazität vorhandener Datastores durch Erhöhung der Volume-Kapazität</block>
   <block id="3178f2fce0cfe05b9683b4c79ba0d25d" category="paragraph">Sie können die gemeldete Kapazität (die gemeldete Kapazität an Hosts) eines Volumes erhöhen, indem Sie die freie Kapazität nutzen, die in dem Pool bzw. der Volume-Gruppe verfügbar ist.</block>
   <block id="7cf61abe29c59213c314036c21f30dcc" category="list-text">Im zugewiesenen Pool bzw. der Volume-Gruppe des Volumes steht genügend freie Kapazität zur Verfügung.</block>
@@ -6008,12 +5982,9 @@
   <block id="8ebea0904dbbd79829b4e8e18700fe35" category="list-text">Verwenden Sie das Feld * gemeldete Kapazität erhöhen, indem Sie...* hinzufügen, um die Kapazität der aktuell verfügbaren gemeldeten Kapazität hinzuzufügen. Sie können den Kapazitätswert ändern, um entweder in Mebibyte (MiB), Gibibyte (gib) oder Tebibyte (tib) anzuzeigen.</block>
   <block id="47e3d95a3adbde336a43e0c9f80a08f6" category="list-text">Klicken Sie Auf *Erhöhen*.</block>
   <block id="8eced8651ea7da59ed5fb12085b185c0" category="list-text">Zeigen Sie den Fensterbereich Letzte Aufgaben an, um den Fortschritt des Vorgangs Kapazitätssteigerung anzuzeigen, der derzeit für das ausgewählte Volume ausgeführt wird. Dieser Vorgang kann langwierig sein und die System-Performance beeinträchtigen.</block>
-  <block id="0315ca638646397d429dc910d02c61c1" category="list-text">Nach Abschluss der Volume-Kapazität müssen Sie die VMFS-Größe manuell erhöhen, um sie wie im folgenden Thema beschrieben anzupassen:</block>
   <block id="9577a4dae7ff56da7f4a9a7339b5aeba" category="inline-link">Erhöhen Sie die VMFS-Datenspeicherkapazität im vSphere-Client</block>
-  <block id="6732b2858e611126190f8b1ce8d187c4" category="list-text"><block ref="6732b2858e611126190f8b1ce8d187c4" category="inline-link-rx"></block></block>
   <block id="17771615949b8b68fe1647ab628a8c8b" category="section-title">Erhöhen Sie die Kapazität vorhandener Datastores durch Hinzufügen von Volumes</block>
   <block id="cb84b4425aa5728fba616a043aba504a" category="list-text">Sie können die Kapazität eines Datastores durch Hinzufügen von Volumes erhöhen. Befolgen Sie die Schritte unter <block ref="7e352d543698680a147beb46af7ec62f" category="inline-xref-macro-rx"></block>.</block>
-  <block id="69e5b3af9cd470d8eb1ebb0fc532f6df" category="list-text">Weisen Sie dann die Volumes dem gewünschten Host zu, um die Kapazität des Datenspeichers zu erhöhen. Siehe folgendes Thema:</block>
   <block id="657b70e8c66d59c5eb96a02553896eb0" category="summary">Data Assurance (da) implementiert den T10 Protection Information (PI)-Standard. Dies erhöht die Datenintegrität, indem Fehler geprüft und korrigiert werden, die bei der Datenübertragung entlang des I/O-Pfads auftreten können.</block>
   <block id="06d9b9b2855d79c63cc7328c4ffd2456" category="doc">Was ist Data Assurance?</block>
   <block id="d935b7857bb2c4f1f726e074a0257467" category="paragraph">Die typische Nutzung der Data Assurance Funktion überprüft den Teil des I/O-Pfads zwischen den Controllern und Laufwerken. DA-Funktionen werden auf Pool- und Volume-Gruppenebene präsentiert.</block>
@@ -7390,7 +7361,6 @@
   <block id="745a4a859331b0eafc18f00f26725aef" category="paragraph">*Beispiel: Stromanschlüsse befinden sich auf der Rückseite des Regals.*<block ref="aa8c305b61ba470e3405fc699ae85210" category="inline-image-macro-rx" type="image"></block></block>
   <block id="bd2cfcab24475001dd81207ac244c8a1" category="summary">Installation der E2800 oder E5700 in einem zweiposten Rack oder in einem NetApp System-Rack</block>
   <block id="448a97577ce7b342ad9a761abecb2e5e" category="paragraph">Wie Sie eine E5724, EF570, EF280, E2812, E2824, DE212C oder DE224C Storage-System in einem Rack mit zwei Säulen oder einem NetApp System-Rack.</block>
-  <block id="84d3553cd5edfee96bc4530427b049ec" category="paragraph">Bevor Sie die Hardware installieren, stellen Sie sicher, dass Sie die folgenden Schritte ausführen:</block>
   <block id="18d75254ebc527a2c996bf35fc9ae101" category="list-text">Holen Sie sich ein ESD-Armband, und ergreifen Sie antistatische Vorsichtsmaßnahmen.</block>
   <block id="802c4074203ba6ba97e2567d8b2e74c1" category="paragraph">Lesen Sie alle Anweisungen durch, bevor Sie mit den folgenden Schritten fortfahren.</block>
   <block id="58483c487a48bff0ff470ac64f6bb18c" category="list-text">Packen Sie den Hardwareinhalt aus, und führen Sie anschließend die enthaltene Hardware gegen den Packzettel aus.</block>
@@ -7511,10 +7481,6 @@
   <block id="e6a5accabdea286872ffbb9e1a9d23ed" category="paragraph">*Breite*: 17.66 Zoll (44.86 cm)</block>
   <block id="ee469072217f458e10d64df6379eca0a" category="paragraph">*Höhe*: 6.87 Zoll (17.46 cm)</block>
   <block id="de886572d93cfb540958bcd9e52245d8" category="paragraph">*Höchstgewicht*: 250 lb (113 kg)</block>
-  <block id="781e38e727b5ccea6637b8f5ad2e7e6c" category="list-text">Google Chrome (Version 47 und höher)</block>
-  <block id="d69d70a03d263bd459a54e45ce547a58" category="list-text">Microsoft Edge (EdgeHTML 12 und höher)</block>
-  <block id="ae6f094417120830192cad13d1b6c8cd" category="list-text">Mozilla Firefox (Version 31 und höher)</block>
-  <block id="fc54174a9d1e55650ad7538d8b9506a0" category="list-text">Safari (Version 9 und höher)</block>
   <block id="3570beeead25c3023d709f9c9ee19c83" category="paragraph"><block ref="3570beeead25c3023d709f9c9ee19c83" category="inline-image-macro-rx" type="image"></block></block>
   <block id="594d2774cd1596c3aabeb365f5c0efb5" category="paragraph"><block ref="594d2774cd1596c3aabeb365f5c0efb5" category="inline-image-macro-rx" type="image"></block></block>
   <block id="dbb79ecaec48a62a8ffa701bf7df7b16" category="list-text">Holen Sie die zugewiesenen IP-Adressen zum Herstellen einer Verbindung zum Speichersystem vom Netzwerkadministrator ab.</block>
@@ -8142,71 +8108,7 @@
   <block id="a305e80422565d3e8636c45a8e8f0f6b" category="paragraph">Web Services ist eine API, die NetApp für Entwickler zum Management von E-Series Storage-Systemen entwickelt hat. Es gibt zwei Implementierungen von Web Services: Eingebettet in den Controller und einen separaten Proxy, der auf Linux oder Windows installiert werden kann.</block>
   <block id="7bf44c1a455e947396fedd5ddf411974" category="summary">Neue Funktionen im SANtricity OS.</block>
   <block id="b71e2b4d6a1e1e3ddb1014777fc5a53c" category="doc">Was ist neu in SANtricity OS</block>
-  <block id="09f15da1ede715dd9ce4f8fc402f6aa5" category="paragraph">In der folgenden Tabelle werden die neuen Funktionen in SANtricity OS 11.7 für das integrierte Management von EF300, EF600, E2800/EF280 und E5700/EF570 Controllern beschrieben.</block>
-  <block id="b2d3e7c610f3962f9a7e3b9baa02c363" category="section-title">Neue Funktionen in Version 11.74</block>
   <block id="824a3a83a007a97494ec5981cebf67a5" category="cell">Neues Feature</block>
-  <block id="158083b77acf87778347dd8cf3138b12" category="paragraph">Unterstützung von FIPS 140-3</block>
-  <block id="93752d0e76882be98725c8b860259db3" category="paragraph">FIPS 140-3 wird auf bestimmten Laufwerken sowohl für SAS- als auch für NVMe-basierte SSDs unterstützt. SSD-Laufwerke auf FIPS 140-3-2-Ebene können gleichzeitig mit SSD-Laufwerken der FIPS-140-2-Ebene bestehen, sofern die Laufwerke entweder nur NVMe-basiert oder ausschließlich SAS-basiert sind. Bei Verwendung einer Mischung dieser Ebenen in Volume-Gruppen und Festplatten-Pools ist zu beachten, dass die Gruppe oder der Pool dann auf der niedrigeren Sicherheitsstufe (140-2) arbeiten.</block>
-  <block id="3f470942a1817eaa19da47ff83fd59ca" category="paragraph">Unterstützung von MFA und SSH</block>
-  <block id="272f8c73e52dc0fe2c42cfc42fdbefc9" category="paragraph">Bei SANtricity Version 11.74 und höher können Sie mit der Funktion Remote-Anmeldung Multi-Faktor-Autorisierung (MFA) konfigurieren, da Benutzer einen SSH-Schlüssel und/oder SSH-Passwort eingeben müssen. Die Menüoption im Bereich Hardware hat sich von *Remote-Anmeldung ändern* auf *Remote-Anmeldung konfigurieren (SSH)* geändert.</block>
-  <block id="3b5b5feef66adc0768f35b724a334827" category="paragraph">Auf Token zugreifen</block>
-  <block id="e91c1fbb7ef80926929c6a0e87d2cea2" category="paragraph">Diese Version enthält eine neue Funktion zum Erstellen von Access Tokens. Mit diesen Tokens können Sie sich mit DER REST-API oder der Befehlszeilenschnittstelle (CLI) authentifizieren, ohne Benutzernamen und Passwörter offenzulegen. Diese Funktion wird im Abschnitt Zugriffsverwaltung bereitgestellt.</block>
-  <block id="09ebea90b63074ba83d2ad844e89d70c" category="section-title">Neue Funktionen in Version 11.73</block>
-  <block id="36349de7ac0eb86303bed03895c1dcc2" category="paragraph">Ressourcen-Provisioning und DULBE-Support</block>
-  <block id="16fb65d0cddfe2d4c247fdab06b8cc43" category="paragraph">Ressourcen-Provisioning-Funktionen und die DULBE-Laufwerkfunktionen werden jetzt vollständig in dieser Version unterstützt. Dies umfasst auch die stärkere Nutzung des Host-gesteuerten UNMAP auf ressourcenbereitgestellten Volumes.</block>
-  <block id="e3b2852f4ef13c9d9eb1a41a50d744b5" category="paragraph">EF600 SAS-Erweiterung (512 e</block>
-  <block id="299fb5bbb23387835d58bf5165cddeba" category="paragraph">Dieser Release unterstützt die Erweiterung auf SAS-3-Gehäuse für das EF600 Storage-System. Mit dieser Erweiterung können die NVMe-SSDs mit 4 KiB-Block parallel mit 512-GB-SAS-SSDs und HDDs eingesetzt werden. Laufwerke mit unterschiedlichen Blockgrößen können jedoch nicht im selben Pool oder einer Volume-Gruppe konfiguriert werden.</block>
-  <block id="c73d7f2c67532a6b036251cdeb908f76" category="paragraph">QLC SSD-Support</block>
-  <block id="e7049769f502b79dadcc8c63383bd373" category="paragraph">Diese Version unterstützt die aktuelle Generation von QLC-SSDs, die zwar ONTAP-Funktionen in der Laufwerk-Firmware enthalten, aber nicht über die vollständigen spezifischen Funktionen der E-Series verfügen. QLC-Laufwerke (nur NVMe) sind zwar kostengünstiger, weisen aber eine geringere Schreib-Performance und eine geringere Haltbarkeit auf, sodass sie nicht bei schreibintensiven Workloads verwendet werden sollten.</block>
-  <block id="854da640a0760b1616bb0284c5ac42aa" category="paragraph">Unterstützung von TLS 1.3</block>
-  <block id="a1ebc729e73cec123d0c98336b6e1c01" category="paragraph">TLS 1.3 wird jetzt für das eingebettete Management unterstützt. Diese Unterstützung gilt für System Manager und eingebettete Web-Services, die diese Funktion aktivieren oder deaktivieren können. (TLS 1.3-Unterstützung wurde in einer früheren Version für Web Services Proxy und Unified Manager hinzugefügt.)</block>
-  <block id="f1f2fd644d915b365b5abb8c91c74bfa" category="paragraph">RAID 1 DDP mit mindestens 8 Laufwerken</block>
-  <block id="7b17410dd494661b52f2ac79eab0c721" category="paragraph">Mit dieser Version benötigt RAID 1 DDP nicht mehr mindestens 11 SSDs in einem Pool. Das Minimum erlaubt jetzt SSD-Pools mit 8 Laufwerken, wenn nur RAID 1-Volumes im Pool erstellt werden.</block>
-  <block id="8b4b67bab63907548f025722a3d981e6" category="paragraph">Löschen des EKMS-Schlüssels</block>
-  <block id="7aaef9b529c633049aca22e386a95abc" category="paragraph">Ein Storage-Administrator kann jetzt einen externen Verschlüsselungsmanagement-Server (EKMS) anfordern, um einen alten Schlüssel zu löschen. Das Löschen des Schlüssels erfolgt nur während eines Neuschlüssels, nachdem die installierten Laufwerke den neuen Schlüssel besitzen.</block>
-  <block id="1a75366a6d4c821ee7e455bce4cffa25" category="section-title">Neue Funktionen in Version 11.72</block>
-  <block id="28b46397fb020adcaf0b119cbfa693b5" category="paragraph">SNMPv3-Unterstützung</block>
-  <block id="a9ed1ee525d0d08488f9de3235270743" category="paragraph">SNMPv3 wird jetzt für Warnmeldungen unterstützt, die im Menü:Einstellungen[Warnmeldungen] konfiguriert werden können. SNMPv3 bietet Sicherheit durch starke Authentifizierung und Datenverschlüsselung.</block>
-  <block id="c2e4a04d91c5a3b8fe7446de157eb681" category="paragraph">Unterstützung für die Replizierung von Schlüsseln auf mehreren Schlüsselservern</block>
-  <block id="292510d91cd4366627aba2eec79ec942" category="paragraph">Für die externe Schlüsselverwaltung von Self-Encrypting Drives bietet das Dialogfeld External Key Management erstellen eine neue Option zum Hinzufügen mehrerer Schlüsselserver.</block>
-  <block id="68a7548c04bd5ae4d9d965b924cc722e" category="paragraph">Aktualisierte Browser-Versionen</block>
-  <block id="2d7d47101a0ad5c71e2101ebb7e5f475" category="paragraph">Die minimalen Browserversionen von System Manager wurden aktualisiert.</block>
-  <block id="3c7e7b17dae4906b0da9248a0e7f39e2" category="section-title">Neue Funktionen in Version 11.71</block>
-  <block id="9f498a936b91eb825293b845ab4c4a34" category="paragraph">EF300-Erweiterung</block>
-  <block id="4cd824b82861a81d3a34355af5534978" category="cell">Dieses Release unterstützt die Erweiterung von SAS-3-Gehäusen für das EF300-Speichersystem. Mit dieser Erweiterung können die NVMe-SSDs mit 4 KiB-Block parallel mit 512-GB-SAS-SSDs und HDDs eingesetzt werden. Laufwerke mit unterschiedlichen Blockgrößen können jedoch nicht im selben Pool oder einer Volume-Gruppe konfiguriert werden.</block>
-  <block id="e26cc7c9038cf4d3175e8bf30d816d86" category="paragraph">FEC-Modus-Option in der iSCSI-Konfiguration</block>
-  <block id="96d538d953209d533cee6c90da4de1a1" category="paragraph">Für Speicher-Arrays, die die 25-GB-iSCSI-Host-Schnittstellenkarte verwenden, steht beim Konfigurieren von iSCSI-Ports eine neue Option zum Einstellen des FEC-Modus (Forward Error Correction) zur Verfügung.</block>
-  <block id="ea9c177239be0bc55bf551920e73ec9e" category="paragraph">Remote Storage Volumes</block>
-  <block id="4c46d61572ef34b4dbdbc7690d745c3d" category="paragraph">Mit der optionalen Remote Storage Volumes-Funktion können Sie Volumes von einem Remote-Storage-System über eine iSCSI-Verbindung in ein lokales E-Series Storage-System importieren. Der Remote Storage kann im selben Design sein wie Ihr E-Series System oder von einem anderen Storage-Anbieter, sofern der Zugriff über iSCSI erfolgt.</block>
-  <block id="ae376d8e855c99ce33d3f6e542edc956" category="paragraph">Funktion zur Bereinigung (Löschen) für Laufwerke ohne FDE hinzugefügt</block>
-  <block id="7113199ede26393de60c4e8d5222d08d" category="paragraph">Die Laufwerkbereinigung umfasst jetzt Laufwerke ohne FDE. Auf der Seite Hardware können Sie das Kontextmenü des Laufwerks öffnen und „Löschen“ auswählen (zuvor war diese Auswahl „sicheres Löschen“).</block>
-  <block id="e85e5cd7a142a229a3e8752a4502bb6a" category="paragraph">Sichere Verbindung für E-Mail-Alarme</block>
-  <block id="50c890918fa832fcbdebb84798840bcc" category="paragraph">Zum Aktivieren verschlüsselter E-Mail-Benachrichtigungen können Sie optional ausgehende E-Mails (Warnmeldungen, ASUP-Entsendungen) so konfigurieren, dass Authentifizierungsdaten angegeben werden. Zu den Verschlüsselungstypen gehören SMTPS und STARTTLS.</block>
-  <block id="a98e92b119d04e5ca0c2e3a8c6cc6159" category="paragraph">AutoSupport Zusätze</block>
-  <block id="31d5de0104fd289863adccff1475589e" category="paragraph">Wenn AutoSupport nicht aktiviert ist, wird jetzt eine Warnmeldung im Bereich Benachrichtigungen angezeigt.</block>
-  <block id="5994d3724fb50db3bc66184d3f47b830" category="paragraph">Format für Syslog-Warnmeldungen ändern</block>
-  <block id="6972891f094c169717c1d2cc01a9c332" category="paragraph">Das Syslog-Alarmformat unterstützt jetzt RFC 5424.</block>
-  <block id="c91b20af8c08d49b519596d358be5e0f" category="section-title">Neue Funktionen in Version 11.70</block>
-  <block id="fd6d564757d9bebb4afdcbc6e49ae663" category="paragraph">Neues Storage-Systemmodell – EF300</block>
-  <block id="1d9b013014a7b904368939502c5b6aad" category="paragraph">Mit dieser Version wird das kostengünstige All-NVMe-Flash-Storage-System EF300 vorgestellt. Das EF300 umfasst 24 NVME SSD-Laufwerke und eine einzelne Host Interface Card (HIC) pro Controller. Die unterstützten NVMe over Fabrics Host-Schnittstellen umfassen NVMe over IB, NVMe over RoCE und NVMe over FC. Zu den unterstützten SCSI-Schnittstellen gehören FC, IB über iSER und IB über SRP. Über Unified Manager lassen sich mehrere EF300 Storage-Systeme und andere E-Series Storage-Systeme anzeigen und managen.</block>
-  <block id="c3164ba2335231fad0057dbe03d6e8dc" category="paragraph">Neue Ressource Provisioning-Funktion (nur EF300 und EF600)</block>
-  <block id="43fc15888e6c15a34af56dfc2d49240a" category="paragraph">Die Ressourcenbereitstellung ist neu für die EF300- und EF600-Speichersysteme. Ressourcen-bereitgestellte Volumes können sofort ohne Hintergrundinitialisierung verwendet werden.</block>
-  <block id="86fffc443dc49ef49131fe738b172a29" category="paragraph">Option mit 512 e Blockgröße hinzufügen (nur EF300 und EF600)</block>
-  <block id="34e8ca8f8da7ea96f1b8450def8131aa" category="paragraph">Bei den EF300- und EF600 Storage-Systemen kann ein Volume auf 512 Byte oder 4 KiB-Blockgrößen eingestellt werden. Die 512-Funktion wurde hinzugefügt, um die iSCSI-Host-Schnittstelle und das VMware Betriebssystem zu unterstützen. Falls möglich, schlägt der System Manager den entsprechenden Standardwert vor.</block>
-  <block id="97815730af7a32b4bee2bd50133bcc3b" category="paragraph">Neue Option zum Senden von AutoSupport-Dispatches nach Bedarf</block>
-  <block id="caf318d779d33bdcaf1cb8e5ddefea9d" category="paragraph">Mit einer neuen Funktion zum Senden von AutoSupport können Sie Daten an den technischen Support senden, ohne auf einen geplanten Versand warten zu müssen. Diese Option ist im Support Center auf der Registerkarte „AutoSupport“ verfügbar.</block>
-  <block id="7648787a2f72ca73c563621d8f772039" category="paragraph">Verbesserungen an externem Verschlüsselungsmanagement-Server</block>
-  <block id="d71804131a489a34d629405530d25a01" category="paragraph">Die Funktion zum Anschließen an einen externen Schlüsselverwaltungsserver umfasst die folgenden Verbesserungen:</block>
-  <block id="5ce158a574155a1dbf2c52d1112ea5c9" category="list-text">Umgehen Sie die Funktion zum Erstellen eines Sicherungsschlüssels.</block>
-  <block id="a83cf593b4f7f5cb340b9eb8c9b13daa" category="list-text">Wählen Sie zusätzlich zu den Client- und Server-Zertifikaten ein Zwischenzertifikat für den Schlüsselverwaltungsserver aus.</block>
-  <block id="a41ead92ad6d32095eee6328103a4c8f" category="paragraph">Zertifikatsverbesserungen</block>
-  <block id="734830643da23e9370e728f64d10f308" category="paragraph">Dieses Release ermöglicht die Verwendung eines externen Tools wie OpenSSL zum Generieren einer Zertifikatsignierungsanforderung (CSR), die auch erfordert, dass Sie eine private Schlüsseldatei zusammen mit dem signierten Zertifikat importieren.</block>
-  <block id="0d3d43e6247ef530e5466168527ca61c" category="paragraph">Neue Offline-Initialisierungsfunktion für Volume-Gruppen</block>
-  <block id="428d905bdf1b0c959591111aad19309d" category="paragraph">Für die Volume-Erstellung bietet System Manager eine Methode zum Überspringen des Schritts der Host-Zuweisung, damit neu erstellte Volumes offline initialisiert werden. Diese Funktion ist nur für RAID-Volume-Gruppen auf SAS-Laufwerken anwendbar (d. h. nicht für Dynamic Disk Pools oder die NVMe-SSDs, die in den EF300- und EF600-Storage-Systemen enthalten sind). Diese Funktion ist für Workloads ausgelegt, die beim Start der Nutzung die volle Performance der Volumes benötigen, anstatt im Hintergrund die Initialisierung durchzuführen.</block>
-  <block id="0587e4aa2345855c1a604c02193816de" category="paragraph">Neue Funktion zum Erfassen von Konfigurationsdaten</block>
-  <block id="3caef3194845d0349b1fde3b790187bf" category="paragraph">Diese neue Funktion speichert RAID-Konfigurationsdaten vom Controller. Dieser enthält alle Daten für Volume-Gruppen und Festplatten-Pools (dieselben Informationen wie der CLI-Befehl für<block ref="b96920e1014b7cbceaadad722bfc943c" prefix=" " category="inline-code"></block>). Diese Funktion wurde hinzugefügt, um technischen Support zu unterstützen. Sie befindet sich auf der Registerkarte Diagnose des Support Center.</block>
-  <block id="fa255949f43078f9547e0b38d42d3df0" category="paragraph">Ändern Sie die standardmäßige Festplattenkapazität für Festplatten-Pools in einem Laufwerksszenario mit 12 Laufwerken</block>
-  <block id="5a4dc582c4bbb046fe16599fb3458522" category="paragraph">Früher wurde ein Pool für 12 Festplatten mit ausreichend freier Kapazität für zwei Laufwerke erstellt. Der Standard wird nun geändert, um das Versagen eines einzelnen Laufwerks zu bearbeiten, um einen kostengünstigeren Standard für kleine Pools zu bieten.</block>
   <block id="f54101aa6702c025c4f74ec5ada7bae3" category="summary">Storage-Management</block>
   <block id="14ad3096f7edeb7d23e22e3ab3539e0f" category="paragraph">Über die nachfolgenden Links gelangen Sie zu Dokumentation, in der Sie beschreibt, wie Storage-Objekte und E-Series Storage-Systeme konfiguriert, gemanagt und überwacht werden. Die Links führen Sie zu einer anderen Dokumentationswebsite.</block>
   <block id="55b9698df8d5ce238fd672cacb45db33" category="section-title">Online-Hilfe für System Manager 11.7</block>
@@ -8757,7 +8659,6 @@
   <block id="668e2078ef1b1722c77cdb5c523a4463" category="sidebar">NetApp Knowledge Base</block>
   <block id="2bae42f280067110dfd52cc69a468364" category="sidebar">Active IQ (Anmeldung erforderlich)</block>
   <block id="54708ac788109e3332a896f8d957e38f" category="sidebar">E-Series/SANtricity Downloads (Anmeldung erforderlich)</block>
-  <block id="d59db7846bd10b6d60d21543df9faa9e" category="list-title">Was Sie benötigen</block>
   <block id="6e45870f8629b562b79da969a290951f" category="section-title">Schritt: Bestimmen Sie die Host-Ports-WWPNs- NVMe/FC VMware</block>
   <block id="2f5a12ce7256b2085ffbd47c6ada5cab" category="section-title">Schritt: Konfigurieren Sie die FC Switches--VMware</block>
   <block id="8177490e8cadc7f4b772200e86180fb2" category="section-title">Schritt 2: Bestimmen Sie die Host-Port-WWPNs--FC</block>
@@ -8785,7 +8686,6 @@
   <block id="11b02af429676c3e4ef0b14f72c58b44" category="paragraph">Das Storage Plug-in für vCenter benötigt ausreichend Platz für die Ausführung und Protokollierung. Stellen Sie sicher, dass Ihr System die folgenden Anforderungen an den verfügbaren Speicherplatz erfüllt:</block>
   <block id="5f5fc15545b1dee5b3f1c2ee92f47de0" category="list-text">Erforderlicher Installationsspeicherplatz: 275 MB</block>
   <block id="9bcf5bd8266f8eea99112a520f67ad79" category="list-text">Speicherplatz – 275 MB + 200 MB (Protokollierung)</block>
-  <block id="4cdb1974fd7f08cb281a8396b499d8f7" category="list-text">Systemspeicher – 512 MB</block>
   <block id="206c0580c23a54528ad2d285e97454b4" category="paragraph">Das Storage Plug-in für vCenter ist ein kostenloses eigenständiges Produkt, für das kein Lizenzschlüssel erforderlich ist. Es gelten jedoch geltende Urheberrechte und Nutzungsbedingungen.</block>
   <block id="cdd47ce62ae0283ba81fbbfac98aa0be" category="paragraph">Wenn Sie ein Upgrade von einer früheren Version durchführen, beachten Sie, dass das Plugin vor dem Upgrade von der vCSA nicht registriert werden muss.</block>
   <block id="167e9fb1b11b78bdc503cae6390a6818" category="list-text">Während des Upgrades werden die meisten früheren Konfigurationseinstellungen des Plug-ins beibehalten. Diese Einstellungen umfassen Benutzerpasswörter, alle erkannten Speichersysteme, Serverzertifikate, vertrauenswürdige Zertifikate und die Konfiguration der Serverlaufzeit.</block>
@@ -8812,7 +8712,6 @@
   <block id="99017918290ad98fceaa8544139404ea" category="list-text">NL-SAS-Laufwerke mit Erweiterungs-Shelfs: Jede Mischung aus DE212C und DE460C Shelfs darf insgesamt 240 NL-SAS Laufwerksschächten und 4 Erweiterungs-Shelfs nicht überschreiten, wenn nur DE212C Shelfs verwendet werden; 8 DE212C Shelfs sind zulässig. Beispiel: 4 DE460C Shelfs oder 8 DE212C Shelfs oder 2 DE460C Shelfs plus 2 DE212 Shelfs.</block>
   <block id="f7bdca5a10b1a8a32a0410aa51cc3658" category="list-text">SAS-SSD-Laufwerke mit Erweiterungs-Shelfs: Jede Mischung aus DE212C, DE224C und DE460C Shelfs darf insgesamt 96 SAS SSD-Laufwerksschächten und 4 Erweiterungs-Shelfs nicht überschreiten, sofern nur DE212C Shelfs verwendet werden; 8 DE212C Shelfs sind zulässig. Beispiel: 1 DE460C Shelf plus 1 DE224C Shelf plus 1 DE212C Shelf oder 4 DE224C Shelfs oder 8 DE212C Shelfs.</block>
   <block id="d4f4328db6f2e4f903874bc046fd613f" category="list-text">NL-SAS-Laufwerke mit Erweiterungs-Shelfs: Jede Mischung aus DE212C und DE460C Shelfs darf insgesamt 420 NL-SAS Laufwerksschächten und 7 Erweiterungs-Shelfs nicht überschreiten, wenn nur DE212C Shelfs verwendet werden; 8 DE212C Shelfs sind zulässig. Beispiel: 7 DE460C Shelfs oder 8 DE212C Shelfs oder 5 DE460C Shelfs plus 2 DE212 Shelfs.</block>
-  <block id="538ff1eff5fd361d6f0b2adf6bbf0ed4" category="list-text">SAS-SSD-Laufwerke mit Erweiterungs-Shelfs: Jede Mischung aus DE212C, DE224C und DE460C Shelfs darf insgesamt 96 SAS SSD-Laufwerksschächten und 7 Erweiterungs-Shelfs nicht überschreiten, sofern nur DE212C Shelfs verwendet werden; 8 DE212C Shelfs sind zulässig. Beispiel: 1 DE460C Shelf plus 1 DE224C Shelf plus 1 DE212C Shelf oder 4 DE224C Shelfs oder 8 DE212C Shelfs.</block>
   <block id="731e4c243221cff11b35e735d54a097c" category="section-title">Rack mit zwei Höheneinheiten – 2 HE</block>
   <block id="08e15a26eb1bed02ff476c90993bb81d" category="section-title">Rack oder Schrank mit vier Säulen – 2 HE</block>
   <block id="f7e582702fa43947010600df41688562" category="section-title">Vierpolige-Rack -- SuperRail</block>
@@ -8867,6 +8766,74 @@
   <block id="4d34b8dd475537b31eded726b5f109a4" category="paragraph-title"><block ref="99e8b2f00e172bfcff96afdce69907bc" category="inline-image-macro-rx" type="image"></block> Hosts konfigurieren</block>
   <block id="e6fbc0b9673f8c86726688d7607fc8f5" category="inline-image-macro">Sechs</block>
   <block id="8cb633130263590fcb215001ddbab715" category="paragraph-title"><block ref="ef78558f80439832e0f51cc22cee8b8c" category="inline-image-macro-rx" type="image"></block> Speicher konfigurieren</block>
-  <block id="17fbe20fbbd5b537dbcef5b0ec0d1dea" category="section-title">Neue Funktionen in Version 11.75</block>
-  <block id="fc663b28a8d6054c2d97e0b897d7291f" category="paragraph">Systeme müssen mit 11.70.5 ausgeführt werden, um auf 11.80.x oder höher zu aktualisieren.</block>
+  <block id="ddd0020a0684c14dbd50622f84d8917a" category="paragraph">Stellen Sie sicher, dass Sie Folgendes haben:</block>
+  <block id="7647966b7343c29048673252e490f736" category="paragraph">89</block>
+  <block id="8613985ec49eb8f757ae6439e879bb2a" category="paragraph">90</block>
+  <block id="f033ab37c30201f73f142449d037028d" category="paragraph">80</block>
+  <block id="aab3238922bcc25a6f606eb525ffdc56" category="paragraph">14</block>
+  <block id="48302d2fba01b598c24ef8cb5486c530" category="list-text">Legen Sie auf dem Host den NVMe-of-Layer fest. Erstellen Sie die folgenden Dateien unter /etc/modules-load.d/, um die zu laden<block ref="84210bdbe25e211d594fd7255d9817df" prefix=" " category="inline-code"></block> Kernel-Modul und stellen Sie sicher, dass das Kernel-Modul immer eingeschaltet ist, auch nach einem Neustart:</block>
+  <block id="bb648e7fc0d366deef63d637e0a76377" category="paragraph">Um die zu überprüfen<block ref="84210bdbe25e211d594fd7255d9817df" prefix=" " category="inline-code"></block> Kernel-Modul ist geladen, führen Sie diesen Befehl aus:</block>
+  <block id="070e96bf6a4ddc9c8e8882425927de45" category="list-text">Verwenden Sie die<block ref="f3d48156832e70ac41335c007fa76798" prefix=" " category="inline-code"></block> Befehl, um eine Liste der derzeit verbundenen NVMe-Geräte anzuzeigen.</block>
+  <block id="3421354e6a9adde19a7c53b4efb8cb05" category="list-text">Legen Sie auf dem Host den NVMe-of-Layer fest. Erstellen Sie die folgende Datei unter<block ref="5b084c473f7842460c228cc4f4e08f98" prefix=" " category="inline-code"></block> Um die zu laden<block ref="84210bdbe25e211d594fd7255d9817df" prefix=" " category="inline-code"></block> Kernel-Modul und stellen Sie sicher, dass das Kernel-Modul immer eingeschaltet ist, auch nach einem Neustart:</block>
+  <block id="9fe35a3f27c999e8d5bccf07e605e703" category="paragraph">Stellen Sie sicher, dass Sie Folgendes haben:
+* Ein DHCP-Server, der auf demselben Subnetz installiert und konfiguriert ist wie die Speicherverwaltungsports.</block>
+  <block id="1bdb35aa1d3b8abd63ef262600e1c9d9" category="list-text">Systemspeicher – 1.5 GB</block>
+  <block id="45c4e24bcbb96005a9f6413a6d3e8d61" category="paragraph">Informationen zum Erstellen eines Datastore im vSphere-Client finden Sie unter<block ref="1935085257ca6f59c3fa99634c576530" category="inline-link-rx"></block> Thema im VMware Doc Center.</block>
+  <block id="e1b44e87bdbcd1ae906703fecba966cf" category="list-text">Nachdem die Volume-Kapazität abgeschlossen ist, müssen Sie die VMFS-Größe manuell erhöhen, um sie wie in beschrieben anzupassen<block ref="736c08ebbc8283f30abdffe8a802b25a" category="inline-link-rx"></block> Thema im VMware Doc Center.</block>
+  <block id="3e51eb8a98e37cd2bee48affec6b3f02" category="list-text">Weisen Sie dann die Volumes dem gewünschten Host zu, um die Kapazität des Datenspeichers zu erhöhen.</block>
+  <block id="d295d58115f15821d21734fad82dce5c" category="paragraph">Siehe<block ref="05fc437e4ce8c739576db569ed487331" category="inline-link-rx"></block> Weitere Informationen finden Sie unter dem VMware Doc Center.</block>
+  <block id="8def14e5183fbb5677794536682b7d45" category="admonition">„Submodel“ kann auch als „Submodel“ geschrieben werden.</block>
+  <block id="b4c31a3654f7f34af7d451e582bf910c" category="paragraph">*(1)* _Kabelkette_</block>
+  <block id="4591a73cfd3cb0cf1a08402845480b71" category="list-text">Führen Sie den SMClient-Befehl aus,<block ref="66131a22d885314a8385d34d18407d77" prefix=" " category="inline-code"></block>.</block>
+  <block id="ed6ef0e289dde2b4b0d96e83a84886ed" category="list-text">Warten Sie, bis beide Controller neu gebootet werden.</block>
+  <block id="7b7a6e706bdcec884d822bcb95a94ff6" category="list-text">Registrieren Sie Ihre Hardware unter<block ref="1a36b59ecae7684863b79a0f690b6840" category="inline-link-rx"></block>.</block>
+  <block id="9e03f2920bb645354640e8c3351f138b" category="list-text">Erstellen Sie ein Konto und registrieren Sie Ihre Hardware unter<block ref="1a36b59ecae7684863b79a0f690b6840" category="inline-link-rx"></block>.</block>
+  <block id="1592b862f4a1becd28d412c41f36cb11" category="list-text">Google Chrome (Version 89 und höher)</block>
+  <block id="c7d212f9925e21aba22cc40abf3a28b1" category="list-text">Microsoft Edge (Version 90 und höher)</block>
+  <block id="c6d379ca14207b822732863fc2d321b4" category="list-text">Mozilla Firefox (Version 80 und höher)</block>
+  <block id="0e2cf8121bf46167d098bd693e028a06" category="list-text">Safari (Version 14 und höher)</block>
+  <block id="ece376b7acc25f86ff2e09f80d38755c" category="paragraph">Gehen Sie wie folgt vor:</block>
+  <block id="9be4f8ee760eeaa38f44e28753bb0c03" category="paragraph">In der folgenden Tabelle werden die neuen Funktionen von SANtricity OS 11.8 für integriertes Management der EF300, EF600, E2800/EF280 und E5700/EF570 Controller beschrieben.</block>
+  <block id="b88fbe45e9e75bdd6c5127ce8a22abe1" category="section-title">Neue Funktionen in Version 11.80</block>
+  <block id="8f407366493ebfbb4a6dec746e7c89f5" category="paragraph">Verbesserter Volume Parity Scan</block>
+  <block id="07c3c6708618172f589685373ed71a5d" category="paragraph">Der Volume-Paritäts-Scan kann nun als Hintergrundprozess entweder über die REST API oder über die CLI gestartet werden. Der daraus resultierende Paritäts-Scan wird im Hintergrund ausgeführt, solange er für den Abschluss des Scanvorgangs erforderlich ist. Scanvorgänge können den Neustart des Controllers und Failover-Vorgänge überdauern.</block>
+  <block id="b9a173a4a6a7b368e4cd4fde15879372" category="paragraph">SAML-Unterstützung für Unified Manager</block>
+  <block id="dc505118a542aefe283668ff60bf1633" category="paragraph">Unified Manager unterstützt jetzt SAML (Security Assertion Markup Language). Sobald SAML für Unified Manager aktiviert ist, müssen Benutzer eine Multi-Faktor-Authentifizierung für den Identitätsanbieter verwenden, um mit der Benutzeroberfläche zu interagieren. Beachten Sie, dass die REST-API nach der Aktivierung von SAML in Unified Manager nicht verwendet werden kann, ohne über das IdP zu gehen, um Anfragen zu authentifizieren.</block>
+  <block id="43a12a9165de329d02388e8e878f20ca" category="paragraph">Automatische Konfigurationsfunktion</block>
+  <block id="ef6a29a31f9fb810c02278975cd6cd39" category="paragraph">Unterstützt jetzt die Möglichkeit, den Parameter für die Blockgröße des Volumens für die Verwendung mit der Funktion „Automatische Konfiguration“ für die Ersteinrichtung des Arrays festzulegen. Diese Funktion ist in der CLI nur als „blocksize“ Parameter verfügbar.</block>
+  <block id="017965dda869643c4d632c18853208a2" category="paragraph">Kryptografische Signierung Der Controller-Firmware</block>
+  <block id="f9b1cc083f0890b8fff17a83a0360f47" category="paragraph">Die Controller-Firmware ist kryptografisch signiert. Die Signaturen werden beim ersten Download und beim Booten des Controllers überprüft. Keine Auswirkungen für Endbenutzer zu erwarten. Signaturen werden durch ein von der Zertifizierungsstelle ausgestelltes Extended Validation-Zertifikat gesichert.</block>
+  <block id="637780f8b22fe474ce198ef516dd7d6f" category="paragraph">Kryptografische Signierung Der Laufwerksfirmware</block>
+  <block id="a8c2ab0b22d074faf460a15d6648a3e7" category="paragraph">Die Festplatten-Firmware ist kryptografisch signiert. Die Signaturen werden beim ersten Download überprüft und durch ein von der Zertifizierungsstelle ausgestelltes Extended Validation-Zertifikat gesichert. Der Inhalt der Laufwerksfirmware wird nun als ZIP-Datei geliefert, die sowohl die ältere, nicht signierte Firmware als auch die neu signierte Firmware enthält. Der Benutzer muss die entsprechende Datei basierend auf der Versionsversion des Codes auswählen, der auf dem Zielsystem ausgeführt wird.</block>
+  <block id="3c65e3636111523111e45a49a80face3" category="paragraph">Externe Schlüsselserver-Verwaltung - Zertifikatschlüsselgröße</block>
+  <block id="406774a2d5f641d5566318ef7eb88033" category="paragraph">Die neue Standardgröße des Zertifikatschlüssels beträgt 3072 Bit (ab 2048). Schlüsselgrößen bis zu 4096 Bit werden unterstützt. Ein NVSRAM-Bit muss geändert werden, um die nicht standardmäßigen Schlüsselgrößen zu unterstützen.</block>
+  <block id="710e42f1cedbf3e670aace3815d6e451" category="paragraph">Unterstützung für größere dynamische Festplatten-Pools mit Laufwerken mit 512 b Blockgrößen</block>
+  <block id="7a4f6b11e091466663e9c7d3c9480717" category="paragraph">Kunden, die den Versionstyp des Pools der Version 1 verwenden, können nun einen Disk-Pool mit einer maximalen Größe von 48 TB haben. Die ältere Version unterstützt bis zu 24 TB Disk Pool Größe. Wenn vorhandene Festplatten-Pools in eine größere Größe umgewandelt werden sollen, müssen zuerst alle Volumes entfernt werden. Ein Downgrade-Vorgang ist eingeschränkt, wenn ein Laufwerkspool der Version 1 vorhanden ist.</block>
+  <block id="9a1c6a24950fba4eade84dc9952a77dd" category="paragraph">System Manager und Unified Manager werden nur gestartet, wenn die Mindestanforderungen des Browsers erfüllt sind</block>
+  <block id="09a616fc9241625ec6003f2da3c0cff9" category="paragraph">Bevor System Manager oder Unified Manager gestartet wird, ist eine Mindestversion des Browsers erforderlich. Folgende Versionen werden mindestens unterstützt:</block>
+  <block id="6cdb1f943282038a6441359c5c88f812" category="list-text">Firefox Mindestversion 80</block>
+  <block id="773389fc57f11b52dbe4c622adc51a3b" category="list-text">Chrome Mindestversion 89</block>
+  <block id="2ac44b1b15c0ea01cbb812f5c6cf9b1e" category="list-text">Edge Mindestversion 90</block>
+  <block id="3534d42485ecd595e87248bbb2c6fb1b" category="list-text">Safari Mindestversion 14</block>
+  <block id="bb4e0c918ecc32e775e010bc9f6eff59" category="paragraph">Unterstützung für FIPS 140-3 NVMe-SSD-Laufwerke</block>
+  <block id="eca8285b82a553e8fbe1803bfdeced3e" category="paragraph">NetApp-zertifizierte NVMe-SSD-Laufwerke nach FIPS 140-3 werden jetzt unterstützt. Diese werden im Speicher-Array-Profil und im System Manager korrekt identifiziert.</block>
+  <block id="fb8aaa0a635cb460bcf41d9303fca571" category="paragraph">Unterstützung für SSD-Lese-Cache auf EF300 und EF600</block>
+  <block id="14d2cdc88c041d0313b6c691ee27338f" category="paragraph">SSD-Lese-Cache wird jetzt auf EF300- und EF600-Controllern unterstützt, die HDD mit SAS-Erweiterung verwenden.</block>
+  <block id="8a00db0b101a6946d9caffef7979d8c4" category="paragraph">Unterstützung für asynchrone Remote-Spiegelung von iSCSI und Fibre Channel auf EF300 und EF600</block>
+  <block id="8ea61c04007ddc1b703be50a63a1b3ee" category="paragraph">Asynchrone Remote-Spiegelung (ARVM) wird nun auf EF300- und EF600-Controllern mit NVMe und SAS-basierten Volumes unterstützt.</block>
+  <block id="d99731ca7d5c671cea9d584100385335" category="paragraph">Unterstützung für EF300 und EF600 ohne Laufwerke im Basifach</block>
+  <block id="65c8d39e2e73985a77ff0c8a61c30608" category="paragraph">EF300- und EF600-Controller-Konfigurationen ohne NVMe-Laufwerke in der Basis-Tray werden jetzt unterstützt.</block>
+  <block id="248bd33e5007bccdca76e9d0459df99c" category="paragraph">USB-Anschlüsse für alle Plattformen deaktiviert</block>
+  <block id="3ea3899fea5b85d0cc4b9b3bf6291d51" category="paragraph">USB-Anschlüsse sind jetzt auf allen Plattformen deaktiviert.</block>
+  <block id="9a64b980fbe41aeaf8ecb2f99c2385a9" category="paragraph">NVMe/FC, NVMe/RoCE oder iSCSI</block>
+  <block id="64f514f53e9a2ebedc121c63efdf12c0" category="paragraph">NVME/FC oder NVMe/IB</block>
+  <block id="41bdfc03cf6a112f92ffe96cc4938a68" category="paragraph">NVMe/IB oder NVMe/FC</block>
+  <block id="6d7b18f9c306b8578ca261d6f6b6adee" category="paragraph">Bevor Sie mit dem Upgrade beginnen, sollten Sie sich die ansehen  <block ref="dc69c58b5cd4f4fb6b0ef459d59315bd" category="inline-link-macro-rx"></block>.</block>
+  <block id="a5ff5d8396bab4e857d616fc9fa06b26" category="list-title">Was Sie brauchen</block>
+  <block id="75014b540a900a20abf83a06a6f23acc" category="paragraph">Gehen Sie wie folgt vor:</block>
+  <block id="d51a879a95a1f1b04438a7e672254378" category="list-text">Microsoft Edge (90 und höher)</block>
+  <block id="055c49f32e97721509c3ba8e800b7d0e" category="admonition">Alle USB-Ports für E2800, EF280, E5700, EF570, EF600 Und EF300-Arrays.</block>
+  <block id="9fed5991090e027f2348c873d605f4d6" category="admonition">Der EF300 unterstützt Erweiterungs-Shelf-Konfigurationen ohne Laufwerke im Basisfach Stellen Sie bei Verwendung dieser Konfiguration sicher, dass die Laufwerke im Erweiterungs-Shelf bestückt und ordnungsgemäß mit dem Basissfach verbunden sind, bevor Sie das System einschalten.</block>
+  <block id="dae6baa86f1f6e4135f2552862c8b191" category="list-text">SAS-SSD-Laufwerke mit Erweiterungs-Shelfs: Alle gemischten Shelfs DE212C, DE224C und DE460C dürfen insgesamt 96 SAS-SSD-Laufwerksschächte und 7 Erweiterungs-Shelfs nicht überschreiten, sofern nur DE212C Shelfs verwendet werden. Anschließend sind 8 DE212C Shelfs zulässig. Beispiel: 1 DE460C Shelf plus 1 DE224C Shelf plus 1 DE212C Shelf, 4 DE224C Shelfs oder 8 DE212C Shelfs</block>
+  <block id="e1602ccaec81c1829eb2a83bd391bfb8" category="admonition">Die EF600 unterstützt Erweiterungs-Shelf-Konfigurationen ohne Laufwerke im Basisfach Stellen Sie bei Verwendung dieser Konfiguration sicher, dass die Laufwerke im Erweiterungs-Shelf bestückt und ordnungsgemäß mit dem Basissfach verbunden sind, bevor Sie das System einschalten.</block>
 </blocks>

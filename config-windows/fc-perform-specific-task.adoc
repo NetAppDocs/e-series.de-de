@@ -19,7 +19,9 @@ Für das Fibre Channel-Protokoll konfigurieren Sie die Switches und bestimmen di
 
 Konfigurieren (Zoning) der Fibre Channel (FC)-Switches ermöglicht es den Hosts, eine Verbindung zum Storage-Array herzustellen, und begrenzt die Anzahl der Pfade. Sie Zonen der Switches mithilfe der Managementoberfläche für die Switches.
 
-.Was Sie benötigen
+.Bevor Sie beginnen
+Stellen Sie sicher, dass Sie Folgendes haben:
+
 * Administrator-Anmeldeinformationen für die Switches.
 * Der WWPN jedes Host-Initiator-Ports und jedes Controller-Zielports, der mit dem Switch verbunden ist. (Verwenden Sie Ihr HBA Utility für die Erkennung.)
 

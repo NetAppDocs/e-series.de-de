@@ -21,12 +21,13 @@ Diese Aufgabe gilt für DCM- und DCM2-Laufwerk-Shelfs.
 
 .Bevor Sie beginnen
 * Überprüfen Sie die Anforderungen für die Festplattenbehandlung in link:drives-overview-supertask-concept.html["Anforderungen für den Austausch von E5700-Laufwerken"].
+* Stellen Sie sicher, dass Sie Folgendes haben:
++
+** Ein von NetApp unterstütztes Ersatzlaufwerk für Ihr Controller Shelf oder Festplatten-Shelf.
+** Ein ESD-Armband, oder Sie haben andere antistatische Vorsichtsmaßnahmen getroffen.
+** Eine Management Station mit einem Browser, der für den Controller auf den SANtricity System Manager zugreifen kann. (Zeigen Sie zum Öffnen der System Manager-Schnittstelle den Domain-Namen oder die IP-Adresse des Controllers im Browser.)
 
 
-.Was Sie benötigen
-* Ein von NetApp unterstütztes Ersatzlaufwerk für Ihr Controller Shelf oder Festplatten-Shelf.
-* Ein ESD-Armband, oder Sie haben andere antistatische Vorsichtsmaßnahmen getroffen.
-* Eine Management Station mit einem Browser, der für den Controller auf den SANtricity System Manager zugreifen kann. (Zeigen Sie zum Öffnen der System Manager-Schnittstelle den Domain-Namen oder die IP-Adresse des Controllers im Browser.)
 
 
 

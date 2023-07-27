@@ -29,11 +29,12 @@ Während Sie diese Aufgabe ausführen, versorgt der andere Netzbehälter beide L
 * Überprüfen Sie die Anforderungen des Leistungskansters in link:canisters-overview-supertask-concept.html["Anforderungen für den Austausch von Behälterschannissen"].
 * Überprüfen Sie die Details im Recovery Guru, um zu bestätigen, dass ein Problem mit dem Power Canister vorliegt, und wählen Sie *recheck* aus dem Recovery Guru aus, um sicherzustellen, dass keine weiteren Punkte zuerst angesprochen werden müssen.
 * Überprüfen Sie, ob die gelbe Warn-LED am Netzbehälter leuchtet und dass der Behälter über einen Fehler verfügt. Wenden Sie sich an den technischen Support, wenn die Warn-LEDs für beide Strombehälter im Regal gelb leuchten.
+* Stellen Sie sicher, dass Sie Folgendes haben:
++
+** Ein Ersatznetzbehälter, der für Ihr Controller-Shelf- oder Festplatten-Shelf-Modell unterstützt wird.
+** Ein ESD-Armband, oder Sie haben andere antistatische Vorsichtsmaßnahmen getroffen.
 
 
-.Was Sie benötigen
-* Ein Ersatznetzbehälter, der für Ihr Controller-Shelf- oder Festplatten-Shelf-Modell unterstützt wird.
-* Ein ESD-Armband, oder Sie haben andere antistatische Vorsichtsmaßnahmen getroffen.
 
 
 
