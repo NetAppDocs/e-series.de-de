@@ -63,12 +63,31 @@ Externe Schlüsselserver-Verwaltung - Zertifikatschlüsselgröße
  a| 
 Die neue Standardgröße des Zertifikatschlüssels beträgt 3072 Bit (ab 2048). Schlüsselgrößen bis zu 4096 Bit werden unterstützt. Ein NVSRAM-Bit muss geändert werden, um die nicht standardmäßigen Schlüsselgrößen zu unterstützen.
 
+Die Auswahlwerte für die Schlüsselgröße lauten wie folgt:
+
+* STANDARD = 0
+* LÄNGE 2048 = 1
+* LÄNGE 3072 = 2
+* LÄNGE 4096 = 3
+
+
+So ändern Sie die Schlüsselgröße über SMcli auf 4096:
+
+`set controller[b] globalnvsrambyte[0xc0]=3;`
+`set controller[a] globalnvsrambyte[0xc0]=3;`
+
+Schlüsselgröße abfragen:
+
+`show allcontrollers globalnvsrambyte[0xc0];`
+
 
 
  a| 
-Unterstützung für größere dynamische Festplatten-Pools mit Laufwerken mit 512 b Blockgrößen
+Verbesserungen Am Laufwerk-Pool
  a| 
-Kunden, die den Versionstyp des Pools der Version 1 verwenden, können nun einen Disk-Pool mit einer maximalen Größe von 48 TB haben. Die ältere Version unterstützt bis zu 24 TB Disk Pool Größe. Wenn vorhandene Festplatten-Pools in eine größere Größe umgewandelt werden sollen, müssen zuerst alle Volumes entfernt werden. Ein Downgrade-Vorgang ist eingeschränkt, wenn ein Laufwerkspool der Version 1 vorhanden ist.
+Festplatten-Pools, die mit Controllern erstellt werden, die 11.80 oder höher ausführen, sind _Version 1_ Pools im Gegensatz zu _Version 0_ Pools. Ein Downgrade-Vorgang ist eingeschränkt, wenn ein _Version 1_-Laufwerk-Pool vorhanden ist.
+
+Die Version eines Laufwerkspools kann im Speicher-Array-Profil identifiziert werden.
 
 
 
