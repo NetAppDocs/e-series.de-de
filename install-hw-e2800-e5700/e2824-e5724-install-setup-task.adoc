@@ -12,3 +12,23 @@ summary: In diesen Anweisungen wird die Installation und Einrichtung Ihres neuen
 
 [role="lead"]
 In diesen Anweisungen wird die Installation und Einrichtung Ihres neuen Storage-Systems sowie Links zu weiteren Inhalten erläutert.
+
+Sie können eines der folgenden Formate wählen, um Sie bei der Installation und Einrichtung des neuen Storage-Systems zu unterstützen.
+
+* *PDF*
++
+Dies ist eine druckbare PDF-Datei mit Schritt-für-Schritt-Anweisungen mit Live-Links zu weiteren Inhalten.
+
++
+** https://library.netapp.com/ecm/ecm_download_file/ECMLP2842063["E5724, EF570, EF280, E2812, E2824, DE212C und DE224C PDF Poster"^]
+
+
+* *Online-Anweisungen*
++
+Dies sind die auf diesem Standort beschriebenen Setup-Anweisungen. Beginnen Sie mit einem der folgenden Themen.
+
++
+** xref:e2824-e5724-prepare-task.adoc[Installationsvorbereitung für E5724, EF570, EF280, E2812, E2824, DE212C und DE224C]
+
+
+

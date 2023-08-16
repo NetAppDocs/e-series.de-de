@@ -8860,4 +8860,6 @@
   <block id="32e0b12538b4abe36e648446dbb8723b" category="paragraph">Verbesserungen Am Laufwerk-Pool</block>
   <block id="82faf4161a36aa8a69bd4c363e6b57cc" category="paragraph">Festplatten-Pools, die mit Controllern erstellt werden, die 11.80 oder höher ausführen, sind _Version 1_ Pools im Gegensatz zu _Version 0_ Pools. Ein Downgrade-Vorgang ist eingeschränkt, wenn ein _Version 1_-Laufwerk-Pool vorhanden ist.</block>
   <block id="45e56b98136f4292dd8c522edf38b3b2" category="paragraph">Die Version eines Laufwerkspools kann im Speicher-Array-Profil identifiziert werden.</block>
+  <block id="82bf7451a207cfbac427edc3bb60fced" category="paragraph">Dies ist eine druckbare PDF-Datei mit Schritt-für-Schritt-Anweisungen mit Live-Links zu weiteren Inhalten.</block>
+  <block id="a2f0a23d015da77ff81697442b8f6aad" category="paragraph">Dies sind die auf diesem Standort beschriebenen Setup-Anweisungen.</block>
 </blocks>
