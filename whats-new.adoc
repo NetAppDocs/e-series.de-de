@@ -94,7 +94,9 @@ Die Version eines Laufwerkspools kann im Speicher-Array-Profil identifiziert wer
  a| 
 System Manager und Unified Manager werden nur gestartet, wenn die Mindestanforderungen des Browsers erfüllt sind
  a| 
-Bevor System Manager oder Unified Manager gestartet wird, ist eine Mindestversion des Browsers erforderlich. Folgende Versionen werden mindestens unterstützt:
+Bevor System Manager oder Unified Manager gestartet wird, ist eine Mindestversion des Browsers erforderlich.
+
+Folgende Versionen werden mindestens unterstützt:
 
 * Firefox Mindestversion 80
 * Chrome Mindestversion 89
@@ -136,5 +138,101 @@ EF300- und EF600-Controller-Konfigurationen ohne NVMe-Laufwerke in der Basis-Tra
 USB-Anschlüsse für alle Plattformen deaktiviert
  a| 
 USB-Anschlüsse sind jetzt auf allen Plattformen deaktiviert.
+
+
+
+ a| 
+Höherer maximaler SSD-Lese-Cache
+ a| 
+Der maximale SSD-Lese-Cache wurde von 5 TB auf 8 TB erhöht.
+
+
+
+ a| 
+Weisen Sie in Duplexkonfigurationen einem einzelnen Volume All-Flash-Lese-Cache zu
+ a| 
+Der gesamte SSD-Lese-Cache kann nun auf Duplexsystemen demselben Volume zugewiesen werden, wenn ein einzelnes Volume den gesamten SSD-Cache nutzt.
+
+
+
+ a| 
+Die Laufwerkseriennummer wurde der Laufwerkzusammenfassungstabelle des Speicherarrayprofils hinzugefügt
+ a| 
+Die Seriennummer des Laufwerks wurde der Laufwerkzusammenfassungstabelle im Speicher-Array-Profil hinzugefügt.
+
+
+
+ a| 
+Dom0-misc-Logs wurden täglichen ASUP hinzugefügt
+ a| 
+Die dom0-misc-Protokolle für Controller A und B wurden den täglichen ASUPs hinzugefügt.
+
+
+
+ a| 
+Port 443 wird jetzt standardmäßig für die Kommunikation von Anwendungen mit eingebetteten Webdiensten verwendet
+ a| 
+Port 443 wird jetzt standardmäßig für die Kommunikation mit dem eingebetteten Webserver verwendet. Der  `-useLegacyTransferPort` Es wurde ein CLI-Befehl für diejenigen hinzugefügt, die stattdessen den Legacy 8443 Transfer Port verwenden möchten. Weitere Informationen zum neuen CLI-Befehl -useLegacyTransferPort finden Sie im https://docs.netapp.com/us-en/e-series-cli/whats-new.html["SANtricity CLI Neuheiten"].
+
+
+
+ a| 
+Scan-Volume-Parity Progress-Funktion
+ a| 
+Die folgenden CLI-Befehle wurden implementiert, um Job-basierte Volume Parity-Scan-Vorgänge zu unterstützen:
+
+* Starten Sie die Prüfung der Volume-Parität
+* Fehler beim Speichern der Volume-Paritätsprüfung
+* Stoppen Sie die Überprüfung des Volume Parity Jobs
+* Zeigt die Option „Check Volume Parity Job“ oder „Jobs“ an
+
+
+Weitere Informationen zu den CLI-Befehlen des neuen Job-basierten Volume Parity Scan finden Sie im https://docs.netapp.com/us-en/e-series-cli/whats-new.html["SANtricity CLI Neuheiten"].
+
+
+
+ a| 
+MFA-Unterstützung für Unified Manager
+ a| 
+Multi-Faktor-Authentifizierung (MFA) wird jetzt unter Unified Manager unterstützt.
+
+
+
+ a| 
+Umschaltsymbol für die Hardware-Ansicht auf der Vorderseite
+ a| 
+In der Hardwareansicht von System Manager/Unified Manager stehen jetzt die folgenden beiden Registerkarten zur Steuerung der Vorder- und Rückansicht zur Verfügung:
+
+* Registerkarte Laufwerke
+* Registerkarte Controller & Komponenten
+
+
+
+
+ a| 
+VCenter Storage Plug-in
+ a| 
+Das vCenter Storage Plug-in wurde hinsichtlich der Kompatibilität mit der Version 11.80 der E-Series aktualisiert.
+
+
+
+ a| 
+Web Services Proxy 6.0
+ a| 
+Der Web Services Proxy wurde auf Version 6.0 aktualisiert, um die Kompatibilität mit der E-Series Version 11.80 zu gewährleisten.
+
+
+
+ a| 
+ASUP-Fallerstellungs-Flag für Ereignisse mit nominaler und maximaler Temperatur der E-Series wurde entfernt
+ a| 
+Das Flag für die Case-Erstellung ist jetzt für Ereignisse mit Überschreitung der nominalen und maximalen Temperatur deaktiviert, für die keine Aktion erforderlich ist.
+
+
+
+ a| 
+Flag zur Erstellung von Prioritätsfällen für das Ereignis 0x1209 Mel aktiviert
+ a| 
+Ein Flag für die Case-Erstellung wird jetzt für das erstellt `MEL_EV_DEGRADE_CHANNEL 0x1209` MEL-Ereignis.
 
 |===
