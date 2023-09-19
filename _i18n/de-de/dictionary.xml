@@ -8817,10 +8817,7 @@
   <block id="a5ff5d8396bab4e857d616fc9fa06b26" category="list-title">Was Sie brauchen</block>
   <block id="75014b540a900a20abf83a06a6f23acc" category="paragraph">Gehen Sie wie folgt vor:</block>
   <block id="d51a879a95a1f1b04438a7e672254378" category="list-text">Microsoft Edge (90 und höher)</block>
-  <block id="055c49f32e97721509c3ba8e800b7d0e" category="admonition">Alle USB-Ports für E2800, EF280, E5700, EF570, EF600 Und EF300-Arrays.</block>
-  <block id="9fed5991090e027f2348c873d605f4d6" category="admonition">Der EF300 unterstützt Erweiterungs-Shelf-Konfigurationen ohne Laufwerke im Basisfach Stellen Sie bei Verwendung dieser Konfiguration sicher, dass die Laufwerke im Erweiterungs-Shelf bestückt und ordnungsgemäß mit dem Basissfach verbunden sind, bevor Sie das System einschalten.</block>
   <block id="dae6baa86f1f6e4135f2552862c8b191" category="list-text">SAS-SSD-Laufwerke mit Erweiterungs-Shelfs: Alle gemischten Shelfs DE212C, DE224C und DE460C dürfen insgesamt 96 SAS-SSD-Laufwerksschächte und 7 Erweiterungs-Shelfs nicht überschreiten, sofern nur DE212C Shelfs verwendet werden. Anschließend sind 8 DE212C Shelfs zulässig. Beispiel: 1 DE460C Shelf plus 1 DE224C Shelf plus 1 DE212C Shelf, 4 DE224C Shelfs oder 8 DE212C Shelfs</block>
-  <block id="e1602ccaec81c1829eb2a83bd391bfb8" category="admonition">Die EF600 unterstützt Erweiterungs-Shelf-Konfigurationen ohne Laufwerke im Basisfach Stellen Sie bei Verwendung dieser Konfiguration sicher, dass die Laufwerke im Erweiterungs-Shelf bestückt und ordnungsgemäß mit dem Basissfach verbunden sind, bevor Sie das System einschalten.</block>
   <block id="70a5ac954926edc08c5f6fc4c248a4a6" category="section-title">SANtricity Version 11.7</block>
   <block id="f7b52729af7c7aa177e09390f0afd194" category="list-text"><block ref="f7b52729af7c7aa177e09390f0afd194" category="inline-link-rx"></block></block>
   <block id="797222f106ff986b71e9f972dd342bc3" category="list-text"><block ref="797222f106ff986b71e9f972dd342bc3" category="inline-link-rx"></block></block>
@@ -8895,4 +8892,7 @@
   <block id="d7ffc2406b2b1f56267e389dcea17d16" category="paragraph">Das Flag für die Case-Erstellung ist jetzt für Ereignisse mit Überschreitung der nominalen und maximalen Temperatur deaktiviert, für die keine Aktion erforderlich ist.</block>
   <block id="746cf185d12f5492055c99b5dda9119d" category="paragraph">Flag zur Erstellung von Prioritätsfällen für das Ereignis 0x1209 Mel aktiviert</block>
   <block id="09c222edb73c49afd2e9ec9f75a2cd53" category="paragraph">Ein Flag für die Case-Erstellung wird jetzt für das erstellt<block ref="768a075a6d4dc734e5397ee50957d8d8" prefix=" " category="inline-code"></block> MEL-Ereignis.</block>
+  <block id="11f16f90266e9e59b05bab98913c351d" category="admonition">Bei SANtricity OS 11.80GA und höher sind alle USB-Ports auf den E2800, EF280, E5700, EF570, EF600 und EF300-Arrays.</block>
+  <block id="fad6f3761e69d291ccde3b2351a1c961" category="admonition">Für SANtricity OS 11.80GA und höher unterstützt der EF300 Erweiterungs-Shelf-Konfigurationen ohne Laufwerke im Basisfach Stellen Sie bei Verwendung dieser Konfiguration sicher, dass die Laufwerke im Erweiterungs-Shelf bestückt und ordnungsgemäß mit dem Basissfach verbunden sind, bevor Sie das System einschalten.</block>
+  <block id="cc1b53336ed5c926305dd7ad876ab1d2" category="admonition">Bei SANtricity OS 11.80GA und höher unterstützt die EF600 Erweiterungs-Shelf-Konfigurationen ohne Laufwerke im Basisfach Stellen Sie bei Verwendung dieser Konfiguration sicher, dass die Laufwerke im Erweiterungs-Shelf bestückt und ordnungsgemäß mit dem Basissfach verbunden sind, bevor Sie das System einschalten.</block>
 </blocks>

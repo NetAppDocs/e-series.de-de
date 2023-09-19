@@ -26,7 +26,7 @@ E-Series Arrays sind in den folgenden Modellen verfügbar:
 
 
 
-NOTE: Alle USB-Ports für E2800, EF280, E5700, EF570, EF600 Und EF300-Arrays.
+NOTE: Bei SANtricity OS 11.80GA und höher sind alle USB-Ports auf den E2800, EF280, E5700, EF570, EF600 und EF300-Arrays.
 
 
 
@@ -137,7 +137,7 @@ Unterstützt folgende Laufwerke mit einer einzelnen Host Interface Card (HIC) pr
 
 
 
-NOTE: Der EF300 unterstützt Erweiterungs-Shelf-Konfigurationen ohne Laufwerke im Basisfach Stellen Sie bei Verwendung dieser Konfiguration sicher, dass die Laufwerke im Erweiterungs-Shelf bestückt und ordnungsgemäß mit dem Basissfach verbunden sind, bevor Sie das System einschalten.
+NOTE: Für SANtricity OS 11.80GA und höher unterstützt der EF300 Erweiterungs-Shelf-Konfigurationen ohne Laufwerke im Basisfach Stellen Sie bei Verwendung dieser Konfiguration sicher, dass die Laufwerke im Erweiterungs-Shelf bestückt und ordnungsgemäß mit dem Basissfach verbunden sind, bevor Sie das System einschalten.
 
 
 
@@ -274,7 +274,7 @@ Unterstützt folgende Laufwerke mit einer einzelnen Host Interface Card (HIC) pr
 
 
 
-NOTE: Die EF600 unterstützt Erweiterungs-Shelf-Konfigurationen ohne Laufwerke im Basisfach Stellen Sie bei Verwendung dieser Konfiguration sicher, dass die Laufwerke im Erweiterungs-Shelf bestückt und ordnungsgemäß mit dem Basissfach verbunden sind, bevor Sie das System einschalten.
+NOTE: Bei SANtricity OS 11.80GA und höher unterstützt die EF600 Erweiterungs-Shelf-Konfigurationen ohne Laufwerke im Basisfach Stellen Sie bei Verwendung dieser Konfiguration sicher, dass die Laufwerke im Erweiterungs-Shelf bestückt und ordnungsgemäß mit dem Basissfach verbunden sind, bevor Sie das System einschalten.
 
 
 
