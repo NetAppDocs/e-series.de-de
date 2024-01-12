@@ -70,6 +70,4 @@ E2760, E5660
 DE460C
 
 |===
-Weitere Informationen zu anderen Kabeloptionen finden Sie im https://mysupport.netapp.com/ecm/ecm_download_file/ECMLP2773533["Hardware-Verkabelungsleitfaden für die E-Series"^] Für ältere Systeme.
-
 Informationen über die Verkabelung zur Unterstützung von Spiegelungsfunktionen finden Sie im https://www.netapp.com/us/media/tr-4656.pdf["Funktionsbeschreibungen und Implementierungsleitfaden für synchrone und asynchrone Spiegelung"^].
