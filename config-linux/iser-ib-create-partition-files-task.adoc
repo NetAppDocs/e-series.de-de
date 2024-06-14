@@ -28,6 +28,10 @@ Formatieren Sie die LUN mit einem Dateisystem wie ext4. Für einige Applikatione
 .Schritte
 . Rufen Sie die SCSI-ID des zugeordneten Laufwerks ab, indem Sie den ausgeben `sanlun lun show -p` Befehl.
 +
+
+NOTE: Alternativ können Sie diese Ergebnisse auch über das abrufen `multipath -ll` Befehl.
+
++
 Die SCSI-ID ist eine 33-stellige Zeichenfolge aus Hexadezimalziffern, die mit der Zahl 3 beginnt. Wenn benutzerfreundliche Namen aktiviert sind, meldet Device Mapper Festplatten als mpath anstatt über eine SCSI-ID.
 
 +

@@ -16,6 +16,56 @@ In der folgenden Tabelle werden die neuen Funktionen von SANtricity OS 11.8 für
 
 
 
+== Neue Funktionen in Version 11.80.1
+
+[cols="35h,~"]
+|===
+| Neues Feature | Beschreibung 
+
+
+ a| 
+`-identifyDevices` Parameter
+ a| 
+Eine neue `-identifyDevices` Parameter ist jetzt im SMcli verfügbar. Mit diesem neuen Parameter können Sie nach allen SCSI-nativen Blockgeräten suchen, die Ihren Speicher-Arrays zugeordnet sind. Weitere Informationen finden Sie unter Link: https://docs.netapp.com/us-en/e-series-cli/get-started/downloadable-smcli-parameters.html#identify-Devices[Downloadable SMcli-Befehlszeilenparameter^].
+
+
+
+ a| 
+Ethernet-Kernel-Statistik
+ a| 
+Eine neue Option für Ethernet-Kernel-Statistiken ist jetzt auf der Seite iSCSI-Statistikpakete anzeigen in System Manager verfügbar. Mit dieser neuen Option können Sie Statistiken für die Plattformkerneltreiber des iSCSI-Geräts anzeigen. Weitere Informationen finden Sie unter dem Link https://docs.netapp.com/us-en/e-series-santricity/sm-support/view-iscsi-statistics-packages-support.html[View iSCSI Statistics Packages^].
+
+
+
+ a| 
+Verbesserte Filterung für nicht zugewiesene und sichere aktivierte Laufwerke in System Manager
+ a| 
+System Manager filtert bei der Auswahl von manuellen Laufwerken nun nicht zugewiesene und gesicherte aktivierte Laufwerke heraus. Daher stimmt die Laufwerksauswahlzahl von System Manager jetzt mit der Liste der Kandidaten für die automatische Laufwerksauswahl unter CLI und REST API überein. Ein eindeutiges Symbol und ein Hover-Text werden jetzt auch auf nicht zugewiesene und sichere aktivierte Laufwerke in System Manager angewendet.
+
+
+
+ a| 
+Zusätzliche Möglichkeit zum Blockieren von IP-Adressen über REST-API-Endpunkt
+ a| 
+Benutzer können jetzt bestimmte IP-Adressen über den Endpunkt Einstellungen blockieren (`/devmgr/v2/settings`). Nach der Konfiguration über den Endpunkt Einstellungen können nur über eine Whitelist angegebene IP-Adressen mit dem Speichergerät kommunizieren. Diese neue Funktion unterstützt IPv4- und IPv6-Adresslisten.
+
+
+
+ a| 
+VCenter Storage Plug-in
+ a| 
+Das vCenter Storage Plug-in wurde hinsichtlich der Kompatibilität mit der Version 11.80.1 der E-Series aktualisiert.
+
+
+
+ a| 
+Web Services Proxy
+ a| 
+Der Web Services Proxy wurde auf Version 6.1 aktualisiert, um die Kompatibilität mit der E-Series Version 11.80.1 zu gewährleisten.
+
+|===
+
+
 == Neue Funktionen in Version 11.80
 
 [cols="35h,~"]

@@ -23,7 +23,6 @@ Suchen Sie mithilfe des HBA Utility die SAS-Adressen und nehmen Sie dann die ent
 Lesen Sie die Richtlinien für HBA Utilities:
 
 * Die meisten HBA-Anbieter bieten ein HBA-Dienstprogramm an.
-* Host-I/O-Ports registrieren möglicherweise automatisch, wenn der Host-Kontext-Agent installiert ist.
 
 
 .Schritte

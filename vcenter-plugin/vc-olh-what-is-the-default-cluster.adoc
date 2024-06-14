@@ -19,7 +19,7 @@ Das Standard-Cluster ist eine systemdefinierte Einheit, die jedem nicht zugeordn
 Eine nicht zugeordnete Host-Port-ID ist ein Host-Port, der nicht logisch einem bestimmten Host zugeordnet ist, aber physisch in einem Host installiert und beim Speicher-Array angemeldet ist.
 
 
-NOTE: Wenn Hosts spezifischen Zugriff auf bestimmte Volumes im Storage-Array haben sollen, dürfen Sie das Standardcluster nicht verwenden. Stattdessen müssen Sie die Host-Port-IDs den entsprechenden Hosts zuordnen. Diese Aufgabe kann entweder manuell während des Vorgangs „Host erstellen“ oder automatisch mit dem Host Context Agent (HCA) durchgeführt werden, der auf jedem Host installiert ist. Anschließend weisen Sie Volumes einem einzelnen Host oder einem Host-Cluster zu.
+NOTE: Wenn Hosts spezifischen Zugriff auf bestimmte Volumes im Storage-Array haben sollen, dürfen Sie das Standardcluster nicht verwenden. Stattdessen müssen Sie die Host-Port-IDs den entsprechenden Hosts zuordnen. Diese Aufgabe kann während des Vorgangs „Host erstellen“ manuell ausgeführt werden. Anschließend weisen Sie Volumes einem einzelnen Host oder einem Host-Cluster zu.
 
 Sie sollten das Standardcluster nur in besonderen Situationen verwenden, in denen Ihre externe Speicherumgebung geeignet ist, allen Hosts und allen angemeldeten Host-Port-IDs, die mit dem Speicher-Array verbunden sind, Zugriff auf alle Volumes zu gewähren (All-Access-Modus). Ohne die Hosts dem Storage Array oder der Benutzeroberfläche bekannt zu machen.
 

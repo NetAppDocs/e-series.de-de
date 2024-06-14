@@ -422,7 +422,24 @@ CAUTION: *Möglicher Verlust des Datenzugangs* -- Wenn der gerade installierte C
 
 
 
-. Wenn der Controller wieder online ist, bestätigen Sie, dass sein Status optimal lautet, und überprüfen Sie die Warn-LEDs für das Controller-Shelf.
+. Wenn der Controller wieder online ist, prüfen Sie, ob eine NVSRAM-Nichtübereinstimmung in Recovery Guru gemeldet wird.
++
+.. Wenn eine NVSRAM-Abweichung gemeldet wird, aktualisieren Sie NVSRAM mit dem folgenden SMcli-Befehl:
++
+[listing]
+----
+SMcli <controller A IP> <controller B IP> -u admin -p <password> -k -c "download storageArray NVSRAM file=\"C:\Users\testuser\Downloads\NVSRAM .dlp file>\" forceDownload=TRUE;"
+----
++
+Der `-k` Parameter ist erforderlich, wenn das Array nicht https sicher ist.
+
+
+
++
+
+NOTE: Wenn der SMcli-Befehl nicht abgeschlossen werden kann, wenden Sie sich an https://www.netapp.com/company/contact-us/support/["Technischer Support von NetApp"^] Oder melden Sie sich beim an https://mysupport.netapp.com["NetApp Support Website"^] Um einen Fall zu erstellen.
+
+. Überprüfen Sie, ob der Status des Systems optimal ist, und überprüfen Sie die Warn-LEDs des Controller-Shelfs.
 +
 Wenn der Status nicht optimal ist oder eine der Warn-LEDs leuchtet, vergewissern Sie sich, dass alle Kabel richtig eingesetzt sind und der Controller-Behälter richtig installiert ist. Gegebenenfalls den Controller-Behälter ausbauen und wieder einbauen.
 
@@ -430,13 +447,13 @@ Wenn der Status nicht optimal ist oder eine der Warn-LEDs leuchtet, vergewissern
 
 NOTE: Wenden Sie sich an den technischen Support, wenn das Problem nicht gelöst werden kann.
 
-. Falls erforderlich, verteilen Sie alle Volumes zurück an den bevorzugten Eigentümer.
+. Falls erforderlich, verteilen Sie alle Volumes mithilfe von SANtricity System Manager zurück an ihren bevorzugten Eigentümer.
 +
 .. Wählen Sie Menü:Storage[Volumes].
 .. Wählen Sie Menü:Mehr[Umverteilung von Volumes].
 
 
-. Klicken Sie auf Menü:Hardware[Support > Upgrade Center], um sicherzustellen, dass die neueste Version der SANtricity OS Software (Controller-Firmware) installiert ist.
+. Klicken Sie auf das Menü: Hardware[Support > Upgrade Center], um sicherzustellen, dass die Firmware- und NVSRAM-Versionen auf dem System die gewünschte Stufe erreichen.
 +
 Installieren Sie bei Bedarf die neueste Version.
 

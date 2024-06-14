@@ -182,44 +182,9 @@ Sicher
 
 == Schritt: Hostzugriff erstellen und Volumes zuweisen
 
-Ein Host kann automatisch oder manuell erstellt werden:
-
-* *Automatic* -- die automatische Hosterstellung für SCSI-basierte (nicht NVMe-of) Hosts wird vom Host Context Agent (HCA) initiiert. Die HCA ist ein Dienstprogramm, das Sie auf jedem Host installieren können, der mit dem Speicher-Array verbunden ist. Jeder Host, auf dem die HCA installiert ist, sendet seine Konfigurationsinformationen über den I/O-Pfad an die Speicher-Array-Controller. Basierend auf den Host-Informationen erstellen die Controller automatisch den Host und die zugehörigen Host-Ports und legen den Host-Typ fest. Bei Bedarf können Sie alle zusätzlichen Änderungen an der Hostkonfiguration vornehmen. Nachdem der HCA die automatische Erkennung durchgeführt hat, wird der Host automatisch mit den folgenden Attributen konfiguriert:
-+
-** Der Hostname, der vom Systemnamen des Hosts abgeleitet wurde.
-** Die dem Host zugeordneten Host-Identifikator-Ports.
-** Der Host-Betriebssystem-Typ des Hosts.
-
-
-
-
-
-NOTE: Die Host Context Agent-Software für Linux und Windows ist über verfügbar https://mysupport.netapp.com/site/downloads["NetApp Support – Downloads"^].
-
-
-NOTE: Hosts werden als eigenständige Hosts erstellt. Das HCA erstellt oder fügt nicht automatisch zu Host-Clustern hinzu.
+Ein Host kann manuell erstellt werden:
 
 * *Manuell* – bei der manuellen Hosterstellung verknüpfen Sie Host-Port-IDs, indem Sie sie aus einer Liste auswählen oder manuell eingeben. Nachdem Sie einen Host erstellt haben, können Sie ihm Volumes zuweisen oder einem Host Cluster hinzufügen, wenn Sie den Zugriff auf Volumes freigeben möchten.
-
-
-
-
-=== Verwenden des HCA, um den Host automatisch zu ermitteln
-
-Sie können dem Host Context Agent (HCA) erlauben, die Hosts automatisch zu erkennen und anschließend zu überprüfen, ob die Informationen korrekt sind.
-
-.Schritte
-. Wählen Sie auf der Seite Verwalten das Speicher-Array mit der Hostverbindung aus.
-. Wählen Sie Menü:Bereitstellung [Hosts konfigurieren].
-+
-Die Seite Hosts konfigurieren wird geöffnet.
-
-. Wählen Sie Menü:Storage[Hosts].
-+
-In der Tabelle werden die automatisch erstellten Hosts aufgeführt.
-
-. Stellen Sie sicher, dass die vom HCA bereitgestellten Informationen richtig sind (Name, Hosttyp, Host Port-IDs).
-. Wenn Sie eine der Informationen ändern müssen, wählen Sie den Host aus, und klicken Sie dann auf *Einstellungen anzeigen/bearbeiten*.
 
 
 

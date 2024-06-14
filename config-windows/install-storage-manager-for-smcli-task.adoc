@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: install Storage Manager Windows, install CLI Windows, install command line interface, install Host Context Agent, install HCA, express Windows configuration, software configuration, Windows host, E2800, E5700, EF300, EF600, E-Series, eseries 
 summary: Installieren Sie Storage Manager für CLI und HCA in der Windows Express-Methode. 
 ---
-= Installation von SANtricity Storage Manager für SMcli und Host Context Agent (HCA)
+= Installation von SANtricity Storage Manager für SMcli (SANtricity Softwareversion 11.53 oder älter)
 :allow-uri-read: 
 :experimental: 
 :icons: font
@@ -17,7 +17,10 @@ Wenn Sie die SANtricity-Software 11.53 oder eine frühere Version verwenden, kö
 SANtricity Storage Manager enthält die Befehlszeilenschnittstelle (CLI) für weitere Managementaufgaben und den Host Context Agent, damit die Host-Konfigurationsinformationen über den I/O-Pfad an die Storage Array Controller übertragen werden können.
 
 
-NOTE: Wenn Sie SANtricity Software 11.60 und höher verwenden, müssen Sie diese Schritte nicht ausführen. Die sichere SANtricity CLI (SMcli) ist im SANtricity Betriebssystem enthalten und kann über den SANtricity System Manager heruntergeladen werden. Weitere Informationen zum Herunterladen des SMcli über den SANtricity System Manager finden Sie im Thema _Download Befehlszeilenschnittstelle (CLI)_ unter der SANtricity System Manager Online-Hilfe.
+NOTE: Wenn Sie SANtricity Software 11.60 und höher verwenden, müssen Sie diese Schritte nicht ausführen. Die sichere SANtricity CLI (SMcli) ist im SANtricity Betriebssystem enthalten und kann über den SANtricity System Manager heruntergeladen werden. Weitere Informationen zum Herunterladen des SMcli über den SANtricity-System-Manager finden Sie im link:https://docs.netapp.com/us-en/e-series-santricity/sm-settings/download-cli.html["Laden Sie das Thema Befehlszeilenschnittstelle (CLI) in der Online-Hilfe des SANtricity Systemmanagers herunter"^]
+
+
+NOTE: Ab der SANtricity-Softwareversion 11.80.1 wird der Host Context Agent nicht mehr unterstützt.
 
 .Bevor Sie beginnen
 Stellen Sie sicher, dass Sie Folgendes haben:

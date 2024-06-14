@@ -138,6 +138,10 @@ image:../media/ethernet_callout.png[""]
 
 |===
 . Öffnen Sie einen Browser, und verwenden Sie die Standard-IP-Adresse (169.254.128.101), um eine Verbindung zum Controller herzustellen. Der Controller sendet ein selbstsigniertes Zertifikat zurück. Der Browser informiert Sie darüber, dass die Verbindung nicht sicher ist.
++
+
+NOTE: Bei Plattformen mit SANtricity 11.60 und höher ist die Standard-Subnetzmaske 255.255.0.0.
+
 . Befolgen Sie die Anweisungen des Browsers, um SANtricity System Manager zu starten.
 +
 

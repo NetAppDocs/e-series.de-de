@@ -133,7 +133,7 @@ Sie können eine der folgenden Optionen verwenden, um die neuen iSCSI-Ports zu v
 . Bearbeiten Sie die Host-Partition, um die iSCSI-Host-Port-IDs hinzuzufügen und die FC-Host-Port-IDs zu entfernen.
 . Nach dem Neustart der iSCSI-Hosts können Sie die Volumes mithilfe der entsprechenden Verfahren auf den Hosts registrieren und sie Ihrem Betriebssystem zur Verfügung stellen.
 +
-** Je nach Betriebssystem sind zwei Dienstprogramme in der Speicherverwaltungssoftware enthalten (Hot_add und SMDevices). Diese Dienstprogramme helfen bei der Registrierung der Volumes bei den Hosts und zeigen auch die entsprechenden Gerätenamen für die Volumes an.
+** Sie können den SMcli-Befehl verwenden `-identifyDevices` Um die entsprechenden Gerätenamen für die Volumes anzuzeigen. Die SMcli ist im SANtricity Betriebssystem enthalten und kann über den SANtricity System Manager heruntergeladen werden. Weitere Informationen zum Herunterladen des SMcli über den SANtricity-System-Manager finden Sie im https://docs.netapp.com/us-en/e-series-santricity/sm-settings/download-cli.html["Laden Sie das Thema Befehlszeilenschnittstelle (CLI) in der Online-Hilfe des SANtricity Systemmanagers herunter"^].
 ** Unter Umständen müssen Sie bestimmte Tools und Optionen verwenden, die mit Ihrem Betriebssystem zur Verfügung gestellt werden, um die Volumes verfügbar zu machen (also Laufwerksbuchstaben zuzuweisen, Mount-Punkte zu erstellen usw.). Weitere Informationen finden Sie in der Dokumentation Ihres Host-Betriebssystems.
 
 
@@ -170,7 +170,7 @@ Sie können eine der folgenden Optionen verwenden, um die neuen FC-Ports zu verw
 . Bearbeiten Sie die Host-Partition, um die FC-Host-Port-IDs hinzuzufügen und die iSCSI-Host-Port-IDs zu entfernen.
 . Verwenden Sie nach dem Neustart der neuen FC-Hosts die entsprechenden Verfahren auf den Hosts, um die Volumes zu registrieren und sie Ihrem Betriebssystem zur Verfügung zu stellen.
 +
-** Je nach Betriebssystem sind zwei Dienstprogramme in der Speicherverwaltungssoftware enthalten (Hot_add und SMDevices). Diese Dienstprogramme helfen bei der Registrierung der Volumes bei den Hosts und zeigen auch die entsprechenden Gerätenamen für die Volumes an.
+** Sie können den SMcli-Befehl verwenden `-identifyDevices` Um die entsprechenden Gerätenamen für die Volumes anzuzeigen. Die SMcli ist im SANtricity Betriebssystem enthalten und kann über den SANtricity System Manager heruntergeladen werden. Weitere Informationen zum Herunterladen des SMcli über den SANtricity-System-Manager finden Sie im https://docs.netapp.com/us-en/e-series-santricity/sm-settings/download-cli.html["Laden Sie das Thema Befehlszeilenschnittstelle (CLI) in der Online-Hilfe des SANtricity Systemmanagers herunter"^].
 ** Unter Umständen müssen Sie bestimmte Tools und Optionen verwenden, die mit Ihrem Betriebssystem zur Verfügung gestellt werden, um die Volumes verfügbar zu machen (also Laufwerksbuchstaben zuzuweisen, Mount-Punkte zu erstellen usw.). Weitere Informationen finden Sie in der Dokumentation Ihres Host-Betriebssystems.
 
 
@@ -207,7 +207,7 @@ Sie können eine der folgenden Optionen verwenden, um die neuen FC-Ports zu verw
 . Bearbeiten Sie die Host-Partition, um die FC-Host-Port-IDs hinzuzufügen und die iSCSI-Host-Port-IDs zu entfernen.
 . Verwenden Sie nach dem Neustart der neuen FC-Hosts die entsprechenden Verfahren auf den Hosts, um die Volumes zu registrieren und sie Ihrem Betriebssystem zur Verfügung zu stellen.
 +
-** Je nach Betriebssystem sind zwei Dienstprogramme in der Speicherverwaltungssoftware enthalten (Hot_add und SMDevices). Diese Dienstprogramme helfen bei der Registrierung der Volumes bei den Hosts und zeigen auch die entsprechenden Gerätenamen für die Volumes an.
+** Sie können den SMcli-Befehl verwenden `-identifyDevices` Um die entsprechenden Gerätenamen für die Volumes anzuzeigen. Die SMcli ist im SANtricity Betriebssystem enthalten und kann über den SANtricity System Manager heruntergeladen werden. Weitere Informationen zum Herunterladen des SMcli über den SANtricity-System-Manager finden Sie im https://docs.netapp.com/us-en/e-series-santricity/sm-settings/download-cli.html["Laden Sie das Thema Befehlszeilenschnittstelle (CLI) in der Online-Hilfe des SANtricity Systemmanagers herunter"^].
 ** Unter Umständen müssen Sie bestimmte Tools und Optionen verwenden, die mit Ihrem Betriebssystem zur Verfügung gestellt werden, um die Volumes verfügbar zu machen (also Laufwerksbuchstaben zuzuweisen, Mount-Punkte zu erstellen usw.). Weitere Informationen finden Sie in der Dokumentation Ihres Host-Betriebssystems.
 
 
@@ -243,7 +243,7 @@ Sie können eine der folgenden Optionen verwenden, um die neuen iSCSI-Ports zu v
 . Bearbeiten Sie die Host-Partition, um die iSCSI-Host-Port-IDs hinzuzufügen und die FC-Host-Port-IDs zu entfernen.
 . Nach dem Neustart der neuen iSCSI-Hosts können Sie die Volumes mithilfe der entsprechenden Verfahren auf den Hosts registrieren und sie Ihrem Betriebssystem zur Verfügung stellen.
 +
-** Je nach Betriebssystem sind zwei Dienstprogramme in der Speicherverwaltungssoftware enthalten (Hot_add und SMDevices). Diese Dienstprogramme helfen bei der Registrierung der Volumes bei den Hosts und zeigen auch die entsprechenden Gerätenamen für die Volumes an.
+** Sie können den SMcli-Befehl verwenden `-identifyDevices` Um die entsprechenden Gerätenamen für die Volumes anzuzeigen. Die SMcli ist im SANtricity Betriebssystem enthalten und kann über den SANtricity System Manager heruntergeladen werden. Weitere Informationen zum Herunterladen des SMcli über den SANtricity-System-Manager finden Sie im https://docs.netapp.com/us-en/e-series-santricity/sm-settings/download-cli.html["Laden Sie das Thema Befehlszeilenschnittstelle (CLI) in der Online-Hilfe des SANtricity Systemmanagers herunter"^].
 ** Unter Umständen müssen Sie bestimmte Tools und Optionen verwenden, die mit Ihrem Betriebssystem zur Verfügung gestellt werden, um die Volumes verfügbar zu machen (also Laufwerksbuchstaben zuzuweisen, Mount-Punkte zu erstellen usw.). Weitere Informationen finden Sie in der Dokumentation Ihres Host-Betriebssystems.
 
 

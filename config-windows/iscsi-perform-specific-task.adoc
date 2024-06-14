@@ -247,7 +247,7 @@ Sie überprüfen IP-Netzwerkverbindungen des Internet Protocol (Internet Protoco
 +
 [listing]
 ----
-ping -s <hostIP\> <targetIP\>
+ping -S <hostIP\> <targetIP\>
 ----
 ** Wenn Jumbo Frames aktiviert sind, führen Sie den Ping-Befehl mit einer Nutzlastgröße von 8,972 Byte aus. Die kombinierten IP- und ICMP-Header sind 28 Bytes, was, wenn sie der Nutzlast hinzugefügt werden, 9,000 Bytes entspricht. Der -f Schalter setzt das `don’t fragment (DF)` Bit. Mit dem -l-Schalter können Sie die Größe einstellen. Mit diesen Optionen können Jumbo-Frames mit 9,000 Byte erfolgreich zwischen iSCSI-Initiator und Ziel übertragen werden.
 +

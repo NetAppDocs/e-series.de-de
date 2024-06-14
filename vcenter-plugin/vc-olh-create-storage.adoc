@@ -341,8 +341,8 @@ Im letzten Schritt lesen Sie eine Zusammenfassung der Volumes, die Sie erstellen
 .Nachdem Sie fertig sind
 * Erstellen Sie im vSphere Client Datastores für die Volumes.
 * Führen Sie alle auf dem Applikations-Host erforderlichen Betriebssystemänderungen durch, damit die Applikationen das Volume verwenden können.
-* Führen Sie entweder den Host-basierten aus `hot_add` Dienstprogramm oder ein betriebssystemspezifisches Dienstprogramm (erhältlich von einem Drittanbieter), und führen Sie dann das aus `SMdevices` Dienstprogramm zur Korrelation von Volume-Namen mit Host-Speicher-Array-Namen.
+* Führen Sie das betriebssystemspezifische Dienstprogramm (verfügbar von einem Drittanbieter) aus, und führen Sie dann den Befehl SMcli aus `-identifyDevices` So korrelieren Sie Volume-Namen mit Host-Storage-Array-Namen
 +
-Der `hot_add` Dienstprogramm und das `SMdevices` Das Dienstprogramm ist Teil des `SMutils` Paket. Der `SMutils` Das Paket umfasst eine Sammlung von Dienstprogrammen, um zu überprüfen, was der Host vom Speicher-Array sieht. Sie ist Teil der SANtricity Softwareinstallation.
+Die SMcli ist im SANtricity Betriebssystem enthalten und kann über den SANtricity System Manager heruntergeladen werden. Weitere Informationen zum Herunterladen des SMcli über den SANtricity-System-Manager finden Sie im https://docs.netapp.com/us-en/e-series-santricity/sm-settings/download-cli.html["Laden Sie das Thema Befehlszeilenschnittstelle (CLI) in der Online-Hilfe des SANtricity Systemmanagers herunter"^].
 
 

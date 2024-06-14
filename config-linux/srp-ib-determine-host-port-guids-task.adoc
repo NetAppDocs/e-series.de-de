@@ -11,7 +11,7 @@ summary: Ermittlung der Host-Port-GUIDs
 
 
 [role="lead"]
-das infiniband-diags-Paket enthält Befehle zur Anzeige der Globally Unique ID (GUID) jedes InfiniBand (IB)-Ports. Die meisten Linux-Distributionen mit OFED/RDMA, die über die enthaltenen Pakete unterstützt werden, verfügen auch über das infiniband-diags-Paket, das Befehle zur Anzeige von Informationen über den HCA enthält.
+das infiniband-diags-Paket enthält Befehle zur Anzeige der Globally Unique ID (GUID) jedes InfiniBand (IB)-Ports. Die meisten Linux-Distributionen mit OFED/RDMA, die über die enthaltenen Pakete unterstützt werden, verfügen auch über das Paket infiniband-diags, das Befehle zur Anzeige von Informationen über den Host Channel Adapter (HCA) enthält.
 
 .Schritte
 . Installieren Sie den `infiniband-diags` Paket mit den Paketmanagementbefehlen des Betriebssystems.

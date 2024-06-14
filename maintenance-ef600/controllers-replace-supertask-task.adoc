@@ -23,6 +23,20 @@ Wenn Sie einen defekten Controller-Behälter ersetzen, müssen Sie den Akku, das
 +
 ** Der Recovery Guru im SANtricity System Manager führt Sie dazu, den Controller-Behälter zu ersetzen.
 ** Die gelbe Warn-LED am Controller-Behälter leuchtet und zeigt an, dass der Controller einen Fehler aufweist.
++
+[]
+====
+
+NOTE: Die gelbe Warn-LED des Controllers erlischt, wenn die folgenden Austauschbedingungen vorliegen:
+
+*** Alt-Stromversorgung fehlgeschlagen
+*** Pfad des alternativen Laufwerks fehlgeschlagen
+*** Schublade ist offen/fehlt
+*** Lüfter ist ausgefallen/fehlt
+*** Netzteil fehlt
+
+
+====
 
 
 * Stellen Sie sicher, dass Sie Folgendes haben:
@@ -129,7 +143,6 @@ CAUTION: Um eine verminderte Leistung zu vermeiden, dürfen die Kabel nicht verd
 +
 Da Sie die HIC aus dem fehlerhaften Controller-Behälter entfernen müssen, müssen Sie alle SFPs von den HIC-Ports entfernen. Wenn Sie die Kabel wieder anschließen, können Sie die SFPs in den neuen Controller-Behälter verlegen.
 
-. Vergewissern Sie sich, dass die LED Cache Active auf der Rückseite des Controllers ausgeschaltet ist.
 . Drücken Sie die Griffe auf beiden Seiten des Controllers, und ziehen Sie sie nach hinten, bis sie sich aus dem Shelf lösen.
 +
 image::../media/remove_controller_5.png[Controller 5 ausbauen]
@@ -454,7 +467,24 @@ Wenn die Kommunikation mit der anderen Steuerung wiederhergestellt wird:
 ** Je nach Host-Schnittstelle leuchtet, blinkt oder leuchtet die LED für Host-Link möglicherweise nicht.
 
 
-. Wenn der Controller wieder online ist, bestätigen Sie, dass sein Status optimal lautet, und überprüfen Sie die Warn-LEDs für das Controller-Shelf.
+. Wenn der Controller wieder online ist, prüfen Sie, ob eine NVSRAM-Nichtübereinstimmung in Recovery Guru gemeldet wird.
++
+.. Wenn eine NVSRAM-Abweichung gemeldet wird, aktualisieren Sie NVSRAM mit dem folgenden SMcli-Befehl:
++
+[listing]
+----
+SMcli <controller A IP> <controller B IP> -u admin -p <password> -k -c "download storageArray NVSRAM file=\"C:\Users\testuser\Downloads\NVSRAM .dlp file>\" forceDownload=TRUE;"
+----
++
+Der `-k` Parameter ist erforderlich, wenn das Array nicht https sicher ist.
+
+
+
++
+
+NOTE: Wenn der SMcli-Befehl nicht abgeschlossen werden kann, wenden Sie sich an https://www.netapp.com/company/contact-us/support/["Technischer Support von NetApp"^] Oder melden Sie sich beim an https://mysupport.netapp.com["NetApp Support Website"^] Um einen Fall zu erstellen.
+
+. Überprüfen Sie, ob der Status des Systems optimal ist, und überprüfen Sie die Warn-LEDs des Controller-Shelfs.
 +
 Wenn der Status nicht optimal ist oder eine der Warn-LEDs leuchtet, vergewissern Sie sich, dass alle Kabel richtig eingesetzt sind und der Controller-Behälter richtig installiert ist. Gegebenenfalls den Controller-Behälter ausbauen und wieder einbauen.
 
@@ -462,7 +492,7 @@ Wenn der Status nicht optimal ist oder eine der Warn-LEDs leuchtet, vergewissern
 
 NOTE: Wenden Sie sich an den technischen Support, wenn das Problem nicht gelöst werden kann.
 
-. Klicken Sie auf Menü:Hardware[Support > Upgrade Center], um sicherzustellen, dass die neueste Version des SANtricity-Betriebssystems installiert ist.
+. Klicken Sie auf das Menü: Hardware[Support > Upgrade Center], um sicherzustellen, dass die Firmware- und NVSRAM-Versionen auf dem System die gewünschte Stufe erreichen.
 +
 Installieren Sie bei Bedarf die neueste Version.
 

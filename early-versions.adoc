@@ -21,7 +21,7 @@ Die nachfolgenden Links führen zu Dokumentationen für ältere Versionen der E-
 * https://mysupport.netapp.com/info/web/ECMP11392380.html["Installieren älterer Systeme"^]
 * https://mysupport.netapp.com/info/web/ECMP11751516.html["Wartung älterer Systeme"^]
 * https://mysupport.netapp.com/ecm/ecm_download_file/ECMP1394872["Hinzufügen eines zweiten Controllers zu E2600 und E2700"^]
-* https://mysupport.netapp.com/info/web/ECMP11750309.html["Ändern oder Hinzufügen von Host-Protokollen"^]
+* https://library.netapp.com/ecm/ecm_download_file/ECMLP2353447["Ändern oder Hinzufügen von Host-Protokollen"^]
 * https://mysupport.netapp.com/ecm/ecm_download_file/ECMP1656638["Von AC zu DC-Strom konvertieren"^]
 
 

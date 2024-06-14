@@ -20,8 +20,6 @@ Für das Storage-Management mit dem Storage Plug-in für vCenter müssen Sie jed
 .Über diese Aufgabe
 Durch die Erstellung eines Hosts definieren Sie die Hostparameter, um eine Verbindung zum Speicher-Array und I/O-Zugriff auf die Volumes herzustellen.
 
-Sie können dem Host Context Agent (HCA) erlauben, die Hosts automatisch zu erkennen und anschließend zu überprüfen, ob die Informationen korrekt sind, indem Sie auf der Seite Hosts konfigurieren *Einstellungen anzeigen/bearbeiten* die Option *Einstellungen anzeigen/bearbeiten* wählen. Die HCA ist jedoch nicht auf allen unterstützten Betriebssystemen verfügbar, und Sie müssen den Host manuell erstellen.
-
 Wenn Sie einen Host erstellen, beachten Sie folgende Richtlinien:
 
 * Sie müssen die dem Host zugeordneten Host-Identifier-Ports definieren.

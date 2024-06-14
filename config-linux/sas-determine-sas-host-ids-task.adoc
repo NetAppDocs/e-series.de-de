@@ -16,7 +16,6 @@ Sie suchen für das SAS-Protokoll die SAS-Adressen unter Verwendung des HBA-Dien
 Lesen Sie die folgenden Richtlinien für HBA-Dienstprogramme, bevor Sie mit diesem Verfahren beginnen:
 
 * Die meisten HBA-Anbieter bieten ein HBA-Dienstprogramm an. Verwenden Sie je nach Host-Betriebssystem und CPU entweder das LSI-sas2flash (6G) oder sas3flash (12G) Utility.
-* Host-I/O-Ports registrieren möglicherweise automatisch, wenn der Host-Kontext-Agent installiert ist.
 
 
 .Schritte

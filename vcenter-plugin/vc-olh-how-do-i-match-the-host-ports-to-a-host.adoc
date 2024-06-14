@@ -20,5 +20,3 @@ Wenn Sie über diese Informationen verfügen, wählen Sie aus der Liste im Dialo
 
 
 CAUTION: Stellen Sie sicher, dass Sie die entsprechenden Host-Port-IDs für den von Ihnen erstellten Host auswählen. Wenn Sie die falschen Host-Port-IDs zuordnen, können Sie unbeabsichtigten Zugriff von einem anderen Host auf diese Daten verursachen.
-
-Wenn Sie Hosts automatisch mithilfe des Host Context Agent (HCA) erstellen, der auf jedem Host installiert ist, sollte die HCA die Host-Port-IDs automatisch jedem Host zuordnen und entsprechend konfigurieren.

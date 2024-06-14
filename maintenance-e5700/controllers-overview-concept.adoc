@@ -26,6 +26,19 @@ Sie können auf zwei Arten feststellen, ob ein ausgefallener Controller-Behälte
 
 * Der Recovery Guru im SANtricity System Manager führt Sie dazu, den Controller-Behälter zu ersetzen.
 * Die gelbe Warn-LED am Controller-Behälter leuchtet und zeigt an, dass der Controller einen Fehler aufweist.
++
+[]
+====
+
+NOTE: Die gelbe Warn-LED des Controllers erlischt, wenn die folgenden Austauschbedingungen vorliegen:
+
+** Pfad des alternativen Laufwerks fehlgeschlagen
+** Schublade ist offen/fehlt
+** Lüfter ist ausgefallen/fehlt
+** Netzteil fehlt
+
+
+====
 
 
 image::../media/e5700_attention_led_callout.png[Das Aufsehen der e5700 führte zu einer Legende]
