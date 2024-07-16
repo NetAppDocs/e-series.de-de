@@ -38,13 +38,6 @@ Eine neue Option für Ethernet-Kernel-Statistiken ist jetzt auf der Seite iSCSI-
 
 
  a| 
-Verbesserte Filterung für nicht zugewiesene und sichere aktivierte Laufwerke in System Manager
- a| 
-System Manager filtert bei der Auswahl von manuellen Laufwerken nun nicht zugewiesene und gesicherte aktivierte Laufwerke heraus. Daher stimmt die Laufwerksauswahlzahl von System Manager jetzt mit der Liste der Kandidaten für die automatische Laufwerksauswahl unter CLI und REST API überein. Ein eindeutiges Symbol und ein Hover-Text werden jetzt auch auf nicht zugewiesene und sichere aktivierte Laufwerke in System Manager angewendet.
-
-
-
- a| 
 Zusätzliche Möglichkeit zum Blockieren von IP-Adressen über REST-API-Endpunkt
  a| 
 Benutzer können jetzt bestimmte IP-Adressen über den Endpunkt Einstellungen blockieren (`/devmgr/v2/settings`). Nach der Konfiguration über den Endpunkt Einstellungen können nur über eine Whitelist angegebene IP-Adressen mit dem Speichergerät kommunizieren. Diese neue Funktion unterstützt IPv4- und IPv6-Adresslisten.
