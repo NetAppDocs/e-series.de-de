@@ -16,6 +16,21 @@ In der folgenden Tabelle werden die neuen Funktionen von SANtricity OS 11.8 für
 
 
 
+== Neue Funktionen in Version 11.80.1R1
+
+[cols="35h,~"]
+|===
+| Neues Feature | Beschreibung 
+
+
+ a| 
+Größere Schlüssellänge für neue selbstsignierte und CA-signierte Managementzertifikate.
+ a| 
+Die Länge des Schlüssels für Managementzertifikate für SANtricity System Manager und Unified Manager Applikationen wurde von 2048 auf 3072 Bit geändert. Die Änderung gilt für neu generierte selbstsignierte und CA-signierte Zertifikate aus den SANtricity-Anwendungen. Die Schlüssellänge ist festgelegt und wird von den Standardschlüsselgrößendefinitionen in NVSRAM nicht beeinflusst.
+
+|===
+
+
 == Neue Funktionen in Version 11.80.1
 
 [cols="35h,~"]
