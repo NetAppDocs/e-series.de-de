@@ -60,7 +60,7 @@ Standardmäßig erstellt der VMware iSCSI Software Initiator eine einzelne Sitzu
 
 NOTE: Bei der Bindung von VMware iSCSI-Ports handelt es sich um eine Funktion, bei der alle gebundenen VMkernel-Ports an alle Zielports angemeldet werden, auf die in den konfigurierten Netzwerksegmenten zugegriffen werden kann. Sie soll für Arrays verwendet werden, die eine einzige Netzwerkadresse für das iSCSI-Ziel enthalten. NetApp empfiehlt, die iSCSI-Portbindung nicht zu verwenden. Weitere Informationen finden Sie im http://kb.vmware.com/["VMware Knowledge Base"] Beziehen Sie den Artikel über Überlegungen bei der Verwendung von Software-iSCSI-Port-Bindung in ESX/ESXi ein. Wenn der ESXi Host an den Storage eines anderen Anbieters angeschlossen ist, empfiehlt NetApp, separate iSCSI VMkernel-Ports zu verwenden, um einen Konflikt mit Port-Bindung zu vermeiden.
 
-Als Best Practice sollten Sie BEI E-Series Storage-Arrays nicht die Portbindung verwenden. Siehe https://www.netapp.com/media/17017-tr4789.pdf["TR-4789:VMware Konfigurationshandbuch für die E-Series SANtricity iSCSI-Integration mit ESXi 6.x und 7.x"] Finden Sie weitere Informationen.
+Als Best Practice sollten Sie BEI E-Series Storage-Arrays nicht die Portbindung verwenden. Weitere Informationen finden Sie unter https://www.netapp.com/media/17017-tr4789.pdf["TR-4789:VMware Konfigurationshandbuch für die E-Series SANtricity iSCSI-Integration mit ESXi 6.x und 7.x"^] .
 
 Verwenden Sie für eine gute Multipathing-Konfiguration mehrere Netzwerksegmente für das iSCSI-Netzwerk. Platzieren Sie mindestens einen Host-seitigen Port und mindestens einen Port jedes Array-Controllers in einem Netzwerksegment und eine identische Gruppe von Host- und Array-seitigen Ports in einem anderen Netzwerksegment. Verwenden Sie, falls möglich, mehrere Ethernet Switches, um zusätzliche Redundanz bereitzustellen.
 
@@ -87,7 +87,7 @@ Stellen Sie sicher, dass Sie Folgendes haben:
 Dieser Task beschreibt den Zugriff auf die Konfiguration des iSCSI-Ports über die Seite Hardware. Sie können die Konfiguration auch über das Menü:System[Einstellungen > iSCSI-Ports konfigurieren] aufrufen.
 
 
-NOTE: Weitere Informationen zur Einrichtung des Array-seitigen Netzwerks bei Ihrer VMware Konfiguration finden Sie im folgenden technischen Bericht: https://www.netapp.com/us/media/tr-4789.pdf["Konfigurationsleitfaden für VMware E-Series SANtricity: ISCSI-Integration mit ESXi 6.x und 7.x"].
+NOTE: Weitere Informationen zum Einrichten des Array-seitigen Netzwerkes in Ihrer VMware-Konfiguration finden Sie im folgenden technischen Bericht: https://www.netapp.com/pdf.html?item=/media/17017-tr4789pdf.pdf["Konfigurationsleitfaden für VMware E-Series SANtricity: ISCSI-Integration mit ESXi 6.x und 7.x"^].
 
 .Schritte
 . Geben Sie in Ihrem Browser die folgende URL ein: `+https://<DomainNameOrIPAddress>+`

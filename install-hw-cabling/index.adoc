@@ -70,4 +70,4 @@ E2760, E5660
 DE460C
 
 |===
-Informationen über die Verkabelung zur Unterstützung von Spiegelungsfunktionen finden Sie im https://www.netapp.com/us/media/tr-4656.pdf["Funktionsbeschreibungen und Implementierungsleitfaden für synchrone und asynchrone Spiegelung"^].
+Informationen über die Verkabelung zur Unterstützung von Spiegelungsfunktionen finden Sie im https://www.netapp.com/pdf.html?item=/media/17133-tr4656pdf.pdf["Funktionsbeschreibungen und Implementierungsleitfaden für synchrone und asynchrone Spiegelung"^].
