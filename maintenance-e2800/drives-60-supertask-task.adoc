@@ -48,6 +48,9 @@ CAUTION: *Möglicher Verlust des Datenzugriffs* -- Wenn ein Volume sich bereits 
 
 
 
+NOTE: Wenn Sie Informationen zum Austausch eines E-Series DE460c Erweiterungs-Shelf benötigen, finden Sie sich im https://kb.netapp.com/on-prem/E-Series/Hardware-KBs/How_to_replace_an_E_Series_DE460c_controller_expansion_shelf["NetApp Knowledge Base"^].
+
+
 
 == Schritt 1: Vorbereitung auf den Austausch der Laufwerksschublade
 

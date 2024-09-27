@@ -8908,4 +8908,6 @@
   <block id="5821a61234ba1fdfba2e6ba9b392cafa" category="admonition">Weitere Informationen zum Einrichten des Array-seitigen Netzwerkes in Ihrer VMware-Konfiguration finden Sie im folgenden technischen Bericht:<block ref="4c256e5f3e11bff89d951ec9e05da858" category="inline-link-rx"></block>.</block>
   <block id="f7a1f25c147fdef63a935b6fc10cf5a0" category="paragraph">Wenn diese Annahmen für Ihre Installation nicht korrekt sind oder Sie weitere konzeptionelle Hintergrundinformationen benötigen, lesen Sie den folgenden technischen Bericht:<block ref="691af5827a322478f9c39bcb9ec0d331" category="inline-link-rx"></block></block>
   <block id="c08a9596d55b45e7eb8325bd878b47d5" category="paragraph">Informationen über die Verkabelung zur Unterstützung von Spiegelungsfunktionen finden Sie im<block ref="4c6cd7be794e0089961c4cc00b012a2c" category="inline-link-rx"></block>.</block>
+  <block id="3885d6d9f5a5030ec46ec3ce038af96c" category="inline-link">NetApp Knowledge Base</block>
+  <block id="780fe86b24958c45b0b8792fad1e9b3c" category="admonition">Wenn Sie Informationen zum Austausch eines E-Series DE460c Erweiterungs-Shelf benötigen, finden Sie sich im<block ref="b46c4d97d6f1694e2cd029493cdb5475" category="inline-link-rx"></block>.</block>
 </blocks>
