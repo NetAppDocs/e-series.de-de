@@ -27,11 +27,11 @@ Die Abbildungen zeigen, wie die Laufwerke in jedem Shelf-Typ nummeriert werden (
 
 *Laufwerksnummerierung in einem E2812 Controller-Shelf oder DE212C-Festplatten-Shelf:*
 
-image::../media/28_dwg_e2812_de212c_drive_numbering.gif[28 dwg e2812 de212c Laufwerksnummerierung]
+image::../media/28_dwg_e2812_de212c_drive_numbering.gif[Laufwerksnummerierung für Shelf mit 12 Laufwerken]
 
 *Laufwerksnummerierung in einem E2824 Controller-Shelf, EF280 Flash-Array oder DE224C Festplatten-Shelf:*
 
-image::../media/28_dwg_e2824_de224c_drive_numbering_maint-e2800.gif[28 DWG e2824 de2224c Laufwerksnummerierung maint e2800]
+image::../media/28_dwg_e2824_de224c_drive_numbering_maint-e2800.gif[Laufwerksnummerierung für Shelf mit 24 Laufwerken]
 
 
 NOTE: Ihr E2812, E2824 und EF280 Storage-Array kann ein oder mehrere herkömmliche SAS-2-Laufwerksfächer umfassen, einschließlich DE1600 Fach mit 12 Laufwerken, das DE5600 Fach mit 24 Laufwerken oder das DE6600 Fach mit 60 Laufwerken Anweisungen zum Austauschen eines Laufwerks in einem dieser Laufwerksfächer finden Sie unter link:https://library.netapp.com/ecm/ecm_download_file/ECMLP2577975["Austauschen eines Laufwerks in E2660, E2760, E5460, E5560 oder E5660 Einschüben"^] Und link:https://library.netapp.com/ecm/ecm_download_file/ECMLP2577971["Ersetzen eines Laufwerks in E2600, E2700, E5400, E5500 und E5600 12-Laufwerk- oder 24-Laufwerksschächten"^].
@@ -42,11 +42,11 @@ NOTE: Ihr E2812, E2824 und EF280 Storage-Array kann ein oder mehrere herkömmlic
 
 Sowohl das E2860 Controller-Shelf als auch das DE460C Festplatten-Shelf bestehen aus fünf Laufwerksfächer, die jeweils 12 Laufwerksschächte enthalten. Die Laufwerksschublade 1 befindet sich oben, und die Laufwerksschublade 5 befindet sich unten.
 
-image::../media/28_dwg_e2860_de460c_front_no_callouts_maint-e2800.gif[28 dwg e2860 de460c Vorderseite ohne Rufumschalter maint e2800]
+image::../media/28_dwg_e2860_de460c_front_no_callouts_maint-e2800.gif[Schubladen mit 60 Laufwerken“]
 
 Bei einem E2860 Controller-Shelf-Einschub und einem DE460C Festplatten-Shelf-Einschub werden Laufwerke in jedem Laufwerkschublade im Shelf von 0 bis 11 nummeriert.
 
-image::../media/dwg_trafford_drawer_with_hdds_callouts_maint-e2800.gif[Wg trafford Schublade mit hdds-Calouts maint e2800]
+image::../media/dwg_trafford_drawer_with_hdds_callouts_maint-e2800.gif[Laufwerkssteckplatznummern]
 
 
 NOTE: Ihr E2860 Storage-Array kann ein oder mehrere herkömmliche SAS-2-Laufwerksfächer umfassen, einschließlich DE1600 Fach mit 12 Laufwerken, dem DE5600 Tablett für 24 Laufwerke oder dem DE6600 Fach mit 60 Laufwerken Anweisungen zum Austauschen eines Laufwerks in einem dieser Laufwerksfächer finden Sie unter link:https://library.netapp.com/ecm/ecm_download_file/ECMLP2577975["Austauschen eines Laufwerks in E2660, E2760, E5460, E5560 oder E5660 Einschüben"^] Und link:https://library.netapp.com/ecm/ecm_download_file/ECMLP2577971["Ersetzen eines Laufwerks in E2600, E2700, E5400, E5500 und E5600 12-Laufwerk- oder 24-Laufwerksschächten"^].
@@ -57,11 +57,11 @@ NOTE: Ihr E2860 Storage-Array kann ein oder mehrere herkömmliche SAS-2-Laufwerk
 
 Eine Laufwerkschublade kann in einem E2860 Controller-Shelf und einem DE460C Festplatten-Shelf ersetzt werden. Jeder der Shelfs mit 60 Laufwerken verfügt über fünf Laufwerkfächer.
 
-image::../media/28_dwg_e2860_de460c_front_no_callouts_maint-e2800.gif[28 dwg e2860 de460c Vorderseite ohne Rufumschalter maint e2800]
+image::../media/28_dwg_e2860_de460c_front_no_callouts_maint-e2800.gif[Einschub für 60 Laufwerke“]
 
 Jeder der fünf Schubladen kann bis zu 12 Laufwerke aufnehmen.
 
-image:../media/92_dwg_de6600_drawer_with_hdds_no_callouts_maint-e2800.gif[""]
+image:../media/92_dwg_de6600_drawer_with_hdds_no_callouts_maint-e2800.gif["Schublade mit installierten Laufwerken"]
 
 
 
@@ -91,7 +91,7 @@ Wenn ein Handgelenkband nicht verfügbar ist, berühren Sie eine unlackierte Obe
 ** Niemals einen Antrieb in ein Regal zwingen, und mit sanftem, festem Druck den Riegel vollständig einrücken.
 ** Platzieren Sie Laufwerke auf gepolsterten Flächen und stapeln Sie niemals Laufwerke auf einander.
 ** Laufwerke nicht gegen andere Oberflächen abstoßen.
-** Lösen Sie vor dem Entfernen eines Laufwerks aus einem Shelf den Griff und warten Sie 30 Sekunden, bis sich das Laufwerk heruntergefahren hat.
+** Lösen Sie vor dem Entfernen eines Laufwerks aus einem Shelf den Griff und warten Sie 60 Sekunden, bis sich das Laufwerk heruntergefahren hat.
 ** Verwenden Sie beim Transport von Laufwerken stets die genehmigte Verpackung.
 
 

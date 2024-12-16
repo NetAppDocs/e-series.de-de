@@ -11,7 +11,7 @@ summary: Bearbeiten Sie die Einstellungen für eine Volume-Gruppe, einschließli
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

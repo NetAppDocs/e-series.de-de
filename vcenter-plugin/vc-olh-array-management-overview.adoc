@@ -10,7 +10,7 @@ summary: Verwenden Sie die Funktion Add/Discover, um die zu verwaltenden Speiche
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

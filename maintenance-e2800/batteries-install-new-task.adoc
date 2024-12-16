@@ -36,7 +36,7 @@ Sie müssen den Metallflansch an der Vorderseite der Batterie in den Schlitz an 
 Wenn die Verriegelung einrastet, Haken unten an der Verriegelung in einen Metallschlitz am Gehäuse.
 
 +
-image::../media/28_dwg_e2800_insert_battery_maint-e2800.gif[28-m-e2800-Batterieeinschub e2800]
+image::../media/28_dwg_e2800_insert_battery_maint-e2800.gif[E2800 Akku einsetzen]
 
 +
 *(1)* _Entriegelung der Batterie_
@@ -54,10 +54,10 @@ CAUTION: *Möglicher Hardwareschaden* -- der Metallflansch an der Vorderseite de
 
 
 +
-image:../media/28_dwg_e2800_battery_flange_ok_maint-e2800.gif[""]
+image:../media/28_dwg_e2800_battery_flange_ok_maint-e2800.gif["Batterieflanscheinsatz korrigieren"]
 
 +
-** *Incorrect* -- der Metallflansch der Batterie ist nicht in den Steckplatz an der Steuerung eingelegt: +image:../media/28_dwg_e2800_battery_flange_not_ok_maint-e2800.gif[""]
+** *Falsch* -- der Metallflansch der Batterie wird nicht in den Schlitz am Controller eingesetzt: + image:../media/28_dwg_e2800_battery_flange_not_ok_maint-e2800.gif["Falscher Batterieflanscheinsatz"]
 
 
 . Gehen Sie zu link:batteries-reinstall-controller-canister-task.html["E2800 Controller-Behälter neu installieren"].

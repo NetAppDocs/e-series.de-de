@@ -10,7 +10,7 @@ summary: SSD-Laufwerke haben eine längere Lebensdauer und eine bessere maximale
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

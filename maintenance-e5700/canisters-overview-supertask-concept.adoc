@@ -36,7 +36,7 @@ Sie können ein Netzteil in den folgenden Shelves ersetzen:
 
 Die folgende Abbildung zeigt ein Beispiel für E5724 Controller-Shelf mit zwei Netzteilen (Lüfter-Behälter). Die DE224C Festplatten-Shelfs sind identisch, umfassen aber I/O-Module (IOMs) anstelle von Controller-Containern.
 
-image::../media/e5700_power_supply_callout.png[Beschriftung des e5700 Netzteils]
+image::../media/e5700_power_supply_callout.png[E5700 Controller-Stromversorgung]
 
 *(1)* _Controller-Regal mit zwei Netzteilen (Power-Fan-Kanister) unter den Controller-Kanistern._
 
@@ -82,11 +82,11 @@ In den Themen _Replace Power Canister_ wird nicht beschrieben, wie ein ausgefall
 
 Die folgende Abbildung zeigt die Rückseite eines DE460C Festplatten-Shelfs mit den beiden Power Canisters:
 
-image::../media/28_dwg_de460c_rear_no_callouts_maint-e5700.gif[28 dwg de460c hinten keine Callouts maint e5700]
+image::../media/28_dwg_de460c_rear_no_callouts_maint-e5700.gif[DE460C mit zwei Leistungskanistern]
 
 Die folgende Abbildung zeigt einen Leistungsbehälter:
 
-image::../media/28_dwg_e2860_de460c_psu_maint-e5700.gif[28 DWG e2860 de460c psu MAint e5700]
+image::../media/28_dwg_e2860_de460c_psu_maint-e5700.gif[Leistungsbehälter]
 
 
 
@@ -130,11 +130,11 @@ Die Themen _Lüfterbehälter ersetzen_ beschreiben nicht, wie ein ausgefallener 
 
 Die folgende Abbildung zeigt einen Lüfterbehälter:
 
-image::../media/28_dwg_e2860_de460c_single_fan_canister_no_callouts_maint-e5700.gif[28 DWG e2860 de460c Einzelventilator Behälter ohne Ausbrüche maint e5700]
+image::../media/28_dwg_e2860_de460c_single_fan_canister_no_callouts_maint-e5700.gif[Gebläsebehälter]
 
 Die folgende Abbildung zeigt die Rückseite eines DE460C Shelfs mit zwei Lüfterbehältern:
 
-image::../media/28_dwg_de460c_rear_no_callouts_maint-e5700.gif[28 dwg de460c hinten keine Callouts maint e5700]
+image::../media/28_dwg_de460c_rear_no_callouts_maint-e5700.gif[DE460C mit zwei Lüfterkanistern]
 
 
 CAUTION: *Möglicher Geräteschaden* -- Wenn Sie einen Lüfterbehälter durch eingeschaltetes Strom ersetzen, müssen Sie den Austauschvorgang innerhalb von 30 Minuten abschließen, um eine Überhitzung der Anlage zu verhindern.

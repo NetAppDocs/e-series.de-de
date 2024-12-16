@@ -27,7 +27,7 @@ Um den Feature Pack Key zu erhalten, benötigen Sie die Seriennummer vom Control
 .. Wenn die Registerkarte *Support Resources* ausgewählt ist, scrollen Sie zum Abschnitt *Top Storage Array Properties*.
 .. Suchen Sie die *Chassis Serial Number*, und kopieren Sie diesen Wert in eine Textdatei.
 +
-image::../media/sam1130_ss_e2800_storage_array_profile_sn_smid_copy_maint-ef600.gif[Sam1130 ss e2800 Storage-Array-Profil sn smid Kopie maint ef600]
+image::../media/sam1130_ss_e2800_storage_array_profile_sn_smid_copy_maint-ef600.gif[Seriennummer des Chassis]
 
 
 
@@ -39,7 +39,7 @@ image::../media/sam1130_ss_e2800_storage_array_profile_sn_smid_copy_maint-ef600.
 .. Geben Sie in das Textfeld * Feature Pack Submodel ID* ein, und klicken Sie auf *Suchen*.
 .. Suchen Sie die Submodel-ID für das Feature Pack für die Starting-Konfiguration.
 +
-image::../media/storage_array_profile2_maint-ef600.gif[Storage Array-Profile2 Wartung ef600]
+image::../media/storage_array_profile2_maint-ef600.gif[Storage Array-Profil]
 
 
 
@@ -596,7 +596,7 @@ NOTE: Wenn Ihre Controller-Untermodell-ID nicht aufgeführt ist, wenden Sie sich
 .. Suchen Sie unter *Feature Pack ändern* den *Feature Enable Identifier*.
 .. Kopieren Sie diese 32-stellige Zahl in eine Textdatei.
 +
-image::../media/sam1130_ss_e2800_change_feature_pack_feature_enable_identifier_copy_maint-ef600.gif[Die Funktion des Änderungsfunktionspacks sam1130 ss e2800 aktivieren die Funktion Identifier Copy maint ef600]
+image::../media/sam1130_ss_e2800_change_feature_pack_feature_enable_identifier_copy_maint-ef600.gif[Dialogfeld „Feature Pack ändern“]
 
 
 
@@ -652,7 +652,7 @@ Die grüne LED „Cache aktiv“ auf der Rückseite jedes Controllers leuchtet, 
 . Wählen Sie im SANtricity System Manager Menü:Einstellungen[System].
 . Wählen Sie unter *Add-ons* die Option *Feature Pack ändern*.
 +
-image::../media/sam1130_ss_system_change_feature_pack_maint-ef600.gif[Sam1130 ss Systemwechsel Feature Pack maint ef600]
+image::../media/sam1130_ss_system_change_feature_pack_maint-ef600.gif[Funktionspaket ändern]
 
 . Klicken Sie auf *Durchsuchen* und wählen Sie dann das Feature Pack aus, das Sie anwenden möchten.
 . Geben Sie in das Feld *CHANGE* ein.

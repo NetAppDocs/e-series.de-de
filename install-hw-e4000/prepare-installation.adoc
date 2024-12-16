@@ -1,0 +1,148 @@
+---
+permalink: install-hw-e4000/prepare-installation.html 
+sidebar: sidebar 
+keywords:  
+summary:  
+---
+= Installation vorbereiten
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie müssen Ihren Standort so vorbereiten, dass er den Spezifikationen für Ihr Speichersystem der E4000-Serie entspricht.
+
+.Schritte
+. Erstellen Sie ein Konto und registrieren Sie Ihre Hardware unter http://mysupport.netapp.com/["NetApp Support"^].
+. Stellen Sie sicher, dass die folgenden Elemente in der Verpackung enthalten sind, die Sie erhalten haben:
++
+[role="tabbed-block"]
+====
+.E4012
+--
+Shelf mit installierten Laufwerken (Blende separat verpackt)::
++
+--
+image:../media/trafford_overview.png["Shelf mit installierten Laufwerken"]
+
+--
+Rack-montierte Hardware::
++
+--
+image:../media/superrails_inst-hw-e2800-e5700.png["Rack-montierte Hardware"]
+
+--
+Ethernet-Kabel für Managementverbindung (falls bestellt)::
++
+--
+image:../media/cable_ethernet_inst-hw-e2800-e5700.png["Ethernet-Kabel für Managementverbindung"]
+
+--
+I/O-Kabel für die Verkabelung von Daten-Hosts::
++
+--
+image:../media/cable_io_inst-hw-e2800-e5700.png["I/O-Kabel für die Verkabelung von Daten-Hosts"]
+
+--
+Stromkabel::
++
+--
+image:../media/cable_power_inst-hw-e2800-e5700.png["Stromkabel"]
+
+--
+SAS-Kabel::
++
+--
+image:../media/sas_cable.png["SAS-Kabel"]
+
+--
+
+
+--
+.E4060
+--
+Shelf, Blende und Rack-Mount-Hardware::
++
+--
+image:../media/trafford_overview.png["Shelf, Blende und Rack-Mount-Hardware"]
+
+--
+Vier Shelf-Griffe x4:: image:../media/handles_counted.png["Vier Regalgriffe"]
+Ethernet-Kabel für Managementverbindung (falls bestellt)::
++
+--
+image:../media/cable_ethernet_inst-hw-e2800-e5700.png["Ethernet-Kabel für Managementverbindung"]
+
+--
+I/O-Kabel für die Verkabelung von Daten-Hosts::
++
+--
+image:../media/cable_io_inst-hw-e2800-e5700.png["I/O-Kabel für die Verkabelung von Daten-Hosts"]
+
+--
+Stromkabel::
++
+--
+image:../media/cable_power_inst-hw-e2800-e5700.png["Stromkabel"]
+
+--
+SAS-Kabel::
++
+--
+image:../media/sas_cable.png["SAS-Kabel"]
+
+--
+
+
+--
+====
+. Beschaffen Sie sich die zusätzlichen Elemente, die für die Installation erforderlich sind:
++
+** Einen philips #2 Schraubendreher
+** Eine Taschenlampe
+** Ein ESD-Band
+** Ein Schrank oder Rack passt in die folgenden Größen:
++
+[role="tabbed-block"]
+====
+.E4012
+--
+* Tiefe*: 21.1. Zoll (53.59 cm)
+
+* Breite*: 17.64 Zoll (44.8)
+
+* Höhe*: 3.4 Zoll (8.64 cm)
+
+*Höchstgewicht*: 65.25 lb (29.6 kg)
+
+--
+.E4060
+--
+*Tiefe*: 36.3 Zoll (92.2 cm)
+
+* Breite*: 17.64 Zoll (44.8 cm)
+
+* Höhe*: 7.0 Zoll (17.78 cm)
+
+*Höchstgewicht*: 253.33 lb (114.91 kg)
+
+--
+====
+** Ein Ort, an dem die korrekte Wechselstromspannung zur Verfügung gestellt wird:
++
+*** E4012: 120 bis 240 V AC
+*** E4060: 240-Volt-AC
+
+
+** Ein unterstützter Browser für die Verwaltungssoftware:
++
+*** Google Chrome (Version 89 und höher)
+*** Microsoft Edge (Version 90 und höher)
+*** Mozilla Firefox (Version 80 und höher)
+*** Safari (Version 14 und höher)
+
+
+
+
+

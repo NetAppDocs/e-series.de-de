@@ -10,7 +10,7 @@ summary: Verwenden Sie das Plug-in für vCenter Interface, um die IP-Adressen vo
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

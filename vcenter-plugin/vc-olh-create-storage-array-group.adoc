@@ -11,7 +11,7 @@ summary: Die Speichergruppe definiert, welche Laufwerke den Speicher bereitstell
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

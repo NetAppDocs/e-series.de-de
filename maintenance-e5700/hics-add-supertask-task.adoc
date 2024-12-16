@@ -102,7 +102,7 @@ CAUTION: *Möglicher Datenverlust* -- Wenn Sie diesen Vorgang während der I/O-V
 Die grüne LED „Cache aktiv“ auf der Rückseite jedes Controllers leuchtet, wenn die Daten im Cache auf die Laufwerke geschrieben werden müssen. Sie müssen warten, bis diese LED ausgeschaltet ist.
 
 +
-image::../media/e5700_ib_hic_w_cache_led_callouts_maint-e5700.gif[e5700 ib hic w Cache LED Callouts maint e5700]
+image::../media/e5700_ib_hic_w_cache_led_callouts_maint-e5700.gif[Cache-aktiv-LED auf E5700 Controller]
 
 +
 *(1)* _Cache Active LED_
@@ -134,7 +134,7 @@ CAUTION: Um eine verminderte Leistung zu vermeiden, dürfen die Kabel nicht verd
 Die grüne LED „Cache aktiv“ auf der Rückseite des Controllers leuchtet, wenn Daten im Cache auf die Laufwerke geschrieben werden müssen. Sie müssen warten, bis diese LED ausgeschaltet ist, bevor Sie den Controller-Behälter entfernen.
 
 +
-image::../media/e5700_ib_hic_w_cache_led_callouts_maint-e5700.gif[e5700 ib hic w Cache LED Callouts maint e5700]
+image::../media/e5700_ib_hic_w_cache_led_callouts_maint-e5700.gif[Cache-aktiv-LED auf E5700 Controller]
 
 +
 *(1)* _Cache Active LED_
@@ -144,7 +144,7 @@ image::../media/e5700_ib_hic_w_cache_led_callouts_maint-e5700.gif[e5700 ib hic w
 Die folgende Abbildung ist ein Beispiel für ein E5724 Controller-Shelf:
 
 +
-image::../media/28_dwg_e2824_remove_controller_canister_maint-e5700.gif[28 dwg e2824 Controller Behälter Maint e5700 entfernen]
+image::../media/28_dwg_e2824_remove_controller_canister_maint-e5700.gif[Controller-Behälter ausbauen]
 
 +
 *(1)* _Controller-Behälter_
@@ -156,7 +156,7 @@ image::../media/28_dwg_e2824_remove_controller_canister_maint-e5700.gif[28 dwg e
 Die folgende Abbildung ist ein Beispiel für ein E5760 Controller-Shelf:
 
 +
-image::../media/28_dwg_e2860_add_controller_canister_maint-e5700.gif[28 DWG e2860, Add Controller Behälter, Version e5700]
+image::../media/28_dwg_e2860_add_controller_canister_maint-e5700.gif[Controller-Behälter ausbauen]
 
 +
 *(1)* _Controller-Behälter_
@@ -193,7 +193,7 @@ CAUTION: *Möglicher Verlust des Datenzugriffs* -- Installieren Sie nie eine HIC
 Wenn diese grüne LED leuchtet, wird der Controller weiterhin mit Strom versorgt. Sie müssen warten, bis diese LED erlischt, bevor Sie Komponenten entfernen.
 
 +
-image::../media/28_dwg_e2800_internal_cache_active_led_maint-e5700.gif[28 DWG e2800 interner Cache, aktiver LED maint e5700]
+image::../media/28_dwg_e2800_internal_cache_active_led_maint-e5700.gif[Aktive LED für den Inernal-Cache]
 
 +
 *(1)* _Interner Cache Aktiv_
@@ -212,7 +212,7 @@ Achten Sie darauf, dass die Komponenten auf der Unterseite der HIC oder auf der 
 CAUTION: *Mögliche Geräteschäden* -- vorsichtig sein, den goldenen Ribbon-Anschluss für die Controller-LEDs zwischen der HIC und den Daumenschrauben nicht zu quetschen.
 
 +
-image::../media/28_dwg_e2800_hic_thumbscrews_maint-e5700.gif[28-wg-e2800-HIC-Daumenschrauben, Mai e5700]
+image::../media/28_dwg_e2800_hic_thumbscrews_maint-e5700.gif[Installieren Sie HIC auf der Controllerkarte]
 
 +
 *(1)* _Host Interface Card (HIC)_
@@ -226,7 +226,7 @@ Verwenden Sie keinen Schraubendreher, oder ziehen Sie die Schrauben möglicherwe
 
 . Befestigen Sie die neue HIC-Frontplatte mit einem #1 Kreuzschlitzschraubendreher mit den vier zuvor entfernten Schrauben am Controller-Behälter.
 +
-image::../media/28_dwg_e2800_hic_faceplace_screws_maint-e5700.gif[28-dwg e2800-Hockefaceplace-Schrauben maint e5700]
+image::../media/28_dwg_e2800_hic_faceplace_screws_maint-e5700.gif[Installieren Sie HIC auf dem Controller]
 
 
 
@@ -243,7 +243,7 @@ Setzen Sie den Controller-Behälter wieder in das Controller-Shelf ein, nachdem 
 Die folgende Abbildung ist ein Beispiel für ein E5724 Controller-Shelf:
 
 +
-image::../media/28_dwg_e2824_remove_controller_canister_maint-e5700.gif[28 dwg e2824 Controller Behälter Maint e5700 entfernen]
+image::../media/28_dwg_e2824_remove_controller_canister_maint-e5700.gif[Setzen Sie den Controller-Behälter wieder ein]
 
 +
 *(1)* _Controller-Behälter_
@@ -255,7 +255,7 @@ image::../media/28_dwg_e2824_remove_controller_canister_maint-e5700.gif[28 dwg e
 Die folgende Abbildung ist ein Beispiel für ein E5760 Controller-Shelf:
 
 +
-image::../media/28_dwg_e2860_add_controller_canister_maint-e5700.gif[28 DWG e2860, Add Controller Behälter, Version e5700]
+image::../media/28_dwg_e2860_add_controller_canister_maint-e5700.gif[Setzen Sie den Controller-Behälter wieder ein]
 
 +
 *(1)* _Controller-Behälter_
@@ -295,7 +295,7 @@ CAUTION: Schließen Sie derzeit keine Datenkabel an die neuen HIC-Ports an.
 NOTE: Die Abbildung zeigt einen Beispiel-Controller-Behälter. Ihr Controller kann über eine andere Anzahl und einen anderen Typ von Host-Ports verfügen.
 
 +
-image::../media/e5700_hic_3_callouts_maint-e5700.gif[e5700 hic 3 Callouts für e5700]
+image::../media/e5700_hic_3_callouts_maint-e5700.gif[LEDs für E5700 Controller]
 
 +
 *(1)* _Host Link LEDs_

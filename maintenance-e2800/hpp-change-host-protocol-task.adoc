@@ -29,7 +29,7 @@ Mit dem SANtricity System Manager können Sie ermitteln, welche Art von SFP-Tran
 . Geben Sie in das Textfeld * SFP* ein, und klicken Sie auf *Suchen*.
 . Suchen Sie für jeden SFP, der im Speicher-Array-Profil aufgelistet ist, den Eintrag für *unterstützte Datenrate(en)*.
 +
-image::../media/sam1130_ss_e2800_unified_spf_maint-e2800.gif[Sam1130 ss e2800 Unified spf maint e2800]
+image::../media/sam1130_ss_e2800_unified_spf_maint-e2800.gif[Unterstützte Datenrate]
 
 . Die folgende Tabelle gibt an, ob Sie die SFPs wiederverwenden können:
 +
@@ -94,7 +94,7 @@ Um das Feature Pack zu erhalten, benötigen Sie die Seriennummer vom Controller-
 .. Wenn die Registerkarte *Support Resources* ausgewählt ist, scrollen Sie zum Abschnitt *Top Storage Array Properties*.
 .. Suchen Sie die *Chassis Serial Number*, und kopieren Sie diesen Wert in eine Textdatei.
 +
-image::../media/sam1130_ss_e2800_storage_array_profile_sn_smid_copy_maint-e2800.gif[Sam1130 ss e2800 Storage-Array-Profil sn smid Kopie maint e2800]
+image::../media/sam1130_ss_e2800_storage_array_profile_sn_smid_copy_maint-e2800.gif[Seriennummer des Chassis]
 
 
 
@@ -108,7 +108,7 @@ NOTE: „Submodel“ kann auch als „Submodel“ geschrieben werden.
 
 .. Suchen Sie die Submodel-ID für das Feature Pack für die Starting-Konfiguration.
 +
-image::../media/storage_array_profile2_maint-e2800.gif[Storage-Array-Profile2 Wartung e2800]
+image::../media/storage_array_profile2_maint-e2800.gif[Submodell-ID des Featurepacks]
 
 
 
@@ -472,7 +472,7 @@ NOTE: Wenn Ihre Controller-Untermodell-ID nicht aufgeführt ist, wenden Sie sich
 .. Suchen Sie unter *Feature Pack ändern* den *Feature Enable Identifier*.
 .. Kopieren Sie diese 32-stellige Zahl in eine Textdatei.
 +
-image::../media/sam1130_ss_e2800_change_feature_pack_feature_enable_identifier_copy_maint-e2800.gif[Die Funktion des Änderungsfunktionspacks sam1130 ss e2800 aktivieren die Funktion Identifier Copy maint e2800]
+image::../media/sam1130_ss_e2800_change_feature_pack_feature_enable_identifier_copy_maint-e2800.gif['Feature Enable Identifier']
 
 
 
@@ -515,7 +515,7 @@ CAUTION: *Möglicher Datenverlust* -- Wenn Sie diesen Vorgang während der I/O-V
 . Wenn das Speicher-Array an einer Spiegelungsbeziehung beteiligt ist, beenden Sie alle Host-I/O-Vorgänge auf dem sekundären Storage Array.
 . Warten Sie, bis alle Daten im Cache-Speicher auf die Laufwerke geschrieben werden.
 +
-Die grüne LED „Cache aktiv“ auf der Rückseite jedes Controllers leuchtet, wenn die Daten im Cache auf die Laufwerke geschrieben werden müssen. Sie müssen warten, bis diese LED ausgeschaltet ist.image:../media/28_dwg_2800_controller_attn_led_maint-e2800.gif[""]
+Die grüne LED „Cache aktiv“ auf der Rückseite jedes Controllers leuchtet, wenn die Daten im Cache auf die Laufwerke geschrieben werden müssen. Sie müssen warten, bis diese LED erlischt.image:../media/28_dwg_2800_controller_attn_led_maint-e2800.gif["Cache-aktiv-LED am E2800 Controller"]
 
 +
 |===
@@ -542,7 +542,7 @@ LED „Cache aktiv“
 . Wählen Sie im SANtricity System Manager Menü:Einstellungen[System].
 . Wählen Sie unter *Add-ons* die Option *Feature Pack ändern*.
 +
-image::../media/sam1130_ss_system_change_feature_pack_maint-e2800.gif[Sam1130 ss Systemwechsel Feature Pack maint e2800]
+image::../media/sam1130_ss_system_change_feature_pack_maint-e2800.gif[Funktionspaket ändern]
 
 . Klicken Sie auf *Durchsuchen* und wählen Sie dann das Feature Pack aus, das Sie anwenden möchten.
 . Typ `CHANGE` Vor Ort.

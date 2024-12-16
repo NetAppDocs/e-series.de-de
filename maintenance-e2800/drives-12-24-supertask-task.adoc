@@ -69,7 +69,7 @@ Alle Verpackungsmaterialien speichern.
 
 . Drücken Sie die Entriegelungstaste am ausgefallenen Laufwerk.
 +
-image::../media/drw_drive_latch_maint-e2800.gif[drw-Laufwerksverriegelung, MINT e2800]
+image::../media/drw_drive_latch_maint-e2800.gif[Drücken Sie die Entriegelungstaste, um das fehlerhafte Laufwerk zu entfernen]
 
 +
 ** Bei Laufwerken in E2812 Controller-Shelfs oder DE212C Laufwerk-Shelfs befindet sich die Release-Schaltfläche links neben dem Laufwerk.
@@ -77,13 +77,13 @@ image::../media/drw_drive_latch_maint-e2800.gif[drw-Laufwerksverriegelung, MINT 
 
 
 . Öffnen Sie den Nockengriff, und schieben Sie den Antrieb leicht heraus.
-. Warten Sie 30 Sekunden.
+. Warten Sie 60 Sekunden.
 . Entfernen Sie das Laufwerk mithilfe beider Hände aus dem Regal.
 . Setzen Sie das Laufwerk auf eine antistatische, gepolsterte Oberfläche, die von Magnetfeldern entfernt ist.
-. Warten Sie 30 Sekunden, bis die Software erkennt, dass das Laufwerk entfernt wurde.
+. Warten Sie 60 Sekunden, bis die Software erkennt, dass das Laufwerk entfernt wurde.
 +
 
-NOTE: Wenn Sie versehentlich ein aktives Laufwerk entfernen, warten Sie mindestens 30 Sekunden, und installieren Sie es erneut. Informationen zum Recovery-Verfahren finden Sie in der Storage Management Software.
+NOTE: Wenn Sie versehentlich ein aktives Laufwerk entfernen, warten Sie mindestens 60 Sekunden, und installieren Sie es erneut. Informationen zum Recovery-Verfahren finden Sie in der Storage Management Software.
 
 
 
@@ -119,7 +119,7 @@ Führen Sie den Austausch des Laufwerks durch, um sicherzustellen, dass das neue
 . Überprüfen Sie die ein/aus-LED und die Warn-LED am ausgetauschten Laufwerk. (Wenn Sie das erste Laufwerk einsetzen, leuchtet die Warn-LED möglicherweise auf. Die LED sollte jedoch innerhalb einer Minute ausgeschaltet werden.)
 +
 ** Die ein/aus-LED leuchtet oder blinkt, und die Warn-LED leuchtet nicht: Zeigt an, dass das neue Laufwerk ordnungsgemäß funktioniert.
-** Die ein/aus-LED leuchtet auf: Zeigt an, dass das Laufwerk möglicherweise nicht ordnungsgemäß installiert ist. Entfernen Sie das Laufwerk, warten Sie 30 Sekunden, und installieren Sie es dann wieder.
+** Die ein/aus-LED leuchtet auf: Zeigt an, dass das Laufwerk möglicherweise nicht ordnungsgemäß installiert ist. Entfernen Sie das Laufwerk, warten Sie 60 Sekunden, und installieren Sie es dann wieder.
 ** Die Warnungs-LED leuchtet: Zeigt an, dass das neue Laufwerk möglicherweise defekt ist. Tauschen Sie es durch ein anderes neues Laufwerk aus.
 
 

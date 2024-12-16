@@ -1,7 +1,7 @@
 ---
 permalink: upgrade-controllers/complete-upgrade-controllers-task.html 
 sidebar: sidebar 
-keywords: E-Series, eseries, E2800, E5700, EF300, EF600, upgrade controller, upgrading controller, vendor ID, upgrade status, upgrade validate 
+keywords: E-Series, eseries, E4000, E2800, E5700, EF300, EF600, upgrade controller, upgrading controller, vendor ID, upgrade status, upgrade validate 
 summary: Führen Sie das Controller-Upgrade durch, indem Sie das Controller Shelf einschalten und die Controller-Softwareversion validieren. Anschließend können Sie Supportdaten erfassen und den Betrieb fortsetzen. 
 ---
 = Führen Sie das Controller-Upgrade durch
@@ -88,7 +88,7 @@ Sie müssen die gesicherten Laufwerke zuerst mithilfe des Verfahrens zur interne
  a| 
 Alle gesicherten Laufwerke, External Key Management, haben Sie nicht vorübergehend zur internen Schlüsselverwaltung für das Controller-Ersatzverfahren gewechselt
  a| 
-Der Controller kann durch externes Verschlüsselungsmanagement und alle Laufwerke gesichert werden
+Controller-Swap mit externem Verschlüsselungsmanagement und allen gesicherten Laufwerken. Detaillierte Anweisungen finden Sie unter https://docs.netapp.com/us-en/e-series/upgrade-controllers/upgrade-unlock-drives-task.html#external-key-management["Externes Verschlüsselungskeymanagement"^].
 
 |===
 
@@ -102,10 +102,10 @@ Sie können die LEDs und die Speicherverwaltungssoftware verwenden, um den Statu
 .Schritte
 . Schauen Sie sich die LEDs an Controller A an, um sicherzustellen, dass sie ordnungsgemäß gebootet werden.
 +
-Während des Neubootens werden die erforderlichen LEDs für den Host Link Service grün angezeigt. Auf der 7-Segment-Anzeige wird die Sequenz OS+ SD+ leer angezeigt, um anzuzeigen, dass der Controller die SOD-Verarbeitung (Start-of-day) ausführt.
+Während des Neubootens werden die erforderlichen LEDs für den Host Link Service grün angezeigt.
 
 +
-Nachdem der Controller erfolgreich neu gebootet wurde, wird auf der Anzeige für sieben Segmente die Fach-ID angezeigt, die der Anzeige für sieben Segmente des zweiten Controllers entspricht. Sie können den neuen Controller-Behälter dann mit der Speichermanagement-Software entdecken.
+Nachdem der Controller den Neustart erfolgreich abgeschlossen hat, können Sie den neuen Controller-Behälter mithilfe der Speicherverwaltungssoftware ermitteln.
 
 . Wenn eine der Service Action required LEDs des Controller-Laufwerksfachs _on_ leuchtet oder wenn die LED für die Service-Aktion des Controllers _ON_ leuchtet:
 +
@@ -124,12 +124,6 @@ Nachdem der Controller erfolgreich neu gebootet wurde, wird auf der Anzeige für
 Sie müssen sicherstellen, dass Ihre neuen Controller mit dem richtigen Betriebssystem (Controller-Firmware) und NVSRAM ausgeführt werden.
 
 .Schritte
-. Führen Sie einen der folgenden Schritte aus:
-+
-** Wenn Sie ein Upgrade auf Controller durchführen, die SANtricity 11.30 und die Controller-Firmware 8.30 nicht unterstützen, stellen Sie sicher, dass die auf den neuen Controllern ausgeführte Version mit der Version übereinstimmt, die zuletzt auf den ursprünglichen Controllern ausgeführt wurde. Normalerweise wird dies die letzte Version sein, die von den alten Controllern unterstützt wird. Installieren Sie gegebenenfalls die entsprechende Version auf den neuen Controllern.
-** Wenn Sie ein Upgrade auf Controller durchführen, auf denen SANtricity 11.30 und die Controller-Firmware 8.30 ausgeführt werden, laden Sie die neuesten NVSRAM herunter, und installieren Sie sie, nachdem Sie die neuen Controller eingeschaltet haben.
-
-
 . Wenn bei Ihrem Controller-Upgrade eine Protokolländerung (z. B. Fibre Channel zu iSCSI) vorgenommen wird und bereits Hosts für Ihr Storage Array definiert sind, verknüpfen Sie die neuen Host-Ports mit Ihren Hosts:
 +
 .. Wählen Sie im System Manager Menü:Storage[Hosts] aus.
@@ -156,7 +150,7 @@ Informationen über kompatible Hardware finden Sie im https://mysupport.netapp.c
 +
 Das Dialogfeld Cache-Einstellung ändern wird angezeigt. In diesem Dialogfeld werden alle Volumes im Speicher-Array angezeigt.
 
-.. Wählen Sie die Registerkarte *Basic* und ändern Sie die Einstellungen für Lese-Cache und Schreib-Caching.
+.. Wählen Sie die Registerkarte *Basic* und aktivieren Sie die Einstellungen für Lese-Caching und Schreib-Caching.
 .. Klicken Sie Auf *Speichern*.
 
 
@@ -168,10 +162,9 @@ Das Dialogfeld Cache-Einstellung ändern wird angezeigt. In diesem Dialogfeld we
 
 . Sie können Support-Daten über Ihr Storage Array über die grafische Benutzeroberfläche oder die CLI erfassen:
 +
-** Verwenden Sie entweder System Manager oder das Array Management-Fenster des Storage Managers, um ein Support Bundle Ihres Storage Arrays zu sammeln und zu speichern.
+** Verwenden Sie System Manager, um ein Supportpaket Ihres Speicherarrays zu sammeln und zu speichern.
 +
 *** Wählen Sie in System Manager im Menü:Support[Support Center > Registerkarte Diagnose]. Wählen Sie dann *Support-Daten sammeln* und klicken Sie auf *Collect*.
-*** Wählen Sie in der Symbolleiste Array Management Window die Option MENU:Überwachen[Systemzustand > Support-Daten manuell erfassen]. Geben Sie dann einen Namen ein und geben Sie einen Speicherort auf Ihrem System an, auf dem Sie das Supportpaket speichern möchten.
 +
 Die Datei wird im Ordner Downloads für Ihren Browser mit dem Namen gespeichert `support-data.7z`.
 
@@ -205,4 +198,4 @@ NOTE: Das Sammeln von Support-Daten kann vorübergehend Auswirkungen auf die Per
 
 
 .Was kommt als Nächstes?
-Wenn Ihr Controller-Upgrade dazu führt, die Anbieter-ID von LSI zu NETAPP zu ändern, gehen Sie zu link:remount-volumes-lsi-task.html["Volumes neu einbinden nach Anbieterwechsel von LSI zu NETAPP"]; Andernfalls ist Ihr Controller-Upgrade abgeschlossen und Sie können den normalen Betrieb wieder aufnehmen.
+Das Controller Upgrade ist abgeschlossen und Sie können den normalen Betrieb wieder aufnehmen.

@@ -47,7 +47,7 @@ Bewahren Sie alle Verpackungsmaterialien auf, wenn Sie das defekte Netzteil zur�
 
 . Suchen Sie die Lasche rechts neben dem Netzteil, und drücken Sie sie in Richtung Netzteil.
 +
-image::../media/psup_2.png[psup 2]
+image::../media/psup_2.png[Drücken Sie die Lasche neben dem Netzteil]
 
 . Suchen Sie den Griff an der Vorderseite des Netzteils.
 . Schieben Sie das Netzteil mit dem Griff gerade aus dem System heraus.
@@ -56,7 +56,7 @@ image::../media/psup_2.png[psup 2]
 CAUTION: Wenn Sie ein Netzteil entfernen, verwenden Sie immer zwei Hände, um sein Gewicht zu stützen.
 
 +
-image::../media/psup_3.png[psup 3]
+image::../media/psup_3.png[Ziehen Sie das Netzteil heraus]
 
 
 
@@ -76,7 +76,7 @@ Die Netzteile sind codiert und können nur auf eine Weise installiert werden.
 CAUTION: Beim Einschieben des Netzteils in das System keine übermäßige Kraft verwenden, da der Anschluss beschädigt werden kann.
 
 +
-image::../media/psup_4.png[psup 4]
+image::../media/psup_4.png[Installieren Sie das Netzteil in den Controller]
 
 . Vergewissern Sie sich, dass der Status optimal lautet, und überprüfen Sie die Warn-LEDs für das Controller-Shelf.
 +

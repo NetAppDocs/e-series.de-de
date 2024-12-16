@@ -1,0 +1,49 @@
+---
+permalink: install-hw-e4000/index.html 
+sidebar: sidebar 
+keywords:  
+summary: Führen Sie die folgenden Schritte aus, um Ihr E4000-Speichersystem zu installieren und einzurichten. 
+---
+= Installation und Einrichtung von E4000-Systemen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Führen Sie die folgenden Schritte aus, um Ihr E4000-Speichersystem zu installieren und einzurichten.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["Eins"] Vorbereiten der Installation
+[role="quick-margin-para"]
+Sie müssen Ihren Standort so vorbereiten, dass er den Spezifikationen für Ihr Speichersystem der E4000-Serie entspricht.
+
+[role="quick-margin-list"]
+* link:../install-hw-e4000/prepare-installation.html["Installation vorbereiten"^]
+
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["Zwei"] Installieren Sie die Hardware
+[role="quick-margin-para"]
+Erfahren Sie, wie Sie ein E4012, E4060, DE212C oder DE460C Storage-System in einem Rack oder einem NetApp System-Cabinet installieren.
+
+[role="quick-margin-list"]
+* link:../install-hw-e4000/install-hardware-12.html["Installieren Sie die E4012-Hardware"^]
+* link:../install-hw-e4000/install-hardware-60.html["Installieren Sie die E4060-Hardware"^]
+
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["Drittens"] Verkabelung der Hardware-Shelfs
+[role="quick-margin-para"]
+Erfahren Sie, wie Sie die Stromkabel anschließen und die Laufwerkseinschübe für ein E4000-Speichersystem einschalten.
+
+[role="quick-margin-list"]
+* link:../install-hw-e4000/connect-cables-12.html["Verkabelung der E4012-Hardware"^]
+* link:../install-hw-e4000/connect-cables-60.html["Verkabelung der E4060-Hardware"^]
+
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["Vier"] Vollständige Einrichtung des Storage-Systems
+[role="quick-margin-para"]
+Erfahren Sie, wie Sie die Controller mit Ihrem Netzwerk verbinden und die Einrichtung und Konfiguration des Storage-Systems abschließen.
+
+[role="quick-margin-list"]
+* link:../install-hw-e4000/complete-setup-12.html["E4012-Einrichtung abschließen"^]
+* link:../install-hw-e4000/complete-setup-60.html["Schließen Sie die Einrichtung des E4060 ab"^]
+

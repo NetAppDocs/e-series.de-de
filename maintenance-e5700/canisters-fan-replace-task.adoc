@@ -60,7 +60,7 @@ Die Datei wird im Ordner Downloads für Ihren Browser mit dem Namen *Support-Dat
 . Stellen Sie aus dem SANtricity-System-Manager fest, welcher Lüfterbehälter ausgefallen ist.
 +
 .. Wählen Sie *Hardware*.
-.. Schauen Sie sich den Ventilator an image:../media/sam1130_ss_hardware_fan_icon_maint-e5700.gif[""] Symbol rechts neben den Dropdown-Listen *Shelf*, um festzustellen, welches Regal den fehlgeschlagenen Lüfterbehälter hat.
+.. Sehen Sie sich das Lüftersymbol image:../media/sam1130_ss_hardware_fan_icon_maint-e5700.gif["Lüftersymbol"]rechts neben der Dropdown-Liste *Regal* an, um festzustellen, welches Regal den defekten Lüfterbehälter hat.
 +
 Wenn eine Komponente ausgefallen ist, ist dieses Symbol rot.
 
@@ -84,7 +84,7 @@ Informationen zum fehlgeschlagenen Lüfterbehälter finden Sie auch im Bereich D
 Sie müssen den Lüfterbehälter austauschen, dessen Warn-LED leuchtet.
 
 +
-image::../media/28_dwg_e2860_de460c_single_fan_canister_with_led_callout_maint-e5700.gif[28 DWG e2860 de460c Einzelventilator Behälter mit LED Callout e5700]
+image::../media/28_dwg_e2860_de460c_single_fan_canister_with_led_callout_maint-e5700.gif[Warnungs-LED]
 
 +
 *(1)* _Warn-LED_. Wenn diese LED als *gelb* angezeigt wird, weist der Lüfter einen Fehler auf.
@@ -107,14 +107,14 @@ Bewahren Sie das gesamte Verpackungsmaterial für die Verwendung auf, wenn Sie d
 
 . Drücken Sie die orangefarbene Lasche, um den Lüfterbehälter zu lösen.
 +
-image::../media/28_dwg_e2860_de460c_single_fan_canister_with_orange_tab_callout_maint-e5700.gif[28 dwg e2860 de460c Einzelgebläse mit orangefarbener Lasche-läuterlausel e5700]
+image::../media/28_dwg_e2860_de460c_single_fan_canister_with_orange_tab_callout_maint-e5700.gif[Drücken Sie die orangefarbene Lasche, um den Griff des Lüfterbehälters zu lösen]
 
 +
 *(1)* _Tab, auf den Sie drücken, um den Lüfter-Kanister-Griff zu lösen._
 
 . Ziehen Sie den Lüfterbehälter mithilfe des Griffs für den Lüfterbehälter aus dem Regal.
 +
-image::../media/28_dwg_e2860_de460c_fan_canister_handle_with_callout_maint-e5700.gif[28 DWG e2860 de460c Lüfterbehälter Griff mit Callout e5700]
+image::../media/28_dwg_e2860_de460c_fan_canister_handle_with_callout_maint-e5700.gif[Ziehen Sie den Lüfterbehälter mithilfe des Griffs heraus]
 
 +
 *(1)* _Griff zum Herausziehen des Ventilatorkanisters._

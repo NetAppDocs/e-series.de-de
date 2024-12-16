@@ -11,7 +11,7 @@ summary: Abrufen und Importieren von CA-signierten Zertifikaten für sicheren Zu
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

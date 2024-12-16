@@ -22,9 +22,12 @@ Host kann direkt mit einem Controller (Direct-Attached Topology) verbunden oder 
 Die folgende Abbildung zeigt eine Beispielverbindung. Verwenden Sie alle verfügbaren Host-Adapter-Ports, um eine maximale Performance zu gewährleisten.
 
 .Zwei Hosts und zwei Controller
-image::../media/topology_host_direct_generic_web_low.png[Topologie-Host direkt generisches Web niedrig]
+image::../media/topology_host_direct_generic_web_low.png[Verkabelung von zwei Hosts und zwei Controllern]
 
 *(1)* _Verbinden Sie jeden Host-Adapter-Port direkt mit den Host-Ports der Controller._
+
+
+NOTE: Stellen Sie für das E4000 eine Verbindung zu den Host-Ports e0a und e0b her.
 
 
 
@@ -35,8 +38,11 @@ Eine Switch-Topologie verwendet Switches, um Hosts mit den Controllern im Storag
 Die folgende Abbildung zeigt eine Beispielverbindung. Bei Switches, die Provisioning-Fähigkeit bieten, sollten Sie alle Initiator- und Zielpaare isolieren.
 
 .Zwei Hosts und zwei Switches
-image::../media/topology_host_fabric_generic.png[Topologie-Host-Fabric allgemein]
+image::../media/topology_host_fabric_generic.png[Zwei Hosts und zwei Switch-Verkabelung]
 
 *(1)* _Schließen Sie jeden Hostadapter direkt an den Switch an._
 
 *(2)* _Schließen Sie jeden Switch direkt an die Host-Ports der Controller an. Um eine maximale Leistung zu gewährleisten, verwenden Sie alle verfügbaren Host Adapter Ports._
+
+
+NOTE: Stellen Sie für das E4000 eine Verbindung zu den Host-Ports e0a und e0b her.

@@ -6,6 +6,8 @@ summary: Montieren Sie die Hardware als Rack.
 ---
 = Rack-montierte Hardware
 :allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
 
 
 [role="lead"]

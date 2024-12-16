@@ -10,7 +10,7 @@ summary: Drive Security ist eine Funktion, die bei Entfernung aus dem Speicher-A
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

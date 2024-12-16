@@ -127,7 +127,7 @@ CAUTION: Um eine verminderte Leistung zu vermeiden, dürfen die Kabel nicht verd
 Die folgende Abbildung ist ein Beispiel für ein E5724 Controller-Shelf:
 
 +
-image::../media/28_dwg_e2824_remove_controller_canister_maint-e5700.gif[28 dwg e2824 Controller Behälter Maint e5700 entfernen]
+image::../media/28_dwg_e2824_remove_controller_canister_maint-e5700.gif[Controller-Behälter ausbauen]
 
 +
 *(1)* _Controller-Behälter_
@@ -139,7 +139,7 @@ image::../media/28_dwg_e2824_remove_controller_canister_maint-e5700.gif[28 dwg e
 Die folgende Abbildung ist ein Beispiel für ein E5760 Controller-Shelf:
 
 +
-image::../media/28_dwg_e2860_add_controller_canister_maint-e5700.gif[28 DWG e2860, Add Controller Behälter, Version e5700]
+image::../media/28_dwg_e2860_add_controller_canister_maint-e5700.gif[Controller-Behälter ausbauen]
 
 +
 *(1)* _Controller-Behälter_
@@ -172,7 +172,7 @@ Nachdem Sie den Controller-Behälter aus dem Controller-Regal entfernt haben, en
 Wenn diese grüne LED leuchtet, wird der Controller weiterhin mit Strom versorgt. Sie müssen warten, bis diese LED erlischt, bevor Sie Komponenten entfernen.
 
 +
-image::../media/28_dwg_e2800_internal_cache_active_led_maint-e5700.gif[28 DWG e2800 interner Cache, aktiver LED maint e5700]
+image::../media/28_dwg_e2800_internal_cache_active_led_maint-e5700.gif[LED für aktiven internen Cache]
 
 +
 *(1)* _LED Interner Cache aktiv_
@@ -183,7 +183,7 @@ image::../media/28_dwg_e2800_internal_cache_active_led_maint-e5700.gif[28 DWG e2
 . Suchen Sie den blauen Freigabehebel für die Batterie.
 . Entriegeln Sie den Akku, indem Sie den Freigabehebel nach unten und vom Controller-Behälter wegdrücken.
 +
-image::../media/28_dwg_e2800_remove_battery_maint-e5700.gif[28 DWG e2800 Batteriefachmausel e5700 entfernen]
+image::../media/28_dwg_e2800_remove_battery_maint-e5700.gif[Entfernen Sie die Batterie]
 
 +
 *(1)* _Entriegelung der Batterie_
@@ -221,7 +221,7 @@ Sie müssen den Metallflansch an der Vorderseite der Batterie in den Schlitz an 
 Wenn die Verriegelung einrastet, Haken unten an der Verriegelung in einen Metallschlitz am Gehäuse.
 
 +
-image::../media/28_dwg_e2800_insert_battery_maint-e5700.gif[28-wg-e2800-Einsatz Batterie-Maint e5700]
+image::../media/28_dwg_e2800_insert_battery_maint-e5700.gif[Batterie einlegen]
 
 +
 *(1)* _Entriegelung der Batterie_
@@ -237,11 +237,11 @@ CAUTION: *Möglicher Hardwareschaden* -- der Metallflansch an der Vorderseite de
 +
 ** *Korrekt* -- der Metallflansch der Batterie ist vollständig in den Steckplatz am Controller eingesetzt:
 +
-image:../media/28_dwg_e2800_battery_flange_ok_maint-e5700.gif[""]
+image:../media/28_dwg_e2800_battery_flange_ok_maint-e5700.gif["Batterieflansch korrigieren"]
 
 ** *Incorrect* -- der Metallflansch der Batterie ist nicht in den Steckplatz am Controller eingelegt:
 +
-image:../media/28_dwg_e2800_battery_flange_not_ok_maint-e5700.gif[""]
+image:../media/28_dwg_e2800_battery_flange_not_ok_maint-e5700.gif["Falscher Batterieflansch"]
 
 
 
@@ -258,7 +258,7 @@ Setzen Sie nach dem Einbau der neuen Batterie den Controller-Behälter wieder in
 . Drehen Sie den Controller-Behälter so um, dass die abnehmbare Abdeckung nach unten zeigt.
 . Schieben Sie den Steuerkanister bei geöffnetem Nockengriff vollständig in das Reglerregal.
 +
-image::../media/28_dwg_e2824_remove_controller_canister_maint-e5700.gif[28 dwg e2824 Controller Behälter Maint e5700 entfernen]
+image::../media/28_dwg_e2824_remove_controller_canister_maint-e5700.gif[Setzen Sie den Controller-Behälter wieder ein]
 
 +
 *(1)* _Controller-Behälter_
@@ -267,7 +267,7 @@ image::../media/28_dwg_e2824_remove_controller_canister_maint-e5700.gif[28 dwg e
 *(2)* _Cam Griff_
 
 +
-image::../media/28_dwg_e2860_add_controller_canister_maint-e5700.gif[28 DWG e2860, Add Controller Behälter, Version e5700]
+image::../media/28_dwg_e2860_add_controller_canister_maint-e5700.gif[Setzen Sie den Controller-Behälter wieder ein]
 
 +
 *(1)* _Controller-Behälter_
@@ -300,7 +300,7 @@ Wenn die Kommunikation mit der anderen Steuerung wiederhergestellt wird:
 +
 ** Die 7-Segment-Anzeige zeigt die sich wiederholende Sequenz *OS*, *OL*, *_blank_* an, um anzuzeigen, dass der Controller offline ist.
 ** Die gelbe Warn-LED leuchtet weiterhin.
-** Je nach Host-Schnittstelle leuchtet, blinkt oder leuchtet die LED für Host-Link möglicherweise nicht.image:../media/e5700_hic_3_callouts_maint-e5700.gif[""]
+** Je nach Host-Schnittstelle leuchten die Host-Link-LEDs möglicherweise auf, blinken oder leuchten nicht. image:../media/e5700_hic_3_callouts_maint-e5700.gif["LEDs für E5700 Controller"]
 +
 *(1)* _Host Link LEDs_
 

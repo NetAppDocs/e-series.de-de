@@ -6,6 +6,8 @@ summary: Frühere Versionen der Dokumentation
 ---
 = Frühere Versionen
 :allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
 
 
 [role="lead"]
@@ -23,11 +25,20 @@ Die nachfolgenden Links führen zu Dokumentationen für ältere Versionen der E-
 * https://mysupport.netapp.com/ecm/ecm_download_file/ECMP1394872["Hinzufügen eines zweiten Controllers zu E2600 und E2700"^]
 * https://library.netapp.com/ecm/ecm_download_file/ECMLP2353447["Ändern oder Hinzufügen von Host-Protokollen"^]
 * https://mysupport.netapp.com/ecm/ecm_download_file/ECMP1656638["Von AC zu DC-Strom konvertieren"^]
+* https://library.netapp.com/ecm/ecm_download_file/ECMLP2589397["Controller Upgrade Guide – Ältere Controller-Modelle"^]
 
 
 
 
 == Softwaredokumentation für frühere Versionen
+
+
+
+=== SANtricity Version 11.8
+
+* https://docs.netapp.com/us-en/e-series-santricity-118/index.html["Die Hilfe zu System Manager"^]
+* https://docs.netapp.com/us-en/e-series-santricity-118/index.html["Unified Manager-Hilfe"^]
+
 
 
 

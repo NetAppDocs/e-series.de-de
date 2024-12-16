@@ -11,7 +11,7 @@ summary: Wenn Sie keinen I/O-Zugriff mehr auf ein Volume benötigen, können Sie
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

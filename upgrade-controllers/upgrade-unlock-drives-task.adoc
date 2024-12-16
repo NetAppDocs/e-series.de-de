@@ -11,7 +11,7 @@ summary: Wenn Sie E2800 und E5700 Controller aktualisieren und die Laufwerkssich
 
 
 [role="lead"]
-Wenn Sie E2800 und E5700 Controller aktualisieren, werden die Laufwerke durch die Laufwerkssicherheitsfunktion für diese Controller teilweise, extern oder intern gesperrt. Wenn die Laufwerkssicherheitsfunktion aktiviert ist, müssen Sie diese Laufwerke manuell entsperren.
+Die Laufwerkssicherheitsfunktion für diese Controller sperrt die Laufwerke teilweise, extern oder intern. Wenn die Laufwerkssicherheitsfunktion aktiviert ist, müssen Sie diese Laufwerke manuell entsperren.
 
 Befolgen Sie das entsprechende Verfahren für:
 

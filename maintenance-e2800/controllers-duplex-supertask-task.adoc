@@ -46,7 +46,7 @@ Bewahren Sie das Verpackungsmaterial auf, das beim Versand des defekten Reglerka
 
 . Suchen Sie die Etiketten für MAC-Adresse und FRU-Teilenummer auf der Rückseite des Controller-Behälters.
 +
-image::../media/28_dwg_e2800_labels_maint-e2800.gif[28-m-e2800-Etiketten maint e2800]
+image::../media/28_dwg_e2800_labels_maint-e2800.gif[Mac-Adresse und FRU-Teilenummer auf dem E2800 Controller]
 
 +
 *(1)* _MAC-Adresse:_ die MAC-Adresse für Verwaltungsport 1 („`P1`"). Wenn Sie die IP-Adresse des ursprünglichen Controllers über DHCP erhalten haben, benötigen Sie diese Adresse, um eine Verbindung mit dem neuen Controller herzustellen.
@@ -60,7 +60,7 @@ Wenn ein Controller einen Fehler aufweist und ausgetauscht werden muss, wird im 
 
 +
 .. Wählen Sie *Hardware*.
-.. Suchen Sie das Controller-Shelf, das mit dem Controller-Symbol gekennzeichnet ist image:../media/sam1130_ss_hardware_controller_icon_maint-e2800.gif[""].
+.. Suchen Sie das Controller-Shelf, das mit dem Controller-Symbol gekennzeichnet istimage:../media/sam1130_ss_hardware_controller_icon_maint-e2800.gif["Controller-Symbol"].
 .. Klicken Sie auf das Controller-Symbol.
 .. Wählen Sie den Controller aus und klicken Sie auf *Weiter*.
 .. Notieren Sie sich auf der Registerkarte *Base* die *Ersatz-Teilenummer* für den Controller.
@@ -166,7 +166,7 @@ Da Sie die HIC aus dem fehlerhaften Controller-Behälter entfernen müssen, müs
 Die folgende Abbildung zeigt ein Beispiel für ein E2812 Controller-Shelf, ein E2824 Controller-Shelf oder ein EF280 Flash-Array:
 
 +
-image::../media/28_dwg_e2824_remove_controller_canister_maint-e2800.gif[28 dwg e2824 Controller-Behälter meine2800 ausbauen]
+image::../media/28_dwg_e2824_remove_controller_canister_maint-e2800.gif[Controller-Behälter ausbauen]
 
 +
 *(1)* _Controller-Behälter_
@@ -178,7 +178,7 @@ image::../media/28_dwg_e2824_remove_controller_canister_maint-e2800.gif[28 dwg e
 Die folgende Abbildung zeigt ein Beispiel für ein E2860 Controller-Shelf:
 
 +
-image::../media/28_dwg_e2860_add_controller_canister_maint-e2800.gif[28 DWG e2860, Zusatz-Controller-Behälter, Version 2800]
+image::../media/28_dwg_e2860_add_controller_canister_maint-e2800.gif[Controller-Behälter ausbauen]
 
 +
 *(1)* _Controller-Behälter_
@@ -211,7 +211,7 @@ Entfernen Sie den Akku, damit Sie den neuen Controller installieren können.
 Wenn diese grüne LED leuchtet, wird der Controller weiterhin mit Strom versorgt. Sie müssen warten, bis diese LED erlischt, bevor Sie Komponenten entfernen.
 
 +
-image::../media/28_dwg_e2800_internal_cache_active_led_maint-e2800.gif[28 DWG e2800 interner Cache, aktiver LED maint e2800]
+image::../media/28_dwg_e2800_internal_cache_active_led_maint-e2800.gif[Interne LED für aktiven Cache]
 
 +
 *(1)* _LED Interner Cache aktiv_
@@ -222,7 +222,7 @@ image::../media/28_dwg_e2800_internal_cache_active_led_maint-e2800.gif[28 DWG e2
 . Suchen Sie den blauen Freigabehebel für die Batterie.
 . Entriegeln Sie den Akku, indem Sie den Freigabehebel nach unten und vom Controller-Behälter wegdrücken.
 +
-image::../media/28_dwg_e2800_remove_battery_maint-e2800.gif[28 m e2800 Batterie-Nr. e2800 entfernen]
+image::../media/28_dwg_e2800_remove_battery_maint-e2800.gif[Entfernen Sie die Batterie aus dem Controller-Behälter]
 
 +
 *(1)* _Entriegelung der Batterie_
@@ -245,7 +245,7 @@ Wenn der Controller-Behälter eine Host-Schnittstellenkarte (HIC) enthält, müs
 Es gibt vier Schrauben: Eine auf der Oberseite, eine auf der Seite und zwei auf der Vorderseite.
 
 +
-image::../media/28_dwg_e2800_hic_faceplace_screws_maint-e2800.gif[28-wg-e2800-Gewindestifte für die Frontpartie maint e2800]
+image::../media/28_dwg_e2800_hic_faceplace_screws_maint-e2800.gif[Entfernen Sie die Frontplatte]
 
 . Entfernen Sie die HIC-Frontplatte.
 . Lösen Sie mit den Fingern oder einem Kreuzschlitzschraubendreher die drei Rändelschrauben, mit denen die HIC an der Controllerkarte befestigt ist.
@@ -255,7 +255,7 @@ image::../media/28_dwg_e2800_hic_faceplace_screws_maint-e2800.gif[28-wg-e2800-Ge
 CAUTION: Achten Sie darauf, dass die Komponenten auf der Unterseite der HIC oder auf der Oberseite der Controller-Karte nicht verkratzen oder stoßen.
 
 +
-image::../media/28_dwg_e2800_hic_thumbscrews_maint-e2800.gif[28 dwg e2800 HIC Rändelschrauben maint e2800]
+image::../media/28_dwg_e2800_hic_thumbscrews_maint-e2800.gif[Entfernen Sie die HIC von der Controllerkarte]
 
 +
 *(1)* _Host Interface Card (HIC)_
@@ -291,7 +291,7 @@ Sie müssen den Metallflansch an der Vorderseite der Batterie in den Schlitz an 
 Wenn die Verriegelung einrastet, Haken unten an der Verriegelung in einen Metallschlitz am Gehäuse.
 
 +
-image::../media/28_dwg_e2800_insert_battery_maint-e2800.gif[28-m-e2800-Batterieeinschub e2800]
+image::../media/28_dwg_e2800_insert_battery_maint-e2800.gif[Setzen Sie die Batterie wieder ein]
 
 +
 *(1)* _Entriegelung der Batterie_
@@ -309,14 +309,14 @@ CAUTION: *Möglicher Hardwareschaden* -- der Metallflansch an der Vorderseite de
 
 
 +
-image:../media/28_dwg_e2800_battery_flange_ok_maint-e2800.gif[""]
+image:../media/28_dwg_e2800_battery_flange_ok_maint-e2800.gif["Korrekter Metallflansch"]
 
 +
 ** *Incorrect* -- der Metallflansch der Batterie ist nicht in den Steckplatz am Controller eingelegt:
 
 
 +
-image:../media/28_dwg_e2800_battery_flange_not_ok_maint-e2800.gif[""]
+image:../media/28_dwg_e2800_battery_flange_not_ok_maint-e2800.gif["Falscher Metallflansch"]
 
 
 
@@ -338,7 +338,7 @@ Achten Sie darauf, dass die Komponenten auf der Unterseite der HIC oder auf der 
 CAUTION: *Mögliche Geräteschäden* -- vorsichtig sein, den goldenen Ribbon-Anschluss für die Controller-LEDs zwischen der HIC und den Daumenschrauben nicht zu quetschen.
 
 +
-image::../media/28_dwg_e2800_hic_thumbscrews_maint-e2800.gif[28 dwg e2800 HIC Rändelschrauben maint e2800]
+image::../media/28_dwg_e2800_hic_thumbscrews_maint-e2800.gif[Installieren Sie die HIC wieder auf dem Controller]
 
 +
 *(1)* _Host Interface Card (HIC)_
@@ -352,7 +352,7 @@ Verwenden Sie keinen Schraubendreher, oder ziehen Sie die Schrauben möglicherwe
 
 . Befestigen Sie mit einem #1 Kreuzschlitzschraubendreher die HIC-Frontplatte, die Sie aus dem ursprünglichen Controller-Behälter entfernt haben, mit vier Schrauben am neuen Controller-Behälter.
 +
-image::../media/28_dwg_e2800_hic_faceplace_screws_maint-e2800.gif[28-wg-e2800-Gewindestifte für die Frontpartie maint e2800]
+image::../media/28_dwg_e2800_hic_faceplace_screws_maint-e2800.gif[Bringen Sie die Frontplatte wieder an]
 
 
 
@@ -367,7 +367,7 @@ Nach der Installation der Batterie und der Host-Schnittstellenkarte (HIC), wenn 
 . Drehen Sie den Controller-Behälter so um, dass die abnehmbare Abdeckung nach unten zeigt.
 . Schieben Sie den Steuerkanister bei geöffnetem Nockengriff vollständig in das Reglerregal.
 +
-image::../media/28_dwg_e2824_remove_controller_canister_maint-e2800.gif[28 dwg e2824 Controller-Behälter meine2800 ausbauen]
+image::../media/28_dwg_e2824_remove_controller_canister_maint-e2800.gif[Setzen Sie den Controller-Behälter wieder ein]
 
 +
 *(1)* _Controller-Behälter_
@@ -376,7 +376,7 @@ image::../media/28_dwg_e2824_remove_controller_canister_maint-e2800.gif[28 dwg e
 *(2)* _Cam Griff_
 
 +
-image::../media/28_dwg_e2860_add_controller_canister_maint-e2800.gif[28 DWG e2860, Zusatz-Controller-Behälter, Version 2800]
+image::../media/28_dwg_e2860_add_controller_canister_maint-e2800.gif[Setzen Sie den Controller-Behälter wieder ein]
 
 +
 *(1)* _Controller-Behälter_
@@ -410,7 +410,7 @@ Wenn die Kommunikation mit der anderen Steuerung wiederhergestellt wird:
 +
 ** Die 7-Segment-Anzeige zeigt die sich wiederholende Sequenz *OS*, *OL*, *_blank_* an, um anzuzeigen, dass der Controller offline ist.
 ** Die gelbe Warn-LED leuchtet weiterhin.
-** Je nach Host-Schnittstelle leuchtet, blinkt oder leuchtet die LED für Host-Link möglicherweise nicht.image:../media/28_dwg_attn_led_7s_display_maint-e2800.gif[""]
+** Je nach Host-Schnittstelle leuchten die Host-Link-LEDs möglicherweise auf, blinken oder leuchten nicht. image:../media/28_dwg_attn_led_7s_display_maint-e2800.gif["E2800 Controller-LEDs"]
 +
 *(1)* _Warn-LED (gelb)_
 

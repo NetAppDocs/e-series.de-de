@@ -13,4 +13,4 @@ summary: Verwenden Sie den Windows Express-Konfigurationsworkflow.
 [role="lead"]
 Dieser Workflow führt Sie durch die Express Methode zur Konfiguration Ihres Storage-Arrays und von SANtricity System Manager, um Speicher einem Windows-Host zur Verfügung zu stellen.
 
-image::../media/1130_flw_sys_mgr_windows_express_guide_all_protocols.png[1130 flw sys mgr Windows Express Guide alle Protokolle]
+image::../media/1130_flw_sys_mgr_windows_express_guide_all_protocols.png[Workflow des Windows Express-Handbuchs]

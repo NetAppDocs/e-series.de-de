@@ -10,7 +10,7 @@ summary: Der Passphrase wird verwendet, um die auf dem lokalen Management-Client
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

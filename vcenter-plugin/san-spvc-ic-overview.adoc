@@ -37,7 +37,7 @@ Das Plug-in erfordert eine in der VMware-Umgebung implementierte VMware vCenter 
 
 Weitere Informationen zur Kommunikation in der vCenter Umgebung finden Sie in der folgenden Abbildung.
 
-image:../media/vcenter_communication2.png[""]
+image:../media/vcenter_communication2.png["VCenter Kommunikationsumgebung"]
 
 
 

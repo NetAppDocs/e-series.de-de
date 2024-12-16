@@ -67,7 +67,7 @@ k. A.
 
 In einer Topologie mit direkter Verbindung sind ein oder mehrere Hosts direkt mit dem Subsystem verbunden. In SANtricity OS 11.50 Release unterstützen wir, wie unten dargestellt, eine einzelne Verbindung von jedem Host zu einem Subsystem-Controller. In dieser Konfiguration sollte sich ein HCA-Port (Host Channel Adapter) von jedem Host im selben Subnetz befinden wie der E-Series-Controller-Port, mit dem er verbunden ist, aber in einem anderen Subnetz als dem anderen HCA-Port.
 
-image::../media/nvmeof_direct_connect.gif[Nvmeof direct connect]
+image::../media/nvmeof_direct_connect.gif[Beispiel für einen direkten NVMe over Infiniband-Anschluss]
 
 
 

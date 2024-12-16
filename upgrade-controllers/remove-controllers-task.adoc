@@ -1,7 +1,7 @@
 ---
 permalink: upgrade-controllers/remove-controllers-task.html 
 sidebar: sidebar 
-keywords: E-Series, eseries, E2800, E5700, EF300, EF600, upgrade controller, upgrading controller, remove controller, removing controller, remove battery, removing battery 
+keywords: E-Series, eseries, E4000, E2800, E5700, EF300, EF600, upgrade controller, upgrading controller, remove controller, removing controller, remove battery, removing battery 
 summary: Der erste Schritt beim Aktualisieren der Controller besteht darin, die alten Controller und optional die Batterie zu entfernen. 
 ---
 = Controller entfernen
@@ -51,7 +51,7 @@ CAUTION: Um eine verminderte Leistung zu vermeiden, dürfen die Kabel nicht verd
 Die folgende Abbildung zeigt ein Beispiel für den allgemeinen Speicherort der Release-Griffe für Controller-Modelle. Controller Shelfs und Controller-Laufwerksfächer verfügen über eine ähnliche Konfiguration für die Release-Griffe.
 
 +
-image:../media/28_dwg_e2824_remove_controller_canister_upg-hw.gif[""]
+image:../media/28_dwg_e2824_remove_controller_canister_upg-hw.gif["Controller-Behälter ausbauen"]
 
 +
 *(1)* _Controller-Behälter_
@@ -75,12 +75,7 @@ Entfernen Sie den Akku nur, wenn Sie beabsichtigen, den Akku aus dem alten Contr
 
 .Schritte
 . Drücken Sie die beiden Verriegelungsknöpfe der oberen Abdeckung am alten Controller-Behälter nach unten, und schieben Sie die obere Abdeckung nach hinten am Behälter.
-. Führen Sie je nach Modell des Controller-Laufwerksfachs eine der folgenden Optionen aus, um den alten Akku freizugeben:
-+
-** Lösen Sie bei der E2600 oder dem E2700 Controller-Laufwerksfach die Flügelschraube, mit der die Batterie am Controller-Behälter befestigt ist.
-** Für E5400, EF540, E5500, EF550, E5600 Oder das EF600 Controller-Laufwerksfach lösen Sie die Lasche, mit der der Akku am Controller-Behälter befestigt ist.
-
-
+. Lösen Sie bei Ihrem Modell des Controller-Laufwerksfachs die Lasche, mit der der Akku am Controller-Aktivkohlebehälter befestigt ist, um den alten Akku freizugeben.
 . Entfernen Sie die Batterie, indem Sie sie zur Rückseite des alten Reglerkanisters schieben.
 
 

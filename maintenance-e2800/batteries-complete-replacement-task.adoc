@@ -39,7 +39,7 @@ Wenn die Kommunikation mit der anderen Steuerung wiederhergestellt wird:
 +
 ** Die 7-Segment-Anzeige zeigt die sich wiederholende Sequenz *OS*, *OL*, *_blank_* an, um anzuzeigen, dass der Controller offline ist.
 ** Die gelbe Warn-LED leuchtet weiterhin.
-** Je nach Host-Schnittstelle leuchtet, blinkt oder leuchtet die LED für Host-Link möglicherweise nicht.image:../media/28_dwg_attn_led_7s_display_maint-e2800.gif[""]
+** Je nach Host-Schnittstelle leuchten die Host-Link-LEDs möglicherweise auf, blinken oder leuchten nicht. image:../media/28_dwg_attn_led_7s_display_maint-e2800.gif["E2800 LED-Anzeige"]
 +
 *(1)* _Warn-LED (gelb)_
 
@@ -122,7 +122,7 @@ NOTE: Führen Sie diese Aufgabe nur aus, wenn Ihr Speicher-Array über einen Con
 NOTE: Die Abbildung zeigt einen Beispiel-Controller-Behälter. Ihr Controller kann über eine andere Anzahl und einen anderen Typ von Host-Ports verfügen.
 
 +
-image::../media/28_dwg_attn_led_7s_display_maint-e2800.gif[28-Sekunden-LED 7s Display maint e2800]
+image::../media/28_dwg_attn_led_7s_display_maint-e2800.gif[E2800 LED-Anzeige]
 
 +
 *(1)* _Warn-LED (gelb)_

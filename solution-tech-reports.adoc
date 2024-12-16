@@ -6,7 +6,12 @@ summary: Technische Berichte der E-Series
 ---
 = Lesen Sie technische Berichte zu Lösungen
 :allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
 
+
+[role="lead"]
+Über die nachstehenden Links finden Sie technische Lösungsberichte zur Hardware und zur SANtricity Software der E-Series. Die Links führen Sie zu einer anderen Dokumentationswebsite.
 
 
 

@@ -13,4 +13,4 @@ summary: Überprüfen Sie den Prozess für die Installation und Einrichtung eine
 [role="lead"]
 Bevor Sie Ihr neues Storage-System installieren und einrichten, machen Sie sich mit dem Installationsprozess vertraut:
 
-image::../media/ef600_isi_workflow_v_2_inst-hw-e2800-e5700.bmp[Ef600 isi Workflow V 2 in hw e2800 e5700]
+image::../media/ef600_isi_workflow_v_2_inst-hw-e2800-e5700.bmp[Workflow des E2800 und E5700 Installationsprozesses]

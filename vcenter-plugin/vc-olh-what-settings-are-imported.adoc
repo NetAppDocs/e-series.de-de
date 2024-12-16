@@ -10,7 +10,7 @@ summary: Die Funktion „Importeinstellungen“ ist ein Batch-Vorgang, bei dem K
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

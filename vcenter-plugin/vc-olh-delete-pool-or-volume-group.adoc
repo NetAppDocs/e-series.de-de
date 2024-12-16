@@ -11,7 +11,7 @@ summary: Löschen Sie einen Pool oder eine Volume-Gruppe, um mehr nicht zugewies
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

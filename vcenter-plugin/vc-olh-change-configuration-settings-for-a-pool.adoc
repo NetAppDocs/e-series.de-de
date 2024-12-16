@@ -11,7 +11,7 @@ summary: Bearbeiten Sie die Einstellungen für einen Pool, einschließlich Name,
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

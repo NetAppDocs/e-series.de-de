@@ -1,0 +1,343 @@
+---
+permalink: maintenance-e4000/replace-controller-second-e4000.html 
+sidebar: sidebar 
+keywords:  
+summary:  
+---
+= Fügen Sie einen zweiten Behälter in E4000 hinzu
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können einen zweiten Controller-Behälter im E4000 Array hinzufügen.
+
+.Über diese Aufgabe
+Fügen Sie einen zweiten Controller-Behälter in die Simplex-Version eines E4012-Controller-Shelfs ein. Dieses Verfahren wird auch als Simplex-to-Duplex-Konvertierung bezeichnet, ein Online-Verfahren. Sie können auf Daten im Speicher-Array zugreifen, während Sie diesen Vorgang durchführen.
+
+.Bevor Sie beginnen
+Stellen Sie sicher, dass Sie Folgendes haben:
+
+* Ein neuer Controller-Behälter mit der gleichen Teilenummer wie der derzeit installierte Controller-Behälter. (Siehe Schritt 1, um die Teilenummer zu überprüfen.)
+* Ein ESD-Armband oder andere antistatische Vorsichtsmaßnahmen treffen.
+* A #1 Kreuzschlitzschraubendreher.
+* Etiketten zur Identifizierung der neuen Kabel. Informationen zu kompatibler Hardware finden Sie im https://mysupport.netapp.com/NOW/products/interoperability["NetApp Interoperabilitätsmatrix"] oder im http://hwu.netapp.com/home.aspx["NetApp Hardware Universe"].
+* Alle Kabel, Transceiver, Switches und Host Bus Adapter (HBAs), die zum Anschluss der neuen Controller-Ports benötigt werden.
+* Eine Management Station mit einem Browser, der für den Controller auf den SANtricity System Manager zugreifen kann. (Um die Schnittstelle von System Manager zu öffnen, zeigen Sie im Browser auf den Domain-Namen oder die IP-Adresse des Controllers.)
+
+
+
+
+== Schritt 1: Überprüfen Sie die Teilenummer des neuen Controllers
+
+Vergewissern Sie sich, dass der neue Controller dieselbe Teilenummer wie der aktuell installierte Controller hat.
+
+.Schritte
+. Packen Sie den neuen Controller-Behälter aus, und stellen Sie ihn auf eine flache, statische Oberfläche. Bewahren Sie alle Verpackungsmaterialien auf, die beim Versand des fehlerhaften Controller-Behälters verwendet werden müssen.
+. Suchen Sie die Etiketten für MAC-Adresse und FRU-Teilenummer auf der Rückseite des Controller-Behälters.
+. Suchen Sie im SANtricity-System-Manager die Ersatzteil-Nummer für den installierten Controller-Behälter.
++
+.. Wählen Sie *Hardware*.
+.. Suchen Sie das Controller-Shelf, das mit dem Controller-Symbol gekennzeichnet ist.
+.. Klicken Sie auf das Controller-Symbol image:../media/sam1130_ss_hardware_controller_icon_maint-e2800.gif["GIF des Controller-Symbols"].
+.. Wählen Sie den Controller aus und klicken Sie auf *Weiter*.
+.. Notieren Sie sich auf der Registerkarte *Base* die *Ersatz-Teilenummer* für den Controller.
+
+
+. Vergewissern Sie sich, dass die Ersatzteil-Nummer für den installierten Controller mit der FRU-Teilenummer für den neuen Controller identisch ist.
++
+
+CAUTION: *Möglicher Verlust des Datenzugriffs* – Wenn die beiden Teilenummern nicht identisch sind, versuchen Sie dieses Verfahren nicht. Nicht übereinstimmende Controller führen dazu, dass der neue Controller sich sperrt, wenn Sie ihn online schalten.
+
+. Sichern Sie die Konfigurationsdatenbank des Storage-Arrays mit dem SANtricity System Manager.
++
+Wenn beim Entfernen eines Controllers ein Problem auftritt, können Sie die gespeicherte Datei verwenden, um Ihre Konfiguration wiederherzustellen. Das System speichert den aktuellen Status der RAID-Konfigurationsdatenbank, die alle Daten für Volume-Gruppen und Festplatten-Pools auf dem Controller enthält. Führen Sie in System Manager folgende Schritte aus:
+
++
+.. Wählen Sie *Support › Support Center › Diagnose*.
+.. Wählen Sie *Konfigurationsdaten Erfassen*.
+.. Klicken Sie Auf *Collect*.
++
+Die Datei wird im Ordner *Downloads* Ihres Browsers unter dem Namen *KonfigurationData- <arrayName>-<dateTime>.7z* gespeichert.
+
+
+
+
+
+
+
+== Schritt: Installieren Sie die Host Interface Card
+
+Wenn der aktuell installierte Controller eine Host-Schnittstellenkarte (HIC) enthält, müssen Sie dasselbe Modell von HIC im zweiten Controller-Behälter installieren.
+
+.Schritte
+. Packen Sie die neue HIC aus, und vergewissern Sie sich, dass sie mit der vorhandenen HIC identisch ist.
++
+
+CAUTION: *Möglicher Verlust des Datenzugriffs*: Die in den beiden Controller-Kanistern installierten HICs müssen identisch sein. Wenn die Ersatz-HIC nicht mit der HIC identisch ist, die Sie ersetzen, führen Sie dieses Verfahren nicht durch. Wenn keine HICs vorhanden sind, wird der neue Controller gesperrt, wenn er online geschaltet wird.
+
+. Entfernen Sie die Blende der HIC-Karte, indem Sie sie gerade aus dem Controller-Modul herausziehen.
+. Nehmen Sie die HIC-Karte und richten Sie sie am Sockel auf der Hauptplatine aus.
+. Drücken Sie die Karte vorsichtig nach unten, um sie in den Sockel zu setzen.
+. Ziehen Sie die drei Rändelschrauben fest.
++
+
+CAUTION: Achten Sie darauf, die Schrauben nicht zu fest zu ziehen, da dies zu Schäden an der HIC-Karte führen kann.
+
+. Setzen Sie die Blende der HIC-Karte wieder ein.
+
+
+
+
+== Schritt 3: Sammeln Sie Support-Daten
+
+Sammeln Sie Support-Daten vor und nach dem Austausch einer Komponente, um sicherzustellen, dass Sie einen vollständigen Satz Protokolle an den technischen Support senden können, falls das Problem durch den Austausch nicht behoben wird.
+
+.Schritte
+. Stellen Sie auf der Startseite des SANtricity-System-Managers sicher, dass das Speicher-Array den optimalen Status hat.
++
+Wenn der Status nicht optimal lautet, verwenden Sie den Recovery Guru oder wenden Sie sich an den technischen Support, um das Problem zu lösen. Fahren Sie mit diesem Verfahren nicht fort.
+
+. Support-Daten für Ihr Storage Array mit SANtricity System Manager erfassen
++
+.. Wählen Sie *Support › Support Center › Diagnose*.
+.. Wählen Sie *Support-Daten Erfassen* Aus.
+.. Klicken Sie Auf *Collect*.
++
+Die Datei wird im Ordner Downloads für Ihren Browser mit dem Namen *Support-Data.7z* gespeichert.
+
+
+
+. Vergewissern Sie sich, dass zwischen dem Storage-Array und allen verbundenen Hosts keine I/O-Vorgänge stattfinden. Sie können beispielsweise die folgenden Schritte durchführen:
++
+** Beenden Sie alle Prozesse, die die LUNs umfassen, die den Hosts vom Storage zugeordnet sind.
+** Stellen Sie sicher, dass keine Applikationen Daten auf LUNs schreiben, die vom Storage den Hosts zugeordnet sind.
+** Heben Sie die Bereitstellung aller Dateisysteme auf, die mit den Volumes im Array verbunden sind, auf.
++
+
+NOTE: Die genauen Schritte zur Stoerung von Host-I/O-Vorgängen hängen vom Host-Betriebssystem und der Konfiguration ab, die den Umfang dieser Anweisungen übersteigen. Wenn Sie nicht sicher sind, wie Sie I/O-Vorgänge für Hosts in Ihrer Umgebung anhalten, sollten Sie das Herunterfahren des Hosts in Betracht ziehen.
+
++
+
+CAUTION: *Möglicher Datenverlust* – Wenn Sie diesen Vorgang fortsetzen, während I/O-Vorgänge stattfinden, können Sie Daten verlieren.
+
+
+
+
+
+
+
+== Schritt 4: Ändern Sie die Konfiguration auf Duplex
+
+Bevor Sie dem Controller-Shelf einen zweiten Controller hinzufügen, müssen Sie die Konfiguration auf Duplex ändern, indem Sie eine neue NVSRAM-Datei installieren und das Speicher-Array mit der Befehlszeilenschnittstelle auf Duplex setzen. Die Duplexversion der NVSRAM-Datei ist in der Download-Datei für SANtricity OS Software (Controller-Firmware) enthalten.
+
+.Schritte
+. Laden Sie die neueste NVSRAM-Datei von der NetApp Support-Website an Ihren Management-Client herunter.
++
+.. Wählen Sie im SANtricity System Manager *Support › Upgrade Center* aus. Klicken Sie im Bereich „SANtricity OS Software-Upgrade“ auf *NetApp SANtricity OS Downloads*.
+.. Wählen Sie auf der NetApp Support Website *E-Series SANtricity OS Controller Software* aus.
+.. Befolgen Sie die Online-Anweisungen, um die Version von NVSRAM, die Sie installieren möchten, auszuwählen, und füllen Sie dann die Datei herunter. Stellen Sie sicher, dass Sie die Duplex-Version des NVSRAM auswählen (die Datei hat „D“ am Ende ihres Namens).
++
+Der Dateiname wird ähnlich wie: *N290X-830834-D01.dlp*
+
+
+
+. Aktualisieren Sie die Dateien mit SANtricity System Manager.
++
+
+CAUTION: *Gefahr eines Datenverlusts oder der Gefahr einer Beschädigung des Speicher-Arrays* – nehmen Sie keine Änderungen am Speicher-Array vor, während das Upgrade durchgeführt wird. Halten Sie den Strom für das Speicher-Array aufrecht.
+
++
+Sie können den Vorgang während der Integritätsprüfung vor dem Upgrade abbrechen, jedoch nicht während der Übertragung oder Aktivierung.
+
++
+** Über den SANtricity System Manager:
++
+... Klicken Sie unter *SANtricity OS Software Upgrade* auf *Upgrade starten*.
+... Klicken Sie neben *Select Controller NVSRAM-Datei* auf *Durchsuchen* und wählen Sie dann die NVSRAM-Datei aus, die Sie heruntergeladen haben.
+... Klicken Sie auf *Start* und bestätigen Sie dann, dass Sie den Vorgang ausführen möchten.
++
+Das Upgrade beginnt und Folgendes geschieht:
+
++
+**** Die Integritätsprüfung vor dem Upgrade beginnt. Sollte die vor-Upgrade-Systemprüfung fehlschlagen, nutzen Sie den Recovery Guru oder wenden Sie sich an den technischen Support, um das Problem zu lösen.
+**** Die Controller-Dateien werden übertragen und aktiviert. Wie lange es dauert, hängt von der Konfiguration des Storage Arrays ab.
+**** Der Controller wird automatisch neu gestartet, um die neuen Einstellungen anzuwenden.
+
+
+
+
+** Alternativ können Sie das Upgrade mit dem folgenden CLI-Befehl ausführen:
++
+[listing]
+----
+download storageArray NVSRAM file="filename" healthCheckMelOverride=FALSE;
+----
++
+In diesem Befehl `filename` ist der Dateipfad und der Dateiname für die Duplexversion der Controller-NVSRAM-Datei (die Datei mit dem Namen „D“). Schließen Sie den Dateipfad und den Dateinamen in doppelte Anführungszeichen (" "). Beispiel:
+
++
+[listing]
+----
+file="C:\downloads\N290X-830834-D01.dlp"
+----
+
+
+. (Optional) um eine Liste der aktualisierten Versionen anzuzeigen, klicken Sie auf *Protokoll speichern*.
++
+Die Datei wird im Ordner Downloads für Ihren Browser mit dem Namen *neuester-Upgrade-Log-timestamp.txt* gespeichert.
+
++
+** Überprüfen Sie nach dem Upgrade des NVSRAM-Controllers im SANtricity-System-Manager Folgendes:
++
+*** Rufen Sie die Seite Hardware auf, und stellen Sie sicher, dass alle Komponenten angezeigt werden.
+*** Wechseln Sie zum Dialogfeld Software- und Firmware-Bestandsaufnahme (gehen Sie zu *Support › Upgrade Center* und klicken Sie dann auf den Link *Software- und Firmware-Bestandsaufnahme*). Überprüfen der neuen Software- und Firmware-Versionen
+
+
+** Wenn Sie den Controller NVSRAM aktualisieren, gehen die benutzerdefinierten Einstellungen, die Sie auf den vorhandenen NVSRAM angewendet haben, während der Aktivierung verloren. Sie müssen die benutzerdefinierten Einstellungen erneut auf den NVSRAM anwenden, nachdem der Aktivierungsvorgang abgeschlossen ist.
+
+
+. Ändern Sie die Einstellung des Speicher-Arrays mithilfe von CLI-Befehlen auf Duplex. Sie können zum Verwenden der CLI eine Eingabeaufforderung öffnen, wenn Sie das CLI-Paket heruntergeladen haben.
++
+** Über eine Eingabeaufforderung:
++
+... Verwenden Sie den folgenden Befehl, um das Array von Simplex auf Duplex zu wechseln:
++
+[listing]
+----
+set storageArray redundancyMode=duplex;
+----
+... Mit dem folgenden Befehl wird der Controller zurückgesetzt.
++
+[listing]
+----
+reset controller [a];
+----
+
+
+
+
+
+
+Nach dem Neustart des Controllers wird die Fehlermeldung „alternativer Controller fehlt“ angezeigt. Diese Meldung zeigt an, dass Controller A erfolgreich in den Duplexmodus konvertiert wurde. Diese Meldung bleibt bestehen, bis Sie den zweiten Controller installieren und die Hostkabel anschließen.
+
+
+
+== Schritt 5: Entfernen Sie den Controller-Leereinschub
+
+Entfernen Sie den Controller-Leereinschub, bevor Sie den zweiten Controller installieren. Ein Controller-Leereinschub wird in Controller-Shelfs installiert, die nur über einen Controller verfügen.
+
+.Schritte
+. Drücken Sie die Verriegelung am Nockengriff für den Controller-Leereinschub, bis sie sich löst, und öffnen Sie dann den Nockengriff nach rechts.
+. Schieben Sie den Leerbehälter aus dem Regal und legen Sie ihn beiseite.
++
+Wenn Sie den Controller-Leereinschub entfernen, schwenkt eine Klappe an ihre Stelle, um den leeren Schacht zu blockieren.
+
+
+
+
+
+== Schritt 6: Installieren Sie den zweiten Controller-Behälter
+
+Installieren Sie einen zweiten Controller-Behälter, um eine Simplex-Konfiguration in eine Duplexkonfiguration zu ändern.
+
+. Drehen Sie den Controller-Behälter so um, dass die abnehmbare Abdeckung nach unten zeigt.
+. Richten Sie das Ende des Controller-Moduls an der Öffnung im Gehäuse aus, und drücken Sie dann vorsichtig das Controller-Modul zur Hälfte in das System.
+. Schieben Sie das Steuermodul fest in die offene Position, bis es auf die Mittelebene trifft und vollständig sitzt, und schließen Sie dann den Nockengriff in die verriegelte Position.
++
+
+NOTE: Beim Einschieben des Controller-Moduls in das Gehäuse keine übermäßige Kraft verwenden, um Schäden an den Anschlüssen zu vermeiden. Der Controller beginnt zu booten, sobald er im Gehäuse sitzt.
+
+. Wenn Sie dies noch nicht getan haben, installieren Sie das Kabelverwaltungsgerät neu.
+. Verbinden Sie die Kabel mit dem Haken- und Schlaufenband mit dem Kabelmanagement-Gerät.
+
+
+
+
+== Schritt 7: Schließen Sie das Hinzufügen eines zweiten Controllers ab
+
+Führen Sie den Vorgang durch, einen zweiten Controller hinzuzufügen, indem Sie bestätigen, dass er ordnungsgemäß funktioniert, installieren Sie die Duplex-NVSRAM-Datei neu, verteilen Sie Volumes zwischen den Controllern und sammeln Sie Support-Daten.
+
+.Schritte
+. Platzieren Sie den Controller in den Online-Modus
++
+.. Navigieren Sie im System Manager zur Seite *Hardware*.
+.. Wählen Sie *Zurück von Controller anzeigen*.
+.. Wählen Sie den ausgetauschten Controller aus.
+.. Wählen Sie in der Dropdown-Liste * Online platzieren* aus.
+
+
+. Überprüfen Sie beim Booten des Controllers die Controller-LEDs.
++
+Wenn die Kommunikation mit der anderen Steuerung wiederhergestellt wird:
+
++
+** Die gelbe Warn-LED leuchtet weiterhin.
+** Je nach Host-Schnittstelle leuchtet, blinkt oder leuchtet die LED für Host-Link möglicherweise nicht.
+
+
+. Aktualisieren Sie die Einstellungen des Arrays von Simplex auf Duplex mit dem folgenden CLI-Befehl:
++
+`set storageArray redundancyMode=duplex;`
+
+. Wenn der Controller wieder online ist, bestätigen Sie, dass sein Status optimal lautet, und überprüfen Sie die Warn-LEDs für das Controller-Shelf.
++
+Wenn der Status nicht optimal ist oder eine der Warn-LEDs leuchtet, vergewissern Sie sich, dass alle Kabel richtig eingesetzt sind, und überprüfen Sie, ob der Controller-Behälter richtig installiert ist. Gegebenenfalls den Controller-Behälter ausbauen und wieder einbauen.
+
++
+
+NOTE: Wenden Sie sich an den technischen Support, wenn das Problem nicht gelöst werden kann.
+
+. Installieren Sie die Duplexversion der NVSRAM-Datei mit SANtricity System Manager neu.
++
+Mit diesem Schritt wird sichergestellt, dass beide Controller eine identische Version dieser Datei haben.
+
++
+
+CAUTION: Gefahr von Datenverlust oder Gefahr von Beschädigung des Speicher-Arrays – nehmen Sie keine Änderungen am Speicher-Array vor, während das Upgrade durchgeführt wird. Halten Sie den Strom für das Speicher-Array aufrecht.
+
++
+
+NOTE: Sie müssen die SANtricity OS-Software installieren, wenn Sie eine neue NVSRAM-Datei mit dem SANtricity System Manager installieren. Wenn Sie bereits über die neueste Version der SANtricity OS-Software verfügen, müssen Sie diese Version neu installieren.
+
++
+.. Klicken Sie auf *Hardware › Support › Upgrade Center*, um sicherzustellen, dass die neueste Version von SANtricity OS installiert ist. Installieren Sie bei Bedarf die neueste Version.
+.. Gehen Sie im System Manager zum *Upgrade Center*.
+.. Klicken Sie unter *SANtricity OS Software Upgrade* auf *Upgrade starten*.
+.. Klicken Sie auf *Durchsuchen* und wählen Sie die SANtricity OS-Softwaredatei aus.
+.. Klicken Sie auf *Durchsuchen* und wählen Sie die NVSRAM-Datei des Controllers aus.
+.. Klicken Sie auf *Start* und bestätigen Sie, dass Sie den Vorgang ausführen möchten.
++
+Die Übertragung der Steuerung beginnt.
+
+
+
+. Optional verteilen Sie nach dem Neubooten der Controller zwischen Controller A und dem neuen Controller B
++
+.. Wählen Sie *Storage › Volumes*.
+.. Wählen Sie auf der Registerkarte Alle Volumes die Option *Mehr › Besitzrechte ändern*.
+.. Geben Sie den folgenden Befehl in das Textfeld ein: `change ownership`
++
+Die Schaltfläche „Eigentümerschaft ändern“ ist aktiviert.
+
+.. Wählen Sie für jedes Volume, das Sie neu verteilen möchten, in der Liste *bevorzugter Eigentümer* *Controller B* die Option *Controller B* aus.
+.. Klicken Sie Auf *Eigentümerschaft Ändern*.
++
+Wenn der Prozess abgeschlossen ist, werden im Dialogfeld zum Ändern des Volume-Besitzes die neuen Werte für *bevorzugter Eigentümer* und *Aktueller Eigentümer* angezeigt.
+
+
+
+. Support-Daten für Ihr Storage Array mit SANtricity System Manager erfassen
++
+.. Wählen Sie *Support › Support Center › Diagnose*.
+.. Klicken Sie Auf *Collect*.
++
+Die Datei wird im Ordner Downloads für Ihren Browser mit dem Namen *Support-Data.7z* gespeichert.
+
+
+
+
+
+.Was kommt als Nächstes?
+Das Hinzufügen eines zweiten Controllers ist abgeschlossen. Sie können den normalen Betrieb fortsetzen.

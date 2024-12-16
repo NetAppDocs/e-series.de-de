@@ -10,7 +10,7 @@ summary: 'Mit der Zertifikatverwaltung können Sie Zertifikatsignierungsanforder
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

@@ -10,7 +10,7 @@ summary: Um die Performance einer Volume-Gruppe zu maximieren, müssen Sie den e
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

@@ -10,7 +10,7 @@ summary: 'Um Speicher bereitzustellen, erstellen Sie entweder einen Pool oder ei
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

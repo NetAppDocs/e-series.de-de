@@ -10,7 +10,7 @@ summary: Sie können SANtricity und NVSRAM Upgrades für mehrere Storage Arrays 
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

@@ -10,7 +10,7 @@ summary: Zurücksetzen des Managementzertifikats auf den ursprünglichen, werkse
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

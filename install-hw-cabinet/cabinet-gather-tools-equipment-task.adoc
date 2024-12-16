@@ -21,20 +21,20 @@ Vor der Installation des 3040-HE-Cabinets müssen die erforderlichen Tools und G
 
 
  a| 
-image:../media/83009_02.gif[""]
+image:../media/83009_02.gif["3/4-Zoll-Schraubenschlüssel und Inbusschlüssel"]
  a| 
 *3/4 Zoll Schraubenschlüssel* (im Lieferumfang enthalten) -- zum Heben und Senken der Nivellierfüße unter dem Schrank.
 
 *1/4 Zoll Innensechskantschlüssel* -- zum Anheben und Absenken des Stabilitätsfußes in der Vorderseite des Schrankes.
  a| 
-image:../media/77037_11.gif[""]
+image:../media/77037_11.gif["Im Lieferumfang des Schrankes enthalten"]
 
 
 
  a| 
 * NEMA L6-30*
 
-image:../media/73121_01_dwg_nema_l6_30_power_cord.gif[""]
+image:../media/73121_01_dwg_nema_l6_30_power_cord.gif["NEMA L6-30-Kabel"]
  a| 
 *AC-Netzkabel* -- zum Anschließen des Gehäuses an externe Stromquellen (Wandstecker).
 
@@ -45,19 +45,19 @@ image:../media/73121_01_dwg_nema_l6_30_power_cord.gif[""]
 
 NOTE: Jede PDU muss mit einer unabhängigen Stromquelle verbunden sein.
  a| 
-image:../media/77037_11.gif[""]
+image:../media/77037_11.gif["Im Lieferumfang des Schrankes enthalten"]
 
 
 
  a| 
 **IEC-60309**
 
-image:../media/73122_01_dwg_iec_60309_power_cord.gif[""]
+image:../media/73122_01_dwg_iec_60309_power_cord.gif["IEC-60309-Kabel"]
 
 
 
  a| 
-image:../media/78038_21.png[""]
+image:../media/78038_21.png["Im Lieferumfang des Schrankes enthalten"]
  a| 
 **SAS-Kabel** (optional) – in jedem Laufwerksfach sind zwei Kabel enthalten, während die Kabel auf der Hostseite separat erworben werden müssen.
 
@@ -69,11 +69,11 @@ Weitere erforderliche Informationen finden Sie im Installationshandbuch für das
 
 
  a| 
-image:../media/77038_06.gif[""]
+image:../media/77038_06.gif["SAS- und Kommunikationskabel"]
  a| 
 **Montierbare Kabelspulen** – an beiden Seiten der vertikalen Stromverteilausgänge installiert, um eine Überlänge der Kabel und eine Kabelführung zu ermöglichen. In jedem Controller-Laufwerksfach sind zwei Kabelspulen enthalten Kabelspulen werden auch mit eigenständigen Laufwerksfächern geliefert.
  a| 
-image:../media/77037_11.gif[""]
+image:../media/77037_11.gif["Montierbare Kabelspulen"]
 
 
 

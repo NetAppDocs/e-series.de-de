@@ -10,7 +10,7 @@ summary: 'Volumes sind keinem Workload zugeordnet, wenn sie mithilfe der Befehls
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

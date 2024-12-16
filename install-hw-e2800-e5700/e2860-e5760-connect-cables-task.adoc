@@ -39,14 +39,14 @@ Für die in diesem Abschnitt gezeigten Beispiele benötigen Sie die folgenden Ka
 
 
  a| 
-image:../media/sas_cable.png[""]
+image:../media/sas_cable.png["SAS-Kabel"]
  a| 
 *SAS-Kabel*
 
 |===
 +
 .Beispiel A: Ein E2860 Controller-Shelf mit zwei DE460C Festplatten-Shelfs in einer Standard-SAS-Konfiguration.
-image:../media/example_a_2860.png[""]
+image:../media/example_a_2860.png["E2860 Controller in einer SAS-Konfiguration"]
 
 +
 .. Verkabeln Sie Controller A mit IOM A des ersten Festplatten-Shelf.
@@ -57,7 +57,7 @@ image:../media/example_a_2860.png[""]
 
 +
 .Beispiel B: Ein E2860 Controller-Shelf mit einem DE460C Festplatten-Shelf in einer Standard-SAS-Konfiguration.
-image:../media/example_b_2860.png[""]
+image:../media/example_b_2860.png["E2860 Controller in einer SAS-Konfiguration"]
 
 +
 .. Verkabeln Sie Controller A mit IOM A
@@ -73,7 +73,7 @@ Sie benötigen die folgenden Kabel:
 
 
  a| 
-image:../media/power_cable_inst-hw-e2800-e5700.png[""]
+image:../media/power_cable_inst-hw-e2800-e5700.png["Stromkabel"]
  a| 
 *Stromkabel*
 
@@ -97,7 +97,7 @@ Während des Startvorgangs zeigt die Anzeige in sieben Segmenten die sich wieder
 
 
  a| 
-*Beispiel: Stromanschlüsse befinden sich auf der Rückseite des Regals.*image:../media/trafford_power.png[""]
+*Beispiel: Stromanschlüsse befinden sich auf der Rückseite des Regals.* image:../media/trafford_power.png["Stromanschlüsse für die Rückseite des Shelfs"]
 
 |===
 

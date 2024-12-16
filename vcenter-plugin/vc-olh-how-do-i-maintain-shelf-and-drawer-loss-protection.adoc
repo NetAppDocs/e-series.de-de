@@ -10,7 +10,7 @@ summary: Schutz vor Shelf- und Schubladenverlust für einen Pool oder eine Volum
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

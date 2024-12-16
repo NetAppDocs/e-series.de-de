@@ -1,0 +1,81 @@
+---
+permalink: maintenance-e4000/replace-controller-requirements-e4000.html 
+sidebar: sidebar 
+keywords:  
+summary:  
+---
+= Anforderungen für den Austausch von E4000 Controllern
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Bevor Sie einen E4000 Controller ersetzen oder hinzufügen, sollten Sie die Anforderungen und Überlegungen überprüfen.
+
+Jeder Controller-Behälter enthält eine Controllerkarte und eine Batterie. Sie können einen zweiten Controller zu einer Simplex-Konfiguration hinzufügen oder einen fehlerhaften Controller austauschen.
+
+
+
+== Anforderungen für das Hinzufügen eines zweiten Controllers
+
+Sie können der Simplex-Version des E4000-Controller-Shelfs einen zweiten Controller-Behälter hinzufügen. Bevor Sie einen zweiten Controller hinzufügen, müssen Sie Folgendes haben:
+
+* Ein neuer Controller-Behälter mit der gleichen Teilenummer wie der derzeit installierte Controller-Behälter.
++
+
+NOTE: Dies gilt nicht für eine StorageGRID-Appliance.
+
+* Alle Kabel, Transceiver, Switches und Host Bus Adapter (HBAs), die zum Anschluss der neuen Controller-Ports benötigt werden.
++
+Informationen zu kompatibler Hardware finden Sie im https://mysupport.netapp.com/NOW/products/interoperability["NetApp Interoperabilitätsmatrix"] oder im http://hwu.netapp.com/home.aspx["NetApp Hardware Universe"].
+
+* Auf dem Host installierter Multipath-Treiber, sodass Sie beide Controller verwenden können. Anweisungen finden Sie im https://docs.netapp.com/us-en/e-series/config-linux/index.html["Linux Express-Konfiguration"], https://docs.netapp.com/us-en/e-series/config-windows/index.html["Windows Express-Konfiguration"] oder https://docs.netapp.com/us-en/e-series/config-vmware/index.html["VMware Express-Konfiguration"].
+* Ein ESD-Armband, oder Sie haben andere antistatische Vorsichtsmaßnahmen getroffen.
+* A #1 Kreuzschlitzschraubendreher.
+* Etiketten zur Identifizierung der neuen Kabel.
+* Eine Management Station mit einem Browser, der für den Controller auf den SANtricity System Manager zugreifen kann. (Um die Schnittstelle von System Manager zu öffnen, zeigen Sie im Browser auf den Domain-Namen oder die IP-Adresse des Controllers.)
++
+Optional können Sie einige der Verfahren mit der Befehlszeilenschnittstelle (CLI) ausführen. Für SANtricity System Manager (Version 11.60 und höher) können Sie das CLI-Paket (ZIP-Datei) von System Manager herunterladen. Gehen Sie dazu im System Manager zu *Einstellungen > System > Add-ons > Befehlszeilenschnittstelle*. Sie können dann CLI-Befehle von einer Betriebssystemaufforderung ausgeben, z. B. von der DOS C:-Eingabeaufforderung.
+
+
+
+
+
+== Anforderungen für den Austausch des Controllers
+
+Wenn Sie einen fehlerhaften Controller-Aktivkohlebehälter austauschen, müssen Sie den Akku, die HIC und die DIMMs aus dem ursprünglichen Controller-Aktivkohlebehälter entfernen und in den Ersatz-Controller-Aktivkohlebehälter einsetzen.
+
+Sie können auf zwei Arten feststellen, ob ein ausgefallener Controller-Behälter besteht:
+
+* Der Recovery Guru im SANtricity System Manager führt Sie dazu, den Controller-Behälter zu ersetzen.
+* Die gelbe Warn-LED am Controller-Behälter leuchtet und zeigt an, dass der Controller einen Fehler aufweist.
+
+
+Bevor Sie einen Controller austauschen, müssen folgende Funktionen erforderlich sein:
+
+* Ein Ersatzcontroller-Behälter mit der gleichen Teilenummer wie der Controller-Behälter, den Sie austauschen.
+* Ein ESD-Armband, oder Sie haben andere antistatische Vorsichtsmaßnahmen getroffen.
+* Etiketten, um jedes Kabel zu identifizieren, das mit dem Controller-Behälter verbunden ist.
+* #1 Kreuzschlitzschraubendreher.
+* Eine Management Station mit einem Browser, der für den Controller auf den SANtricity System Manager zugreifen kann. (Um die Schnittstelle von System Manager zu öffnen, zeigen Sie im Browser auf den Domain-Namen oder die IP-Adresse des Controllers.)
++
+Optional können Sie einige der Verfahren mit der Befehlszeilenschnittstelle (CLI) ausführen. Für SANtricity System Manager (Version 11.60 und höher) können Sie das CLI-Paket (ZIP-Datei) von System Manager herunterladen. Gehen Sie dazu im System Manager zu *Einstellungen > System > Add-ons > Befehlszeilenschnittstelle*. Sie können dann CLI-Befehle von einer Betriebssystemaufforderung ausgeben, z. B. von der DOS C:-Eingabeaufforderung.
+
+
+
+
+
+=== Anforderungen für die Duplexkonfiguration
+
+Wenn das Controller-Shelf zwei Controller hat (Duplexkonfiguration), können Sie einen Controller-Behälter ersetzen, während Ihr Speicher-Array eingeschaltet ist und Host-I/O-Vorgänge ausführt, sofern die folgenden Bedingungen erfüllt sind:
+
+* Der zweite Reglerbehälter im Regal hat optimalen Status.
+* Im Feld *OK to remove* im Bereich Details des Recovery Guru im SANtricity System Manager wird *Ja* angezeigt, was darauf hinweist, dass es sicher ist, diese Komponente zu entfernen.
+
+
+
+
+=== Simplex-Konfigurationsanforderungen
+
+Wenn nur ein Controller-Behälter (Simplex-Konfiguration) vorhanden ist, sind die Daten auf dem Speicher-Array erst zugänglich, wenn Sie den Controller-Behälter ersetzen. Sie müssen Host-I/O-Vorgänge anhalten und das Storage Array herunterfahren.

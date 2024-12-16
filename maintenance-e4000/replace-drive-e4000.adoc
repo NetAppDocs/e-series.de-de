@@ -1,0 +1,65 @@
+---
+permalink: maintenance-e4000/replace-drive-e4000.html 
+sidebar: sidebar 
+keywords:  
+summary: Bevor Sie ein E4000-Laufwerk austauschen, lesen Sie die Anforderungen und Überlegungen. 
+---
+= E4000-Laufwerksübersicht ersetzen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Bevor Sie ein E4000-Laufwerk austauschen, lesen Sie die Anforderungen und Überlegungen.
+
+
+
+== Shelf-Typen
+
+Ein Laufwerk kann entweder in einem Controller-Shelf mit 12, 24 oder 60 Laufwerken oder als Festplatten-Shelf ersetzt werden.
+
+
+NOTE: Standardmäßige Shelfs für 24 Laufwerke erfordern beeindruckende Laufwerke. Wenn Sie weniger als 24 Laufwerke in einen E4000 Controller einsetzen, müssen Sie zwischen den beiden Controllerhälften wechseln. Beginnend mit ganz links und dann nach rechts, legen Sie die Antriebe nacheinander ein.
+
+
+
+== Handhabung von Laufwerken
+
+Die Laufwerke in Ihrem Speicher-Array sind anfällig. Eine unsachgemäße Handhabung von Laufwerken stellt eine der Hauptursachen für Laufwerkausfälle dar.
+
+Befolgen Sie die folgenden Regeln, um Beschädigungen an den Laufwerken in Ihrem Speicher-Array zu vermeiden:
+
+* Verhindern elektrostatischer Entladung (ESD):
++
+** Halten Sie das Laufwerk in der ESD-Tasche, bis Sie bereit sind, es zu installieren.
+** Setzen Sie kein Metallwerkzeug oder Messer in den ESD-Beutel.
++
+Öffnen Sie die ESD-Tasche von Hand oder schneiden Sie die Oberseite mit einer Schere ab.
+
+** Bewahren Sie den ESD-Beutel und alle Verpackungsmaterialien auf, falls Sie später ein Laufwerk zurückschicken müssen.
+** Tragen Sie stets ein ESD-Handgelenkband, das an einer nicht lackierten Oberfläche am Gehäuse geerdet ist.
++
+Wenn ein Handgelenkband nicht verfügbar ist, berühren Sie eine unlackierte Oberfläche des Speichergehäuses, bevor Sie das Laufwerk handhaben.
+
+
+
+* Vorsichtig mit Laufwerken umgehen:
++
+** Beim Entfernen, Einbau oder Tragen eines Laufwerks immer zwei Hände verwenden.
+** Niemals einen Antrieb in ein Regal zwingen, und mit sanftem, festem Druck den Riegel vollständig einrücken.
+** Platzieren Sie Laufwerke auf gepolsterten Flächen und stapeln Sie niemals Laufwerke auf einander.
+** Laufwerke nicht gegen andere Oberflächen abstoßen.
+** Lösen Sie vor dem Entfernen eines Laufwerks aus einem Shelf den Griff und warten Sie 60 Sekunden, bis sich das Laufwerk heruntergefahren hat.
+** Verwenden Sie beim Transport von Laufwerken stets die genehmigte Verpackung.
+
+
+* Magnetfelder vermeiden:
++
+** Halten Sie Laufwerke von magnetischen Geräten fern.
++
+Magnetfelder können alle Daten auf dem Laufwerk zerstören und irreparable Schäden an der Antriebsschaltung verursachen.
+
+
+
+

@@ -10,7 +10,7 @@ summary: Sie können Daten-Container namens Volumes erstellen, damit der Host au
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

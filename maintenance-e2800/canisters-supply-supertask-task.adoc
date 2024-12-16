@@ -61,7 +61,7 @@ Sie finden diese Informationen im Bereich Details des Recovery Guru oder können
 
 +
 .. Wählen Sie *Hardware*.
-.. Schau dir die Macht an image:../media/sam1130_ss_hardware_power_icon_maint-e2800.gif[""] Und Fan image:../media/sam1130_ss_hardware_fan_icon_maint-e2800.gif[""] Symbole rechts neben den Dropdown-Listen *Shelf*, um festzustellen, welches Regal die ausgefallene Stromversorgung hat.
+.. Schauen Sie sich die Stromimage:../media/sam1130_ss_hardware_power_icon_maint-e2800.gif["Ein/aus-Symbol"]- und Lüftersymbole image:../media/sam1130_ss_hardware_fan_icon_maint-e2800.gif["'Lüftersymbol'"]rechts neben der Dropdown-Liste *Shelf* an, um festzustellen, welches Shelf das ausgefallene Netzteil hat.
 +
 Wenn eine Komponente ausgefallen ist, sind entweder oder beide Symbole rot.
 
@@ -82,7 +82,7 @@ CAUTION: Wenn der zweite Netzteilbehälter im Regal keinen *optimalen*-Status au
 Sie müssen das Netzteil, für das die Warn-LED leuchtet, ersetzen.
 
 +
-image::../media/28_dwg_913w_power_supply_back_view_maint-e2800.gif[28 DWG 913-W-Stromversorgung, Rückseite, Ansicht maint e2800]
+image::../media/28_dwg_913w_power_supply_back_view_maint-e2800.gif[Netzteil-LEDs]
 
 +
 ** Power LED: Wenn es *konstant grün* ist, funktioniert das Netzteil richtig. Wenn es sich um *aus* handelt, ist das Netzteil ausgefallen, der Wechselstromschalter ist ausgeschaltet, das Netzkabel nicht richtig installiert oder die Eingangsspannung des Netzkabels nicht innerhalb der Marge (am Quellende des Netzkabels liegt ein Problem vor).
@@ -111,7 +111,7 @@ Bewahren Sie alle Verpackungsmaterialien auf, wenn Sie das defekte Netzteil zur�
 
 . Drücken Sie die Verriegelung am Handgriff der Stromversorgungs-Nockenwelle, und öffnen Sie dann den Nockengriff, um das Netzteil vollständig von der Mittelebene zu lösen.
 +
-image::../media/drw_2600_psu_maint-e2800.gif[drw 2600 psu-Version e2800]
+image::../media/drw_2600_psu_maint-e2800.gif[Ziehen Sie am Nockengriff, um das Netzteil aus der Mittelplatine zu lösen]
 
 . Schieben Sie die Stromversorgung mit dem Nockengriff aus dem System heraus.
 +

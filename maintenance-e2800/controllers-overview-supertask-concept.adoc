@@ -36,9 +36,9 @@ Sie können zur Simplex-Version der folgenden Controller-Shelves einen zweiten C
 
 Die Abbildungen zeigen ein Beispiel-Controller-Shelf vor dem Hinzufügen eines zweiten Controllers (ein Controller-Behälter und ein Controller-Leereinschub) und nach dem Hinzufügen eines zweiten Controllers (zwei Controller-Behälter).
 
-image::../media/28_dwg_2800_controller_simplex.gif[28 DWG 2800 Controller Simplex]
+image::../media/28_dwg_2800_controller_simplex.gif[E2800-Simplexkonfiguration-Konfiguration]
 
-image::../media/28_dwg_2800_controller_duplex.gif[28 DWG 2800 Controller Duplex]
+image::../media/28_dwg_2800_controller_duplex.gif[E2800-Duplex-Konfiguration]
 
 
 NOTE: Die Zahlen zeigen Beispiel-Controller-Kanister. Die Host-Ports an den Controller-Kanistern können unterschiedlich sein.
@@ -91,7 +91,7 @@ NOTE: Die gelbe Warn-LED des Controllers erlischt, wenn die folgenden Austauschb
 ====
 
 
-image::../media/28_dwg_2800_controller_attn_led_maint-e2800.gif[28 dwg 2800 Controller attn LED maint e2800]
+image::../media/28_dwg_2800_controller_attn_led_maint-e2800.gif[E2800: Warnungs-LED]
 
 *(1)* _Warn-LED_
 

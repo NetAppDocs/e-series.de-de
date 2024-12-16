@@ -10,7 +10,7 @@ summary: 'Snapshot-Volumes mit einem da-fähigen Basis-Volume können nicht eine
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

@@ -21,14 +21,14 @@ Bereiten Sie sich auf die Installation Ihrer E5724, EF570, EF280, E2812, E2824, 
 
 
  a| 
-image:../media/trafford_overview.png[""]
+image:../media/trafford_overview.png["Shelf mit installierten Laufwerken und Blende"]
  a| 
 Shelf mit installierten Laufwerken (Blende separat verpackt)
 
 
 
  a| 
-image:../media/superrails_inst-hw-e2800-e5700.png[""]
+image:../media/superrails_inst-hw-e2800-e5700.png["Rack-montierte Hardware"]
  a| 
 Rack-montierte Hardware
 
@@ -42,7 +42,7 @@ In der folgenden Tabelle sind die Kabeltypen aufgeführt, die Sie möglicherweis
 
 
  a| 
-image:../media/cable_ethernet_inst-hw-e2800-e5700.png[""]
+image:../media/cable_ethernet_inst-hw-e2800-e5700.png["Ethernet-Kabel"]
  a| 
 Ethernet-Kabel
 
@@ -53,7 +53,7 @@ Management-Verbindung
 
 
  a| 
-image:../media/cable_io_inst-hw-e2800-e5700.png[""]
+image:../media/cable_io_inst-hw-e2800-e5700.png["E/A-Kabel"]
  a| 
 E/A-Kabel
 
@@ -64,7 +64,7 @@ Verkabelung der Daten-Hosts
 
 
  a| 
-image:../media/cable_power_inst-hw-e2800-e5700.png[""]
+image:../media/cable_power_inst-hw-e2800-e5700.png["Stromkabel"]
  a| 
 Stromkabel
 
@@ -75,7 +75,7 @@ Einschalten des Storage-Systems
 
 
  a| 
-image:../media/sas_cable.png[""]
+image:../media/sas_cable.png["SAS-Kabel"]
  a| 
 SAS-Kabel sind nur in den Festplatten-Shelfs enthalten
  a| 
@@ -88,28 +88,28 @@ SAS-Kabel
 
 
  a| 
-image:../media/screwdriver_inst-hw-e2800-e5700.png[""]
+image:../media/screwdriver_inst-hw-e2800-e5700.png["Kreuzschlitzschraubendreher #2"]
  a| 
 Kreuzschlitzschraubendreher #2
 
 
 
  a| 
-image:../media/flashlight_inst-hw-e2800-e5700.png[""]
+image:../media/flashlight_inst-hw-e2800-e5700.png["Taschenlampe"]
  a| 
 Taschenlampe
 
 
 
  a| 
-image:../media/wrist_strap_inst-hw-e2800-e5700.png[""]
+image:../media/wrist_strap_inst-hw-e2800-e5700.png["ESD-Riemen"]
  a| 
 ESD-Riemen
 
 
 
  a| 
-image:../media/2u_rackspace_inst-hw-e2800-e5700.png[""]
+image:../media/2u_rackspace_inst-hw-e2800-e5700.png["2 HE Rack“"]
  a| 
 2-HE-Rack-Fläche: Eine Standardgröße von 19 Zoll 48.30 cm Rack für 2-HE-Shelfs mit folgenden Abmessungen:
 
@@ -126,7 +126,7 @@ image:../media/2u_rackspace_inst-hw-e2800-e5700.png[""]
 
 
  a| 
-image:../media/management_station_inst-hw-e2800-e5700_g60b3.png[""]
+image:../media/management_station_inst-hw-e2800-e5700_g60b3.png["Management Station mit unterstütztem Browser für Verwaltungssoftware"]
  a| 
 Ein unterstützter Browser für die Verwaltungssoftware:
 

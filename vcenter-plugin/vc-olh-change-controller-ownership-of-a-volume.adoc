@@ -11,7 +11,7 @@ summary: Ändern Sie den bevorzugten Controller-Besitz eines Volumes, sodass I/O
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

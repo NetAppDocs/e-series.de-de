@@ -28,14 +28,14 @@ Wenn Sie die Erweiterung EF300 für SAS verkabeln, lesen Sie die folgenden Infor
 
 
  a| 
-image:../media/ef600_w_faceplate.png[""]
+image:../media/ef600_w_faceplate.png["Shelf mit installierten Laufwerken und Blende"]
  a| 
 Shelf mit installierten Laufwerken (Blende und Endkappen separat verpackt)
 
 
 
  a| 
-image:../media/superrails_inst-hw-ef600.png[""]
+image:../media/superrails_inst-hw-ef600.png["Rack-montierte Hardware"]
  a| 
 Rack-montierte Hardware
 
@@ -49,7 +49,7 @@ In der folgenden Tabelle sind die Kabeltypen aufgeführt, die Sie möglicherweis
 
 
  a| 
-image:../media/cable_ethernet_inst-hw-ef600.png[""]
+image:../media/cable_ethernet_inst-hw-ef600.png["RJ-45 ethernet-Kabel"]
  a| 
 RJ-45 Ethernet-Kabel (falls bestellt)
  a| 
@@ -58,7 +58,7 @@ Management-Verbindung
 
 
  a| 
-image:../media/cable_io_inst-hw-ef600.png[""]
+image:../media/cable_io_inst-hw-ef600.png["E/A-Kabel"]
  a| 
 E/A-Kabel (falls bestellt)
  a| 
@@ -67,7 +67,7 @@ Verkabelung der Daten-Hosts
 
 
  a| 
-image:../media/cable_power_inst-hw-ef600.png[""]
+image:../media/cable_power_inst-hw-ef600.png["Stromkabel"]
  a| 
 Stromkabel (falls bestellt)
  a| 
@@ -80,28 +80,28 @@ Einschalten des Storage-Systems
 
 
  a| 
-image:../media/screwdriver_inst-hw-ef600.png[""]
+image:../media/screwdriver_inst-hw-ef600.png["Kreuzschlitzschraubendreher #2"]
  a| 
 Kreuzschlitzschraubendreher #2
 
 
 
  a| 
-image:../media/flashlight_inst-hw-ef600.png[""]
+image:../media/flashlight_inst-hw-ef600.png["Taschenlampe"]
  a| 
 Taschenlampe
 
 
 
  a| 
-image:../media/wrist_strap_inst-hw-ef600.png[""]
+image:../media/wrist_strap_inst-hw-ef600.png["ESD-Riemen"]
  a| 
 ESD-Riemen
 
 
 
  a| 
-image:../media/2u_rackspace_inst-hw-ef600.png[""]
+image:../media/2u_rackspace_inst-hw-ef600.png["2-HE-Rack"]
  a| 
 2-HE-Rack-Fläche: Eine Standardgröße von 19 Zoll 48.30 cm Rack für 2-HE-Shelfs mit folgenden Abmessungen:
 
@@ -121,7 +121,7 @@ NOTE: Wenn Sie Schränke von Drittanbietern verwenden, kann dies dazu führen, d
 
 
  a| 
-image:../media/management_station_inst-hw-ef600_g60b3.png[""]
+image:../media/management_station_inst-hw-ef600_g60b3.png["Management Station mit unterstütztem Browser für Verwaltungssoftware"]
  a| 
 Ein unterstützter Browser für die Verwaltungssoftware:
 

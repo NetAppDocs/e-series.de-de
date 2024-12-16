@@ -1,0 +1,44 @@
+---
+section: maintenance-e4000
+title: E4000
+entries:
+- title: Batterien
+  url: "/maintenance-e4000/replace-battery-e4000.html"
+- title: Controller
+  entries:
+  - title: Überlegungen und Anforderungen
+    url: "/maintenance-e4000/replace-controller-requirements-e4000.html"
+  - title: Zweiten Controller-Behälter hinzufügen
+    url: "/maintenance-e4000/replace-controller-second-e4000.html"
+  - title: Controller austauschen
+    url: "/maintenance-e4000/replace-controller-e4000.html"
+- title: Kanister
+  entries:
+  - title: Netzteil austauschen (E4012)
+    url: "/maintenance-e4000/replace-power-supply.html"
+  - title: Ersetzen Sie den Aktivkohlebehälter (E4060).
+    url: "/maintenance-e4000/replace-power-canister.html"
+  - title: Ersetzen Sie den Lüfterbehälter (E4060).
+    url: "/maintenance-e4000/replace-fan-canister.html"
+- title: DIMMs
+  url: "/maintenance-e4000/replace-dimms-e4000.html"
+- title: Laufwerke
+  entries:
+  - title: Überlegungen und Anforderungen
+    url: "/maintenance-e4000/replace-drive-e4000.html"
+  - title: Laufwerk austauschen
+    entries:
+    - title: 12 oder 24 Laufwerke
+      url: "/maintenance-e4000/replace-drives-12-24.html"
+    - title: 60 Laufwerke
+      url: "/maintenance-e4000/replace-drives-60.html"
+  - title: Ersetzen Sie die Laufwerksschublade (4060).
+    url: "/maintenance-e4000/drive-drawer-60.html"
+  - title: Hot Add a Laufwerk-Shelf
+    url: "/maintenance-e4000/replace-drives-hotadd-drive-shelf.html"
+- title: Host-Schnittstellenkarten
+  entries:
+  - title: Upgrade HIC
+    url: "/maintenance-e4000/replace-hic-upgrade-e4000.html"
+  - title: Fehlerhafte HIC austauschen
+    url: "/maintenance-e4000/replace-hic-e4000.html"

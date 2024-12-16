@@ -23,7 +23,7 @@ Der 40U-Schrank des Modells 3040 verfügt über folgende Standardfunktionen:
 
 Die folgenden Abbildungen zeigen eine Vorderansicht (links) und eine Rückansicht (rechts) des Gehäuses.
 
-image::../media/83000_07_dwg_3040_cabinet_with_callouts.gif[83000 07 DWG 3040 Schrank mit Callouts]
+image::../media/83000_07_dwg_3040_cabinet_with_callouts.gif[3040 Schaltschrankübersicht]
 
 |===
 

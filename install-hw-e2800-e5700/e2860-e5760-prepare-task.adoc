@@ -21,14 +21,14 @@ Erfahren Sie, wie Sie die Installation Ihres E2860, E5760 oder DE460 Storage-Sys
 
 
  a| 
-image:../media/trafford_overview.png[""]
+image:../media/trafford_overview.png["Shelf mit installierten Laufwerken und Blende"]
  a| 
 Shelf, Blende und Rack-Mount-Hardware
 
 
 
  a| 
-image:../media/handles_counted.png[""]
+image:../media/handles_counted.png["Regalgriffe"]
  a| 
 4 Shelf-Griffe
 
@@ -42,7 +42,7 @@ In der folgenden Tabelle sind die Kabeltypen aufgeführt, die Sie möglicherweis
 
 
  a| 
-image:../media/cable_ethernet_inst-hw-e2800-e5700.png[""]
+image:../media/cable_ethernet_inst-hw-e2800-e5700.png["Ethernet-Kabel"]
  a| 
 Ethernet-Kabel
 
@@ -53,7 +53,7 @@ Management-Verbindung
 
 
  a| 
-image:../media/cable_io_inst-hw-e2800-e5700.png[""]
+image:../media/cable_io_inst-hw-e2800-e5700.png["E/A-Kabel"]
  a| 
 E/A-Kabel
 
@@ -64,7 +64,7 @@ Verkabelung der Daten-Hosts
 
 
  a| 
-image:../media/cable_power_inst-hw-e2800-e5700.png[""]
+image:../media/cable_power_inst-hw-e2800-e5700.png["Stromkabel"]
  a| 
 Stromkabel
 
@@ -77,7 +77,7 @@ Einschalten des Storage-Systems
 
 
  a| 
-image:../media/sas_cable.png[""]
+image:../media/sas_cable.png["SAS-Kabel"]
  a| 
 SAS-Kabel (nur in den Festplatten-Shelfs enthalten)
  a| 
@@ -90,28 +90,28 @@ Verkabelung der Shelfs
 
 
  a| 
-image:../media/screwdriver_inst-hw-e2800-e5700.png[""]
+image:../media/screwdriver_inst-hw-e2800-e5700.png["Kreuzschlitzschraubendreher #2"]
  a| 
 Kreuzschlitzschraubendreher #2
 
 
 
  a| 
-image:../media/flashlight_inst-hw-e2800-e5700.png[""]
+image:../media/flashlight_inst-hw-e2800-e5700.png["Taschenlampe"]
  a| 
 Taschenlampe
 
 
 
  a| 
-image:../media/wrist_strap_inst-hw-e2800-e5700.png[""]
+image:../media/wrist_strap_inst-hw-e2800-e5700.png["ESD-Riemen"]
  a| 
 ESD-Riemen
 
 
 
  a| 
-image:../media/4u_dummy.png[""]
+image:../media/4u_dummy.png["4-HE-Rack“"]
  a| 
 4-HE-Rack-Fläche: Eine Standardfläche von 19 Zoll 48.30 cm Rack für 4-HE-Shelfs mit folgenden Abmessungen:
 
@@ -126,7 +126,7 @@ image:../media/4u_dummy.png[""]
 
 
  a| 
-image:../media/management_station_inst-hw-e2800-e5700_g60b3.png[""]
+image:../media/management_station_inst-hw-e2800-e5700_g60b3.png["Management Station mit unterstütztem Browser für Verwaltungssoftware"]
  a| 
 Ein unterstützter Browser für die Verwaltungssoftware:
 

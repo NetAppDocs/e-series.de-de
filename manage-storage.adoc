@@ -6,6 +6,8 @@ summary: Storage-Management
 ---
 = Storage-Management
 :allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
 
 
 [role="lead"]

@@ -27,14 +27,14 @@ Lesen Sie alle Anweisungen durch, bevor Sie mit den folgenden Schritten fortfahr
 . Packen Sie den Hardwareinhalt aus, und führen Sie anschließend die enthaltene Hardware gegen den Packzettel aus.
 . Installieren Sie die Schienen.
 +
-Wenn Sie Anweisungen zur Rackmontage beiliegen, lesen Sie diese, um ausführliche Informationen zur Installation der Schienen zu erhalten. Weitere Anweisungen zur Rack-Montage finden Sie unter link:../rackmount-hardware.html["Rack-montierte Hardware"].
+Wenn Sie Anweisungen zur Rackmontage beiliegen, lesen Sie diese, um ausführliche Informationen zur Installation der Schienen zu erhalten. Weitere Informationen zur Rack-Montage finden Sie unter link:../rackmount-hardware.html["Rack-montierte Hardware"^].
 
 +
 
 NOTE: Installieren Sie die Hardware von der Unterseite des Racks oder Schranks bis oben, um zu verhindern, dass das Gerät umkippen kann.
 
 +
-image:../media/install_rails_inst-hw-e2800-e5700.png[""]
+image:../media/install_rails_inst-hw-e2800-e5700.png["Installieren Sie die Schienen"]
 
 . Das Shelf einbauen.
 +
@@ -43,7 +43,7 @@ CAUTION: Bei voller Beladung mit Laufwerken wiegt jedes Shelf etwa 29 kg (64 lb)
 
 +
 .. Legen Sie ausgehend vom gewünschten Regal an der Unterseite des Schranks die Rückseite des Regals (das Ende mit den Anschlüssen) auf die Schienen.
-.. Das Regal von unten halten und in den Schrank schieben.image:../media/4_person_lift_source.png[""]
+.. Das Regal von unten stützen und in das Gehäuse schieben. image:../media/4_person_lift_source.png["Es wurden vier Personen benötigt, um das Regal in den Schrank zu heben"]
 
 
 . Befestigen Sie das Regal.
@@ -56,7 +56,7 @@ Befestigen Sie das Regal wie in gerichtet am Rack link:../rackmount-hardware.htm
 
 
 +
-image:../media/trafford_secure.png[""]
+image:../media/trafford_secure.png["Befestigen Sie die Halterungen an der Rückseite des Regals"]
 
 . Befestigen Sie die Blende oder die Endkappen.
 +
@@ -69,4 +69,4 @@ image:../media/trafford_secure.png[""]
 
 
 
-image:../media/install_faceplate_2_0_inst-hw-e2800-e5700.png[""]
+image:../media/install_faceplate_2_0_inst-hw-e2800-e5700.png["Blende einbauen"]

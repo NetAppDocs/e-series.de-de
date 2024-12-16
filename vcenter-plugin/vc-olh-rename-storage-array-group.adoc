@@ -11,7 +11,7 @@ summary: Ändern Sie den Namen einer Speicherarraygruppe, wenn der aktuelle Name
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

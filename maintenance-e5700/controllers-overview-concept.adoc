@@ -41,7 +41,7 @@ NOTE: Die gelbe Warn-LED des Controllers erlischt, wenn die folgenden Austauschb
 ====
 
 
-image::../media/e5700_attention_led_callout.png[Das Aufsehen der e5700 führte zu einer Legende]
+image::../media/e5700_attention_led_callout.png[Warnungs-LED für E5700 Controller]
 
 *(1)* _Warn-LED_
 

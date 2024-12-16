@@ -19,7 +19,7 @@ Sie können eine PDF-Datei auf dieser Seite erstellen und drucken und dann die i
 
 Empfohlene Konfigurationen bestehen aus zwei Initiator-Ports und vier Ziel-Ports mit einem oder mehreren VLANs.
 
-image::../media/50001_01_conf-lin.gif[50001 01 conf lin]
+image::../media/50001_01_conf-lin.gif[ISCSI-Netzwerkkonfiguration]
 
 
 

@@ -11,7 +11,7 @@ summary: Erstellen Sie Volumes mit dem Plug-in für vCenter, weisen Sie Hosts Vo
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

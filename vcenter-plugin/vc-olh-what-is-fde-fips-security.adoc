@@ -10,7 +10,7 @@ summary: FDE/FIPS-Sicherheit bezieht sich auf sichere Laufwerke, die Daten bei S
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

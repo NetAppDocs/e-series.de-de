@@ -10,7 +10,7 @@ summary: Wenn Sie den Prozess zum Erstellen von Volumes beschleunigen möchten, 
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

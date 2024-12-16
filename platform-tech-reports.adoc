@@ -6,7 +6,12 @@ summary: Technische Berichte der E-Series
 ---
 = Informieren Sie sich über technische Plattformberichte
 :allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
 
+
+[role="lead"]
+Über die nachstehenden Links finden Sie technische Berichte zu E-Series Plattformen. Die Links führen Sie zu einer anderen Dokumentationswebsite.
 
 
 
@@ -28,8 +33,8 @@ summary: Technische Berichte der E-Series
 |  |  |  
 
 
-| https://www.netapp.com/pdf.html?item=/media/17009-tr4800pdf.pdf["*TR-4800: EF600 Arrays bieten Überblick*"] |  |  
+| https://www.netapp.com/pdf.html?item=/media/17009-tr4800pdf.pdf["*TR-4800: EF600 Arrays bieten Überblick*"] | https://www.netapp.com/pdf.html?item=/media/116236-tr-5001-intro-to-netapp-e4000-arrays-with-santricity.pdf["*TR-5001: E4000 Arrays bieten Überblick*"^] |  
 
 
-| Hier werden die Hardware- und Softwarefunktionen des EF600 All-Flash-Arrays und die neuen Features des SANtricity Betriebssystems beschrieben. |  |  
+| Hier werden die Hardware- und Softwarefunktionen des EF600 All-Flash-Arrays und die neuen Features des SANtricity Betriebssystems beschrieben. | In diesem Dokument werden die Hardware- und Softwarefunktionen des E4000 Hybrid-Arrays und die neuesten SANtricity OS-Funktionen beschrieben. |  
 |===

@@ -11,7 +11,7 @@ summary: Sie müssen ein Volume einem Host oder Host-Cluster zuweisen, damit es 
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

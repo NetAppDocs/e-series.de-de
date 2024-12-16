@@ -6,7 +6,12 @@ summary: Technische Berichte der E-Series
 ---
 = Lesen Sie technische Berichte zu Sicherheitsfragen
 :allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
 
+
+[role="lead"]
+Über die folgenden Links erhalten Sie Zugriff auf technische Sicherheitsberichte zu Hardware und SANtricity Software der E-Series. Die Links führen Sie zu einer anderen Dokumentationswebsite.
 
 
 

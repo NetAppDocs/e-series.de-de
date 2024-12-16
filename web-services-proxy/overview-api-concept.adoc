@@ -19,7 +19,7 @@ In der Web Services-API umfasst HTTP-Kommunikation einen Anforderungsantwort-Zyk
 
 Unabhängig von der verwendeten Programmiersprache oder dem verwendeten Werkzeug hat jeder Aufruf der Web Services-API eine ähnliche Struktur, mit einer URL, einem HTTP-Verb und einem Accept-Header.
 
-image::../media/web_services_proxy_api.gif[Proxy-API für Webservices]
+image::../media/web_services_proxy_api.gif[Web Services API-Anrufdiagramm]
 
 Alle Anforderungen enthalten wie im folgenden Beispiel eine URL und enthalten die in der Tabelle beschriebenen Elemente.
 

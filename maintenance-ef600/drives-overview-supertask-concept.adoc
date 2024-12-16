@@ -36,7 +36,7 @@ Befolgen Sie die folgenden Regeln, um Beschädigungen an den Laufwerken in Ihrem
 ** Niemals einen Antrieb in ein Regal zwingen, und mit sanftem, festem Druck den Riegel vollständig einrücken.
 ** Platzieren Sie Laufwerke auf gepolsterten Flächen und stapeln Sie niemals Laufwerke auf einander.
 ** Laufwerke nicht gegen andere Oberflächen abstoßen.
-** Lösen Sie vor dem Entfernen eines Laufwerks aus einem Shelf den Griff und warten Sie 30 Sekunden, bis sich das Laufwerk heruntergefahren hat.
+** Lösen Sie vor dem Entfernen eines Laufwerks aus einem Shelf den Griff und warten Sie 60 Sekunden, bis sich das Laufwerk heruntergefahren hat.
 ** Verwenden Sie beim Transport von Laufwerken stets die genehmigte Verpackung.
 
 
@@ -52,10 +52,10 @@ Magnetfelder können alle Daten auf dem Laufwerk zerstören und irreparable Sch�
 
 Standardmäßige Shelfs für 24 Laufwerke erfordern beeindruckende Laufwerke. Die folgende Abbildung zeigt, wie die Laufwerke in jedem Shelf nummeriert werden (die vordere Blende des Shelfs wurde entfernt).
 
-image::../media/ef600_drives_numbered.png[Ef600-Laufwerke nummeriert]
+image::../media/ef600_drives_numbered.png[Laufwerksnummerierung in einem Shelf mit 24 Laufwerken]
 
 Wenn Sie weniger als 24 Laufwerke in einen EF300- oder EF600 Controller einsetzen, müssen Sie die beiden Controller-Hälften wechseln. Beginnend mit ganz links und dann nach rechts, legen Sie die Antriebe nacheinander ein.
 
 Die folgende Abbildung zeigt, wie die Laufwerke zwischen den beiden Hälften staffeln.
 
-image::../media/ef600_drives_staggering.png[Ef600-Laufwerke gestaffelte]
+image::../media/ef600_drives_staggering.png[Staffelung der Laufwerke in einem Shelf mit 24 Laufwerken]

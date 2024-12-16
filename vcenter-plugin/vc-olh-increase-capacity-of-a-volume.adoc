@@ -11,7 +11,7 @@ summary: Die Größe eines Volumes wird angepasst, um die gemeldete Kapazität z
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

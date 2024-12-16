@@ -94,7 +94,7 @@ CAUTION: Um eine verminderte Leistung zu vermeiden, dürfen die Kabel nicht verd
 . Vergewissern Sie sich, dass die LED Cache Active auf der Rückseite des Controllers ausgeschaltet ist.
 . Drücken Sie die Griffe auf beiden Seiten des Controllers, und ziehen Sie sie nach hinten, bis sie sich aus dem Shelf lösen.
 +
-image::../media/remove_controller_5.png[Controller 5 ausbauen]
+image::../media/remove_controller_5.png[Drücken Sie die Griffe, um die Steuerung zu entfernen]
 
 . Schieben Sie den Controller-Behälter mit zwei Händen und den Griffen aus dem Regal. Wenn sich die Vorderseite des Controllers nicht im Gehäuse befindet, ziehen Sie sie mit zwei Händen vollständig heraus.
 +
@@ -102,7 +102,7 @@ image::../media/remove_controller_5.png[Controller 5 ausbauen]
 CAUTION: Verwenden Sie immer zwei Hände, um das Gewicht eines Reglerkanisters zu unterstützen.
 
 +
-image::../media/remove_controller_6.png[Controller 6 ausbauen]
+image::../media/remove_controller_6.png[Tragen Sie beim Entfernen des Controllers mit zwei Händen das Gewicht]
 
 . Setzen Sie den Steuerungsbehälter auf eine flache, statisch freie Oberfläche.
 
@@ -122,15 +122,15 @@ Wenn diese grüne LED leuchtet, wird der Controller weiterhin mit Strom versorgt
 . Suchen Sie die Registerkarte „Drücken“ auf der Seite des Controllers.
 . Lösen Sie die Batterie, indem Sie auf die Lasche drücken und das Batteriegehäuse zusammendrücken.
 +
-image::../media/batt_3.png[batt 3]
+image::../media/batt_3.png[„Drücken Sie die Lasche, um den Akku zu entriegeln]
 
 . Drücken Sie vorsichtig das Anschlussgehäuse der Batterieverdrahtung. Ziehen Sie den Akku aus der Platine heraus.
 +
-image::../media/batt_2.png[batt 2]
+image::../media/batt_2.png[Entfernen Sie den Stecker, der die Batterieverkabelung beherbergt]
 
 . Heben Sie die Batterie aus der Steuerung heraus und legen Sie sie auf eine flache, statische Oberfläche.
 +
-image::../media/batt_4.png[batt 4]
+image::../media/batt_4.png[Batterie aus der Steuerung herausheben]
 
 . Befolgen Sie die für Ihren Standort geeigneten Verfahren, um den defekten Akku zu recyceln oder zu entsorgen.
 +
@@ -153,7 +153,7 @@ NOTE: Zur sicheren Einhaltung der IATA-Vorschriften werden Ersatzbatterien mit e
 
 . Setzen Sie den Akku in den Controller ein, indem Sie das Batteriegehäuse mit den Metallverriegelungen an der Seite des Controllers aufschieben.
 +
-image::../media/batt_5.png[batt 5]
+image::../media/batt_5.png[Akku einlegen]
 
 +
 Der Akku rastet ein.
@@ -175,7 +175,7 @@ Setzen Sie den Controller wieder in das Controller-Shelf ein.
 NOTE: Der Controller klickt hörbar, wenn er richtig in das Regal eingebaut ist.
 
 +
-image::../media/remove_controller_7.png[Controller 7 ausbauen]
+image::../media/remove_controller_7.png[Setzen Sie den Controller in das Shelf ein]
 
 
 

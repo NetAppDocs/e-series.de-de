@@ -53,12 +53,12 @@ Wenn Sie aus Performance-Gründen Jumbo Frames im IP SAN verwenden, stellen Sie 
 
 
 .Über diese Aufgabe
-Denken Sie bei der Planung Ihrer iSCSI-Netzwerke daran, dass die https://configmax.vmware.com/home["VMware Konfigurationsmaxima"^] „Guide“ gibt an, dass die maximal unterstützten iSCSI-Speicherpfade 8 sind. Sie müssen diese Anforderung berücksichtigen, um nicht zu viele Pfade zu konfigurieren.
+Denken Sie bei der Planung des iSCSI-Netzwerks daran, dass im https://configmax.broadcom.com/home["VMware Konfigurationsmaxima"^] Handbuch angegeben ist, dass die maximal unterstützten iSCSI-Speicherpfade 8 sind. Sie müssen diese Anforderung berücksichtigen, um nicht zu viele Pfade zu konfigurieren.
 
 Standardmäßig erstellt der VMware iSCSI Software Initiator eine einzelne Sitzung pro iSCSI-Ziel, wenn Sie keine iSCSI-Port-Bindung verwenden.
 
 
-NOTE: Bei der Bindung von VMware iSCSI-Ports handelt es sich um eine Funktion, bei der alle gebundenen VMkernel-Ports an alle Zielports angemeldet werden, auf die in den konfigurierten Netzwerksegmenten zugegriffen werden kann. Sie soll für Arrays verwendet werden, die eine einzige Netzwerkadresse für das iSCSI-Ziel enthalten. NetApp empfiehlt, die iSCSI-Portbindung nicht zu verwenden. Weitere Informationen finden Sie im http://kb.vmware.com/["VMware Knowledge Base"] Beziehen Sie den Artikel über Überlegungen bei der Verwendung von Software-iSCSI-Port-Bindung in ESX/ESXi ein. Wenn der ESXi Host an den Storage eines anderen Anbieters angeschlossen ist, empfiehlt NetApp, separate iSCSI VMkernel-Ports zu verwenden, um einen Konflikt mit Port-Bindung zu vermeiden.
+NOTE: Bei der Bindung von VMware iSCSI-Ports handelt es sich um eine Funktion, bei der alle gebundenen VMkernel-Ports an alle Zielports angemeldet werden, auf die in den konfigurierten Netzwerksegmenten zugegriffen werden kann. Sie soll für Arrays verwendet werden, die eine einzige Netzwerkadresse für das iSCSI-Ziel enthalten. NetApp empfiehlt, die iSCSI-Portbindung nicht zu verwenden. Weitere Informationen finden Sie im https://support.broadcom.com/["VMware Knowledge Base"] für den Artikel über Überlegungen zur Verwendung der Software-iSCSI-Portbindung in ESX/ESXi. Wenn der ESXi Host an den Storage eines anderen Anbieters angeschlossen ist, empfiehlt NetApp, separate iSCSI VMkernel-Ports zu verwenden, um einen Konflikt mit Port-Bindung zu vermeiden.
 
 Als Best Practice sollten Sie BEI E-Series Storage-Arrays nicht die Portbindung verwenden. Weitere Informationen finden Sie unter https://www.netapp.com/media/17017-tr4789.pdf["TR-4789:VMware Konfigurationshandbuch für die E-Series SANtricity iSCSI-Integration mit ESXi 6.x und 7.x"^] .
 
@@ -280,7 +280,7 @@ Sie können eine PDF-Datei auf dieser Seite erstellen und drucken und dann mithi
 
 Empfohlene Konfigurationen bestehen aus zwei Initiator-Ports und vier Ziel-Ports mit einem oder mehreren VLANs.
 
-image::../media/50001_01_conf-vmw.gif[50001 01 conf vmw]
+image::../media/50001_01_conf-vmw.gif[ISCSI-Port-ID]
 
 
 

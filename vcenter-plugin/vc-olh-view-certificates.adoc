@@ -10,7 +10,7 @@ summary: 'Zusammenfassende Informationen für ein Zertifikat anzeigen, einschlie
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

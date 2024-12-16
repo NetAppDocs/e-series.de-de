@@ -1,7 +1,7 @@
 ---
 permalink: upgrade-controllers/install-controllers-task.html 
 sidebar: sidebar 
-keywords: E-Series, eseries, E2800, E5700, EF300, EF600, upgrade controller, upgrading controller, installing new controller, install new controller, install battery, installing battery, install controller canister 
+keywords: E-Series, eseries, E4000, E2800, E5700, EF300, EF600, upgrade controller, upgrading controller, installing new controller, install new controller, install battery, installing battery, install controller canister 
 summary: Nachdem Sie die alten Controller entfernt haben, können Sie neue Controller in das Controller-Laufwerksfach installieren 
 ---
 = Installieren Sie neue Controller
@@ -34,35 +34,20 @@ Setzen Sie den Akku ein, den Sie aus dem ursprünglichen Controller-Behälter en
 . Packen Sie den neuen Controller-Behälter aus, und stellen Sie ihn auf eine flache, statische Oberfläche, so dass die abnehmbare Abdeckung nach oben zeigt.
 . Drücken Sie die Abdeckungstaste nach unten, und schieben Sie die Abdeckung ab.
 . Richten Sie den Controller-Behälter so aus, dass der Steckplatz für die Batterie zu Ihnen zeigt.
-. Führen Sie je nach Controller-Modell einen der folgenden Schritte aus:
-+
-** Für E2600 oder E2700 Controller-Modelle:
-+
-... Setzen Sie die Batterieplatine ein, indem Sie sie zur Vorderseite des neuen Reglerkanisters schieben.
-... Ziehen Sie die Flügelschraube fest, um die Batteriescuit-Platine in der neuen Controller-Behälterkarte zu sichern.
-... Setzen Sie die obere Abdeckung des neuen Reglerkanisters wieder ein, indem Sie sie nach vorn schieben, bis die oberen Verriegelungsdeckel einrasten.
-+
-Wenn die Verriegelung einrastet, Haken unten an der Verriegelung in einen Metallschlitz am Gehäuse.
-
-
-
-** Für andere Controller-Modelle:
-+
-... Setzen Sie den Akku in den neuen Controller-Behälter ein.
+. Setzen Sie den Akku in den neuen Controller-Behälter ein.
 +
 Schieben Sie die Batterie in den Behälter, und achten Sie darauf, dass sie unterhalb der Nieten an der Wand des neuen Kanisters bleibt.
 
-... Halten Sie den Verriegelungsgriff in einem 45-Grad-Winkel, richten Sie die Stecker an der Unterseite der Batterie an den Anschlüssen am Behälter aus.
-... Drücken Sie den Akku nach unten, bis er hörbar einrastet. Bewegen Sie den Verriegelungsgriff nach oben, um den Controller-Akku am Controller-Behälter zu befestigen.
++
+.. Halten Sie den Verriegelungsgriff in einem 45-Grad-Winkel, richten Sie die Stecker an der Unterseite der Batterie an den Anschlüssen am Behälter aus.
+.. Drücken Sie den Akku nach unten, bis er hörbar einrastet. Bewegen Sie den Verriegelungsgriff nach oben, um den Controller-Akku am Controller-Behälter zu befestigen.
 +
 
 TIP: Um sicherzustellen, dass der Controller-Akku korrekt in einem E5XX-Laufwerksfach eingesetzt wird, müssen Sie ihn möglicherweise herausschieben und erneut einsetzen. Es ist sicher, wenn Sie hören, dass es einrasten und wenn der Verriegelungsgriff sich nicht aus seiner aufrechten Position bewegt, wenn Sie ihn wackeln.
 
-... Setzen Sie die obere Abdeckung des neuen Reglerkanisters wieder ein, indem Sie sie nach vorn schieben, bis die oberen Verriegelungsdeckel einrasten.
+.. Setzen Sie die obere Abdeckung des neuen Reglerkanisters wieder ein, indem Sie sie nach vorn schieben, bis die oberen Verriegelungsdeckel einrasten.
 +
 Wenn die Verriegelung einrastet, Haken unten an der Verriegelung in einen Metallschlitz am Gehäuse.
-
-
 
 
 
@@ -76,7 +61,7 @@ Wenn die Verriegelung einrastet, Haken unten an der Verriegelung in einen Metall
 Setzen Sie den neuen Controller-Behälter in das Reglerregal ein.
 
 .Schritte
-. Schieben Sie den neuen Controller-Behälter vollständig in das Fach für das Controller-Laufwerk Drehen Sie die Freigabehebel in Richtung der Mitte des Controller-Kanisters, um ihn zu verriegeln.
+. Schieben Sie den neuen Controller-Behälter vollständig in das Fach für das Controller-Laufwerk Drehen Sie die Entriegelungsgriffe zur Mitte des Reglerbehälters, um ihn zu verriegeln.
 . Wenn Ihr neuer Controller-Behälter über eine Fibre-Channel-HIC oder eine InfiniBand-HIC verfügt, installieren Sie die SFP+-Transceiver (Fibre Channel) oder QSFP+-Transceiver (InfiniBand) in den Controller-Behälter und schließen Sie die Hostkabel wieder an.
 +
 Je nach den an Ihrem Upgrade beteiligten HICs können Sie SFP+ Transceiver oder QSFP+ Transceiver, die Sie aus Ihrem alten Controller-Behälter entfernt haben, wiederverwenden.
@@ -85,11 +70,7 @@ Je nach den an Ihrem Upgrade beteiligten HICs können Sie SFP+ Transceiver oder 
 +
 Wenn die Laufwerksverkabelung mit den alten Controllern identisch ist, können Sie die Etiketten, die Sie an den Kabeln angeschlossen haben, verwenden, um die Kabel ordnungsgemäß wiederherzustellen.
 
-+
-
-NOTE: Wenn Sie ein Upgrade von einem früheren Modell auf E2700 Controller durchführen, unterscheidet sich die Verkabelung der Laufwerke möglicherweise von der Konfiguration der alten Controller.
-
 
 
 .Was kommt als Nächstes?
-Wenn Sie E2800 und E5700 Controller aktualisieren und die Laufwerkssicherheitsfunktion aktiviert ist, gehen Sie zu link:upgrade-unlock-drives-task.html["Entsperren von Laufwerken"]. Andernfalls fahren Sie mit fort link:complete-upgrade-controllers-task.html["Führen Sie das Controller-Upgrade durch"].
+Wenn die Laufwerksicherheit aktiviert ist, fahren Sie mit link:upgrade-unlock-drives-task.html["Entsperren von Laufwerken"]fort. Andernfalls gehen Sie zu link:complete-upgrade-controllers-task.html["Führen Sie das Controller-Upgrade durch"].

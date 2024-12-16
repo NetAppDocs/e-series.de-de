@@ -59,7 +59,7 @@ Die Datei wird im Ordner Downloads für Ihren Browser mit dem Namen *Support-Dat
 . Bestimmen Sie aus SANtricity System Manager, welches Netzteil ausgefallen ist. Sie finden diese Informationen im Bereich Details des Recovery Guru oder können die für das Shelf angezeigten Informationen einsehen.
 +
 .. Wählen Sie *Hardware*.
-.. Schau dir die Macht an image:../media/sam1130_ss_hardware_power_icon_maint-e5700.gif[""] Und Fan image:../media/sam1130_ss_hardware_fan_icon_maint-e5700.gif[""] Symbole rechts neben den Dropdown-Listen *Shelf*, um festzustellen, welches Regal die ausgefallene Stromversorgung hat.
+.. Schauen Sie sich die Stromimage:../media/sam1130_ss_hardware_power_icon_maint-e5700.gif["Ein/aus-Symbol"]- und Lüftersymbole image:../media/sam1130_ss_hardware_fan_icon_maint-e5700.gif["Lüftersymbol"]rechts neben der Dropdown-Liste *Shelf* an, um festzustellen, welches Shelf das ausgefallene Netzteil hat.
 +
 Wenn eine Komponente ausgefallen ist, sind entweder oder beide Symbole rot.
 
@@ -80,12 +80,12 @@ CAUTION: Wenn der zweite Netzteilbehälter im Regal keinen *optimalen*-Status au
 Sie müssen das Netzteil, für das die Warn-LED leuchtet, ersetzen.
 
 +
-image::../media/28_dwg_913w_power_supply_back_view_maint-e5700.gif[28 DWG 913W Netzteil Rückansicht MAint e5700]
+image::../media/28_dwg_913w_power_supply_back_view_maint-e5700.gif[Warnungs-LED für Stromversorgung]
 
 +
-** Wenn die ein/aus-LED image:../media/drw_sas_power_icon_maint-e5700.gif[""] Ist *konstant grün*, das Netzteil funktioniert einwandfrei. Wenn es sich um *aus* handelt, ist das Netzteil ausgefallen, der Wechselstromschalter ist ausgeschaltet, das Netzkabel nicht richtig installiert oder die Eingangsspannung des Netzkabels nicht innerhalb der Marge (am Quellende des Netzkabels liegt ein Problem vor).
+** Wenn die Power-LED image:../media/drw_sas_power_icon_maint-e5700.gif["Ein/aus-LED-Symbol"]*stetig grün* leuchtet, funktioniert das Netzteil ordnungsgemäß. Wenn es sich um *aus* handelt, ist das Netzteil ausgefallen, der Wechselstromschalter ist ausgeschaltet, das Netzkabel nicht richtig installiert oder die Eingangsspannung des Netzkabels nicht innerhalb der Marge (am Quellende des Netzkabels liegt ein Problem vor).
 +
-Wenn die Warn-LED leuchtet image:../media/drw_sas_fault_icon_maint-e5700.gif[""] Ist *konstant gelb*, hat das Netzteil oder der integrierte Lüfter einen Fehler.
+Wenn die Achtung-LED image:../media/drw_sas_fault_icon_maint-e5700.gif["Fehlersymbol"]*stetig gelb* leuchtet, liegt ein Fehler für das Netzteil oder den integrierten Lüfter vor.
 
 
 
@@ -111,7 +111,7 @@ Bewahren Sie alle Verpackungsmaterialien auf, wenn Sie das defekte Netzteil zur�
 
 . Drücken Sie die Verriegelung am Handgriff der Stromversorgungs-Nockenwelle, und öffnen Sie dann den Nockengriff, um das Netzteil vollständig von der Mittelebene zu lösen.
 +
-image::../media/drw_2600_psu_maint-e5700.gif[drw 2600 psu-Version e5700]
+image::../media/drw_2600_psu_maint-e5700.gif[Verwenden Sie die Verriegelung, um das Netzteil von der Mittelplatine zu lösen]
 
 . Schieben Sie die Stromversorgung mit dem Nockengriff aus dem System heraus.
 +

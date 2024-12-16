@@ -62,7 +62,7 @@ Die Datei wird im Ordner Downloads für Ihren Browser mit dem Namen *Support-Dat
 . Bestimmen Sie aus dem SANtricity-System-Manager, welcher Stromversorgungsbehälter ausgefallen ist.
 +
 .. Wählen Sie *Hardware*.
-.. Schau dir die Macht an image:../media/sam1130_ss_hardware_power_icon_maint-e5700.gif[""] Symbol rechts neben den Dropdown-Listen *Shelf*, um zu bestimmen, welches Regal den defekten Strombehälter hat.
+.. Sehen Sie sich das Power-image:../media/sam1130_ss_hardware_power_icon_maint-e5700.gif["Ein/aus-Symbol"]Symbol rechts neben der Dropdown-Liste *Shelf* an, um festzustellen, welches Shelf den defekten Strombehälter hat.
 +
 Wenn eine Komponente ausgefallen ist, ist dieses Symbol rot.
 
@@ -87,7 +87,7 @@ NOTE: Zudem finden Sie im Bereich Details des Recovery Guru Informationen zum fe
 Sie müssen den Netzbehälter austauschen, dessen Warn-LED leuchtet.
 
 +
-image::../media/28_dwg_e2860_de460c_psu_w_callouts_maint-e5700.gif[28 DWG e2860 de460c psu w Callouts maint e5700]
+image::../media/28_dwg_e2860_de460c_psu_w_callouts_maint-e5700.gif[LEDs des Netzbehälters]
 
 +
 *(1)* _Power-LED_. Wenn es *Vollgrün* ist, funktioniert der Leistungsbehälter richtig. Wenn es sich um *aus* handelt, ist der Netzheizbehälter ausgefallen, der Wechselstromschalter ist ausgeschaltet, das Netzkabel nicht richtig installiert oder die Eingangsspannung des Netzkabels nicht innerhalb der Marge (am Quellende des Netzkabels liegt ein Problem vor).

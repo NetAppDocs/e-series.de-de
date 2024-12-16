@@ -10,7 +10,7 @@ summary: Wenn Sie die Kapazität für ein Volume erhöhen, erkennt der Host mög
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

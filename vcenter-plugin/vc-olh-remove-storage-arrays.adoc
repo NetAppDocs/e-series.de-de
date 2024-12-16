@@ -11,7 +11,7 @@ summary: Entfernen Sie ein oder mehrere Storage Arrays, wenn Sie es nicht mehr a
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

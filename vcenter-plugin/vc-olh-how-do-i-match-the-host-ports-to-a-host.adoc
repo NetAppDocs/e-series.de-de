@@ -10,7 +10,7 @@ summary: 'Wenn Sie einen Host manuell erstellen, müssen Sie zuerst das entsprec
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

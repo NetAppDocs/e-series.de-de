@@ -13,7 +13,7 @@ summary: Verwenden Sie dieses Arbeitsblatt, um SRP über InfiniBand Informatione
 [role="lead"]
 Sie können eine PDF-Datei auf dieser Seite erstellen und drucken und dann mithilfe des folgenden Arbeitsblatts SRP über InfiniBand-Speicherkonfigurationsinformationen aufzeichnen. Sie benötigen diese Informationen für Bereitstellungsaufgaben.
 
-image::../media/port_identifiers_ib_srp.gif[Port-IDs ib srp]
+image::../media/port_identifiers_ib_srp.gif[SRB über IB-Port-IDs]
 
 
 

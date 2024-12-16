@@ -10,7 +10,7 @@ summary: Zum Verwalten eines einzelnen Arrays verwenden Sie die Option Starten, 
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

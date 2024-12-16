@@ -11,7 +11,7 @@ summary: Initialisieren Sie ein Volume manuell, um die Wiederherstellung nach be
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

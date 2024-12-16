@@ -10,7 +10,7 @@ summary: Im Dialogfeld Kapazität hinzufügen stehen nicht alle Laufwerke zur Ve
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

@@ -11,7 +11,7 @@ summary: Wenn zwei oder mehr Hosts I/O-Zugriff auf dieselben Volumes benötigen,
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

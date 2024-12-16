@@ -10,7 +10,7 @@ summary: Während des Vorgangs „Importeinstellungen“ stehen einige Ihrer Spe
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

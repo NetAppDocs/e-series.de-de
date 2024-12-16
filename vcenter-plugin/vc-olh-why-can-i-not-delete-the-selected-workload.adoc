@@ -10,7 +10,7 @@ summary: Volumes in diesem Workload sind keinem applikationsspezifischen Workloa
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

@@ -70,7 +70,7 @@ Sie können eine PDF-Datei auf dieser Seite erstellen und drucken und anschließ
 
 Die Abbildung zeigt einen Host, der in zwei Zonen mit einem Storage-Array der E-Series verbunden ist. Eine Zone wird durch die blaue Linie angezeigt; die andere Zone wird durch die rote Linie angezeigt. Jeder einzelne Port verfügt über zwei Pfade zum Storage (einen zu jedem Controller).
 
-image::../media/port_identifiers_host_and_target_conf-win.gif[Port Identifikatoren Host und Ziel conf gewinnen]
+image::../media/port_identifiers_host_and_target_conf-win.gif[Fibre-Channel-Port-IDs]
 
 
 

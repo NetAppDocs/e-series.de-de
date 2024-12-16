@@ -1,0 +1,70 @@
+---
+permalink: install-hw-e4000/install-hardware-12.html 
+sidebar: sidebar 
+keywords:  
+summary: So installieren Sie ein E4012, DE212C oder DE224C Storage-System in einem Rack mit zwei Säulen oder einem NetApp System-Rack. 
+---
+= Hardware installieren (E4012)
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Erfahren Sie, wie Sie ein E4012- oder DE212C-Speichersystem in einem Rack mit zwei Stützen oder einem NetApp-Systemschrank installieren.
+
+.Bevor Sie beginnen
+Gehen Sie wie folgt vor:
+
+* Registrieren Sie Ihre Hardware unter http://mysupport.netapp.com/["NetApp Support"^].
+* Bereiten Sie einen flachen, statischen Arbeitsbereich vor.
+* Holen Sie sich ein ESD-Armband, und ergreifen Sie antistatische Vorsichtsmaßnahmen.
+
+
+.Schritte
+. Packen Sie den Hardwareinhalt aus, und führen Sie anschließend die enthaltene Hardware gegen den Packzettel aus.
+. Installieren Sie die Schienen.
++
+Wenn Sie Anweisungen zur Rackmontage beiliegen, lesen Sie diese, um ausführliche Informationen zur Installation der Schienen zu erhalten. Weitere Anweisungen zur Rack-Montage finden Sie unter link:../rackmount-hardware.html["Rack-montierte Hardware"].
+
++
+
+NOTE: Installieren Sie die Hardware von der Unterseite des Racks oder Schranks bis oben, um zu verhindern, dass das Gerät umkippen kann.
+
++
+image:../media/install_rails_inst-hw-e2800-e5700.png["Installieren Sie die Schienen"]
+
+. Das Shelf einbauen.
++
+
+CAUTION: Bei voller Laufwerkslast wiegt jedes Shelf 29.6 kg (65.25 lb). Zum sicheren Bewegen des Regals sind zwei Personen oder ein mechanischer Hub erforderlich.
+
++
+.. Legen Sie ausgehend vom gewünschten Regal an der Unterseite des Schranks die Rückseite des Regals (das Ende mit den Anschlüssen) auf die Schienen.
+.. Das Regal von unten stützen und in das Gehäuse schieben. image:../media/4_person_lift_source.png["Fahrstuhl für vier Personen"]
+
+
+. Befestigen Sie das Regal.
++
+Befestigen Sie das Regal wie in gerichtet am Rack link:../rackmount-hardware.html["Rack-montierte Hardware"].
+
++
+.. Bringen Sie die Schrauben an beiden Seiten in die ersten und dritten Löcher von der Oberseite des Regals ein, um sie an der Vorderseite des Gehäuses zu befestigen.
+.. Legen Sie zwei hintere Halterungen an jeder Seite des oberen hinteren Bereichs des Regals an. Bringen Sie die Schrauben in die ersten und dritten Löcher jeder Halterung ein, um die Rückseite des Gehäuses zu befestigen.
+
+
++
+image:../media/trafford_secure.png["Befestigen Sie das Shelf am Rack"]
+
+. Befestigen Sie die Blende oder die Endkappen.
++
+.. Positionieren Sie die Frontblende vor dem Controller-Regal so, dass die Löcher an beiden Enden auf die Befestigungselemente am Controller-Shelf ausgerichtet sind.
+.. Befestigen Sie die Blende.
+.. Wenn Sie über optionale Laufwerkseinschübe verfügen, positionieren Sie die linke Endkappe vor dem Antriebsregal so, dass die Löcher in der Endkappe an den Befestigungselementen auf der linken Seite des Regals ausgerichtet sind.
+.. Die Endkappe einrasten lassen.
+.. Wiederholen Sie die oben genannten Schritte für die rechte Endkappe.
+
+
+
+
+image:../media/install_faceplate_2_0_inst-hw-e2800-e5700.png["Blende einbauen"]

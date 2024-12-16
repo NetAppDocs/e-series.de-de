@@ -43,7 +43,7 @@ Wenn Sie Anweisungen zur Rackmontage enthalten haben, lesen Sie diese, um zu erf
 
 
  a| 
-image:../media/install_rails_inst-hw-ef600.png[""]
+image:../media/install_rails_inst-hw-ef600.png["Installieren Sie die Schienen"]
 
 |===
 . Das Shelf einbauen.
@@ -63,7 +63,7 @@ CAUTION: Verwenden Sie bei der Installation des Regals einen Teamlift mit zwei P
 
 
  a| 
-image:../media/install_ef600.png[""]
+image:../media/install_ef600.png["Setzen Sie das Regal mit zwei Personen in einen Schrank ein"]
 
 |===
 . Befestigen Sie das Regal.
@@ -77,7 +77,7 @@ Weitere Informationen finden Sie unter link:../rackmount-hardware.html["Rack-mon
 
 
  a| 
-image:../media/secure_shelf_inst-hw-ef600.png[""]
+image:../media/secure_shelf_inst-hw-ef600.png["Befestigen Sie das Regal"]
 
 |===
 . Bringen Sie die Frontplatte an.
@@ -92,7 +92,7 @@ image:../media/secure_shelf_inst-hw-ef600.png[""]
 
 
  a| 
-image:../media/install_faceplate_2_0_inst-hw-ef600.png[""]
+image:../media/install_faceplate_2_0_inst-hw-ef600.png["Bringen Sie die Abdeckplatte an"]
 
 |===
 

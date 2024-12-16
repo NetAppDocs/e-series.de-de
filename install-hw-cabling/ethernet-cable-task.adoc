@@ -14,6 +14,9 @@ summary: Verbinden Sie Ihr Storage-System mit einem Ethernet-Netzwerk für Out-o
 Sie können Ihr Storage-System mit einem Ethernet-Netzwerk verbinden, um das Out-of-Band-Storage-Array-Management zu ermöglichen. Sie müssen für alle Managementverbindungen für Storage-Arrays Ethernet-Kabel verwenden.
 
 
+NOTE: Die EF300, EF600 und E4000 verfügen nur über einen Out-of-Band-ethernet-Management-Port.
+
+
 
 == Direkte Topologie
 
@@ -22,7 +25,7 @@ Eine direkte Topologie verbindet den Controller direkt mit einem Ethernet-Netzwe
 Sie müssen für Out-of-Band-Management den Management-Port 1 an jedem Controller anschließen und Port 2 vom technischen Support zum Storage Array zugänglich machen.
 
 .Direkte Storage-Management-Verbindungen
-image::../media/74167.gif[74167]
+image::../media/74167.gif[Direkte Storage-Management-Verbindungen]
 
 
 
@@ -33,4 +36,4 @@ Eine Fabric-Topologie verbindet den Controller mithilfe eines Switches mit einem
 Sie müssen für Out-of-Band-Management den Management-Port 1 an jedem Controller anschließen und Port 2 vom technischen Support zum Storage Array zugänglich machen.
 
 .Fabric Storage-Managementverbindungen
-image::../media/74110.gif[74110]
+image::../media/74110.gif[Fabric Storage-Managementverbindungen]

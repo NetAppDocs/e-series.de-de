@@ -32,7 +32,7 @@ Das folgende Beispiel zeigt die Verkabelung zu den Daten-Hosts mithilfe einer Di
 
 
  a| 
-image:../media/2U_DirectTopology.png[""]
+image:../media/2U_DirectTopology.png["Direct-Attach-Topologie-Verkabelung"]
  a| 
 . Verbinden Sie jeden Host-Adapter direkt mit den Host-Ports auf den Controllern.
 
@@ -48,7 +48,7 @@ Das folgende Beispiel zeigt die Verkabelung zu den Daten-Hosts mithilfe einer Fa
 
 
  a| 
-image:../media/2U_FabricTopology.png[""]
+image:../media/2U_FabricTopology.png["Verkabelung der Fabric-Topologie"]
  a| 
 . Verbinden Sie jeden Host-Adapter direkt mit dem Switch.
 . Verbinden Sie jeden Switch direkt mit den Host Ports der Controller.
@@ -79,7 +79,7 @@ Erfahren Sie, wie die Management-Ports mit einem DHCP-Server konfiguriert werden
 
 
  a| 
-image:../media/cable_ethernet_inst-hw-e2800-e5700.png[""]
+image:../media/cable_ethernet_inst-hw-e2800-e5700.png["Ethernet-Verkabelung"]
  a| 
 Ethernet-Kabel (falls bestellt)
 
@@ -92,11 +92,11 @@ Die folgenden Abbildungen zeigen Beispiele für den Standort des Management-Port
 
 
  a| 
-image:../media/e2800_mgmt_ports.png[""]
+image:../media/e2800_mgmt_ports.png["E2800 Managementport"]
 
 E2800 Controller P1 Management-Port
  a| 
-image:../media/e5700_mgmt_ports.png[""]
+image:../media/e5700_mgmt_ports.png["E5700 Management-Port"]
 
 E5700 Controller P1 Management-Port
 
@@ -108,7 +108,6 @@ E5700 Controller P1 Management-Port
 
 === Option 2: Statische IP-Adresse
 
-[role="lead"]
 Erfahren Sie, wie die Management-Ports manuell konfiguriert werden können, indem Sie die IP-Adresse und die Subnetzmaske eingeben.
 
 .Bevor Sie beginnen
@@ -123,7 +122,7 @@ Erfahren Sie, wie die Management-Ports manuell konfiguriert werden können, inde
 
 
  a| 
-image:../media/cable_ethernet_inst-hw-e2800-e5700.png[""]
+image:../media/cable_ethernet_inst-hw-e2800-e5700.png["Ethernet-Kabel"]
  a| 
 Ethernet-Kabel (falls bestellt)
 
@@ -136,11 +135,11 @@ Die folgenden Abbildungen zeigen Beispiele für den Standort des Management-Port
 
 
  a| 
-image:../media/e2800_mgmt_ports.png[""]
+image:../media/e2800_mgmt_ports.png["E2800 Managementport"]
 
 E2800 Controller P1 Management-Port
  a| 
-image:../media/e5700_mgmt_ports.png[""]
+image:../media/e5700_mgmt_ports.png["E5700 Management-Port"]
 
 E5700 Controller P1 Management-Port
 
@@ -200,7 +199,7 @@ Verwenden Sie nach der Installation der Hardware die SANtricity Software zum Kon
 
 
  a| 
-image:../media/management_s_g2285tation_inst-hw-e2800-e5700_g2285.png[""]
+image:../media/management_s_g2285tation_inst-hw-e2800-e5700_g2285.png["Rufen Sie System Manager auf, um die Management-Ports zu konfigurieren"]
  a| 
 Verwenden Sie für den Zugriff auf System Manager dieselben IP-Adressen, die Sie zum Konfigurieren der Management-Ports verwendet haben.
 

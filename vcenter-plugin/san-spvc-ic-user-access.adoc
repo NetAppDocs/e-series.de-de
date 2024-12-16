@@ -11,7 +11,7 @@ summary: Konfigurieren Sie Zugriffsberechtigungen für Storage Plug-in für vCen
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

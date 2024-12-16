@@ -19,5 +19,5 @@ Standardmäßig führt ein ESXi Host automatisch alle fünf Minuten einen erneut
 . Erstellen Sie ein oder mehrere Volumes, und weisen Sie sie dem ESXi-Host zu.
 . Wenn Sie einen vCenter Server verwenden, fügen Sie den Host zum Server-Inventar hinzu.
 . Verwenden Sie den vSphere Client oder vSphere Web Client, um eine direkte Verbindung zum vCenter Server oder zum ESXi Host herzustellen.
-. Wenn Sie Anweisungen zur Durchführung einer erneuten Überprüfung des Storage auf einem ESXi Host erhalten möchten, suchen Sie nach dem https://kb.vmware.com/s/["VMware Knowledge Base"^] Zu diesem Thema einen Artikel.
+. Anweisungen zum erneuten Scannen des Speichers auf einem ESXi-Host finden Sie in dem https://support.broadcom.com/["VMware Knowledge Base"^] Artikel zu diesem Thema.
 

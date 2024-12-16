@@ -27,6 +27,9 @@ Verwenden Sie den folgenden Workflow:
 
 
 
+NOTE: SANtricity-Remote-Speicher-Volumes werden derzeit nicht auf E4000-Systemen unterstützt.
+
+
 
 == Weitere Informationen
 

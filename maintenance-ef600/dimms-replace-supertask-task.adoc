@@ -111,7 +111,7 @@ CAUTION: Um eine verminderte Leistung zu vermeiden, dürfen die Kabel nicht verd
 . Vergewissern Sie sich, dass die LED Cache Active auf der Rückseite des Controllers ausgeschaltet ist.
 . Drücken Sie die Griffe auf beiden Seiten des Controllers, und ziehen Sie sie nach hinten, bis sie sich aus dem Shelf lösen.
 +
-image::../media/remove_controller_5.png[Controller 5 ausbauen]
+image::../media/remove_controller_5.png[Drücken Sie die Griffe, um die Steuerung zu entfernen]
 
 . Schieben Sie den Controller-Behälter mit zwei Händen und den Griffen aus dem Regal. Wenn sich die Vorderseite des Controllers nicht im Gehäuse befindet, ziehen Sie sie mit zwei Händen vollständig heraus.
 +
@@ -119,7 +119,7 @@ image::../media/remove_controller_5.png[Controller 5 ausbauen]
 CAUTION: Verwenden Sie immer zwei Hände, um das Gewicht eines Reglerkanisters zu unterstützen.
 
 +
-image::../media/remove_controller_6.png[Controller 6 ausbauen]
+image::../media/remove_controller_6.png[Tragen Sie beim Entfernen des Controllers mit zwei Händen das Gewicht]
 
 . Setzen Sie den Steuerungsbehälter auf eine flache, statisch freie Oberfläche.
 
@@ -144,10 +144,10 @@ NOTE: Eine Kerbe an der Unterseite des DIMM hilft Ihnen beim Ausrichten des DIMM
 
 . Schieben Sie die beiden DIMM-Auswurflaschen auf beiden Seiten des DIMM langsam auseinander, um das DIMM aus dem Steckplatz zu werfen, und schieben Sie es dann aus dem Steckplatz heraus.
 +
-image::../media/dimm_2.png[dimm 2]
+image::../media/dimm_2.png[Drücken Sie auf die Auswurflasche im DIMM-Steckplatz]
 
 +
-image::../media/dimim_3.png[Dimim 3]
+image::../media/dimim_3.png[Entfernen Sie die DIMM]
 
 +
 
@@ -183,7 +183,7 @@ NOTE: Prüfen Sie das DIMM visuell, um sicherzustellen, dass es gleichmäßig au
 NOTE: DIMMs passen eng zusammen. Möglicherweise müssen Sie nacheinander vorsichtig auf eine Seite drücken und mit jeder einzelnen Lasche befestigen.
 
 +
-image::../media/dimm_5.png[dimm 5]
+image::../media/dimm_5.png[DIMMs in den Steckplatz einsetzen und mit Laschen sichern]
 
 
 
@@ -201,7 +201,7 @@ Setzen Sie nach dem Installieren der neuen DIMMs den Controller-Behälter wieder
 NOTE: Der Controller klickt hörbar, wenn er richtig in das Regal eingebaut ist.
 
 +
-image::../media/remove_controller_7.png[Controller 7 ausbauen]
+image::../media/remove_controller_7.png[Installieren Sie das DIMM-Modul in den Steckplatz am Controller]
 
 . Schließen Sie alle Kabel wieder an.
 

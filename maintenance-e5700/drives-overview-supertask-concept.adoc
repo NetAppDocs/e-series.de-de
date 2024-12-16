@@ -27,7 +27,7 @@ Die Abbildungen zeigen, wie die Laufwerke in jedem Shelf-Typ nummeriert werden (
 
 *Laufwerksnummerierung in einem E5724 Controller-Shelf oder DE224C Festplatten-Shelf*
 
-image::../media/28_dwg_e2824_de224c_drive_numbering_maint-e5700.gif[28 DWG e2824 de224c Laufwerksnummerierung maint e5700]
+image::../media/28_dwg_e2824_de224c_drive_numbering_maint-e5700.gif[DE224C Laufwerksnummerierung]
 
 
 NOTE: Ihr E5724 Storage Array kann ein oder mehrere veraltete SAS-2 Laufwerksfächern enthalten, einschließlich des DE5600 Einschüben für 24 Laufwerke oder des DE6600 Tabletts für 60 Laufwerke Anweisungen zum Austauschen eines Laufwerks in einem dieser Laufwerksfächer finden Sie unter link:https://mysupport.netapp.com/ecm/ecm_download_file/ECMLP2577975["Austauschen eines Laufwerks in E2660, E2760, E5460, E5560 oder E5660 Laufwerksfächern"] Und link:https://library.netapp.com/ecmdocs/ECMLP2577971/html/GUID-E9157E41-F4BF-4237-9454-F1C9145247F0.html["Ersetzen eines Laufwerks in E2600, E2700, E5400, E5500 und E5600 12-Laufwerk- oder 24-Laufwerksschächten"].
@@ -38,11 +38,11 @@ NOTE: Ihr E5724 Storage Array kann ein oder mehrere veraltete SAS-2 Laufwerksfä
 
 Sowohl das E5760 Controller-Shelf als auch das DE460C Festplatten-Shelf bestehen aus fünf Laufwerkschubladen, die jeweils 12 Laufwerksschächte enthalten. Die Laufwerksschublade 1 befindet sich oben, und die Laufwerksschublade 5 befindet sich unten.
 
-image::../media/28_dwg_e2860_de460c_front_no_callouts_maint-e5700.gif[28 dwg e2860 de460c Vorderseite keine Callouts maint e5700]
+image::../media/28_dwg_e2860_de460c_front_no_callouts_maint-e5700.gif[DE460C Laufwerksschublade]
 
 Bei einem E5760 Controller-Shelf-Einschub und einem DE460C Festplatten-Shelf-Einschub werden Laufwerke in jeder Laufwerkschublade im Shelf von 0 bis 11 nummeriert.
 
-image::../media/dwg_trafford_drawer_with_hdds_callouts_maint-e5700.gif[Wg trafford Schublade mit hdds Callouts maint e5700]
+image::../media/dwg_trafford_drawer_with_hdds_callouts_maint-e5700.gif[Laufwerknummerierung]
 
 
 NOTE: Ihr E5760 Storage Array verfügt möglicherweise über ein oder mehrere veraltete SAS-2 Laufwerksfächer, einschließlich DE1600 Fach mit 12 Laufwerken, einem DE5600 Tablett für 24 Laufwerke oder dem DE6600 Tablett für 60 Laufwerke Anweisungen zum Austauschen eines Laufwerks in einem dieser Laufwerksfächer finden Sie unter link:https://mysupport.netapp.com/ecm/ecm_download_file/ECMLP2577975["Austauschen eines Laufwerks in E2660, E2760, E5460, E5560 oder E5660 Laufwerksfächern"] Und link:https://library.netapp.com/ecmdocs/ECMLP2577971/html/GUID-E9157E41-F4BF-4237-9454-F1C9145247F0.html["Ersetzen eines Laufwerks in E2600, E2700, E5400, E5500 und E5600 12-Laufwerk- oder 24-Laufwerksschächten"].
@@ -53,11 +53,11 @@ NOTE: Ihr E5760 Storage Array verfügt möglicherweise über ein oder mehrere ve
 
 Sie können eine Laufwerksschublade in einem E5760 Controller-Shelf und einem DE460C Laufwerk-Shelf ersetzen. Jeder der Shelfs mit 60 Laufwerken verfügt über fünf Laufwerkfächer.
 
-image::../media/28_dwg_e2860_de460c_front_no_callouts_maint-e5700.gif[28 dwg e2860 de460c Vorderseite keine Callouts maint e5700]
+image::../media/28_dwg_e2860_de460c_front_no_callouts_maint-e5700.gif[DE460C Laufwerksschublade]
 
 Jeder der fünf Schubladen kann bis zu 12 Laufwerke aufnehmen.
 
-image::../media/92_dwg_de6600_drawer_with_hdds_no_callouts_maint-e5700.gif[92-D6600-Schublade mit hdds ohne Callouts, E5700]
+image::../media/92_dwg_de6600_drawer_with_hdds_no_callouts_maint-e5700.gif[Laufwerksschublade]
 
 
 
@@ -88,7 +88,7 @@ Wenn ein Handgelenkband nicht verfügbar ist, berühren Sie eine unlackierte Obe
 ** Niemals einen Antrieb in ein Regal zwingen, und mit sanftem, festem Druck den Riegel vollständig einrücken.
 ** Platzieren Sie Laufwerke auf gepolsterten Flächen und stapeln Sie niemals Laufwerke auf einander.
 ** Laufwerke nicht gegen andere Oberflächen abstoßen.
-** Lösen Sie vor dem Entfernen eines Laufwerks aus einem Shelf den Griff und warten Sie 30 Sekunden, bis sich das Laufwerk heruntergefahren hat.
+** Lösen Sie vor dem Entfernen eines Laufwerks aus einem Shelf den Griff und warten Sie 60 Sekunden, bis sich das Laufwerk heruntergefahren hat.
 ** Verwenden Sie beim Transport von Laufwerken stets die genehmigte Verpackung.
 
 

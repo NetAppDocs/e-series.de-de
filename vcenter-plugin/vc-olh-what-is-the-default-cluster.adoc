@@ -10,7 +10,7 @@ summary: Das Standard-Cluster ist eine systemdefinierte Einheit, die jedem nicht
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

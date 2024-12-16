@@ -22,7 +22,7 @@ NOTE: In einem E5700 Controller können nur die optischen Basis-Ports konvertier
 
 Die folgende Abbildung zeigt die E5700 mit ihren SFP+ (optischen) Baseboard-Host-Ports *(1)* und den optionalen zwei IB-HIC-Ports *(2)*.
 
-image::../media/e5700_with_2_port_100g_edr_infiniband_hic_w_callouts.gif[e5700 mit 2-Port 100 g edr infiniband HIC W Callouts]
+image::../media/e5700_with_2_port_100g_edr_infiniband_hic_w_callouts.gif[Host- und HIC-Ports am E5700 Controller]
 
 
 

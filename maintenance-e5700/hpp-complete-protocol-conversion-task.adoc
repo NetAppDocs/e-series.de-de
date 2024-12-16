@@ -50,7 +50,7 @@ Das Dialogfeld Hosteinstellungen wird angezeigt.
 
 .. Klicken Sie auf die Registerkarte *Host Ports*.
 +
-image::../media/sam1130_ss_host_settings_dialog_ports_tab_maint-e5700.gif[Registerkarte Ports des Dialogfelds „sam1130 ss Host-Einstellungen“ maint e5700]
+image::../media/sam1130_ss_host_settings_dialog_ports_tab_maint-e5700.gif[Dialogfeld „Host-Einstellungen“]
 
 .. Klicken Sie auf *Hinzufügen*, und verwenden Sie das Dialogfeld *Host-Port hinzufügen*, um dem Host eine neue Host-Port-ID zuzuordnen.
 +
@@ -96,7 +96,7 @@ Das Dialogfeld Hosteinstellungen wird angezeigt.
 
 .. Klicken Sie auf die Registerkarte *Host Ports*.
 +
-image::../media/sam1130_ss_host_settings_dialog_ports_tab_maint-e5700.gif[Registerkarte Ports des Dialogfelds „sam1130 ss Host-Einstellungen“ maint e5700]
+image::../media/sam1130_ss_host_settings_dialog_ports_tab_maint-e5700.gif[Dialogfeld „Host-Einstellungen“]
 
 .. Klicken Sie auf *Hinzufügen*, und verwenden Sie das Dialogfeld *Host-Port hinzufügen*, um dem Host eine neue Host-Port-ID zuzuordnen.
 +

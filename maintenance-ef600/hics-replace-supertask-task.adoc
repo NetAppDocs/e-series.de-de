@@ -102,7 +102,7 @@ Je nachdem, auf welche Art von HIC Sie ein Upgrade durchführen, können Sie die
 . Vergewissern Sie sich, dass die LED Cache Active auf der Rückseite des Controllers ausgeschaltet ist.
 . Drücken Sie die Griffe auf beiden Seiten des Controllers, und ziehen Sie sie nach hinten, bis sie sich aus dem Shelf lösen.
 +
-image::../media/remove_controller_5.png[Controller 5 ausbauen]
+image::../media/remove_controller_5.png[Drücken Sie die Griffe, um die Steuerung zu entfernen]
 
 . Schieben Sie den Controller-Behälter mit zwei Händen und den Griffen aus dem Regal. Wenn sich die Vorderseite des Controllers nicht im Gehäuse befindet, ziehen Sie sie mit zwei Händen vollständig heraus.
 +
@@ -110,7 +110,7 @@ image::../media/remove_controller_5.png[Controller 5 ausbauen]
 CAUTION: Verwenden Sie immer zwei Hände, um das Gewicht eines Reglerkanisters zu unterstützen.
 
 +
-image::../media/remove_controller_6.png[Controller 6 ausbauen]
+image::../media/remove_controller_6.png[Tragen Sie beim Entfernen des Controllers mit zwei Händen das Gewicht]
 
 . Setzen Sie den Steuerungsbehälter auf eine flache, statisch freie Oberfläche.
 
@@ -129,7 +129,7 @@ Wenn diese grüne LED leuchtet, wird der Controller weiterhin mit Strom versorgt
 
 . Entfernen Sie mit einem Kreuzschlitzschraubendreher die beiden Schrauben, mit denen die HIC-Frontplatte am Controller-Behälter befestigt ist.
 +
-image::../media/hic_2.png[hic 2]
+image::../media/hic_2.png[Entfernen Sie die HIC-Frontplatte]
 
 +
 
@@ -138,7 +138,7 @@ NOTE: Das obige Bild ist ein Beispiel; das Aussehen Ihrer HIC kann sich untersch
 . Entfernen Sie die HIC-Frontplatte.
 . Lösen Sie mit den Fingern oder einem Kreuzschlitzschraubendreher die einzelne Rändelschraube, mit der die HIC an der Controllerkarte befestigt ist.
 +
-image::../media/hic_3.png[hic 3]
+image::../media/hic_3.png[Lösen Sie die HIC-Rändelschrauben]
 
 +
 
@@ -154,7 +154,7 @@ NOTE: Das obige Bild ist ein Beispiel; das Aussehen Ihrer HIC kann sich untersch
 CAUTION: Achten Sie darauf, dass die Komponenten auf der Unterseite der HIC oder auf der Oberseite der Controller-Karte nicht verkratzen oder stoßen.
 
 +
-image::../media/hic_4.png[hic 4]
+image::../media/hic_4.png[Entfernen Sie die HIC von der Controllerkarte]
 
 +
 
@@ -184,7 +184,7 @@ Achten Sie darauf, dass die Komponenten auf der Unterseite der HIC oder auf der 
 CAUTION: **Möglicher Geräteschaden** -- sehr vorsichtig sein, den goldenen Ribbon-Anschluss für die Controller-LEDs zwischen der HIC und der Daumenschraube nicht zu quetschen.
 
 +
-image::../media/hic_7.png[hic 7]
+image::../media/hic_7.png[Installieren Sie das HIC]
 
 +
 
@@ -211,7 +211,7 @@ Setzen Sie nach dem Austausch der HIC den Controller-Behälter wieder in das Con
 NOTE: Der Controller klickt hörbar, wenn er richtig in das Regal eingebaut ist.
 
 +
-image::../media/remove_controller_7.png[Controller 7 ausbauen]
+image::../media/remove_controller_7.png[Controller in Shelf einbauen]
 
 . Installieren Sie die SFPs in die neue HIC, und schließen Sie alle Kabel wieder an.
 +

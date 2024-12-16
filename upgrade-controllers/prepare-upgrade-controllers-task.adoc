@@ -1,7 +1,7 @@
 ---
 permalink: upgrade-controllers/prepare-upgrade-controllers-task.html 
 sidebar: sidebar 
-keywords: E-Series, eseries, E2800, E5700, EF300, EF600, upgrade controller, upgrading controller, upgrade controller requirements, upgrade controller key management, prepare upgrade controller, upgrade controller preparation, preparing controller upgrade 
+keywords: E-Series, eseries, E4000, E2800, E5700, EF300, EF600, upgrade controller, upgrading controller, upgrade controller requirements, upgrade controller key management, prepare upgrade controller, upgrade controller preparation, preparing controller upgrade 
 summary: Bereiten Sie sich auf das Upgrade von Controllern vor, indem Sie den Sicherheitsschlüssel des Laufwerks speichern, die Support-Daten erfassen und den Controller offline schalten. 
 ---
 = Controller-Upgrades vorbereiten
@@ -94,10 +94,9 @@ Sie benötigen diese Seriennummer, um die Schritte in auszuführen link:complete
 
 . Sie können Support-Daten über Ihr Storage Array über die grafische Benutzeroberfläche oder die CLI erfassen:
 +
-** Verwenden Sie entweder System Manager oder das Array Management-Fenster in Storage Manager, um ein Support Bundle Ihres Speicher-Arrays zu sammeln und zu speichern.
+** Verwenden Sie System Manager, um ein Supportpaket Ihres Speicherarrays zu sammeln und zu speichern.
 +
 *** Wählen Sie in System Manager im Menü:Support[Support Center > Registerkarte Diagnose]. Wählen Sie dann *Support-Daten sammeln* und klicken Sie auf *Collect*.
-*** Wählen Sie in der Symbolleiste Array Management Window die Option MENU:Überwachen[Systemzustand > Support-Daten manuell erfassen]. Geben Sie dann einen Namen ein und geben Sie einen Speicherort auf Ihrem System an, auf dem Sie das Supportpaket speichern möchten.
 +
 Die Datei wird im Ordner Downloads für Ihren Browser mit dem Namen gespeichert `support-data.7z`.
 
@@ -133,7 +132,7 @@ CAUTION: *Möglicher Datenverlust* -- Wenn Sie diesen Vorgang während der I/O-V
 +
 Das Dialogfeld Cache-Einstellung ändern wird angezeigt. In diesem Dialogfeld werden alle Volumes im Speicher-Array angezeigt.
 
-.. Wählen Sie die Registerkarte *Basic* und ändern Sie die Einstellungen für Lese-Cache und Schreib-Caching.
+.. Wählen Sie die Registerkarte *Basic* und deaktivieren Sie die Einstellungen für Lese-Cache und Schreib-Cache.
 .. Klicken Sie Auf *Speichern*.
 .. Warten Sie fünf Minuten, bis alle Daten im Cache-Speicher auf die Festplatte gespeichert werden.
 

@@ -37,7 +37,7 @@ CAUTION: Um eine verminderte Leistung zu vermeiden, dürfen die Kabel nicht verd
 Die folgende Abbildung zeigt ein Beispiel für ein E2812 Controller-Shelf, ein E2824 Controller-Shelf oder ein EF280 Flash-Array:
 
 +
-image::../media/28_dwg_e2824_remove_controller_canister_maint-e2800.gif[28 dwg e2824 Controller-Behälter meine2800 ausbauen]
+image::../media/28_dwg_e2824_remove_controller_canister_maint-e2800.gif[24 Wiedereinsetzen des Antriebscontrollers]
 
 +
 *(1)* _Controller-Behälter_
@@ -49,7 +49,7 @@ image::../media/28_dwg_e2824_remove_controller_canister_maint-e2800.gif[28 dwg e
 Die folgende Abbildung zeigt ein Beispiel für ein E2860 Controller-Shelf:
 
 +
-image::../media/28_dwg_e2860_add_controller_canister_maint-e2800.gif[28 DWG e2860, Zusatz-Controller-Behälter, Version 2800]
+image::../media/28_dwg_e2860_add_controller_canister_maint-e2800.gif[60 Wiedereinsetzen des Antriebscontrollers]
 
 +
 *(1)* _Controller-Behälter_

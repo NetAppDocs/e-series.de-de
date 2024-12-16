@@ -10,7 +10,7 @@ summary: 'Bei der Konservierung wird die Kapazität (Anzahl der Laufwerke) verwe
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

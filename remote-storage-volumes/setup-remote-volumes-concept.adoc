@@ -44,7 +44,7 @@ Im Rahmen des Setups müssen Speicher-Arrays und E/A-Host mit der iSCSI-kompatib
 
 In den folgenden Diagrammen wird veranschaulicht, wie die Systeme so verkabelt werden, dass sie Remote-Speicher-Volume-Vorgänge über eine iSCSI-Verbindung durchführen.
 
-image:../media/remote_target_volumes_iscsi_use_case_1.png[""] image:../media/remote_target_volumes_iscsi_use_case_2.png[""]
+image:../media/remote_target_volumes_iscsi_use_case_1.png["ISCSI-Speicherverkabelung"] image:../media/remote_target_volumes_iscsi_use_case_2.png["ISCSI-Speicherverkabelung"]
 
 
 

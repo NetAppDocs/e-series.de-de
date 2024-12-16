@@ -10,7 +10,7 @@ summary: Das Feld Host-Betriebssystemtyp enthält das Betriebssystem des Hosts. 
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

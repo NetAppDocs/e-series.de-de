@@ -125,7 +125,7 @@ NOTE: Der Zeitstempeleintrag ist überflüssig.
 
 === Konfigurieren der AutoSupport-Bereitstellungsmethode
 
-Sie können die AutoSupport-Funktion so konfigurieren, dass HTTPS-, HTTP- oder SMTP-Bereitstellungsmethoden verwendet werden. HTTPS ist die Standardausgabemethode.
+Sie können die AutoSupport-Funktion so konfigurieren, dass HTTPS- oder SMTP-Bereitstellungsmethoden verwendet werden. HTTPS ist die Standardausgabemethode.
 
 . Auf die Datei ASUPConfig.xml im Arbeitsverzeichnis zugreifen.
 . In der Zeichenfolge, `<delivery type="n">`Geben Sie 1, 2 oder 3 ein, wie in der Tabelle beschrieben:
@@ -146,15 +146,6 @@ Sie können die AutoSupport-Funktion so konfigurieren, dass HTTPS-, HTTP- oder S
 
  a| 
 2
- a| 
-*HTTP*
-
-<Liefertyp=„2“>
-
-
-
- a| 
-3
  a| 
 *SMTP* -- um den AutoSupport-Bereitstellungstyp ordnungsgemäß an SMTP zu konfigurieren, müssen Sie die SMTP-Mail-Server-Adresse zusammen mit den E-Mails des Absenders und Empfängers angeben, ähnlich wie im folgenden Beispiel:
 

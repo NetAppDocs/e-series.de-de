@@ -2,9 +2,6 @@
 :allow-uri-read: 
 
 
-[role="lead"]
-Sie können ein neues Festplatten-Shelf hinzufügen, während die Stromversorgung weiterhin auf die anderen Komponenten des Storage-Systems angewendet wird. Sie können Storage-Systemkapazität konfigurieren, neu konfigurieren, hinzufügen oder verschieben, ohne den Benutzerzugriff auf Daten zu unterbrechen.
-
 .Bevor Sie beginnen
 Aufgrund der Komplexität dieses Verfahrens wird Folgendes empfohlen:
 
@@ -13,7 +10,7 @@ Aufgrund der Komplexität dieses Verfahrens wird Folgendes empfohlen:
 
 
 .Über diese Aufgabe
-Dieses Verfahren gilt für das Hinzufügen eines DE212C, DE224C oder DE460C Festplatten-Shelf zu einem E2800, E2800B, EF280, E5700, E5700B, EF570, EF300 oder EF600 Controller-Shelf
+Dieses Verfahren gilt für das Hot-Hinzufügen eines Laufwerk-Shelfs DE212C, DE224C oder DE460C zu einem E2800, E2800B, EF280, E5700, E5700B, EF570, EF300, EF600 oder E4000 Controller-Shelf.
 
 Dieses Verfahren gilt für die IOM12- und IOM12B-Laufwerkseinschübe.
 
@@ -59,21 +56,25 @@ Auf der Seite Ereignisprotokoll werden die Ereignisdaten angezeigt.
 
 NOTE: Wenn in den letzten zwei bis drei Wochen nicht gelöste kritische Ereignisse aufgetreten sind, beenden Sie das Verfahren und wenden Sie sich an den technischen Support. Setzen Sie das Verfahren nur fort, wenn das Problem behoben ist.
 
-. Wählen Sie *Hardware*.
-. Wählen Sie das Symbol * IOMs (ESMs)* aus.
+. Wenn EAMs an Ihre Hardware angeschlossen sind, führen Sie die folgenden Schritte aus. Andernfalls fahren Sie mit fort <<step2_install_drive_shelf,Schritt 2: Installieren Sie das Laufwerk-Shelf und schalten Sie die Stromversorgung ein.>>
 +
-image::../media/sam1130_ss_hardware_iom_icon.gif[Hardware-eam-Symbol Sam1130 ss]
+.. Wählen Sie *Hardware*.
+.. Wählen Sie das Symbol * IOMs (ESMs)* aus.
++
+image::../media/sam1130_ss_hardware_iom_icon.gif[EAMs (ESMs)-Symbol]
 
 +
 Das Dialogfeld Einstellungen für Shelf-Komponenten wird angezeigt, wobei die Registerkarte *IOMs (ESMs)* ausgewählt ist.
 
-. Stellen Sie sicher, dass der für jedes IOM/ESM angezeigte Status _optimal_ lautet.
-. Klicken Sie auf *Weitere Einstellungen anzeigen*.
-. Vergewissern Sie sich, dass die folgenden Bedingungen vorliegen:
+.. Stellen Sie sicher, dass der für jedes IOM/ESM angezeigte Status _optimal_ lautet.
+.. Klicken Sie auf *Weitere Einstellungen anzeigen*.
+.. Vergewissern Sie sich, dass die folgenden Bedingungen vorliegen:
 +
-** Die Anzahl der erkannten ESMs/IOMs entspricht der Anzahl der im System installierten ESMs/IOMs und denen für jedes Laufwerk-Shelf.
-** Beide ESMs/IOMs zeigen, dass Kommunikation in Ordnung ist.
-** Die Datenrate beträgt 12 GB/s für DE212C, DE224C und DE460C Laufwerk-Shelfs oder 6 GB/s für andere Laufwerksfächer.
+*** Die Anzahl der erkannten ESMs/IOMs entspricht der Anzahl der im System installierten ESMs/IOMs und denen für jedes Laufwerk-Shelf.
+*** Beide ESMs/IOMs zeigen, dass Kommunikation in Ordnung ist.
+*** Die Datenrate beträgt 12 GB/s für DE212C, DE224C und DE460C Laufwerk-Shelfs oder 6 GB/s für andere Laufwerksfächer.
+
+
 
 
 
@@ -101,18 +102,12 @@ NOTE: In der Installationsanleitung Ihres Modells finden Sie das vollständige V
 
 == Schritt 3: Verkabeln Sie Ihr System
 
-Wählen Sie eine der folgenden Optionen:
-
-* <<Option 1: Verbinden Sie das Laufwerk-Shelf für die E2800 oder E5700>>
-* <<Option 2: Verbinden Sie das Laufwerk-Shelf für das EF300 oder EF600 System>>
-
-
 Wenn Sie ein älteres Controller-Shelf mit einem DE212C, DE224C oder DE460 verkabeln, finden Sie unter https://mysupport.netapp.com/ecm/ecm_download_file/ECMLP2859057["Hinzufügen von IOM-Laufwerk-Shelfs zu einem vorhandenen E27XX-, E56XX- oder EF560-Controller-Shelf"^].
 
-
-
-=== Option 1: Verbinden Sie das Laufwerk-Shelf für die E2800 oder E5700
-
+[role="tabbed-block"]
+====
+.Schließen Sie das Festplatten-Shelf für die E2800 oder die E5700 an
+--
 Sie verbinden das Festplatten-Shelf mit Controller A, bestätigen den IOM-Status und verbinden dann das Festplatten-Shelf mit Controller B
 
 .Schritte
@@ -121,10 +116,10 @@ Sie verbinden das Festplatten-Shelf mit Controller A, bestätigen den IOM-Status
 Die folgende Abbildung zeigt eine Beispielverbindung zwischen einem zusätzlichen Festplatten-Shelf und Controller A Informationen zum Auffinden der Ports auf Ihrem Modell finden Sie im https://hwu.netapp.com/Controller/Index?platformTypeId=2357027["Hardware Universe"^].
 
 +
-image::../media/hot_e5700_0.png[Heiße e5700 0]
+image::../media/hot_e5700_0.png[Laufwerk-Shelf mit dem Controller verbinden]
 
 +
-image::../media/hot_e5700_1.png[Heißen e5700 1]
+image::../media/hot_e5700_1.png[Laufwerk-Shelf mit dem Controller verbinden]
 
 . Klicken Sie im SANtricity System Manager auf *Hardware*.
 +
@@ -134,7 +129,7 @@ NOTE: An diesem Punkt in der Prozedur verfügen Sie nur über einen aktiven Pfad
 . Blättern Sie nach unten, um alle Laufwerk-Shelfs im neuen Storage-System zu sehen. Wenn das neue Festplatten-Shelf nicht angezeigt wird, lösen Sie das Verbindungsproblem.
 . Wählen Sie das Symbol *ESMs/IOMs* für das neue Festplatten-Shelf aus.
 +
-image::../media/sam1130_ss_hardware_iom_icon.gif[Hardware-eam-Symbol Sam1130 ss]
+image::../media/sam1130_ss_hardware_iom_icon.gif[Symbol für ESMs/EAMs]
 
 +
 Das Dialogfeld *Shelf-Komponenteneinstellungen* wird angezeigt.
@@ -153,7 +148,7 @@ Das Dialogfeld *Shelf-Komponenteneinstellungen* wird angezeigt.
 Die folgende Abbildung zeigt eine Beispielverbindung zwischen einem zusätzlichen Laufwerk-Shelf und Controller B Informationen zum Auffinden der Ports auf Ihrem Modell finden Sie im https://hwu.netapp.com/Controller/Index?platformTypeId=2357027["Hardware Universe"^].
 
 +
-image::../media/hot_e5700_2.png[Heiße e5700 2]
+image::../media/hot_e5700_2.png[Beispiel für eine Verbindung mit einem Festplatten-Shelf]
 
 . Wenn er nicht bereits ausgewählt ist, wählen Sie im Dialogfeld *Shelf-Komponenteneinstellungen* die Registerkarte *ESMs/IOMs* aus, und wählen Sie dann *Weitere Optionen anzeigen*. Stellen Sie sicher, dass die Kartenkommunikation *JA* lautet.
 +
@@ -162,10 +157,9 @@ NOTE: Der Status „optimal“ zeigt an, dass der Verlust eines Redundanzfehlers
 
 
 
-
-
-=== Option 2: Verbinden Sie das Laufwerk-Shelf für das EF300 oder EF600 System
-
+--
+.Schließen Sie das Festplatten-Shelf für EF300 oder EF600 an
+--
 Sie verbinden das Festplatten-Shelf mit Controller A, bestätigen den IOM-Status und verbinden dann das Festplatten-Shelf mit Controller B
 
 .Bevor Sie beginnen
@@ -175,17 +169,17 @@ Sie verbinden das Festplatten-Shelf mit Controller A, bestätigen den IOM-Status
 .Schritte
 . Trennen Sie beide A-seitlichen Controller-Kabel von den IOM12-Ports eins und zwei vom vorherigen letzten Shelf im Stack, und verbinden Sie sie dann mit den neuen IOM12-Shelf-Ports eins und zwei.
 +
-image::../media/de224c_sides.png[D2224c-Seiten]
+image::../media/de224c_sides.png[Trennen Sie die Kabel von Controller A und verbinden Sie sie mit dem neuen Shelf]
 
 . Die Kabel an Die A-seitigen IOM12-Anschlüsse drei und vier vom neuen Shelf an die bisherigen IOM12-Anschlüsse 1 und 2 anschließen.
 +
 Die folgende Abbildung zeigt eine Beispielverbindung für Eine Seite zwischen einem zusätzlichen Festplatten-Shelf und dem vorherigen letzten Shelf. Informationen zum Auffinden der Ports auf Ihrem Modell finden Sie im https://hwu.netapp.com/Controller/Index?platformTypeId=2357027["Hardware Universe"^].
 
 +
-image::../media/hot_ef_0.png[Als heiße ef 0]
+image::../media/hot_ef_0.png[Beispiel für die Verkabelung von Festplatten-Shelfs]
 
 +
-image::../media/hot_ef_1.png[EF-Series mit heiß 1]
+image::../media/hot_ef_1.png[Beispiel für die Verkabelung von Festplatten-Shelfs]
 
 . Klicken Sie im SANtricity System Manager auf *Hardware*.
 +
@@ -195,7 +189,7 @@ NOTE: An diesem Punkt in der Prozedur verfügen Sie nur über einen aktiven Pfad
 . Blättern Sie nach unten, um alle Laufwerk-Shelfs im neuen Storage-System zu sehen. Wenn das neue Festplatten-Shelf nicht angezeigt wird, lösen Sie das Verbindungsproblem.
 . Wählen Sie das Symbol *ESMs/IOMs* für das neue Festplatten-Shelf aus.
 +
-image::../media/sam1130_ss_hardware_iom_icon.gif[Hardware-eam-Symbol Sam1130 ss]
+image::../media/sam1130_ss_hardware_iom_icon.gif[Symbol für ESMs/EAMs]
 
 +
 Das Dialogfeld *Shelf-Komponenteneinstellungen* wird angezeigt.
@@ -214,7 +208,7 @@ Das Dialogfeld *Shelf-Komponenteneinstellungen* wird angezeigt.
 Die folgende Abbildung zeigt eine Beispielverbindung für die B-Seite zwischen einem zusätzlichen Festplatten-Shelf und dem vorherigen letzten Shelf. Informationen zum Auffinden der Ports auf Ihrem Modell finden Sie im https://hwu.netapp.com/Controller/Index?platformTypeId=2357027["Hardware Universe"^].
 
 +
-image::../media/hot_ef_2.png[EF-Series 2 als heiße Lösung]
+image::../media/hot_ef_2.png[Beispiel für die Verkabelung von Festplatten-Shelfs]
 
 . Wenn er nicht bereits ausgewählt ist, wählen Sie im Dialogfeld *Shelf-Komponenteneinstellungen* die Registerkarte *ESMs/IOMs* aus, und wählen Sie dann *Weitere Optionen anzeigen*. Stellen Sie sicher, dass die Kartenkommunikation *JA* lautet.
 +
@@ -223,6 +217,51 @@ NOTE: Der Status „optimal“ zeigt an, dass der Verlust eines Redundanzfehlers
 
 
 
+--
+.Schließen Sie das Festplatten-Shelf für E4000 an
+--
+Sie verbinden das Festplatten-Shelf mit Controller A, bestätigen den IOM-Status und verbinden dann das Festplatten-Shelf mit Controller B
+
+.Schritte
+. Verbinden Sie das Festplatten-Shelf mit Controller A.
++
+image::../media/hot_e4000_cabling_1.png[Festplatten-Shelf-Verkabelung]
+
+. Klicken Sie im SANtricity System Manager auf *Hardware*.
++
+
+NOTE: An diesem Punkt in der Prozedur verfügen Sie nur über einen aktiven Pfad zum Controller-Shelf.
+
+. Blättern Sie nach unten, um alle Laufwerk-Shelfs im neuen Storage-System zu sehen. Wenn das neue Festplatten-Shelf nicht angezeigt wird, lösen Sie das Verbindungsproblem.
+. Wählen Sie das Symbol *ESMs/IOMs* für das neue Festplatten-Shelf aus.
++
+image::../media/sam1130_ss_hardware_iom_icon.gif[EAM-Hardwaresymbol]
+
++
+Das Dialogfeld *Shelf-Komponenteneinstellungen* wird angezeigt.
+
+. Wählen Sie im Dialogfeld *Shelf-Komponenteneinstellungen* die Registerkarte *ESMs/IOMs* aus.
+. Wählen Sie * Weitere Optionen anzeigen* aus, und überprüfen Sie Folgendes:
++
+** IOM/ESM A wird aufgelistet.
+** Die aktuelle Datenrate beträgt 12 Gbit/s für ein SAS-3 Festplatten-Shelf.
+** Kartenkommunikation ist in Ordnung.
+
+
+. Trennen Sie alle Erweiterungskabel von Controller B.
+. Verbinden Sie das Festplatten-Shelf mit Controller B.
++
+image::../media/hot_e4000_cabling_2.png[Festplatten-Shelf-Verkabelung]
+
+. Wenn er nicht bereits ausgewählt ist, wählen Sie im Dialogfeld *Shelf-Komponenteneinstellungen* die Registerkarte *ESMs/IOMs* aus, und wählen Sie dann *Weitere Optionen anzeigen*. Stellen Sie sicher, dass die Kartenkommunikation *JA* lautet.
++
+
+NOTE: Der Status „optimal“ zeigt an, dass der Verlust eines Redundanzfehlers im Zusammenhang mit dem neuen Festplatten-Shelf behoben wurde und das Storage-System stabilisiert ist.
+
+
+
+--
+====
 
 
 == Schritt 4: Schließen Sie Hot Add ab

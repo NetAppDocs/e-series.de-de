@@ -10,7 +10,7 @@ summary: 'Bei EF300- und EF600-Systemen kann ein Volume so eingestellt werden, d
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

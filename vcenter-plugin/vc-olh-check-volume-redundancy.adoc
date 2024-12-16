@@ -11,7 +11,7 @@ summary: Sie können die Redundanz auf einem Volume in einem Pool oder einer Vol
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

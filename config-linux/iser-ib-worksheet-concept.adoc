@@ -67,7 +67,7 @@ k. A.
 
 Empfohlene Konfigurationen bestehen aus zwei Host-Ports (Initiator) und vier Ziel-Ports.
 
-image::../media/port_identifiers_ib_iser.gif[Port-IDs iser]
+image::../media/port_identifiers_ib_iser.gif[ISER über IB-Netzwerkkonfiguration]
 
 
 

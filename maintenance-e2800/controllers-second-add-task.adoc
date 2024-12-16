@@ -39,7 +39,7 @@ Vergewissern Sie sich, dass der neue Controller dieselbe Teilenummer wie der akt
 . Packen Sie den neuen Controller-Behälter aus, und stellen Sie ihn auf eine flache, statische Oberfläche.
 . Suchen Sie die Etiketten für MAC-Adresse und FRU-Teilenummer auf der Rückseite des Controller-Behälters.
 +
-image::../media/28_dwg_e2800_labels_maint-e2800.gif[28-m-e2800-Etiketten maint e2800]
+image::../media/28_dwg_e2800_labels_maint-e2800.gif[MAC-Adresse und FRU-Teilenummer auf dem E2800 Controller]
 
 +
 *(1)* _MAC-Adresse:_ die MAC-Adresse für Verwaltungsport 1 („`P1`"). Wenn Sie die IP-Adresse des Original-Controllers über DHCP erhalten haben, benötigen Sie diese Adresse, um eine Verbindung zum neuen Controller herzustellen.
@@ -50,7 +50,7 @@ image::../media/28_dwg_e2800_labels_maint-e2800.gif[28-m-e2800-Etiketten maint e
 . Suchen Sie im SANtricity-System-Manager die Ersatzteil-Nummer für den installierten Controller-Behälter.
 +
 .. Wählen Sie *Hardware*.
-.. Suchen Sie das Controller-Shelf, das mit dem Controller-Symbol gekennzeichnet ist image:../media/sam1130_ss_hardware_controller_icon_maint-e2800.gif[""].
+.. Suchen Sie das Controller-Shelf, das mit dem Controller-Symbol gekennzeichnet istimage:../media/sam1130_ss_hardware_controller_icon_maint-e2800.gif["Controller-Symbol"].
 .. Klicken Sie auf das Controller-Symbol.
 .. Wählen Sie den Controller aus und klicken Sie auf *Weiter*.
 .. Notieren Sie sich auf der Registerkarte *Base* die *Ersatz-Teilenummer* für den Controller.
@@ -88,7 +88,7 @@ Achten Sie darauf, dass die Komponenten auf der Unterseite der HIC oder auf der 
 CAUTION: *Mögliche Geräteschäden* -- vorsichtig sein, den goldenen Ribbon-Anschluss für die Controller-LEDs zwischen der HIC und den Daumenschrauben nicht zu quetschen.
 
 +
-image::../media/28_dwg_e2800_hic_thumbscrews_maint-e2800.gif[28 dwg e2800 HIC Rändelschrauben maint e2800]
+image::../media/28_dwg_e2800_hic_thumbscrews_maint-e2800.gif[Installieren Sie HIC auf dem Controller]
 
 +
 *(1)* _Host Interface Card_
@@ -102,7 +102,7 @@ Verwenden Sie keinen Schraubendreher, oder ziehen Sie die Schrauben möglicherwe
 
 . Befestigen Sie die neue HIC-Frontplatte mit einem #1 Kreuzschlitzschraubendreher mit den vier zuvor entfernten Schrauben am Controller-Behälter.
 +
-image::../media/28_dwg_e2800_hic_faceplace_screws_maint-e2800.gif[28-wg-e2800-Gewindestifte für die Frontpartie maint e2800]
+image::../media/28_dwg_e2800_hic_faceplace_screws_maint-e2800.gif[Blende einbauen]
 
 . Bringen Sie die Abdeckung wieder am Controller-Behälter an, indem Sie die Abdeckung von hinten nach vorne schieben, bis die Taste einrastet.
 . Stellen Sie den Controller-Behälter beiseite, bis Sie bereit sind, ihn zu installieren.
@@ -286,7 +286,7 @@ Installieren Sie einen zweiten Controller-Behälter, um eine Simplex-Konfigurati
 . Drehen Sie den Controller-Behälter so um, dass die abnehmbare Abdeckung nach unten zeigt.
 . Schieben Sie den Steuerkanister bei geöffnetem Nockengriff vollständig in das Reglerregal.
 +
-image::../media/28_dwg_e2824_add_controller_canister.gif[28 dwg e2824 Zusatz-Controller-Behälter]
+image::../media/28_dwg_e2824_add_controller_canister.gif[Den zweiten Controller-Aktivkohlebehälter einbauen]
 
 +
 *(1)* _Controller-Behälter_
@@ -312,7 +312,7 @@ Wenn die Kommunikation mit der anderen Steuerung wiederhergestellt wird:
 +
 ** Die 7-Segment-Anzeige zeigt die sich wiederholende Sequenz *OS*, *OL*, *_blank_* an, um anzuzeigen, dass der Controller offline ist.
 ** Die gelbe Warn-LED leuchtet weiterhin.
-** Je nach Host-Schnittstelle leuchtet, blinkt oder leuchtet die LED für Host-Link möglicherweise nicht.image:../media/28_dwg_attn_led_7s_display_maint-e2800.gif[""]
+** Je nach Host-Schnittstelle leuchten die Host-Link-LEDs möglicherweise auf, blinken oder leuchten nicht. image:../media/28_dwg_attn_led_7s_display_maint-e2800.gif["E2800 Controller-LEDs"]
 +
 *(1)* _Warn-LED (gelb)_
 
@@ -380,7 +380,7 @@ Die Schaltfläche „Eigentümerschaft ändern“ ist aktiviert.
 
 .. Wählen Sie für jedes Volume, das Sie neu verteilen möchten, in der Liste *bevorzugter Eigentümer* *Controller B* die Option *Controller B* aus.
 +
-image::../media/sam1130_ss_change_volume_ownership.gif[Sam1130 ss Änderungsmenge Eigentum]
+image::../media/sam1130_ss_change_volume_ownership.gif[System Manager-Bildschirm für die Volume-Eigentumsrechte ändern]
 
 .. Klicken Sie Auf *Eigentümerschaft Ändern*.
 +

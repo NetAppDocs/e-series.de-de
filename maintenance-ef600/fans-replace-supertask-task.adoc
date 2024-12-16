@@ -90,7 +90,7 @@ CAUTION: Um eine verminderte Leistung zu vermeiden, dürfen die Kabel nicht verd
 . Vergewissern Sie sich, dass die LED Cache Active auf der Rückseite des Controllers ausgeschaltet ist.
 . Drücken Sie die Griffe auf beiden Seiten des Controllers, und ziehen Sie sie nach hinten, bis sie sich aus dem Shelf lösen.
 +
-image::../media/remove_controller_5.png[Controller 5 ausbauen]
+image::../media/remove_controller_5.png[Drücken Sie die Griffe, um die Steuerung zu entfernen]
 
 . Schieben Sie den Controller-Behälter mit zwei Händen und den Griffen aus dem Regal. Wenn sich die Vorderseite des Controllers nicht im Gehäuse befindet, ziehen Sie sie mit zwei Händen vollständig heraus.
 +
@@ -98,7 +98,7 @@ image::../media/remove_controller_5.png[Controller 5 ausbauen]
 CAUTION: Verwenden Sie immer zwei Hände, um das Gewicht eines Reglerkanisters zu unterstützen.
 
 +
-image::../media/remove_controller_6.png[Controller 6 ausbauen]
+image::../media/remove_controller_6.png[Tragen Sie beim Entfernen des Controllers mit zwei Händen das Gewicht]
 
 . Setzen Sie den Steuerungsbehälter auf eine flache, statisch freie Oberfläche.
 
@@ -117,7 +117,7 @@ Wenn diese grüne LED leuchtet, wird der Controller weiterhin mit Strom versorgt
 
 . Heben Sie den defekten Lüfter vorsichtig vom Controller an.
 +
-image::../media/fan_2.png[Lüfter 2]
+image::../media/fan_2.png[Entfernen Sie den Lüfter]
 
 
 
@@ -130,10 +130,10 @@ Installieren Sie einen neuen Lüfter, um den fehlerhaften zu ersetzen.
 .Schritte
 . Schieben Sie den Ersatzlüfter ganz in das Regal.
 +
-image::../media/fan_3.png[Lüfter 3]
+image::../media/fan_3.png[Lüfter in Controller einbauen]
 
 +
-image::../media/fan_3_a.png[Lüfter 3 A]
+image::../media/fan_3_a.png[Lüfter in Controller einbauen]
 
 
 
@@ -151,7 +151,7 @@ Setzen Sie nach dem Einbau des neuen Lüfters den Controller-Behälter wieder in
 NOTE: Der Controller klickt hörbar, wenn er richtig in das Regal eingebaut ist.
 
 +
-image::../media/remove_controller_7.png[Controller 7 ausbauen]
+image::../media/remove_controller_7.png[Controller in Shelf einbauen]
 
 
 

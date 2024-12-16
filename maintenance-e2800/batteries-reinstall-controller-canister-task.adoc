@@ -18,7 +18,7 @@ Setzen Sie den Controller-Behälter nach dem Einbau der neuen Batterie wieder in
 . Drehen Sie den Controller-Behälter so um, dass die abnehmbare Abdeckung nach unten zeigt.
 . Schieben Sie den Steuerkanister bei geöffnetem Nockengriff vollständig in das Reglerregal.
 +
-image::../media/28_dwg_e2824_remove_controller_canister_maint-e2800.gif[28 dwg e2824 Controller-Behälter meine2800 ausbauen]
+image::../media/28_dwg_e2824_remove_controller_canister_maint-e2800.gif[24 Wiedereinsetzen des Antriebscontrollers]
 
 +
 *(1)* _Controller-Behälter_
@@ -27,7 +27,7 @@ image::../media/28_dwg_e2824_remove_controller_canister_maint-e2800.gif[28 dwg e
 *(2)* _Cam Griff_
 
 +
-image::../media/28_dwg_e2860_add_controller_canister_maint-e2800.gif[28 DWG e2860, Zusatz-Controller-Behälter, Version 2800]
+image::../media/28_dwg_e2860_add_controller_canister_maint-e2800.gif[60 Wiedereinsetzen des Antriebscontrollers]
 
 +
 *(1)* _Controller-Behälter_

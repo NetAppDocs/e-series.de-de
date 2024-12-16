@@ -20,7 +20,7 @@ Nachdem Sie den Controller-Beh채lter aus dem Controller-Regal entfernt haben, k�
 Wenn diese gr체ne LED leuchtet, wird der Controller weiterhin mit Strom versorgt. Sie m체ssen warten, bis diese LED erlischt, bevor Sie Komponenten entfernen.
 
 +
-image::../media/28_dwg_e2800_internal_cache_active_led_maint-e2800.gif[28 DWG e2800 interner Cache, aktiver LED maint e2800]
+image::../media/28_dwg_e2800_internal_cache_active_led_maint-e2800.gif[LED f체r aktiven internen Cache]
 
 +
 *(1)* _Interner Cache Aktiv_
@@ -31,7 +31,7 @@ image::../media/28_dwg_e2800_internal_cache_active_led_maint-e2800.gif[28 DWG e2
 . Suchen Sie den blauen Freigabehebel f체r die Batterie.
 . Entriegeln Sie den Akku, indem Sie den Freigabehebel nach unten und vom Controller-Beh채lter wegdr체cken.
 +
-image::../media/28_dwg_e2800_remove_battery_maint-e2800.gif[28 m e2800 Batterie-Nr. e2800 entfernen]
+image::../media/28_dwg_e2800_remove_battery_maint-e2800.gif[Entfernen Sie die Batterie aus der Steuerung]
 
 +
 *(1)* _Entriegelung der Batterie_

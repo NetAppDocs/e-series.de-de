@@ -10,7 +10,7 @@ summary: Um Speicherressourcen im Storage Plug-in für vCenter anzuzeigen und zu
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

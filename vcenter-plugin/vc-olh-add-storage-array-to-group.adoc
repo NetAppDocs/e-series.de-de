@@ -11,7 +11,7 @@ summary: Fügen Sie einer vom Benutzer erstellten Gruppe ein oder mehrere Speich
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

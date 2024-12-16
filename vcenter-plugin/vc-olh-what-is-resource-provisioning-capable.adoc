@@ -10,7 +10,7 @@ summary: Resource Provisioning ist eine Funktion, die in den EF300- und EF600-Sp
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

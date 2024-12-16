@@ -29,7 +29,7 @@ Die Nivellierfüße befinden sich in der Nähe jeder unteren Ecke des Schranks.
 Die folgende Abbildung bietet eine Nahaufnahme des Stabilitätsfußes und der Nivellierfüße.
 
 +
-image::../media/83000_08.gif[83000 08]
+image::../media/83000_08.gif[Nivellierung und Stabilität der Füße]
 
 +
 |===
@@ -83,7 +83,7 @@ Nachdem Sie die Fächer wieder eingesetzt haben, installieren Sie die Kabelspule
 .Schritt
 . Installieren Sie die Kabelspulen und die Kabelbinder an beiden Seiten der vertikalen Stromverteilerausgänge.
 +
-image::../media/83003_01_dwg_3040_cable_spools.gif[83003 01 DWG 3040 Kabelspulen]
+image::../media/83003_01_dwg_3040_cable_spools.gif[Kabelbinder und Kabelspule]
 
 +
 |===
@@ -123,7 +123,6 @@ Die Abdeckung der leeren Räume ist erforderlich, damit der Luftstrom durch den 
 
 == Schritt 5: Installieren Sie zusätzliche Befestigungsschienen
 
-[role="lead"]
 Wenn Sie Controller-Laufwerksfächer oder Laufwerksfächer installieren, die separat geliefert wurden (nicht bereits im Schrank installiert), müssen Sie möglicherweise weitere Befestigungsschienen im Schrank installieren.
 
 .Schritte
@@ -140,7 +139,7 @@ Wenn Sie Controller-Laufwerksfächer oder Laufwerksfächer installieren, die sep
 
 . Befestigen Sie die Befestigungsschienen mit den Messmarkierungen an den vertikalen Stützhaltern vorn rechts und vorn links an der gleichen Position auf beiden Seiten des Schranks.
 +
-image::../media/92042_06.gif[92042 06]
+image::../media/92042_06.gif[Schienenmontage]
 
 +
 |===
@@ -248,7 +247,7 @@ NOTE: Sie müssen jede PDU an eine unabhängige Stromquelle außerhalb des Schal
 
 . Alle 12 Leistungsschalter in die Stellung ein (nach oben) schalten.
 +
-image::../media/83002_05_dwg_3040_cabinet_pdus.gif[83002 05 DWG 3040-Gehäuse-pdus]
+image::../media/83002_05_dwg_3040_cabinet_pdus.gif[Leistungsschalter und Steckdosen]
 
 +
 |===
@@ -277,9 +276,9 @@ Einsteigerboxen
 . Schalten Sie die Stromversorgung für alle Laufwerksfächer im Schrank ein.
 +
 
-NOTE: Warten Sie nach dem Einschalten der Laufwerksfächer 30 Sekunden, bevor Sie die Stromversorgung der Controller-Laufwerksfächer einschalten.
+NOTE: Warten Sie nach dem Einschalten der Laufwerksfächer 60 Sekunden, bevor Sie die Stromversorgung der Controller-Laufwerksfächer einschalten.
 
-. Warten Sie 30 Sekunden, nachdem Sie die Laufwerksfächer eingeschaltet haben, und schalten Sie dann alle Controller-Laufwerksfächer im Schrank ein.
+. Warten Sie 60 Sekunden, nachdem Sie die Laufwerksfächer eingeschaltet haben, und schalten Sie dann alle Controller-Laufwerksfächer im Schrank ein.
 
 
 .Ergebnis

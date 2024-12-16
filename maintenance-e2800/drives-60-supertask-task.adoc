@@ -96,7 +96,7 @@ serviceAllowedIndicator=forceOnWarning;"
 ** Wenn der Befehl erfolgreich ist, müssen Sie die Host-I/O-Aktivität nicht beenden. Alle Laufwerke in der Schublade befinden sich in Pools oder Volume-Gruppen mit Schubladenschutz. Gehen Sie zu <<Schritt 2: Die Kabelketten entfernen>>.
 +
 
-CAUTION: *Möglicher Schaden an Laufwerken* -- Warten Sie 30 Sekunden, nachdem der Befehl abgeschlossen ist, bevor Sie die Laufwerkschublade öffnen. Durch das Warten von 30 Sekunden können die Laufwerke heruntergefahren werden, um mögliche Hardware-Schäden zu vermeiden.
+CAUTION: *Möglicher Schaden an Laufwerken* -- Warten Sie 60 Sekunden, nachdem der Befehl abgeschlossen ist, bevor Sie die Laufwerkschublade öffnen. Durch das Warten von 60 Sekunden können die Laufwerke heruntergefahren werden, um mögliche Hardware-Schäden zu vermeiden.
 
 ** Wenn eine Warnung angezeigt wird, dass dieser Befehl nicht ausgeführt werden konnte, müssen Sie die Host-I/O-Aktivität beenden, bevor Sie das Fach entfernen. Die Warnung wird angezeigt, weil sich ein oder mehrere Laufwerke in der betroffenen Schublade in Pools oder Volume-Gruppen ohne Schubladenverlustschutz befinden. Um einen Datenverlust zu vermeiden, müssen Sie die nächsten Schritte ausführen, um die Host I/O-Aktivität zu beenden und das Laufwerk-Shelf und das Controller-Shelf auszuschalten.
 
@@ -122,7 +122,7 @@ CAUTION: *Möglicher Datenverlust* -- Wenn Sie diesen Vorgang während der I/O-V
 Die grüne LED „Cache aktiv“ auf der Rückseite jedes Controllers leuchtet, wenn die Daten im Cache auf die Laufwerke geschrieben werden müssen. Sie müssen warten, bis diese LED ausgeschaltet ist.
 
 +
-image::../media/28_dwg_2800_controller_attn_led_maint-e2800.gif[28 dwg 2800 Controller attn LED maint e2800]
+image::../media/28_dwg_2800_controller_attn_led_maint-e2800.gif[Cache-aktiv-LED am E2800 Controller]
 
 +
 *(1)* _Cache Active LED_
@@ -177,7 +177,7 @@ CAUTION: *Möglicher Hardwareschaden* -- Wenn das Laufwerksfach eingeschaltet is
 Die Abbildung zeigt den Griff für den Lüfterbehälter erweitert und von der orangefarbenen Lasche links gelöst.
 
 +
-image::../media/28_dwg_e2860_de460c_fan_canister_handle_with_callout_maint-e2800.gif[28 DWG e2860 de460c Lüfterbehälter Griff mit Callout e2800]
+image::../media/28_dwg_e2860_de460c_fan_canister_handle_with_callout_maint-e2800.gif[Griff des Lüfterbehälters]
 
 +
 *(1)* _Behälter-Griff_
@@ -198,7 +198,7 @@ CAUTION: *Mögliche Geräteschäden aufgrund von Überhitzung* -- Wenn das Fach 
 Die obere Kabelkette ist an der Antriebsschublade 1 befestigt. Die untere Kabelkette ist an der Antriebsschublade 5 befestigt. Die Rufbereitungen für Laufwerksschublade 1 werden zur Verfügung gestellt.
 
 +
-image::../media/trafford_cable_rail_1_maint-e2800.gif[trafford Seilbahn 1 MAINT e2800]
+image::../media/trafford_cable_rail_1_maint-e2800.gif[Kabelkette und Anschlüsse für die Laufwerksschublade]
 
 +
 *(1)* _Kabelkette_
@@ -216,7 +216,7 @@ image::../media/trafford_cable_rail_1_maint-e2800.gif[trafford Seilbahn 1 MAINT 
 +
 .. Suchen Sie mit einer Taschenlampe den orangefarbenen Ring am Ende der Kabelkette, der mit der vertikalen Führungsschiene im Gehäuse verbunden ist.
 +
-image::../media/trafford_cable_rail_3_maint-e2800.gif[trafford Seilbahn 3 maint e2800]
+image::../media/trafford_cable_rail_3_maint-e2800.gif[Orangefarbener Ring für vertikale Schiene und Kabelkette für die Antriebsschublade]
 
 +
 *(1)* _Orange Ring auf vertikaler Führungsschiene_
@@ -235,7 +235,7 @@ image::../media/trafford_cable_rail_3_maint-e2800.gif[trafford Seilbahn 3 maint 
 Die Abbildung zeigt den horizontalen Stecker auf der rechten Seite und die Kabelkette ist getrennt und teilweise auf der linken Seite herausgezogen.
 
 +
-image::../media/trafford_cable_rail_2_maint-e2800.gif[trafford Seilbahn 2 maint e2800]
+image::../media/trafford_cable_rail_2_maint-e2800.gif[Orangefarbener Ring für horizontale Schiene und Kabelkette für die Antriebsschublade]
 
 +
 *(1)* _Orange Ring auf horizontaler Führungsschiene_
@@ -312,7 +312,7 @@ CAUTION: *Möglicher Verlust des Datenzugriffs* -- Magnetfelder können alle Dat
 . Ziehen Sie die Antriebsschublade vorsichtig mit den ausgestreckte Hebeln heraus, bis sie einrastet. Entfernen Sie das Laufwerkschublade nicht vollständig aus dem Festplatten-Shelf.
 . Wenn Volumes bereits erstellt und zugewiesen wurden, verwenden Sie einen permanenten Marker, um die genaue Position der einzelnen Laufwerke zu notieren. Wenn Sie z. B. die folgende Zeichnung als Referenz verwenden, schreiben Sie die entsprechende Steckplatznummer oben auf jedem Laufwerk.
 +
-image::../media/dwg_trafford_drawer_with_hdds_callouts_maint-e2800.gif[Wg trafford Schublade mit hdds-Calouts maint e2800]
+image::../media/dwg_trafford_drawer_with_hdds_callouts_maint-e2800.gif[Laufwerkssteckplatznummern]
 
 +
 
@@ -324,7 +324,7 @@ CAUTION: **Möglicher Verlust des Datenzugriffs** -- Vergewissern Sie sich vor d
 .. Heben Sie den Antriebsgriff senkrecht an.
 .. Heben Sie das Laufwerk mit dem Griff aus der Laufwerkschublade.
 +
-image::../media/92_dwg_de6600_install_or_remove_drive_maint-e2800.gif[92-m-D6600 Einbau oder Ausbau der Antriebsstrang e2800]
+image::../media/92_dwg_de6600_install_or_remove_drive_maint-e2800.gif[Heben Sie den Antrieb mit dem Nockengriff aus der Schublade]
 
 .. Setzen Sie das Laufwerk auf eine flache, statische Oberfläche und nicht an magnetischen Geräten.
 
@@ -333,7 +333,7 @@ image::../media/92_dwg_de6600_install_or_remove_drive_maint-e2800.gif[92-m-D6600
 +
 .. Stellen Sie den Kunststofffreigabehebel auf beiden Seiten der Antriebsschublade ein.
 +
-image::../media/92_pht_de6600_drive_drawer_release_lever_maint-e2800.gif[92 pht-D6600-Laufwerkshebel, Auslösehebel, Version 2800]
+image::../media/92_pht_de6600_drive_drawer_release_lever_maint-e2800.gif[Entriegelungshebel, um die Schublade zu entfernen]
 
 +
 *(1)* _Freigabehebel der Laufwerkschublade_
@@ -357,7 +357,7 @@ Installieren Sie ein neues Laufwerksfach, um das fehlerhafte zu ersetzen.
 Die austarre Trommel-Baugruppe ist eine Sicherheitsfunktion, die verhindert, dass mehr als eine Laufwerkschublade gleichzeitig geöffnet werden kann.
 
 +
-image::../media/92_pht_de6600_lock_out_tumbler_detail_maint-e2800.gif[92 pht-D6600 verriegelt die Trommler-Details ein2800]
+image::../media/92_pht_de6600_lock_out_tumbler_detail_maint-e2800.gif[Ausverriegelter Becher und Schubladenführung]
 
 +
 *(1)* _Absperrtumbler_
@@ -419,7 +419,7 @@ CAUTION: *Gefahr einer Gerätestörung* -- Verschieben Sie den Stecker in die F�
 Die Abbildung zeigt die horizontalen und vertikalen Führungsschienen für die zweite Antriebsschublade im Gehäuse.
 
 +
-image::../media/2860_dwg_both_guide_rails_maint-e2800.gif[2860 Personen beide Führungsschienen maint e2800]
+image::../media/2860_dwg_both_guide_rails_maint-e2800.gif[Horizontale und vertikale Führungsschienen]
 
 +
 *(1)* _horizontale Führungsschiene_
@@ -491,7 +491,7 @@ CAUTION: *Möglicher Verlust des Datenzugriffs* -- Sie müssen jedes Laufwerk in
 .. Ziehen Sie die Antriebsschublade vorsichtig mit den ausgestreckte Hebeln heraus, bis sie einrastet. Entfernen Sie das Laufwerkschublade nicht vollständig aus dem Festplatten-Shelf.
 .. Ermitteln Sie anhand der Hinweise, die Sie beim Entfernen der Laufwerke gemacht haben, welches Laufwerk in jedem Steckplatz installiert werden soll.
 +
-image::../media/dwg_trafford_drawer_with_hdds_callouts_maint-e2800.gif[Wg trafford Schublade mit hdds-Calouts maint e2800]
+image::../media/dwg_trafford_drawer_with_hdds_callouts_maint-e2800.gif[Laufwerkssteckplatznummern]
 
 .. Heben Sie den Griff am Antrieb senkrecht an.
 .. Richten Sie die beiden angehobenen Tasten auf beiden Seiten des Laufwerks an den Kerben auf der Schublade aus.
@@ -499,14 +499,14 @@ image::../media/dwg_trafford_drawer_with_hdds_callouts_maint-e2800.gif[Wg traffo
 Die Abbildung zeigt die rechte Ansicht eines Laufwerks und zeigt die Position der angehobenen Tasten an.
 
 +
-image::../media/28_dwg_e2860_de460c_drive_cru_maint-e2800.gif[28 dwg e2860 de460c drive Cru maint e2800]
+image::../media/28_dwg_e2860_de460c_drive_cru_maint-e2800.gif[Die angehobene Taste am Laufwerkträger muss mit dem Laufwerkkanal in der Laufwerksschublade übereinstimmen]
 
 +
 *(1)* _Hochgetaster auf der rechten Seite des Laufwerks_
 
 .. Senken Sie das Laufwerk gerade nach unten, stellen Sie sicher, dass das Laufwerk vollständig nach unten in den Schacht gedrückt wird, und drehen Sie dann den Laufwerkgriff nach unten, bis das Laufwerk einrastet.
 +
-image::../media/92_dwg_de6600_install_or_remove_drive_maint-e2800.gif[92-m-D6600 Einbau oder Ausbau der Antriebsstrang e2800]
+image::../media/92_dwg_de6600_install_or_remove_drive_maint-e2800.gif[Verwenden Sie den Griff, um das Laufwerk auf die Schublade zu senken]
 
 .. Wiederholen Sie diese Schritte, um alle Laufwerke zu installieren.
 

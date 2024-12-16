@@ -129,3 +129,16 @@ Der Endpunkt */certificates/reload* gibt in der Regel eine erfolgreiche HTTP 202
 Durch die Verwendung einer Inkognito- oder privaten Browsersitzung können Sie eine Verbindung zum Server öffnen, ohne gespeicherte Daten aus vorherigen Browsersitzungen zu verwenden.
 
 
+
+
+
+== Anmeldesperre
+
+Sie können die Anzahl der Anmeldeversuche für die integrierten und Proxy-Webservices nur über die REST-API konfigurieren. Je nach Ihren Einstellungen wird die Sperrfunktion aktiviert, sobald die Anzahl der Anmeldeversuche für die Webservices überschritten wird.
+
+.Schritte
+. Melden Sie sich bei an link:install-login-task.html["Interaktive API-Dokumentation"].
+. Gehen Sie zum Dropdown-Menü oben rechts und wählen Sie dann *v2*.
+. Klicken Sie auf den Endpunkt *GET:/settings/Lockout*, um die Sperreinstellungen abzurufen.
+. Klicken Sie auf den Endpunkt *POST:/settings/Lockout*, und klicken Sie dann auf *Try it out*, um die Sperreinstellungen zu konfigurieren.
+

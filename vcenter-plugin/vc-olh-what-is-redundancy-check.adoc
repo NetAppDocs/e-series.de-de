@@ -10,7 +10,7 @@ summary: Durch eine Redundanzprüfung wird ermittelt, ob die Daten auf einem Vol
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

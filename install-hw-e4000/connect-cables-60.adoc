@@ -1,0 +1,80 @@
+---
+permalink: install-hw-e4000/connect-cables-60.html 
+sidebar: sidebar 
+keywords: E4000 connect power cables 
+summary: Schließen Sie die Stromkabel an, und schalten Sie die Laufwerk-Shelfs ein. 
+---
+= Verkabeln der Einschübe (E4060)
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Erfahren Sie, wie Sie die Stromkabel anschließen und die Laufwerk-Shelfs einschalten.
+
+.Bevor Sie beginnen
+* Installieren Sie Ihre Hardware.
+* Treffen Sie antistatische Vorsichtsmaßnahmen.
+
+
+Dieses Verfahren gilt für die IOM12- und IOM12B-Laufwerkseinschübe.
+
+.Schritte
+. Die Shelfs verkabeln.
++
+Verkabeln Sie das System entsprechend Ihrer Konfiguration. Wenn Sie mehr Verkabelungsoptionen benötigen als die in diesem Abschnitt gezeigten Beispiele, lesen Sie link:../install-hw-cabling/index.html["Verkabelung"].
+
++
+Für die in diesem Abschnitt gezeigten Beispiele benötigen Sie die folgenden Kabel:
+
++
+|===
+
+
+ a| 
+image:../media/sas_cable.png["SAS-Kabel"]
+ a| 
+*SAS-Kabel*
+
+|===
++
+.Beispiel A: Ein E4060 Controller-Shelf mit zwei DE460C Festplatten-Shelfs in einer Standard-SAS-Konfiguration.
+.. Verkabeln Sie Controller A mit IOM A des ersten Festplatten-Shelf.
+.. Verkabeln Sie IOM A des ersten Festplatten-Shelf mit IOM A des zweiten Festplatten-Shelf.
+.. Verkabeln Sie IOM B des ersten Festplatten-Shelf mit IOM B des zweiten Festplatten-Shelf.
+.. Verkabeln Sie Controller B mit IOM B des zweiten Festplatten-Shelf.
+
+
++
+.Beispiel B: Ein E4060 Controller-Shelf mit einem DE460C Festplatten-Shelf in einer Standard-SAS-Konfiguration.
+.. Verkabeln Sie Controller A mit IOM A
+.. Verkabeln Sie Controller B mit IOM B.
+
+
+. Schalten Sie die Festplatten-Shelfs ein.
++
+Sie benötigen die folgenden Kabel:
+
++
+|===
+
+
+ a| 
+image:../media/power_cable_inst-hw-e2800-e5700.png["Netzkabel"]
+ a| 
+*Stromkabel*
+
+|===
++
+
+CAUTION: Stellen Sie sicher, dass die Netzschalter des Laufwerks-Shelfs aus sind.
+
++
+.. Verbinden Sie die beiden Stromkabel für jedes Shelf mit verschiedenen Stromverteilungs-Einheiten (PDUs) im Schrank oder Rack.
+.. Wenn Sie Laufwerk-Shelfs haben, schalten Sie zuerst ihre beiden Netzschalter ein. Warten Sie zwei Minuten, bevor Sie das Controller-Shelf einschalten.
+.. Schalten Sie die beiden Netzschalter am Controller-Shelf ein.
+.. Überprüfen Sie die LEDs an jedem Controller.
+
+
+

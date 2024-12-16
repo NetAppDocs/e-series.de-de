@@ -31,6 +31,6 @@ Viele der Racks sind mit Laufwerksfächern bestückt. Diese Situation führt zu 
 . Entfernen Sie die obersten Geräte in Ihrem Schrank, um sicherzustellen, dass der Schrank sicher an seinen endgültigen Standort transportiert wird. Dies ist besonders wichtig, wenn eine Rampe eine Steigung oder einen Rückgang über 10 Grad hat.
 . Bewegen Sie den Schrank mit der richtigen Methode in der folgenden Abbildung an seinen festen Standort. Achten Sie darauf, dass Sie auf die Vorderseite des Gehäuses und nicht auf die Rückseite drücken.
 +
-image::../media/83004_01.gif[83004 01]
+image::../media/83004_01.gif[Warnung Schaltschrank verschieben]
 
 

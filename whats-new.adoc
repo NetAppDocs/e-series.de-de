@@ -1,19 +1,62 @@
 ---
 sidebar: sidebar 
 permalink: whats-new.html 
-keywords: whats new, new features, SANtricity 11.73 
+keywords: whats new, new features, SANtricity 11.90 
 summary: Neue Funktionen im SANtricity OS. 
 ---
 = Was ist neu in SANtricity OS
 :allow-uri-read: 
 :experimental: 
 :icons: font
-:imagesdir: ../media/
+:imagesdir: ./media/
 
 
 [role="lead"]
-In der folgenden Tabelle werden die neuen Funktionen von SANtricity OS 11.8 für integriertes Management der EF300, EF600, E2800/EF280 und E5700/EF570 Controller beschrieben.
+In der folgenden Tabelle werden die neuen Funktionen der neuesten SANtricity OS Versionen für das integrierte Management der Controller E4000, EF300, EF600, E2800/EF280 und E5700/EF570 beschrieben.
 
+
+
+== Neue Funktionen in Version 11.90
+
+[cols="35h,~"]
+|===
+| Neues Feature | Beschreibung 
+
+
+ a| 
+Neues Storage-Systemmodell: E4000
+ a| 
+Mit dieser Version wird das kostengünstige Speichersystem E4000 eingeführt. Die E4000 unterstützt 12 und 60 Laufwerke und eine einzelne Host Interface Card (HIC) pro Controller. In der ersten Version werden Host-Schnittstellenkarten wie iSCSI und Fibre Channel unterstützt. E4000 Storage-Systeme und andere E-Series Storage-Systeme können in Unified Manager angezeigt und gemanagt werden.
+
+
+
+ a| 
+Höhere Kapazität für Dynamic Disk Pools
+ a| 
+Die Kapazität von Dynamic Disk Pools (DDP) wurde auf 12 PB erhöht, wenn die Kapazität jedes einzelnen Laufwerks innerhalb des Pools größer als 23 TB ist. Wenn die einzelne Laufwerkskapazität weniger als 23 TB beträgt, beträgt die DDP-Kapazität 6 PB.
+
+
+
+ a| 
+Die Standardeinstellungen für den Medienscan wurden erhöht
+ a| 
+Die Standard-Scanrate für Medien wurde auf 120 Tage erhöht.
+
+
+
+ a| 
+Der private Schlüssel wird jetzt für die externe Schlüsselverwaltung akzeptiert
+ a| 
+CSR-Datei (Certificate Signing Request), die extern über private und öffentliche Schlüsselpaare generiert wird, kann jetzt über System Manager importiert werden.
+
+
+
+ a| 
+Die Anmeldesperre ist jetzt für Web Services verfügbar
+ a| 
+Konfigurierbar nur über die REST-API, eine neue Einstellung für die Anmeldesperre ist jetzt für eingebettete und Proxy-Web-Services verfügbar.
+
+|===
 
 
 == Neue Funktionen in Version 11.80.1R1

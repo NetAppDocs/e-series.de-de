@@ -1,7 +1,7 @@
 ---
 permalink: getting-started/getup-run-concept.html 
 sidebar: sidebar 
-keywords: E-Series, eseries, E2800, E5700, EF300, EF600, 
+keywords: E-Series, eseries, E2800, E5700, EF300, EF600, E4000 
 summary: Um mit E-Series Systemen betriebsbereit zu machen, installieren Sie Hardwarekomponenten, konfigurieren Host-Systeme und konfigurieren Storage. 
 ---
 = Schnellstart für E-Series
@@ -21,6 +21,7 @@ So installieren Sie die E-Series Hardware: Rufen Sie die Installations- und Setu
 * link:../install-hw-ef600/index.html["EF600 oder EF300 Serie mit Shelf mit 24 Laufwerken"^]
 * https://library.netapp.com/ecm/ecm_download_file/ECMLP2842063["E2800/EF280 oder E5700/EF570 Serie mit Shelfs für 12 oder 24 Laufwerke"^]
 * https://library.netapp.com/ecm/ecm_download_file/ECMLP2842061["E2800 oder E5700 Series mit Shelf für 60 Laufwerke"^]
+* link:../install-hw-e4000/index.html["E4000 Serie mit Shelf für 12 oder 60 Laufwerke"^]
 
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["Zwei"] Schrank einrichten

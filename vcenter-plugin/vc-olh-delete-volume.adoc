@@ -11,7 +11,7 @@ summary: Löschen Sie ein oder mehrere Volumes, um die freie Kapazität eines Po
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

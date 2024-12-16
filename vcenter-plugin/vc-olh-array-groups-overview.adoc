@@ -10,7 +10,7 @@ summary: Managen Sie Ihre physische und virtualisierte Infrastruktur durch Grupp
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

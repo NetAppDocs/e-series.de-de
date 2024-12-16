@@ -1,7 +1,7 @@
 ---
 permalink: getting-started/learn-hardware-concept.html 
 sidebar: sidebar 
-keywords: E-Series, eseries, E2800, E5700, EF300, EF600, hardware, all flash array, E-Series protocols, E-Series rack 
+keywords: E-Series, eseries, E4000, E2800, E5700, EF300, EF600, hardware, all flash array, E-Series protocols, E-Series rack 
 summary: E-Series Storage-Arrays sind in verschiedenen Konfigurationen und Modellen erhältlich. 
 ---
 = E-Series Hardware im Überblick
@@ -20,6 +20,7 @@ E-Series Arrays sind in den folgenden Modellen verfügbar:
 * E2800 Serie – Hybrid der Einstiegsklasse
 * EF280 Serie – All-Flash der Einstiegsklasse
 * EF300 Serie – All-Flash der Einstiegsklasse, All NVMe
+* E4000 Serie – Hybrid der Einstiegsklasse
 * E5700 Series – Midrange Hybrid
 * EF570 Serie – Midrange All Flash
 * EF600 Serie: Midrange-All-Flash- und All-NVMe-Storage
@@ -28,34 +29,28 @@ E-Series Arrays sind in den folgenden Modellen verfügbar:
 
 NOTE: Bei SANtricity OS 11.80GA und höher sind alle USB-Ports auf den E2800, EF280, E5700, EF570, EF600 und EF300-Arrays.
 
-
-
-== E2800 – Modelle
-
-[cols="35h,~"]
-|===
-| Komponente | Spezifikationen 
-
-
- a| 
-Rack-Größen:
- a| 
+[role="tabbed-block"]
+====
+.E2800 – Modelle
+--
+Rack-Größen::
++
+--
 * 2 HE/12 (2 Rack-Einheiten; 12 Laufwerke)
 * 2 HE/24 (2 Rack-Einheiten; 24 Laufwerke)
 +
-image::../media/e2800_2u_front.gif[e2800 2 he vorne]
+image::../media/e2800_2u_front.gif[E2800 2U]
 
 * 4 HE/60 (4 Rack-Einheiten; 60 Laufwerke)
 +
-image::../media/e2860_front.gif[Vorderseite e2860]
+image::../media/e2860_front.gif[„E2800 4 HE“]
 
 
 
-
-
- a| 
-Laufwerke:
- a| 
+--
+Laufwerke::
++
+--
 Unterstützt die folgenden Laufwerkstypen:
 
 * 3.5-Zoll-NL-SAS (bis zu 180)
@@ -63,11 +58,10 @@ Unterstützt die folgenden Laufwerkstypen:
 * 2.5-Zoll-SAS-HDD (bis zu 180)
 
 
-
-
- a| 
-Schnittstellen:
- a| 
+--
+Schnittstellen::
++
+--
 Verfügbar mit folgenden Schnittstellen:
 
 * 12 GB SAS
@@ -75,33 +69,29 @@ Verfügbar mit folgenden Schnittstellen:
 * 16 GB oder 32 GB Fibre Channel
 
 
-|===
+--
 
 
-== EF280 Modelle
+--
+.EF280 Modelle
+--
+Rack-Größen::
++
+--
+2 HE/24 (2 Rack-Einheiten; 24 Laufwerke)
 
-[cols="35h,~"]
-|===
-| Komponente | Spezifikationen 
+image:../media/ef570_front.gif["EF280 2U"]
 
-
- a| 
-Rack-Größen:
- a| 
-2 HE/24 (2 Rack-Einheiten; 24 Laufwerke)image:../media/ef570_front.gif[""]
-
-
-
- a| 
-Laufwerke:
- a| 
+--
+Laufwerke::
++
+--
 Unterstützt bis zu 96 SSD-2.5-Zoll-Laufwerke
 
-
-
- a| 
-Schnittstellen:
- a| 
+--
+Schnittstellen::
++
+--
 Verfügbar mit folgenden Schnittstellen:
 
 * 12 GB SAS
@@ -109,26 +99,23 @@ Verfügbar mit folgenden Schnittstellen:
 * 16 GB oder 32 GB Fibre Channel
 
 
-|===
+--
 
 
-== EF300-Modelle
+--
+.EF300-Modelle
+--
+Rack-Größen::
++
+--
+2 HE/24 (2 Rack-Einheiten; 24 Laufwerke)
 
-[cols="35h,~"]
-|===
-| Komponente | Spezifikationen 
+image:../media/ef570_front.gif["EF300 2U"]
 
-
- a| 
-Rack-Größen:
- a| 
-2 HE/24 (2 Rack-Einheiten; 24 Laufwerke)image:../media/ef570_front.gif[""]
-
-
-
- a| 
-Laufwerke und HICs:
- a| 
+--
+Laufwerke und HICs::
++
+--
 Unterstützt folgende Laufwerke mit einer einzelnen Host Interface Card (HIC) pro Controller:
 
 * NVMe-SSD-Laufwerke: Bis zu 24 NVMe-SSD-Laufwerke im Controller-Shelf
@@ -139,11 +126,10 @@ Unterstützt folgende Laufwerke mit einer einzelnen Host Interface Card (HIC) pr
 
 NOTE: Für SANtricity OS 11.80GA und höher unterstützt der EF300 Erweiterungs-Shelf-Konfigurationen ohne Laufwerke im Basisfach Stellen Sie bei Verwendung dieser Konfiguration sicher, dass die Laufwerke im Erweiterungs-Shelf bestückt und ordnungsgemäß mit dem Basissfach verbunden sind, bevor Sie das System einschalten.
 
-
-
- a| 
-Schnittstellen:
- a| 
+--
+Schnittstellen::
++
+--
 Verfügbar mit folgenden Schnittstellen:
 
 * 25 GB iSCSI
@@ -155,34 +141,29 @@ Verfügbar mit folgenden Schnittstellen:
 * 100 GB NVMe/RoCE
 
 
-|===
+--
 
 
-== E5700 Modelle
-
-[cols="35h,~"]
-|===
-| Komponente | Spezifikationen 
-
-
- a| 
-Rack-Größen:
- a| 
+--
+.E5700 Modelle
+--
+Rack-Größen::
++
+--
 * 2 HE/24 (2 Rack-Einheiten; 24 Laufwerke)
 +
-image::../media/e2800_2u_front.gif[e2800 2 he vorne]
+image::../media/e2800_2u_front.gif[E5700 2U]
 
 * 4 HE/60 (4 Rack-Einheiten; 60 Laufwerke)
 +
-image::../media/e2860_front.gif[Vorderseite e2860]
+image::../media/e2860_front.gif[E5700 4U]
 
 
 
-
-
- a| 
-Laufwerke:
- a| 
+--
+Laufwerke::
++
+--
 Unterstützt bis zu 480 der folgenden Laufwerkstypen:
 
 * 3.5-Zoll-NL-SAS-Laufwerke
@@ -190,11 +171,10 @@ Unterstützt bis zu 480 der folgenden Laufwerkstypen:
 * 2.5-Zoll-SAS-HDD-Laufwerke
 
 
-
-
- a| 
-Schnittstellen:
- a| 
+--
+Schnittstellen::
++
+--
 Verfügbar mit folgenden Schnittstellen:
 
 * 12 GB SAS
@@ -207,33 +187,29 @@ Verfügbar mit folgenden Schnittstellen:
 * 100 GB NVMe/RoCE
 
 
-|===
+--
 
 
-== EF570 Modelle
+--
+.EF570 Modelle
+--
+Rack-Größen::
++
+--
+2 HE/24 (2 Rack-Einheiten; 24 Laufwerke)
 
-[cols="35h,~"]
-|===
-| Komponente | Spezifikationen 
+image:../media/ef570_front.gif["EF570 2U"]
 
-
- a| 
-Rack-Größen:
- a| 
-2 HE/24 (2 Rack-Einheiten; 24 Laufwerke)image:../media/ef570_front.gif[""]
-
-
-
- a| 
-Laufwerke:
- a| 
+--
+Laufwerke::
++
+--
 Unterstützt bis zu 120 SSD-2.5-Zoll-Laufwerke
 
-
-
- a| 
-Schnittstellen:
- a| 
+--
+Schnittstellen::
++
+--
 Verfügbar mit folgenden Schnittstellen:
 
 * 12 GB SAS
@@ -246,26 +222,23 @@ Verfügbar mit folgenden Schnittstellen:
 * 100 GB NVMe/RoCE
 
 
-|===
+--
 
 
-== EF600 Modelle
+--
+.EF600 Modelle
+--
+Rack-Größen::
++
+--
+2 HE/24 (2 Rack-Einheiten; 24 Laufwerke)
 
-[cols="35h,~"]
-|===
-| Komponente | Spezifikationen 
+image:../media/ef570_front.gif["EF600 2U"]
 
-
- a| 
-Rack-Größen:
- a| 
-2 HE/24 (2 Rack-Einheiten; 24 Laufwerke)image:../media/ef570_front.gif[""]
-
-
-
- a| 
-Laufwerke und HICs:
- a| 
+--
+Laufwerke und HICs::
++
+--
 Unterstützt folgende Laufwerke mit einer einzelnen Host Interface Card (HIC) pro Controller:
 
 * NVMe-SSD-Laufwerke: Bis zu 24 NVMe-SSD-Laufwerke im Controller-Shelf
@@ -276,11 +249,10 @@ Unterstützt folgende Laufwerke mit einer einzelnen Host Interface Card (HIC) pr
 
 NOTE: Bei SANtricity OS 11.80GA und höher unterstützt die EF600 Erweiterungs-Shelf-Konfigurationen ohne Laufwerke im Basisfach Stellen Sie bei Verwendung dieser Konfiguration sicher, dass die Laufwerke im Erweiterungs-Shelf bestückt und ordnungsgemäß mit dem Basissfach verbunden sind, bevor Sie das System einschalten.
 
-
-
- a| 
-Schnittstellen:
- a| 
+--
+Schnittstellen::
++
+--
 Verfügbar mit folgenden Schnittstellen:
 
 * 25 GB iSCSI
@@ -295,4 +267,49 @@ Verfügbar mit folgenden Schnittstellen:
 * 200 GB NVMe/RoCE
 
 
-|===
+--
+
+
+--
+.E4000-Modelle
+--
+Rack-Größen::
++
+--
+* 2 HE/12 (2 Rack-Einheiten; 12 Laufwerke)
++
+image::../media/e4000_2u_front.png[E4000 2U]
+
+* 4 HE/60 (4 Rack-Einheiten; 60 Laufwerke)
++
+image::../media/e4000_4u_front.png[E4000 4U]
+
+
+
+--
+Laufwerke::
++
+--
+Unterstützt die folgenden Laufwerkstypen:
+
+* 3.5-Zoll-NL-SAS (bis zu 300)
+* 2.5-Zoll-SAS-SSD (bis zu 120)
+
+
+--
+Schnittstellen::
++
+--
+Verfügbar mit folgenden Schnittstellen:
+
+* 12 GB SAS
+* 1 GB oder 10GBASE-T iSCSI
+* 1 GB, 10 GB oder 25 GB iSCSI
+* 8 GB, 16 GB oder 32 GB FC
+
+
+--
+
+
+--
+====

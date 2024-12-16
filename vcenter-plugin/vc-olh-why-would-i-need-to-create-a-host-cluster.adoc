@@ -10,7 +10,7 @@ summary: Sie müssen ein Host-Cluster erstellen, wenn Sie mindestens zwei Hosts 
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

@@ -22,7 +22,7 @@ NOTE: Es können nur 16-GB-FC-/10-GB-iSCSI-HICs und optische Basis-Ports auf ein
 
 Die folgende Abbildung zeigt die Rückseite eines E2800 Controllers mit zwei SFP+ (optisch) Baseboard-Host-Ports *(1)* und vier SFP+ (optisch) HIC-Ports *(2)*.
 
-image::../media/28_dwg_e2800_optical_base_quad_sfp_hic.gif[28 DWG e2800 optischer Basis Quad sfp-Hic]
+image::../media/28_dwg_e2800_optical_base_quad_sfp_hic.gif[Host- und HIC-Ports auf einem E2800 Controller“]
 
 
 NOTE: Eine HIC mit zwei Ports ist ebenfalls erhältlich.
@@ -275,7 +275,7 @@ Vor und nach der Konvertierung erfolgt die Spiegelung auf dem FC-Port mit der h�
 Wenn Sie das Feature Pack anwenden, wird die Spiegelungsunterstützung vom Host-Port mit der höchsten Nummer (in der Abbildung mit *1* beschriftet) zum HIC-Port mit der höchsten Nummer (in der Abbildung * 2*) verschoben.
 
 +
-image::../media/28_dwg_e2800_fc_iscsi_to_fc.gif[28 DWG e2800 fc iscsi zu fc]
+image::../media/28_dwg_e2800_fc_iscsi_to_fc.gif[Ports an einem E2800 Controller“]
 
 +
 |===

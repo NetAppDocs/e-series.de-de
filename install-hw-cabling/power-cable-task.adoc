@@ -22,5 +22,11 @@ Sie müssen die Netzteile jeder Komponente an getrennte Stromkreise anschließen
 Die Stromversorgung des Storage-Systems muss die Anforderungen an das neue Festplatten-Shelf erfüllen. Informationen zum Stromverbrauch Ihres Storage-Systems finden Sie im https://hwu.netapp.com/Controller/Index?platformTypeId=2357027["Hardware Universe"^].
 
 .Schritt
+. Schließen Sie ein Netzkabel an die einzelnen Netzteile des Speichersystems an.
 . Verbinden Sie die beiden Stromkabel für jedes Shelf mit verschiedenen Stromverteilungs-Einheiten (PDUs) im Schrank oder Rack.
+. Schalten Sie beide Netzschalter ein.
++
+
+NOTE: EF300- und EF600-Storage-Systeme verfügen über keine Netzschalter. Sie schalten sich ein, sobald die Kabel angeschlossen sind.
+
 

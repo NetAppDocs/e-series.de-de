@@ -11,7 +11,7 @@ summary: SANtricity Storage Plug-in für vCenter installieren oder aktualisieren
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

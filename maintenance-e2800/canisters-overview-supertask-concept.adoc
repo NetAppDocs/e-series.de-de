@@ -39,7 +39,7 @@ Sie können ein Netzteil in den folgenden Shelves ersetzen:
 
 Die folgende Abbildung zeigt ein Beispiel: E2812 Controller-Shelf, E2824 Controller-Shelf und EF280 Flash-Array mit zwei Netzteilen (Lüfter-Behälter). Die DE212C und DE224C Festplatten-Shelfs sind identisch, enthalten jedoch I/O-Module (IOMs) anstelle von Controller-Containern.
 
-image::../media/28_dwg_e2812_power_fan_canisters.gif[28 dwg e2812 Power Fan Kanister]
+image::../media/28_dwg_e2812_power_fan_canisters.gif[E2800 mit Netzlüfterkanistern]
 
 *(1)* _Controller-Regal mit zwei Netzteilen (Power-Fan-Kanister) unter den Controller-Kanistern_
 
@@ -85,11 +85,11 @@ Das Verfahren zum Austausch eines Netzkanüsters beschreibt nicht, wie ein ausge
 
 Die folgende Abbildung zeigt die Rückseite eines DE460C Festplatten-Shelfs mit den beiden Power Canisters:
 
-image::../media/28_dwg_de460c_rear_no_callouts_maint-e2800.gif[28 dwg de460c hinten keine Rufumbrüche maint e2800]
+image::../media/28_dwg_de460c_rear_no_callouts_maint-e2800.gif[DE460C mit Leistungskanistern]
 
 Die folgende Abbildung zeigt einen Leistungsbehälter:
 
-image::../media/28_dwg_e2860_de460c_psu_maint-e2800.gif[28 DWG e2860 de460c psu maint e2800]
+image::../media/28_dwg_e2860_de460c_psu_maint-e2800.gif[Leistungskanister]
 
 
 
@@ -136,11 +136,11 @@ Das Verfahren zum Austausch eines Lüfterkanisters beschreibt nicht, wie ein aus
 
 Die folgende Abbildung zeigt einen Lüfterbehälter:
 
-image::../media/28_dwg_e2860_de460c_single_fan_canister_no_callouts_maint-e2800.gif[28 DWG e2860 de460c Einzelventilator Behälter ohne Ausbrüche maint e2800]
+image::../media/28_dwg_e2860_de460c_single_fan_canister_no_callouts_maint-e2800.gif[Gebläsebehälter]
 
 Die folgende Abbildung zeigt die Rückseite eines DE460C Shelfs mit zwei Lüfterbehältern:
 
-image::../media/28_dwg_de460c_rear_no_callouts_maint-e2800.gif[28 dwg de460c hinten keine Rufumbrüche maint e2800]
+image::../media/28_dwg_de460c_rear_no_callouts_maint-e2800.gif[DE460c mit zwei Lüfterkanistern]
 
 
 CAUTION: *Möglicher Geräteschaden* -- Wenn Sie einen Lüfterbehälter durch eingeschaltetes Strom ersetzen, müssen Sie den Austauschvorgang innerhalb von 30 Minuten abschließen, um eine Überhitzung der Anlage zu verhindern.

@@ -10,7 +10,7 @@ summary: Exportieren Sie ein Zertifikat, um die vollständigen Details anzuzeige
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

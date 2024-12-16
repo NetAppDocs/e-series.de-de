@@ -145,7 +145,7 @@ Da Sie die HIC aus dem fehlerhaften Controller-Behälter entfernen müssen, müs
 
 . Drücken Sie die Griffe auf beiden Seiten des Controllers, und ziehen Sie sie nach hinten, bis sie sich aus dem Shelf lösen.
 +
-image::../media/remove_controller_5.png[Controller 5 ausbauen]
+image::../media/remove_controller_5.png[Drücken Sie die Griffe, um die Steuerung zu entfernen]
 
 . Schieben Sie den Controller-Behälter mit zwei Händen und den Griffen aus dem Regal. Wenn sich die Vorderseite des Controllers nicht im Gehäuse befindet, ziehen Sie sie mit zwei Händen vollständig heraus.
 +
@@ -153,7 +153,7 @@ image::../media/remove_controller_5.png[Controller 5 ausbauen]
 CAUTION: Verwenden Sie immer zwei Hände, um das Gewicht eines Reglerkanisters zu unterstützen.
 
 +
-image::../media/remove_controller_6.png[Controller 6 ausbauen]
+image::../media/remove_controller_6.png[Tragen Sie beim Entfernen des Controllers mit zwei Händen das Gewicht]
 
 . Setzen Sie den Steuerungsbehälter auf eine flache, statisch freie Oberfläche.
 
@@ -169,10 +169,10 @@ Entfernen Sie den Akku aus dem defekten Controller-Behälter, so dass Sie ihn in
 . Suchen Sie die Registerkarte „Drücken“ auf der Seite des Controllers.
 . Lösen Sie die Batterie, indem Sie auf die Lasche drücken und das Batteriegehäuse zusammendrücken.
 +
-image::../media/batt_3.png[batt 3]
+image::../media/batt_3.png[„Drücken Sie die Lasche, um den Akku zu entriegeln]
 
-. Drücken Sie vorsichtig das Anschlussgehäuse der Batterieverdrahtung. Ziehen Sie den Akku aus der Platine heraus.image:../media/batt_2.png[""]
-. Heben Sie die Batterie aus der Steuerung heraus und legen Sie sie auf eine flache, statische Oberfläche.image:../media/batt_4.png[""]
+. Drücken Sie vorsichtig das Anschlussgehäuse der Batterieverdrahtung. Ziehen Sie den Akku nach oben, und trennen Sie ihn von der Platine.image:../media/batt_2.png["Entfernen Sie den Stecker, der die Batterieverkabelung beherbergt"]
+. Heben Sie die Batterie aus der Steuerung und legen Sie sie auf eine flache, antistatische Oberfläche.image:../media/batt_4.png["Batterie aus der Steuerung herausheben"]
 
 
 
@@ -184,7 +184,7 @@ Wenn der Controller-Behälter eine HIC enthält, müssen Sie die HIC aus dem urs
 .Schritte
 . Entfernen Sie mit einem Kreuzschlitzschraubendreher die beiden Schrauben, mit denen die HIC-Frontplatte am Controller-Behälter befestigt ist.
 +
-image::../media/hic_2.png[hic 2]
+image::../media/hic_2.png[Entfernen Sie die HIC-Frontplatte]
 
 +
 
@@ -193,7 +193,7 @@ NOTE: Das obige Bild ist ein Beispiel, das Aussehen Ihrer HIC kann sich untersch
 . Entfernen Sie die HIC-Frontplatte.
 . Lösen Sie mit den Fingern oder einem Kreuzschlitzschraubendreher die einzelne Rändelschraube, mit der die HIC an der Controllerkarte befestigt ist.
 +
-image::../media/hic_3.png[hic 3]
+image::../media/hic_3.png[Lösen Sie die HIC-Rändelschrauben]
 
 +
 
@@ -205,7 +205,7 @@ NOTE: Die HIC verfügt über drei Schraubpositionen auf der Oberseite, ist aber 
 CAUTION: Achten Sie darauf, dass die Komponenten auf der Unterseite der HIC oder auf der Oberseite der Controller-Karte nicht verkratzen oder stoßen.
 
 +
-image::../media/hic_4.png[hic 4]
+image::../media/hic_4.png[Entfernen Sie die HIC von der Controllerkarte]
 
 . Legen Sie die HIC auf eine flache, statische Oberfläche.
 
@@ -225,12 +225,12 @@ Entfernen Sie das Netzteil, damit Sie es in den neuen Controller einsetzen könn
 
 . Suchen Sie die Lasche rechts neben dem Netzteil, und drücken Sie sie in Richtung Netzteil.
 +
-image::../media/psup_2.png[psup 2]
+image::../media/psup_2.png[Drücken Sie die Lasche neben dem Netzteil]
 
 . Suchen Sie den Griff an der Vorderseite des Netzteils.
 . Schieben Sie das Netzteil mit dem Griff gerade aus dem System heraus.
 +
-image::../media/psup_3.png[psup 3]
+image::../media/psup_3.png[Ziehen Sie das Netzteil heraus]
 
 +
 
@@ -257,10 +257,10 @@ NOTE: Eine Kerbe an der Unterseite des DIMM hilft Ihnen beim Ausrichten des DIMM
 NOTE: Halten Sie das DIMM vorsichtig an den Rändern, um Druck auf die Komponenten auf der DIMM-Leiterplatte zu vermeiden.
 
 +
-image::../media/dimm_2.png[dimm 2]
+image::../media/dimm_2.png[Drücken Sie auf die Auswurflasche im DIMM-Steckplatz]
 
 +
-image::../media/dimim_3.png[Dimim 3]
+image::../media/dimim_3.png[Entfernen Sie die DIMM]
 
 
 
@@ -273,7 +273,7 @@ Entfernen Sie die Lüfter, sodass Sie sie in den neuen Controller einsetzen kön
 .Schritte
 . Heben Sie den Lüfter vorsichtig vom Controller an.
 +
-image::../media/fan_2.png[Lüfter 2]
+image::../media/fan_2.png[Entfernen Sie den Lüfter]
 
 . Wiederholen Sie diesen Vorgang, bis alle Lüfter entfernt werden.
 
@@ -301,7 +301,7 @@ Setzen Sie den Akku in den Behälter des Ersatzcontrollers ein.
 
 . Setzen Sie den Akku in den Controller ein, indem Sie das Batteriegehäuse mit den Metallverriegelungen an der Seite des Controllers aufschieben.
 +
-image::../media/batt_5.png[batt 5]
+image::../media/batt_5.png[Setzen Sie die Batterie ein]
 
 +
 Der Akku rastet ein.
@@ -322,7 +322,7 @@ Wenn Sie eine HIC aus dem ursprünglichen Controller-Behälter entfernt haben, m
 Achten Sie darauf, dass die Komponenten auf der Unterseite der HIC oder auf der Oberseite der Controller-Karte nicht verkratzen oder stoßen.
 
 +
-image::../media/hic_7.png[hic 7]
+image::../media/hic_7.png[Installieren Sie das HIC]
 
 +
 
@@ -338,7 +338,7 @@ CAUTION: *Mögliche Geräteschäden* -- vorsichtig sein, den goldenen Ribbon-Ans
 Verwenden Sie keinen Schraubendreher, oder ziehen Sie die Schraube möglicherweise zu fest.
 
 +
-image::../media/hic_3.png[hic 3]
+image::../media/hic_3.png[HIC-Rändelschrauben mit der Hand am Controller festziehen]
 
 +
 
@@ -363,7 +363,7 @@ Die Netzteile sind codiert und können nur auf eine Weise installiert werden.
 CAUTION: Beim Einschieben des Netzteils in das System keine übermäßige Kraft verwenden, da der Anschluss beschädigt werden kann.
 
 +
-image::../media/psup_4.png[psup 4]
+image::../media/psup_4.png[Installieren Sie das Netzteil in den Controller]
 
 
 
@@ -380,7 +380,7 @@ Die Kerbe zwischen den Stiften am DIMM sollte mit der Lasche im Sockel aufliegen
 
 . Setzen Sie das DIMM-Modul in den Steckplatz ein.
 +
-image::../media/dimm_4.png[dimm 4]
+image::../media/dimm_4.png[Installieren Sie das DIMM-Modul in den Steckplatz am Controller]
 
 +
 Das DIMM passt eng in den Steckplatz, sollte aber leicht einpassen. Falls nicht, richten Sie das DIMM-Modul mit dem Steckplatz aus und setzen Sie es wieder ein.
@@ -395,7 +395,7 @@ NOTE: Prüfen Sie das DIMM visuell, um sicherzustellen, dass es gleichmäßig au
 NOTE: DIMMs passen eng zusammen. Möglicherweise müssen Sie nacheinander vorsichtig auf eine Seite drücken und mit jeder einzelnen Lasche befestigen.
 
 +
-image::../media/dimm_5.png[dimm 5]
+image::../media/dimm_5.png[Drücken Sie die Verriegelungen am DIMM-Steckplatz nach oben, um sie zu sichern]
 
 
 
@@ -408,10 +408,10 @@ Setzen Sie die Lüfter in den Ersatzcontroller-Behälter ein.
 .Schritte
 . Schieben Sie den Lüfter ganz in den Ersatz-Controller.
 +
-image::../media/fan_3.png[Lüfter 3]
+image::../media/fan_3.png[Lüfter in Controller einbauen]
 
 +
-image::../media/fan_3_a.png[Lüfter 3 A]
+image::../media/fan_3_a.png[Lüfter in Controller einbauen]
 
 . Wiederholen Sie diesen Vorgang, bis alle Lüfter installiert sind.
 
@@ -430,7 +430,7 @@ Installieren Sie anschließend den neuen Controller-Behälter in das Controller-
 NOTE: Der Controller klickt hörbar, wenn er richtig in das Regal eingebaut ist.
 
 +
-image::../media/remove_controller_7.png[Controller 7 ausbauen]
+image::../media/remove_controller_7.png[Controller in Shelf einbauen]
 
 . Installieren Sie die SFPs vom ursprünglichen Controller in den Host-Ports des neuen Controllers, sofern sie im ursprünglichen Controller installiert wurden, und schließen Sie alle Kabel wieder an.
 +

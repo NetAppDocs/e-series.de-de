@@ -10,7 +10,7 @@ summary: Löschen Sie ein oder mehrere nicht mehr benötigte Zertifikate.
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

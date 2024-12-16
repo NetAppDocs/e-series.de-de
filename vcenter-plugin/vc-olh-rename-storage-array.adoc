@@ -10,7 +10,7 @@ summary: Ändern Sie den Namen des Speicher-Arrays, der auf der Seite Verwalten 
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

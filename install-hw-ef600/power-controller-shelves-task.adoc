@@ -27,7 +27,7 @@ Gehen Sie wie folgt vor:
 
 
  a| 
-image:../media/power_cable_inst-hw-ef600.png[""]
+image:../media/power_cable_inst-hw-ef600.png["Stromkabel"]
  a| 
 *Stromkabel*
 
@@ -37,7 +37,7 @@ image:../media/power_cable_inst-hw-ef600.png[""]
 
 
  a| 
-image:../media/cabling_power.png[""]
+image:../media/cabling_power.png["EF600/EF300-Stromkabel"]
 
 |===
 . Verbinden Sie die beiden Netzkabel, eines von jedem Controller, mit zwei separaten Stromverteilereinheiten (PDUs) im Schrank oder Rack.

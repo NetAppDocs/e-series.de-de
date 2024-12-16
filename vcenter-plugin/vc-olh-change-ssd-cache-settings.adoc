@@ -11,7 +11,7 @@ summary: Bearbeiten Sie den Namen des SSD-Caches, und zeigen Sie den Status, die
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

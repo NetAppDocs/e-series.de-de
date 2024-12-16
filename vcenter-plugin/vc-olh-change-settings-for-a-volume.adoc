@@ -11,7 +11,7 @@ summary: Ändern der Einstellungen eines Volume, z. B. Name, Host-Zuweisung, Seg
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

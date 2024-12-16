@@ -11,7 +11,7 @@ summary: Sie können eine Volume-Gruppe für ein oder mehrere Volumes erstellen,
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

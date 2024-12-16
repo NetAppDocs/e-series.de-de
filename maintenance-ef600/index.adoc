@@ -11,58 +11,79 @@ summary: EF300- und EF600-Hardware Aufrechterhaltung
 
 
 [role="lead"]
+Möglicherweise müssen Sie Wartungsverfahren für Ihre Hardware durchführen. In diesem Abschnitt finden Sie spezifische Verfahren zur Wartung Ihrer EF300- oder EF600-Systemkomponenten.
+
+Bei den in diesem Abschnitt beschriebenen Verfahren wird vorausgesetzt, dass das EF300 oder EF600 System bereits in der E-Series Umgebung implementiert wurde.
+
+
+
+== Systemkomponenten
+
 Für die EF300- und EF600-Speichersysteme können Wartungsvorgänge für die folgenden Komponenten durchgeführt werden.
 
+[cols="25,65"]
+|===
 
 
-== Batterien
-
+ a| 
+https://docs.netapp.com/us-en/e-series/maintenance-ef600/batteries-overview-requirements-concept.html["Batterien"]
+ a| 
 Ein Akku ist im Lieferumfang eines Controllers enthalten und behält zwischengespeicherte Daten bei Ausfall des Netzstroms bei.
 
 
 
-== Controller
-
+ a| 
+https://docs.netapp.com/us-en/e-series/maintenance-ef600/controllers-overview-supertask-concept.html["Controller"]
+ a| 
 Ein Controller besteht aus einer Hauptplatine, Firmware und Software. Sie steuert die Laufwerke und implementiert die Funktionen des SANtricity-System-Managers.
 
 
 
-== DIMMs
-
+ a| 
+https://docs.netapp.com/us-en/e-series/maintenance-ef600/dimms-overview-supertask-concept.html["DIMMs"]
+ a| 
 Sie müssen ein DIMM (Dual-Inline-Speichermodul) ersetzen, wenn ein Speicherfehler vorliegt oder ein ausgefallenes DIMM vorliegt.
 
 
 
-== Laufwerke
-
+ a| 
+https://docs.netapp.com/us-en/e-series/maintenance-ef600/drives-overview-supertask-concept.html["Laufwerke"]
+ a| 
 Ein Laufwerk ist ein Gerät, das den physischen Speicher für Daten bereitstellt.
 
 
 
-== Lüfter
-
+ a| 
+https://docs.netapp.com/us-en/e-series/maintenance-ef600/fans-overview-requirements-replacing2-concept.html["Lüfter"]
+ a| 
 Jedes EF300- oder EF600 Controller-Shelf oder Laufwerk-Shelf enthält fünf Lüfter zum Kühlen des Controllers.
 
 
 
-== Host-Schnittstellenkarten (HICs)
-
+ a| 
+https://docs.netapp.com/us-en/e-series/maintenance-ef600/hics-overview-supertask-concept.html["Host-Schnittstellenkarten (HICs)"]
+ a| 
 Eine Host Interface Card (HIC) muss innerhalb eines Controller-Kanisters installiert sein. Der EF600 Controller umfasst Host Ports auf der optionalen HIC. In die HIC integrierte Host Ports werden HIC Ports genannt.
 
 
 
-== Host-Port-Protokoll
-
+ a| 
+https://docs.netapp.com/us-en/e-series/maintenance-ef600/hpp-overview-supertask-concept.html["Host-Port-Protokoll"]
+ a| 
 Sie können das Host-Protokoll in ein anderes Protokoll umwandeln, um Kompatibilität und Kommunikation herzustellen.
 
 
 
-== Netzteile
-
+ a| 
+https://docs.netapp.com/us-en/e-series/maintenance-ef600/power-overview-requirements2-concept.html["Netzteile"]
+ a| 
 Ein Netzteil stellt eine redundante Stromversorgung in einem Controller Shelf bereit.
 
 
 
-== SAS-Erweiterungskarten
-
+ a| 
+https://docs.netapp.com/us-en/e-series/maintenance-ef600/sas-overview-supertask-concept.html["SAS-Erweiterungskarten"]
+ a| 
 Eine SAS-Erweiterungskarte kann in einem Controller-Behälter installiert werden. Der EF300-Controller unterstützt SAS-Erweiterung.
+
+|===

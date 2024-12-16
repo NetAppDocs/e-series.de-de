@@ -10,7 +10,7 @@ summary: Wenn Sie die Laufwerksicherheit-Funktion implementieren, können Sie ei
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

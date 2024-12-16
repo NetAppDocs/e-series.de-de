@@ -230,9 +230,6 @@ Zu diesen Protokollen gehören u. a. QoS, Datei- und Druckfreigabe und NetBIOS.
 . Behalten Sie die Standardwerte für die übrigen Kontrollkästchen bei, und wählen Sie dann *OK*.
 . Wählen Sie erneut *OK* aus, wenn Sie zum Dialogfeld *mit Ziel verbinden* zurückkehren.
 . Wiederholen Sie dieses Verfahren für jeden Initiator-Port und jede Sitzung (logischer Pfad) zum Speicher-Array, das Sie einrichten möchten.
-+
-image::../media/82012_00.gif[82012 00]
-
 
 
 
@@ -293,7 +290,7 @@ Sie können eine PDF-Datei auf dieser Seite erstellen und drucken und dann die i
 
 Empfohlene Konfigurationen bestehen aus zwei Initiator-Ports und vier Ziel-Ports mit einem oder mehreren VLANs.
 
-image::../media/50001_01_conf-win.gif[50001 01 conf Sieg]
+image::../media/50001_01_conf-win.gif[ISCSI-Port-IDs]
 
 
 
