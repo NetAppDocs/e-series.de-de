@@ -21,7 +21,7 @@ summary: Technische Berichte der E-Series
 |===
 
 
-| https://www.netapp.com/pdf.html?item=/media/17026-tr4725pdf.pdf["*TR-4725: E2800 Arrays bieten einen Überblick*"] | https://www.netapp.com/pdf.html?item=/media/17120-tr4724pdf.pdf["*+++TR-4724: E5700 Arrays bieten Übersicht++*"] | https://www.netapp.com/pdf.html?item=/media/21363-tr-4877.pdf["*+++TR-4877: EF300-Arrays bieten Übersicht++*"] 
+| https://www.netapp.com/pdf.html?item=/media/17026-tr4725pdf.pdf["*TR-4725: E2800 Arrays bieten einen Überblick*"^] | https://www.netapp.com/pdf.html?item=/media/17120-tr4724pdf.pdf["*+++TR-4724: E5700 Arrays bieten Übersicht++*"^] | https://www.netapp.com/pdf.html?item=/media/21363-tr-4877.pdf["*+++TR-4877: EF300-Arrays bieten Übersicht++*"^] 
 
 
 | In diesem Dokument werden die Hardware- und Softwarefunktionen des E2800 Hybrid-Arrays und die neuesten SANtricity OS-Funktionen beschrieben. | Beschreibt die Produktinformationen der E5700 mit neuen Hardware- und Softwarefunktionen, die mit der neuesten Version von SANtricity eingeführt wurden. | Beschreibung der Hardware- und Softwarefunktionen des All-Flash-Arrays EF300 und der neuen Funktionen des SANtricity Betriebssystems. 
@@ -33,7 +33,7 @@ summary: Technische Berichte der E-Series
 |  |  |  
 
 
-| https://www.netapp.com/pdf.html?item=/media/17009-tr4800pdf.pdf["*TR-4800: EF600 Arrays bieten Überblick*"] | https://www.netapp.com/pdf.html?item=/media/116236-tr-5001-intro-to-netapp-e4000-arrays-with-santricity.pdf["*TR-5001: E4000 Arrays bieten Überblick*"^] |  
+| https://www.netapp.com/pdf.html?item=/media/17009-tr4800pdf.pdf["*TR-4800: EF600 Arrays bieten Überblick*"^] | https://www.netapp.com/pdf.html?item=/media/116236-tr-5001-intro-to-netapp-e4000-arrays-with-santricity.pdf["*TR-5001: E4000 Arrays bieten Überblick*"^] |  
 
 
 | Hier werden die Hardware- und Softwarefunktionen des EF600 All-Flash-Arrays und die neuen Features des SANtricity Betriebssystems beschrieben. | In diesem Dokument werden die Hardware- und Softwarefunktionen des E4000 Hybrid-Arrays und die neuesten SANtricity OS-Funktionen beschrieben. |  

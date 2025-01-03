@@ -76,14 +76,14 @@ Wo?
 ** `array_password` Ist das Passwort für das Speicher-Array. Sie müssen den Wert für Array_password in doppelte Anführungszeichen (") setzen.
 ** `[trayID]` Ist die Kennung des Festplatten-Shelf, das das Laufwerksfach enthält, das Sie ersetzen möchten. Die Werte für die Shelf-ID des Laufwerks sind 0 bis 99. Sie müssen den Wert für einschließen `trayID` In eckigen Klammern.
 ** `[drawerID]` Ist die Kennung der Laufwerksschublade, die Sie ersetzen möchten. Die Werte für die Fach-ID sind 1 (oberes Fach) bis 5 (unteres Fach). Sie müssen den Wert für einschließen `drawerID` In eckigen Klammern. Mit diesem Befehl wird sichergestellt, dass Sie das am häufigsten herausziehbare Fach im Festplatten-Shelf 10 entfernen können:
-
-
 +
 [listing]
 ----
 SMcli <ctlr_IP1\> -p "safety-1" -c "set tray [10] drawer [1]
 serviceAllowedIndicator=forceOnWarning;"
 ----
+
+
 . Ermitteln Sie wie folgt, ob Sie die Host-I/O-Aktivität anhalten müssen:
 +
 ** Wenn der Befehl erfolgreich ist, müssen Sie die Host-I/O-Aktivität nicht beenden. Alle Laufwerke in der Schublade befinden sich in Pools oder Volume-Gruppen mit Schubladenschutz. Gehen Sie zu <<Schritt 2: Die Kabelketten entfernen>>.

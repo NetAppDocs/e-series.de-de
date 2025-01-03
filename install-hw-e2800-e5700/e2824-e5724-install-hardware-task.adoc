@@ -53,10 +53,10 @@ Befestigen Sie das Regal wie in gerichtet am Rack link:../rackmount-hardware.htm
 +
 .. Bringen Sie die Schrauben an beiden Seiten in die ersten und dritten Löcher von der Oberseite des Regals ein, um sie an der Vorderseite des Gehäuses zu befestigen.
 .. Legen Sie zwei hintere Halterungen an jeder Seite des oberen hinteren Bereichs des Regals an. Bringen Sie die Schrauben in die ersten und dritten Löcher jeder Halterung ein, um die Rückseite des Gehäuses zu befestigen.
-
-
 +
 image:../media/trafford_secure.png["Befestigen Sie die Halterungen an der Rückseite des Regals"]
+
+
 
 . Befestigen Sie die Blende oder die Endkappen.
 +

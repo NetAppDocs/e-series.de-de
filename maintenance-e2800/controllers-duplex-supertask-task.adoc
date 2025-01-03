@@ -306,17 +306,14 @@ CAUTION: *Möglicher Hardwareschaden* -- der Metallflansch an der Vorderseite de
 
 +
 ** *Korrekt* -- der Metallflansch der Batterie ist vollständig in den Steckplatz am Controller eingesetzt:
-
-
 +
 image:../media/28_dwg_e2800_battery_flange_ok_maint-e2800.gif["Korrekter Metallflansch"]
 
-+
 ** *Incorrect* -- der Metallflansch der Batterie ist nicht in den Steckplatz am Controller eingelegt:
-
-
 +
 image:../media/28_dwg_e2800_battery_flange_not_ok_maint-e2800.gif["Falscher Metallflansch"]
+
+
 
 
 

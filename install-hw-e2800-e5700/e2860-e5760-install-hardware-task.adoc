@@ -48,10 +48,10 @@ CAUTION: Ein leeres Regal wiegt etwa 60 kg (132 lb). Zum sicheren Bewegen eines 
 +
 .. Wenn Sie das Regal mit der Hand anheben, setzen Sie die vier Hebe-Griffe an. Drücken Sie auf jeden Griff nach oben, bis er einrastet.
 .. Das Regal von unten halten und in den Schrank schieben. Wenn die Hebegriffe verwendet werden, nehmen Sie sie einzeln ab, während das Regal in den Schrank rutscht. Um die Griffe zu entfernen, ziehen Sie den Entriegelungshebel nach unten und ziehen Sie dann aus dem Shelf heraus.
-
-
 +
 image:../media/4_person_lift_source.png["Es wurden vier Personen benötigt, um das Regal in den Schrank zu heben"]
+
+
 
 . Befestigen Sie das Regal.
 +
