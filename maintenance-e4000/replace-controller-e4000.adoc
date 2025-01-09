@@ -160,6 +160,19 @@ save storageArray dbmDatabase sourceLocation=onboard contentType=all file="filen
 ----
 
 
+. Support-Daten für Ihr Storage Array mit SANtricity System Manager erfassen
++
+Wenn beim Entfernen eines Controllers ein Problem auftritt, können Sie die gespeicherte Datei zum Beheben des Problems verwenden. Das System speichert Bestands-, Status- und Performancedaten Ihres Speicherarrays in einer einzelnen Datei.
+
++
+.. *Wählen Sie Support › Support Center › Diagnose*.
+.. Wählen Sie *Support-Daten Erfassen* Aus.
+.. Klicken Sie Auf *Collect*.
++
+Die Datei wird im Ordner Downloads für Ihren Browser mit dem Namen *Support-Data.7z* gespeichert.
+
+
+
 . Wenn der Controller nicht bereits offline ist, versetzen Sie ihn jetzt mithilfe von SANtricity System Manager in den Offline-Modus.
 +
 ** Über den SANtricity System Manager:

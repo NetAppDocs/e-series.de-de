@@ -186,7 +186,10 @@ Stellen Sie sicher, dass Sie Folgendes haben:
 CAUTION: Um eine verminderte Leistung zu vermeiden, dürfen die Kabel nicht verdreht, gefaltet, gequetscht oder treten.
 
 . Wenn die Host-Ports am Controller-Behälter SFP+-Transceiver verwenden, lassen Sie sie nicht installiert.
-. Vergewissern Sie sich, dass die LED Cache Active auf der Rückseite des Controllers ausgeschaltet ist.
+. Vergewissern Sie sich, dass die Cache Active-LEDs auf der Rückseite des Controllers und der Frontblende des Controllers ausgeschaltet sind.
++
+Wenn eine der LEDs leuchtet, wird der Controller weiterhin mit Akkustrom versorgt. Alle LEDs müssen ausgeschaltet sein, bevor Sie mit diesem Vorgang fortfahren.
+
 . Drücken Sie die Verriegelung am Nockengriff, bis er sich löst, öffnen Sie den Nockengriff vollständig, um den Controller-Aktivkohlebehälter aus der Mittelplatine zu lösen, und ziehen Sie dann mit zwei Händen den Controller-Aktivkohlebehälter halb aus dem Gehäuse.
 
 
