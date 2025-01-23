@@ -240,6 +240,10 @@ image::../media/drw_E4000_replace_HIC_source_IEOPS-864.png[Entfernen Sie die HIC
 +
 .. Entfernen Sie die HIC-Frontplatte, indem Sie sie gerade aus dem Controller-Modul herausziehen.
 .. Lösen Sie die Rändelschrauben an der HIC und heben Sie sie gerade nach oben.
++
+
+NOTE: Wenn Sie die Griffschraube mit den Fingern lösen, müssen Sie möglicherweise die Akkufreigabelasche drücken und den Akku nach oben drehen, um besser darauf zugreifen zu können.
+
 
 
 . Installieren Sie die HIC neu:

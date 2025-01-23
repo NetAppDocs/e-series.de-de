@@ -176,6 +176,7 @@ Lassen Sie die Kabel im Kabelverwaltungs-Gerät so, dass bei der Neuinstallation
 
 . Entfernen Sie die Kabelführungs-Geräte von der linken und rechten Seite des Controller-Kanisters, und legen Sie sie beiseite.
 . Drücken Sie die Verriegelung am Nockengriff, bis er sich löst, öffnen Sie den Nockengriff vollständig, um den Controller-Aktivkohlebehälter aus der Mittelplatine zu lösen, und ziehen Sie dann den Controller-Aktivkohlebehälter mit zwei Händen aus dem Gehäuse.
+. Vergewissern Sie sich, dass die LED Cache Active auf der Rückseite des Controllers ausgeschaltet ist.
 . Drehen Sie den Controller-Behälter um und legen Sie ihn auf eine Ebene, stabile Oberfläche.
 . Öffnen Sie die Abdeckung, indem Sie die blauen Tasten an den Seiten des Controller-Kanisters drücken, um die Abdeckung zu lösen, und drehen Sie dann die Abdeckung nach oben und von dem Controller-Kanister.
 +
