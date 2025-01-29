@@ -59,6 +59,18 @@ Konfigurierbar nur über die REST-API, eine neue Einstellung für die Anmeldespe
 |===
 
 
+== Neue Funktionen in Version 11.80.1R3
+
+Diese Version enthält nur geringfügige Änderungen und keine neuen Funktionen oder Einschränkungen. Weitere Informationen zu den Änderungen in dieser Version finden Sie in der README-Datei.
+
+
+
+== Neue Funktionen in Version 11.80.1R2
+
+Diese Version enthält nur geringfügige Änderungen und keine neuen Funktionen oder Einschränkungen. Weitere Informationen zu den Änderungen in dieser Version finden Sie in der README-Datei.
+
+
+
 == Neue Funktionen in Version 11.80.1R1
 
 [cols="35h,~"]
