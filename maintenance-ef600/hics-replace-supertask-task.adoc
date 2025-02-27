@@ -12,7 +12,7 @@ summary: 'Ersetzen Sie eine fehlerhafte EF300- oder EF600-Host-Schnittstellenkar
 
 
 [role="lead"]
-Gehen Sie folgendermaßen vor, um eine fehlerhafte Host Interface Card (HIC) in einem EF300- oder EF600-Array zu ersetzen.
+Gehen Sie wie folgt vor, um eine fehlerhafte Host-Schnittstellenkarte (HIC) in einem EF300-, EF600-, EF300C- oder EF600C-Array zu ersetzen.
 
 .Über diese Aufgabe
 Wenn Sie eine fehlerhafte HIC ersetzen, müssen Sie das Speicher-Array ausschalten, die HIC ersetzen und wieder Strom einschalten.

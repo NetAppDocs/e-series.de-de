@@ -1,7 +1,7 @@
 ---
 permalink: maintenance-ef600/drives-replace-EF300-supertask-task.html 
 sidebar: sidebar 
-keywords: replace EF300 drive, replace EF600 drive, drive failure 
+keywords: EF300, EF300C, replace drive, drive failure 
 summary: Ersetzen Sie ein Laufwerk in einem EF300-Array. 
 ---
 = Ersetzen Sie das Laufwerk in einem EF300-Array
@@ -11,9 +11,9 @@ summary: Ersetzen Sie ein Laufwerk in einem EF300-Array.
 
 
 [role="lead"]
-Sie können ein Laufwerk in einem EF300-Array ersetzen.
+Sie können ein Laufwerk in einem EF300- oder EF300C-Array ersetzen.
 
-Die EF300 unterstützt SAS-Erweiterung mit Shelfs mit 24 Laufwerken und 60 Laufwerken. Das folgende Verfahren hängt davon ab, ob Sie ein Shelf mit 24 Laufwerken oder ein Shelf mit 60 Laufwerken haben:
+Der EF300 und EF300C unterstützen SAS-Erweiterung mit 24-Laufwerk- und 60-Laufwerk-Shelfs. Das folgende Verfahren hängt davon ab, ob Sie ein Shelf mit 24 Laufwerken oder ein Shelf mit 60 Laufwerken haben:
 
 * <<Ersetzen Sie das Laufwerk in einem EF300 (Shelf mit 24 Laufwerken).>>
 * <<Ersetzen Sie das Laufwerk in einem EF300 (Shelf mit 60 Laufwerken).>>

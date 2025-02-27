@@ -1,7 +1,7 @@
 ---
 permalink: maintenance-ef600/dimms-overview-supertask-concept.html 
 sidebar: sidebar 
-keywords: replace EF300 DIMM, replace EF600 DIMM, 
+keywords: EF300, EF600, replace DIMM, EF300C, EF600C 
 summary: Prüfen Sie die Anforderungen und Überlegungen, bevor Sie EF300- oder EF600-DIMMs ersetzen. 
 ---
 = Anforderungen für den Austausch eines EF300- oder EF600-DIMM
@@ -11,9 +11,9 @@ summary: Prüfen Sie die Anforderungen und Überlegungen, bevor Sie EF300- oder 
 
 
 [role="lead"]
-Bevor Sie ein DIMM in einem EF300- oder EF600-Speicher-Array ersetzen, überprüfen Sie die Anforderungen und Überlegungen.
+Bevor Sie ein DIMM in einem EF300-, EF600-, EF600C- oder EF300C-Speicher-Array ersetzen, sollten Sie die Anforderungen und Überlegungen überprüfen.
 
-Sie müssen ein DIMM ersetzen, wenn eine Speicherabweichung vorliegt oder ein ausgefallenes DIMM vorliegt. Überprüfen Sie die Konfiguration des EF300- oder EF600-Controllers, um sicherzustellen, dass die korrekte DIMM-Größe ersetzt wird.
+Sie müssen ein DIMM ersetzen, wenn eine Speicherabweichung vorliegt oder ein ausgefallenes DIMM vorliegt. Überprüfen Sie unbedingt die Konfiguration Ihres EF300-, EF600-, EF300C- oder EF600C-Controllers, um sicherzustellen, dass die richtige DIMM-Größe ersetzt wird.
 
 
 CAUTION: Beachten Sie, dass die DIMMs im Speicher-Array empfindlich sind; eine unsachgemäße Handhabung kann zu Schäden führen.

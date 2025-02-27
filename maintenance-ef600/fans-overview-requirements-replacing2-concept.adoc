@@ -1,7 +1,7 @@
 ---
 permalink: maintenance-ef600/fans-overview-requirements-replacing2-concept.html 
 sidebar: sidebar 
-keywords: replace EF300 fan, replace EF600 fan, 
+keywords: EF300, EF600, EF300C, EF600C replace fan, 
 summary: Lesen Sie die Anforderungen und Überlegungen, bevor Sie EF300- oder EF600 Lüfter ersetzen. 
 ---
 = Anforderungen für den Austausch des EF300- oder EF600 Lüfters
@@ -11,7 +11,7 @@ summary: Lesen Sie die Anforderungen und Überlegungen, bevor Sie EF300- oder EF
 
 
 [role="lead"]
-Überprüfen Sie vor dem Austausch eines ausgefallenen Lüfters in einem EF300- oder EF600-Array die folgenden Anforderungen.
+Überprüfen Sie die folgenden Anforderungen, bevor Sie einen ausgefallenen Lüfter in einem EF300-, EF600-, EF300C- oder EF600C-Array ersetzen.
 
 * Sie haben einen Ersatzlüfter, der für Ihr Controller-Shelf- oder Festplatten-Shelf-Modell unterstützt wird.
 * Sie haben ein ESD-Armband oder andere antistatische Vorsichtsmaßnahmen getroffen.

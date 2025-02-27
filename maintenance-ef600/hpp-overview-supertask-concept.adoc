@@ -1,7 +1,7 @@
 ---
 permalink: maintenance-ef600/hpp-overview-supertask-concept.html 
 sidebar: sidebar 
-keywords: convert EF300 host protocol, convert EF600 host protocol, 
+keywords: convert host protocol, EF600, EF300, EF600C, EF300C 
 summary: Prüfen Sie die Anforderungen und Überlegungen, bevor Sie das EF300- oder EF600-Hostprotokoll konvertieren. 
 ---
 = Anforderungen für die Konvertierung der EF300- oder EF600-Hostprotokolle
@@ -11,7 +11,7 @@ summary: Prüfen Sie die Anforderungen und Überlegungen, bevor Sie das EF300- o
 
 
 [role="lead"]
-Überprüfen Sie vor dem Konvertieren des Host-Protokolls für ein EF300- oder EF600-Array die folgenden Anforderungen.
+Überprüfen Sie vor der Konvertierung des Host-Protokolls für ein EF300-, EF600-, EF300C- oder EF600C-Array die folgenden Anforderungen.
 
 * Sie haben für dieses Verfahren ein Zeitfenster für die Wartung von Ausfallzeiten eingeplant.
 * Sie müssen Host-I/O-Vorgänge anhalten, wenn Sie die Konvertierung durchführen. Sie können erst nach erfolgreichem Abschluss der Konvertierung auf Daten im Speicher-Array zugreifen.

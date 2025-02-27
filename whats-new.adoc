@@ -16,6 +16,28 @@ In der folgenden Tabelle werden die neuen Funktionen der neuesten SANtricity OS 
 
 
 
+== Neue Funktionen in Version 11.90.1
+
+[cols="35h,~"]
+|===
+| Neues Feature | Beschreibung 
+
+
+ a| 
+Neue Speichersystemmodelle – EF300C und EF600C
+ a| 
+In dieser Version werden die All-Flash-NVMe-Storage-Systeme EF300C und EF600C vorgestellt. Bei den EF300C und EF600C handelt es sich um Flash-Versionen mit hoher Kapazität der vorhandenen EF300 und EF600 Storage-Systeme. NVMe-SSD-Laufwerke mit einer hohen Kapazität von 30 TB und 60 TB werden von EF300C und EF600C unterstützt.
+
+
+
+ a| 
+Unterstützung von 12-GB-SAS-Schnittstellen auf EF4000
+ a| 
+Der E4000 Controller unterstützt jetzt 12 GB SAS-Host-Schnittstellenkarten.
+
+|===
+
+
 == Neue Funktionen in Version 11.90
 
 [cols="35h,~"]

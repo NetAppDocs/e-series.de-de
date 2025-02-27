@@ -1,7 +1,7 @@
 ---
 permalink: maintenance-ef600/index.html 
 sidebar: sidebar 
-keywords: EF300 maintenance, EF600 maintenance, repairing EF300, repairing EF600, replace EF300 components, replace EF600 components 
+keywords: EF300 maintenance, EF600 maintenance, repairing EF300, repairing EF600, EF600C, EF300C replace EF300 components, replace EF600 components 
 summary: EF300- und EF600-Hardware Aufrechterhaltung 
 ---
 = EF300- und EF600-Hardware nutzen
@@ -11,7 +11,7 @@ summary: EF300- und EF600-Hardware Aufrechterhaltung
 
 
 [role="lead"]
-Möglicherweise müssen Sie Wartungsverfahren für Ihre Hardware durchführen. In diesem Abschnitt finden Sie spezifische Verfahren zur Wartung Ihrer EF300- oder EF600-Systemkomponenten.
+Möglicherweise müssen Sie Wartungsverfahren für Ihre Hardware durchführen. In diesem Abschnitt finden Sie Verfahren zur Pflege der Systemkomponenten EF300, EF600, EF300C oder EF600C.
 
 Bei den in diesem Abschnitt beschriebenen Verfahren wird vorausgesetzt, dass das EF300 oder EF600 System bereits in der E-Series Umgebung implementiert wurde.
 
@@ -19,7 +19,7 @@ Bei den in diesem Abschnitt beschriebenen Verfahren wird vorausgesetzt, dass das
 
 == Systemkomponenten
 
-Für die EF300- und EF600-Speichersysteme können Wartungsvorgänge für die folgenden Komponenten durchgeführt werden.
+Für die Speichersysteme EF300, EF600, EF300C und EF600C können Sie Wartungsverfahren für die folgenden Komponenten durchführen.
 
 [cols="25,65"]
 |===

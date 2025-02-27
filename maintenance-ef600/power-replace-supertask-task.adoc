@@ -1,7 +1,7 @@
 ---
 permalink: maintenance-ef600/power-replace-supertask-task.html 
 sidebar: sidebar 
-keywords: replace EF300 power supply, replace EF600 power supply, 
+keywords: replace power supply, EF300, EF600, EF300C, EF600C 
 summary: Ersetzen Sie die Netzteile, wenn sie im EF300- oder EF600-Controller ausfallen. 
 ---
 = Ersetzen Sie ein EF300- oder EF600-Netzteil
@@ -12,7 +12,7 @@ summary: Ersetzen Sie die Netzteile, wenn sie im EF300- oder EF600-Controller au
 
 
 [role="lead"]
-Sie können ein Netzteil austauschen, wenn es in Ihrem EF300- oder EF600-Controller ausfällt.
+Sie können ein Netzteil austauschen, wenn es in Ihrem EF300-, EF600-, EF300C- oder EF600C-Controller ausfällt.
 
 Wenn ein Netzteil ausfällt, müssen Sie es so schnell wie möglich ersetzen, damit das Controller Shelf über eine redundante Stromversorgung verfügt.
 

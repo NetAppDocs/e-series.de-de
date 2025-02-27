@@ -58,7 +58,7 @@ image:../media/de460c.gif["DE460C"]
 
 * 2 he/24 (2 Rack-Einheiten; 24 Laufwerke)
 * 2.5-Zoll-NVMe-SSD-Laufwerke
-* EF300- und EF600-Controller
+* EF300, EF600. EF300C- und EF600C-Controller
 
  a| 
 image:../media/ne224.gif["NE224"]

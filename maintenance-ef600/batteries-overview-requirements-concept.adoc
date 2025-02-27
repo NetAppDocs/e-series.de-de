@@ -1,7 +1,7 @@
 ---
 permalink: maintenance-ef600/batteries-overview-requirements-concept.html 
 sidebar: sidebar 
-keywords: replace EF300 battery, replace EF600 battery, EF300 battery fail, EF600 battery fail 
+keywords: replace battery,battery fail, EF300C, EF600C, EF300, EF600 
 summary: Anforderungen und Überlegungen für den Austausch der EF300- oder EF600-Batterie. 
 ---
 = Anforderungen für den Austausch der EF300- oder EF600-Batterie
@@ -12,7 +12,7 @@ summary: Anforderungen und Überlegungen für den Austausch der EF300- oder EF60
 
 
 [role="lead"]
-Überprüfen Sie die Anforderungen und Überlegungen, bevor Sie eine EF300- oder EF600-Batterie ersetzen.
+Bevor Sie eine Batterie der Serie EF300, EF600, EF300C oder EF600C ersetzen, lesen Sie die Anforderungen und Überlegungen.
 
 Ein Akku ist im Lieferumfang eines Controllers enthalten und behält zwischengespeicherte Daten bei Ausfall des Netzstroms bei.
 

@@ -1,7 +1,7 @@
 ---
 permalink: maintenance-ef600/sas-overview-supertask-concept.html 
 sidebar: sidebar 
-keywords: replace EF300 SAS expansion card, replacing SAS card, drive tray expansion, expansion card 
+keywords: replace SAS expansion card, replacing SAS card, drive tray expansion, expansion card, EF300, EF300C, EF600, EF600C 
 summary: Prüfen Sie die Anforderungen und Überlegungen, bevor Sie eine EF300-SAS-Erweiterungskarte ersetzen. 
 ---
 = Anforderungen für den Austausch der EF300- und EF600-SAS-Erweiterungskarten
@@ -11,7 +11,7 @@ summary: Prüfen Sie die Anforderungen und Überlegungen, bevor Sie eine EF300-S
 
 
 [role="lead"]
-Wenn Sie eine SAS-Erweiterungskarte zu einer EF300 oder EF600 hinzufügen möchten, prüfen Sie die folgenden Anforderungen.
+Wenn Sie eine SAS-Erweiterungskarte zu einem EF300, EF600, EF300C oder EF600C hinzufügen möchten, lesen Sie die folgenden Anforderungen.
 
 * Sie müssen dem folgen link:../install-hw-ef600/index.html["Installation und Einrichtung von EF300- und EF600-Storage-Systemen"] Um den Controller einzurichten.
 * Sie müssen Ihre Firmware auf die neueste Version aktualisieren. Befolgen Sie zum Aktualisieren der Firmware die Anweisungen im link:../upgrade-santricity/index.html["Aktualisieren des SANtricity Betriebssystems"].

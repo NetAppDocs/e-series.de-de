@@ -1,7 +1,7 @@
 ---
 permalink: maintenance-ef600/controllers-replace-supertask-task.html 
 sidebar: sidebar 
-keywords: replace EF300 controller, replace EF600 controller, replace EF300 canister, replace EF600 canister, 
+keywords: replace controller, replace canister, EF300, EF600, EF300C, EF600C 
 summary: Ersetzen Sie einen Single Controller in einem EF300- oder EF600 Controller-Shelf. 
 ---
 = EF300- oder EF600-Controller austauschen
@@ -12,7 +12,7 @@ summary: Ersetzen Sie einen Single Controller in einem EF300- oder EF600 Control
 
 
 [role="lead"]
-Ein einzelner Controller kann in einem EF300- oder EF600 Controller-Shelf ersetzt werden.
+Sie können einen einzelnen Controller in Ihrem EF300-, EF600-, EF300C- oder EF600C-Controller-Shelf ersetzen.
 
 .Über diese Aufgabe
 Wenn Sie einen defekten Controller-Behälter ersetzen, müssen Sie den Akku, das Netzteil, die DIMMs, die Lüfter und die Host Interface Card (HIC) aus dem ursprünglichen Controller-Behälter entfernen und dann im Ersatzcontroller-Behälter installieren.

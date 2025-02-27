@@ -24,6 +24,8 @@ E-Series Arrays sind in den folgenden Modellen verfügbar:
 * E5700 Series – Midrange Hybrid
 * EF570 Serie – Midrange All Flash
 * EF600 Serie: Midrange-All-Flash- und All-NVMe-Storage
+* EF600C Serie: Midrange-All-Flash- und All-NVMe-Storage
+* EF300C Serie: Midrange-All-Flash- und All-NVMe-Storage
 
 
 
@@ -113,7 +115,7 @@ Rack-Größen::
 image:../media/ef570_front.gif["EF300 2U"]
 
 --
-Laufwerke und HICs::
+Laufwerke::
 +
 --
 Unterstützt folgende Laufwerke mit einer einzelnen Host Interface Card (HIC) pro Controller:
@@ -125,6 +127,48 @@ Unterstützt folgende Laufwerke mit einer einzelnen Host Interface Card (HIC) pr
 
 
 NOTE: Für SANtricity OS 11.80GA und höher unterstützt der EF300 Erweiterungs-Shelf-Konfigurationen ohne Laufwerke im Basisfach Stellen Sie bei Verwendung dieser Konfiguration sicher, dass die Laufwerke im Erweiterungs-Shelf bestückt und ordnungsgemäß mit dem Basissfach verbunden sind, bevor Sie das System einschalten.
+
+--
+Schnittstellen::
++
+--
+Verfügbar mit folgenden Schnittstellen:
+
+* 25 GB iSCSI
+* 32 GB NVMe/Fibre Channel
+* 32 GB SCSI/Fibre Channel
+* 100-GB-iSER/IB
+* 100 GB SRP/IB
+* 100 GB NVMe/IB
+* 100 GB NVMe/RoCE
+
+
+--
+
+
+--
+.EF300C-Modelle
+--
+Rack-Größen::
++
+--
+2 HE/24 (2 Rack-Einheiten; 24 Laufwerke)
+
+image:../media/ef570_front.gif["EF300 2U"]
+
+--
+Laufwerke::
++
+--
+* Unterstützung für NVMe-SSD-Laufwerke mit einer Kapazität von 30 TB und 60 TB
+* NVMe-SSD-Laufwerke: Bis zu 24 NVMe-SSD-Laufwerke im Controller-Shelf
+* NL-SAS-Laufwerke mit Erweiterungs-Shelfs: Jede Mischung aus DE212C und DE460C Shelfs darf insgesamt 240 NL-SAS Laufwerksschächten und 4 Erweiterungs-Shelfs nicht überschreiten, wenn nur DE212C Shelfs verwendet werden; 8 DE212C Shelfs sind zulässig. Beispiel: 4 DE460C Shelfs oder 8 DE212C Shelfs oder 2 DE460C Shelfs plus 2 DE212 Shelfs.
+* SAS-SSD-Laufwerke mit Erweiterungs-Shelfs: Jede Mischung aus DE212C, DE224C und DE460C Shelfs darf insgesamt 96 SAS SSD-Laufwerksschächten und 4 Erweiterungs-Shelfs nicht überschreiten, sofern nur DE212C Shelfs verwendet werden; 8 DE212C Shelfs sind zulässig. Beispiel: 1 DE460C Shelf plus 1 DE224C Shelf plus 1 DE212C Shelf oder 4 DE224C Shelfs oder 8 DE212C Shelfs.
++
+
+NOTE: Bei SANtricity OS 11.80GA und höher unterstützt die EF300 Erweiterungs-Shelf-Konfigurationen ohne Laufwerke im Basisfach Stellen Sie bei Verwendung dieser Konfiguration sicher, dass die Laufwerke im Erweiterungs-Shelf bestückt und ordnungsgemäß mit dem Basissfach verbunden sind, bevor Sie das System einschalten. *
+
+
 
 --
 Schnittstellen::
@@ -236,11 +280,57 @@ Rack-Größen::
 image:../media/ef570_front.gif["EF600 2U"]
 
 --
-Laufwerke und HICs::
+Laufwerke::
 +
 --
 Unterstützt folgende Laufwerke mit einer einzelnen Host Interface Card (HIC) pro Controller:
 
+* NVMe-SSD-Laufwerke: Bis zu 24 NVMe-SSD-Laufwerke im Controller-Shelf
+* NL-SAS-Laufwerke mit Erweiterungs-Shelfs: Jede Mischung aus DE212C und DE460C Shelfs darf insgesamt 420 NL-SAS Laufwerksschächten und 7 Erweiterungs-Shelfs nicht überschreiten, wenn nur DE212C Shelfs verwendet werden; 8 DE212C Shelfs sind zulässig. Beispiel: 7 DE460C Shelfs oder 8 DE212C Shelfs oder 5 DE460C Shelfs plus 2 DE212 Shelfs.
+* SAS-SSD-Laufwerke mit Erweiterungs-Shelfs: Alle gemischten Shelfs DE212C, DE224C und DE460C dürfen insgesamt 96 SAS-SSD-Laufwerksschächte und 7 Erweiterungs-Shelfs nicht überschreiten, sofern nur DE212C Shelfs verwendet werden. Anschließend sind 8 DE212C Shelfs zulässig. Beispiel: 1 DE460C Shelf plus 1 DE224C Shelf plus 1 DE212C Shelf, 4 DE224C Shelfs oder 8 DE212C Shelfs
+
+
+
+NOTE: Bei SANtricity OS 11.80GA und höher unterstützt die EF600 Erweiterungs-Shelf-Konfigurationen ohne Laufwerke im Basisfach Stellen Sie bei Verwendung dieser Konfiguration sicher, dass die Laufwerke im Erweiterungs-Shelf bestückt und ordnungsgemäß mit dem Basissfach verbunden sind, bevor Sie das System einschalten.
+
+--
+Schnittstellen::
++
+--
+Verfügbar mit folgenden Schnittstellen:
+
+* 25 GB iSCSI
+* 32 GB NVMe/Fibre Channel
+* 32 GB SCSI/Fibre Channel
+* 100-GB-iSER/IB
+* 100 GB SRP/IB
+* 100 GB NVMe/IB
+* 100 GB NVMe/RoCE
+* 200-GB-iSER/IB
+* 200 GB NVMe/IB
+* 200 GB NVMe/RoCE
+
+
+--
+
+
+--
+.EF600C-Modelle
+--
+Rack-Größen::
++
+--
+2 HE/24 (2 Rack-Einheiten; 24 Laufwerke)
+
+image:../media/ef570_front.gif["EF600 2U"]
+
+--
+Laufwerke::
++
+--
+Unterstützt folgende Laufwerke mit einer einzelnen Host Interface Card (HIC) pro Controller:
+
+* Unterstützung für NVMe-SSD-Laufwerke mit einer Kapazität von 30 TB und 60 TB
 * NVMe-SSD-Laufwerke: Bis zu 24 NVMe-SSD-Laufwerke im Controller-Shelf
 * NL-SAS-Laufwerke mit Erweiterungs-Shelfs: Jede Mischung aus DE212C und DE460C Shelfs darf insgesamt 420 NL-SAS Laufwerksschächten und 7 Erweiterungs-Shelfs nicht überschreiten, wenn nur DE212C Shelfs verwendet werden; 8 DE212C Shelfs sind zulässig. Beispiel: 7 DE460C Shelfs oder 8 DE212C Shelfs oder 5 DE460C Shelfs plus 2 DE212 Shelfs.
 * SAS-SSD-Laufwerke mit Erweiterungs-Shelfs: Alle gemischten Shelfs DE212C, DE224C und DE460C dürfen insgesamt 96 SAS-SSD-Laufwerksschächte und 7 Erweiterungs-Shelfs nicht überschreiten, sofern nur DE212C Shelfs verwendet werden. Anschließend sind 8 DE212C Shelfs zulässig. Beispiel: 1 DE460C Shelf plus 1 DE224C Shelf plus 1 DE212C Shelf, 4 DE224C Shelfs oder 8 DE212C Shelfs
@@ -306,6 +396,7 @@ Verfügbar mit folgenden Schnittstellen:
 * 1 GB oder 10GBASE-T iSCSI
 * 1 GB, 10 GB oder 25 GB iSCSI
 * 8 GB, 16 GB oder 32 GB FC
+* 12gb SAS
 
 
 --

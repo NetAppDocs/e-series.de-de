@@ -1,7 +1,7 @@
 ---
 permalink: maintenance-ef600/drives-replace-EF600-supertask-task.html 
 sidebar: sidebar 
-keywords: replace EF300 DIMM, replace EF600 DIMM, drive failure 
+keywords: EF600, EF600C replace DIMM, drive failure 
 summary: Ersetzen Sie ein Laufwerk in einem EF600 Array. 
 ---
 = Ersetzen Sie ein Laufwerk in einem EF600 Array
@@ -11,7 +11,7 @@ summary: Ersetzen Sie ein Laufwerk in einem EF600 Array.
 
 
 [role="lead"]
-Ein Laufwerk kann in einem EF600 Array ersetzt werden.
+Sie können ein Laufwerk in einem EF600- oder EF600C-Array ersetzen.
 
 .Über diese Aufgabe
 Der Recovery Guru in SANtricity System Manager überwacht die Laufwerke im Storage Array und benachrichtigt Sie über einen bevorstehenden Laufwerksausfall oder tatsächlichen Laufwerksausfall. Wenn ein Laufwerk ausfällt, leuchtet die gelbe Warn-LED. Sie können ein ausgefallenes Laufwerk im laufenden Betrieb austauschen, während das Speicher-Array I/O-Vorgänge empfängt

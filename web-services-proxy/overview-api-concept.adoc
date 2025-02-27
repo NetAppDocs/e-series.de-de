@@ -213,8 +213,3 @@ Gibt an, dass eine Antragsbegrenzung überschritten wurde und zu einem späteren
 Nein
 
 |===
-
-
-== Beispielskripts
-
-GitHub enthält ein Repository für die Sammlung und Organisation von Beispielskripten, die die Verwendung der NetApp SANtricity Web Services API veranschaulichen. Informationen zum Zugriff auf das Repository finden Sie unter https://github.com/NetApp/webservices-samples["Beispiele für NetApp Webservices"^].
