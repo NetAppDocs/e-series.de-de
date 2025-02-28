@@ -58,6 +58,14 @@ Wenn Sie die Controller austauschen, um ein Upgrade auf ein neues Modell durchzu
 +
 Beim Upgrade des E-Series Controllers sollten Sie alle Premium-Funktionen des Storage-Arrays deaktivieren, die auf den neuen Controllern nicht unterstützt werden.
 
+* *Bandinterne Verwaltung mit dem Access Volume*
++
+** Der E4000 unterstützt keine bandinterne Verwaltung mit dem Access Volume.
++
+Heben Sie vor dem Upgrade auf E4000-Controller die Zuordnung des Access Volumes zu allen definierten Hosts und Host-Clustern auf.
+
+
+
 
 
 
@@ -84,6 +92,7 @@ Bestellen Sie eine neue Batterie.
 * E4000 kann nur 512 Volumes unterstützen
 * E4000 unterstützt keine SAS-Konfigurationen
 * E4000 unterstützt keine Remote Storage Volumes
+* Der E4000 unterstützt keine bandinterne Verwaltung mit dem Access Volume.
 
  a| 
 E4000 Controller müssen SAS-3-Shelfs verwenden.
@@ -107,6 +116,8 @@ Bestellen Sie eine neue Batterie.
 
 * Die Unterstützung von InfiniBand-Host-Schnittstellenkarten ist nicht verfügbar
 * E4000 unterstützt keine SAS-Konfigurationen
+* E4000 unterstützt keine Remote Storage Volumes
+* Der E4000 unterstützt keine bandinterne Verwaltung mit dem Access Volume.
 
  a| 
 E4000 Controller müssen SAS-3-Shelfs verwenden.

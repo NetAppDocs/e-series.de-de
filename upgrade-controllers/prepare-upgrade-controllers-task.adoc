@@ -56,12 +56,7 @@ Führen Sie die folgenden Schritte in der Reihenfolge aus:
  a| 
 Externes Verschlüsselungsmanagement, alle Laufwerke gesperrt, Sie können vorübergehend nicht auf ein internes Verschlüsselungsmanagement für den Austausch des Controllers umsteigen.
  a| 
-Führen Sie die folgenden Schritte in der Reihenfolge aus:
-
-.. Notieren Sie die Adresse und die Portnummer des externen KMS-Servers. Wählen Sie in System Manager Menü:Einstellungen[System > Sicherheitsschlüsselverwaltung > Einstellungen für Key Management Server anzeigen/bearbeiten].
-.. Stellen Sie sicher, dass die Client- und Server-Zertifikate auf Ihrem lokalen Host verfügbar sind, damit sich das Speicherarray und der Schlüsselverwaltungsserver nach Abschluss des Controller-Austauschs gegenseitig authentifizieren können. Verwenden Sie die `save storageArray keyManagementCertificate` CLI-Befehl zum Speichern der Zertifikate. Stellen Sie sicher, dass Sie den Befehl zweimal, einmal mit dem ausführen `certificateType` Parameter auf gesetzt `client`, Und der andere mit dem Parameter auf gesetzt `server`.
-.. Exportieren Sie die interne Sicherheitsschlüsseldatei an einen bekannten Speicherort auf dem Management-Client (das System mit einem Browser, der für den Zugriff auf System Manager verwendet wird). Verwenden Sie die `export storageArray securityKey` CLI-Befehl. Sie müssen den Passphrase angeben, der mit dem Sicherheitsschlüssel verknüpft ist, und den Speicherort angeben, an dem der Schlüssel gespeichert werden soll.
-
+Wenden Sie Sich An Den Kundendienst.
 
 
 

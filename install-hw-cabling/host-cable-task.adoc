@@ -19,15 +19,22 @@ Host kann direkt mit einem Controller (Direct-Attached Topology) verbunden oder 
 
 Über eine Direct-Attached-Topologie werden Host-Adapter direkt mit Controllern in Ihrem Storage-System verbunden.
 
-Die folgende Abbildung zeigt eine Beispielverbindung. Verwenden Sie alle verfügbaren Host-Adapter-Ports, um eine maximale Performance zu gewährleisten.
+Verwenden Sie alle verfügbaren Host-Adapter-Ports, um eine maximale Performance zu gewährleisten.
 
-.Zwei Hosts und zwei Controller
-image::../media/topology_host_direct_generic_web_low.png[Verkabelung von zwei Hosts und zwei Controllern]
+.Ein Host mit zwei HBAs
+Die folgende Abbildung zeigt ein Beispiel für einen Host mit zwei installierten HBAs.
 
-*(1)* _Verbinden Sie jeden Host-Adapter-Port direkt mit den Host-Ports der Controller._
+image::../media/1host_2hbas_ieops-2145.svg[Verkabelung von einem Host/zwei HBAs und zwei Controllern]
 
+.Ein Host mit zwei HBAs (alternative Verkabelung)
+Die folgende Abbildung zeigt ein Beispiel für einen Host mit zwei installierten HBAs.
 
-NOTE: Stellen Sie für das E4000 eine Verbindung zu den Host-Ports e0a und e0b her.
+image::../media/1host_2hbas_alternate_wkflw_ieops-2147.svg[Verkabelung von einem Host/zwei HBAs und zwei Controllern (alternative Verkabelung)]
+
+.Zwei Hosts mit zwei HBAs pro Host
+Die folgende Abbildung zeigt ein Beispiel für zwei Hosts mit jeweils zwei installierten HBAs.
+
+image::../media/2hosts_4hbas_ieops-2146.svg[Verkabelung von zwei Host-/vier HBAs und zwei Controllern]
 
 
 
@@ -43,6 +50,3 @@ image::../media/topology_host_fabric_generic.png[Zwei Hosts und zwei Switch-Verk
 *(1)* _Schließen Sie jeden Hostadapter direkt an den Switch an._
 
 *(2)* _Schließen Sie jeden Switch direkt an die Host-Ports der Controller an. Um eine maximale Leistung zu gewährleisten, verwenden Sie alle verfügbaren Host Adapter Ports._
-
-
-NOTE: Stellen Sie für das E4000 eine Verbindung zu den Host-Ports e0a und e0b her.

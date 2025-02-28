@@ -604,7 +604,11 @@ image::../media/sam1130_ss_e2800_change_feature_pack_feature_enable_identifier_c
 +
 ** Seriennummer Des Chassis
 ** Aktivierungscode Für Die Funktion
-** KENNZEICHENKENNUNG aktivieren: Die Website zur Aktivierung der Premium-Funktion enthält einen Link zu „`Aktivierungsanweisungen für Premium-Funktionen`“. Versuchen Sie nicht, diese Anweisungen für dieses Verfahren zu verwenden.
+** Kennzeichner Für Feature-Aktivierung
++
+
+NOTE: Die Website zur Aktivierung von Premium-Funktionen enthält einen Link zu „`Anweisungen zur Aktivierung von Premium-Funktionen`“. Versuchen Sie nicht, diese Anweisungen für dieses Verfahren zu verwenden.
+
 
 
 . Wählen Sie aus, ob Sie die Schlüsseldatei für das Feature Pack in einer E-Mail erhalten oder direkt von der Website herunterladen möchten.

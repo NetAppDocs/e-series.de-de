@@ -29,18 +29,18 @@ Führen Sie diese Schritte für das interne Verschlüsselungsmanagement aus, wen
 Die neu getauschten Controller werden mit einem siebensegmentreichen Anzeigefeld von *L5* gesperrt. Diese Sperre tritt auf, wenn keine Laufwerke die Autocodierung (ACS) durchführen können. Nach dem Import des Sicherheitsschlüssels wird ACS die neuen Controller wieder aufgenommen und aktualisiert.
 
 
-NOTE: Wenn Sie Management-Port 1 nicht verwenden, versuchen Sie es mit anderen Standard-IP-Adressen: + Strg A Port 1: 192.168.128.101 + Strg A Port 2: 192.168.128.102 + Strg B Port 1: 192.168.129.101 + Strg B Port 2: 192.168.129.102
+NOTE: Wenn Sie Management-Port 1 nicht verwenden, versuchen Sie es mit anderen Standard-IP-Adressen: + Strg A Port 1: 169.254.128.101 + Strg A Port 2: 169.254.128.102 + Strg B Port 1: 169.254.128.101 + Strg B Port 2: 169.254.128.102
 
 .Schritte
 . Stellen Sie eine direkte, private ethernet-Verbindung zwischen dem Speicher-Array und dem Laptop oder PC des SANtricity-Clients her. Dazu:
 +
 .. Verwenden Sie ein RJ45-ethernet-Kabel, um den Laptop mit dem Verwaltungsport 1 an Controller A zu verbinden
-.. Um die Verbindung abzuschließen, müssen Sie den Laptop möglicherweise einer IP-Adresse in demselben Subnetz wie Controller A zuweisen Während der Sperre des Controllers A wird standardmäßig eine Managementadresse von 192.168.128.101 verwendet. Sie können den Laptop also einem Subnetz wie „192.168.128.201“ zuweisen.
+.. Um die Verbindung abzuschließen, müssen Sie den Laptop möglicherweise einer IP-Adresse im selben Subnetz zuweisen wie Controller A. während der Controller-Sperrung wird Controller A standardmäßig auf die Managementadresse 169.254.128.101 gesetzt. Sie können den Laptop also einem Subnetz wie „169.254.128.201“ zuweisen.
 
 
-. Mit der IP-Adresse 192.168.128.101 mit dem Benutzernamen *admin* und dem Passwort-Leereinschub importieren Sie den internen Schlüssel mit dem `import storageArray securityKey file` CLI-Befehl, mit dem Sicherheitsschlüssel gespeichert aus link:prepare-upgrade-controllers-task.html["Controller-Upgrades vorbereiten"]. Informationen zur Verwendung dieses Befehls finden Sie im https://docs.netapp.com/us-en/e-series-cli/index.html["Referenz für Befehlszeilenschnittstelle"].
+. Importieren Sie unter Verwendung der IP-Adresse 169.254.128.101 mit dem Benutzernamen *admin* und dem Passwort leer den internen Schlüssel mit dem `import storageArray securityKey file` CLI-Befehl, wobei der Sicherheitsschlüssel aus gespeichert link:prepare-upgrade-controllers-task.html["Controller-Upgrades vorbereiten"]ist. Informationen zur Verwendung dieses Befehls finden Sie im https://docs.netapp.com/us-en/e-series-cli/index.html["Referenz für Befehlszeilenschnittstelle"].
 +
-*Beispiel:* `SMcli 192.168.128.101 -u admin -p "" -c "import storageArray securityKey file=\"Directory&FileName\" passPhrase=\"passPhraseString\";"`
+*Beispiel:* `SMcli 169.254.128.101 -k -u admin -p "" -c "import storageArray securityKey file=\"Directory&FileName\" passPhrase=\"passPhraseString\";"`
 
 +
 Alternativ können Sie den internen Schlüssel über die Rest-API über den folgenden Aufruf importieren: `/storage-systems/{system-id}/security-key/import`
@@ -58,40 +58,25 @@ Führen Sie diese Schritte für externes Verschlüsselungsmanagement aus, wenn a
 .Über diese Aufgabe
 Die neu getauschten Controller werden mit einem siebensegmentreichen Anzeigefeld von *L5* gesperrt. Diese Sperre tritt auf, wenn keine Laufwerke die Autocodierung (ACS) durchführen können. Nach dem Import des Sicherheitsschlüssels wird ACS die neuen Controller wieder aufgenommen und aktualisiert.
 
-
-NOTE: Ihr Speicher-Array muss sich im optimalen Zustand befinden, um Client- und Serverzertifikate abzurufen. Wenn die Zertifikate nicht abgerufen werden können, müssen Sie eine neue Zertifikatsignierungsanforderung (CSR) erstellen und dann das Serverzertifikat aus dem externen Schlüsselverwaltungsserver importieren.
-
 .Schritte
 . Stellen Sie eine direkte, private ethernet-Verbindung zwischen dem Speicher-Array und dem Laptop oder PC des SANtricity-Clients her. Dazu:
 +
 .. Verwenden Sie ein RJ45-ethernet-Kabel, um den Laptop mit dem Verwaltungsport 1 an Controller A zu verbinden
-.. Um die Verbindung abzuschließen, müssen Sie den Laptop möglicherweise einer IP-Adresse in demselben Subnetz wie Controller A zuweisen Während der Sperre des Controllers A wird standardmäßig eine Managementadresse von 192.168.128.101 verwendet. Sie können den Laptop also einem Subnetz wie „192.168.128.201“ zuweisen.
+.. Um die Verbindung abzuschließen, müssen Sie den Laptop möglicherweise einer IP-Adresse im selben Subnetz zuweisen wie Controller A. während der Controller-Sperrung wird Controller A standardmäßig auf die Managementadresse 169.254.128.101 gesetzt. Sie können den Laptop also einem Subnetz wie „169.254.128.201“ zuweisen.
 
 
-. Richten Sie mit der Standard-IP-Adresse 192.168.128.101 mit dem Benutzernamen *admin* und dem Passwort-Leereinschub den externen Schlüsselverwaltungsserver mit ein `set storageArray externalKeyManagement` CLI-Befehl und geben den an `serverAddress` Und `serverPort` Gespeichert von link:prepare-upgrade-controllers-task.html["Controller-Upgrades vorbereiten"]. Informationen zur Verwendung dieses Befehls finden Sie im https://docs.netapp.com/us-en/e-series-cli/index.html["Referenz für Befehlszeilenschnittstelle"].
+. link:prepare-upgrade-controllers-task.html["Controller-Upgrades vorbereiten"]Importieren Sie den externen Schlüssel mit dem von gespeicherten Sicherheitsschlüssel in die IP-Adresse 169.254.128.101, wobei der Benutzername *admin* und das Passwort leer bleiben.
 +
-*Beispiel:* `SMcli 192.168.128.101 -u admin -p "" -c "set storageArray externalKeyManagement serverAddress=<ServerIPAddress> serverPort=<serverPort>;"`
-
-+
-Alternativ können Sie den externen Verschlüsselungsmanagement-Server über die Rest-API über den folgenden Anruf einrichten: `/storage-systems/{system-id}/external-key-server`
-
-. Importieren Sie die Zertifikate unter Verwendung der Standard-IP-Adresse 192.168.128.101 mit dem Benutzernamen *admin* und dem noch leeren Kennwort mit dem `storageArray keyManagementCertificate` CLI-Befehl: Einmal für das Clientzertifikat und ein zweites Mal für das Serverzertifikat.
-+
-*Beispiel A:* `SMcli 192.168.128.101 -u admin -p "" -c "download storageArray keyManagementCertificate certificateType=client file=\"Directory&FileName\";"`
-
-+
-*Beispiel B:* `SMcli 192.168.128.101 -u admin -p "" -c "download storageArray keyManagementCertificate certificateType=server file=\"Directory&FileName\";"`
-
-+
-Alternativ können Sie das Schlüsselserver-Zertifikat über die Rest-API über den folgenden Aufruf importieren: `/storage-systems/{system-id}/external-key-server/certificate`
-
-. Verwenden des Sicherheitsschlüssels aus link:prepare-upgrade-controllers-task.html["Controller-Upgrades vorbereiten"]Importieren Sie den externen Schlüssel mit dem Benutzernamen *admin* in die IP-Adresse 192.168.128.101 und dem leeren Kennwort.
-+
-*Beispiel:* `SMcli 192.168.128.101 -u admin -p "" -c "import storageArray securityKey file=\"Directory&FileName\" passPhrase=\"passPhraseString\";"`
+*Beispiel:* `SMcli 169.254.128.101 -k -u admin -p "" -c "import storageArray securityKey file=\"Directory&FileName\" passPhrase=\"passPhraseString\";"`
 
 +
 Alternativ können Sie den externen Schlüssel über die Rest-API über den folgenden Aufruf importieren: `/storage-systems/{system-id}/security-key/import`
 
-
-
++
 Die Controller werden mit der Synchronisierung von Autocodes von den Laufwerken fortgesetzt und neu gestartet. Nach dem Neustart können die Controller über die ursprüngliche IP-Konfiguration aufgerufen werden.
+
+. (Optional) bei Bedarf können die Laufwerke mit einem Rekeying neu coden, indem Sie die folgenden Schritte ausführen:
++
+*Beispiel:* `SMcli <original_controller _ip> -u admin -p "<original_array_password>" -c "create storageArray securityKey" passPhrase=\"passPhraseString\" file=\"filename\";”`
+
+

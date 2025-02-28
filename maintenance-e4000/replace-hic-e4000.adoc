@@ -249,7 +249,10 @@ NOTE: Wenn Sie die Griffschraube mit den Fingern lösen, müssen Sie möglicherw
 . Installieren Sie die HIC neu:
 +
 .. Richten Sie den Sockel am Ersatz-HIC-Stecker an der Buchse auf der Hauptplatine aus, und setzen Sie die Karte dann vorsichtig in den Sockel ein.
-.. Ziehen Sie die drei Rändelschrauben an der HIC fest.
+.. Ziehen Sie die drei Rändelschrauben am HIC von Hand fest.
++
+Verwenden Sie keinen Schraubendreher, oder ziehen Sie die Schrauben möglicherweise zu fest.
+
 .. Bringen Sie die HIC-Frontplatte wieder an.
 
 

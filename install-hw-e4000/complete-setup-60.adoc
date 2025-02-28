@@ -19,6 +19,9 @@ Erfahren Sie, wie Sie die Controller mit Ihrem Netzwerk verbinden und die Einric
 
 Verkabeln Sie das System entsprechend Ihrer Netzwerktopologie.
 
+
+NOTE: Für die Verkabelung des Daten-Hosts können die Host-Ports auf der unteren linken Seite (e1a, e1b, e1c und e1d) und auf der oberen rechten Seite (e0a und e0b) des Controllers verwendet werden.
+
 [role="tabbed-block"]
 ====
 .Option 1: Direct-Attached-Topologie
@@ -27,8 +30,11 @@ Das folgende Beispiel zeigt die Verkabelung zu den Daten-Hosts mithilfe einer Di
 
 image:../media/drw_e4060_direct_topology_ieops-2048.svg["E4060 Direct Topology, Breite=1000px"]
 
-. Verbinden Sie jeden Host-Adapter direkt mit den Host-Ports e0a und e0b auf den Controllern.
+. Verbinden Sie jeden Host-HBA-Port mit den Host-Ports der Controller (e1a, e1b, e1c und e1d oder e0a und e0b).
 
+
+
+NOTE: Weitere Beispiele für Verkabelungsdiagramme finden Sie unter https://docs.netapp.com/us-en/e-series/install-hw-cabling/host-cable-task.html#cabling-for-a-direct-attached-topology["Host-Verkabelung"^].
 
 --
 .Option 2: Fabric-Topologie
@@ -38,7 +44,7 @@ Das folgende Beispiel zeigt die Verkabelung zu den Daten-Hosts mithilfe einer Fa
 image:../media/drw_e4060_fabric_topology_ieops-2049.svg["E4060 Fabric-Topologie, Breite=1000px"]
 
 . Verbinden Sie jeden Host-Adapter direkt mit dem Switch.
-. Verbinden Sie jeden Switch direkt mit den Host-Ports e0a und e0b auf den Controllern.
+. Jeden Switch wird direkt mit den Host-Ports der Controller (e1a, e1b, e1c und e1d oder e0a und e0b) verbunden.
 
 
 --

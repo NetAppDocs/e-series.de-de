@@ -19,15 +19,10 @@ Wenn Sie eine HIC ersetzen, setzen Sie den Controller offline (für Duplexkonfig
 
 .Bevor Sie beginnen
 * Prüfen link:hics-overview-supertask-concept.html["Anforderungen für den Austausch der E5700 HIC"].
-* Planen Sie für dieses Verfahren ein Wartungsfenster zur Ausfallzeit. Die Stromversorgung muss ausgeschaltet sein, wenn Sie HICs installieren. Daher können Sie erst dann auf Daten im Speicher-Array zugreifen, wenn Sie diesen Vorgang erfolgreich abgeschlossen haben. (In einer Duplexkonfiguration müssen beide Controller beim Einschalten die gleiche HIC-Konfiguration aufweisen.)
 * Überprüfen Sie, ob keine Volumes verwendet werden oder ob auf allen Hosts, die diese Volumes verwenden, ein Multipath-Treiber installiert ist.
 * Überprüfen Sie im SANtricity System Manager die Details im Recovery Guru, um zu überprüfen, ob eine fehlerhafte HIC vorhanden ist, und um sicherzustellen, dass keine anderen Elemente behoben werden müssen, bevor Sie die HIC entfernen und ersetzen können.
 * Stellen Sie sicher, dass Sie Folgendes haben:
 +
-** Zwei HICs, die mit Ihren Controllern kompatibel sind.
-+
-Bei Duplexkonfigurationen (zwei Controller) müssen die HICs, die in den beiden Controller-Kanistern installiert sind, identisch sein. Wenn nicht übereinstimmende HIC vorhanden sind, wird der Controller mit der Ersatz-HIC gesperrt, wenn Sie ihn online schalten.
-
 ** Ein ESD-Armband, oder Sie haben andere antistatische Vorsichtsmaßnahmen getroffen.
 ** A #1 Kreuzschlitzschraubendreher.
 ** Etiketten, um jedes Kabel zu identifizieren, das mit dem Controller-Behälter verbunden ist.
