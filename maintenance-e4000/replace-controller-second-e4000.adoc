@@ -242,6 +242,7 @@ Wenn Sie den Controller-Leereinschub entfernen, schwenkt eine Klappe an ihre Ste
 
 Installieren Sie einen zweiten Controller-Behälter, um eine Simplex-Konfiguration in eine Duplexkonfiguration zu ändern.
 
+. Wenn Sie nicht bereits geerdet sind, sollten Sie sich richtig Erden.
 . Drehen Sie den Controller-Behälter so um, dass die abnehmbare Abdeckung nach unten zeigt.
 . Richten Sie das Ende des Controller-Moduls an der Öffnung im Gehäuse aus, und drücken Sie dann vorsichtig das Controller-Modul zur Hälfte in das System.
 . Schieben Sie das Steuermodul fest in die offene Position, bis es auf die Mittelebene trifft und vollständig sitzt, und schließen Sie dann den Nockengriff in die verriegelte Position.

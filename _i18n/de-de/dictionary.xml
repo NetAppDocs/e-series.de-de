@@ -1481,7 +1481,6 @@
   <block id="ff40532dff4b037ce856913e299ba082" category="list-text">Zwingen Sie ein DIMM niemals in ein Regal, und verwenden Sie einen sanften, festen Druck, um die Verriegelung vollständig zu einrasten.</block>
   <block id="66f6bddfd3a19d26b876f64fd0a5904d" category="list-text">Beim Versand von DIMMs stets zugelassene Verpackungen verwenden.</block>
   <block id="dd198dc6de0b4192b1ff66f211b2b5cf" category="list-text">Magnetfelder vermeiden. Halten Sie DIMMs von magnetischen Geräten fern.</block>
-  <block id="f35307ec092e89906d40c7e7580fd73e" category="summary">Ein Controller besteht aus einer Hauptplatine, Firmware und Software. Sie steuert die Laufwerke und implementiert die Funktionen von System Manager. In diesem Abschnitt wird beschrieben, wie ein einzelner Controller oder beide Controller in Ihrem EF300- oder EF600-Controller-Shelf ersetzt werden.</block>
   <block id="8530051dab9b284655e9ee0a33594d15" category="summary">Ersetzen Sie die Netzteile, wenn sie im EF300- oder EF600-Controller ausfallen.</block>
   <block id="da0fe5b0a30a5d2ccf0e0f907ffc5a0a" category="doc">Ersetzen Sie ein EF300- oder EF600-Netzteil</block>
   <block id="539a53ce95a48163a8ce44101d02382c" category="paragraph">Wenn ein Netzteil ausfällt, müssen Sie es so schnell wie möglich ersetzen, damit das Controller Shelf über eine redundante Stromversorgung verfügt.</block>
@@ -1507,7 +1506,6 @@
   <block id="b15fcbb0e2b660f1f1850816bf57f89b" category="list-text">Vergewissern Sie sich, dass der Status optimal lautet, und überprüfen Sie die Warn-LEDs für das Controller-Shelf.</block>
   <block id="f6dc5868c20eb29c31ee714e66081346" category="list-text">Klicken Sie im SANtricity System Manager auf MENU:Support[Upgrade Center], um sicherzustellen, dass die neueste Version des SANtricity Betriebssystems installiert ist.</block>
   <block id="3dbc4b1fda3f7e5b612f7b6c5b1c62db" category="paragraph">Der Austausch des Netzteils ist abgeschlossen. Sie können den normalen Betrieb fortsetzen.</block>
-  <block id="8efc2bb6da7e629c408a29a1c453f118" category="summary">Sie können das Host-Protokoll in ein anderes Protokoll umwandeln, sodass die Kompatibilität gewährleistet ist, und Sie das Protokoll Ihrer Host-Verbindungen in ein anderes Protokoll konvertieren können, um Ihre Infrastrukturanforderungen zu erfüllen.</block>
   <block id="48e2b045fa39b95719036a981e221f27" category="doc">Protokollkonvertierung für Host-Ports</block>
   <block id="acb59c490b88aab163fb28f7093d5473" category="summary">Führen Sie nach dem Konvertieren des Protokolls der Host-Ports weitere Schritte durch, um das neue Protokoll zu verwenden.</block>
   <block id="3f0c3171c468bf6044f31c2b3ca39357" category="doc">Vollständige Hostprotokollkonvertierung für eine EF300 oder EF600</block>
@@ -1720,8 +1718,6 @@
   <block id="7c0227c6fb5206af3eba6ba6a4349b86" category="paragraph">Wenn der Status nicht optimal ist oder eine der Warn-LEDs leuchtet, vergewissern Sie sich, dass alle Kabel richtig eingesetzt sind und der Controller-Behälter richtig installiert ist. Gegebenenfalls den Controller-Behälter ausbauen und wieder einbauen.</block>
   <block id="3aea2395eb1945801b3ad83556c9d15a" category="list-text">Klicken Sie auf MENU:Support[Upgrade Center], um sicherzustellen, dass die neueste Version von SANtricity OS installiert ist.</block>
   <block id="efd279df83f7980b63864ad37d922c7b" category="paragraph">Der Austausch des Akkus ist abgeschlossen. Sie können den normalen Betrieb fortsetzen.</block>
-  <block id="51255c5d39d4b9a43a7f800db3b8a431" category="doc">Netzteile</block>
-  <block id="9e82bbc678cd60ca1e23c9306295675e" category="summary">Sie müssen ein DIMM ersetzen, wenn eine Speicherabweichung vorliegt oder ein ausgefallenes DIMM vorliegt.</block>
   <block id="3445e7362b27e4ba74cabda5b497847f" category="summary">Prüfen Sie die Anforderungen und Überlegungen, bevor Sie eine EF300- oder EF600-HIC ersetzen.</block>
   <block id="7ff977d3382830f3eff92120544b15ab" category="list-text">Sie haben für dieses Verfahren ein Zeitfenster für die Wartung von Ausfallzeiten eingeplant. Sie können erst nach erfolgreichem Abschluss dieses Verfahrens auf Daten im Speicher-Array zugreifen. Da beide Controller beim Einschalten die gleiche HIC-Konfiguration haben müssen, muss der Strom beim Ändern der HIC-Konfiguration ausgeschaltet sein. Wenn nicht übereinstimmende HIC vorhanden sind, wird der Controller mit der Ersatz-HIC gesperrt, wenn Sie ihn online schalten.</block>
   <block id="cc3ec06987332d6dbb0413ed7e4c657b" category="list-text">Für die Verbindung der neuen Host-Ports sind alle Kabel, Transceiver, Switches und Host Bus Adapter (HBAs) erforderlich.</block>
@@ -1899,7 +1895,6 @@
   <block id="3a35aeaf167e71373e4f42c63fa412a6" category="paragraph">Optional können Sie einige der Verfahren mit der Befehlszeilenschnittstelle (CLI) ausführen. Wenn Sie keinen Zugriff auf die CLI haben, können Sie einen der folgenden Aktionen ausführen:</block>
   <block id="31380923165d24c4bc7be3835c03f97d" category="list-text">*Für SANtricity System Manager (Version 11.60 und höher)* -- Laden Sie das CLI-Paket (ZIP-Datei) aus dem System Manager herunter. Wechseln Sie zum Menü:Einstellungen[System &gt; Add-ons &gt; Command Line Interface]. Sie können dann CLI-Befehle von einer Betriebssystemaufforderung ausgeben, z. B. von der DOS C:-Eingabeaufforderung.</block>
   <block id="d4e243a780f83aeb7aba4ed3ddb02aab" category="list-text">*Für SANtricity Storage Manager/Enterprise Management Window (EMW)* -- Folgen Sie den Anweisungen im Express Guide, um die Software herunterzuladen und zu installieren. Sie können CLI-Befehle über EMW ausführen, indem Sie Menü:Extras[Skript ausführen] auswählen.</block>
-  <block id="9ec28cb381dd9edd5e1a4ad5641fba96" category="summary">Eine Host-Schnittstellenkarte \(HIC\) muss innerhalb eines Controller-Kanisters installiert werden. Der EF600 Controller umfasst Host Ports auf der optionalen HIC. In die HIC integrierte Host Ports werden HIC Ports genannt.</block>
   <block id="bb8c12c938368d891c8a41b75b8dbff5" category="doc">Host-Schnittstellenkarten</block>
   <block id="23f3b9e3a2c47bcddba6d10506fc157b" category="summary">Lesen Sie die Anforderungen und Überlegungen, bevor Sie EF300- oder EF600 Lüfter ersetzen.</block>
   <block id="ccccec3135cfde6cfdbeb41f2c09065e" category="doc">Anforderungen für den Austausch des EF300- oder EF600 Lüfters</block>
@@ -2586,7 +2581,6 @@
   <block id="33178e031c2c47daf3f226ddb1c2d09d" category="list-text">Wenn der Temp-Mount-Punkt nicht über Berechtigungen zum Ausführen verfügt, stellen Sie das ein<block ref="c7b8d09207024f44e1e1557794eaf6cb" prefix=" " category="inline-code"></block> Variabel. Beispiel:<block ref="ba74ff5ce50b1f0da85f943832c4abd1" prefix=" " category="inline-code"></block></block>
   <block id="cf05f726d236e8f5cf320cb338e0ae41" category="list-text">Führen Sie die aus<block ref="6874cbf67da1cf746d2da2fa616ef84b" prefix=" " category="inline-code"></block> Befehl, um der Datei die Berechtigung Ausführen zu erteilen.</block>
   <block id="aae0720da624e87d7a1715de8bc345b7" category="list-text">Führen Sie die aus<block ref="89467e6a99e589ee4c00f3ebe8ffca6e" prefix=" " category="inline-code"></block> Befehl zum Starten des Installationsprogramms.</block>
-  <block id="f849cbf8f2231f3f35d369655c870a3e" category="doc">ISCSI Express Setup</block>
   <block id="045974d2f2f790a851a04cb91a6f273f" category="doc">Greifen Sie auf SANtricity System Manager zu und verwenden Sie den Setup-Assistenten</block>
   <block id="0c6af110b63e1c65cc44419feea8f957" category="summary">Prüfen Sie die Anforderungen für die Verwendung der Express-Methode zur Einrichtung eines E-Series-Arrays und eines Linux-Hosts.</block>
   <block id="dba3433866b5db3692b0b3bfbc55bb97" category="paragraph">Die Linux Express-Methode basiert auf folgenden Annahmen:</block>
@@ -2774,7 +2768,6 @@
   <block id="234576335503cf5628466bba5d971b1d" category="paragraph">Nachdem ein Volume oder ein Volume erfolgreich einem Host oder Host-Cluster zugewiesen wurde, führt das System folgende Aktionen durch:</block>
   <block id="917b830bef791dbce4285c83adef2377" category="list-text">Das zugewiesene Volume erhält die nächste verfügbare NSID. Der Host verwendet die NSID für den Zugriff auf das Volume.</block>
   <block id="2b05781e34e2d192e693365f7f3be3e0" category="list-text">Der vom Benutzer bereitgestellte Volume-Name wird in den Volume-Listen angezeigt, die dem Host zugeordnet sind.</block>
-  <block id="fe4b136586896fd70617258689052356" category="summary">SRP over InfiniBand Express Setup</block>
   <block id="f83d8dbcd02328e3d5b9105033a3d23f" category="summary">Sie können den auf das Geräteziel gerichteten I/O basierend auf Ihrer Linux-Version konfigurieren.</block>
   <block id="147c2a561fc8233057480b38f1176725" category="doc">Zugriff auf NVMe Volumes für physische NVMe Geräte</block>
   <block id="71a0145e77943169ac5f0e901f7138e7" category="paragraph">Sie können die zum Geräteziel gerichteten I/O-Vorgänge auf der Grundlage des Betriebssystems (und der Multipathing-Methode der Erweiterung) konfigurieren.</block>
@@ -3046,9 +3039,6 @@
   <block id="a602b51c709c08f2a0056a93c3f7347c" category="paragraph">Beachten Sie, dass die<block ref="c76a5e84e4bdee527e274ea30c680d79" prefix=" " category="inline-code"></block> Pfad bezieht sich auf<block ref="7bce0d9d390dfad879c5e708e087fc04" prefix=" " category="inline-code"></block>, Also wird die I/O auf diesem Pfad zu Controller B geleitet.</block>
   <block id="6ee2d18851ba4498d7c9ba43881528c3" category="admonition">Bevor Sie den Subnetzmanager konfigurieren, müssen Sie das infiniband-diags-Paket installieren, um die global eindeutige ID (Global Unique ID, GUID) über das zu erhalten<block ref="db1fff1f41e48ae933f89caa6a9035c4" prefix=" " category="inline-code"></block> Befehl. Siehe <block ref="59608be4b8a68b7f95e7aa6a8924d39f" category="inline-xref-macro-rx"></block> Weitere Informationen zur Installation des infiniband-diags-Pakets</block>
   <block id="2e71e539473524a77fed5be033e08099" category="list-text">Verwenden Sie die<block ref="db1fff1f41e48ae933f89caa6a9035c4" prefix=" " category="inline-code"></block> Befehl zum Suchen<block ref="7804c104033334dfd1f4483b356e7e80" prefix=" " category="inline-code"></block> Und<block ref="a343d59b38a9422b5e453e8b5ab007c0" prefix=" " category="inline-code"></block> Der HBA-Ports. Beispiel:</block>
-  <block id="7e9eed90ab06645af09e14e4688144a5" category="summary">NVMe kann mit dem RDMA over Converged Ethernet \ (RoCE\)-Netzwerkprotokoll verwendet werden.</block>
-  <block id="e5acd4f564771f3dbba3bdeb6b6bcfe5" category="doc">Setup von NVMe over RoCE Express</block>
-  <block id="d94efd3fa425e38d7761fba32eb7bc67" category="paragraph">NVMe kann mit dem RDMA over Converged Ethernet (RoCE)-Netzwerkprotokoll verwendet werden.</block>
   <block id="44da8255024278223616706dabffdcf2" category="admonition">Bevor Sie den Subnetzmanager konfigurieren, müssen Sie das infiniband-diags-Paket installieren, um die global eindeutige ID (Global Unique ID, GUID) über das zu erhalten<block ref="db1fff1f41e48ae933f89caa6a9035c4" prefix=" " category="inline-code"></block> Befehl. Siehe <block ref="8968844fa75d7274ef053da34cb4323f" category="inline-xref-macro-rx"></block> Weitere Informationen zur Installation des infiniband-diags-Pakets</block>
   <block id="2cda2abb38b68dfe292b9358bd33f81c" category="summary">Verwenden Sie dieses Arbeitsblatt, um Informationen zur NVMe over RoCE-Storage-Konfiguration aufzuzeichnen.</block>
   <block id="6d41d914d8534cc142bcbdf1bdd611d4" category="doc">Nehmen Sie die NVMe-over-RoCE-Konfiguration auf</block>
@@ -3061,7 +3051,6 @@
   <block id="decdd7cb14919e61d850e61099b2b701" category="list-text">Subnetz 4: Host 2 HCA-Port 2 und Controller 2 Host-Port 2</block>
   <block id="c318d779fc072ffe72c7c3dd1e42553c" category="paragraph">In einer Fabric-Topologie werden ein oder mehrere Switches verwendet. Siehe<block ref="0aaf04254af18646f3d246cd4a4b417d" category="inline-link-rx"></block> Für eine Liste der unterstützten Switches.</block>
   <block id="257b40198f0083663eee051dc8899cd7" category="cell">Software-Initiator NQN</block>
-  <block id="1914877215ade75b06ba34ce70bb51dd" category="summary">SAS Express Setup</block>
   <block id="1bfd8936faf8d2d6e911732cc86fad64" category="doc">Fibre Channel Express-Einrichtung</block>
   <block id="2d59c1932fb82d6e7c73a375ed97221d" category="summary">Konfigurieren Sie Multipath-Software so, dass sie einen redundanten Pfad zum Storage Array bereitstellen kann, falls einer der physischen Pfade unterbrochen wird.</block>
   <block id="7bfe6a8c2694c58155bcb8132f65ecd8" category="list-text">Aktivieren Sie die<block ref="8732863da72605a20ed96b4eee87a5fb" prefix=" " category="inline-code"></block> Daemon beim Booten.</block>
@@ -3144,7 +3133,6 @@
   <block id="fc9c6bf5eb7d76688cd8db54a383c5cc" category="paragraph">Host 1, Port 2</block>
   <block id="f15f41cd112f9c6bb8005736b53199ec" category="paragraph">(Optional) Host 2, Port 2</block>
   <block id="3a12d0edc81531758f12c83024fbc77e" category="summary">LInstall Linux Unified Host Utilities bei Verwendung von iSER.</block>
-  <block id="c96c96aa9e9942faabac2551c9847a4a" category="doc">ISER-over-InfiniBand-Express-Setup</block>
   <block id="ee732210e813ba3c59eefd70d8487e35" category="summary">Der InfiniBand-OFED-Treiber-Stack unterstützt sowohl iSER als auch SRP gleichzeitig auf den gleichen Ports, sodass keine zusätzliche Hardware erforderlich ist.</block>
   <block id="fd53582d98576d62eda5f16303b353cc" category="doc">Konfigurieren Sie das Netzwerk für Storage-verbundene Hosts</block>
   <block id="f5468ecf76be3bb4cf77cf63a591d098" category="paragraph">Wenn Ihre Konfiguration das iSER-over-InfiniBand-Protokoll verwendet, führen Sie die in diesem Abschnitt beschriebenen Schritte aus.</block>
@@ -3183,8 +3171,6 @@
   <block id="8d78f4535f282487a2ab3ddd133fb30b" category="list-text">Überprüfen Sie den iscsi-Sitzungsstatus vom Host:</block>
   <block id="c76785f55adb8111b0f0c955e99aaf58" category="list-text">Überprüfen Sie den iscsi-Sitzungsstatus vom Array. Navigieren Sie vom SANtricity-System-Manager zu *Storage-Array* &gt; *iSER* &gt; *Ansicht/End-Sitzungen*.</block>
   <block id="b91274a21d960f7520a6ac949c997991" category="paragraph">Wenn der OFED/RDMA-Service gestartet wird, werden die iSER-Kernelmodule standardmäßig geladen, wenn die iSCSI-Dienste ausgeführt werden. Um das iSER-Verbindungsaufbau abzuschließen, sollten die iSER-Module geladen werden. Derzeit ist ein Neustart des Hosts erforderlich.</block>
-  <block id="eade6022b2fef6a4e03ff35469374cb0" category="summary">NVMe kann mit dem Fibre Channel Protocol verwendet werden.</block>
-  <block id="62896be8239b3396f0ed277cf184b062" category="doc">Einrichtung von NVMe over Fibre Channel Express</block>
   <block id="5dd9d62ce4e8e03736012f8834a6e4fd" category="summary">Sie können den auf das Geräteziel gerichteten I/O basierend auf Ihrer Linux-Version konfigurieren. DM-MP verwaltet die physischen Pfade, die diesen virtuellen Zielen zugrunde liegen.</block>
   <block id="23a1a118541ab0d1766faa1805b06432" category="paragraph">Über den können Sie auf diese Blockgeräte zugreifen<block ref="608e7dc116de7157306012b4f0be82ac" prefix=" " category="inline-code"></block> Gerät oder der<block ref="a978acc8a7ae15f49f58f3495f0d85ba" prefix=" " category="inline-code"></block> In<block ref="9c9f766701f811ef6f170c7a3453c53f" prefix=" " category="inline-code"></block>; Zum Beispiel:</block>
   <block id="c612d2b91ede7407a062457604df3133" category="summary">Die NVMe-Initiatorkonfiguration in einer RoCE-Umgebung umfasst die Installation und Konfiguration von rdma-Core- und nvme-cli-Paketen, die Konfiguration von Initiator-IP-Adressen und das Einrichten der NVMe-of-Schicht auf dem Host.</block>
@@ -3234,8 +3220,6 @@
   <block id="59c71eb9f304131ed908d87a5f9303f9" category="paragraph">Für RHEL 7 und SLES 12 erstellen Sie auf dem gewünschten dm-Gerät ein Dateisystem und mounten das Dateisystem.</block>
   <block id="4253eb4054c56db3b585ae3a53e1819f" category="inline-xref-macro">Arbeitsblatt für iSER-over-InfiniBand</block>
   <block id="210c9515d4a1e9c78e2608d073aeef56" category="list-text">Notieren Sie die GUIDs des Initiators auf der <block ref="00a1f89a34dac59e8a714860454ae51a" category="inline-xref-macro-rx"></block>.</block>
-  <block id="041b8a1391f923a8043830be4a716cdd" category="summary">Sie können NVMe mit dem InfiniBand-Netzwerkprotokoll verwenden.</block>
-  <block id="97cdaaff2a74763683828420ccda083e" category="doc">NVMe over InfiniBand Express Setup</block>
   <block id="11fdd43137cfc836a71e2c84f0134b65" category="summary">Sie können uns dabei helfen, die Qualität unserer Dokumentation zu verbessern, indem Sie uns Ihr Feedback senden. Sie erhalten eine automatische Benachrichtigung, wenn die \(GA/FCS\)-Dokumentation auf Produktionsebene zuerst veröffentlicht wird oder wenn wichtige Änderungen an bestehenden Dokumenten auf Produktionsebene vorgenommen werden.</block>
   <block id="6ab85e747e0c76cd7c95b5eb2dd03018" category="doc">So senden Sie Kommentare zu Dokumentation und erhalten Update-Benachrichtigungen</block>
   <block id="7a5f2d68b34e39986049259c8de51697" category="paragraph">Sie können uns dabei helfen, die Qualität unserer Dokumentation zu verbessern, indem Sie uns Ihr Feedback senden. Sie erhalten eine automatische Benachrichtigung, wenn die Dokumentation auf Produktionsebene (GA/FCS) zuerst veröffentlicht wird oder wenn wichtige Änderungen an bestehenden Dokumenten auf Produktionsebene vorgenommen werden.</block>
@@ -3310,7 +3294,6 @@
   <block id="c8cb4f1aee2006fe3f3c0847fae9a018" category="list-text">Controller in den Offline-Modus versetzen (nur Duplex).</block>
   <block id="b84a32808ea116d00e7fef9e14fae971" category="list-text">Stellen Sie den Controller online (nur Duplex).</block>
   <block id="7e6bf0538a1689eacb3091a1694f8c9a" category="paragraph">Wenn Sie einen fehlerhaften Akku austauschen möchten, müssen Sie Folgendes haben:</block>
-  <block id="e977f6bbcbae61c33920c421cdc41ec2" category="summary">Ein Controller besteht aus einer Hauptplatine, Firmware und Software. Sie steuert die Laufwerke und implementiert die Funktionen von System Manager. In diesem Abschnitt wird beschrieben, wie ein Controller in einer Duplexkonfiguration ausgetauscht wird.</block>
   <block id="b10f1122a2ac0ae08f749f3130b4f503" category="summary">Prüfen der Controller-Typen und -Anforderungen der E5700</block>
   <block id="c1c40e6814bdd362b18d4101c72b2d1e" category="doc">Anforderungen für den Austausch von E5700 Controller</block>
   <block id="c0e2f9e7c4b0a4605e8d83697b8df464" category="paragraph">Bevor Sie einen E5700 Controller ersetzen, lesen Sie bitte die Anforderungen und Überlegungen.</block>
@@ -3857,7 +3840,6 @@
   <block id="5811caab16d9ae3e7df8465579187dda" category="list-text">*OE*, *L6*, *_blank_* (nicht unterstützte HIC) *Achtung:* *möglicher Verlust des Datenzugriffs* -- Wenn der gerade installierte Controller einen dieser Codes anzeigt und der andere Controller aus irgendeinem Grund zurückgesetzt wird, könnte auch der zweite Controller gesperrt werden.</block>
   <block id="738a8c736dcf0a5ae4920a6448ab8da7" category="paragraph">Wenden Sie sich an den technischen Support unter<block ref="2ff36e7792a0e0257d19a11dce8cade8" category="inline-link-rx"></block>, 888-463-8277 (Nordamerika), 00-800-44-638277 (Europa) oder +800-800-80-800 (Asien/Pazifik) wenn Sie die RMA-Nummer benötigen.</block>
   <block id="2af7d274631cea316011b977d54e2eaf" category="paragraph">Der Austausch der HIC ist abgeschlossen. Sie können den normalen Betrieb fortsetzen.</block>
-  <block id="d3852022ece859a54c514fe09a6eef63" category="summary">Eine Host-Schnittstellenkarte \(HIC\) kann optional in einem Controller-Behälter installiert werden. Der E5700 Controller enthält integrierte Host-Ports auf der Controller-Karte selbst sowie Host-Ports auf der optionalen HIC. Host Ports, die in den Controller integriert sind, werden als Baseboard Host Ports bezeichnet. In die HIC integrierte Host Ports werden HIC Ports genannt.</block>
   <block id="5d669a1e6a80e786e403fd16f85a1e2a" category="summary">Ersetzen Sie ein E5700 Netzteil für 60 Laufwerke.</block>
   <block id="aaccbc9da8dec9dbab3d34901242fe76" category="doc">Austausch des E5700 Stromversorgungskansters (60 Laufwerke)</block>
   <block id="3ddcf70e76476f70be4a8451775a8b25" category="paragraph">Sie können ein Netzteil in einem E5700 Array durch ein Shelf mit 60 Laufwerken ersetzen, das die folgenden Shelf-Typen umfasst:</block>
@@ -4422,7 +4404,6 @@
   <block id="60d316243482b983279f012f7ac8a95b" category="list-text">Bei Laufwerken in E2812 Controller-Shelfs oder DE212C Laufwerk-Shelfs befindet sich die Release-Schaltfläche links neben dem Laufwerk.</block>
   <block id="e99674c63b14b473817a8dc0329f1339" category="list-text">Bei Laufwerken in E2824 Controller-Shelfs, EF280 Flash-Array für DE224C Festplatten-Shelfs befindet sich die Schaltfläche oben am Laufwerk. Der Nockengriff an den Antriebsfedern öffnet sich teilweise und der Antrieb löst sich von der Mittelplatine aus.</block>
   <block id="015f72387622e8d8e9832059673d7bfc" category="admonition">Installieren Sie das Ersatzlaufwerk so schnell wie möglich nach dem Entfernen des ausgefallenen Laufwerks. Andernfalls besteht die Gefahr, dass die Ausrüstung überhitzt.</block>
-  <block id="98c3987fb58d5d61350074733f52ec4f" category="summary">Ein Controller besteht aus einer Hauptplatine, Firmware und Software. Sie steuert die Laufwerke und implementiert die Funktionen von System Manager. In diesem Abschnitt wird beschrieben, wie Sie in eine Duplexkonfiguration umwandeln können, indem Sie einen zweiten Controller hinzufügen und einen Controller in einer Simplex-Konfiguration und in einer Duplexkonfiguration ersetzen.</block>
   <block id="10776f286927857ffa70d5d301faab1e" category="summary">Um den Akku zu entfernen, entfernen Sie zuerst den Controller-Behälter aus dem Controller-Regal.</block>
   <block id="0f1b0823e4a8e767cbab21b0145e90cb" category="doc">Den E2800 Controller-Behälter entfernen</block>
   <block id="972e983ac66ba64cc0037a9f8736b122" category="paragraph">Sie müssen den Controller-Behälter aus dem Controller-Regal entfernen, damit Sie den Akku entfernen können.</block>
@@ -4432,7 +4413,6 @@
   <block id="471134ff89f00a0992e23c558e979451" category="paragraph">Wenn Sie den Controller-Behälter aus einem E2812-Controller-Shelf, einem E2824-Controller-Shelf oder einem EF280 Flash-Array entfernen, wird eine Klappe an ihre Stelle gewechselt, um den leeren Schacht zu blockieren. Dadurch wird der Luftstrom und die Kühlung aufrechterhalten.</block>
   <block id="8aae91f7c25304b5182731c073084c4a" category="inline-link-macro">Entfernen Sie den ausgefallenen E2800-Akku</block>
   <block id="bced074790a883c309e038959834cf06" category="list-text">Gehen Sie zu <block ref="f671322c24b2fab62ba8db77a08ebe3f" category="inline-link-macro-rx"></block>.</block>
-  <block id="a3c03452327012e5141c33e5726e73c7" category="summary">Behälter bestehen aus drei verschiedenen Typen: Stromverlüfter-Behälter \ (Netzteile\), die eine redundante Stromquelle und eine ausreichende Kühlung in einem Controller-Shelf mit 12 Laufwerken oder 24 Laufwerken bzw. einem Festplatten-Shelf liefern. Stromversorgungs-Behälter, die für Redundanz in einem Controller-Shelf mit 60 Laufwerken oder einem Festplatten-Shelf verwendet werden. Und Lüfter-Kanister, die zum Kühlen des Controller-Shelfs für 60 Laufwerke oder des Laufwerks-Shelfs verwendet werden.</block>
   <block id="1c8033b3dd4d1a237da90cc9e4c5ab54" category="doc">Controller werden in der E2800 Duplexkonfiguration ersetzt</block>
   <block id="e699f1fef3855bd699703308bf429d5d" category="list-text">E2812 Controller-Shelf</block>
   <block id="93c82328e47f61de6003453f218e91f6" category="list-text">E2824 Controller-Shelf</block>
@@ -4994,7 +4974,6 @@
   <block id="81b73f57f5eaadbb0debd615b8d8a87e" category="list-text">Stoppen Sie Host-I/O-Vorgänge.</block>
   <block id="d0fb6c28a70013ac853ddbd9195f1f70" category="list-text">Schalten Sie das Controller-Shelf ein.</block>
   <block id="d95b1e656b4478a5d1b618e968328907" category="section-title">Anforderungen für den Austausch einer Batterie</block>
-  <block id="00f9ce66241621004c58b2e973a895fd" category="summary">Eine Host-Schnittstellenkarte \(HIC\) kann optional in einem Controller-Behälter installiert werden. Der E2800 Controller enthält integrierte Host-Ports auf der Controller-Karte selbst sowie Host-Ports auf der optionalen HIC. Host Ports, die in den Controller integriert sind, werden als Baseboard Host Ports bezeichnet. In die HIC integrierte Host Ports werden HIC Ports genannt.</block>
   <block id="ca3f06e5fa240b33862857b1c460326e" category="summary">Ersetzen Sie einen Lüfterbehälter in einem Controller-Shelf mit 60 Laufwerken oder einem Festplatten-Shelf.</block>
   <block id="94886d4bc25d5c64534b6b7644bf6900" category="doc">E2800 Lüfterbehälter ersetzen (60 Laufwerke)</block>
   <block id="b1e76414d9a6da60a71f4556eb629a30" category="paragraph">Sie können einen Lüfterbehälter in einem E2800 Array durch ein Shelf mit 60 Laufwerken ersetzen, einschließlich der folgenden Shelf-Typen:</block>
@@ -7059,9 +7038,6 @@
   <block id="4330a8333a41a5ff25585b550f40c179" category="paragraph">Verwenden Sie nach der Installation der Hardware die SANtricity Software zum Konfigurieren und Managen Ihres Storage-Systems.</block>
   <block id="cbb059200dfb7db372e5958a687a7f40" category="list-text">Verwenden Sie die SANtricity Software zum Konfigurieren und Managen Ihrer Storage-Arrays.</block>
   <block id="20a131c60e6c405bb973f52c70e6d104" category="list-text">Verbinden Sie bei der einfachsten Netzwerkkonfiguration den Controller mit einem Webbrowser. Verwenden Sie SANtricity System Manager zum Managen eines einzelnen E2800 oder E5700 Storage-Arrays.</block>
-  <block id="efe6d51a14336eb7344b08061d81c223" category="summary">In diesen Anweisungen wird die Installation und Einrichtung Ihres neuen Storage-Systems sowie Links zu weiteren Inhalten erläutert.</block>
-  <block id="098f41693365f8de503868e97f04f4c4" category="doc">Installations- und Setup-Anleitung für E5724, EF570, EF280, E2812, E2824, DE212C und DE224C</block>
-  <block id="01a6b4e59365da6ed554e20bb2ab5362" category="doc">Installations- und Setup-Anleitung für E2860, E5760 und DE460C</block>
   <block id="e786e438e29d8dc368d2945b22614052" category="summary">Für die Installation der E5724, EF570, EF280, E2812, E2824, DE212C oder DE224C, erstellen Sie ein Konto und registrieren Sie Ihre Hardware.</block>
   <block id="f0c8dd26a4545387eecf2a5210874ccc" category="paragraph">Bereiten Sie sich auf die Installation Ihrer E5724, EF570, EF280, E2812, E2824, DE212C oder DE224C Storage-System.</block>
   <block id="4aef9ac85da2801779223aa21342d5bd" category="paragraph">Shelf mit installierten Laufwerken (Blende separat verpackt)</block>
@@ -8336,8 +8312,6 @@
   <block id="32e0b12538b4abe36e648446dbb8723b" category="paragraph">Verbesserungen Am Laufwerk-Pool</block>
   <block id="82faf4161a36aa8a69bd4c363e6b57cc" category="paragraph">Festplatten-Pools, die mit Controllern erstellt werden, die 11.80 oder höher ausführen, sind _Version 1_ Pools im Gegensatz zu _Version 0_ Pools. Ein Downgrade-Vorgang ist eingeschränkt, wenn ein _Version 1_-Laufwerk-Pool vorhanden ist.</block>
   <block id="45e56b98136f4292dd8c522edf38b3b2" category="paragraph">Die Version eines Laufwerkspools kann im Speicher-Array-Profil identifiziert werden.</block>
-  <block id="82bf7451a207cfbac427edc3bb60fced" category="paragraph">Dies ist eine druckbare PDF-Datei mit Schritt-für-Schritt-Anweisungen mit Live-Links zu weiteren Inhalten.</block>
-  <block id="a2f0a23d015da77ff81697442b8f6aad" category="paragraph">Dies sind die auf diesem Standort beschriebenen Setup-Anweisungen.</block>
   <block id="746ff5a72ad1791e39c47dc0abcdffe3" category="paragraph">Bevor System Manager oder Unified Manager gestartet wird, ist eine Mindestversion des Browsers erforderlich.</block>
   <block id="488c35a42ee48966247c5cc643d96708" category="paragraph">Folgende Versionen werden mindestens unterstützt:</block>
   <block id="5f7273b60d2186e7b7a65eb2cee83294" category="paragraph">Höherer maximaler SSD-Lese-Cache</block>
@@ -8440,19 +8414,14 @@
   <block id="6a177f60e2c78aeead82deed1b7f79bd" category="image-alt">Beispiel für die Verkabelung von Festplatten-Shelfs</block>
   <block id="97d8dba52fc751664d17d634de384761" category="open-title">Schließen Sie das Festplatten-Shelf für E4000 an</block>
   <block id="5d48bd8c60ef301164497e794ae727ca" category="image-alt">EAM-Hardwaresymbol</block>
-  <block id="c5f2c8e37ae34577d9aa27dc0a6d9d6a" category="summary">Sie können das Fibre Channel-Protokoll mit einem Linux Host auf einem E-Series System verwenden.</block>
   <block id="a51352079fbf62de5b216fbcf5f8547f" category="image-alt">Konfiguration des FC-Netzwerks</block>
-  <block id="2c14a3be6c3b57db7707ac6ae99aeb97" category="summary">Sie können das iSCSI-Protokoll mit einem Linux Host auf einem System der E-Series verwenden.</block>
   <block id="035b18714bc5d7aa7c3b19a557b2784d" category="image-alt">ISCSI-Netzwerkkonfiguration</block>
-  <block id="279607469d0ed6f0d6a8dfabbc5b63e2" category="summary">Sie können das iSER-over-InfiniBand-Protokoll mit einem Linux Host auf einem E-Series System verwenden.</block>
   <block id="f6d2572a98e17f547b50d07bd60a4357" category="image-alt">ISER über IB-Netzwerkkonfiguration</block>
   <block id="e25b62b71db71b440f775e632a958e5e" category="image-alt">Beispiel für eine Direct-Connect-Topologie</block>
   <block id="3d673c4735715944ce52ebdb6281a20d" category="image-alt">Beispiel für eine Switch Connect-Topologie</block>
   <block id="5a60c0d89257784a23a8dd439204f7f1" category="image-alt">Beispiel für einen direkten NVMe over Infiniband-Anschluss</block>
   <block id="37370b7d172047a016f376cc6b5258c9" category="image-alt">Beispiel für NVME over RoCE Direct Connect</block>
   <block id="65311bced825a83f85718b09cc4ab673" category="image-alt">Beispiel für NVMe over RoCE Switch Connect</block>
-  <block id="846fb8d171e9dfcce4fd56289d380608" category="summary">Sie können das SAS-Protokoll mit einem Linux-Host auf einem E-Series System verwenden.</block>
-  <block id="ecf0c5c7f835375b8d9275312b470c82" category="summary">Sie können das SRP-over-InfiniBand-Protokoll mit einem Linux Host auf einem E-Series System verwenden.</block>
   <block id="025f0fcb18e01db2892910a53d657f57" category="image-alt">SRB über IB-Port-IDs</block>
   <block id="a9a8836056eb3cc8d01f51eb5c6e7eec" category="list-text">Anweisungen zum Erstellen von VMFS-Datastores oder der Verwendung von Volumes als RDMs mit dem vSphere Client oder dem vSphere Web Client finden Sie unter<block ref="b15a5268225569436f01a761f08cccf7" category="inline-link-rx"></block> .</block>
   <block id="ebaab7c3245c99578b7dd1e67138cccf" category="list-text">Anweisungen zum erneuten Scannen des Speichers auf einem ESXi-Host finden Sie in dem<block ref="151d2130fd8b5e8e7d0d3b596c1bdeb5" category="inline-link-rx"></block> Artikel zu diesem Thema.</block>
@@ -8889,7 +8858,6 @@
   <block id="2f2564b7bd12fa4c137f3761c14d73a3" category="paragraph">Eine Laufwerkschublade kann in einem E4060 Controller-Shelf oder einem DE460C Festplatten-Shelf ersetzt werden.</block>
   <block id="3748f377726945770a9a282453272357" category="paragraph">Die Schritte zum Ersetzen einer fehlerhaften Laufwerksschublade in einem E4060 Controller-Shelf oder einem DE460C Festplatten-Shelf hängen davon ab, ob die Volumes in der Schublade durch Abschubladenschutz geschützt sind. Wenn sich alle Volumes in der Laufwerksschublade in Festplattenpools oder Volume-Gruppen befinden, die einen Schubladenschutz besitzen, können Sie diesen Vorgang online ausführen. Andernfalls müssen Sie alle Host-I/O-Aktivitäten beenden und das Shelf ausschalten, bevor Sie das Laufwerkschublade ersetzen.</block>
   <block id="1103b7e629028daaccac02c0a8fc98d2" category="doc">Ersetzen Sie die Batterie in E4000</block>
-  <block id="543025215967bae569d97988a7e97cbc" category="paragraph">Sie müssen die betroffene Batterie in Ihrer E4000 Appliance ersetzen, wenn der Recovery Guru im SANtricity System Manager den Status „Batterie ausgefallen“ oder „Batterie austauschen erforderlich“ angibt. Um Ihre Daten zu schützen, muss die Batterie so schnell wie möglich ausgetauscht werden.</block>
   <block id="9af92606abb4b31a8818023a6515b3ec" category="list-text">Eine Management Station mit einem Browser, der für den Controller auf den SANtricity System Manager zugreifen kann. (Um die Schnittstelle von System Manager zu öffnen, zeigen Sie im Browser auf den Domain-Namen oder die IP-Adresse des Controllers.)</block>
   <block id="ec6e5e75653734bb428b87afb93f7f41" category="section-title">Schritt 1: Bereiten Sie den Batteriewechsel vor</block>
   <block id="3df752ee7e92a3dba58c1061c5d0a4a6" category="list-text">Sichern Sie die Konfigurationsdatenbank des Storage-Arrays mit dem SANtricity System Manager.</block>
@@ -8929,15 +8897,7 @@
   <block id="7eed6664ecacefe81e2b660f47a5cfaf" category="list-text">Setzen Sie die Abdeckung des Controller-Aktivkohlebehälters wieder ein, und verriegeln Sie sie.</block>
   <block id="aa4ecd2631b0a57f27425bbdf9cc91b7" category="paragraph">Nachdem Sie Komponenten im Controller-Aktivkohlebehälter ausgetauscht haben, setzen Sie ihn wieder in das Gehäuse ein.</block>
   <block id="954c99d35fff8ed108602add34a47b93" category="list-text">Wenn Sie dies noch nicht getan haben, bringen Sie die Abdeckung des Controller-Kanisters wieder an.</block>
-  <block id="9c17c595e56b6b01c7d703a94b943e71" category="list-text">Drehen Sie den Controller-Behälter um und richten Sie das Ende an der Öffnung im Gehäuse aus.</block>
-  <block id="44df050c94969c9c5f783babbd55fb7e" category="list-text">Richten Sie das Ende des Controller-Aktivkohlebehälters an der Öffnung im Gehäuse aus, und drücken Sie den Controller-Aktivkohlebehälter vorsichtig halb in das System.</block>
-  <block id="40d0d24050f8aac90dc03655f2738fb3" category="admonition">Setzen Sie den Controller-Aktivkohlebehälter erst dann vollständig in das Gehäuse ein, wenn Sie dazu aufgefordert werden.</block>
-  <block id="4e4cd7bd59f82bab02590366f27be3e5" category="list-text">Das System nach Bedarf neu einsetzen.</block>
   <block id="7bfce735a4505a06fb1c4b7a2d076c1e" category="list-text">Wenn Sie die Medienkonverter (QSFPs oder SFPs) entfernt haben, sollten Sie diese erneut installieren, wenn Sie Glasfaserkabel verwenden.</block>
-  <block id="5d971d684708429fbfc1d12fc0823b1c" category="list-text">Schließen Sie den Wiedereinbau des Reglerbehälters ab:</block>
-  <block id="b34c1b37f135bc5b382d7862f82e025c" category="list-text">Den Nockengriff in geöffneter Position halten, den Controller-Behälter fest einschieben, bis er vollständig in die Mittelplatine einrastet, und dann den Nockengriff in die verriegelte Position schließen.</block>
-  <block id="69008785977983cf8a33f9f78ff2b7c9" category="admonition">Setzen Sie den Controller-Aktivkohlebehälter nicht zu stark in das Gehäuse ein, um eine Beschädigung der Anschlüsse zu vermeiden.</block>
-  <block id="0332f86520cc7552e1fb152e32977600" category="paragraph">Der Controller beginnt zu booten, sobald er im Gehäuse sitzt.</block>
   <block id="1245c13fabc810ad6fbb6f05277ad356" category="list-text">Wenn Sie dies noch nicht getan haben, installieren Sie das Kabelverwaltungsgerät neu.</block>
   <block id="82cd534d691845f1af190a9df38d753d" category="list-text">Verbinden Sie die Kabel mit dem Haken- und Schlaufenband mit dem Kabelmanagement-Gerät.</block>
   <block id="91418c565341bd8a889226a195dd2fa2" category="section-title">Schritt 5: Kompletter Batteriewechsel</block>
@@ -9010,10 +8970,7 @@
   <block id="f4d6345a40a4387a35c3eb6ef8f51b15" category="section-title">Schritt 8: Controller-Austausch abschließen</block>
   <block id="a7c932e7525739cefdfd19d17123207c" category="paragraph">Stellen Sie die Verbindung zum Controller-Shelf wieder her, sammeln Sie Support-Daten und setzen Sie den Betrieb fort.</block>
   <block id="62241759bfd404c01951d43ae57f4bbe" category="open-title">Controller-Shelf einschalten (Simplexkonfiguration)</block>
-  <block id="04803538074d9bd9b55f9adc380717f2" category="list-text">Setzen Sie den Ersatzcontroller in das Gerät ein.</block>
   <block id="fe69546640a5330ecd9f461f1cdbd1ee" category="list-text">Drehen Sie den Controller um, so dass die abnehmbare Abdeckung nach unten zeigt.</block>
-  <block id="f5b18529473e7fbcbdcf4601ffe30597" category="list-text">Schieben Sie den Steuerknebel in die geöffnete Stellung, und schieben Sie ihn bis zum Gerät.</block>
-  <block id="0dc7aaae2ab89a4fa299f4f2e42c1646" category="list-text">Bewegen Sie den Nockengriff nach links, um die Steuerung zu verriegeln.</block>
   <block id="85caa39a88f7091fb2db841ad6b83ffd" category="list-text">Ersetzen Sie die Kabel.</block>
   <block id="2afc7927e5f45cc2a3ef83b60ea186cd" category="list-text">Schalten Sie das Controller-Shelf ein.</block>
   <block id="4b55c79852e2203088ca03f4c8fb4b3c" category="list-text">Warten Sie, bis der E4000-Controller neu gestartet wird.</block>
@@ -9103,7 +9060,6 @@
   <block id="1ea4267c90825f4bf9c52932b0bd8e1a" category="list-text">Setzen Sie die Abdeckung des Controller-Aktivkohlebehälters wieder ein.</block>
   <block id="48a57bdd7334ad13cd1585ba2a663c46" category="section-title">Schritt 5: Setzen Sie den Controller-Behälter wieder ein</block>
   <block id="af32241ae4a2afd71e33a8646b775b1f" category="paragraph">Setzen Sie den Controller-Aktivkohlebehälter wieder in das Gehäuse ein.</block>
-  <block id="0a5704c96cc972ac4c49e76417f83282" category="list-text">Schieben Sie den Controller-Aktivkohlebehälter vorsichtig zur Hälfte in das System. Richten Sie das Ende des Controller-Aktivkohlebehälters an der Öffnung im Gehäuse aus, und drücken Sie den Controller-Aktivkohlebehälter vorsichtig halb in das System.</block>
   <block id="660a0f2c7dddd5ead3b175899a5d429c" category="section-title">Schritt 6: Kompletter Austausch der DIMMs</block>
   <block id="315927c4ed1f1d8b1d0b704a5a67026e" category="list-text">Wenn der Controller wieder online ist, vergewissern Sie sich, dass sein Status optimal ist, und überprüfen Sie die Warn-LEDs des Controller-Shelfs.</block>
   <block id="805863d0c877d6358a86a2607e79ed0d" category="paragraph">Wenn der Status nicht optimal ist oder eine der Warn-LEDs leuchtet, vergewissern Sie sich, dass alle Kabel richtig eingesetzt sind und der Controller-Behälter richtig installiert ist. Gegebenenfalls den Controller-Behälter ausbauen und wieder einbauen. HINWEIS: Wenn Sie das Problem nicht lösen können, wenden Sie sich an den technischen Support.</block>
@@ -9146,7 +9102,6 @@
   <block id="fe831c9a1ec5f0798f7d995bb682d1af" category="list-text">Lösen Sie die Rändelschrauben an der HIC und heben Sie sie gerade nach oben.</block>
   <block id="cb588a37aac0cb396a69cd9c6fa260a7" category="list-text">Installieren Sie die HIC neu:</block>
   <block id="eef513f5198b93971d313eb80e4da6fb" category="list-text">Setzen Sie die Abdeckung des Controller-Moduls wieder ein, und verriegeln Sie sie.</block>
-  <block id="528b8ab8a2997d60c930f6610d03301f" category="paragraph">Wenn Sie über eine Duplexkonfiguration verfügen, startet der Controller, sobald er im Gehäuse eingesetzt ist.</block>
   <block id="613ffef3aed34fbf482f6ca198dbe765" category="section-title">Schritt 5: HIC-Ersatz abschließen</block>
   <block id="fd3355f16365c925e530b446f01146af" category="paragraph">Fahren Sie den Controller hoch (Simplexkonfiguration), setzen Sie den Controller online (Duplexkonfiguration), sammeln Sie Support-Daten und nehmen Sie den Betrieb wieder auf.</block>
   <block id="3e741422cd2bc3082e4d5328242d9d60" category="doc">Upgrade HIC in E4000</block>
@@ -9419,7 +9374,6 @@
   <block id="04ec4caf2b80e886c69cd8966d5f5c92" category="paragraph">Erfahren Sie, wie Sie sich auf die Installation Ihres Storage-Systems der EF300, EF600, EF300C oder EF600C Serie vorbereiten.</block>
   <block id="a466a396cacf21d3516a87d8639c5255" category="paragraph">Bevor Sie eine Batterie der Serie EF300, EF600, EF300C oder EF600C ersetzen, lesen Sie die Anforderungen und Überlegungen.</block>
   <block id="0b5565f493a40cc2e5ace8909a568f68" category="paragraph">Sie können eine Batterie in einem EF300-, EF600-, EF300C- oder EF600C-Speichersystem austauschen.</block>
-  <block id="a3ec65b7c9b468046fdbe7dc19f94299" category="paragraph">Ein Controller besteht aus einer Hauptplatine, Firmware und Software. Sie steuert die Laufwerke und implementiert die Funktionen von System Manager. In diesem Abschnitt wird beschrieben, wie ein oder beide Controller in Ihrem EF300-, EF600-, EF300C- oder EF600C-Controller-Shelf ersetzt werden.</block>
   <block id="89e4ff051c9e9c60c1d21fddb84ec42a" category="paragraph">Bevor Sie ein EF300, EF600 ersetzen. EF300C oder EF600C-Controller, überprüfen Sie die Anforderungen und Überlegungen.</block>
   <block id="e0b68b674b62dc6569b4275513ebdb8f" category="paragraph">Sie können einen einzelnen Controller in Ihrem EF300-, EF600-, EF300C- oder EF600C-Controller-Shelf ersetzen.</block>
   <block id="136b14c506b51c3fdb848576b81df5a9" category="paragraph">Bevor Sie ein DIMM in einem EF300-, EF600-, EF600C- oder EF300C-Speicher-Array ersetzen, sollten Sie die Anforderungen und Überlegungen überprüfen.</block>
@@ -9495,4 +9449,7 @@
   <block id="baee5b8c18b240b4edfcc1ae3fe154f0" category="section-title">Neue Funktionen in Version 11.90R1</block>
   <block id="0b2fb9383075b5994701c94b27e4b6ee" category="paragraph">In dieser Version werden die All-Flash-NVMe-Storage-Systeme EF300C und EF600C vorgestellt. Bei den EF300C und EF600C handelt es sich um Flash-Versionen mit hoher Kapazität der vorhandenen EF300 und EF600 Storage-Systeme. NVMe-SSD-Laufwerke mit einer hohen Kapazität von 30 TB oder 60 TB werden von EF300C und EF600C unterstützt. Der EF300C/EF600C ist nur für die Verwendung von Dynamic Disk Pools ohne Legacy-RAID-Unterstützung kompatibel.</block>
   <block id="8af7f744c39ae6285a380b6eb402fcb2" category="paragraph">Unterstützung von 12-GB-SAS-Schnittstellen auf E4000 Controllern</block>
+  <block id="7a3a71e57296fe130d591f2dd4a7a06c" category="paragraph">Sie müssen die betroffene Batterie Ihres E4000 austauschen, wenn der Recovery Guru im SANtricity System Manager den Status „Akku ausgefallen“ oder „Akku-Ersatz erforderlich“ anzeigt. Um Ihre Daten zu schützen, muss die Batterie so schnell wie möglich ausgetauscht werden.</block>
+  <block id="8c34b0fdf9a967369992b78c08820091" category="list-text">Schieben Sie die Steuerung bei geöffnetem Nockengriff vollständig in das Regal.</block>
+  <block id="1b6c46128dc1faef9365a16d700d5e74" category="list-text">Setzen Sie den Ersatz-Controller in das Shelf ein.</block>
 </blocks>

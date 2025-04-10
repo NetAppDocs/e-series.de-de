@@ -390,12 +390,17 @@ Stellen Sie die Verbindung zum Controller-Shelf wieder her, sammeln Sie Support-
 .Controller-Shelf einschalten (Simplexkonfiguration)
 --
 .Schritte
-. Setzen Sie den Ersatzcontroller in das Gerät ein.
+. Setzen Sie den Ersatz-Controller in das Shelf ein.
 +
+.. Wenn Sie nicht bereits geerdet sind, sollten Sie sich richtig Erden.
 .. Drehen Sie den Controller um, so dass die abnehmbare Abdeckung nach unten zeigt.
-.. Schieben Sie den Steuerknebel in die geöffnete Stellung, und schieben Sie ihn bis zum Gerät.
-.. Bewegen Sie den Nockengriff nach links, um die Steuerung zu verriegeln.
+.. Schieben Sie die Steuerung bei geöffnetem Nockengriff vollständig in das Regal.
 .. Ersetzen Sie die Kabel.
++
+
+NOTE: Wenn Sie die Medienkonverter (QSFPs oder SFPs) entfernt haben, sollten Sie diese erneut installieren, wenn Sie Glasfaserkabel verwenden.
+
+.. Verbinden Sie die Kabel mit dem Haken- und Schlaufenband mit dem Kabelmanagement-Gerät.
 .. Schalten Sie das Controller-Shelf ein.
 .. Warten Sie, bis der E4000-Controller neu gestartet wird.
 .. Legen Sie fest, wie Sie dem Ersatz-Controller eine IP-Adresse zuweisen.
@@ -490,12 +495,18 @@ Die Datei wird im Ordner Downloads für Ihren Browser mit dem Namen *Support-Dat
 .Controller online schalten (Duplex)
 --
 .Schritte
-. Setzen Sie den Ersatzcontroller in das Gerät ein.
+. Setzen Sie den Ersatz-Controller in das Shelf ein.
 +
+.. Wenn Sie nicht bereits geerdet sind, sollten Sie sich richtig Erden.
+.. Wenn Sie dies noch nicht getan haben, bringen Sie die Abdeckung des Controller-Kanisters wieder an.
 .. Drehen Sie den Controller um, so dass die abnehmbare Abdeckung nach unten zeigt.
-.. Schieben Sie den Steuerknebel in die geöffnete Stellung, und schieben Sie ihn bis zum Gerät.
-.. Bewegen Sie den Nockengriff nach links, um die Steuerung zu verriegeln.
+.. Schieben Sie die Steuerung bei geöffnetem Nockengriff vollständig in das Regal.
 .. Ersetzen Sie die Kabel.
++
+
+NOTE: Wenn Sie die Medienkonverter (QSFPs oder SFPs) entfernt haben, sollten Sie diese erneut installieren, wenn Sie Glasfaserkabel verwenden.
+
+.. Verbinden Sie die Kabel mit dem Haken- und Schlaufenband mit dem Kabelmanagement-Gerät.
 .. Wenn der ursprüngliche Controller DHCP für die IP-Adresse verwendet hat, suchen Sie die MAC-Adresse auf dem Etikett auf der Rückseite des Ersatzcontrollers. Bitten Sie den Netzwerkadministrator, die DNS/Netzwerk- und IP-Adresse des entfernten Controllers mit der MAC-Adresse des Ersatzcontrollers zu verknüpfen.
 +
 

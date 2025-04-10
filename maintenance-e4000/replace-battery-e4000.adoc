@@ -11,7 +11,7 @@ summary:
 
 
 [role="lead"]
-Sie müssen die betroffene Batterie in Ihrer E4000 Appliance ersetzen, wenn der Recovery Guru im SANtricity System Manager den Status „Batterie ausgefallen“ oder „Batterie austauschen erforderlich“ angibt. Um Ihre Daten zu schützen, muss die Batterie so schnell wie möglich ausgetauscht werden.
+Sie müssen die betroffene Batterie Ihres E4000 austauschen, wenn der Recovery Guru im SANtricity System Manager den Status „Akku ausgefallen“ oder „Akku-Ersatz erforderlich“ anzeigt. Um Ihre Daten zu schützen, muss die Batterie so schnell wie möglich ausgetauscht werden.
 
 Sehen Sie sich im SANtricity System Manager die Details im Recovery Guru an, um zu überprüfen, ob ein Problem mit einer Batterie vorliegt, und um sicherzustellen, dass keine weiteren Punkte zuerst behoben werden müssen.
 
@@ -258,28 +258,14 @@ Nachdem Sie Komponenten im Controller-Aktivkohlebehälter ausgetauscht haben, se
 .Schritte
 . Wenn Sie nicht bereits geerdet sind, sollten Sie sich richtig Erden.
 . Wenn Sie dies noch nicht getan haben, bringen Sie die Abdeckung des Controller-Kanisters wieder an.
-. Drehen Sie den Controller-Behälter um und richten Sie das Ende an der Öffnung im Gehäuse aus.
-. Richten Sie das Ende des Controller-Aktivkohlebehälters an der Öffnung im Gehäuse aus, und drücken Sie den Controller-Aktivkohlebehälter vorsichtig halb in das System.
+. Drehen Sie den Controller um, so dass die abnehmbare Abdeckung nach unten zeigt.
+. Schieben Sie die Steuerung bei geöffnetem Nockengriff vollständig in das Regal.
+. Ersetzen Sie die Kabel.
 +
 
-NOTE: Setzen Sie den Controller-Aktivkohlebehälter erst dann vollständig in das Gehäuse ein, wenn Sie dazu aufgefordert werden.
+NOTE: Wenn Sie die Medienkonverter (QSFPs oder SFPs) entfernt haben, sollten Sie diese erneut installieren, wenn Sie Glasfaserkabel verwenden.
 
-. Das System nach Bedarf neu einsetzen.
-. Wenn Sie die Medienkonverter (QSFPs oder SFPs) entfernt haben, sollten Sie diese erneut installieren, wenn Sie Glasfaserkabel verwenden.
-. Schließen Sie den Wiedereinbau des Reglerbehälters ab:
-+
-.. Den Nockengriff in geöffneter Position halten, den Controller-Behälter fest einschieben, bis er vollständig in die Mittelplatine einrastet, und dann den Nockengriff in die verriegelte Position schließen.
-+
-
-NOTE: Setzen Sie den Controller-Aktivkohlebehälter nicht zu stark in das Gehäuse ein, um eine Beschädigung der Anschlüsse zu vermeiden.
-
-+
-Der Controller beginnt zu booten, sobald er im Gehäuse sitzt.
-
-.. Wenn Sie dies noch nicht getan haben, installieren Sie das Kabelverwaltungsgerät neu.
-.. Verbinden Sie die Kabel mit dem Haken- und Schlaufenband mit dem Kabelmanagement-Gerät.
-
-
+. Verbinden Sie die Kabel mit dem Haken- und Schlaufenband mit dem Kabelmanagement-Gerät.
 
 
 

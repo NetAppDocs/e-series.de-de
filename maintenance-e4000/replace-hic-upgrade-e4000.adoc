@@ -153,27 +153,14 @@ Setzen Sie den Controller-Aktivkohlebehälter wieder in das Gehäuse ein.
 .Schritte
 . Wenn Sie nicht bereits geerdet sind, sollten Sie sich richtig Erden.
 . Wenn Sie dies noch nicht getan haben, bringen Sie die Abdeckung des Controller-Kanisters wieder an.
-. Drehen Sie den Controller-Behälter um und richten Sie das Ende an der Öffnung im Gehäuse aus.
-. Richten Sie das Ende des Controller-Aktivkohlebehälters an der Öffnung im Gehäuse aus, und drücken Sie den Controller-Aktivkohlebehälter vorsichtig halb in das System.
+. Drehen Sie den Controller um, so dass die abnehmbare Abdeckung nach unten zeigt.
+. Schieben Sie die Steuerung bei geöffnetem Nockengriff vollständig in das Regal.
+. Ersetzen Sie die Kabel.
 +
 
-NOTE: Setzen Sie den Controller-Aktivkohlebehälter erst dann vollständig in das Gehäuse ein, wenn Sie dazu aufgefordert werden.
+NOTE: Wenn Sie die Medienkonverter (QSFPs oder SFPs) entfernt haben, sollten Sie diese erneut installieren, wenn Sie Glasfaserkabel verwenden.
 
-. Das System nach Bedarf neu einsetzen.
-+
-Wenn Sie die Medienkonverter (QSFPs oder SFPs) entfernt haben, sollten Sie diese erneut installieren, wenn Sie Glasfaserkabel verwenden.
-
-. Schließen Sie den Wiedereinbau des Reglerbehälters ab:
-+
-.. Den Nockengriff in geöffneter Position halten, den Controller-Behälter fest einschieben, bis er vollständig in die Mittelplatine einrastet, und dann den Nockengriff in die verriegelte Position schließen.
-+
-
-NOTE: Setzen Sie den Controller-Aktivkohlebehälter nicht zu stark in das Gehäuse ein, um eine Beschädigung der Anschlüsse zu vermeiden.
-
-.. Wenn Sie dies noch nicht getan haben, installieren Sie das Kabelverwaltungsgerät neu.
-.. Verbinden Sie die Kabel mit dem Haken- und Schlaufenband mit dem Kabelmanagement-Gerät.
-
-
+. Verbinden Sie die Kabel mit dem Haken- und Schlaufenband mit dem Kabelmanagement-Gerät.
 . Wiederholen Sie <<step2_remove_controller_canister,Schritt 2: Controller-Behälter entfernen>>, <<step3_upgrade_hic,Schritt 3: Aktualisieren Sie die HIC>>und <<step4_reinstall_controller,Schritt 4: Controller-Behälter wieder einbauen>> für den zweiten Controller.
 
 
