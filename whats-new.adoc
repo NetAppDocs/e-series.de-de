@@ -16,6 +16,12 @@ In der folgenden Tabelle werden die neuen Funktionen der neuesten SANtricity OS 
 
 
 
+== Neue Funktionen in Version 11.90R2
+
+Diese Version enthält nur geringfügige Änderungen und keine neuen Funktionen. Weitere Informationen zu den Änderungen in dieser Version finden Sie im https://library.netapp.com/ecm/ecm_download_file/ECMLP3334464["Versionshinweise zu E-Series 11.90"^].
+
+
+
 == Neue Funktionen in Version 11.90R1
 
 [cols="35h,~"]
