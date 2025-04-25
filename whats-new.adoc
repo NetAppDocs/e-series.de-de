@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: whats-new.html 
-keywords: whats new, new features, SANtricity 11.90 
+keywords: whats new, new features, SANtricity 11.90, SANtricity 11.80 
 summary: Neue Funktionen im SANtricity OS. 
 ---
 = Was ist neu in SANtricity OS
@@ -85,6 +85,12 @@ Die Anmeldesperre ist jetzt für Web Services verfügbar
 Konfigurierbar nur über die REST-API, eine neue Einstellung für die Anmeldesperre ist jetzt für eingebettete und Proxy-Web-Services verfügbar.
 
 |===
+
+
+== Neue Funktionen in Version 11.80.1R4
+
+Diese Version enthält nur geringfügige Änderungen und keine neuen Funktionen oder Einschränkungen. Weitere Informationen zu den Änderungen in dieser Version finden Sie in der README-Datei.
+
 
 
 == Neue Funktionen in Version 11.80.1R3
