@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: E4000, connect power cables 
 summary: Schließen Sie die Stromkabel an, und schalten Sie die Laufwerk-Shelfs ein. 
 ---
-= Kabel anschließen (E4012)
+= Schließen Sie die Stromkabel E4012 an
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: E5700 maintenance, repair E5700, replace E5700 components, E5724, EF570, E5760 
 summary: Instandhaltung der E5700 Hardware 
 ---
-= Wartung von E5700 Hardware
+= Wartung der Hardware - 5700
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

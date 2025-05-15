@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: partitions, file systems, express linux configuration, software configuration, linux host, E2800, E5700, EF300, EF600, E-Series, eseries 
 summary: Sie können eine Partition auf dem Multipath-Gerät erstellen, optional ein Dateisystem im Namespace erstellen und die Partition mounten. 
 ---
-= Erstellen von Dateisystemen (RHEL 7 und SLES 12)
+= Dateisysteme in E-Series erstellen – Linux RHEL 7 und SLES 12 (NVMe over FC)
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

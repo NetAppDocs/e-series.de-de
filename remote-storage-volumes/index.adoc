@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: Remote Storage Volumes, RTV, remote volumes, remote storage E-Series 
 summary: Verwenden Sie die Funktion Remote Storage Volumes, um Daten von einem Remote-Storage-Gerät direkt in ein lokales E-Series Volume zu importieren. 
 ---
-= Remote Storage Volumes: Überblick
+= Erfahren Sie mehr über SANtricity Remote Storage Volumes
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

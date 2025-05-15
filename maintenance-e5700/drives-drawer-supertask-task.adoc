@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: E5700 drive drawer, DE460C drive shelf, replace E5700 drive drawer, failed E5700 drive drawer 
 summary: Ersetzen Sie eine Laufwerksschublade in einer E5700. 
 ---
-= Austauschen des E5700 Laufwerkseinschubs (60 Laufwerke)
+= Ersetzen der Laufwerksschublade – E5700 (60 Laufwerke)
 :allow-uri-read: 
 :experimental: 
 :icons: font

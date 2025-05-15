@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: EF300, EF600, EF300C, EF600C, replace DIMM 
 summary: Ersetzen Sie ein DIMM in einem EF300- oder EF600-Array. 
 ---
-= Ersetzen Sie die DIMMs in EF300 oder EF600
+= Ersetzen Sie die DIMMs EF300 oder EF600
 :allow-uri-read: 
 :experimental: 
 :icons: font

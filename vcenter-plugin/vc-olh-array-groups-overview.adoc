@@ -4,7 +4,7 @@ permalink: vcenter-plugin/vc-olh-array-groups-overview.html
 keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
 summary: Managen Sie Ihre physische und virtualisierte Infrastruktur durch Gruppierung mehrerer Storage-Arrays. 
 ---
-= Array-Gruppen – Übersicht
+= Erfahren Sie mehr über das Management von Array-Gruppen im SANtricity Storage Plug-in für vCenter
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

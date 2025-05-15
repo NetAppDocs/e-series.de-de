@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: Remote Storage Volumes, RTV, remote volumes, remote storage E-Series 
 summary: Sie können den Status jedes Remote-Speicherimports im Listenbereich Ergebnis des Bildschirms Remote-Speicher des SANtricity System Managers anzeigen. 
 ---
-= Importfortschritt verwalten
+= Importfortschritt für SANtricity-Remote-Speicher-Volumes verwalten
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

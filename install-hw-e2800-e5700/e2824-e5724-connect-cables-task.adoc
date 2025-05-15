@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: E2800, E5700, connect power cables 
 summary: Schließen Sie die Stromkabel an, und schalten Sie die Laufwerk-Shelfs ein. 
 ---
-= Schließen Sie die Kabel an
+= Stromkabel anschließen – E5724, EF570, EF280, E2812, E2824, DE212C und DE224C
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

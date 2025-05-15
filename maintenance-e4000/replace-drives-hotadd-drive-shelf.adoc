@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: E4000 replace drive, replacing E4000 drive, E4000 replace drive, replacing E4000 drive, E4000, E-Series, eseries 
 summary: Ein Laufwerk in einer E4000 kann durch ein Shelf mit 12 Laufwerken oder 24 Laufwerken ersetzt werden. 
 ---
-= Hot Hinzufügen eines Festplatten-Shelfs
+= Hot-Add eines Laufwerks-Shelf - IOM12- oder IOM12B-Module - E4000
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: EF300, EF600, EF300C, EF600C replace fan, 
 summary: Lesen Sie die Anforderungen und Überlegungen, bevor Sie EF300- oder EF600 Lüfter ersetzen. 
 ---
-= Anforderungen für den Austausch des EF300- oder EF600 Lüfters
+= Voraussetzungen für den Austausch des Lüfters - EF300 und EF600
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

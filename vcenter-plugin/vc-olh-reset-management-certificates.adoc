@@ -4,7 +4,7 @@ permalink: vcenter-plugin/vc-olh-reset-management-certificates.html
 keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
 summary: Zurücksetzen des Managementzertifikats auf den ursprünglichen, werkseitig selbstsignierten Status 
 ---
-= Managementzertifikate zurücksetzen
+= Setzen Sie Managementzertifikate im SANtricity Speicher-Plug-in für vCenter zurück
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

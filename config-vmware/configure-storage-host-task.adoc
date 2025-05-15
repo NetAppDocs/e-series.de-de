@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: configure storage ESXi, express vmware configuration, software configuration, vmware host, E2800, E5700, EF300, EF600, E-Series, eseries 
 summary: 'Sie können den einem ESXi-Host zugewiesenen Speicher entweder als Virtual Machine File System \(VMFS\)-Datenspeicher oder als Raw Device Mapping \ (RDM\) verwenden. RDMs werden auf dem NVMe over Fibre Channel Protokoll nicht unterstützt.' 
 ---
-= Konfigurieren Sie Speicher auf dem Host
+= Konfigurieren Sie Speicher auf dem Host in E-Series - VMware
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

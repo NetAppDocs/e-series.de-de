@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: E2800 replace drive, replacing E2800 drive, E2800 replace drive, replacing E2800 drive, E2800, E-Series, eseries 
 summary: Ein Laufwerk in einer E2800 kann durch ein Shelf mit 12 Laufwerken oder 24 Laufwerken ersetzt werden. 
 ---
-= Austausch von Laufwerken in der E2800 (Shelf mit 12 Laufwerken oder 24 Laufwerken)
+= Austauschen eines Laufwerks – E2800 (Shelf mit 12 oder 24 Laufwerken)
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

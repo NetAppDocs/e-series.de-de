@@ -4,7 +4,7 @@ permalink: vcenter-plugin/vc-olh-remove-capacity.html
 keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
 summary: Sie können Laufwerke entfernen, um die Kapazität eines vorhandenen Pools oder SSD-Caches zu reduzieren. 
 ---
-= Kapazitäten entfernen
+= Reduzieren Sie die Kapazität eines vorhandenen Pools oder SSD-Caches im SANtricity Storage Plug-in für vCenter
 :hardbreaks:
 :allow-uri-read: 
 :experimental: 

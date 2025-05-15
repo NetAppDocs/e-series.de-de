@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: EF300, EF600, EF300C, EF600C installation, 
 summary: EF300 oder EF600 System-Rack in einem 2er-Säulen-Rack oder NetApp System-Rack installieren 
 ---
-= Installieren Sie die Hardware
+= Installieren Sie die Hardware EF300, EF600, EF300C und EF600C
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

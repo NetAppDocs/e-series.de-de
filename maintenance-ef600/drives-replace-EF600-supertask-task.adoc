@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: EF600, EF600C replace DIMM, drive failure 
 summary: Ersetzen Sie ein Laufwerk in einem EF600 Array. 
 ---
-= Ersetzen Sie ein Laufwerk in einem EF600 Array
+= Ersetzen Sie das Laufwerk EF600
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

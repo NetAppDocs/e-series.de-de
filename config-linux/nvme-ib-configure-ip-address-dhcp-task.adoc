@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: IP address, DHCP, express linux configuration, software configuration, linux host, E2800, E5700, EF300, EF600, E-Series, eseries 
 summary: 'Verwenden Sie das dynamische Host Configuration Protocol \ (DHCP\), um IP-Adressen bereitzustellen.' 
 ---
-= Konfigurieren Sie IP-Adressen mit DHCP
+= IP-Adressen mit DHCP in der E-Series – Linux (NVMe over InfiniBand) konfigurieren
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

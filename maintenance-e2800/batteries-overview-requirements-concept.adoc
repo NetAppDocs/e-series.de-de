@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: E2800 battery fail, E2800 battery, E2800 battery replacement, replace E2800 battery, replacing E2800 battery, E2800, E-Series, eseries 
 summary: Anforderungen und Überlegungen zum Austausch der E2800 Batterie prüfen 
 ---
-= Anforderungen für den Austausch von E2800 Batterien
+= Voraussetzungen für den Austausch der Batterie - E2800
 :allow-uri-read: 
 :experimental: 
 :icons: font

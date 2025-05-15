@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: configure partitions Linux, configure filesystems linux, express linux configuration, linux host, 
 summary: Eine neue LUN besitzt keine Partition oder kein Dateisystem, wenn der Linux-Host sie zuerst erkennt. Sie müssen die LUN formatieren, bevor sie verwendet werden kann. 
 ---
-= Erstellen von Partitionen und Dateisystemen
+= Partitionen und Dateisysteme in E-Series - Linux (iSER over InfiniBand) erstellen
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

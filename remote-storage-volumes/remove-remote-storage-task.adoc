@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: remove storage object, disconnect remote storage 
 summary: Sie können alle konfigurierten Remote-Storage-Objekte über den SANtricity System Manager entfernen. 
 ---
-= Remote-Storage-Objekt entfernen
+= Entfernen Sie das Remote-Speicherobjekt für SANtricity-Remote-Speichervolumes
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

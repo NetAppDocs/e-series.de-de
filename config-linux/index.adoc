@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: express linux configuration, software configuration, linux host, E2800, E5700, EF300, EF600, E-Series, eseries 
 summary: Nutzen Sie die Express-Konfiguration für einen Linux-Host mit einem E-Series System. 
 ---
-= Überblick über die Konfiguration von Linux Express
+= Erfahren Sie mehr über die Linux Express-Konfiguration für die E-Series
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

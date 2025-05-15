@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: E2800 battery fail, E2800 battery, E2800 battery replacement, replace E2800 battery, replacing E2800 battery, E2800, E-Series, eseries 
 summary: Um den Akku zu entfernen, entfernen Sie zuerst den Controller-Behälter aus dem Controller-Regal. 
 ---
-= Den E2800 Controller-Behälter entfernen
+= Den E2800-Controller ausbauen
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

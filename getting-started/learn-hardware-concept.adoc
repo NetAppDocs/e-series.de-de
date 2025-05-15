@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: E-Series, eseries, E4000, E2800, E5700, EF300, EF600, hardware, all flash array, E-Series protocols, E-Series rack 
 summary: E-Series Storage-Arrays sind in verschiedenen Konfigurationen und Modellen erhältlich. 
 ---
-= E-Series Hardware im Überblick
+= Weitere Informationen zur E-Series Hardware
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

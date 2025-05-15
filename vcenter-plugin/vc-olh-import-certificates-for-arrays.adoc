@@ -4,7 +4,7 @@ permalink: vcenter-plugin/vc-olh-import-certificates-for-arrays.html
 keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
 summary: Importieren von Zertifikaten für die Speicher-Arrays, damit sie sich mit dem System authentifizieren können, das das Storage Plug-in für vCenter hostet. 
 ---
-= Importieren Sie Zertifikate für Arrays
+= Importieren Sie Zertifikate für Arrays im SANtricity Speicher-Plugin für vCenter
 :hardbreaks:
 :allow-uri-read: 
 :experimental: 

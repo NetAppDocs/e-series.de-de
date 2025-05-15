@@ -4,7 +4,7 @@ summary: Sie können die Einstellungen für den Lese-Cache und den Schreib-Cache
 permalink: vcenter-plugin/vc-olh-change-cache-settings-for-a-volume.html 
 keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
 ---
-= Ändern Sie die Cache-Einstellungen für ein Volume
+= Ändern Sie die Cache-Einstellungen für ein Volume im SANtricity Storage Plug-in für vCenter
 :hardbreaks:
 :allow-uri-read: 
 :experimental: 

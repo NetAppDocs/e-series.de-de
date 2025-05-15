@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: host protocol change, EF300, EF600, EF600C, EF300C 
 summary: Ändern Sie das Host-Port-Protokoll für ein EF300- oder EF600-Array. 
 ---
-= Ändern des Host-Protokolls für eine EF300 oder EF600
+= Ändern Sie das Host-Protokoll - EF300 und EF600
 :allow-uri-read: 
 :experimental: 
 :icons: font

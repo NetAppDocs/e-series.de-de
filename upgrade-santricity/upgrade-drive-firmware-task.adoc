@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: E-Series, eseries, E2800, E5700, EF300, EF600, SANtricity, drive firmware, upgrade SANtricity, upgrade OS, upgrade E-Series, upgrade firmware, upgrading, upgrade IOM firmware, upgrade NVSRAM, upgrade controller 
 summary: Sie aktualisieren die Firmware Ihrer Laufwerke, um sicherzustellen, dass Sie über alle neuesten Funktionen und Fehlerbehebungen verfügen. 
 ---
-= Aktualisieren Sie die Laufwerk-Firmware
+= Upgrades von Firmware für E-Series und EF-Series Laufwerke
 :allow-uri-read: 
 :experimental: 
 :icons: font

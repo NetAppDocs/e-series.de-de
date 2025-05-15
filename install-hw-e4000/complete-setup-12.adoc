@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: Erfahren Sie, wie Sie die Controller mit Ihrem Netzwerk verbinden und die Einrichtung und Konfiguration des Storage-Systems abschließen. 
 ---
-= Vollständige Einrichtung des Storage-Systems (E4012)
+= Vollständige Einrichtung des Storage-Systems – E4012
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

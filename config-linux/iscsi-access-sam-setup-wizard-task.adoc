@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: access System Manager Linux, express linux configuration, software configuration, linux host, E2800, E5700, EF300, EF600, E-Series, eseries 
 summary: Mit dem Setup-Assistenten in SANtricity System Manager konfigurieren Sie das Storage-Array. 
 ---
-= Greifen Sie auf SANtricity System Manager zu und verwenden Sie den Setup-Assistenten
+= Storage-Konfiguration mit SANtricity System Manager – Linux (iSCSI)
 :allow-uri-read: 
 :experimental: 
 :icons: font

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: configure Web Services Proxy, WSP configuration, start stop Webserver, start stop WSP service 
 summary: Sie können die Web Services Proxy-Einstellungen ändern, um die spezifischen Betriebs- und Performance-Anforderungen für Ihre Umgebung zu erfüllen. 
 ---
-= Konfigurieren Sie Web Services Proxy
+= Konfigurieren Sie den SANtricity-Webdienstproxy
 :allow-uri-read: 
 :experimental: 
 :icons: font

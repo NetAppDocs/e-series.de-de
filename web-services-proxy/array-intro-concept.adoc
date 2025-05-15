@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: Web Services, WSP, SANtricity API, discover storage WSP, 
 summary: Um Storage-Systeme im Netzwerk zu managen, müssen Sie sie zunächst ermitteln und dann der Management-Liste hinzufügen. 
 ---
-= Managen Sie Speichersysteme über Web Services Proxy
+= Verwalten Sie Speichersysteme mithilfe des SANtricity-Webdienstproxys
 :allow-uri-read: 
 :experimental: 
 :icons: font

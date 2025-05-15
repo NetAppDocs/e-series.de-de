@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: replace controller, replace canister, EF300, EF600, EF300C, EF600C 
 summary: Ersetzen Sie einen Single Controller in einem EF300- oder EF600 Controller-Shelf. 
 ---
-= EF300- oder EF600-Controller austauschen
+= Ersetzen Sie die Controller EF300 und EF600
 :allow-uri-read: 
 :experimental: 
 :icons: font

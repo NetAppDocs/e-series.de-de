@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: EF600, EF300, EF600C, EF300C, replace fan, fan fail 
 summary: Ersetzen Sie einen Lüfter in einer EF300 oder EF600. 
 ---
-= Ersetzen Sie einen EF300- oder EF600-Lüfter
+= Ersetzen Sie den Lüfter EF300 oder EF600
 :allow-uri-read: 
 :experimental: 
 :icons: font

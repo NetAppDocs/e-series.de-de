@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: EF300, EF600, EF300C, EF600C installation process overview 
 summary: Überprüfen Sie den Prozess für die Installation und Einrichtung einer EF300 oder EF600. 
 ---
-= Installationsvorgang
+= Informieren Sie sich über die Storage-Systemintaltion EF300, EF600, EF300C und EF600C
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

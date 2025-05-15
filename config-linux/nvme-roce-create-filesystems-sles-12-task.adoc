@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: file systems, express linux configuration, software configuration, linux host, E2800, E5700, EF300, EF600, E-Series, eseries 
 summary: Für RHEL 7 und SLES 12 erstellen Sie ein Dateisystem auf dem Namespace und mounten das Dateisystem. 
 ---
-= Erstellen von Dateisystemen (RHEL 7 und SLES 12)
+= Dateisysteme in E-Series erstellen – Linux RHEL 7 und SLES 12 (NVMe over RoCE)
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

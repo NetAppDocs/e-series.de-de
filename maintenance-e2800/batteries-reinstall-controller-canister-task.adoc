@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: E2800 battery fail, E2800 battery, E2800 battery replacement, replace E2800 battery, replacing E2800 battery, E2800, E-Series, eseries 
 summary: Setzen Sie nach dem Einbau einer neuen Batterie den Controller-Behälter wieder in das Controller-Shelf ein. 
 ---
-= E2800 Controller-Behälter neu installieren
+= Den E2800-Controller-Behälter wieder einbauen
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

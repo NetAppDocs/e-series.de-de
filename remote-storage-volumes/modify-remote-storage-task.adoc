@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: modify Remote Storage Volumes settings, RTV settings, remote volume settings, remote storage E-Series 
 summary: Sie können die Verbindungseinstellungen für jeden konfigurierten Remote-Speicherimport über die Option Einstellungen anzeigen/bearbeiten im Bildschirm Remote-Speicher des SANtricity-System-Managers ändern. 
 ---
-= Einstellungen für Remote-Speicherverbindungen ändern
+= Ändern Sie die Einstellungen für die Remote-Speicherverbindung für SANtricity-Remote-Speichervolumes
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

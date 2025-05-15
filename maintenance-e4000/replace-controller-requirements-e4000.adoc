@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary:  
 ---
-= Anforderungen für den Austausch von E4000 Controllern
+= Voraussetzung für den Austausch des Controllers – E4000
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: multipath.conf file, express linux configuration, software configuration, linux host, E2800, E5700, EF300, EF600, E-Series, eseries 
 summary: Verwenden Sie die Multipath.conf-Datei, die die Konfigurationsdatei für den Multipath-Daemon multipathd ist. 
 ---
-= Richten Sie die Multipath.conf-Datei ein
+= Richten Sie die Datei multipath.conf in E-Series ein - Linux (SAS)
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

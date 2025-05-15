@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: Bevor Sie ein E4000-Laufwerk austauschen, lesen Sie die Anforderungen und Überlegungen. 
 ---
-= E4000-Laufwerksübersicht ersetzen
+= Voraussetzungen für den Austausch des Laufwerks - E4000
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

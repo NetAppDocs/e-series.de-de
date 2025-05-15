@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: Führen Sie die folgenden Schritte aus, um Ihr E4000-Speichersystem zu installieren und einzurichten. 
 ---
-= Installation und Einrichtung von E4000-Systemen
+= Installation und Einrichtung von E4000-Speichersystemen
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

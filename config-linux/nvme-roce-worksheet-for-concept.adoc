@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: NVMe over RoCE worksheet Linux, express linux configuration, software configuration, linux host, E2800, E5700, EF300, EF600, E-Series, eseries 
 summary: Verwenden Sie dieses Arbeitsblatt, um Informationen zur NVMe over RoCE-Storage-Konfiguration aufzuzeichnen. 
 ---
-= Nehmen Sie die NVMe-over-RoCE-Konfiguration auf
+= NVMe-over-RoCE-Konfiguration in der E-Series – Linux aufzeichnen
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

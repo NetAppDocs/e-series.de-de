@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: polling Web Services Proxy, WSP statistics, poll WSP, 
 summary: Sie können die automatische Abfrage für alle Festplatten- und Volume-Statistiken auf ermittelte Speichersysteme konfigurieren. 
 ---
-= Verwalten der automatischen Abfrage für Web Services-Proxy-Statistiken
+= Verwalten der automatischen Abfrage für SANtricity-Webdienste-Proxy-Statistiken
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

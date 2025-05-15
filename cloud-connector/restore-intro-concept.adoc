@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: Cloud Connector restore, 
 summary: Sie können die Option Wiederherstellen im linken Navigationsbereich der SANtricity-Cloud-Connector-Anwendung aufrufen. Mit der Option Wiederherstellen wird die Seite Wiederherstellen angezeigt, auf der Sie neue abbilbasierte oder dateibasierte Wiederherstellungsaufträge erstellen können. 
 ---
-= Wiederherstellungen
+= Erstellen Sie neue Image- oder dateibasierte Restores in SANtricity Cloud Connector
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

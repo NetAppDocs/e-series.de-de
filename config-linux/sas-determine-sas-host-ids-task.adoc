@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: express linux configuration, software configuration, linux host, E2800, E5700, EF300, EF600, E-Series, eseries 
 summary: Sie suchen für das SAS-Protokoll die SAS-Adressen unter Verwendung des HBA-Dienstprogramms und verwenden das HBA-BIOS, um die entsprechenden Konfigurationseinstellungen vorzunehmen. 
 ---
-= SAS-Host-IDs ermitteln – Linux
+= SAS-Host-IDs in der E-Series – Linux (SAS) ermitteln
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ permalink: vcenter-plugin/vc-olh-enable-security-for-a-pool-or-volume-group.html
 keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
 summary: Sie können die Laufwerkssicherheit für einen Pool oder eine Volume-Gruppe aktivieren, um unbefugten Zugriff auf die Daten auf den Laufwerken im Pool oder der Volume-Gruppe zu verhindern. 
 ---
-= Aktivieren Sie die Sicherheit für einen Pool oder eine Volume-Gruppe
+= Aktivieren Sie die Sicherheit für einen Pool oder eine Volume-Gruppe im SANtricity Speicher-Plug-in für vCenter
 :hardbreaks:
 :allow-uri-read: 
 :experimental: 

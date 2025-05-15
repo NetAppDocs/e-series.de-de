@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: Web Services, WSP, SANtricity API, 
 summary: Erfahren Sie mehr über die Web Services API 
 ---
-= API-Grundlagen
+= Erfahren Sie mehr über die Grundlagen der SANtricity Webdienste-Proxy-API
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

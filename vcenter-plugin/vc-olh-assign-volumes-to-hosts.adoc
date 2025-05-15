@@ -4,7 +4,7 @@ permalink: vcenter-plugin/vc-olh-assign-volumes-to-hosts.html
 keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
 summary: Sie müssen ein Volume einem Host oder Host-Cluster zuweisen, damit es für I/O-Vorgänge verwendet werden kann. 
 ---
-= Weisen Sie Hosts Volumes zu
+= Weisen Sie Hosts im SANtricity Speicher-Plug-in für vCenter Volumes zu
 :hardbreaks:
 :allow-uri-read: 
 :experimental: 

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: E2800 controller replacement requirements, E2800 replace controller, replacing E2800 controller, add E2800 controller, adding E2800 controller, E2800, E2812 controller shelf, E2824 controller shelf, EF280 shelf, E-Series, eseries 
 summary: Anforderungen und Überlegungen zum Austausch von E2800 Controllern prüfen 
 ---
-= Anforderungen für den Austausch von E2800 Controllern
+= Voraussetzung für den Austausch eines Controllers – E2800
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

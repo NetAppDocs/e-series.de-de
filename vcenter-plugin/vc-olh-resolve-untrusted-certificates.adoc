@@ -4,7 +4,7 @@ permalink: vcenter-plugin/vc-olh-resolve-untrusted-certificates.html
 keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
 summary: 'Lösen Sie nicht vertrauenswürdige Zertifikate, indem Sie ein selbstsigniertes Zertifikat aus dem Speicher-Array importieren oder ein Zertifikat einer Zertifizierungsstelle (CA) importieren, das von einem vertrauenswürdigen Dritten ausgestellt wurde.' 
 ---
-= Lösen Sie nicht vertrauenswürdige Zertifikate
+= Lösen Sie nicht vertrauenswürdige Zertifikate im SANtricity Speicher-Plug-in für vCenter auf
 :hardbreaks:
 :allow-uri-read: 
 :experimental: 

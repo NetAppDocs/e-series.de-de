@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: replace E2800 controller, replacing E2800 controller, simplex controller replacement, E2800, E-Series, eseries 
 summary: Ein ausgefallener Controller-Behälter kann in einer Simplex-Konfiguration ersetzt werden. 
 ---
-= Controller-Austausch bei der E2800 Simplexkonfiguration
+= Ersetzen Sie einen Controller in der simplex-Konfiguration – E2800
 :allow-uri-read: 
 :experimental: 
 :icons: font

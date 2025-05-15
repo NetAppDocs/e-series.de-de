@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: express linux configuration, software configuration, linux host, E2800, E5700, EF300, EF600, E-Series, eseries 
 summary: Prüfen Sie die Anforderungen für die Verwendung der Express-Methode zur Einrichtung eines E-Series-Arrays und eines Linux-Hosts. 
 ---
-= Voraussetzungen
+= Annahmen (E-Series und Linux)
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

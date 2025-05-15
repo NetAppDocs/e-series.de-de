@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: e5724, ef570, ef280, e2812, e2824, de212c, de224c, installation 
 summary: Für die Installation der E5724, EF570, EF280, E2812, E2824, DE212C oder DE224C, erstellen Sie ein Konto und registrieren Sie Ihre Hardware. 
 ---
-= Installation vorbereiten
+= Vorbereitung der Installation – E5724, EF570, EF280, E2812, E2824, DE212C und DE224C
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

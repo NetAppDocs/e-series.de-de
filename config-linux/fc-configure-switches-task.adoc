@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: FC switches, zoning, express linux configuration, software configuration, linux host, 
 summary: Konfigurieren Sie die Fibre Channel-Switches, damit die Hosts eine Verbindung zum Storage-Array herstellen und die Anzahl der Pfade begrenzen können. 
 ---
-= Konfigurieren Sie die FC-Switches
+= FC-Switches in E-Series konfigurieren – Linux (FC)
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

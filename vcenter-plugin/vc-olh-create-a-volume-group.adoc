@@ -4,7 +4,7 @@ permalink: vcenter-plugin/vc-olh-create-a-volume-group.html
 keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
 summary: Sie können eine Volume-Gruppe für ein oder mehrere Volumes erstellen, auf die der Host zugreifen kann. 
 ---
-= Erstellen einer Volume-Gruppe
+= Erstellen Sie im SANtricity Speicher-Plug-in für vCenter eine Volume-Gruppe
 :hardbreaks:
 :allow-uri-read: 
 :experimental: 

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: E4000 replace drive, replacing E4000 drive, E4000 replace drive, replacing E4000 drive, E4000 
 summary: Ein Laufwerk in einer E2800 kann durch ein Shelf mit 60 Laufwerken ersetzt werden. 
 ---
-= Austausch von Laufwerken in der E4000 (Shelf mit 60 Laufwerken)
+= Ersetzen Sie das Laufwerk E4000 (Shelf mit 60 Laufwerken).
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

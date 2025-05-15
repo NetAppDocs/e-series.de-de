@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: Cloud Connector requirements 
 summary: Systemanforderungen, Einrichtung, Installation, Konfiguration und Jobs im Zusammenhang mit der SANtricity Cloud Connector-Anwendung. 
 ---
-= Systemanforderungen für Cloud Connector
+= Systemanforderungen für SANtricity Cloud Connector
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

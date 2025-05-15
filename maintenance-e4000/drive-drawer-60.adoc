@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: E4000 replace drive drawer, replacing E4000 drive drawer, E4000 replace drive drawer, replacing E4000 drive drawer, E4000, E-Series, eseries 
 summary: Ersetzen Sie eine Laufwerksschublade in einem E2860 Controller-Shelf oder einem DE460C Festplatten-Shelf. 
 ---
-= Laufwerkschublade im E4000 austauschen (Shelf mit 60 Laufwerken)
+= Ersetzen Sie die Laufwerksschublade E4000 (Shelf für 60 Laufwerke).
 :allow-uri-read: 
 :experimental: 
 :icons: font

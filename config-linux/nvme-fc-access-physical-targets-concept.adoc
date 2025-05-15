@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: NVMe volumes physical, express linux configuration, software configuration, linux host, E2800, E5700, EF300, EF600, E-Series, eseries 
 summary: Konfigurieren Sie die E/A, die auf dem Geräteziel basiert, basierend auf Ihrer Linux-Version. 
 ---
-= Auf NVMe Volumes für physische NVMe-Geräteziele zugreifen
+= Zugriff auf NVMe Volumes für physische NVMe Geräteziele in der E-Series – Linux (NVMe over FC)
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

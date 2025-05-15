@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: express vmware configuration, software configuration, vmware host, E2800, E5700, EF300, EF600, E-Series, eseries 
 summary: Nutzen Sie die Express-Konfiguration für einen VMware Host mit einem E-Series System. 
 ---
-= Übersicht über die VMware Express Konfiguration
+= VMware Express-Konfiguration in der E-Series
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ permalink: vcenter-plugin/vc-olh-import-settings-overview.html
 keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
 summary: 'Die Funktion „Importeinstellungen“ ist ein Batch-Vorgang, mit dem Sie die Einstellungen in einem einzelnen Speicher-Array (der Quelle) auf mehrere Arrays (die Ziele) replizieren können.' 
 ---
-= Überblick über die Einstellungen importieren
+= Erfahren Sie mehr über die Funktion „Importeinstellungen“ im SANtricity Storage Plugin für vCenter
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

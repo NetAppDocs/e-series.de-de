@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: configure Remote Storage Volumes, set up RTV, configure remote volumes, set up remote storage E-Series 
 summary: Die erstmalige Einrichtung, damit das E-Series System über das unterstützte iSCSI-Protokoll eine Verbindung zum Remote-Storage herstellen kann. 
 ---
-= Hardware für Remote Storage Volumes konfigurieren
+= Konfigurieren Sie die Hardware für SANtricity Remote Storage Volumes
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

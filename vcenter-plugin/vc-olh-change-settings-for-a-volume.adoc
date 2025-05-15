@@ -4,7 +4,7 @@ permalink: vcenter-plugin/vc-olh-change-settings-for-a-volume.html
 keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
 summary: Ändern der Einstellungen eines Volume, z. B. Name, Host-Zuweisung, Segmentgröße, Änderungspriorität, Caching, Und so weiter. 
 ---
-= Ändern Sie die Einstellungen für ein Volume
+= Ändern Sie die Einstellungen für ein Volume im SANtricity Storage Plug-in für vCenter
 :hardbreaks:
 :allow-uri-read: 
 :experimental: 

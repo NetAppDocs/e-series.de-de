@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary:  
 ---
-= Fügen Sie einen zweiten Behälter in E4000 hinzu
+= Fügen Sie einen zweiten Behälter hinzu - E4000
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ permalink: vcenter-plugin/vc-olh-use-ca-signed-certificates.html
 keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
 summary: Abrufen und Importieren von CA-signierten Zertifikaten für sicheren Zugriff auf das Managementsystem, das das Storage Plug-in für vCenter hostet 
 ---
-= CA-signierte Zertifikate verwenden
+= Verwenden Sie CA-signierte Zertifikate im SANtricity-Speichermodul für vCenter
 :hardbreaks:
 :allow-uri-read: 
 :experimental: 

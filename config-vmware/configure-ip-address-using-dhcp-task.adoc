@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: IP address, DHCP, express vmware configuration, software configuration, vmware host, E2800, E5700, EF300, EF600, E-Series, eseries 
 summary: 'Verwenden Sie das Dynamic Host Configuration Protocol \ (DHCP\), um IP-Adressen in der VMware Express-Methode bereitzustellen.' 
 ---
-= Konfigurieren Sie IP-Adressen mit DHCP
+= Konfigurieren Sie IP-Adressen mithilfe von DHCP in der E-Series – VMware
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

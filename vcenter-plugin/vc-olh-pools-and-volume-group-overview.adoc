@@ -4,7 +4,7 @@ permalink: vcenter-plugin/vc-olh-pools-and-volume-group-overview.html
 keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
 summary: 'Um Speicher bereitzustellen, erstellen Sie entweder einen Pool oder eine Volume-Gruppe, die die Festplatten (HDD) oder Solid State Disk (SSD) Laufwerke enthalten, die Sie in Ihrem Speicher-Array verwenden möchten.' 
 ---
-= Pools und Volume-Gruppen im Überblick
+= Informieren Sie sich im SANtricity Storage Plug-in für vCenter über Speicherpools und Volume-Gruppen
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

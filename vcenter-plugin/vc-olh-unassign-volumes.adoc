@@ -4,7 +4,7 @@ permalink: vcenter-plugin/vc-olh-unassign-volumes.html
 keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
 summary: Wenn Sie keinen I/O-Zugriff mehr auf ein Volume benötigen, können Sie die Zuweisung vom Host oder Host-Cluster aufheben. 
 ---
-= Zuweisung von Volumes aufheben
+= Heben Sie die Zuweisung von Volumes im SANtricity Speicher-Plug-in für vCenter auf
 :hardbreaks:
 :allow-uri-read: 
 :experimental: 

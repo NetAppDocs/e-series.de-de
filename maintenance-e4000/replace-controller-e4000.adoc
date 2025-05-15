@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary:  
 ---
-= Ersetzen Sie den Controller in E4000
+= Tauschen Sie den Controller - E4000 aus
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

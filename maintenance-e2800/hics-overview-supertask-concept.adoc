@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: E2800 replace HIC, E2800 replace host interface card, replacing E2800 HIC, E2800 replace HIC, adding E2800 HIC, upgrading E2800 HIC, E2800, E-Series, eseries 
 summary: Anforderungen für den Austausch der E2800 HIC prüfen 
 ---
-= Anforderungen für den Austausch der E2800 HIC
+= Voraussetzungen für den Austausch der Host Interface Card (HIC) – E2800
 :allow-uri-read: 
 :experimental: 
 :icons: font

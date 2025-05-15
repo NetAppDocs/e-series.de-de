@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: EF300, EF600, installation, host cabling, direct-attach topology, fabric topology, System Manager connection, management host connection, port configuration, configuring ports, DHCP, static IP 
 summary: Sie verkabeln die Controller mit dem Netzwerk, um die Einrichtung und Konfiguration des Storage-Systems abzuschließen. 
 ---
-= Vollständige Einrichtung und Konfiguration des Storage-Systems
+= Vollständige Einrichtung und Konfiguration des Storage-Systems – EF300, EF600, EF300C und EF600C
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

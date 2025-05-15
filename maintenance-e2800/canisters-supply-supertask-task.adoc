@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: E2800 replace 12-drive power supply, E2800 replace 24-drive power supply, replacing E2800 power supply, E2800, E-Series, eseries 
 summary: Ein E2800 Controller-Shelf oder Laufwerks-Shelf für 12 oder 24 Laufwerke, das zwei Netzteile mit integrierten Lüftern enthält, kann ersetzt werden. 
 ---
-= Austausch des E2800 Netzteils (12 Laufwerke oder 24 Laufwerke)
+= Ersetzen Sie das Netzteil - E2800 (12 Laufwerke oder 24 Laufwerke).
 :allow-uri-read: 
 :experimental: 
 :icons: font

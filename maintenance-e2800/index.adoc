@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: E2800 maintenance, E2800 repair, replace E2800 components, replacing E2800 components, 
 summary: Führen Sie Wartungsarbeiten an E2800 Komponenten durch. 
 ---
-= Erhalt der E2800 Hardware
+= Instandhaltung der Hardware - E2800
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

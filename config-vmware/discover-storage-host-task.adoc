@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: discover storage ESXi, express vmware configuration, software configuration, vmware host, E2800, E5700, EF300, EF600, E-Series, eseries 
 summary: Nachdem Sie Volumes zum Host zugewiesen haben, führen Sie einen erneuten Scan durch, sodass der Host die Volumes für das Multipathing erkennt und konfiguriert. 
 ---
-= Storage auf dem Host erkennen
+= Ermitteln Sie Storage auf dem Host in der E-Series – VMware
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

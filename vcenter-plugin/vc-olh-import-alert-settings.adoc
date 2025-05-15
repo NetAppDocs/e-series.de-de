@@ -4,7 +4,7 @@ permalink: vcenter-plugin/vc-olh-import-alert-settings.html
 keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
 summary: Importieren von Alarmkonfigurationen aus einem Speicher-Array in andere Speicher-Arrays. 
 ---
-= Warnungseinstellungen importieren
+= Importieren Sie Warnmeldungseinstellungen in das SANtricity-Speicher-Plug-in für vCenter
 :hardbreaks:
 :allow-uri-read: 
 :experimental: 

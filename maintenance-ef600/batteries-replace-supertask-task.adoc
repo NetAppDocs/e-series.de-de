@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: replace battery, battery fail, EF300C, EF600C, EF300, EF600 
 summary: Ersetzen Sie eine Batterie in einem EF300- oder EF600-Array. 
 ---
-= Tauschen Sie den EF300- oder EF600-Akku aus
+= Ersetzen Sie die Batterie EF300 und EF600
 :allow-uri-read: 
 :experimental: 
 :icons: font

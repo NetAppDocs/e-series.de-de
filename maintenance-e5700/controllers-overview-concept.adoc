@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: E5700 controller, repair E5700 controller, replace E5700 controller, failed E5700 controller 
 summary: Prüfen der Controller-Typen und -Anforderungen der E5700 
 ---
-= Anforderungen für den Austausch von E5700 Controller
+= Voraussetzung für den Austausch des Controllers – E5700
 :allow-uri-read: 
 :experimental: 
 :icons: font

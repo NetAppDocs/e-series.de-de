@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: express linux configuration, software configuration, linux host, E2800, E5700, EF300, EF600, E-Series, eseries 
 summary: 'Sie überprüfen Internet Protocol \(IP\)-Netzwerkverbindungen, indem Sie Ping-Tests verwenden, um sicherzustellen, dass Host und Array kommunizieren können.' 
 ---
-= Überprüfen Sie die IP-Netzwerkverbindungen
+= Überprüfen von IP-Netzwerkverbindungen in E-Series – Linux (iSCSI)
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

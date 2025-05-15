@@ -4,7 +4,7 @@ permalink: vcenter-plugin/vc-olh-discover-storage-arrays.html
 keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
 summary: Um Speicherressourcen im Storage Plug-in für vCenter anzuzeigen und zu verwalten, müssen Sie die IP-Adressen von Arrays in Ihrem Netzwerk ermitteln. 
 ---
-= Erkennen Sie Storage-Arrays
+= Ermitteln Sie Speicher-Arrays im SANtricity Speicher-Plug-in für vCenter
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

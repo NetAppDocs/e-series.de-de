@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: NVMe over FC worksheet Linux, express linux configuration, software configuration, linux host, E2800, E5700, EF300, EF600, E-Series, eseries 
 summary: Verwenden Sie dieses Arbeitsblatt, um Konfigurationsinformationen für NVMe over Fibre Channel Storage aufzuzeichnen. 
 ---
-= Notieren Sie Ihre NVMe over FC-Konfiguration
+= Zeichnen Sie Ihre NVMe over FC-Konfiguration in der E-Series – Linux auf
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

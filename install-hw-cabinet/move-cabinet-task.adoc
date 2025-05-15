@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: 3040 40U cabinet, cabinet installation, drive tray installation, controller installation, shelf installation, E2800, E5700, EF300, EF600 
 summary: Den Schrank an seinen festen Standort bringen. 
 ---
-= Schaltschrank an seinen festen Standort bringen
+= Verschieben des 3040 40-HE-Cabinets an seinen permanenten Speicherort (E-Series)
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: configure network Linux, configure hosts linux, express linux configuration, linux host, 
 summary: Der InfiniBand-OFED-Treiber-Stack unterstützt sowohl iSER als auch SRP gleichzeitig auf den gleichen Ports, sodass keine zusätzliche Hardware erforderlich ist. 
 ---
-= Konfigurieren Sie das Netzwerk für Storage-verbundene Hosts
+= Netzwerkverbindungen zwischen Host und E-Series Storage konfigurieren – Linux (iSER over InfiniBand)
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

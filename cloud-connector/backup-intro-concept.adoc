@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: Cloud Connector backup 
 summary: Sie können die Backup-Option im linken Navigationsbereich der SANtricity Cloud Connector-Anwendung aufrufen. Mit der Option Backups wird die Seite Backups angezeigt, auf der Sie neue abbildbasierte oder dateibasierte Sicherungsaufträge erstellen können. 
 ---
-= Backups
+= Verwenden Sie SANtricity Cloud Connector, um E-Series Volume-Backups zu erstellen und zu managen
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

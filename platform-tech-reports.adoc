@@ -4,7 +4,7 @@ permalink: platform-tech-reports.html
 keywords: platform technical reports, e-series, hardware, santricity, os 
 summary: Technische Berichte der E-Series 
 ---
-= Informieren Sie sich über technische Plattformberichte
+= Durchsuchen Sie technische Berichte zur Plattform (E-Series).
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/

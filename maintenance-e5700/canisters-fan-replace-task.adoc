@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: E5700 fan, repair E5700 fan, replace E5700 fan, failed E5700 fan 
 summary: Einen E5700 Lüfter austauschen. 
 ---
-= Austausch des E5700 Lüfterkanisters (60 Laufwerke)
+= Austauschen des Lüfterbehälters - E5700 (60 Laufwerke)
 :allow-uri-read: 
 :experimental: 
 :icons: font

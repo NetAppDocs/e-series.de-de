@@ -4,7 +4,7 @@ permalink: vcenter-plugin/vc-olh-import-directory-services-settings.html
 keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
 summary: Importieren einer Verzeichnisdienstkonfiguration von einem Speicher-Array in andere Speicher-Arrays. 
 ---
-= Einstellungen für Verzeichnisdienste importieren
+= Importieren Sie die Einstellungen für Verzeichnisdienste im SANtricity-Speichermodul für vCenter
 :hardbreaks:
 :allow-uri-read: 
 :experimental: 

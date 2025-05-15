@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: express linux configuration, software configuration, linux host, E2800, E5700, EF300, EF600, E-Series, eseries 
 summary: Wenn Ihr Controller einen NVMe-over-InfiniBand-Port enthält, können Sie die IP-Adresse jedes Ports mit SANtricity System Manager konfigurieren. 
 ---
-= Konfigurieren Sie NVMe over InfiniBand-Verbindungen für das Storage-Array
+= NVMe-over-InfiniBand-Verbindungen des Storage-Arrays in E-Series – Linux konfigurieren
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

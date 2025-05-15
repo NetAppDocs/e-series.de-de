@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: Web Services Proxy, WSP, 
 summary: Überblick über SANtricity® Webservices Proxy, Web Services API, REST API, 
 ---
-= SANtricity Web Services Proxy: Überblick
+= Erfahren Sie mehr über den Webservice-Proxy von SANtricity
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

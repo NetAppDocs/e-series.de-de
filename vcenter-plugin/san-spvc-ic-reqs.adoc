@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: upgrade vCenter 
 summary: Installations- und Upgrade-Anforderungen und Überlegungen für das vCenter Plug-in 
 ---
-= Installations- und Upgrade-Anforderungen prüfen
+= Installations- und Upgrade-Anforderungen für das SANtricity Storage Plug-in für vCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: express Windows configuration, software configuration, Windows host, E2800, E5700, EF300, EF600, E-Series, eseries 
 summary: Überprüfen Sie die Anforderungen für die Einrichtung eines E-Series Arrays und eines Windows Hosts mithilfe der Express-Methode. 
 ---
-= Voraussetzungen
+= Annahmen (E-Series und Windows)
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

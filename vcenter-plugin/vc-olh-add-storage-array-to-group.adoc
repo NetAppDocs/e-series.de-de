@@ -4,7 +4,7 @@ permalink: vcenter-plugin/vc-olh-add-storage-array-to-group.html
 keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
 summary: Fügen Sie einer vom Benutzer erstellten Gruppe ein oder mehrere Speicher-Arrays hinzu. 
 ---
-= Fügen Sie Speicher-Array zur Gruppe hinzu
+= Fügen Sie Speicher-Array zur Gruppe im SANtricity Speicher-Plugin für vCenter hinzu
 :hardbreaks:
 :allow-uri-read: 
 :experimental: 

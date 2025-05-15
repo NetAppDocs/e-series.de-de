@@ -4,7 +4,7 @@ permalink: vcenter-plugin/vc-olh-turn-on-locator-lights.html
 keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
 summary: Nach Laufwerken können Sie alle Laufwerke physisch identifizieren, die einen ausgewählten Pool, eine Volume-Gruppe oder SSD Cache umfassen. An jedem Laufwerk im ausgewählten Pool, der Volume-Gruppe oder dem SSD-Cache leuchtet eine LED-Anzeige auf. 
 ---
-= Positionsleuchten einschalten
+= Schalten Sie die LED-Anzeigen auf einem Laufwerk im SANtricity-Speichermodul für vCenter ein
 :hardbreaks:
 :allow-uri-read: 
 :experimental: 

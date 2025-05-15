@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: EF300, EF600, EF600C, EF300C, replace drive, 
 summary: Prüfen Sie die Anforderungen und Überlegungen, bevor Sie Laufwerke in der EF300 oder EF600 ersetzen. 
 ---
-= Anforderungen für den Austausch von EF300- oder EF600-Laufwerken
+= Voraussetzungen für den Austausch des Laufwerks - EF300 oder EF600
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

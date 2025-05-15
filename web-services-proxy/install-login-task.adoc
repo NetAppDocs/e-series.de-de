@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: log in API, log in Unified Manager 
 summary: Greifen Sie auf die Web Services API und Unified Manager zu und melden Sie sich an. 
 ---
-= Melden Sie sich bei API und Unified Manager an
+= Melden Sie sich bei der SANtricity Webservices Proxy API und Unified Manager an
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

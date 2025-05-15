@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: E4000 replace canister, replacing E4000 canister, E4000 replace fan, replacing E4000 fan, E4000, E-Series, eseries 
 summary: Überprüfen Sie die Typen und Anforderungen des E4000-Behälters. 
 ---
-= E4000 Lüfterbehälter ersetzen (60 Laufwerke)
+= Ersetzen Sie den Lüfterbehälter E4000 (60 Laufwerke).
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

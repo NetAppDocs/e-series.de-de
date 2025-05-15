@@ -4,7 +4,7 @@ permalink: vcenter-plugin/vc-olh-view-ssd-cache-statistics.html
 keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
 summary: Anzeigen von Statistiken für den SSD-Cache, z. B. Lesen, Schreiben, Cache-Treffer, Cache-Zuweisung in Prozent, Und Cache-Auslastung in Prozent. 
 ---
-= Anzeigen von SSD-Cache-Statistiken
+= Zeigen Sie die SSD-Cache-Statistiken im SANtricity Speicher-Plug-in für vCenter an
 :hardbreaks:
 :allow-uri-read: 
 :experimental: 

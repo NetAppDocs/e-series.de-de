@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: host protocol change, EF300 host protocol, EF600 host protocol 
 summary: Führen Sie nach dem Konvertieren des Protokolls der Host-Ports weitere Schritte durch, um das neue Protokoll zu verwenden. 
 ---
-= Vollständige Hostprotokollkonvertierung für eine EF300 oder EF600
+= Vollständige Host-Protokoll-Konvertierung – EF300 und EF600
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

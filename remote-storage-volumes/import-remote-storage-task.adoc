@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: import Remote Storage Volumes, RTV import, import remote volumes, remote storage E-Series 
 summary: Der Import des Remote-Speichergeräts erfolgt über den Assistenten zum Importieren von Remote-Speicher im SANtricity-System Manager. Mit der Funktion Remote Storage Import können Daten von einem Remote-Speichergerät in das lokale E-Series Array verschoben werden. 
 ---
-= Remote-Speicher importieren
+= Importieren Sie Remote-Speicher für SANtricity-Remote-Speicher-Volumes
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

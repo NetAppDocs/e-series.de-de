@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: E5700 power supply, repair E5700 power supply, replace E5700 power supply, failed E5700 power supply 
 summary: Ersetzen Sie ein E5700 Netzteil für 60 Laufwerke. 
 ---
-= Austausch des E5700 Stromversorgungskansters (60 Laufwerke)
+= Austauschen des Strombehälters - E5700 (60 Laufwerke)
 :allow-uri-read: 
 :experimental: 
 :icons: font

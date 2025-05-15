@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: EF300, EF600, EF300C, EF600C installation 
 summary: Installieren und Einrichten des EF300- und EF600-Arrays 
 ---
-= Installation und Einrichtung der EF300-, EF600-, EF300C- und EF600C-Storage-Systeme
+= Installation und Einrichtung – EF300, EF600, EF300C und EF600C
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

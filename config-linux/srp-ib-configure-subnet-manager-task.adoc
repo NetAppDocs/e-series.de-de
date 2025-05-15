@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: express linux configuration, software configuration, linux host, E2800, E5700, EF300, EF600, E-Series, eseries 
 summary: Die Verwendung eines InfiniBand-Switches zum Ausführen des Subnetz-Managers kann zu unerwarteten Pfadverlusten bei hohen Lasten führen. Um Pfadverluste zu vermeiden, konfigurieren Sie den Subnetz-Manager auf einem oder mehreren Hosts, die opensm verwenden. 
 ---
-= Konfigurieren Sie den Subnetzmanager
+= Subnetz-Manager in E-Series – Linux (SRP over InfiniBand) konfigurieren
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

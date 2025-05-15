@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: Erfahren Sie, wie Sie ein E4060 oder DE460C Storage-System in einem Rack mit zwei Stützen oder einem NetApp Systemschrank installieren. 
 ---
-= Hardware installieren (E4060)
+= Installieren Sie die Hardware E4060
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

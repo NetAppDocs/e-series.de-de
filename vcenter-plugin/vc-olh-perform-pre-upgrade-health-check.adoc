@@ -4,7 +4,7 @@ permalink: vcenter-plugin/vc-olh-perform-pre-upgrade-health-check.html
 keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
 summary: Eine Zustandsprüfung wird im Rahmen des Upgrade-Prozesses ausgeführt, doch vor Beginn kann zusätzlich ein Systemcheck separat durchgeführt werden. 
 ---
-= Führen Sie eine Integritätsprüfung vor dem Upgrade durch
+= Führen Sie eine Integritätsprüfung vor dem Upgrade im SANtricity-Speichermodul für vCenter durch
 :hardbreaks:
 :allow-uri-read: 
 :experimental: 

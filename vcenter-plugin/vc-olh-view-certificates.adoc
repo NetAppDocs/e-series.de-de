@@ -4,7 +4,7 @@ permalink: vcenter-plugin/vc-olh-view-certificates.html
 keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
 summary: 'Zusammenfassende Informationen für ein Zertifikat anzeigen, einschließlich Organisation, die das Zertifikat verwendet, Behörde, die das Zertifikat ausgestellt hat, Gültigkeitsdauer und Fingerabdrücke (eindeutige Kennungen)' 
 ---
-= Anzeigen von Zertifikaten
+= Zeigen Sie Zertifikate im SANtricity Speicher-Plug-in für vCenter an
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
