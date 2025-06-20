@@ -1,0 +1,703 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/faq-storage-plugin-vcenter.html 
+keywords:  
+summary: Diese FAQ kann Ihnen helfen, wenn Sie nur nach einer schnellen Antwort auf eine Frage suchen. 
+---
+= FAQ zum SANtricity Storage Plugin für vCenter
+:hardbreaks:
+:allow-uri-read: 
+:experimental: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+
+
+[role="lead"]
+Diese FAQ kann Ihnen helfen, wenn Sie nur nach einer schnellen Antwort auf eine Frage suchen.
+
+
+
+== Welche Einstellungen werden importiert?
+
+Die Funktion „Importeinstellungen“ ist ein Batch-Vorgang, bei dem Konfigurationen von einem Speicher-Array auf mehrere Speicher-Arrays geladen werden.
+
+Die während dieses Vorgangs importierten Einstellungen hängen davon ab, wie das Quell-Speicher-Array in System Manager konfiguriert ist. Die folgenden Einstellungen können in mehrere Speicher-Arrays importiert werden:
+
+* *E-Mail-Alarme* -- Einstellungen beinhalten eine E-Mail-Server-Adresse und die E-Mail-Adressen der Warnungsempfänger.
+* *Syslog Alerts* -- Einstellungen beinhalten eine Syslog-Serveradresse und einen UDP-Port.
+* *SNMP Alerts* -- Einstellungen beinhalten einen Community-Namen und eine IP-Adresse für den SNMP-Server.
+* *AutoSupport* -- Einstellungen umfassen die separaten Funktionen (Basic AutoSupport, AutoSupport OnDemand und Remote Diagnostics), das Wartungsfenster, die Bereitstellungsmethode, Und dem Versandplan.
+* *Directory Services* -- die Konfiguration umfasst den Domänennamen und die URL eines LDAP-Servers (Lightweight Directory Access Protocol) sowie die Zuordnungen für die Benutzergruppen des LDAP-Servers zu den vordefinierten Rollen des Speicher-Arrays.
+* *Speicherkonfiguration* -- Konfigurationen umfassen Volumes (nur dicke und nur nicht-Repository-Volumes), Volume-Gruppen, Pools und Hot-Spare-Laufwerkszuordnungen.
+* *Systemeinstellungen* -- Konfigurationen umfassen Medien-Scan-Einstellungen für ein Volume, SSD-Cache für Controller und automatischen Lastausgleich (ohne Berichterstellung über Hostkonnektivität).
+
+
+
+
+== Warum sehe ich nicht alle meine Storage Arrays?
+
+Während des Vorgangs „Importeinstellungen“ stehen einige Ihrer Speicherarrays möglicherweise nicht im Dialogfeld „Zielauswahl“ zur Verfügung.
+
+Speicher-Arrays werden möglicherweise aus den folgenden Gründen nicht angezeigt:
+
+* Die Firmware-Version ist unter 8.50.
+* Das Speicher-Array ist offline.
+* Das System kann nicht mit diesem Array kommunizieren (z. B. verfügt das Array über Zertifikat-, Passwort- oder Netzwerkprobleme).
+
+
+
+
+== Warum sind diese Volumes nicht mit einem Workload verbunden?
+
+Volumes sind keinem Workload zugeordnet, wenn sie mithilfe der Befehlszeilenschnittstelle (CLI) erstellt wurden oder aus einem anderen Storage-Array migriert (importiert/exportiert) wurden.
+
+
+
+== Wie wirkt sich mein ausgewählter Workload auf die Erstellung des Volumes aus?
+
+Während der Volume-Erstellung werden Sie aufgefordert, Informationen über die Verwendung eines Workloads zu erhalten. Das System erstellt anhand dieser Informationen eine optimale Volume-Konfiguration für Sie, die Sie nach Bedarf bearbeiten können. Optional können Sie diesen Schritt in der Sequenz zur Volume-Erstellung überspringen.
+
+Ein Workload ist ein Storage-Objekt, das eine Applikation unterstützt. Sie können einen oder mehrere Workloads oder Instanzen pro Applikation definieren. Bei einigen Applikationen konfiguriert das System den Workload so, dass er Volumes mit ähnlichen zugrunde liegenden Volume-Merkmalen enthält. Diese Volume-Merkmale werden basierend auf dem Applikationstyp optimiert, den der Workload unterstützt. Wenn Sie beispielsweise einen Workload erstellen, der eine Microsoft SQL Server Applikation unterstützt und anschließend Volumes für diesen Workload erstellt, werden die zugrunde liegenden Volume-Merkmale zur Unterstützung von Microsoft SQL Server optimiert.
+
+* *Applikationsspezifisch* -- Wenn Sie Volumes mit einem anwendungsspezifischen Workload erstellen, empfiehlt das System möglicherweise eine optimierte Volume-Konfiguration, um Konflikte zwischen Applikations-Workload I/O und anderem Traffic aus Ihrer Anwendungsinstanz zu minimieren. Volume-Merkmale wie I/O-Typ, Segmentgröße, Controller-Besitz und Lese- und Schreib-Cache werden automatisch für Workloads empfohlen und optimiert, die für die folgenden Applikationstypen erstellt wurden.
++
+** Microsoft SQL Server
+** Microsoft Exchange Server
+** Videoüberwachungsapplikationen
+** VMware ESXi (für Volumes, die mit dem Virtual Machine File System verwendet werden sollen)
++
+Sie können die empfohlene Volume-Konfiguration prüfen und die vom System empfohlenen Volumes und Eigenschaften bearbeiten, hinzufügen oder löschen. Verwenden Sie dazu das Dialogfeld Volumes hinzufügen/bearbeiten.
+
+
+
+* *Andere (oder Anwendungen ohne spezifische Unterstützung der Volumenerzeugung)* -- Bei anderen Workloads wird eine Volume-Konfiguration verwendet, die manuell angegeben werden muss, wann ein Workload erstellt werden soll, der nicht mit einer bestimmten Applikation verknüpft ist, oder ob keine integrierte Optimierung für die Applikation vorhanden ist, die Sie im Storage-Array verwenden möchten. Sie müssen die Volume-Konfiguration manuell über das Dialogfeld Volumes hinzufügen/bearbeiten angeben.
+
+
+
+
+== Warum sehe ich nicht alle meine Volumes, Hosts oder Host Cluster?
+
+Snapshot-Volumes mit einem da-fähigen Basis-Volume können nicht einem Host zugewiesen werden, der nicht Data Assurance (da)-fähig ist. Sie müssen das da auf dem Basisvolume deaktivieren, bevor ein Snapshot-Volume einem Host zugewiesen werden kann, der nicht über da-fähig ist.
+
+Beachten Sie die folgenden Richtlinien für den Host, dem Sie das Snapshot-Volume zuweisen:
+
+* Ein Host ist nicht da-fähig, wenn er über eine I/O-Schnittstelle, die nicht über da-fähig ist, mit dem Speicher-Array verbunden ist.
+* Ein Host-Cluster ist nicht da-fähig, wenn es mindestens ein Hostmitglied hat, das nicht da-fähig ist.
+
+
+
+NOTE: Sie können da nicht auf einem Volume deaktivieren, das mit Snapshots (Konsistenzgruppen, Snapshot-Gruppen, Snapshot-Images und Snapshot-Volumes), Volume-Kopien, Und Spiegelungen. Alle zugeordneten Kapazitäts- und Snapshot-Objekte müssen gelöscht werden, bevor das da auf dem Basis-Volume deaktiviert werden kann.
+
+
+
+== Warum kann ich den ausgewählten Workload nicht löschen?
+
+Dieser Workload besteht aus einer Gruppe von Volumes, die mithilfe der Befehlszeilenschnittstelle (CLI) erstellt oder von einem anderen Storage Array migriert (importiert/exportiert) wurden. Daher sind die Volumes in diesem Workload keinem applikationsspezifischen Workload zugeordnet, sodass der Workload nicht gelöscht werden kann.
+
+
+
+== Wie können mir applikationsspezifische Workloads beim Management meines Storage Arrays helfen?
+
+Die Volume-Merkmale Ihres applikationsspezifischen Workloads diktieren, wie der Workload mit den Komponenten des Storage-Arrays interagiert und die Performance Ihrer Umgebung im Rahmen einer bestimmten Konfiguration bestimmt.
+
+Eine Applikation ist Software wie SQL Server oder Exchange. Sie definieren einen oder mehrere Workloads, um jede Applikation zu unterstützen. Für einige Applikationen empfiehlt das System automatisch eine Volume-Konfiguration zur Optimierung des Storage. Merkmale wie I/O-Typ, Segmentgröße, Controller-Eigentümer und Lese- und Schreib-Cache sind in der Volume-Konfiguration enthalten.
+
+
+
+== Was muss ich tun, um die erweiterte Kapazität erkennen zu können?
+
+Wenn Sie die Kapazität für ein Volume erhöhen, erkennt der Host möglicherweise nicht sofort den Anstieg der Volume-Kapazität.
+
+Die meisten Betriebssysteme erkennen die erweiterte Volume-Kapazität und werden nach dem Start der Volume-Erweiterung automatisch erweitert. Einige könnten jedoch nicht. Wenn Ihr Betriebssystem die erweiterte Volume-Kapazität nicht automatisch erkennt, müssen Sie möglicherweise eine erneute Festplattenüberprüfung durchführen oder einen Neustart durchführen.
+
+Nachdem Sie die Volume-Kapazität erweitert haben, müssen Sie die Größe des Dateisystems manuell erhöhen, um sie anzupassen. Wie Sie dies tun, hängt von dem Dateisystem ab, das Sie verwenden.
+
+Weitere Informationen finden Sie in der Dokumentation Ihres Host-Betriebssystems.
+
+
+
+== Wann soll ich die spätere Auswahl Host zuweisen verwenden?
+
+Wenn Sie den Prozess zum Erstellen von Volumes beschleunigen möchten, können Sie den Hostzuordnungsschritt überspringen, damit neu erstellte Volumes offline initialisiert werden.
+
+Die neu erstellten Volumes müssen initialisiert werden. Das System kann sie mit einem von zwei Modi initialisieren – entweder einem sofortigen verfügbaren Format (IAF)-Hintergrundinitialisierungsprozess oder einem Offline-Prozess.
+
+Wenn Sie ein Volume einem Host zuordnen, ist es erforderlich, dass alle Initialisierungsvolumes in dieser Gruppe in eine Hintergrundinitialisierung übergehen. Durch diesen Hintergrundinitialisierungsprozess können gleichzeitige Host-I/O-Vorgänge erfolgen, was manchmal sehr zeitaufwendig sein kann.
+
+Wenn keines der Volumes einer Volume-Gruppe zugeordnet ist, wird die Offline-Initialisierung durchgeführt. Der Offline-Prozess ist viel schneller als der Hintergrundprozess.
+
+
+
+== Was muss ich über die Anforderungen der Host-Blockgröße wissen?
+
+Bei EF300- und EF600-Systemen kann ein Volume so eingestellt werden, dass es 512 Byte oder 4 KiB-Blockgrößen unterstützt (auch als „Sektorgröße“ bezeichnet). Sie müssen den richtigen Wert während der Volume-Erstellung einstellen. Wenn möglich, schlägt das System den entsprechenden Standardwert vor.
+
+Bevor Sie die Blockgröße des Volumes festlegen, lesen Sie die folgenden Einschränkungen und Richtlinien.
+
+* Einige Betriebssysteme und Virtual Machines (vornehmlich VMware) erfordern derzeit eine 512-Byte-Blockgröße und unterstützen keine 4KiB. Achten Sie also darauf, die Host-Anforderungen zu kennen, bevor Sie ein Volume erstellen. In der Regel können Sie die beste Leistung erreichen, indem Sie ein Volumen setzen, um eine 4KiB Block-Größe zu präsentieren; jedoch sicherstellen, dass Ihr Host für 4KiB (oder "4Kn") Blöcke erlaubt.
+* Der für den Pool bzw. die Volume-Gruppe ausgewählte Laufwerkstyp legt außerdem fest, welche Volume-Blockgrößen unterstützt werden:
++
+** Wenn Sie eine Volume-Gruppe mit Laufwerken erstellen, die in 512-Byte-Blöcke schreiben, dann können Sie nur Volumes mit 512-Byte-Blöcken erstellen.
+** Wenn Sie eine Volume-Gruppe mit Laufwerken erstellen, die in 4KiB-Blöcke schreiben, dann können Sie Volumes entweder mit 512-Byte- oder 4KiB-Blöcken erstellen.
+
+
+* Wenn das Array über eine iSCSI-Host-Schnittstellenkarte verfügt, sind alle Volumes auf 512-Byte-Blöcke beschränkt (unabhängig von der Blockgröße der Volume-Gruppe). Dies ist auf eine bestimmte Hardware-Implementierung zurückzuführen.
+* Sobald die Blockgröße festgelegt ist, können Sie sie nicht ändern. Wenn Sie eine Blockgröße ändern müssen, müssen Sie das Volume löschen und neu erstellen.
+
+
+
+
+== Warum sollte ich ein Host-Cluster erstellen?
+
+Sie müssen ein Host-Cluster erstellen, wenn Sie mindestens zwei Hosts über gemeinsamen Zugriff auf dieselbe Gruppe von Volumes verfügen möchten. Normalerweise sind auf den einzelnen Hosts Clustering-Software installiert, um den Volume-Zugriff zu koordinieren.
+
+
+
+== Wie kann ich feststellen, welches Host-Betriebssystem richtig ist?
+
+Das Feld Host-Betriebssystemtyp enthält das Betriebssystem des Hosts. Sie können den empfohlenen Hosttyp aus der Dropdown-Liste auswählen.
+
+Die Hosttypen, die in der Dropdown-Liste angezeigt werden, hängen vom Speicher-Array-Modell und der Firmware-Version ab. Die neuesten Versionen zeigen zuerst die häufigsten Optionen an, die am wahrscheinlichsten geeignet sind. Die Darstellung in dieser Liste impliziert nicht, dass die Option vollständig unterstützt wird.
+
+
+NOTE: Weitere Informationen zur Host-Unterstützung finden Sie im http://mysupport.netapp.com/matrix["NetApp Interoperabilitäts-Matrix-Tool"^].
+
+Einige der folgenden Host-Typen werden möglicherweise in der Liste angezeigt:
+
+|===
+| Host-Betriebssystem | Betriebssystem und Multipath-Treiber 
+
+
+| Linux DM-MP (Kernel 3.10 oder höher) | Unterstützt Linux-Betriebssysteme mit einer Device Mapper Multipath Failover-Lösung mit einem 3.10 oder höher Kernel. 
+
+
+| VMware ESXi | Unterstützung für VMware ESXi Betriebssysteme mit der Nnativen Multipathing Plug-in-Architektur (NMP) mit dem integrierten Storage Array Type Policy-Modul SATP_ALUA von VMware. 
+
+
+| Windows (Cluster oder nicht-Cluster) | Unterstützt Konfigurationen mit Windows-Clustern oder nicht-Clustern, die den ATTO-Multipathing-Treiber nicht ausführen. 
+
+
+| ATTO Cluster (alle Betriebssysteme) | Unterstützt alle Clusterkonfigurationen unter Verwendung des Multipathing-Treibers ATTO Technology, Inc. 
+
+
+| Linux (Veritas DMP) | Unterstützung von Linux Betriebssystemen mit einer Veritas DMP-Multipathing-Lösung. 
+
+
+| Linux (ATTO) | Unterstützt Linux-Betriebssysteme unter Verwendung eines ATTO Technology, Inc., Multipathing-Treibers. 
+
+
+| Mac OS | Unterstützt Mac-Betriebssystemversionen mit einem Multipathing-Treiber ATTO Technology, Inc. 
+
+
+| Windows (ATTO) | Unterstützt Windows-Betriebssysteme mit einem Multipathing-Treiber ATTO Technology, Inc. 
+
+
+| IBM SVC | Unterstützt eine IBM SAN Volume Controller-Konfiguration. 
+
+
+| Werkseitige Standardeinstellung | Reserviert für den Erststart des Speicher-Arrays. Wenn Ihr Host-Betriebssystem auf Werkseinstellung eingestellt ist, ändern Sie es entsprechend dem Host-Betriebssystem und dem Multipath-Treiber, der auf dem angeschlossenen Host ausgeführt wird. 
+
+
+| Linux DM-MP (Kernal 3.9 oder früher) | Unterstützt Linux-Betriebssysteme mit einer Device Mapper Multipath Failover-Lösung mit einem 3.9 oder früheren Kernel. 
+
+
+| Cluster-Fenster (veraltet) | Wenn Ihr Host-Betriebssystem-Typ auf diesen Wert eingestellt ist, verwenden Sie stattdessen die Windows-Einstellung (Cluster oder nicht-Cluster). 
+|===
+
+
+== Wie Stelle ich die Host-Ports einem Host gegenüber?
+
+Wenn Sie einen Host manuell erstellen, müssen Sie zuerst das entsprechende HBA-Dienstprogramm (Host Bus Adapter) verwenden, das auf dem Host verfügbar ist, um die Host-Port-IDs zu ermitteln, die mit jedem HBA verknüpft sind, der im Host installiert ist.
+
+Wenn Sie über diese Informationen verfügen, wählen Sie aus der Liste im Dialogfeld „Host erstellen“ die Host-Port-IDs aus, die sich beim Speicher-Array angemeldet haben.
+
+
+CAUTION: Stellen Sie sicher, dass Sie die entsprechenden Host-Port-IDs für den von Ihnen erstellten Host auswählen. Wenn Sie die falschen Host-Port-IDs zuordnen, können Sie unbeabsichtigten Zugriff von einem anderen Host auf diese Daten verursachen.
+
+
+
+== Was ist das Standard-Cluster?
+
+Das Standard-Cluster ist eine systemdefinierte Einheit, die jedem nicht zugeordneten Host-Port-Identifier, der beim Speicher-Array angemeldet ist, den Zugriff auf Volumes ermöglicht, die dem Standardcluster zugewiesen sind.
+
+Eine nicht zugeordnete Host-Port-ID ist ein Host-Port, der nicht logisch einem bestimmten Host zugeordnet ist, aber physisch in einem Host installiert und beim Speicher-Array angemeldet ist.
+
+
+NOTE: Wenn Hosts spezifischen Zugriff auf bestimmte Volumes im Storage-Array haben sollen, dürfen Sie das Standardcluster nicht verwenden. Stattdessen müssen Sie die Host-Port-IDs den entsprechenden Hosts zuordnen. Diese Aufgabe kann während des Vorgangs „Host erstellen“ manuell ausgeführt werden. Anschließend weisen Sie Volumes einem einzelnen Host oder einem Host-Cluster zu.
+
+Sie sollten das Standardcluster nur in besonderen Situationen verwenden, in denen Ihre externe Speicherumgebung geeignet ist, allen Hosts und allen angemeldeten Host-Port-IDs, die mit dem Speicher-Array verbunden sind, Zugriff auf alle Volumes zu gewähren (All-Access-Modus). Ohne die Hosts dem Storage Array oder der Benutzeroberfläche bekannt zu machen.
+
+Zunächst können Sie Volumes über die Befehlszeilenschnittstelle (CLI) nur dem Standard-Cluster zuweisen. Nachdem Sie dem Standard-Cluster jedoch mindestens ein Volume zugewiesen haben, wird diese Einheit (als Standard-Cluster bezeichnet) in der Benutzeroberfläche angezeigt, in der Sie diese Einheit verwalten können.
+
+
+
+== Was ist Redundanzprüfung?
+
+Durch eine Redundanzprüfung wird ermittelt, ob die Daten auf einem Volume in einem Pool oder einer Volume-Gruppe konsistent sind. Redundanzdaten dienen der schnellen Rekonstruktion von Informationen über das Ersatzlaufwerk, wenn eines der Laufwerke im Pool oder der Volume-Gruppe ausfällt.
+
+Sie können diese Prüfung nur für einen Pool oder eine Volume-Gruppe gleichzeitig durchführen. Bei einer Volume-Redundanzprüfung werden folgende Aktionen durchgeführt:
+
+* Scannt die Datenblöcke in einem RAID 3-Volume, einem RAID 5-Volume oder einem RAID 6-Volume und überprüft anschließend die Redundanzinformationen für jeden Block. (RAID 3 kann Volume-Gruppen nur über die Befehlszeilenschnittstelle zugewiesen werden.)
+* Vergleicht die Datenblöcke auf gespiegelten RAID 1-Laufwerken.
+* Gibt Redundanzfehler zurück, wenn die Daten von der Controller-Firmware uneinheitlich sind.
+
+
+
+NOTE: Eine sofortige Durchführung einer Redundanzprüfung auf demselben Pool oder derselben Volume-Gruppe kann zu einem Fehler führen. Um dieses Problem zu vermeiden, warten Sie ein bis zwei Minuten, bevor Sie eine weitere Redundanzprüfung auf demselben Pool oder derselben Volume-Gruppe durchführen.
+
+
+
+== Was ist Erhaltungskapazität?
+
+Bei der Konservierung wird die Kapazität (Anzahl der Laufwerke) verwendet, die in einem Pool reserviert ist, um potenzielle Laufwerksausfälle zu unterstützen.
+
+Wenn ein Pool erstellt wird, reserviert das System abhängig von der Anzahl der Laufwerke im Pool automatisch eine standardmäßige Anlagenkapazität.
+
+Pools nutzen während der Rekonstruktion haltende Kapazitäten, wohingegen Volume-Gruppen Hot-Spare-Festplatten zu demselben Zweck einsetzen. Die Methode zur Erhaltung der Kapazität ist eine Verbesserung gegenüber Hot-Spare-Festplatten, da sie eine schnellere Rekonstruktion ermöglicht. Die Konservierungskapazität wird bei einem Hot-Spare-Laufwerk über eine Anzahl von Laufwerken im Pool verteilt, nicht auf einer Festplatte, sodass die Geschwindigkeit und Verfügbarkeit einer einzelnen Festplatte nicht eingeschränkt ist.
+
+
+
+== Welches RAID-Level eignet sich am besten für meine Applikation?
+
+Um die Performance einer Volume-Gruppe zu maximieren, müssen Sie den entsprechenden RAID-Level auswählen.
+
+Sie können den entsprechenden RAID-Level ermitteln, indem Sie die Prozentsätze für Lese- und Schreibvorgänge für die Anwendungen kennen, die auf die Volume-Gruppe zugreifen. Verwenden Sie die Seite Performance, um diese Prozentsätze zu erhalten.
+
+
+
+=== RAID-Level und Applikations-Performance
+
+RAID verwendet eine Reihe von Konfigurationen, sogenannte Level, um zu ermitteln, wie Benutzer- und Redundanzdaten von den Laufwerken geschrieben und abgerufen werden. Jedes RAID-Level stellt eigene Performance-Funktionen bereit. Applikationen mit einem hohen Prozentsatz für Lesevorgänge können aufgrund der hervorragenden Lese-Performance der RAID 5- und RAID 6-Konfigurationen auch mit RAID 5-Volumes oder RAID 6-Volumes arbeiten.
+
+Applikationen mit einem niedrigen Read-Prozentsatz (schreibintensiv) erbringen keine gute Performance auf RAID 5 Volumes oder RAID 6 Volumes. Die Performance ist beeinträchtigt, und das Ergebnis ist die Art und Weise, wie ein Controller Daten und Redundanzdaten auf die Laufwerke in einer RAID 5-Volume-Gruppe oder einer RAID 6-Volume-Gruppe schreibt.
+
+Wählen Sie basierend auf den folgenden Informationen einen RAID-Level aus.
+
+
+
+==== RAID 0
+
+*Beschreibung:*
+
+* Nicht-redundant, Striping-Modus.
+* RAID 0 verteilt Daten auf alle Laufwerke der Volume-Gruppe.
+
+
+*Datenschutzfunktionen:*
+
+* RAID 0 wird für hohe Verfügbarkeitsanforderungen nicht empfohlen. RAID 0 ist besser für nicht-kritische Daten.
+* Wenn ein einzelnes Laufwerk in der Volume-Gruppe ausfällt, fallen alle zugehörigen Volumes aus und alle Daten gehen verloren.
+
+
+*Anzahl der Laufwerke:*
+
+* Für RAID-Level 0 ist mindestens ein Laufwerk erforderlich.
+* RAID 0-Volume-Gruppen können mehr als 30 Laufwerke haben.
+* Sie können eine Volume-Gruppe erstellen, die alle Laufwerke im Speicher-Array umfasst.
+
+
+
+
+==== RAID 1 oder RAID 10
+
+*Beschreibung:*
+
+* Striping/Mirror-Modus.
+
+
+*Wie es funktioniert:*
+
+* RAID 1 verwendet die Festplattenspiegelung, um Daten auf zwei doppelte Festplatten gleichzeitig zu schreiben.
+* RAID 10 nutzt Laufwerk-Striping, um Daten über eine Reihe gespiegelter Laufwerkpaare zu verteilen.
+
+
+*Datenschutzfunktionen:*
+
+* RAID 1 und RAID 10 bieten eine hohe Performance und eine beste Datenverfügbarkeit.
+* RAID 1 und RAID 10 verwenden die Laufwerkspiegelung, um eine exakte Kopie von einem Laufwerk auf ein anderes Laufwerk zu erstellen.
+* Fällt eines der Laufwerke in einem Laufwerkspaar aus, kann das Storage-Array sofort auf ein anderes Laufwerk umschalten, ohne dass Daten oder Service verloren gehen.
+* Ein Ausfall eines Laufwerks führt dazu, dass zugehörige Volumes beeinträchtigt werden. Das Spiegellaufwerk ermöglicht den Zugriff auf die Daten.
+* Ein Laufwerkausfall in einer Volume-Gruppe führt zu einem Ausfall aller damit verbundenen Volumes und es kann zu einem Datenverlust kommen.
+
+
+*Anzahl der Laufwerke:*
+
+* Für RAID 1 sind mindestens zwei Laufwerke erforderlich: Ein Laufwerk für die Benutzerdaten und ein Laufwerk für die gespiegelten Daten.
+* Wenn Sie vier oder mehr Laufwerke auswählen, wird RAID 10 automatisch für die gesamte Volume-Gruppe konfiguriert: Zwei Laufwerke für Benutzerdaten und zwei Laufwerke für die gespiegelten Daten.
+* Sie müssen eine gerade Anzahl von Laufwerken in der Volume-Gruppe haben. Wenn Sie nicht über eine gerade Anzahl von Laufwerken verfügen und noch einige nicht zugewiesene Laufwerke haben, gehen Sie zu *Pools & Volume Groups*, um der Volume-Gruppe zusätzliche Laufwerke hinzuzufügen, und wiederholen Sie den Vorgang.
+* RAID 1- und RAID 10-Volume-Gruppen können mehr als 30 Laufwerke haben. Es kann eine Volume-Gruppe erstellt werden, die alle Laufwerke im Storage-Array umfasst.
+
+
+
+
+==== RAID 5
+
+*Beschreibung:*
+
+* Hoher I/O-Modus
+
+
+*Wie es funktioniert:*
+
+* Benutzerdaten und redundante Informationen (Parität) werden auf die Laufwerke verteilt.
+* Die entsprechende Kapazität eines Laufwerks wird für redundante Informationen verwendet.
+
+
+*Datenschutzfunktionen*
+
+* Wenn ein einzelnes Laufwerk in einer RAID 5-Volume-Gruppe ausfällt, werden alle zugehörigen Volumes beeinträchtigt. Durch die redundanten Informationen kann weiterhin auf die Daten zugegriffen werden.
+* Wenn zwei oder mehr Laufwerke in einer RAID 5-Volume-Gruppe ausfallen, fallen alle damit verbundenen Volumes aus und alle Daten gehen verloren.
+
+
+*Anzahl der Laufwerke:*
+
+* Sie müssen mindestens drei Laufwerke in der Volume-Gruppe haben.
+* In der Regel sind Sie auf maximal 30 Laufwerke in der Volume-Gruppe begrenzt.
+
+
+
+
+==== RAID 6
+
+*Beschreibung:*
+
+* Hoher I/O-Modus
+
+
+*Wie es funktioniert:*
+
+* Benutzerdaten und redundante Informationen (Dual Parity) werden auf die Laufwerke verteilt.
+* Die entsprechende Kapazität von zwei Laufwerken wird für redundante Informationen verwendet.
+
+
+*Datenschutzfunktionen:*
+
+* Wenn ein oder zwei Laufwerke in einer RAID 6-Volume-Gruppe ausfallen, werden alle zugehörigen Volumes beeinträchtigt, aber aufgrund der redundanten Informationen ist es möglich, weiterhin auf die Daten zuzugreifen.
+* Wenn drei oder mehr Laufwerke in einer RAID 6-Volume-Gruppe ausfallen, fallen alle damit verbundenen Volumes aus und alle Daten gehen verloren.
+
+
+*Anzahl der Laufwerke:*
+
+* Sie müssen mindestens fünf Laufwerke in der Volume-Gruppe haben.
+* In der Regel sind Sie auf maximal 30 Laufwerke in der Volume-Gruppe begrenzt.
+
+
+
+NOTE: Sie können den RAID-Level eines Pools nicht ändern. Die Benutzeroberfläche konfiguriert Pools automatisch als RAID 6.
+
+
+
+=== RAID-Level und Datensicherung
+
+RAID 1-, RAID 5- und RAID 6-Daten für Schreibredundanz auf den Datenträger für Fehlertoleranz. Bei den Redundanzdaten kann es sich um eine Kopie der Daten (gespiegelt) oder um einen aus den Daten abgeleiteten, fehlerkorrigierenden Code handelt. Bei einem Laufwerksausfall können Sie mithilfe der Redundanzdaten schnell Informationen über das Ersatzlaufwerk wiederherstellen.
+
+Sie konfigurieren eine einzelne RAID-Ebene für eine einzelne Volume-Gruppe. Alle Redundanzdaten der Volume-Gruppe werden innerhalb der Volume-Gruppe gespeichert. Die Kapazität der Volume-Gruppe ist die aggregierte Kapazität der Mitgliedslaufwerke abzüglich der für Redundanzdaten reservierten Kapazität. Die Menge der zur Redundanz benötigten Kapazität hängt vom verwendeten RAID-Level ab.
+
+
+
+== Warum werden einige Laufwerke nicht angezeigt?
+
+Im Dialogfeld Kapazität hinzufügen stehen nicht alle Laufwerke zur Verfügung, um einem vorhandenen Pool oder einer Volume-Gruppe Kapazität hinzuzufügen.
+
+Festplatten können aus den folgenden Gründen nicht genutzt werden:
+
+* Ein Laufwerk muss nicht zugewiesen und nicht sicher aktiviert sein. Laufwerke, die bereits zu einem anderen Pool, einer anderen Volume-Gruppe oder als Hot Spare konfiguriert sind, sind nicht berechtigt. Wenn ein Laufwerk nicht zugewiesen, aber sicher aktiviert ist, müssen Sie dieses Laufwerk manuell löschen, damit es in Frage kommt.
+* Ein Laufwerk in einem nicht optimalen Zustand ist nicht berechtigt.
+* Wenn die Kapazität eines Laufwerks zu klein ist, ist es nicht förderfähig.
+* Der Laufwerkstyp muss innerhalb eines Pools oder einer Volume-Gruppe übereinstimmen. Sie können Folgendes nicht mischen:
++
+** Festplattenlaufwerke (HDDs) mit Solid State Disks (SSDs)
+** NVMe mit SAS-Laufwerken
+** Laufwerke mit 512 Byte und 4 KiB Volume-Blockgrößen
+
+
+* Wenn ein Pool oder eine Volume-Gruppe alle sicheren Laufwerke enthält, werden nicht sichere Laufwerke nicht aufgelistet.
+* Wenn eine Pool- oder Volume-Gruppe alle FIPS-Laufwerke (Federal Information Processing Standards) enthält, werden Laufwerke außerhalb von FIPS nicht aufgeführt.
+* Wenn ein Pool oder eine Volume-Gruppe alle Data Assurance (da)-fähigen Laufwerke enthält und mindestens ein da-fähiges Volume im Pool oder in der Volume-Gruppe vorhanden ist, kann ein Laufwerk, das nicht für da geeignet ist, nicht zugelassen werden, sodass es diesem Pool oder dieser Volume-Gruppe nicht hinzugefügt werden kann. Wenn sich jedoch kein da-fähiges Volume im Pool oder in der Volume-Gruppe befindet, kann ein Laufwerk, das nicht über da-fähig ist, zu diesem Pool oder dieser Volume-Gruppe hinzugefügt werden. Wenn Sie sich für eine Kombination dieser Laufwerke entscheiden, sollten Sie bedenken, dass keine da-fähigen Volumes erstellt werden können.
+
+
+
+NOTE: Die Kapazität kann im Speicher-Array erhöht werden, indem neue Laufwerke hinzugefügt oder Pools oder Volume-Gruppen gelöscht werden.
+
+
+
+== Warum kann ich meine Konservierungskapazität nicht erhöhen?
+
+Wenn Sie Volumes auf allen verfügbaren nutzbaren Kapazitäten erstellt haben, können Sie die dauerhafte Kapazität möglicherweise nicht erhöhen.
+
+Bei der Festplattenkapazität wird die in einem Pool reservierte Kapazität zur Unterstützung potenzieller Laufwerksausfälle angegeben. Wenn ein Pool erstellt wird, reserviert das System abhängig von der Anzahl der Laufwerke im Pool automatisch eine standardmäßige Anlagenkapazität. Falls Sie Volumes auf allen verfügbaren nutzbaren Kapazitäten erstellt haben, können Sie die dauerhafte Kapazität auch nicht vergrößern, wenn Sie die Kapazität zum Pool erweitern, indem Sie Laufwerke hinzufügen oder Volumes löschen.
+
+Sie können die Erhaltungskapazität aus Pools & Volume-Gruppen ändern. Wählen Sie den Pool aus, den Sie bearbeiten möchten. Klicken Sie auf *Einstellungen anzeigen/bearbeiten* und wählen Sie dann die Registerkarte *Einstellungen*.
+
+
+NOTE: Die dauerhafte Kapazität wird als eine Reihe von Laufwerken festgelegt, auch wenn die tatsächliche Festplattenkapazität auf den Laufwerken im Pool verteilt ist.
+
+
+
+== Was ist Data Assurance?
+
+Data Assurance (da) implementiert den T10 Protection Information (PI)-Standard. Dies erhöht die Datenintegrität, indem Fehler geprüft und korrigiert werden, die bei der Datenübertragung entlang des I/O-Pfads auftreten können.
+
+Die typische Nutzung der Data Assurance Funktion überprüft den Teil des I/O-Pfads zwischen den Controllern und Laufwerken. DA-Funktionen werden auf Pool- und Volume-Gruppenebene präsentiert.
+
+Wenn diese Funktion aktiviert ist, hängt das Speicherarray die Fehlerprüfungscodes (auch zyklische Redundanzprüfungen oder CRCs genannt) an jeden Datenblock im Volume an. Nach dem Verschieben eines Datenblocks ermittelt das Speicher-Array anhand dieser CRC-Codes, ob während der Übertragung Fehler aufgetreten sind. Potenziell beschädigte Daten werden weder auf Festplatte geschrieben noch an den Host zurückgegeben. Wenn Sie die da-Funktion verwenden möchten, wählen Sie einen Pool oder eine Volume-Gruppe aus, die bei der Erstellung eines neuen Volumes unterstützt wird (suchen Sie in der Tabelle mit den Kandidaten für Pool- und Volume-Gruppen nach *ja* neben *da*).
+
+Stellen Sie sicher, dass Sie diese DA-fähigen Volumes einem Host über eine E/A-Schnittstelle zuweisen, die über eine da-fähige Schnittstelle verfügt. Zu den I/O-Schnittstellen, die da fähig sind, gehören Fibre Channel, SAS, iSCSI über TCP/IP, NVMe/FC, NVMe/IB, NVME/RoCE und iSER over InfiniBand (iSCSI-Erweiterungen für RDMA/IB). DA wird von SRP nicht über InfiniBand unterstützt.
+
+
+
+== Was ist FDE/FIPS-Sicherheit?
+
+FDE/FIPS-Sicherheit bezieht sich auf sichere Laufwerke, die Daten bei Schreibvorgängen verschlüsseln und während Lesevorgängen mit einem eindeutigen Verschlüsselungsschlüssel entschlüsseln.
+
+Diese sicheren Laufwerke verhindern unbefugten Zugriff auf die Daten auf einem Laufwerk, das physisch vom Storage-Array entfernt wird. Sichere Laufwerke können entweder vollständige Festplattenverschlüsselung (Full Disk Encryption, FDE) oder FIPS-Laufwerke (Federal Information Processing Standard) sein. FIPS-Laufwerke wurden getestet.
+
+
+NOTE: Für Volumes, die FIPS-Unterstützung erfordern, verwenden Sie nur FIPS-Laufwerke. Durch das Mischen von FIPS- und FDE-Laufwerken in einer Volume-Gruppe oder einem Pool werden alle Laufwerke als FDE-Laufwerke behandelt. Außerdem kann ein FDE-Laufwerk nicht zu einer Ersatzfestplatte in einer reinen FIPS-Volume-Gruppe oder einem Pool hinzugefügt oder verwendet werden.
+
+
+
+== Was ist sicher-fähig (Drive Security)?
+
+Drive Security ist eine Funktion, die bei Entfernung aus dem Speicher-Array unberechtigten Zugriff auf Daten auf sicheren Laufwerken verhindert.
+
+Dabei können es sich entweder um vollständige Festplattenverschlüsselung (Full Disk Encryption, FDE)-Laufwerke oder um FIPS-Laufwerke (Federal Information Processing Standard) handeln.
+
+
+
+== Wie kann ich sämtliche SSD Cache Statistiken anzeigen und interpretieren?
+
+Sie können nominale Statistiken und detaillierte Statistiken für SSD Cache anzeigen.
+
+Die Nominalstatistiken sind eine Untergruppe der detaillierten Statistiken. Die detaillierten Statistiken können nur angezeigt werden, wenn Sie alle SSD-Statistiken in eine .csv-Datei exportieren. Während Sie die Statistiken überprüfen und interpretieren, beachten Sie, dass einige Interpretationen durch die Prüfung einer Kombination von Statistiken abgeleitet werden.
+
+
+
+=== Nominale Statistiken
+
+Um SSD Cache Statistiken anzuzeigen, gehen Sie zur Seite *Verwalten*. Wählen Sie Menü:Provisioning[Pools & Volume-Gruppen konfigurieren]. Wählen Sie den SSD-Cache aus, für den Sie Statistiken anzeigen möchten, und wählen Sie dann Menü:Mehr[Statistik anzeigen]. Die nominalen Statistiken werden im Dialogfeld „View SSD Cache Statistics“ angezeigt.
+
+
+NOTE: Diese Funktion steht nicht auf dem EF600 oder EF300-Storage-System zur Verfügung.
+
+Die Liste enthält nominale Statistiken, die eine Untermenge der detaillierten Statistiken sind.
+
+
+
+=== Detaillierte Statistiken
+
+Die detaillierten Statistiken bestehen aus den Nominalstatistiken sowie zusätzlichen Statistiken. Diese zusätzlichen Statistiken werden zusammen mit den nominalen Statistiken gespeichert, werden aber im Gegensatz zu den nominalen Statistiken nicht im Dialogfeld „View SSD Cache Statistics“ angezeigt. Sie können die detaillierten Statistiken nur anzeigen, nachdem Sie die Statistiken in eine CSV-Datei exportiert haben.
+
+Die detaillierten Statistiken sind nach den Nominalstatistiken aufgelistet.
+
+
+
+== Was ist der Schutz vor Regalverlust und der Schutz vor Schubladenverlust?
+
+Shelf-Schutz und Schutz vor Schubladenverlust sind Attribute von Pools und Volume-Gruppen, die es Ihnen ermöglichen, den Datenzugriff bei Ausfall eines einzelnen Shelfs oder einer Schublade aufrechtzuerhalten.
+
+
+
+=== Schutz vor Regalverlust
+
+Ein Shelf ist das Gehäuse, das entweder die Laufwerke oder die Laufwerke und den Controller enthält. Der Shelf-Verlust-Schutz garantiert den Zugriff auf die Daten auf den Volumes in einem Pool oder einer Volume-Gruppe, wenn ein totaler Verlust der Kommunikation mit einem einzelnen Festplatten-Shelf auftritt. Ein Beispiel für einen völligen Verlust der Kommunikation kann ein Verlust an Strom am Festplatten-Shelf oder ein Ausfall beider I/O-Module (IOMs) sein.
+
+
+NOTE: Der Schutz vor Shelf-Verlust ist nicht gewährleistet, wenn ein Laufwerk bereits im Pool oder in der Volume-Gruppe ausgefallen ist. In dieser Situation kommt es beim Verlust des Zugriffs auf ein Festplatten-Shelf und folglich auch eines anderen Laufwerks im Pool oder der Volume-Gruppe zu Datenverlusten.
+
+Die Kriterien für den Regalverlustschutz hängen von der Schutzmethode ab, wie in der folgenden Tabelle beschrieben.
+
+|===
+| Ebene | Kriterien für den Schutz vor Regalverlust | Mindestanzahl der benötigten Shelves 
+
+
+| Pool | Der Pool muss Laufwerke von mindestens fünf Shelfs enthalten, und es muss eine gleiche Anzahl von Laufwerken in jedem Shelf vorhanden sein. Der Schutz vor Shelf-Datenverlusten ist nicht auf Shelfs mit hoher Kapazität anwendbar. Wenn das System kapazitätsstarke Shelfs enthält, finden Sie weitere Informationen unter Abflussschutz. | 5 
+
+
+| RAID 6 | Die Volume-Gruppe enthält nicht mehr als zwei Laufwerke in einem einzigen Einschub. | 3 
+
+
+| RAID 3 oder RAID 5 | Jedes Laufwerk in der Volume-Gruppe befindet sich in einem separaten Shelf. | 3 
+
+
+| RAID 1 | Jedes Laufwerk in einem RAID-1-Paar muss sich in einem separaten Shelf befinden. | 2 
+
+
+| RAID 0 | Shelf-Verlustschutz kann nicht erreicht werden. | Keine Angabe 
+|===
+
+
+=== Schutz vor Schubladenverlust
+
+Eine Schublade ist eines der Fächer eines Regals, das Sie herausziehen, um auf die Laufwerke zuzugreifen. Nur die Regale mit hoher Kapazität verfügen über Schubladen. Der Schutz vor Schubladenverlust garantiert den Zugriff auf die Daten auf den Volumes in einem Pool oder einer Volume-Gruppe, wenn ein vollständiger Verlust der Kommunikation mit einem einzelnen Fach auftritt. Ein Beispiel für einen Totalverlust der Kommunikation kann zu einem Stromausfall in der Schublade oder einem Ausfall einer internen Komponente in der Schublade führen.
+
+
+CAUTION: Der Schutz vor Schubladenverlust ist nicht gewährleistet, wenn ein Laufwerk bereits im Pool oder in der Volume-Gruppe ausgefallen ist. Wenn in dieser Situation der Zugriff auf eine Schublade (und folglich ein anderes Laufwerk im Pool oder der Volume-Gruppe) verloren geht, gehen Daten verloren.
+
+Die Kriterien für den Schubladenschutz sind abhängig von der Schutzmethode, wie in der folgenden Tabelle beschrieben:
+
+|===
+| Ebene | Kriterien für den Schutz vor Schubladenverlust | Mindestanzahl der benötigten Schubladen 
+
+
+| Pool | Poolkandidaten müssen Laufwerke aus allen Schubladen enthalten, und in jedem Fach muss eine gleiche Anzahl von Laufwerken vorhanden sein. Der Pool muss Laufwerke aus mindestens fünf Schubladen enthalten und in jeder Schublade muss eine gleiche Anzahl von Laufwerken vorhanden sein. Ein Shelf mit 60 Laufwerken kann einen Schubladenschutz erreichen, wenn der Pool 15, 20, 25, 30, 35, 40, 45, 50, 55 oder 60 Laufwerke. Nach der ersten Erstellung können Vielfache von 5 dem Pool hinzugefügt werden. | 5 
+
+
+| RAID 6 | Die Volume-Gruppe enthält nicht mehr als zwei Laufwerke in einem einzigen Einschub. | 3 
+
+
+| RAID 3 oder 5 | Jedes Laufwerk in der Volume-Gruppe befindet sich in einem separaten Einschub | 3 
+
+
+| RAID 1 | Jedes Laufwerk in einem gespiegelten Paar muss sich in einem separaten Fach befinden. | 2 
+
+
+| RAID 0 | Der Schutz vor Schubladenverlust kann nicht erreicht werden. | Keine Angabe 
+|===
+
+
+== Wie kann ich den Schutz vor Schubladenausfall wahren?
+
+Verwenden Sie die in der folgenden Tabelle aufgeführten Kriterien, um den Schutz vor Shelf- und Schubladenverlusten für einen Pool oder eine Volume-Gruppe aufrechtzuerhalten.
+
+|===
+| Ebene | Kriterien für den Schutz vor Shelf-/Schubladenverlust | Mindestanzahl an Shelves/Schubladen erforderlich 
+
+
+| Pool | Bei Shelfs darf der Pool nicht mehr als zwei Laufwerke in einem einzelnen Shelf enthalten. Bei Schubladen muss der Pool eine gleiche Anzahl von Laufwerken von jeder Schublade enthalten. | 6 für Regale 5 für Schubladen 
+
+
+| RAID 6 | Die Volume-Gruppe enthält nicht mehr als zwei Laufwerke in einem einzelnen Shelf oder einer einzelnen Schublade. | 3 
+
+
+| RAID 3 oder RAID 5 | Jedes Laufwerk in der Volume-Gruppe befindet sich in einem separaten Shelf oder einer separaten Schublade. | 3 
+
+
+| RAID 1 | Jedes Laufwerk in einem gespiegelten Paar muss sich in einem eigenen Shelf oder einer separaten Schublade befinden. | 2 
+
+
+| RAID 0 | Schutz vor Shelf-/Schubladenverlust kann nicht erreicht werden. | Keine Angabe 
+|===
+
+NOTE: Der Schutz vor Shelf-/Schubladenverlust bleibt nicht erhalten, wenn ein Laufwerk bereits in dem Pool oder der Volume-Gruppe ausgefallen ist. Geht in dieser Situation der Zugriff auf ein Festplatten-Shelf oder eine Laufwerksschublade verloren und somit ein weiteres Laufwerk im Pool bzw. der Volume-Gruppe, geht es zu Datenverlusten.
+
+
+
+== Was ist die Optimierungskapazität für Pools?
+
+SSD-Laufwerke haben eine längere Lebensdauer und eine bessere maximale Schreib-Performance, wenn ein Teil ihrer Kapazität nicht zugewiesen ist.
+
+Bei Laufwerken, die einem Pool zugeordnet sind, besteht nicht zugewiesene Kapazität aus der Erhaltungskapazität eines Pools, der freien Kapazität (nicht von Volumes genutzte Kapazität) und einem Teil der nutzbaren Kapazität, der als zusätzliche Optimierungskapazität zur Verfügung steht. Die zusätzliche Optimierungskapazität stellt ein Mindestmaß an Optimierungskapazität zur Verfügung, indem die nutzbare Kapazität reduziert wird. Somit ist für die Volume-Erstellung nicht verfügbar.
+
+Wenn ein Pool erstellt wird, wird eine empfohlene Optimierungskapazität generiert, die ein ausgewogenes Verhältnis zwischen Performance, Laufwerksabnutzung und verfügbarer Kapazität bietet. Der Schieberegler „zusätzliche Optimierung der Kapazität“ im Dialogfeld „Pooleinstellungen“ ermöglicht die Anpassung an die Optimierungskapazität des Pools. Durch das Anpassen des Schiebereglers erhalten Sie eine bessere Performance und längere Lebensdauer der Laufwerke, und zwar auf Kosten der verfügbaren Kapazität oder zusätzlicher verfügbarer Kapazität, und zwar auf Kosten der Leistung und des Verschleißes der Laufwerke.
+
+
+NOTE: Der Schieberegler „zusätzliche Optimierung der Kapazität“ ist nur für Speichersysteme EF600 und EF300 verfügbar.
+
+
+
+== Was ist die Optimierungskapazität für Volume-Gruppen?
+
+SSD-Laufwerke haben eine längere Lebensdauer und eine bessere maximale Schreib-Performance, wenn ein Teil ihrer Kapazität nicht zugewiesen ist.
+
+Bei Laufwerken, die einer Volume-Gruppe zugeordnet sind, besteht nicht zugewiesene Kapazität aus der freien Kapazität einer Volume-Gruppe (nicht von Volumes genutzte Kapazität) und einem Teil der nutzbaren Kapazität, die als Optimierungskapazität zur Verfügung gestellt werden. Die zusätzliche Optimierungskapazität stellt ein Mindestmaß an Optimierungskapazität zur Verfügung, indem die nutzbare Kapazität reduziert wird. Somit ist für die Volume-Erstellung nicht verfügbar.
+
+Wenn eine Volume-Gruppe erstellt wird, wird eine empfohlene Optimierungskapazität generiert, die einen Ausgleich zwischen Performance, Laufwerkverschleiß und verfügbarer Kapazität bietet. Mit dem Schieberegler „zusätzliche Optimierung der Kapazität“ im Dialogfeld „Einstellungen der Volume-Gruppe“ können Sie die Optimierungskapazität einer Volume-Gruppe anpassen. Durch das Anpassen des Schiebereglers erhalten Sie eine bessere Performance und längere Lebensdauer der Laufwerke, und zwar auf Kosten der verfügbaren Kapazität oder zusätzlicher verfügbarer Kapazität, und zwar auf Kosten der Leistung und des Verschleißes der Laufwerke.
+
+
+NOTE: Der zusätzliche Schieberegler zur Optimierung der Kapazität ist nur für Speichersysteme EF600 und EF300 verfügbar.
+
+
+
+== Was ist die Fähigkeit zur Ressourcenbereitstellung?
+
+Resource Provisioning ist eine Funktion, die in den EF300- und EF600-Speicher-Arrays zur Verfügung steht und die es ermöglicht, Volumes ohne Hintergrundinitialisierung sofort in Betrieb zu nehmen.
+
+Ein vom Ressourcen bereitgestelltes Volume ist ein Thick Volume in einer SSD-Volume-Gruppe oder einem Pool. Dabei wird bei der Erstellung des Volume die Laufwerkskapazität zugewiesen (dem Volume zugewiesen), die Laufwerksblöcke jedoch aufgehoben (nicht zugewiesen). In einem herkömmlichen Thick Volume werden im Vergleich dazu alle Laufwerkblöcke während der Initialisierung eines Volume im Hintergrund zugeordnet oder zugewiesen, um die Felder für den Schutz der Data Assurance zu initialisieren und die Daten- und RAID-Parität in jedem RAID Stripe konsistent zu gestalten. Bei einem Volume, das für die Ressource bereitgestellt wird, gibt es keine zeitgebundene Hintergrundinitialisierung. Stattdessen wird jeder RAID-Stripe nach dem ersten Schreibvorgang auf einen Volume-Block im Stripe initialisiert.
+
+Über Ressourcen bereitgestellte Volumes werden nur auf SSD-Volume-Gruppen und -Pools unterstützt, wobei alle Laufwerke in der Gruppe oder dem Pool die nicht zugewiesene oder nicht geschriebene DULBE-Fehlerwiederherstellungsfunktion (Logical Block Error Enable) unterstützen. Bei der Erstellung eines Volume mit Ressourcenbereitstellung werden alle dem Volume zugewiesenen Festplattenblöcke wieder zugewiesen (Zuordnung). Zudem können Hosts mithilfe des NVMe-Datensatzmanagements logische Blöcke im Volume deallokalisieren. Die Deallokung von Blöcken kann die SSD-Abnutzung verbessern und die maximale Schreib-Performance erhöhen. Die Verbesserung variiert je nach Modell und Kapazität der Laufwerke.
+
+
+
+== Was muss ich über die Funktion der Ressourcen-bereitgestellten Volumes wissen?
+
+Resource Provisioning ist eine Funktion, die in den EF300- und EF600-Speicher-Arrays zur Verfügung steht und die es ermöglicht, Volumes ohne Hintergrundinitialisierung sofort in Betrieb zu nehmen.
+
+
+NOTE: Die Ressourcen-Provisioning-Funktion ist derzeit nicht verfügbar. In einigen Ansichten können Komponenten als ressourcenschonende Bereitstellung gemeldet werden, aber die Möglichkeit, mit Ressourcen bereitgestellte Volumes zu erstellen, wurde deaktiviert, bis sie in einem zukünftigen Update erneut aktiviert werden kann.
+
+
+
+=== Volumes mit Ressourcenbereitstellung
+
+Ein vom Ressourcen bereitgestelltes Volume ist ein Thick Volume in einer SSD-Volume-Gruppe oder einem Pool. Dabei wird bei der Erstellung des Volume die Laufwerkskapazität zugewiesen (dem Volume zugewiesen), die Laufwerksblöcke jedoch aufgehoben (nicht zugewiesen). In einem herkömmlichen Thick Volume werden im Vergleich dazu alle Laufwerkblöcke während der Initialisierung eines Volume im Hintergrund zugeordnet oder zugewiesen, um die Felder für den Schutz der Data Assurance zu initialisieren und die Daten- und RAID-Parität in jedem RAID Stripe konsistent zu gestalten. Bei einem Volume, das für die Ressource bereitgestellt wird, gibt es keine zeitgebundene Hintergrundinitialisierung. Stattdessen wird jeder RAID-Stripe nach dem ersten Schreibvorgang auf einen Volume-Block im Stripe initialisiert.
+
+Über Ressourcen bereitgestellte Volumes werden nur auf SSD-Volume-Gruppen und -Pools unterstützt, wobei alle Laufwerke in der Gruppe oder dem Pool die nicht zugewiesene oder nicht geschriebene DULBE-Fehlerwiederherstellungsfunktion (Logical Block Error Enable) unterstützen. Bei der Erstellung eines Volume mit Ressourcenbereitstellung werden alle dem Volume zugewiesenen Festplattenblöcke wieder zugewiesen (Zuordnung). Zudem können Hosts mithilfe des NVMe-Datensatzmanagements logische Blöcke im Volume deallokalisieren. Die Deallokung von Blöcken kann die SSD-Abnutzung verbessern und die maximale Schreib-Performance erhöhen. Die Verbesserung variiert je nach Modell und Kapazität der Laufwerke.
+
+
+
+=== Aktivieren und Deaktivieren der Funktion
+
+Die Ressourcenbereitstellung ist standardmäßig auf Systemen aktiviert, auf denen die Laufwerke DULBE unterstützen. Sie können diese Standardeinstellung in Pools und Volume-Gruppen deaktivieren. Die Deaktivierung der Ressourcen-Bereitstellung ist eine permanente Aktion für vorhandene Volumes und kann nicht rückgängig gemacht werden (d. h. Sie können die Ressourcen-Bereitstellung für diese Volume-Gruppen und -Pools nicht erneut aktivieren).
+
+Wenn Sie die Ressourcenbereitstellung jedoch für alle von Ihnen erstellten neuen Volumes erneut aktivieren möchten, können Sie dies über das Menü:Einstellungen[System] tun. Beachten Sie, dass bei der erneuten Aktivierung der Ressourcenbereitstellung nur neu erstellte Volume-Gruppen und Pools betroffen sind. Alle vorhandenen Volume-Gruppen und -Pools bleiben unverändert. Bei Bedarf können Sie die Ressourcenbereitstellung auch wieder über das Menü:Einstellungen[System] deaktivieren.
+
+
+
+== Worin besteht der Unterschied zwischen internem Sicherheitsschlüssel und externem Sicherheitsschlüsselmanagement?
+
+Wenn Sie die Laufwerksicherheit-Funktion implementieren, können Sie einen internen Sicherheitsschlüssel oder einen externen Sicherheitsschlüssel verwenden, um Daten zu sperren, wenn ein sicheres Laufwerk aus dem Speicher-Array entfernt wird.
+
+Ein Sicherheitsschlüssel ist eine Zeichenkette, die von den sicheren Laufwerken und Controllern in einem Speicher-Array gemeinsam genutzt wird. Interne Schlüssel befinden sich im persistenten Speicher des Controllers. Externe Schlüssel werden mithilfe eines Key Management Interoperability Protocol (KMIP) auf einem separaten Verschlüsselungsmanagement-Server aufbewahrt.
+
+
+
+== Was muss ich vor der Erstellung eines Sicherheitsschlüssels wissen?
+
+Ein Sicherheitsschlüssel wird von Controllern und sicheren Laufwerken innerhalb eines Storage-Arrays gemeinsam verwendet. Wenn ein sicheres Laufwerk aus dem Speicher-Array entfernt wird, schützt der Sicherheitsschlüssel die Daten vor unberechtigtem Zugriff.
+
+Sie können Sicherheitsschlüssel mit einer der folgenden Methoden erstellen und verwalten:
+
+* Internes Verschlüsselungsmanagement auf dem persistenten Speicher des Controllers.
+* Externes Verschlüsselungskeymanagement auf einem externen Verschlüsselungsmanagement-Server.
+
+
+
+
+== Internes Verschlüsselungsmanagement
+
+Interne Schlüssel werden in einem nicht zugänglichen Ort im persistenten Speicher des Controllers gepflegt und „versteckt“. Bevor Sie einen internen Sicherheitsschlüssel erstellen, müssen Sie Folgendes tun:
+
+. Installieren Sie sichere Laufwerke im Speicher-Array. Es können sich bei diesen Laufwerken um vollständige Festplattenverschlüsselung (Full Disk Encryption, FDE) oder FIPS-Laufwerke (Federal Information Processing Standard) handelt.
+. Stellen Sie sicher, dass die Laufwerksicherheit aktiviert ist. Wenden Sie sich bei Bedarf an Ihren Storage-Anbieter, um Anweisungen zur Aktivierung der Laufwerkssicherheitsfunktion zu erhalten.
+
+
+Sie können dann einen internen Sicherheitsschlüssel erstellen, der die Definition einer Kennung und einer Passphrase beinhaltet. Die Kennung ist eine Zeichenfolge, die dem Sicherheitsschlüssel zugeordnet ist und auf dem Controller und allen Laufwerken gespeichert ist, die mit dem Schlüssel verknüpft sind. Der Passphrase wird verwendet, um den Sicherheitsschlüssel für Sicherungszwecke zu verschlüsseln. Wenn Sie fertig sind, wird der Sicherheitsschlüssel auf dem Controller an einem nicht zugänglichen Ort gespeichert. Anschließend können sichere Volume-Gruppen und -Pools erstellt oder die Sicherheit für vorhandene Volume-Gruppen und -Pools aktiviert werden.
+
+
+
+=== Externes Verschlüsselungskeymanagement
+
+Externe Schlüssel werden mithilfe eines Key Management Interoperability Protocol (KMIP) auf einem separaten Verschlüsselungsmanagement-Server aufbewahrt. Bevor Sie einen externen Sicherheitsschlüssel erstellen, müssen Sie Folgendes tun:
+
+. Installieren Sie sichere Laufwerke im Speicher-Array. Es können sich bei diesen Laufwerken um vollständige Festplattenverschlüsselung (Full Disk Encryption, FDE) oder FIPS-Laufwerke (Federal Information Processing Standard) handelt.
+. Stellen Sie sicher, dass die Laufwerksicherheit aktiviert ist. Wenden Sie sich bei Bedarf an Ihren Storage-Anbieter, um Anweisungen zur Aktivierung der Laufwerkssicherheitsfunktion zu erhalten
+. Abrufen einer signierten Client-Zertifikatdatei. Ein Client-Zertifikat validiert die Controller des Storage-Arrays, damit der Verschlüsselungsmanagement-Server ihren KMIP-Anforderungen vertrauen kann.
++
+.. Zunächst haben Sie eine Client Certificate Signing Request (CSR) abgeschlossen und heruntergeladen. Wechseln Sie zum Menü:Einstellungen[Zertifikate > Schlüsselverwaltung > CSR abschließen].
+.. Als Nächstes fordern Sie ein signiertes Clientzertifikat von einer Zertifizierungsstelle an, die vom Schlüsselverwaltungsserver vertrauenswürdig ist. (Sie können auch mithilfe der heruntergeladenen CSR-Datei ein Client-Zertifikat vom Schlüsselverwaltungsserver erstellen und herunterladen.)
+.. Sobald Sie über eine Clientzertifikatdatei verfügen, kopieren Sie diese Datei auf den Host, auf dem Sie auf System Manager zugreifen.
+
+
+. Rufen Sie eine Zertifikatdatei vom Verschlüsselungsmanagement-Server ab, und kopieren Sie diese Datei dann auf den Host, auf dem Sie auf System Manager zugreifen. Ein Zertifikat für den Schlüsselmanagementserver validiert den Schlüsselmanagementserver, damit das Storage-Array seiner IP-Adresse vertrauen kann. Sie können für den Schlüsselverwaltungsserver ein Root-, Intermediate- oder Serverzertifikat verwenden.
+
+
+Anschließend können Sie einen externen Schlüssel erstellen, der die IP-Adresse des Verschlüsselungsmanagement-Servers und die für die KMIP Kommunikation verwendete Port-Nummer umfasst. Während dieses Prozesses laden Sie auch Zertifikatdateien. Nach Abschluss des Vorgangs stellt das System eine Verbindung zum Schlüsselverwaltungsserver mit den von Ihnen eingegebenen Anmeldedaten her. Anschließend können sichere Volume-Gruppen und -Pools erstellt oder die Sicherheit für vorhandene Volume-Gruppen und -Pools aktiviert werden.
+
+
+
+== Warum muss ich eine Passphrase definieren?
+
+Der Passphrase wird verwendet, um die auf dem lokalen Management-Client gespeicherte Sicherheitsschlüsseldatei zu verschlüsseln und zu entschlüsseln. Ohne den Passphrase kann der Sicherheitsschlüssel nicht entschlüsselt und verwendet werden, um Daten von einem sicheren Laufwerk zu entsperren, wenn er in einem anderen Speicher-Array neu installiert wird.

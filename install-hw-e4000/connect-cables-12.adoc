@@ -18,7 +18,7 @@ Erfahren Sie, wie Sie die Stromkabel anschließen und die Laufwerk-Shelfs einsch
 * Treffen Sie antistatische Vorsichtsmaßnahmen.
 
 
-Dieses Verfahren gilt für die IOM12- und IOM12B-Laufwerkseinschübe.
+Dieses Verfahren gilt für Laufwerksregale IOM12, IOM12B und IOM12C.
 
 .Schritte
 . Die Shelfs verkabeln.

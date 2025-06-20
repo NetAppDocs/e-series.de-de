@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: whats-new.html 
-keywords: whats new, new features, SANtricity 11.90, SANtricity 11.80 
+keywords: whats new, new features, SANtricity, 11.9, 11.8 
 summary: Neue Funktionen im SANtricity OS. 
 ---
 = Was ist neu in SANtricity OS
@@ -14,6 +14,21 @@ summary: Neue Funktionen im SANtricity OS.
 [role="lead"]
 In der folgenden Tabelle werden die neuen Funktionen der neuesten SANtricity OS Versionen für das integrierte Management der Controller E4000, EF300/EF300C, EF600/EF600C, E2800/EF280 und E5700/EF570 beschrieben.
 
+
+
+== Neue Funktionen in Version 11.90R3
+
+[cols="35h,~"]
+|===
+| Neues Feature | Beschreibung 
+
+
+ a| 
+SANtricity OS-Unterstützung für IOM12C und DCM3
+ a| 
+Unterstützung für IOM12C- und DCM3-SAS-3-Shelves ist ab der Controller-Firmware 11.90R3 verfügbar. Die Shelves IOM12C und DCM3 ersetzen die Shelves IOM12B und DCM2.
+
+|===
 
 
 == Neue Funktionen in Version 11.90R2

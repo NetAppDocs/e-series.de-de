@@ -23,10 +23,10 @@ Aufgrund der Komplexität dieses Verfahrens wird Folgendes empfohlen:
 .Über diese Aufgabe
 Dieses Verfahren gilt für das Hot-Hinzufügen eines DE212C, DE224C oder DE460C Festplatten-Shelfs zu einem E4000 Controller Shelf.
 
-Dieses Verfahren gilt für die IOM12- und IOM12B-Laufwerkseinschübe.
+Dieses Verfahren gilt für Laufwerksregale IOM12, IOM12B und IOM12C.
 
 
-NOTE: Dieses Verfahren gilt für EAM-Hot-Swaps oder Ersatz wie für Regal-ähnliche. So können Sie nur ein IOM12-Modul durch ein anderes IOM12-Modul ersetzen oder ein IOM12B-Modul durch ein anderes IOM12B-Modul ersetzen. (Ihr Shelf kann zwei IOM12-Module haben oder zwei IOM12B-Module haben.)
+NOTE: Dieses Verfahren gilt für EAM-Hot-Swaps oder Ersatz wie für Regal-ähnliche. Dies bedeutet, dass Sie nur ein IOM12-Modul durch ein anderes IOM12-Modul oder ein IOM12C-Modul durch ein anderes IOM12C-Modul ersetzen können. (Ihr Regal kann zwei IOM12-Module oder zwei IOM12C-Module enthalten.)
 
 
 NOTE: Um die Integrität des Systems zu erhalten, müssen Sie den Vorgang genau in der dargestellten Reihenfolge befolgen.

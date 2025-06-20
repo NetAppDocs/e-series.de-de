@@ -28,7 +28,7 @@ NOTE: Für die Verkabelung des Daten-Hosts können die Host-Ports auf der untere
 --
 Das folgende Beispiel zeigt die Verkabelung zu den Daten-Hosts mithilfe einer Direct-Attached-Topologie.
 
-image:../media/drw_e4012_direct_topology_ieops-2047.svg["E4012 direkte Topologie, Breite=1000px"]
+image:../media/drw_e4012_direct_topology_ieops-2156.svg["E4012 direkte Topologie, Breite=1000px"]
 
 . Verbinden Sie jeden Host-HBA-Port mit den Host-Ports der Controller (e1a, e1b, e1c und e1d oder e0a und e0b).
 
@@ -41,7 +41,7 @@ NOTE: Weitere Beispiele für Verkabelungsdiagramme finden Sie unter https://docs
 --
 Das folgende Beispiel zeigt die Verkabelung zu den Daten-Hosts mithilfe einer Fabric-Topologie.
 
-image:../media/drw_e4012_fabric_topology_ieops-2046.svg["E4012 Fabric-Topologie, Breite=1000px"]
+image:../media/drw_e4012_fabric_topology_ieops-2157.svg["E4012 Fabric-Topologie, Breite=1000px"]
 
 . Verbinden Sie jeden Host-Adapter direkt mit dem Switch.
 . Jeden Switch wird direkt mit den Host-Ports der Controller (e1a, e1b, e1c und e1d oder e0a und e0b) verbunden.

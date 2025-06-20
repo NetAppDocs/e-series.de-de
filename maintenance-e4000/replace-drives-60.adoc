@@ -16,7 +16,7 @@ Ein Laufwerk in einer E4000 kann durch ein Shelf mit 60 Laufwerken ersetzt werde
 .Über diese Aufgabe
 Der Recovery Guru in SANtricity System Manager überwacht die Laufwerke im Storage Array und benachrichtigt Sie über einen bevorstehenden Laufwerksausfall oder tatsächlichen Laufwerksausfall. Wenn ein Laufwerk ausfällt, leuchtet die gelbe Warn-LED. Sie können ein ausgefallenes Laufwerk im laufenden Betrieb austauschen, während das Speicher-Array I/O-Vorgänge empfängt.
 
-Dieses Verfahren gilt für DCM- und DCM2-Laufwerkseinschübe.
+Dieses Verfahren gilt für DCM-, DCM2- und DCM3-Laufwerksschächte.
 
 .Bevor Sie beginnen
 * Überprüfen Sie die Anforderungen für die Laufwerksverwaltung.

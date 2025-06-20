@@ -13,13 +13,13 @@ summary: 'Verbinden Sie jeden Controller im Controller-Shelf mit einem I/O-Modul
 [role="lead"]
 Sie müssen jeden Controller im Controller-Shelf mit einem I/O-Modul (IOM) in einem Festplatten-Shelf verbinden.
 
-Dieses Verfahren gilt für die IOM12- und IOM12B-Laufwerkseinschübe.
+Dieses Verfahren gilt für Laufwerksregale IOM12, IOM12B und IOM12C.
 
 
-NOTE: IOM12B-Module werden nur ab SANtricity OS 11.70.2 unterstützt. Stellen Sie sicher, dass die Firmware Ihres Controllers aktualisiert wurde, bevor Sie auf ein IOM12B installieren oder aktualisieren.
+NOTE: IOM12C-Module werden nur ab SANtricity OS 11.70.2 unterstützt. Stellen Sie sicher, dass die Firmware Ihres Controllers aktualisiert wurde, bevor Sie auf ein IOM12C installieren oder aktualisieren.
 
 
-NOTE: Dieses Verfahren gilt für EAM-Hot-Swaps oder Ersatz wie für Regal-ähnliche. So können Sie nur ein IOM12-Modul durch ein anderes IOM12-Modul ersetzen oder ein IOM12B-Modul durch ein anderes IOM12B-Modul ersetzen. (Ihr Shelf kann zwei IOM12-Module haben oder zwei IOM12B-Module haben.)
+NOTE: Dieses Verfahren gilt für EAM-Hot-Swaps oder Ersatz wie für Regal-ähnliche. Dies bedeutet, dass Sie nur ein IOM12-Modul durch ein anderes IOM12-Modul oder ein IOM12C-Modul durch ein anderes IOM12C-Modul ersetzen können. (Ihr Regal kann zwei IOM12-Module oder zwei IOM12C-Module enthalten.)
 
 Wenn Sie ein älteres Controller-Shelf mit einem DE212C, DE224C oder DE460 verkabeln, finden Sie unter https://mysupport.netapp.com/ecm/ecm_download_file/ECMLP2859057["Hinzufügen von IOM-Laufwerk-Shelfs zu einem vorhandenen E27XX-, E56XX- oder EF560-Controller-Shelf"^].
 

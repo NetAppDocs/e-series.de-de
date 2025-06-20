@@ -15,13 +15,13 @@ Bevor Sie einen E2800 Controller ersetzen oder hinzufügen, sollten Sie die Anfo
 
 Jeder Controller-Behälter enthält eine Controller-Karte, einen Akku und eine optionale Host-Schnittstellenkarte (HIC). Sie können einen zweiten Controller zu einer Simplex-Konfiguration hinzufügen oder einen fehlerhaften Controller austauschen.
 
-Diese Verfahren gelten für die IOM12- und IOM12B-Laufwerkseinschübe.
+Dieses Verfahren gilt für Laufwerksregale IOM12, IOM12B und IOM12C.
 
 
-NOTE: IOM12B-Module werden nur ab SANtricity OS 11.70.2 unterstützt. Stellen Sie sicher, dass die Firmware Ihres Controllers aktualisiert wurde, bevor Sie auf ein IOM12B installieren oder aktualisieren.
+NOTE: IOM12C-Module werden nur ab SANtricity OS 11.90R3 unterstützt. Stellen Sie sicher, dass die Firmware Ihres Controllers aktualisiert wurde, bevor Sie auf ein IOM12C installieren oder aktualisieren.
 
 
-NOTE: Diese Verfahren gelten für ähnliche IOM-Hot-Swap-ähnliche Regalfachteile oder für Ersatz. So können Sie nur ein IOM12-Modul durch ein anderes IOM12-Modul ersetzen oder ein IOM12B-Modul durch ein anderes IOM12B-Modul ersetzen. (Ihr Shelf kann zwei IOM12-Module haben oder zwei IOM12B-Module haben.)
+NOTE: Diese Verfahren gelten für ähnliche IOM-Hot-Swap-ähnliche Regalfachteile oder für Ersatz. Dies bedeutet, dass Sie nur ein IOM12-Modul durch ein anderes IOM12-Modul oder ein IOM12C-Modul durch ein anderes IOM12C-Modul ersetzen können. (Ihr Regal kann zwei IOM12-Module oder zwei IOM12C-Module enthalten.)
 
 
 

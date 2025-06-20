@@ -45,7 +45,7 @@ Eine Switch-Topologie verwendet Switches, um Hosts mit den Controllern im Storag
 Die folgende Abbildung zeigt eine Beispielverbindung. Bei Switches, die Provisioning-Fähigkeit bieten, sollten Sie alle Initiator- und Zielpaare isolieren.
 
 .Zwei Hosts und zwei Switches
-image::../media/topology_host_fabric_generic.png[Zwei Hosts und zwei Switch-Verkabelung]
+image::../media/topology_host_fabric_generic_ieops-2152.svg[Zwei Hosts und zwei Switch-Verkabelung]
 
 *(1)* _Schließen Sie jeden Hostadapter direkt an den Switch an._
 

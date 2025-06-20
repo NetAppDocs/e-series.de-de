@@ -135,7 +135,7 @@ Für Linux-Systeme, die mit dem RPM-Paketverwaltungssystem kompatibel sind, kön
 . Öffnen Sie ein Terminal-Fenster.
 . Geben Sie den folgenden Befehl ein:
 +
-`rpm -u santricity_webservices-nn.nn.nn.nnnn-n.x86_64.rpm`
+`rpm -U santricity_webservices-nn.nn.nn.nnnn-n.x86_64.rpm`
 
 +
 

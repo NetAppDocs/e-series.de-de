@@ -17,7 +17,7 @@ Ein Laufwerk kann in einem Shelf mit 60 Laufwerken ersetzt werden.
 .Über diese Aufgabe
 Der Recovery Guru in SANtricity System Manager überwacht die Laufwerke im Storage Array und benachrichtigt Sie über einen bevorstehenden Laufwerksausfall oder tatsächlichen Laufwerksausfall. Wenn ein Laufwerk ausfällt, leuchtet die gelbe Warn-LED. Sie können ein ausgefallenes Laufwerk im laufenden Betrieb austauschen, während das Speicher-Array I/O-Vorgänge empfängt.
 
-Diese Aufgabe gilt für DCM- und DCM2-Laufwerk-Shelfs.
+Diese Aufgabe gilt für DCM-, DCM2- und DCM3-Laufwerksregale.
 
 .Bevor Sie beginnen
 * Überprüfen Sie die Anforderungen für die Festplattenbehandlung in link:drives-overview-supertask-concept.html["Anforderungen für den Austausch von E5700-Laufwerken"].
