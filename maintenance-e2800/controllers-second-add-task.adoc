@@ -218,7 +218,7 @@ Die Datei wird im Ordner Downloads für Ihren Browser mit dem Namen *neuester-Up
 ** Wenn Sie den Controller NVSRAM aktualisieren, gehen die benutzerdefinierten Einstellungen, die Sie auf den vorhandenen NVSRAM angewendet haben, während der Aktivierung verloren. Sie müssen die benutzerdefinierten Einstellungen erneut auf den NVSRAM anwenden, nachdem der Aktivierungsvorgang abgeschlossen ist.
 
 
-. Ändern Sie die Einstellung des Speicher-Arrays mithilfe von CLI-Befehlen auf Duplex. Zur Verwendung von CLI können Sie entweder eine Eingabeaufforderung öffnen, wenn Sie das CLI-Paket heruntergeladen haben, oder Sie können das Enterprise Management Window (EMW) öffnen, wenn Storage Manager installiert ist.
+. Ändern Sie die Einstellung des Speicher-Arrays mithilfe von CLI-Befehlen auf Duplex. Um die CLI zu verwenden, öffnen Sie eine Eingabeaufforderung, wenn Sie das CLI-Paket heruntergeladen haben, oder Sie können das Enterprise Management Window (EMW) öffnen, wenn Sie Storage Manager installiert haben.
 +
 ** Über eine Eingabeaufforderung:
 +

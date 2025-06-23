@@ -1864,7 +1864,6 @@
   <block id="0e39ff318b12678e1f22e5f337b7aa18" category="list-text">Eine Ersatzbatterie.</block>
   <block id="3a35aeaf167e71373e4f42c63fa412a6" category="paragraph">Optional können Sie einige der Verfahren mit der Befehlszeilenschnittstelle (CLI) ausführen. Wenn Sie keinen Zugriff auf die CLI haben, können Sie einen der folgenden Aktionen ausführen:</block>
   <block id="31380923165d24c4bc7be3835c03f97d" category="list-text">*Für SANtricity System Manager (Version 11.60 und höher)* -- Laden Sie das CLI-Paket (ZIP-Datei) aus dem System Manager herunter. Wechseln Sie zum Menü:Einstellungen[System &gt; Add-ons &gt; Command Line Interface]. Sie können dann CLI-Befehle von einer Betriebssystemaufforderung ausgeben, z. B. von der DOS C:-Eingabeaufforderung.</block>
-  <block id="d4e243a780f83aeb7aba4ed3ddb02aab" category="list-text">*Für SANtricity Storage Manager/Enterprise Management Window (EMW)* -- Folgen Sie den Anweisungen im Express Guide, um die Software herunterzuladen und zu installieren. Sie können CLI-Befehle über EMW ausführen, indem Sie Menü:Extras[Skript ausführen] auswählen.</block>
   <block id="bb8c12c938368d891c8a41b75b8dbff5" category="doc">Host-Schnittstellenkarten</block>
   <block id="23f3b9e3a2c47bcddba6d10506fc157b" category="summary">Lesen Sie die Anforderungen und Überlegungen, bevor Sie EF300- oder EF600 Lüfter ersetzen.</block>
   <block id="1f0e561212d6f8a00a46e7e96276d4cc" category="list-text">Sie haben einen Ersatzlüfter, der für Ihr Controller-Shelf- oder Festplatten-Shelf-Modell unterstützt wird.</block>
@@ -2370,8 +2369,6 @@
   <block id="49bf621d794c6d35fdd6c9c6ba005c75" category="paragraph">Die Express-Methode umfasst die folgenden Schritte, die ebenfalls im beschrieben werden <block ref="e728cc7e5761cb01fff7213fb14bd2b8" category="inline-link-macro-rx"></block>.</block>
   <block id="5903a917b575023b60264c602c220771" category="inline-link-macro">Fibre Channel (FC)</block>
   <block id="73f3e7e865d667420a49e86f5dd4e62e" category="list-text"><block ref="73f3e7e865d667420a49e86f5dd4e62e" category="inline-link-macro-rx"></block></block>
-  <block id="45010da5958c7fc3d60c5414c380bb70" category="inline-link">NetApp Dokumentation: Host Utilities</block>
-  <block id="99958fd8a8267b3560ce1c363b5be7e7" category="list-text"><block ref="f8c7ff95c6f2730c965212cb5ee95d98" category="inline-link-rx"></block> -- enthält die Dokumentation für die aktuelle Windows Unified Host Utilities-Version.</block>
   <block id="7baddc80f2f90c28721d910489b197cb" category="summary">Installieren Sie Storage Manager für CLI und HCA in der Windows Express-Methode.</block>
   <block id="ef71c4d60b721871a9a1acefb72e13e4" category="paragraph">Wenn Sie die SANtricity-Software 11.53 oder eine frühere Version verwenden, können Sie die SANtricity Storage Manager-Software auf Ihrer Management Station installieren, um das Array zu verwalten.</block>
   <block id="501a2ad13300e0aa28ebe2f8b5f896f5" category="paragraph">SANtricity Storage Manager enthält die Befehlszeilenschnittstelle (CLI) für weitere Managementaufgaben und den Host Context Agent, damit die Host-Konfigurationsinformationen über den I/O-Pfad an die Storage Array Controller übertragen werden können.</block>
@@ -2488,13 +2485,6 @@
   <block id="4944f024fda429f394a9ba19ae3ed5c4" category="list-text">Laden Sie das *SANtricity Windows DSM*-Paket aus dem herunter<block ref="a1105c30614fc751f4cb93cb3f8a6a34" category="inline-link-rx"></block>. Wählen Sie Ihre Softwareversion aus, akzeptieren Sie die Lizenzvereinbarung und wählen Sie unter Weitere Downloads * SANtricity Windows DSM* aus.</block>
   <block id="02bb8d4c1c8be606657e11fe0f786f77" category="list-text">Führen Sie das Installationsprogramm für *SANtricity Windows DSM* aus. Doppelklicken Sie auf das zu beende Installationspaket.</block>
   <block id="3d3968236ede7da016e34f104d23f18f" category="list-text">Verwenden Sie den Installationsassistenten, um das Paket auf der Management Station zu installieren.</block>
-  <block id="cade4234340dbc4fee36a7571946fd32" category="summary">Installieren Sie Windows Unified Host Utilities für Windows Express.</block>
-  <block id="b98d11fdfd34118f790a089b09e3367d" category="paragraph">Die Windows Unified Host Utilities Tools unterstützen Sie dabei, Host Computer mit NetApp Storage-Systemen zu verbinden und die erforderlichen Parameter auf Host-Computern festzulegen. Außerdem können Sie mit NetApp Storage-Systemen entsprechende Disk-Timeouts festlegen, um die beste Lese-/Schreib-Performance zu erzielen.</block>
-  <block id="6726b8f82b27b4eca9bba6dc03228ab6" category="admonition">Weitere Informationen finden Sie im Installationshandbuch „_Windows Host Utilities“ unter „_“<block ref="5a703dc316d0405f2b69548f35177839" category="inline-link-rx"></block>.</block>
-  <block id="e711e1dd664e14a77c4bff5ab909a662" category="list-text">Verwenden Sie die<block ref="49d81d143d5c8b402603532056154481" category="inline-link-rx"></block> Bestimmen der entsprechenden Version der zu installierenden Unified Host Utilities.</block>
-  <block id="d7b565023737aad44d6724a49bd2b673" category="paragraph">Die Versionen werden in jeder unterstützten Konfiguration in einer Spalte aufgelistet.</block>
-  <block id="f64d5867fd911e2b14d8680010121759" category="list-text">Laden Sie die Unified Host Utilities von herunter<block ref="2ff36e7792a0e0257d19a11dce8cade8" category="inline-link-rx"></block>.</block>
-  <block id="59fbc26a1831942cb6ebf2d627aa2db8" category="admonition">Dieses Dienstprogramme-Paket kann nicht mit dem SANtricity-Speicher-Manager-Installationsprogramm installiert werden.</block>
   <block id="ba09ee47d11962c1ccd13d7e1f10e6c5" category="summary">Frühere Versionen der Dokumentation</block>
   <block id="93168a8084b3e838d2932c4734bd234e" category="doc">Frühere Versionen</block>
   <block id="8616fc8e60c2615a2af5c34293f128b4" category="paragraph">Die nachfolgenden Links führen zu Dokumentationen für ältere Versionen der E-Series Hardware und SANtricity Software. Die Links führen Sie zu einer anderen Dokumentationswebsite.</block>
@@ -2771,10 +2761,6 @@
   <block id="7e37f4cc4c72af636a462f4562f809e5" category="inline-link-macro">Konfigurieren Sie Array-seitiges Netzwerk</block>
   <block id="b9d208fcce9c26f3aacf7b49c9cdbaef" category="paragraph">Wenn Sie aus Performance-Gründen Jumbo Frames im IP SAN verwenden, stellen Sie sicher, dass Sie das Array, die Switches und Hosts für die Verwendung von Jumbo Frames konfigurieren. Informationen zum Aktivieren von Jumbo-Frames auf den Hosts und Switches finden Sie in der Dokumentation zum Betriebssystem und Switch. Führen Sie die Schritte unter aus, um Jumbo-Frames auf dem Array zu aktivieren <block ref="16d4528e3823d381a97af6e1811e489a" category="inline-link-macro-rx"></block>.</block>
   <block id="544de7ba1dbbebfb99a713dc8014fa98" category="admonition">Für den IP-Overhead müssen viele Netzwerk-Switches über 9,000 Byte konfiguriert sein. Weitere Informationen finden Sie in der Switch-Dokumentation.</block>
-  <block id="6e66b862960ebd7ec3afa00536df9e2b" category="summary">Installieren Sie Linux Unified Host Utilities, wenn Sie iSCSI verwenden.</block>
-  <block id="6cfa91f7028db85237c0770258925d8e" category="paragraph">Die Linux Unified Host Utilities Tools unterstützen Sie beim Management von NetApp Storage, einschließlich Failover-Richtlinien und physischen Pfaden.</block>
-  <block id="8a761de12813fd81d6a6c12a762a07f1" category="list-text">Verwenden Sie die<block ref="0aaf04254af18646f3d246cd4a4b417d" category="inline-link-rx"></block> Bestimmen der entsprechenden Version der zu installierenden Unified Host Utilities.</block>
-  <block id="f4011c90372ee12814aefc97e4debb36" category="list-text">Laden Sie die Unified Host Utilities von herunter<block ref="4ce7a3cde07b85b80ee4fe046584534d" category="inline-link-rx"></block>.</block>
   <block id="dcb07d8ae16ab2bd4fcf3f16bb1e166b" category="summary">Die NVMe-Initiatorkonfiguration in einer Fibre-Channel-Umgebung umfasst die Installation und Konfiguration des nvme-cli-Pakets sowie die Aktivierung des NVMe/FC-Initiators auf dem Host.</block>
   <block id="eee710143ae29bf272d75ad40d2ede5a" category="doc">Richten Sie NVMe over Fibre Channel auf der Host-Seite ein</block>
   <block id="a273add3419b2d63bd738c3a4f1e5e3a" category="paragraph">Die NVMe-Initiatorkonfiguration in einer Fibre-Channel-Umgebung umfasst die Installation und Konfiguration des nvme-cli-Pakets sowie die Aktivierung des NVMe/FC-Initiators auf dem Host.</block>
@@ -2863,7 +2849,6 @@
   <block id="518df87a5011ff1168a7c6c9a264b38f" category="list-text">Starten Sie den Server neu, um ihn mit aktiviertem nativen NVMe-Multipathing zu aktivieren.</block>
   <block id="288bd49c48bf59f751a074cbaac99cf0" category="list-text">Überprüfen Sie, ob natives NVMe-Multipathing aktiviert wurde, nachdem der Host den Backup gestartet hat.</block>
   <block id="d061a1419e660c90553f0a82e4f669dc" category="admonition">Für SLES 15 und RHEL 9 ist natives NVMe Multipathing standardmäßig aktiviert und keine zusätzliche Konfiguration erforderlich.</block>
-  <block id="bd97f9e0585f1ab3a70a824e4f5ffe79" category="summary">Linux Unified Host Utilities 7.1 enthält Tools für das Management von NetApp Storage, einschließlich Failover-Richtlinien und physischen Pfaden.</block>
   <block id="e889c393ff8c52f357be63d353ebf65a" category="summary">Für RHEL 7 und SLES 12 erstellen Sie ein Dateisystem auf dem Namespace und mounten das Dateisystem.</block>
   <block id="da6e8accbd9a7e86c32239135f1ffed2" category="doc">Erstellen von Dateisystemen (RHEL 7 und SLES 12)</block>
   <block id="facbcb2fa38d6402945c5fd2c6fcf386" category="list-text">Führen Sie die aus<block ref="3d80983fc82ff72fd51e5d1f7e90c56d" prefix=" " category="inline-code"></block> Befehl zum Abrufen einer Liste von<block ref="b2050622ed0fa148dc4a4194ae73002d" prefix=" " category="inline-code"></block> Geräte:</block>
@@ -2904,7 +2889,6 @@
   <block id="4df6b1c48c33c3735ab315bb52db5933" category="section-title">Natives NVMe-Multipathing für RHEL 8 einrichten</block>
   <block id="ce787f5529e569c07191ad09975c4a3f" category="list-text">Remake<block ref="50929bac7304e38629221d43c18db25e" prefix=" " category="inline-code"></block> Mit neuem Modprobe-Parameter.</block>
   <block id="0e550c6e0d7b33fb6681b0cab3069f86" category="list-text">Starten Sie den Server neu, um ihn mit aktiviertem nativen NVMe-Multipathing zu aktivieren</block>
-  <block id="c4a120813372f7f07d6de687ff0fc6a6" category="paragraph">Das Paket Linux Unified Host Utilities enthält Tools für die Verwaltung von NetApp Storage, einschließlich Failover-Richtlinien und physischen Pfaden.</block>
   <block id="c7fac170019149bda5be55e9871ee2ae" category="summary">Wenn in Ihrer Konfiguration das iSER-over-InfiniBand-Protokoll verwendet wird, führen Sie die in diesem Abschnitt beschriebenen Schritte aus.</block>
   <block id="77a31c9e65044d37ea4c9ac206b4c3a1" category="doc">Netzwerkverbindungen konfigurieren</block>
   <block id="2d400abf3c2852a9eb98b7b6cf07d958" category="paragraph">Wenn Ihre Konfiguration das iSER-over-InfiniBand-Protokoll verwendet, führen Sie die in diesem Abschnitt beschriebenen Schritte aus, um Netzwerkverbindungen zu konfigurieren.</block>
@@ -3030,7 +3014,6 @@
   <block id="25f8ce0d97746c6603a4ce39527059c4" category="list-text">Sie müssen die Flusskontrolle *Ende bis Ende* aktivieren.</block>
   <block id="33d32d0aba4531ff91372042c7bd58ae" category="list-text">Falls erforderlich, haben Sie Jumbo Frames aktiviert.</block>
   <block id="80c26039d6160bf38eddadb619ecf00a" category="admonition">Port-Kanäle/LACP werden von den Switch-Ports des Controllers nicht unterstützt. Host-seitiges LACP wird nicht empfohlen; Multipathing bietet dieselben Vorteile und in einigen Fällen auch bessere Vorteile.</block>
-  <block id="e7f0bd2c7ce5a2859d99775fd89bb0a2" category="summary">Installieren Sie Linux Unified Host Utilities bei Verwendung von FC.</block>
   <block id="e42304ce8233555f426b321316e288d9" category="summary">Bevor Sie den Namespace verwenden, überprüfen Sie, ob der Host Daten in den Namespace schreiben und wieder lesen kann.</block>
   <block id="bb7f80b75dee77f0a26086bc2d0505b3" category="paragraph">Ein initialisierter Namespace, der mit einem Dateisystem formatiert ist.</block>
   <block id="b8428f61ce61bd64b7ac15710b5f5150" category="list-text">Führen Sie den Befehl diff aus, um die kopierten Dateien mit den Originalen zu vergleichen.</block>
@@ -3070,7 +3053,6 @@
   <block id="d3d9446802a44259755d38e6d163e820" category="paragraph">10</block>
   <block id="fc9c6bf5eb7d76688cd8db54a383c5cc" category="paragraph">Host 1, Port 2</block>
   <block id="f15f41cd112f9c6bb8005736b53199ec" category="paragraph">(Optional) Host 2, Port 2</block>
-  <block id="3a12d0edc81531758f12c83024fbc77e" category="summary">LInstall Linux Unified Host Utilities bei Verwendung von iSER.</block>
   <block id="ee732210e813ba3c59eefd70d8487e35" category="summary">Der InfiniBand-OFED-Treiber-Stack unterstützt sowohl iSER als auch SRP gleichzeitig auf den gleichen Ports, sodass keine zusätzliche Hardware erforderlich ist.</block>
   <block id="fd53582d98576d62eda5f16303b353cc" category="doc">Konfigurieren Sie das Netzwerk für Storage-verbundene Hosts</block>
   <block id="f5468ecf76be3bb4cf77cf63a591d098" category="paragraph">Wenn Ihre Konfiguration das iSER-over-InfiniBand-Protokoll verwendet, führen Sie die in diesem Abschnitt beschriebenen Schritte aus.</block>
@@ -4491,7 +4473,6 @@
   <block id="61f02e2c84e5b52874127600576222a5" category="list-text">Rufen Sie die Seite Hardware auf, und stellen Sie sicher, dass alle Komponenten angezeigt werden.</block>
   <block id="4c1edfa8a9683e5a7cf6c1058c397f26" category="list-text">Öffnen Sie das Dialogfeld „Software- und Firmware-Bestandsaufnahme“ (öffnen Sie Menü:Support[Upgrade Center], und klicken Sie dann auf den Link für *Software- und Firmware-Bestandsaufnahme*). Überprüfen der neuen Software- und Firmware-Versionen</block>
   <block id="9923033ddd1d0d8a8cf07d6215998241" category="list-text">Wenn Sie den Controller NVSRAM aktualisieren, gehen die benutzerdefinierten Einstellungen, die Sie auf den vorhandenen NVSRAM angewendet haben, während der Aktivierung verloren. Sie müssen die benutzerdefinierten Einstellungen erneut auf den NVSRAM anwenden, nachdem der Aktivierungsvorgang abgeschlossen ist.</block>
-  <block id="788d3c503714b3eb6632371a82cc20b5" category="list-text">Ändern Sie die Einstellung des Speicher-Arrays mithilfe von CLI-Befehlen auf Duplex. Zur Verwendung von CLI können Sie entweder eine Eingabeaufforderung öffnen, wenn Sie das CLI-Paket heruntergeladen haben, oder Sie können das Enterprise Management Window (EMW) öffnen, wenn Storage Manager installiert ist.</block>
   <block id="a05448d81309432cf8e25da48e5e1c90" category="list-text">Über eine Eingabeaufforderung:</block>
   <block id="b837c5d8d4c1034fca14d84eff94c0d9" category="list-text">Verwenden Sie den folgenden Befehl, um das Array von Simplex auf Duplex zu wechseln:</block>
   <block id="6a66f87eeb104bf47e94bbe8480ce241" category="list-text">Mit dem folgenden Befehl wird der Controller zurückgesetzt.</block>
@@ -6851,8 +6832,6 @@
   <block id="d3e8b862fb8a94efba8bc0a2ec5a88a8" category="list-text">Wählen Sie ein oder mehrere Volumes aus, die Sie löschen möchten, und bestätigen Sie anschließend, dass Sie den Vorgang ausführen möchten.</block>
   <block id="005889eb2bd1ad96c577fc46302784e4" category="list-text">Die Shelfs verkabeln.</block>
   <block id="d223aabe6d0751ac7fb17d3493f3c6c7" category="inline-link-macro">Verkabelung</block>
-  <block id="ba51d8b064560c05234bcb7cf908140c" category="paragraph">Verkabeln Sie das System entsprechend Ihrer Konfiguration. Wenn Sie mehr Verkabelungsoptionen benötigen als die in diesem Abschnitt gezeigten Beispiele, lesen Sie <block ref="d28b440e6afa4df86a4a85820e62c38b" category="inline-link-macro-rx"></block>.</block>
-  <block id="825f1bce0ca9afca4f9d03067ac55692" category="paragraph">Für die in diesem Abschnitt gezeigten Beispiele benötigen Sie die folgenden Kabel:</block>
   <block id="6bb39a0f441f51677398fb4553a6f0c1" category="paragraph">*SAS-Kabel*</block>
   <block id="597bde72a3d1602b00297a27da8f77e0" category="list-text">Verkabeln Sie Controller A mit IOM A des ersten Festplatten-Shelf.</block>
   <block id="7f1c18457c9760a1f48d05d01c28a563" category="list-text">Verkabeln Sie IOM A des ersten Festplatten-Shelf mit IOM A des zweiten Festplatten-Shelf.</block>
@@ -6923,8 +6902,6 @@
   <block id="0d39f1b0a5cbdec5ccf74bfa4519fe8c" category="paragraph">Stromkabel</block>
   <block id="74a14e251e7e1bd23c324b4b1a8cd242" category="paragraph">SAS-Kabel sind nur in den Festplatten-Shelfs enthalten</block>
   <block id="37d313349fe563ae8b848d2dedc9b49d" category="paragraph">SAS-Kabel</block>
-  <block id="c0775f0da6502a62c364501a8afa66ed" category="paragraph">Verkabeln Sie das System entsprechend Ihrer Konfiguration. Wenn Sie mehr Verkabelungsoptionen benötigen als die gezeigten Beispiele, finden Sie unter <block ref="d28b440e6afa4df86a4a85820e62c38b" category="inline-link-macro-rx"></block>.</block>
-  <block id="1984650e2174e4cd6e72f937ef372c57" category="paragraph">Für die gezeigten Beispiele benötigen Sie die folgenden Kabel:</block>
   <block id="7debffd361a72aecebaaecd403b70361" category="list-text">Verkabeln Sie IOM A des zweiten Festplatten-Shelf mit IOM A des dritten Festplatten-Shelf.</block>
   <block id="f98bc3f0250f85405f1a5dec2993e55f" category="list-text">Verkabeln Sie Controller B mit IOM B des dritten Festplatten-Shelf.</block>
   <block id="93247a66ed1ae41e137e57703db51092" category="list-text">Verkabeln Sie IOM B des zweiten Festplatten-Shelf mit IOM B des dritten Festplatten-Shelf.</block>
@@ -7822,7 +7799,6 @@
   <block id="cbcf19ef40f1b61a63478c8e22c42099" category="sidebar">Ethernet-Verkabelung</block>
   <block id="c5d1e465274381bca5df236c2a5a7d57" category="sidebar">Implementierung von Software</block>
   <block id="18471c1ff811bd0bcb293d2453b59771" category="sidebar">Überprüfen Sie die Linux-Konfiguration</block>
-  <block id="a44a6c0b1372610fbe5ce8ba27e0e377" category="sidebar">Installation und Konfiguration der Host Utilities</block>
   <block id="b7d6b71801787e9bb9cabee39a18d4be" category="sidebar">Installieren Sie den SANtricity Storage Manager</block>
   <block id="511bc26995332ccd1bc373f2533ac9e7" category="sidebar">Greifen Sie auf SANtricity System Manager zu</block>
   <block id="4fa43a5f70872c9934e31e9e40e565f9" category="sidebar">Multipath-Software konfigurieren</block>
@@ -7862,7 +7838,6 @@
   <block id="f937177c870063d921c3b04fc46d70e9" category="sidebar">Durchführung von NMVe über FC-spezifische Aufgaben</block>
   <block id="b847c90a690d3ed6ab537da4170e75ce" category="sidebar">Konfigurieren Sie Speicher auf dem Host</block>
   <block id="51db7ba6619e3142a5523bc5debfd5ad" category="sidebar">Überprüfen Sie die Windows-Konfiguration</block>
-  <block id="4c3d64befec3af3f83707e126e8b1880" category="sidebar">Installation und Konfiguration von Unified Host Utilities</block>
   <block id="cfd5a063d93f48df8b64774d28254314" category="sidebar">Storage auf dem Host erkennen</block>
   <block id="55c745a83eb000156fff568d7b93fa8c" category="sidebar">Upgrades von Systemen</block>
   <block id="cf14c2021274780551c926622b5fa48e" category="sidebar">Controller-Hardware-Upgrade</block>
@@ -8034,10 +8009,6 @@
   <block id="731e4c243221cff11b35e735d54a097c" category="section-title">Rack mit zwei Höheneinheiten – 2 HE</block>
   <block id="08e15a26eb1bed02ff476c90993bb81d" category="section-title">Rack oder Schrank mit vier Säulen – 2 HE</block>
   <block id="f7e582702fa43947010600df41688562" category="section-title">Vierpolige-Rack -- SuperRail</block>
-  <block id="88587640720455d00dd679a1ce9fe099" category="paragraph-title">Beispiel A: Ein E2860 Controller-Shelf mit zwei DE460C Festplatten-Shelfs in einer Standard-SAS-Konfiguration.</block>
-  <block id="5e2cc996382bb24824986ff473c63abc" category="paragraph-title">Beispiel B: Ein E2860 Controller-Shelf mit einem DE460C Festplatten-Shelf in einer Standard-SAS-Konfiguration.</block>
-  <block id="7bb583eaeb72cab404957a32bf32e9fb" category="paragraph-title">Beispiel A: E5700 Controller-Shelf mit drei DE212C/DE24 Festplatten-Shelfs in einer standardmäßigen SAS-Konfiguration</block>
-  <block id="ab945691a98936597c2ea25ebe10559a" category="paragraph-title">Beispiel B: Ein E5700 Controller-Shelf mit einem DE212C/DE24 Festplatten-Shelf in einer standardmäßigen SAS-Konfiguration.</block>
   <block id="45d7b912755be5cce50a63e39e38af8a" category="section-title">Schritt 1: Überprüfen Sie die Teilenummer des neuen Controllers</block>
   <block id="fe52478447b1fa9a4c7ec89de67fdf4d" category="sidebar">Hot Add a Laufwerk-Shelf</block>
   <block id="83af49c7a44a4352fd5c07a021524fea" category="paragraph">Sie müssen das neueste kompatible Betriebssystem RHEL 7, RHEL 8, RHEL 9, SUSE Linux Enterprise Server 12 oder 15 Service Pack ausführen. Siehe<block ref="0aaf04254af18646f3d246cd4a4b417d" category="inline-link-rx"></block> Für eine vollständige Liste der aktuellen Anforderungen.</block>
@@ -8212,7 +8183,6 @@
   <block id="cc1b53336ed5c926305dd7ad876ab1d2" category="admonition">Bei SANtricity OS 11.80GA und höher unterstützt die EF600 Erweiterungs-Shelf-Konfigurationen ohne Laufwerke im Basisfach Stellen Sie bei Verwendung dieser Konfiguration sicher, dass die Laufwerke im Erweiterungs-Shelf bestückt und ordnungsgemäß mit dem Basissfach verbunden sind, bevor Sie das System einschalten.</block>
   <block id="f9c81137922296691747f3cff9a92105" category="list-text"><block ref="f9c81137922296691747f3cff9a92105" category="inline-link-rx"></block></block>
   <block id="c68dfa9143daa0b2c3c80d2545e2410c" category="inline-link">Laden Sie das Thema Befehlszeilenschnittstelle (CLI) in der Online-Hilfe des SANtricity Systemmanagers herunter</block>
-  <block id="0c229260a68aeca566d73a23ad233dcd" category="admonition">Alternativ können Sie den SMcli-Befehl verwenden<block ref="14993f95e0d6fc04f9966b0c368a7ed6" prefix=" " category="inline-code"></block> Um dieselben Funktionen wie das Unified Host Utility-Tool auszuführen. Die SMcli ist im SANtricity Betriebssystem enthalten und kann über den SANtricity System Manager heruntergeladen werden. Weitere Informationen zum Herunterladen des SMcli über den SANtricity-System-Manager finden Sie im<block ref="a9fe8fbe4d692fa7e3dc0b66710307cd" category="inline-link-rx"></block>.</block>
   <block id="ffc3de562db3aaacf94180bc367bf157" category="admonition">Wenn Sie SANtricity Software 11.60 und höher verwenden, müssen Sie diese Schritte nicht ausführen. Die sichere SANtricity CLI (SMcli) ist im SANtricity Betriebssystem enthalten und kann über den SANtricity System Manager heruntergeladen werden. Weitere Informationen zum Herunterladen des SMcli über den SANtricity-System-Manager finden Sie im <block ref="07ba191255ffe5607ddf4202e3c76da7" category="inline-link-macro-rx"></block></block>
   <block id="fc4f413bbdc13c9d07bb87f1f0e4b5bc" category="admonition">Ab der SANtricity-Softwareversion 11.80.1 wird der Host Context Agent nicht mehr unterstützt.</block>
   <block id="5f0e6cffb0f871fd63ee412b0867faa5" category="admonition">Bei Plattformen mit SANtricity 11.60 und höher ist die Standard-Subnetzmaske 255.255.0.0.</block>
@@ -8252,8 +8222,6 @@
   <block id="e5a4a8069ad5713adce4d473829f3108" category="admonition">Die gelbe Warn-LED des Controllers erlischt, wenn die folgenden Austauschbedingungen vorliegen:</block>
   <block id="a425ad1782379ad30aed42d2cca2a9de" category="list-text">Alt-Stromversorgung fehlgeschlagen</block>
   <block id="197afe3e4b0fdccae7f0384e342bb289" category="list-text">Sie können den SMcli-Befehl verwenden<block ref="14993f95e0d6fc04f9966b0c368a7ed6" prefix=" " category="inline-code"></block> Um die entsprechenden Gerätenamen für die Volumes anzuzeigen. Die SMcli ist im SANtricity Betriebssystem enthalten und kann über den SANtricity System Manager heruntergeladen werden. Weitere Informationen zum Herunterladen des SMcli über den SANtricity-System-Manager finden Sie im<block ref="a9fe8fbe4d692fa7e3dc0b66710307cd" category="inline-link-rx"></block>.</block>
-  <block id="d699daec8de3b69e6a41a8c5e1e7f44e" category="inline-link">Installieren Sie Linux Unified Host Utilities 7.1</block>
-  <block id="7c4ed11037f1ffa580c5462fde3a9a9c" category="list-text"><block ref="5a6c0185dc13c38c5945f8fa47c41898" category="inline-link-rx"></block> -- beschreibt die Installation der Linux Unified Host Utilities 7.1.</block>
   <block id="28af2c239fc893bd1a2013f2e8b4b941" category="section-title">Neue Funktionen in Version 11.80.1R1</block>
   <block id="5769aac2d83733db3bf7507b56dd86e9" category="paragraph">Größere Schlüssellänge für neue selbstsignierte und CA-signierte Managementzertifikate.</block>
   <block id="8545f755b4f7a99afe330df57699f365" category="paragraph">Die Länge des Schlüssels für Managementzertifikate für SANtricity System Manager und Unified Manager Applikationen wurde von 2048 auf 3072 Bit geändert. Die Änderung gilt für neu generierte selbstsignierte und CA-signierte Zertifikate aus den SANtricity-Anwendungen. Die Schlüssellänge ist festgelegt und wird von den Standardschlüsselgrößendefinitionen in NVSRAM nicht beeinflusst.</block>
@@ -8411,9 +8379,6 @@
   <block id="8ad5f5a67faf8ddadaa0107a57f04b61" category="paragraph"><block ref="8ad5f5a67faf8ddadaa0107a57f04b61" category="inline-image-macro-rx" type="image"></block></block>
   <block id="bee25ddf22954764638be8db059a3505" category="inline-image-macro">SAS-Kabel</block>
   <block id="39d650b4b632da15b05f78d8c80db6c3" category="paragraph"><block ref="39d650b4b632da15b05f78d8c80db6c3" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="004c0caf3af4f9614a7e07b8bafd8e07" category="inline-image-macro">E5700 Controller in einer SAS-Konfiguration</block>
-  <block id="9ffb511c6f5b44a46bde2c5f9739aa5b" category="paragraph"><block ref="9ffb511c6f5b44a46bde2c5f9739aa5b" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="18cecd602006ce40ce09cf4e4c2d38b3" category="paragraph"><block ref="18cecd602006ce40ce09cf4e4c2d38b3" category="inline-image-macro-rx" type="image"></block></block>
   <block id="40f3696ce1975405b3dd3b4c88fee920" category="paragraph"><block ref="40f3696ce1975405b3dd3b4c88fee920" category="inline-image-macro-rx" type="image"></block></block>
   <block id="f043e2cf14bf90f5f6fdde2eedd27d54" category="inline-image-macro">Stromversorgungs-Shelf-Verbindungen</block>
   <block id="11fd48921050b14f467f651de93de4a8" category="paragraph">*Beispiel: Stromanschlüsse befinden sich auf der Rückseite des Regals.* <block ref="a532dab930fd15f0637a30e402d8f9a2" category="inline-image-macro-rx" type="image"></block></block>
@@ -8447,9 +8412,6 @@
   <block id="a6afe792341ed6e15acdc5ac572683c9" category="paragraph"><block ref="a6afe792341ed6e15acdc5ac572683c9" category="inline-image-macro-rx" type="image"></block></block>
   <block id="5ac609c12de89a4fb426124bce2b8fe9" category="inline-image-macro">E5700 Management-Ports</block>
   <block id="7638544025c69718a924e0f8e14fffd6" category="paragraph"><block ref="7638544025c69718a924e0f8e14fffd6" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="0c939f4611f00ba920181cdd25b91423" category="inline-image-macro">E2860 Controller in einer SAS-Konfiguration</block>
-  <block id="50c46e741de9ff81436b6f99809dde68" category="paragraph"><block ref="50c46e741de9ff81436b6f99809dde68" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="b9e37640fcc1990a420e73cbc71cf5d9" category="paragraph"><block ref="b9e37640fcc1990a420e73cbc71cf5d9" category="inline-image-macro-rx" type="image"></block></block>
   <block id="fa0053c9f3ecff9854d2d18cb3d45034" category="inline-image-macro">Stromanschlüsse für die Rückseite des Shelfs</block>
   <block id="bf8c27ee38f4551cf3103f8ddc048822" category="paragraph">*Beispiel: Stromanschlüsse befinden sich auf der Rückseite des Regals.* <block ref="27f4b7324949481a832e2798f546c18f" category="inline-image-macro-rx" type="image"></block></block>
   <block id="d3f162fe328844acb0313cd8d2c4c0fd" category="paragraph"><block ref="d3f162fe328844acb0313cd8d2c4c0fd" category="inline-image-macro-rx" type="image"></block></block>
@@ -8470,12 +8432,8 @@
   <block id="ed82e034d7d377cc12aa1d89cea33d43" category="inline-image-macro">E4060 Direct Topology, Breite=1000px</block>
   <block id="427b3e2ab20960e704a22e39fbcda634" category="inline-image-macro">E4060 Fabric-Topologie, Breite=1000px</block>
   <block id="ab2bd875f2f303555807a3b13a6b64bb" category="paragraph"><block ref="ab2bd875f2f303555807a3b13a6b64bb" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="ff2e827a53ef25671ffc7469bb5208a2" category="list-title">Beispiel A: Ein E4000 Controller Shelf mit drei DE212C/DE224C Festplatten-Shelfs in einer standardmäßigen SAS-Konfiguration.</block>
-  <block id="ecf826f3b05c4b630ca5e118d6536932" category="list-title">Beispiel B: Ein E4000 Controller Shelf mit einem DE212C/DE224C Festplatten-Shelf in einer SAS-Standardkonfiguration.</block>
   <block id="bd6f2f179e92d79b65397b0d15328141" category="inline-image-macro">Netzkabel</block>
   <block id="a18053fd03f0e0f1657ef8a7799c39b1" category="paragraph"><block ref="a18053fd03f0e0f1657ef8a7799c39b1" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="0931fcfaf82a62b23c3cbb633e4d3754" category="list-title">Beispiel A: Ein E4060 Controller-Shelf mit zwei DE460C Festplatten-Shelfs in einer Standard-SAS-Konfiguration.</block>
-  <block id="cb6592701a1a2879a7d91e2aa3483978" category="list-title">Beispiel B: Ein E4060 Controller-Shelf mit einem DE460C Festplatten-Shelf in einer Standard-SAS-Konfiguration.</block>
   <block id="a43d4c0d877b46a949d2194ce9a5dc43" category="list-text">Überprüfen Sie die LEDs an jedem Controller.</block>
   <block id="4b478fea6990a79d7f3b2aed9f0dfaac" category="summary">Führen Sie die folgenden Schritte aus, um Ihr E4000-Speichersystem zu installieren und einzurichten.</block>
   <block id="61d7360b301a1cb885e62542da3bb7d4" category="paragraph-title"><block ref="58f667aaf05f87159670e12bd9bc076b" category="inline-image-macro-rx" type="image"></block> Vorbereiten der Installation</block>
@@ -9299,7 +9257,6 @@
   <block id="7156af939da33d4706b3dc430b74da68" category="doc">FC-Switches in E-Series konfigurieren – Linux (FC)</block>
   <block id="ec2fdd1f2e6ee695231cc1b65ac9e203" category="doc">Partitionen und Dateisysteme in E-Series - Linux (FC) erstellen</block>
   <block id="1f5f0de28e7314d825efd9a881bfdc65" category="doc">Festlegen weltweiter Host-Port-Namen (WWPNs) in E-Series – Linux (FC)</block>
-  <block id="5399debd6e55a777747669bf25cb7d73" category="doc">Installation und Konfiguration von Linux Unified Host Utilities in E-Series (FC)</block>
   <block id="a8052a427bf8a81e1230fb7ac881a3a5" category="doc">SANtricity Storage Manager für SMcli installieren (11.53 oder früher) – Linux (FC)</block>
   <block id="12da4c23be3ec49c3a0ebb3551baa6f7" category="doc">Richten Sie die Datei multipath.conf in E-Series ein - Linux (FC)</block>
   <block id="6b4af5eebbfa3ec509df83baaeba767a" category="doc">Überprüfen der Unterstützung der Linux-Konfiguration in E-Series (FC)</block>
@@ -9315,7 +9272,6 @@
   <block id="2983522bb7971192a7b19239c78489c4" category="doc">Netzwerk in E-Series konfigurieren – Linux (iSCSI)</block>
   <block id="a55d76a868400bdc13ddafa3c0b123fd" category="doc">Switches in E-Series konfigurieren – Linux (iSCSI)</block>
   <block id="56a7cfd4a09dd9cc915effc3b709e56b" category="doc">Erstellen von Partitionen und Dateisystemen in E-Series - Linux (iSCSI)</block>
-  <block id="626515899065c3dfff76938d6bbbb573" category="doc">Installation und Konfiguration von Linux Unified Host Utilities in E-Series (iSCSI)</block>
   <block id="8ae63fb65e18e5737838f3f0f3616363" category="doc">Installation von SANtricity Storage Manager für SMcli (11.53 oder früher) – Linux (iSCSI)</block>
   <block id="2cf4743e22ee36076d5e788acb85d307" category="doc">Einrichten der Datei multipath.conf in E-Series - Linux (iSCSI)</block>
   <block id="83273ba9acef588f65385d940a4ea831" category="doc">Überprüfen von IP-Netzwerkverbindungen in E-Series – Linux (iSCSI)</block>
@@ -9330,7 +9286,6 @@
   <block id="51b23502fc01639de89ab204ca319f19" category="doc">Subnetz-Manager in E-Serie konfigurieren – Linux (iSER over InfiniBand)</block>
   <block id="c294953cfef25396092e6433e2aba579" category="doc">Partitionen und Dateisysteme in E-Series - Linux (iSER over InfiniBand) erstellen</block>
   <block id="31a15fd8e15a2f1fd50fd6998a8cf036" category="doc">Globale eindeutige Host-Port-IDs in der E-Series festlegen – Linux (iSER over InfiniBand)</block>
-  <block id="53e9f7b6ed3130efe08a1831a1d64a86" category="doc">Installation und Konfiguration von Linux Unified Host Utilities in E-Series (iSER über InfiniBand)</block>
   <block id="066c8070ea2f5a6a1b0acad2fd1364ac" category="doc">SANtricity Storage Manager für SMcli installieren (11.53 oder früher) – Linux (iSER über InfiniBand)</block>
   <block id="bda8bb645a075548b4adde8ea4b33efe" category="doc">Einrichten der Datei multipath.conf in E-Series - Linux (iSER over InfiniBand)</block>
   <block id="efe973952cf408c3cafd38a2c85cbddd" category="doc">Überprüfen der Unterstützung von Linux-Konfigurationen in E-Series (iSER over InfiniBand)</block>
@@ -9393,7 +9348,6 @@
   <block id="174bbe0956088982601d07bf4750fcf0" category="doc">Multipath-Software in der E-Series konfigurieren – Linux (SAS)</block>
   <block id="221409e67aacfe941a04460977bee7ba" category="doc">Partitionen und Dateisysteme in E-Series - Linux (SAS) erstellen</block>
   <block id="e9ca753ba2dbe90aa92161ccb16e38bc" category="doc">SAS-Host-IDs in der E-Series – Linux (SAS) ermitteln</block>
-  <block id="7807c717a2b072f3a3dbcbc7fbc83c93" category="doc">Installation und Konfiguration von Linux Unified Host Utilities in E-Series (SAS)</block>
   <block id="68001805f74454d41c5344994334105d" category="doc">SANtricity Storage Manager für SMcli installieren (11.53 oder früher) – Linux (SAS)</block>
   <block id="35d216f5b1ca143eb3beeaa5d30dc52d" category="doc">Richten Sie die Datei multipath.conf in E-Series ein - Linux (SAS)</block>
   <block id="13c68af1e6a4e01e97dcf0b8bf97636a" category="doc">Überprüfen der Unterstützung der Linux-Konfiguration in E-Series (SAS)</block>
@@ -9406,7 +9360,6 @@
   <block id="176cfa346487abc57acc41973cb76102" category="doc">Subnetz-Manager in E-Series – Linux (SRP over InfiniBand) konfigurieren</block>
   <block id="4d1495672528ba1edb974e7a3ec68925" category="doc">Erstellen von Partitionen und Dateisystemen in E-Series - Linux (SRP over InfiniBand)</block>
   <block id="722418d400a6f71b750c9b59435c9e9c" category="doc">Globale eindeutige Host-Port-IDs in E-Series – Linux (SRP over InfiniBand) ermitteln</block>
-  <block id="1d454844786440b6542b0a49da213146" category="doc">Installation und Konfiguration von Linux Unified Host Utilities in E-Series (SRP over InfiniBand)</block>
   <block id="fd9fdffac380d0e2ac60f7758fdaa33c" category="doc">SANtricity Storage Manager für SMcli installieren (11.53 oder früher) – Linux (SRP über InfiniBand)</block>
   <block id="8035356b3e36fae458c1388504938a10" category="doc">Einrichten der Datei multipath.conf in E-Series - Linux (SRP over InfiniBand)</block>
   <block id="42396f2886c0bfaf606e08b85587f5d5" category="doc">Überprüfen der Unterstützung von Linux-Konfigurationen in E-Series (SRP over InfiniBand)</block>
@@ -9433,7 +9386,6 @@
   <block id="2da78d32565fd341c24051991af853a3" category="doc">Ermitteln Sie Speicher auf dem Host in E-Series - Windows</block>
   <block id="23f932933101a11fe184222add659e37" category="doc">Führen Sie FC-spezifische Aufgaben in E-Series unter Windows aus</block>
   <block id="789eb7d135829ee567fe346777d49e67" category="doc">Windows Express-Konfiguration in E-Series - Windows</block>
-  <block id="7bb420e284a64dd789cacc0c2a388526" category="doc">Installation und Konfiguration von Linux Unified Host Utilities unter E-Series - Windows</block>
   <block id="b00b49ab9c451c373425a273154e607e" category="doc">Installieren Sie SANtricity Storage Manager für SMcli (11.53 oder früher) - Windows</block>
   <block id="15f21f59c18fb17f9281572969cc6092" category="doc">Führen Sie iSCSI-spezifische Aufgaben in E-Series unter Windows aus</block>
   <block id="b67f6d03f59f9609e0db3c46a02da64f" category="doc">Annahmen (E-Series und Windows)</block>
@@ -9704,4 +9656,16 @@
   <block id="c78544d43a065eb825edb9e16bf0e9ad" category="paragraph">SANtricity OS-Unterstützung für IOM12C und DCM3</block>
   <block id="94d90ce4793f949687897ec062d97b9c" category="paragraph">Unterstützung für IOM12C- und DCM3-SAS-3-Shelves ist ab der Controller-Firmware 11.90R3 verfügbar. Die Shelves IOM12C und DCM3 ersetzen die Shelves IOM12B und DCM2.</block>
   <block id="3a2a69a35a4560167d4c0478029a3f70" category="sidebar">Häufig gestellte Fragen zum Speicher-Plugin für vCenter</block>
+  <block id="289a353684efed006a33d9a21e3af645" category="paragraph">Verkabeln Sie das System entsprechend Ihrer Konfiguration.</block>
+  <block id="c156a7b267c4ea3bb09eb8d0a8694c1f" category="admonition">Wenn Sie mehr Verkabelungsoptionen benötigen als die unten aufgeführten Beispiele, siehe <block ref="b04bca945c340a8933813e378ce89f33" category="inline-link-macro-rx"></block> .</block>
+  <block id="62faeb5b26adfd078e5b6da1844d0928" category="list-text">*Beispiel A: Controller-Shelf mit drei DE212C/DE224-Festplatten-Shelfs in einer Standard-SAS-Konfiguration*</block>
+  <block id="fc6e6113eb588c4adfd7c54ea9a4a484" category="list-text">*Beispiel B: Controller-Shelf mit einem DE212C/DE224-Festplatten-Shelf in einer Standard-SAS-Konfiguration*</block>
+  <block id="e0c51a35ed8248d1431ad993a2b53bbe" category="list-text">*Beispiel A: Controller-Shelf mit zwei DE460C-Festplatten-Shelfs in einer Standard-SAS-Konfiguration*</block>
+  <block id="d2700be2b791b06d1a0e0eaf56e916d3" category="list-text">*Beispiel B: Controller-Shelf mit einem DE460C-Festplatten-Shelf in einer Standard-SAS-Konfiguration*</block>
+  <block id="1bdf45714bb5554912e7596197bc58a3" category="admonition">Wenn Sie mehr Verkabelungsoptionen benötigen als die unten aufgeführten Beispiele, siehe <block ref="9f10449945bf1a610348d9968bbe3b7e" category="inline-link-macro-rx"></block> .</block>
+  <block id="3c3ac8675fb15b987b57d9203f7eabae" category="list-text">*Beispiel A: Ein E4000-Controller-Shelf mit drei DE212C/DE224C-Festplatten-Shelfs in einer Standard-SAS-Konfiguration*</block>
+  <block id="eb3ac26ded8469cc0becb4bcba43a263" category="list-text">*Beispiel B: Ein E4000-Controller-Shelf mit einem DE212C/DE224C-Festplatten-Shelf in einer Standard-SAS-Konfiguration*</block>
+  <block id="749e3259655b14ad4cd1d92b27ae554b" category="list-text">*Beispiel A: Ein E4060-Controller-Shelf mit zwei DE460C-Festplatten-Shelfs in einer Standard-SAS-Konfiguration*</block>
+  <block id="cab141641940a0cb3eca1b1695f92d4b" category="list-text">*Beispiel B: Ein E4060-Controller-Shelf mit einem DE460C-Festplatten-Shelf in einer Standard-SAS-Konfiguration*</block>
+  <block id="47e9a132733409a780b8b25a91969da6" category="list-text">Ändern Sie die Einstellung des Speicher-Arrays mithilfe von CLI-Befehlen auf Duplex. Um die CLI zu verwenden, öffnen Sie eine Eingabeaufforderung, wenn Sie das CLI-Paket heruntergeladen haben, oder Sie können das Enterprise Management Window (EMW) öffnen, wenn Sie Storage Manager installiert haben.</block>
 </blocks>

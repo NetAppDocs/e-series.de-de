@@ -37,5 +37,4 @@ Die Express-Methode umfasst die folgenden Schritte, die ebenfalls im beschrieben
 * Online-Hilfe – beschreibt die Verwendung von SANtricity System Manager zum Abschließen von Konfigurations- und Storage-Managementaufgaben. Es ist im Produkt verfügbar.
 * https://kb.netapp.com/["NetApp Knowledge Base"^] (Eine Datenbank mit Artikeln) – enthält Informationen zur Fehlerbehebung, häufig gestellte Fragen und Anweisungen zu einem breiten Spektrum an NetApp Produkten und Technologien.
 * http://mysupport.netapp.com/matrix["NetApp Interoperabilitäts-Matrix-Tool"^] -- ermöglicht die Suche nach Konfigurationen von NetApp Produkten und Komponenten, die den von NetApp angegebenen Standards und Anforderungen entsprechen.
-* http://mysupport.netapp.com/documentation/productlibrary/index.html?productID=61343["NetApp Dokumentation: Host Utilities"^] -- enthält die Dokumentation für die aktuelle Windows Unified Host Utilities-Version.
 

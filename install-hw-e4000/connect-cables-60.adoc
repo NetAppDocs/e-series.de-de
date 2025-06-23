@@ -23,10 +23,14 @@ Dieses Verfahren gilt für Laufwerksregale IOM12, IOM12B und IOM12C.
 .Schritte
 . Die Shelfs verkabeln.
 +
-Verkabeln Sie das System entsprechend Ihrer Konfiguration. Wenn Sie mehr Verkabelungsoptionen benötigen als die in diesem Abschnitt gezeigten Beispiele, lesen Sie link:../install-hw-cabling/index.html["Verkabelung"].
+Verkabeln Sie das System entsprechend Ihrer Konfiguration.
 
 +
-Für die in diesem Abschnitt gezeigten Beispiele benötigen Sie die folgenden Kabel:
+
+NOTE: Wenn Sie mehr Verkabelungsoptionen benötigen als die unten aufgeführten Beispiele, siehe link:https://docs.netapp.com/us-en/e-series/install-hw-cabling/driveshelf-cable-task.html#cabling-e4000["Verkabelung"^] .
+
++
+Sie benötigen die folgenden Kabel:
 
 +
 |===
@@ -39,17 +43,20 @@ image:../media/sas_cable.png["SAS-Kabel"]
 
 |===
 +
-.Beispiel A: Ein E4060 Controller-Shelf mit zwei DE460C Festplatten-Shelfs in einer Standard-SAS-Konfiguration.
-.. Verkabeln Sie Controller A mit IOM A des ersten Festplatten-Shelf.
-.. Verkabeln Sie IOM A des ersten Festplatten-Shelf mit IOM A des zweiten Festplatten-Shelf.
-.. Verkabeln Sie IOM B des ersten Festplatten-Shelf mit IOM B des zweiten Festplatten-Shelf.
-.. Verkabeln Sie Controller B mit IOM B des zweiten Festplatten-Shelf.
-
-
+.. *Beispiel A: Ein E4060-Controller-Shelf mit zwei DE460C-Festplatten-Shelfs in einer Standard-SAS-Konfiguration*
 +
-.Beispiel B: Ein E4060 Controller-Shelf mit einem DE460C Festplatten-Shelf in einer Standard-SAS-Konfiguration.
-.. Verkabeln Sie Controller A mit IOM A
-.. Verkabeln Sie Controller B mit IOM B.
+... Verkabeln Sie Controller A mit IOM A des ersten Festplatten-Shelf.
+... Verkabeln Sie IOM A des ersten Festplatten-Shelf mit IOM A des zweiten Festplatten-Shelf.
+... Verkabeln Sie IOM B des ersten Festplatten-Shelf mit IOM B des zweiten Festplatten-Shelf.
+... Verkabeln Sie Controller B mit IOM B des zweiten Festplatten-Shelf.
+
+
+.. *Beispiel B: Ein E4060-Controller-Shelf mit einem DE460C-Festplatten-Shelf in einer Standard-SAS-Konfiguration*
++
+... Verkabeln Sie Controller A mit IOM A
+... Verkabeln Sie Controller B mit IOM B.
+
+
 
 
 . Schalten Sie die Festplatten-Shelfs ein.

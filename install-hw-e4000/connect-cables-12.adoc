@@ -23,10 +23,14 @@ Dieses Verfahren gilt für Laufwerksregale IOM12, IOM12B und IOM12C.
 .Schritte
 . Die Shelfs verkabeln.
 +
-Verkabeln Sie das System entsprechend Ihrer Konfiguration. Wenn Sie mehr Verkabelungsoptionen benötigen als die gezeigten Beispiele, finden Sie unter link:../install-hw-cabling/index.html["Verkabelung"].
+Verkabeln Sie das System entsprechend Ihrer Konfiguration.
 
 +
-Für die gezeigten Beispiele benötigen Sie die folgenden Kabel:
+
+NOTE: Wenn Sie mehr Verkabelungsoptionen benötigen als die unten aufgeführten Beispiele, siehe link:https://docs.netapp.com/us-en/e-series/install-hw-cabling/driveshelf-cable-task.html#cabling-e4000["Verkabelung"^] .
+
++
+Sie benötigen die folgenden Kabel:
 
 +
 |===
@@ -39,19 +43,22 @@ image:../media/sas_cable.png["SAS-Kabel"]
 
 |===
 +
-.Beispiel A: Ein E4000 Controller Shelf mit drei DE212C/DE224C Festplatten-Shelfs in einer standardmäßigen SAS-Konfiguration.
-.. Verkabeln Sie Controller A mit IOM A des ersten Festplatten-Shelf.
-.. Verkabeln Sie IOM A des ersten Festplatten-Shelf mit IOM A des zweiten Festplatten-Shelf.
-.. Verkabeln Sie IOM A des zweiten Festplatten-Shelf mit IOM A des dritten Festplatten-Shelf.
-.. Verkabeln Sie Controller B mit IOM B des dritten Festplatten-Shelf.
-.. Verkabeln Sie IOM B des zweiten Festplatten-Shelf mit IOM B des dritten Festplatten-Shelf.
-.. Verkabeln Sie IOM B des ersten Festplatten-Shelf mit IOM B des zweiten Festplatten-Shelf.
-
-
+.. *Beispiel A: Ein E4000-Controller-Shelf mit drei DE212C/DE224C-Festplatten-Shelfs in einer Standard-SAS-Konfiguration*
 +
-.Beispiel B: Ein E4000 Controller Shelf mit einem DE212C/DE224C Festplatten-Shelf in einer SAS-Standardkonfiguration.
-.. Verkabeln Sie Controller A mit IOM A
-.. Verkabeln Sie Controller B mit IOM B.
+... Verkabeln Sie Controller A mit IOM A des ersten Festplatten-Shelf.
+... Verkabeln Sie IOM A des ersten Festplatten-Shelf mit IOM A des zweiten Festplatten-Shelf.
+... Verkabeln Sie IOM A des zweiten Festplatten-Shelf mit IOM A des dritten Festplatten-Shelf.
+... Verkabeln Sie Controller B mit IOM B des dritten Festplatten-Shelf.
+... Verkabeln Sie IOM B des zweiten Festplatten-Shelf mit IOM B des dritten Festplatten-Shelf.
+... Verkabeln Sie IOM B des ersten Festplatten-Shelf mit IOM B des zweiten Festplatten-Shelf.
+
+
+.. *Beispiel B: Ein E4000-Controller-Shelf mit einem DE212C/DE224C-Festplatten-Shelf in einer Standard-SAS-Konfiguration*
++
+... Verkabeln Sie Controller A mit IOM A
+... Verkabeln Sie Controller B mit IOM B.
+
+
 
 
 . Schalten Sie die Festplatten-Shelfs ein.

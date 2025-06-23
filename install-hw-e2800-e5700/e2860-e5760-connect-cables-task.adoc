@@ -29,10 +29,14 @@ NOTE: Dieses Verfahren gilt für EAM-Hot-Swaps oder Ersatz wie für Regal-ähnli
 .Schritte
 . Die Shelfs verkabeln.
 +
-Verkabeln Sie das System entsprechend Ihrer Konfiguration. Wenn Sie mehr Verkabelungsoptionen benötigen als die in diesem Abschnitt gezeigten Beispiele, lesen Sie link:../install-hw-cabling/index.html["Verkabelung"].
+Verkabeln Sie das System entsprechend Ihrer Konfiguration.
 
 +
-Für die in diesem Abschnitt gezeigten Beispiele benötigen Sie die folgenden Kabel:
+
+NOTE: Wenn Sie mehr Verkabelungsoptionen benötigen als die unten aufgeführten Beispiele, siehe link:https://docs.netapp.com/us-en/e-series/install-hw-cabling/driveshelf-cable-task.html#cabling-e2800-and-e5700["Verkabelung"^] .
+
++
+Sie benötigen die folgenden Kabel:
 
 +
 |===
@@ -45,23 +49,20 @@ image:../media/sas_cable.png["SAS-Kabel"]
 
 |===
 +
-.Beispiel A: Ein E2860 Controller-Shelf mit zwei DE460C Festplatten-Shelfs in einer Standard-SAS-Konfiguration.
-image:../media/example_a_2860.png["E2860 Controller in einer SAS-Konfiguration"]
-
+.. *Beispiel A: Controller-Shelf mit zwei DE460C-Festplatten-Shelfs in einer Standard-SAS-Konfiguration*
 +
-.. Verkabeln Sie Controller A mit IOM A des ersten Festplatten-Shelf.
-.. Verkabeln Sie IOM A des ersten Festplatten-Shelf mit IOM A des zweiten Festplatten-Shelf.
-.. Verkabeln Sie IOM B des ersten Festplatten-Shelf mit IOM B des zweiten Festplatten-Shelf.
-.. Verkabeln Sie Controller B mit IOM B des zweiten Festplatten-Shelf.
+... Verkabeln Sie Controller A mit IOM A des ersten Festplatten-Shelf.
+... Verkabeln Sie IOM A des ersten Festplatten-Shelf mit IOM A des zweiten Festplatten-Shelf.
+... Verkabeln Sie IOM B des ersten Festplatten-Shelf mit IOM B des zweiten Festplatten-Shelf.
+... Verkabeln Sie Controller B mit IOM B des zweiten Festplatten-Shelf.
 
 
+.. *Beispiel B: Controller-Shelf mit einem DE460C-Festplatten-Shelf in einer Standard-SAS-Konfiguration*
 +
-.Beispiel B: Ein E2860 Controller-Shelf mit einem DE460C Festplatten-Shelf in einer Standard-SAS-Konfiguration.
-image:../media/example_b_2860.png["E2860 Controller in einer SAS-Konfiguration"]
+... Verkabeln Sie Controller A mit IOM A
+... Verkabeln Sie Controller B mit IOM B.
 
-+
-.. Verkabeln Sie Controller A mit IOM A
-.. Verkabeln Sie Controller B mit IOM B.
+
 
 
 . Schalten Sie die Festplatten-Shelfs ein.
