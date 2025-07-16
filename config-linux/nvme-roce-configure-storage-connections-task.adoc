@@ -79,7 +79,7 @@ Wählen Sie eine oder beide Optionen aus, um die Unterstützung für IPv4- und I
  a| 
 MTU-Größe (verfügbar durch Klicken auf *Weitere Porteinstellungen anzeigen*.)
  a| 
-Geben Sie bei Bedarf eine neue Größe in Byte für die maximale Übertragungseinheit (MTU) ein. Die MTU-Standardgröße beträgt 1500 Byte pro Frame. Sie müssen einen Wert zwischen 1500 und 4200 eingeben.
+Geben Sie bei Bedarf eine neue Größe in Byte für die maximale Übertragungseinheit (MTU) ein. Die MTU-Standardgröße beträgt 1500 Byte pro Frame. Sie müssen einen Wert zwischen 1500 und 9000 eingeben.
 
 |===
 +
