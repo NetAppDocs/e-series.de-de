@@ -14,7 +14,7 @@ summary: Die NVMe-Initiatorkonfiguration in einer RoCE-Umgebung umfasst die Inst
 Die NVMe-Initiatorkonfiguration in einer RoCE-Umgebung umfasst die Installation und Konfiguration von rdma-Core- und nvme-cli-Paketen, die Konfiguration von Initiator-IP-Adressen und das Einrichten der NVMe-of-Schicht auf dem Host.
 
 .Bevor Sie beginnen
-Sie müssen das neueste kompatible Betriebssystem RHEL 7, RHEL 8, RHEL 9, SUSE Linux Enterprise Server 12 oder 15 Service Pack ausführen. Siehe https://mysupport.netapp.com/matrix["NetApp Interoperabilitäts-Matrix-Tool"^] Für eine vollständige Liste der aktuellen Anforderungen.
+Sie müssen das neueste kompatible Betriebssystem RHEL 8, RHEL 9, SUSE Linux Enterprise Server 12 oder 15 Service Pack ausführen. Eine https://mysupport.netapp.com/matrix["NetApp Interoperabilitäts-Matrix-Tool"^] vollständige Liste der aktuellen Anforderungen finden sie im .
 
 .Schritte
 . rdma- und nvme-cli-Pakete installieren:
@@ -29,7 +29,7 @@ Sie müssen das neueste kompatible Betriebssystem RHEL 7, RHEL 8, RHEL 9, SUSE L
 # zypper install nvme-cli
 ----
 +
-*RHEL 7, RHEL 8 UND RHEL 9*
+*RHEL 8 und RHEL 9*
 
 +
 [listing]
@@ -103,7 +103,7 @@ REMOTE_IPADDR=
 STARTMODE='auto'
 ----
 +
-*RHEL 7 oder RHEL 8*
+*RHEL 8*
 
 +
 Erstellen Sie die Beispieldatei `/etc/sysconfig/network-scripts/ifcfg-eth4` Mit folgendem Inhalt:

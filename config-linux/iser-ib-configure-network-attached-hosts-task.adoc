@@ -24,7 +24,7 @@ Stellen Sie sicher, dass Sie Folgendes haben:
 .Schritte
 . Aktivieren und Starten von iSCSI-Diensten auf den Hosts:
 +
-* Red hat Enterprise Linux 7, 8 und 9 (RHEL 7, RHEL 8 und RHEL 9)*
+*Red Hat Enterprise Linux 8 und 9 (RHEL 8 und RHEL 9)*
 
 +
 [listing]

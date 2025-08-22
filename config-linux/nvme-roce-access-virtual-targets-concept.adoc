@@ -13,7 +13,7 @@ summary: Sie können den auf das Geräteziel gerichteten I/O basierend auf Ihrer
 [role="lead"]
 Sie können die I/O-Vorgänge, die auf das Geräteziel geleitet werden, basierend auf dem Betriebssystem (und der Multipathing-Methode mit der Erweiterung) konfigurieren.
 
-Für RHEL 7 und SLES 12 wird I/O vom Linux-Host auf virtuelle Geräteziele geleitet. DM-MP verwaltet die physischen Pfade, die diesen virtuellen Zielen zugrunde liegen.
+Bei SLES 12 wird die E/A vom Linux-Host an virtuelle Geräteziele weitergeleitet. DM-MP verwaltet die physischen Pfade, die diesen virtuellen Zielen zugrunde liegen.
 
 
 

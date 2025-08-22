@@ -2646,7 +2646,6 @@
   <block id="9e54c935a03ff772bcf7612b86de79a1" category="doc">Richten Sie NVMe over InfiniBand auf der Host-Seite ein</block>
   <block id="c35fc67c4b5efd31552d96e3eec5e293" category="list-text">installation der rdma-, nvme-cli- und infiniband-Pakete:</block>
   <block id="ddeec0610c6dfff21c284cac06924a6e" category="paragraph">*SLES 12 oder SLES 15*</block>
-  <block id="1f34187b1a209107eee63f82ab42cc05" category="paragraph">*RHEL 7, RHEL 8 ODER RHEL 9*</block>
   <block id="5536244c6a701b654692a01af6b8b81c" category="list-text">Holen Sie den Host-NQN ab, mit dem der Host für ein Array konfiguriert werden kann.</block>
   <block id="22b4a25f95365479298f378bbf161e6f" category="list-text">Richten Sie IPv4-IP-Adressen an den ib-Ports ein.</block>
   <block id="08fa0114b0d6dc928f4c7ac5eb67c374" category="paragraph">Erstellen Sie die Datei /etc/sysconfig/Network/ifcfg-ib0 mit folgendem Inhalt.</block>
@@ -2732,11 +2731,9 @@
   <block id="8c4487a25ea9466f02e7c9276479f372" category="list-text">Legen Sie in der OFED/RDMA-Konfigurationsdatei fest<block ref="51de49297efae86934102043012c6c36" prefix=" " category="inline-code"></block> Und<block ref="1e81af5f721f6762809ba708ffde3210" prefix=" " category="inline-code"></block>.</block>
   <block id="e9c7cbe50b485973bea871f161c62eae" category="paragraph">Die RDMA-Konfigurationsdatei befindet sich an folgendem Standort:</block>
   <block id="199ab23853e7dbd4480051a2ba7f94c1" category="list-text">Aktivieren und starten Sie den OFED/RDMA-Service.</block>
-  <block id="d2452f6f41a0fb1c9adc48a224fa39c1" category="paragraph">*RHEL 7.x und SLES 12.x oder höher*</block>
   <block id="62a80434680a3501e732e0b0f17f43b5" category="list-text">So aktivieren Sie das Laden der InfiniBand-Module beim Booten:</block>
   <block id="0e0f48a5b5a9c28eeecd7c27ed199bab" category="list-text">So laden Sie die InfiniBand-Module sofort ein:</block>
   <block id="d3f496df79399c10dc9661ba6b344e4b" category="list-text">Aktivieren Sie den SRP-Daemon.</block>
-  <block id="e04f1e451cf291bf4dea0e5ac75365d9" category="paragraph">*RHEL 7.x und SLES 12 oder höher*</block>
   <block id="ec6db7aa1ba44acdf7ea7755f1bf3606" category="list-text">So aktivieren Sie den SRP-Daemon zum Starten:</block>
   <block id="c0e80cdff7e17bef2e455fab906a94bf" category="list-text">So starten Sie den SRP-Daemon sofort:</block>
   <block id="f954d52b7d356b7898493ef1309b32ba" category="list-text">Wenn Sie die SRP-Konfiguration ändern müssen, geben Sie den folgenden Befehl ein, um sie zu erstellen<block ref="8f56b6fabff04f3692057bf37d3d1773" prefix=" " category="inline-code"></block> .</block>
@@ -2764,11 +2761,7 @@
   <block id="dcb07d8ae16ab2bd4fcf3f16bb1e166b" category="summary">Die NVMe-Initiatorkonfiguration in einer Fibre-Channel-Umgebung umfasst die Installation und Konfiguration des nvme-cli-Pakets sowie die Aktivierung des NVMe/FC-Initiators auf dem Host.</block>
   <block id="eee710143ae29bf272d75ad40d2ede5a" category="doc">Richten Sie NVMe over Fibre Channel auf der Host-Seite ein</block>
   <block id="a273add3419b2d63bd738c3a4f1e5e3a" category="paragraph">Die NVMe-Initiatorkonfiguration in einer Fibre-Channel-Umgebung umfasst die Installation und Konfiguration des nvme-cli-Pakets sowie die Aktivierung des NVMe/FC-Initiators auf dem Host.</block>
-  <block id="489b1f76dfc3d23f283bb56e173cfce5" category="paragraph">Folgende Verfahren werden für RHEL 7, RHEL 8, RHEL 9, SLES 12 und SLES 15 unter Verwendung von Broadcom Emulex oder QLogic NVMe/FC-fähigen FC-HBAs beschrieben. Für weitere Informationen darüber, welche Versionen dieser OS oder HBA unterstützt werden, konsultieren Sie die<block ref="0aaf04254af18646f3d246cd4a4b417d" category="inline-link-rx"></block>.</block>
   <block id="6ba6a18088999d632ca174b9873a3b12" category="list-text">Installieren Sie den<block ref="e1667929105bf030b9f367fc21f8d216" prefix=" " category="inline-code"></block> Paket:</block>
-  <block id="efdd564b9ec4f2056fa78b410b589c82" category="paragraph">*RHEL 7, RHEL 8 ODER RHEL 9*</block>
-  <block id="969b64ee6a8c67d01b4cd1635a747bd2" category="inline-link">Broadcom Website</block>
-  <block id="d55f94d596bbb6493b1bdec1808b9783" category="list-text">Laden Sie nur für RHEL 7 ein externes Broadcom Autoconnect-Skript für NVMe/FC-Verbindungen über das herunter, und installieren Sie es<block ref="54ac045dab92bf3efc1a15209419902d" category="inline-link-rx"></block>. Geben Sie das Stichwort *Autoconnect Script-Datei für Inbox NVMe over FC Drivers* ein und wählen Sie die neueste Version für Ihr Betriebssystem.</block>
   <block id="bd24eb8365cbbc52e79a70875ec8229b" category="list-text">Ändern Sie für Qlogic<block ref="100923d4633dadde6ddaf1c9c33aba00" prefix=" " category="inline-code"></block> Nach der Installation des Broadcom NVMe/FC-Skripts für die automatische Anbindung Folgendes enthält:</block>
   <block id="fb85e712c850b00626dd602822712dff" category="list-text">Aktivieren und starten Sie den<block ref="9f2e56c6266df080ce9cba4dae7c59cd" prefix=" " category="inline-code"></block> Service:</block>
   <block id="8d16de46536e749f63af504f807749de" category="paragraph">*Host-seitiges Setup für Emulex HBAs:*</block>
@@ -2783,9 +2776,6 @@
   <block id="9e780c0c06dd0edf0f09bcc9516acc1c" category="list-text">Überprüfen Sie für Red hat-Hosts (RHEL), ob die Pakete durch Ausführen installiert wurden<block ref="3ccbd0c77dce5b3beb5e389b1f794040" prefix=" " category="inline-code"></block></block>
   <block id="2176d0eb1d2a0a5ab5201af565e0b30b" category="list-text">Überprüfen Sie bei SLES-Hosts, ob die Pakete durch Ausführen installiert wurden<block ref="6e4c2af775cdd5fb05fd78fb62392a76" prefix=" " category="inline-code"></block></block>
   <block id="816a290577d3afffcfc7b89e8312db70" category="admonition">Siehe<block ref="0aaf04254af18646f3d246cd4a4b417d" category="inline-link-rx"></block> Um sicherzustellen, dass erforderliche Updates installiert werden, funktioniert Multipathing möglicherweise nicht ordnungsgemäß mit den GA-Versionen von SLES oder RHEL.</block>
-  <block id="08fb030e8ad0e09b4e56de467f54c0b0" category="paragraph">RHEL 7 und SLES 12 verwenden Device Mapper Multipath (DMMP) für Multipathing für NVMe over RoCE. RHEL 8, RHEL 9 und SLES 15 verwenden ein integriertes natives NVMe Failover. Je nachdem, welches Betriebssystem Sie ausführen, ist eine zusätzliche Multipath-Konfiguration erforderlich, um es ordnungsgemäß ausführen zu können.</block>
-  <block id="7cab16eb74754bbe232b8775c104e66a" category="section-title">Aktivieren Sie Device Mapper Multipath (DMMP) für RHEL 7 oder SLES 12</block>
-  <block id="2c2e807f6a8822a2d088dfdcc394203e" category="paragraph">DM-MP ist in RHEL und SLES standardmäßig deaktiviert. Führen Sie die folgenden Schritte durch, um DM-MP-Komponenten auf dem Host zu aktivieren.</block>
   <block id="adfe61fc58186ce1f905fe93a482817f" category="list-text">Fügen Sie den NVMe E-Series Geräteeintrag zum Abschnitt Geräte des hinzu<block ref="dd5ff67ba72768d33f75e645aa2b8e56" prefix=" " category="inline-code"></block> Datei, wie im folgenden Beispiel gezeigt:</block>
   <block id="159eb527caba422e175178bb8e7eb6a3" category="list-text">Konfigurieren<block ref="8732863da72605a20ed96b4eee87a5fb" prefix=" " category="inline-code"></block> Zum Starten beim Systemstart.</block>
   <block id="4a9f39582bee881ac128db3567909572" category="list-text">Starten<block ref="8732863da72605a20ed96b4eee87a5fb" prefix=" " category="inline-code"></block> Wenn er derzeit nicht ausgeführt wird.</block>
@@ -2839,7 +2829,6 @@
   <block id="3e5b5608d2078b742475daf5f62b5f0c" category="summary">Eine neue LUN besitzt keine Partition oder kein Dateisystem, wenn der Linux-Host sie zuerst erkennt. Sie müssen die LUN formatieren, bevor sie verwendet werden kann. Optional können Sie ein Dateisystem auf der LUN erstellen.</block>
   <block id="b0f1d70653db761a75c6f50a1fb48a15" category="doc">Richten Sie das Failover ein</block>
   <block id="7149b8af09961dfba911fe06ae6a3540" category="admonition">Siehe <block ref="0aaf04254af18646f3d246cd4a4b417d" category="inline-link-rx"></block> Um sicherzustellen, dass erforderliche Updates installiert werden, da Multipathing möglicherweise nicht korrekt mit den GA-Versionen von SLES oder RHEL funktioniert.</block>
-  <block id="52b757f8b32ea9abd11ade22593e1b87" category="paragraph">RHEL 7 und SLES 12 verwenden Device Mapper Multipath (DMMP) für Multipathing bei Verwendung von NVMe over Infiniband. RHEL 8, RHEL9 und SLES 15 verwenden einen integrierten nativen NVMe Failover. Je nachdem, welches Betriebssystem Sie ausführen, ist eine zusätzliche Multipath-Konfiguration erforderlich, um es ordnungsgemäß ausführen zu können.</block>
   <block id="95be6b7c132218bd8782b6a7b0b982ed" category="list-text">Fügen Sie den NVMe E-Series Geräteeintrag dem Abschnitt Geräte der Datei /etc/Multipath.conf ein, wie im folgenden Beispiel dargestellt:</block>
   <block id="47496a5d6d97e4ed1f8066d8f8baf9df" category="section-title">Einrichtung von RHEL 8 mit nativem NVMe-Multipathing</block>
   <block id="1b92b0dfb7ed1148646290f749b1cc46" category="paragraph">Natives NVMe-Multipathing ist in RHEL 8 standardmäßig deaktiviert und muss mit den folgenden Schritten aktiviert werden.</block>
@@ -2848,8 +2837,6 @@
   <block id="518df87a5011ff1168a7c6c9a264b38f" category="list-text">Starten Sie den Server neu, um ihn mit aktiviertem nativen NVMe-Multipathing zu aktivieren.</block>
   <block id="288bd49c48bf59f751a074cbaac99cf0" category="list-text">Überprüfen Sie, ob natives NVMe-Multipathing aktiviert wurde, nachdem der Host den Backup gestartet hat.</block>
   <block id="d061a1419e660c90553f0a82e4f669dc" category="admonition">Für SLES 15 und RHEL 9 ist natives NVMe Multipathing standardmäßig aktiviert und keine zusätzliche Konfiguration erforderlich.</block>
-  <block id="e889c393ff8c52f357be63d353ebf65a" category="summary">Für RHEL 7 und SLES 12 erstellen Sie ein Dateisystem auf dem Namespace und mounten das Dateisystem.</block>
-  <block id="da6e8accbd9a7e86c32239135f1ffed2" category="doc">Erstellen von Dateisystemen (RHEL 7 und SLES 12)</block>
   <block id="facbcb2fa38d6402945c5fd2c6fcf386" category="list-text">Führen Sie die aus<block ref="3d80983fc82ff72fd51e5d1f7e90c56d" prefix=" " category="inline-code"></block> Befehl zum Abrufen einer Liste von<block ref="b2050622ed0fa148dc4a4194ae73002d" prefix=" " category="inline-code"></block> Geräte:</block>
   <block id="4c45d0d12df786bfe97882594b02cae1" category="paragraph">Das Ergebnis dieses Befehls zeigt zwei Geräte an,<block ref="9366705d699e7a3544a25b9d2bcdf233" prefix=" " category="inline-code"></block> Und<block ref="b1a3a6de590e2426a9a7b86299aafe5b" prefix=" " category="inline-code"></block>:</block>
   <block id="07c24368c59a3d6a71b9305c416c7d08" category="list-text">Erstellen Sie für jede Partition ein Dateisystem<block ref="ac6d43e0f5f22a39f0c0605cad1b8858" prefix=" " category="inline-code"></block> Gerät.</block>
@@ -2884,7 +2871,6 @@
   <block id="aa0c0d4211cbdedeb5fe8c2091e489ad" category="paragraph">Controller A, Port 2</block>
   <block id="95403cb95bfc1d885b6ff36c402ddc60" category="paragraph">Controller B, Port 2</block>
   <block id="f83115f949308789abc64c893ababe24" category="admonition">Der Name des Zuordners wird während des Workflows erstellt.</block>
-  <block id="1424a7cf2a070f7dd12d78a849490f2c" category="paragraph">RHEL 7 und SLES 12 verwenden Device Mapper Multipath (DMMP) für Multipathing bei Verwendung von NVMe over Fibre Channel. RHEL 8, RHEL 9 und SLES 15 verwenden ein integriertes natives NVMe Failover. Je nachdem, welches Betriebssystem Sie ausführen, ist eine zusätzliche Multipath-Konfiguration erforderlich, um es ordnungsgemäß ausführen zu können.</block>
   <block id="4df6b1c48c33c3735ab315bb52db5933" category="section-title">Natives NVMe-Multipathing für RHEL 8 einrichten</block>
   <block id="ce787f5529e569c07191ad09975c4a3f" category="list-text">Remake<block ref="50929bac7304e38629221d43c18db25e" prefix=" " category="inline-code"></block> Mit neuem Modprobe-Parameter.</block>
   <block id="0e550c6e0d7b33fb6681b0cab3069f86" category="list-text">Starten Sie den Server neu, um ihn mit aktiviertem nativen NVMe-Multipathing zu aktivieren</block>
@@ -2937,7 +2923,6 @@
   <block id="f61f74351af7f480b4eb830a2f4c4ada" category="list-text">Laden Sie die Softwareversion von SANtricity unter herunter<block ref="2ff36e7792a0e0257d19a11dce8cade8" category="inline-link-rx"></block>. Klicken Sie auf der Registerkarte *Downloads* auf Menü:Downloads[SANtricity Storage Manager der E-Serie].</block>
   <block id="2b430348ddae524592cd1c4207d8f170" category="summary">Konfigurieren Sie die E/A, die auf dem Geräteziel basiert, basierend auf Ihrer SLES \(SUSE Linux Version\).</block>
   <block id="2760a5173fe84d55b4dfd0df17083b60" category="doc">Auf NVMe Volumes für Virtual-Device-Ziele zugreifen</block>
-  <block id="591c00758088276e03267ffcba122b79" category="paragraph">Für RHEL 7 und SLES 12 wird I/O vom Linux-Host auf virtuelle Geräteziele geleitet. DM-MP verwaltet die physischen Pfade, die diesen virtuellen Zielen zugrunde liegen.</block>
   <block id="d47b596bd703372e505b66a0d7086453" category="section-title">Virtuelle Geräte sind I/O-Ziele</block>
   <block id="77c376f67e98384bf9e50220cc9566e0" category="paragraph">Stellen Sie sicher, dass Sie I/O nur zu den virtuellen Geräten ausführen, die von DM-MP erstellt wurden, und nicht zu den physischen Gerätepfaden. Wenn Sie I/O zu den physischen Pfaden ausführen, kann DM-MP kein Failover-Ereignis verwalten, und die I/O schlägt fehl.</block>
   <block id="60085e457c461011b1f7a0dc9d2287c9" category="paragraph">Über den können Sie auf diese Blockgeräte zugreifen<block ref="608e7dc116de7157306012b4f0be82ac" prefix=" " category="inline-code"></block> Gerät oder der<block ref="a978acc8a7ae15f49f58f3495f0d85ba" prefix=" " category="inline-code"></block> In /dev/mapper. Beispiel:</block>
@@ -3057,7 +3042,6 @@
   <block id="f5468ecf76be3bb4cf77cf63a591d098" category="paragraph">Wenn Ihre Konfiguration das iSER-over-InfiniBand-Protokoll verwendet, führen Sie die in diesem Abschnitt beschriebenen Schritte aus.</block>
   <block id="123fafa39d80ebd469e4bb58a4001fda" category="paragraph">Ein von NetApp empfohlenes OFED, das auf dem System installiert ist. Weitere Informationen finden Sie im<block ref="0aaf04254af18646f3d246cd4a4b417d" category="inline-link-rx"></block>.</block>
   <block id="7f02faf8a07269a5ab98e244f089148d" category="list-text">Aktivieren und Starten von iSCSI-Diensten auf den Hosts:</block>
-  <block id="cdbf7b73734bd4442fcc96a6195b7a15" category="paragraph">* Red hat Enterprise Linux 7, 8 und 9 (RHEL 7, RHEL 8 und RHEL 9)*</block>
   <block id="3bf3cbc109a52d0d37f5d3c9ecf3e14a" category="list-text">Konfigurieren von Netzwerkschnittstellen der InfiniBand-Karte:</block>
   <block id="49688998ea00bb073d084abbb307e708" category="list-text">Geben Sie die verwendeten InfiniBand-Ports an. Dokumentieren Sie die HW-Adresse (MAC-Adresse) jedes Ports.</block>
   <block id="6b4ef7dc778070c5ee2f7456ae2e252c" category="list-text">Konfigurieren Sie persistente Namen für die Geräte der InfiniBand-Netzwerkschnittstelle.</block>
@@ -3094,7 +3078,6 @@
   <block id="23a1a118541ab0d1766faa1805b06432" category="paragraph">Über den können Sie auf diese Blockgeräte zugreifen<block ref="608e7dc116de7157306012b4f0be82ac" prefix=" " category="inline-code"></block> Gerät oder der<block ref="a978acc8a7ae15f49f58f3495f0d85ba" prefix=" " category="inline-code"></block> In<block ref="9c9f766701f811ef6f170c7a3453c53f" prefix=" " category="inline-code"></block>; Zum Beispiel:</block>
   <block id="c612d2b91ede7407a062457604df3133" category="summary">Die NVMe-Initiatorkonfiguration in einer RoCE-Umgebung umfasst die Installation und Konfiguration von rdma-Core- und nvme-cli-Paketen, die Konfiguration von Initiator-IP-Adressen und das Einrichten der NVMe-of-Schicht auf dem Host.</block>
   <block id="5efb38dd01fabddcbff948ba98eb16ed" category="list-text">rdma- und nvme-cli-Pakete installieren:</block>
-  <block id="04595c79a616b5c392556737aaa7347d" category="paragraph">*RHEL 7, RHEL 8 UND RHEL 9*</block>
   <block id="f402a19f86f854f295aa371b9abbbb90" category="list-text">Richten Sie IPv4-IP-Adressen auf den ethernet-Ports ein, die für die Verbindung von NVMe over RoCE verwendet werden. Erstellen Sie für jede Netzwerkschnittstelle ein Konfigurationsskript, das die verschiedenen Variablen für diese Schnittstelle enthält.</block>
   <block id="a4e34f0c64fbeb3078a510eb36f68d56" category="paragraph">Die in diesem Schritt verwendeten Variablen basieren auf der Server-Hardware und der Netzwerkumgebung. Die Variablen enthalten die<block ref="b0f2cffaf0617e46f90de0ece49b1f20" prefix=" " category="inline-code"></block> Und<block ref="440cdde6c35c88ad8799575226adda15" prefix=" " category="inline-code"></block>. Dies sind Beispielanweisungen für SLES und RHEL:</block>
   <block id="111d867a53d45d2348ae37042fdb7310" category="paragraph">*SLES 12 und SLES 15*</block>
@@ -3133,7 +3116,6 @@
   <block id="2a5b109c10fe6e93caf3666c9854f292" category="list-text">Führen Sie den Befehl Multipath -ll aus, um eine Liste der nvme Geräte anzuzeigen.</block>
   <block id="446e80fe7b2b546a067aa727557f83e0" category="paragraph">Die Methode zum Erstellen eines Dateisystems variiert je nach gewähltem Dateisystem. Dieses Beispiel zeigt die Erstellung eines ext4-Dateisystems.</block>
   <block id="b3e50929a30cfc00afbc55d231a50cdc" category="summary">Sie können eine Partition auf dem Multipath-Gerät erstellen, optional ein Dateisystem im Namespace erstellen und die Partition mounten.</block>
-  <block id="59c71eb9f304131ed908d87a5f9303f9" category="paragraph">Für RHEL 7 und SLES 12 erstellen Sie auf dem gewünschten dm-Gerät ein Dateisystem und mounten das Dateisystem.</block>
   <block id="4253eb4054c56db3b585ae3a53e1819f" category="inline-xref-macro">Arbeitsblatt für iSER-over-InfiniBand</block>
   <block id="210c9515d4a1e9c78e2608d073aeef56" category="list-text">Notieren Sie die GUIDs des Initiators auf der <block ref="00a1f89a34dac59e8a714860454ae51a" category="inline-xref-macro-rx"></block>.</block>
   <block id="11fdd43137cfc836a71e2c84f0134b65" category="summary">Sie können uns dabei helfen, die Qualität unserer Dokumentation zu verbessern, indem Sie uns Ihr Feedback senden. Sie erhalten eine automatische Benachrichtigung, wenn die \(GA/FCS\)-Dokumentation auf Produktionsebene zuerst veröffentlicht wird oder wenn wichtige Änderungen an bestehenden Dokumenten auf Produktionsebene vorgenommen werden.</block>
@@ -8010,21 +7992,17 @@
   <block id="f7e582702fa43947010600df41688562" category="section-title">Vierpolige-Rack -- SuperRail</block>
   <block id="45d7b912755be5cce50a63e39e38af8a" category="section-title">Schritt 1: Überprüfen Sie die Teilenummer des neuen Controllers</block>
   <block id="fe52478447b1fa9a4c7ec89de67fdf4d" category="sidebar">Hot Add a Laufwerk-Shelf</block>
-  <block id="83af49c7a44a4352fd5c07a021524fea" category="paragraph">Sie müssen das neueste kompatible Betriebssystem RHEL 7, RHEL 8, RHEL 9, SUSE Linux Enterprise Server 12 oder 15 Service Pack ausführen. Siehe<block ref="0aaf04254af18646f3d246cd4a4b417d" category="inline-link-rx"></block> Für eine vollständige Liste der aktuellen Anforderungen.</block>
   <block id="889869e1d3bab19951bb91f386d721de" category="list-text">Installieren Sie für RHEL 8 und RHEL 9 Netzwerkskripte:</block>
   <block id="8b8d5d75fe765c0900e1083326e233eb" category="paragraph">*RHEL 8*</block>
   <block id="40ae81b37293ba1a886134269b1c76e5" category="paragraph">*RHEL 9*</block>
-  <block id="3babbb5880d0a0a22e662b27203c0dbe" category="paragraph">*RHEL 7 oder RHEL 8*</block>
   <block id="8ce810d5ab2863c317f14fafb62a5090" category="paragraph">Verwenden Sie die<block ref="94f122660e8e80af7b93d6609515bc99" prefix=" " category="inline-code"></block> Werkzeug zum Aktivieren und Bearbeiten einer Verbindung. Unten sehen Sie eine Beispieldatei<block ref="a8490166956a7c69a385a3a3169f183e" prefix=" " category="inline-code"></block> Das Tool generiert Folgendes:</block>
   <block id="e5e4c27b43623332619bb7b742c025ee" category="paragraph">Unten sehen Sie eine Beispieldatei<block ref="4a417e605245176a0337befebb3390ec" prefix=" " category="inline-code"></block> Das Tool generiert Folgendes:</block>
   <block id="775835480314574c6cd9244c8c9b879b" category="list-text">Installieren Sie für RHEL 8 oder RHEL 9 Netzwerkskripte:</block>
-  <block id="6836b58aebbdd815358ecf435e05e390" category="list-text">Aktivieren Sie für RHEL 7<block ref="0247feeacea55a1e5efb40b0947dbbbe" prefix=" " category="inline-code"></block>. Bearbeiten Sie die Datei /etc/rdma/rdma.conf und ändern Sie den Eintrag zum Laden<block ref="0247feeacea55a1e5efb40b0947dbbbe" prefix=" " category="inline-code"></block>:</block>
   <block id="0cd1f8d86f769c38f1483db60702ae30" category="list-text">Überprüfen Sie, ob die IB-Port-Links aktiviert sind und der Status = aktiv:</block>
   <block id="b19174b79ffa987ea20abbce564e973e" category="paragraph">Verwenden Sie die<block ref="94f122660e8e80af7b93d6609515bc99" prefix=" " category="inline-code"></block> Werkzeug zum Aktivieren und Bearbeiten einer Verbindung. Unten sehen Sie eine Beispieldatei<block ref="9c2912b95ccba22459cf5353437988de" prefix=" " category="inline-code"></block> Das Tool generiert Folgendes:</block>
   <block id="2662a31940eac2df0a6809d02c631cbb" category="paragraph">Unten sehen Sie eine Beispieldatei<block ref="c9f0a91feab8e55b8d9d166acc79562e" prefix=" " category="inline-code"></block> Das Tool generiert Folgendes:</block>
   <block id="b7577216b0e50cc5bbbbf4483bbc37cd" category="list-text">Optional können Sie einstellen<block ref="68e21a6780edcb6acab77e2a42f4f506" prefix=" " category="inline-code"></block> In /etc/iscsi/iscsid.conf vor dem Ausführen von any<block ref="f88921f58beaaae5bcb9dffac54bf5ad" prefix=" " category="inline-code"></block> Befehle, für die Sessions gespeichert werden sollen, bleiben nach dem Neubooten bestehen.</block>
   <block id="d0c7f819a9c352ec47123255b7bea069" category="list-text">Konfigurieren Sie das Netzwerk für iSCSI-Ports. Dies sind Beispielanweisungen für RHEL und SLES:</block>
-  <block id="4578709b544309c3c129ddd77e647202" category="paragraph">* Red hat Enterprise Linux 7 und 8 (RHEL 7 und RHEL 8)*</block>
   <block id="9dabae4a06d30c9c7f51e5f507819763" category="paragraph">Erstellen Sie die Beispieldatei<block ref="0d7d3fc433b1b9e503de96fc98959275" prefix=" " category="inline-code"></block> Mit folgendem Inhalt:</block>
   <block id="d495950a6cee8eefb9fec72eb4759f52" category="paragraph">Optionale Ergänzungen zu IPv6:</block>
   <block id="8a242e9b511ac07bc46f6d5758b40101" category="paragraph">* Red hat Enterprise Linux 9 (RHEL 9)*</block>
@@ -9295,7 +9273,6 @@
   <block id="fb17130ec244634a0532f36a8cfa9912" category="doc">Zugriff auf NVMe Volumes für virtuelle Geräteziele in der E-Series – Linux (NVMe over FC)</block>
   <block id="43c850105df5604a2122f91584d74c9a" category="doc">FC-Switches in der E-Series konfigurieren – Linux (NVMe over FC)</block>
   <block id="f6034c055b35ceacc4497df2f77dfac2" category="doc">Konfiguration von IP-Adressen mit DHCP in E-Series – Linux (NVMe over FC)</block>
-  <block id="5a5a7d0233646e67c0a873bc58fd676e" category="doc">Dateisysteme in E-Series erstellen – Linux RHEL 7 und SLES 12 (NVMe over FC)</block>
   <block id="1e7e57c41f6250cf0dd2323e0ebba14a" category="doc">Dateisysteme in E-Series erstellen – Linux RHEL 8, RHEL 9 und SLES 15 (NVMe over FC)</block>
   <block id="dcb4a5fa07cd4ed36bb0fb3ad18e00b0" category="doc">Host mit SANtricity System Manager – Linux (NVMe over FC) erstellen</block>
   <block id="d592eb2cd6c39918cf5b03b226488789" category="doc">Anzeige der für den Host sichtbaren Volumes in der E-Series – Linux (NVMe over FC)</block>
@@ -9311,7 +9288,6 @@
   <block id="639cd8f6ff7a3c560f2d878f2b7127b1" category="doc">IP-Adressen mit DHCP in der E-Series – Linux (NVMe over InfiniBand) konfigurieren</block>
   <block id="117959d1244ec1b0e9e0c3aeaace2244" category="doc">NVMe-over-InfiniBand-Verbindungen des Storage-Arrays in E-Series – Linux konfigurieren</block>
   <block id="afd02878fb071c80a878b8f7ab1dc1e3" category="doc">Subnetz-Manager in E-Series – Linux (NVMe over InfiniBand) konfigurieren</block>
-  <block id="04e502fa46e2ee2c981093653742a47d" category="doc">Dateisysteme in E-Series erstellen – Linux RHEL 7 und SLES 12 (NVMe over InfiniBand)</block>
   <block id="2512b2a473d4ffd3d685aefe3f5ce29f" category="doc">Dateisysteme in E-Series erstellen – Linux RHEL 8, RHEL 9 und SLES 15 (NVMe over InfiniBand)</block>
   <block id="90a60ec18000092aa65e65fc3e62e2dc" category="doc">Host mit SANtricity System Manager - Linux (NVMe over InfiniBand) erstellen</block>
   <block id="51aada41b528b8fcd1f725914e663229" category="doc">Globale eindeutige Host-Port-IDs in der E-Series festlegen – Linux (NVMe over InfiniBand)</block>
@@ -9330,7 +9306,6 @@
   <block id="f4406895abc0e7fb7bba147a1b4018fc" category="doc">IP-Adressen mit DHCP in E-Series – Linux (NVMe over RoCE) konfigurieren</block>
   <block id="2e7f926937a19390a696edcd1611efd8" category="doc">NVMe-over-RoCE-Verbindungen des Storage-Arrays in E-Series – Linux konfigurieren</block>
   <block id="133ee7ce9eb1e935758f63664a8fc118" category="doc">Switch in E-Series konfigurieren – Linux (NVMe over RoCE)</block>
-  <block id="97cedd5ffd91c6d5809e8756bcd9d969" category="doc">Dateisysteme in E-Series erstellen – Linux RHEL 7 und SLES 12 (NVMe over RoCE)</block>
   <block id="3a0391db7b3c5ce929688d1fd3808797" category="doc">Create Filesystems in E-Series – Linux RHEL 8, RHEL 9 und SLES 15 (NVMe over RoCE)</block>
   <block id="1d775b87419a4b4faa9188d96fc9f1ef" category="doc">Host mit SANtricity System Manager – Linux (NVMe over RoCE) erstellen</block>
   <block id="c06ab1417d3d38a6274ca96f4817729b" category="doc">Storage-Erkennung und -Anbindung über den Host in E-Series – Linux (NVMe over RoCE)</block>
@@ -9668,4 +9643,24 @@
   <block id="47e9a132733409a780b8b25a91969da6" category="list-text">Ändern Sie die Einstellung des Speicher-Arrays mithilfe von CLI-Befehlen auf Duplex. Um die CLI zu verwenden, öffnen Sie eine Eingabeaufforderung, wenn Sie das CLI-Paket heruntergeladen haben, oder Sie können das Enterprise Management Window (EMW) öffnen, wenn Sie Storage Manager installiert haben.</block>
   <block id="2db2ecd53dfa16abedb03a761e1763e8" category="paragraph">Geben Sie bei Bedarf eine neue Größe in Byte für die maximale Übertragungseinheit (MTU) ein. Die MTU-Standardgröße beträgt 1500 Byte pro Frame. Sie müssen einen Wert zwischen 1500 und 9000 eingeben.</block>
   <block id="6d169c67d74922fc178491e0bef73793" category="doc">Erfahren Sie mehr über die Installation von Speichersystemen – EF300, EF600, EF300C und EF600C</block>
+  <block id="77c49ca57dc8cc81b5609b5c3b6b0120" category="paragraph">*Red Hat Enterprise Linux 8 (RHEL 8)*</block>
+  <block id="c2b5f394c3fe5ec74e8f006f7a1c41f2" category="paragraph">*Red Hat Enterprise Linux 8 und 9 (RHEL 8 und RHEL 9)*</block>
+  <block id="f6915e22a07b317f6f9f3f4164551c8d" category="paragraph">Bei SLES 12 wird die E/A vom Linux-Host an virtuelle Geräteziele weitergeleitet. DM-MP verwaltet die physischen Pfade, die diesen virtuellen Zielen zugrunde liegen.</block>
+  <block id="f9a6f2ee656556e80e38f8a39629d913" category="doc">Erstellen von Filesystemen in der E-Series – SLES 12 (NVMe over FC)</block>
+  <block id="e6e90f0138a14d2c6523ea13f186d5ef" category="paragraph">Für SLES 12 erstellen Sie ein Dateisystem auf dem gewünschten dm-Gerät und mounten das Dateisystem.</block>
+  <block id="717270487102a24fa22876dec32c95f1" category="section-title">Aktivieren von DMMP (Device Mapper Multipath) für SLES 12</block>
+  <block id="cdfdf9bf8f4a464cd4abef555786cdbb" category="paragraph">Standardmäßig ist DM-MP in SLES deaktiviert. Führen Sie die folgenden Schritte aus, um DM-MP-Komponenten auf dem Host zu aktivieren.</block>
+  <block id="0a4a01fb64611536a7fb2c5e1e325d98" category="paragraph">Das folgende Verfahren gilt für RHEL 8, RHEL 9, SLES 12 und SLES 15 mit Broadcom Emulex oder QLogic NVMe/FC-fähigen FC-HBAs. Weitere Informationen darüber, welche Versionen dieser Betriebssysteme oder HBAs unterstützt werden, finden Sie im<block ref="0aaf04254af18646f3d246cd4a4b417d" category="inline-link-rx"></block>.</block>
+  <block id="75dbe17d5307d64a197f24e012b0fe4e" category="paragraph">*RHEL 8 oder RHEL 9*</block>
+  <block id="6ef765942b756be59a09bba2c1bea181" category="summary">Für SLES 12 erstellen Sie ein Dateisystem im Namespace und mounten das Dateisystem.</block>
+  <block id="5f72169c48d94cfdf13fa8e7156de8ee" category="doc">Erstellen von Filesystemen in der E-Series – Linux SLES 12 (NVMe over InfiniBand)</block>
+  <block id="f3b72a76b6437fffe54c5f6a0e82669c" category="section-title">Aktivieren von Device Mapper Multipath (DMMP) SLES 12</block>
+  <block id="6b6ebf19e3cedd310169b72fa687b40a" category="paragraph">Sie müssen das neueste kompatible Betriebssystem RHEL 8, RHEL 9, SUSE Linux Enterprise Server 12 oder 15 Service Pack ausführen. Eine<block ref="0aaf04254af18646f3d246cd4a4b417d" category="inline-link-rx"></block> vollständige Liste der aktuellen Anforderungen finden sie im .</block>
+  <block id="8cccdb1fea835b32fb7acd0ac498244d" category="paragraph">*RHEL 8 oder RHEL 9*</block>
+  <block id="d3f59362d91c4f4d01ccdd309b5bb9fb" category="doc">Erstellen von Filesystemen in der E-Series – Linux SLES 12 (NVMe over RoCE)</block>
+  <block id="e0b6fa7380c04b056266419d253d2d07" category="paragraph">SLES 12 verwendet Device Mapper Multipath (DMMP) für das Multipathing für NVMe over RoCE. RHEL 8, RHEL 9 und SLES 15 verwenden ein integriertes natives NVMe-Failover. Je nachdem, welches Betriebssystem Sie ausführen, ist eine zusätzliche Konfiguration von Multipath erforderlich, damit es ordnungsgemäß ausgeführt wird.</block>
+  <block id="31966977d62560abced8790961dab861" category="paragraph">*RHEL 8 und RHEL 9*</block>
+  <block id="01d7072c63a7f17dd56f882aa05c191e" category="paragraph">*SLES 12.x oder höher*</block>
+  <block id="eb9f15fa21e7ecb26458bd00f198d235" category="paragraph">*SLES 12 oder höher*</block>
+  <block id="fd5ba176689e7b1be93aaa098be59948" category="sidebar">Erstellen von Dateisystemen (SLES 12)</block>
 </blocks>
