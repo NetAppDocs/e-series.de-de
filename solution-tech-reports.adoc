@@ -47,7 +47,7 @@ summary: Technische Berichte der E-Series
 |===
 
 
-| https://www.netapp.com/pdf.html?item=/media/17042-tr4320pdf.pdf["*TR-4320: Best Practices with CommVault Data Platform V11*"^] | https://www.netapp.com/pdf.html?item=/media/17159-tr4471pdf.pdf["*TR-4471: Best Practices mit Veeam Backup and Replication*"^] | https://www.netapp.com/pdf.html?item=/media/16433-tr-4704pdf.pdf["*TR-4704: Deploying Veritas NetBackup with NetApp E-Series Storage*"^] 
+| https://www.netapp.com/media/79676-tr-4950.pdf["*TR-4320: Best Practices with CommVault Data Platform V11*"^] | https://www.netapp.com/media/79436-tr-4948.pdf["*TR-4471: Best Practices mit Veeam Backup and Replication*"^] | https://www.netapp.com/pdf.html?item=/media/16433-tr-4704pdf.pdf["*TR-4704: Deploying Veritas NetBackup with NetApp E-Series Storage*"^] 
 
 
 | Beschreibt die Referenzarchitektur und Best Practices für den Einsatz von NetApp E-Series Storage in einer CommVault Data Platform V11 Umgebung. | Hier werden die Referenzarchitektur und Best Practices für den Einsatz von NetApp E-Series Storage in einer Veeam Backup & Replication 9.5-Umgebung beschrieben. | Beschreibt die Implementierung von Veritas NetBackup auf NetApp E-Series Storage. 

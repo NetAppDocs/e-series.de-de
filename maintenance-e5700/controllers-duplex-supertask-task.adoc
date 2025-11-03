@@ -412,6 +412,28 @@ Wenn die Kommunikation mit der anderen Steuerung wiederhergestellt wird:
 
 
 
+. Stellen Sie den Controller mit SANtricity System Manager online.
++
+** Über den SANtricity System Manager:
++
+... Wählen Sie *Hardware*.
+... Wenn die Grafik die Laufwerke anzeigt, wählen Sie *Zurück von Regal anzeigen*.
+... Wählen Sie den Controller aus, den Sie online platzieren möchten.
+... Wählen Sie im Kontextmenü * Online platzieren* aus, und bestätigen Sie, dass Sie den Vorgang ausführen möchten.
++
+Das System stellt den Controller online.
+
+
+
+** Alternativ können Sie die Controller mit den folgenden CLI-Befehlen online schalten:
++
+* Für Steuerung A:* `set controller [a] availability=online;`
+
++
+* Für Regler B:* `set controller [b] availability=online;`
+
+
+
 . Überprüfen Sie die Codes auf der 7-Segment-Anzeige des Controllers, wenn sie wieder online angezeigt werden. Wenn auf der Anzeige eine der folgenden sich wiederholenden Sequenzen angezeigt wird, entfernen Sie sofort die Steuerung.
 +
 ** *OE*, *L0*, *_blank_* (nicht übereinstimmende Controller)
