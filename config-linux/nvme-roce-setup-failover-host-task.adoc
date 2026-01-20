@@ -24,7 +24,7 @@ Sie müssen die erforderlichen Pakete auf Ihrem System installieren.
 NOTE: Siehe https://mysupport.netapp.com/matrix["NetApp Interoperabilitäts-Matrix-Tool"^] Um sicherzustellen, dass erforderliche Updates installiert werden, funktioniert Multipathing möglicherweise nicht ordnungsgemäß mit den GA-Versionen von SLES oder RHEL.
 
 .Über diese Aufgabe
-SLES 12 verwendet Device Mapper Multipath (DMMP) für das Multipathing für NVMe over RoCE. RHEL 8, RHEL 9 und SLES 15 verwenden ein integriertes natives NVMe-Failover. Je nachdem, welches Betriebssystem Sie ausführen, ist eine zusätzliche Konfiguration von Multipath erforderlich, damit es ordnungsgemäß ausgeführt wird.
+SLES 12 verwendet Device Mapper Multipath (DMMP) für Multipathing für NVMe über RoCE. RHEL 8, RHEL 9, RHEL 10, SLES 15 und SLES 16 verwenden ein integriertes natives NVMe-Failover. Je nachdem, welches Betriebssystem Sie verwenden, ist eine zusätzliche Konfiguration von Multipath erforderlich, damit es ordnungsgemäß funktioniert.
 
 
 
@@ -106,4 +106,4 @@ Natives NVMe-Multipathing ist in RHEL 8 standardmäßig deaktiviert und muss mit
 
 
 
-NOTE: Für RHEL 9 und SLES 15 ist Natives NVMe Multipathing standardmäßig aktiviert, und es ist keine zusätzliche Konfiguration erforderlich.
+NOTE: Bei SLES 15, SLES 16, RHEL 9 und RHEL 10 ist Native NVMe Multipathing standardmäßig aktiviert und es ist keine zusätzliche Konfiguration erforderlich.

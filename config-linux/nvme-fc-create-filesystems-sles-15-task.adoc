@@ -4,14 +4,14 @@ sidebar: sidebar
 keywords: file systems, express linux configuration, software configuration, linux host, E2800, E5700, EF300, EF600, E-Series, eseries 
 summary: Für RHEL 8 und SLES 15 erstellen Sie ein Dateisystem auf dem nativen nvme-Gerät und mounten das Dateisystem. 
 ---
-= Dateisysteme in E-Series erstellen – Linux RHEL 8, RHEL 9 und SLES 15 (NVMe over FC)
+= Dateisysteme in der E-Serie erstellen – Linux RHEL 8, RHEL 9, RHEL 10, SLES 15 und SLES 16 (NVMe über FC)
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Bei RHEL 8, RHEL 9 und SLES 15 erstellen Sie ein Dateisystem auf dem nativen nvme-Gerät und mounten das Dateisystem.
+Bei RHEL 8, RHEL 9, RHEL 10, SLES 15 und SLES 16 erstellen Sie ein Dateisystem auf dem nativen NVMe-Gerät und mounten das Dateisystem.
 
 .Schritte
 . Führen Sie den Befehl Multipath -ll aus, um eine Liste der nvme Geräte anzuzeigen.
