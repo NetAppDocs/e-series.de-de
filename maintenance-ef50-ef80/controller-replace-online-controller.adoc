@@ -1,0 +1,76 @@
+---
+permalink: maintenance-ef50-ef80/controller-replace-online-controller.html 
+sidebar: sidebar 
+keywords: ef50, ef80, how to online the controller 
+summary: Nachdem Sie den Ersatzcontroller für Ihr EF50- oder EF80-Speichersystem installiert haben, bestätigen Sie die IP-Adresse des Ersatzcontrollers, schalten Sie den Controller online und vergewissern Sie sich, dass der Status des Speichersystems Optimal ist. 
+---
+= Online den Ersatzcontroller – EF50 und EF80
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Nachdem Sie den Ersatzcontroller für Ihr EF50 oder EF80 Speichersystem installiert haben, bestätigen Sie dessen IP-Adresse, schalten Sie den Controller online und bestätigen Sie, dass der Status des Speichersystems Optimal ist.
+
+.Schritte
+. Der nächste Schritt hängt davon ab, ob der betroffene Controller DHCP für die IP-Adresse verwendet hat:
++
+[cols="1,2"]
+|===
+| Wenn... | Dann... 
+
+
+ a| 
+Der fehlerhafte Controller verwendete kein DHCP für die IP-Adresse
+ a| 
+Der Ersatzcontroller übernimmt die IP-Adresse des defekten Controllers, den Sie entfernt haben.
+
+Gehen Sie zum nächsten Schritt.
+
+
+
+ a| 
+Der beeinträchtigte Controller verwendete DHCP für die IP-Adresse
+ a| 
+Bitten Sie Ihren Netzwerkadministrator, die DNS-/Netzwerk- und IP-Adresse für den defekten Controller mit der MAC-Adresse für den Ersatzcontroller zu verknüpfen.
+
+|===
+. Schalten Sie den Controller mithilfe von SANtricity System Manager online.
++
+.. Wählen Sie *Hardware* > *Controllers and components*, um die Controller anzuzeigen.
+.. Wählen Sie den Controller aus, den Sie ersetzt haben, um dessen Inhaltsmenü anzuzeigen.
+.. Wählen Sie *Place online*.
+
+
+. Überprüfen Sie beim Hochfahren des Controllers die Controller-LEDs, um sicherzustellen, dass die Kommunikation mit dem anderen Controller wiederhergestellt ist:
++
+** Die gelbe Warn-LED leuchtet weiterhin.
+** Je nach Host-Schnittstelle leuchtet, blinkt oder leuchtet die LED für Host-Link möglicherweise nicht.
+
+
+. Wenn der Controller wieder online ist, prüfen Sie, ob eine NVSRAM-Nichtübereinstimmung in Recovery Guru gemeldet wird.
++
+Wird eine NVSRAM-Abweichung gemeldet, aktualisieren Sie den NVSRAM mit dem folgenden SMcli-Befehl. Der  `-k` Parameter ist erforderlich, wenn das Array nicht https-gesichert ist.
+
++
+[listing]
+----
+SMcli <controller A IP> <controller B IP> -u admin -p <password> -k -c "download storageArray NVSRAM file=\"C:\Users\testuser\Downloads\NVSRAM .dlp file>\" forceDownload=TRUE;"
+----
++
+
+NOTE: Falls der SMcli-Befehl nicht ausgeführt werden kann, wenden Sie sich an https://www.netapp.com/company/contact-us/support/["NetApp Support"^] oder melden Sie sich beim https://mysupport.netapp.com["NetApp Support Website"^] an, um einen Fall zu erstellen.
+
+. Vergewissern Sie sich, dass der Status des Speichersystems optimal ist und dass die Aufmerksamkeits-LEDs des Controllers ausgeschaltet sind.
++
+Wenn der Status nicht Optimal ist oder eine der Attention-LEDs leuchtet, überprüfen Sie, ob alle Kabel korrekt angeschlossen und der Controller richtig installiert ist. Entfernen Sie den Controller gegebenenfalls und installieren Sie ihn erneut.
+
++
+
+NOTE: Wenn Sie das Problem nicht lösen können, wenden Sie sich an https://www.netapp.com/company/contact-us/support/["NetApp Support"^].
+
+
+
+.Was kommt als Nächstes?
+Nachdem der neue Controller online geschaltet wurde, link:controller-replace-complete-replacement.html["Schließen Sie den Controller-Austausch ab"].

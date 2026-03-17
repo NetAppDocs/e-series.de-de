@@ -58,6 +58,15 @@ Wenn die Verriegelung einrastet, Haken unten an der Verriegelung in einen Metall
 
 == Schritt 2: Installieren Sie den neuen Controller-Behälter
 
+[role="tabbed-block"]
+====
+.EF280 und EF50 Controller-Modelle
+--
+Informationen zur Installation neuer EF80- und EF50-Controller finden Sie unter link:https://docs.netapp.com/us-en/e-series/maintenance-ef50-ef80/controller-replace-move-hardware.html#step-7-install-the-controller["EF50 und EF80 – Schritt 7: Installieren Sie den Controller"^].
+
+--
+.Andere Controller-Modelle der E-Series
+--
 Setzen Sie den neuen Controller-Behälter in das Reglerregal ein.
 
 .Schritte
@@ -72,5 +81,7 @@ Wenn die Laufwerksverkabelung mit den alten Controllern identisch ist, können S
 
 
 
+--
+====
 .Was kommt als Nächstes?
 Wenn die Laufwerksicherheit aktiviert ist, fahren Sie mit link:upgrade-unlock-drives-task.html["Entsperren von Laufwerken"]fort. Andernfalls gehen Sie zu link:complete-upgrade-controllers-task.html["Führen Sie das Controller-Upgrade durch"].

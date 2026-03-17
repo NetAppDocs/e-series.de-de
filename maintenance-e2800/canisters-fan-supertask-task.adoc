@@ -103,7 +103,7 @@ Bewahren Sie das gesamte Verpackungsmaterial für die Verwendung auf, wenn Sie d
 
 . Drücken Sie die orangefarbene Lasche, um den Lüfterbehälter zu lösen.
 +
-image::../media/28_dwg_e2860_de460c_single_fan_canister_with_orange_tab_callout_maint-e2800.gif[]
+image::../media/28_dwg_e2860_de460c_single_fan_canister_with_orange_tab_callout_maint-e2800.gif[Entriegelungslasche für Lüftergehäuse]
 
 +
 *(1)* _Tab, auf den Sie drücken, um den Lüfter-Kanister-Griff zu lösen_

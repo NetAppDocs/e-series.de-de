@@ -85,7 +85,7 @@ CAUTION: *Möglicher Datenverlust* -- Wenn Sie diesen Vorgang während der I/O-V
 +
 Die grüne LED „Cache aktiv“ auf der Rückseite jedes Controllers leuchtet, wenn die Daten im Cache auf die Laufwerke geschrieben werden müssen. Sie müssen warten, bis diese LED ausgeschaltet ist.
 
-. Wählen Sie auf der Startseite des SANtricity System Managers die Option *Vorgänge in Bearbeitung anzeigen*. Warten Sie, bis alle Vorgänge abgeschlossen sind, bevor Sie mit dem nächsten Schritt fortfahren.
+. Wählen Sie im SANtricity System Manager im Menü „Storage“ die Option „Operations in Progress“. Warten Sie, bis alle Vorgänge abgeschlossen sind, bevor Sie mit dem nächsten Schritt fortfahren.
 . Schalten Sie das Controller-Shelf aus.
 +
 .. Legen Sie beide Netzkabel vom Controller-Shelf ab und ziehen Sie sie ab.
@@ -265,7 +265,7 @@ Wenn der Status nicht optimal ist oder eine der Warn-LEDs leuchtet, vergewissern
 
 NOTE: Wenden Sie sich an den technischen Support, wenn das Problem nicht gelöst werden kann.
 
-. Klicken Sie auf Menü:Hardware[Support > Upgrade Center], um sicherzustellen, dass die neueste Version des SANtricity-Betriebssystems installiert ist.
+. Klicken Sie auf MENU:Support[Upgrade Center], um sicherzustellen, dass die neueste Version von SANtricity OS installiert ist.
 +
 Installieren Sie bei Bedarf die neueste Version.
 

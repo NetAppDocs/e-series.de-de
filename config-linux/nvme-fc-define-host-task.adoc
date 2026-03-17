@@ -24,7 +24,7 @@ Beachten Sie beim Definieren eines Hosts die folgenden Richtlinien:
 
 
 .Schritte
-. Wählen Sie Menü:Storage[Hosts].
+. Wählen Sie im linken Bereich Menü:Storage[Hosts].
 . Klicken Sie auf Menü:Create[Host].
 +
 Das Dialogfeld Host erstellen wird angezeigt.

@@ -1,0 +1,23 @@
+= 
+:allow-uri-read: 
+
+
+.Schritte
+. Wählen Sie *Settings* > *System*.
+. Wählen Sie im Abschnitt *Zusätzliche Einstellungen* *Host-I/O-Protokoll ändern* aus, um diese Seite zu öffnen.
+. Im Feld *Host I/O Protocol* wählen Sie im Dropdown-Menü das Protokoll aus, das Sie verwenden möchten.
++
+Die Protokollliste basiert auf den aktuell installierten Host-I/O-Modulen.
+
+. Geben Sie *CHANGE* in das leere Feld ein, um Ihre Änderung zu bestätigen.
+. Wählen Sie die Schaltfläche *Change*.
+. Warten Sie, bis die Controller ihren Neustartvorgang abgeschlossen haben.
++
+Das kann etwa fünf Minuten dauern.
+
+. Sobald die Controller wieder online sind, bestätigen Sie mit SANtricity System Manager, dass ihr Status Optimal ist.
+. Hostdefinitionen neu erstellen.
++
+Anweisungen finden Sie im https://docs.netapp.com/us-en/e-series-santricity/sm-storage/create-host.html["Erstellen Sie einen Host manuell im SANtricity System Manager"^] Verfahren.
+
+

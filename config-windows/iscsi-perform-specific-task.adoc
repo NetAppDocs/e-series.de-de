@@ -23,7 +23,7 @@ Sie konfigurieren die Switches entsprechend den Empfehlungen des Anbieters für 
 .Bevor Sie beginnen
 Stellen Sie sicher, dass Sie Folgendes haben:
 
-* Zwei separate Netzwerke für Hochverfügbarkeit, Stellen Sie sicher, dass Sie Ihren iSCSI-Datenverkehr durch VLANs oder zwei separate Netzwerke in getrennte Netzwerksegmente isolieren.
+* Zwei separate Netzwerke für Hochverfügbarkeit. Stellen Sie sicher, dass Sie Ihren iSCSI-Datenverkehr mithilfe von VLANs oder zwei separaten Netzwerken von anderen Datenverkehrsarten isolieren.
 * Hardware-Flusssteuerung zum Senden und Empfangen aktiviert *Ende bis Ende*.
 * Flusskontrolle mit Priorität deaktiviert.
 * Gegebenenfalls aktivierten Jumbo Frames.
@@ -72,7 +72,7 @@ Mit der SANtricity System Manager GUI können Sie das iSCSI-Netzwerk auf der Arr
 
 
 .Über diese Aufgabe
-Dieser Task beschreibt den Zugriff auf die Konfiguration des iSCSI-Ports über die Seite Hardware. Sie können die Konfiguration auch über das Menü:System[Einstellungen > iSCSI-Ports konfigurieren] aufrufen.
+Diese Aufgabe beschreibt, wie Sie die iSCSI-Portkonfiguration über die Hardware-Seite aufrufen. Sie können die Konfiguration auch über das Menü:Settings[System > iSCSI-Ports konfigurieren] aufrufen.
 
 .Schritte
 . Geben Sie in Ihrem Browser die folgende URL ein: `+https://<DomainNameOrIPAddress>+`
@@ -90,11 +90,7 @@ Wenn Sie System Manager öffnen und keine Pools, Volume-Gruppen, Workloads oder 
 +
 Sie verwenden den Assistenten später, um zusätzliche Setup-Aufgaben abzuschließen.
 
-. Wählen Sie *Hardware*.
-. Wenn die Grafik die Laufwerke anzeigt, klicken Sie auf *Zurück zum Regal anzeigen*.
-+
-Die Grafik ändert sich, um die Controller anstelle der Laufwerke anzuzeigen.
-
+. Wählen Sie im linken Bereich Menü:Hardware[Controllers and components].
 . Klicken Sie auf den Controller mit den iSCSI-Ports, die Sie konfigurieren möchten.
 +
 Das Kontextmenü des Controllers wird angezeigt.

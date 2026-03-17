@@ -1,0 +1,123 @@
+---
+permalink: maintenance-ef50-ef80/power-supply-replace.html 
+sidebar: sidebar 
+keywords: ef50, ef80, replace a power supply 
+summary: 'Tauschen Sie das Netzteil (PSU) in Ihrem EF50 oder EF80-Speichersystem aus, wenn es ausfällt oder defekt ist, um sicherzustellen, dass Ihr System weiterhin die für einen stabilen Betrieb erforderliche Leistung erhält.' 
+---
+= Netzteil austauschen – EF50 und EF80
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Tauschen Sie das Netzteil (PSU) in Ihrem EF50 oder EF80-Speichersystem aus, wenn es ausfällt oder defekt ist, um sicherzustellen, dass Ihr System weiterhin die für einen stabilen Betrieb erforderliche Leistung erhält.
+
+.Bevor Sie beginnen
+* Bestätigen Sie anhand der Details im Recovery Guru, dass ein Problem mit dem Netzteil vorliegt.
+* Prüfen Sie, ob die Attention (gelb) LED am Netzteil leuchtet, was darauf hinweist, dass das Netzteil oder sein integrierter Lüfter eine Störung aufweist.
+* Beheben Sie alle weiteren Probleme mit dem Speichersystem.
++
+Im Recovery Guru wählen Sie *Erneut prüfen*, um festzustellen, ob weitere Probleme vorliegen.
+
+* Stellen Sie sicher, dass Sie Folgendes haben:
++
+** Ein Ersatznetzteil.
++
+
+NOTE: Vermischen Sie die Netzteile verschiedener Spannungsarten nicht. Immer ersetzen wie für „Gefällt mir“.
+
+** Ein ESD-Armband oder Sie haben andere antistatische Vorkehrungen getroffen.
+** Eine ebene, antistatische Arbeitsfläche.
+** Eine Managementstation mit einem Browser, der auf SANtricity System Manager für den beeinträchtigten Controller zugreifen kann.
++
+Um die System Manager-Oberfläche zu öffnen, rufen Sie im Browser den Domänennamen oder die IP-Adresse des betroffenen Controllers auf.
+
+
+
+
+
+.Über diese Aufgabe
+* Wenn ein Netzteil ausfällt, müssen Sie es so schnell wie möglich ersetzen, damit das Speichersystem über eine redundante Stromquelle verfügt.
+* Ersetzen Sie ein Netzteil, indem Sie das Netzkabel vom defekten Netzteil abziehen, das Netzteil austauschen und das Netzkabel wieder anschließen.
+* Sie können die Standort-LEDs (blau) des Speichersystems (an der Vorderseite des Speichersystems und an beiden Controllern) einschalten, um das betroffene Speichersystem leichter zu finden. Verwenden Sie den SANtricity System Manager, wählen Sie *Hardware* > *Controllers and components*, wählen Sie die Registerkarte *Controller shelf* und wählen Sie im Kontextmenü *Turn on locator light*.
+
+
+.Schritte
+. Wenn Sie nicht bereits geerdet sind, sollten Sie sich richtig Erden.
+. Trennen Sie das Netzkabel vom Netzteil, indem Sie die Netzkabelhalterung öffnen, und ziehen Sie dann das Netzkabel vom Netzteil ab.
++
+
+NOTE: Das Netzteil hat keinen Netzschalter.
+
+. Netzteil entfernen:
++
+image::../media/ef50-ef80_psu_ac_orange_tab_replace_ieops-2611.svg[AC-Netzteil austauschen]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image::../media/icon_round_1.png[Callout-Nummer 1]
+ a| 
+Drehen Sie den Griff des Netzteils nach oben in die horizontale Position und fassen Sie ihn dann an.
+
+
+
+ a| 
+image::../media/icon_round_2.png[Callout-Nummer 2]
+ a| 
+Drücken Sie mit dem Daumen auf die orangefarbene Verriegelungslasche, um das Netzteil vom Controller zu lösen.
+
+
+
+ a| 
+image::../media/icon_round_3.png[Callout-Nummer 3]
+ a| 
+Ziehen Sie das Netzteil aus dem Controller heraus, während Sie mit der anderen Hand dessen Gewicht stützen.
+
+
+CAUTION: Das Netzteil ist kurz. Halten Sie es beim Herausnehmen aus dem Controller immer mit beiden Händen fest, damit es nicht plötzlich aus dem Controller herausschwingt und Sie verletzt.
+
+|===
+. Packen Sie das Ersatznetzteil aus und stellen Sie es auf eine ebene Fläche in der Nähe des Speichersystems.
++
+Bewahren Sie alle Verpackungsmaterialien auf, wenn Sie das defekte Netzteil zurücksenden.
+
+. Installieren Sie das Ersatznetzteil:
++
+.. Stützen Sie mit beiden Händen die Kanten des PSU und richten Sie sie an der Öffnung im Controller aus.
+.. Drücken Sie das Netzteil vorsichtig in den Controller, bis die orangefarbene Verriegelungslasche einrastet.
++
+Ein Netzteil lässt sich nur in einer Richtung ordnungsgemäß mit dem internen Anschluss verbinden und verriegeln.
+
++
+
+NOTE: Um eine Beschädigung des internen Anschlusses zu vermeiden, verwenden Sie beim Einschieben des Netzteils in den Controller keine übermäßige Kraft.
+
+.. Drehen Sie den Griff nach unten, damit er den normalen Betrieb nicht behindert.
+
+
+. Schließen Sie das Netzkabel wieder an das Netzteil an und sichern Sie das Netzkabel mit der Netzkabelhalterung.
++
+Sobald die Stromversorgung des Netzteils wiederhergestellt ist, sollte die Status-LED grün sein.
+
+. Bestätigen Sie, dass der Status des Netzteils „Optimal“ ist und dass die Attention-LEDs des Speichersystems ausgeschaltet sind.
++
+Wenn der Status nicht Optimal ist oder eine der Attention-LEDs leuchtet, überprüfen Sie, ob das Netzkabel korrekt angeschlossen und das PSU richtig installiert ist. Entfernen Sie das PSU bei Bedarf und installieren Sie es erneut.
+
++
+
+NOTE: Sollten Sie das Problem nicht lösen können, kontaktieren Sie  https://mysupport.netapp.com/site/global/dashboard["NetApp Support"] bevor Sie mit diesem Verfahren fortfahren.
+
+. Klicken Sie im SANtricity System Manager auf *Support > Upgrade Center*, um sicherzustellen, dass die neueste Version von SANtricity OS installiert ist.
++
+Installieren Sie bei Bedarf die neueste Version.
+
+. Senden Sie das fehlerhafte Teil wie in den dem Kit beiliegenden RMA-Anweisungen beschrieben an NetApp zurück.
++
+Wenden Sie sich an den technischen Support unter  https://mysupport.netapp.com/site/global/dashboard["NetApp Support"], 888-463-8277 (Nordamerika), 00-800-44-638277 (Europa) oder +800-800-80-800 (Asien/Pazifik), falls Sie die RMA-Nummer benötigen oder weitere Hilfe beim Austauschverfahren wünschen.//2025-11-17 ontap-systems-internal/issues/1391
+
+

@@ -1,0 +1,47 @@
+---
+permalink: install-hw-ef50-ef80/install-hardware.html 
+sidebar: sidebar 
+keywords:  
+summary: Nachdem Sie die Installation Ihres EF50 oder EF80 Speichersystems vorbereitet haben, installieren Sie die Rack-Mount-Hardware in einem Schrank oder Telco-Rack und installieren und sichern Sie anschließend Ihr Speichersystem. 
+---
+= Installieren Sie die Hardware – EF50 und EF80
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Nachdem Sie die Installation Ihres EF50 oder EF80 Speichersystems vorbereitet haben, installieren Sie die Rack-Mount-Hardware in einem Schrank oder Telco-Rack und installieren und sichern Sie anschließend Ihr Speichersystem.
+
+Wenn Ihr Storage-System in einem Schrank geliefert wurde, können Sie dieses Verfahren überspringen und zu link:install-cable.html["Verkabeln Sie die Hardware"] gehen.
+
+.Bevor Sie beginnen
+* Bereiten Sie einen flachen, statischen Arbeitsbereich vor.
+* Holen Sie sich ein ESD-Armband, und ergreifen Sie antistatische Vorsichtsmaßnahmen.
+* Vergewissern Sie sich, dass die Installationsanleitung dem Rackmontage-Zubehör beiliegt. Falls nicht, siehe link:../rackmount-hardware.html["Rack-montierte Hardware"^].
+* Beachten Sie die Sicherheitsvorkehrungen beim Anheben Ihres Lagersystems, die mit dessen Gewicht verbunden sind. Siehe link:install-prepare.html#step-2-understand-the-lifting-precautions["Verstehen Sie die Vorsichtsmaßnahmen beim Heben"^].
+* Verstehen Sie, dass der Luftstrom durch das Speichersystem von vorne eintritt, wo die Laufwerke installiert sind, und hinten wieder austritt, wo sich die Ports befinden.
+
+
+.Schritte
+. Installieren Sie die Rack-Montagehardware für Ihr Speichersystem gemäß den Anweisungen, die der Rack-Montagehardware beiliegen.
++
+
+CAUTION: Installieren Sie die Rack-Montagehardware im untersten verfügbaren Bereich im Schrank oder Rack, um zu verhindern, dass das Speichersystem beim Einbau umkippt.
+
+. Installieren und sichern Sie Ihr Speichersystem im Schrank oder im Telekommunikationsrack:
++
+.. Positionieren Sie das Storage-System auf den Schienen und schieben Sie es dann, indem Sie es von unten stützen, an seinen Platz.
+.. Befestigen Sie das Speichersystem mit den mitgelieferten Befestigungsschrauben am Schrank oder Telco-Rack.
+
+
+. Bringen Sie die Blende an der Vorderseite des Storage-Systems an.
++
+.. Positionieren Sie die Blende vor dem Storage-System, so dass die Löcher an beiden Enden mit den Befestigungselementen am Storage-System ausgerichtet sind.
+.. Befestigen Sie die Blende.
+
+
+
+
+.Was kommt als Nächstes?
+Nach der Installation der Hardware für Ihr Speichersystem, link:install-cable.html["Verkabeln Sie die Hardware"].

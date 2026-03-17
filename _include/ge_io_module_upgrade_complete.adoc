@@ -1,0 +1,59 @@
+= 
+:allow-uri-read: 
+
+
+.Schritte
+. Stellen Sie sicher, dass die neueste Version von SANtricity OS installiert ist:
++
+.. Wählen Sie *Support* > *Upgrade Center*.
+.. Installieren Sie bei Bedarf die neueste Version.
+
+
+. Überprüfen Sie, ob alle Volumes an ihre jeweiligen Controller zurückgegeben wurden:
++
+.. Wählen Sie *Storage* > *Volumes*.
+.. Überprüfen Sie auf der Seite *Alle Volumes*, ob die Volumes ihren jeweiligen Controllern zugeordnet sind.
+.. Wählen Sie *Mehr* > *Change volume ownership*, um die Volume-Besitzer anzuzeigen.
+
+
+. Der nächste Schritt hängt davon ab, ob die Volumes an ihre jeweiligen Controller zurückgegeben werden oder nicht:
++
+[cols="1,2"]
+|===
+| Wenn... | Dann... 
+
+
+ a| 
+Volumes gehören alle ihren jeweiligen Controllern
+ a| 
+Gehen Sie zum nächsten Schritt.
+
+
+
+ a| 
+Keines der Volumes wird an seine zugehörigen Controller zurückgegeben
+ a| 
+Wählen Sie *Storage* > *Volumes* > *More* und wählen Sie im Dropdown-Menü *Redistribute volumes*, um die Volumes ihren jeweiligen Controllern zurückzugeben.
+
+
+
+ a| 
+Nur einige der Volumes werden nach der automatischen oder manuellen Verteilung an ihre jeweiligen Controller zurückgegeben.
+ a| 
+Überprüfen Sie den Recovery Guru auf Host-Konnektivitätsprobleme.
+
+Falls kein Recovery Guru vorhanden ist oder wenn nach Befolgung der Recovery-Guru-Schritte die Volumes immer noch nicht an ihre jeweiligen Controller zurückgegeben wurden, kontaktieren Sie  https://mysupport.netapp.com/site/global/dashboard["NetApp Support"] bevor Sie mit diesem Verfahren fortfahren.
+
+|===
+. Sammeln Sie Supportdaten für Ihr Speichersystem:
++
+.. Wählen Sie *Support* > *Support Center* > *Diagnose*.
+.. Wählen Sie *Support-Daten Erfassen* Aus.
+.. Wählen Sie *Collect*.
++
+Die Datei wird im Ordner Downloads für Ihren Browser mit dem Namen *Support-Data.7z* gespeichert.
+
+
+
+. Falls Sie das Host-E/A-Modulprotokoll überprüfen und ändern müssen, verwenden Sie die Prozedur xref:io-module-change-protocol.html[Ändern Sie das Host-I/O-Modulprotokoll für ein EF50 oder EF80].
+

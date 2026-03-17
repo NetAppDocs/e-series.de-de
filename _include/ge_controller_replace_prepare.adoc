@@ -1,0 +1,70 @@
+= 
+:allow-uri-read: 
+
+
+.Schritte
+. Packen Sie den Ersatzcontroller aus und legen Sie ihn auf eine ebene, antistatische Oberfläche.
++
+Bewahren Sie das Verpackungsmaterial auf, um es bei der Rücksendung des defekten Controllers zu verwenden.
+
+. Notieren Sie sich die MAC-Adresse an der Seite des Ersatzcontrollers.
++
+Sie verwenden die MAC-Adresse später im Verfahren zum Austausch des Controllers.
+
+. Bestätigen Sie, dass die Teilenummer auf dem Ersatzcontroller mit der Ersatz-Teilenummer des Controllers im SANtricity System Manager identisch ist:
++
+
+CAUTION: *Möglicher Verlust des Datenzugriffs*: Führen Sie diese Prozedur nicht durch, wenn die beiden Teilenummern nicht übereinstimmen. Die Anwesenheit von nicht übereinstimmenden Steuergeräten führt dazu, dass sich das Ersatzsteuergerät beim Online-Schalten sperrt.
+
++
+.. Notieren Sie sich die Teilenummer an der Seite des Ersatzcontrollers.
+.. Suchen Sie die Teilenummer für den beeinträchtigten Controller, die im Detailbereich des Recovery Guru angezeigt wird.
++
+Falls Sie diese Nummer manuell ermitteln müssen, befolgen Sie diese Schritte:
+
++
+... Wählen Sie *Hardware* > *Controllers and components*.
+... Wählen Sie die Controller-Grafik für den beeinträchtigten Controller (Controller A oder Controller B) aus, um das Kontextmenü anzuzeigen.
+... Wählen Sie *Anzeigeeinstellungen*.
+... Notieren Sie sich auf der Registerkarte *Base* die *Ersatz-Teilenummer* für den Controller.
+
+
+.. Vergleichen Sie die beiden Teilenummern, um zu bestätigen, dass sie gleich sind.
+.. Der nächste Schritt hängt davon ab, ob die Teilenummern gleich sind oder nicht:
++
+[cols="1,2"]
+|===
+| Wenn... | Dann... 
+
+
+ a| 
+Die beiden Teilenummern sind gleich
+ a| 
+Fahren Sie mit dem nächsten Schritt fort.
+
+
+
+ a| 
+Die beiden Teilenummern sind unterschiedlich
+ a| 
+Sie können mit diesem Verfahren nicht fortfahren.
+
+Kontakt  https://mysupport.netapp.com/site/global/dashboard["NetApp Support"] für Unterstützung.
+
+|===
+
+
+. Sichern Sie die Konfigurationsdatenbank des Speichersystems mit SANtricity System Manager.
++
+Tritt beim Entfernen eines Controllers ein Problem auf, können Sie die gespeicherte Datei verwenden, um Ihre Konfiguration wiederherzustellen. Das System speichert den aktuellen Zustand der RAID-Konfigurationsdatenbank, die alle Daten für Volumengruppen und Festplattenpools auf dem Controller enthält.
+
++
+.. Wählen Sie *Support › Support Center › Diagnose*.
+.. Wählen Sie *Konfigurationsdaten Erfassen*.
+.. Wählen Sie *Collect*.
++
+Die Datei wird im Ordner Downloads für Ihren Browser mit dem Namen *configurationData-<arrayName>-<dateTime>.7z* gespeichert.
+
+
+
+

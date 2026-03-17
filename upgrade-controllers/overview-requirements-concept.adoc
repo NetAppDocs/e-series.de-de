@@ -66,6 +66,25 @@ Heben Sie vor dem Upgrade auf E4000-Controller die Zuordnung des Access Volumes 
 
 
 
+* *EF50- und EF80-Spiegelverkabelung*
++
+Die Systeme EF80 und EF50 nutzen Hochgeschwindigkeits-200GbE/100GbE-Verbindungen, um die Inter-Controller-Kommunikation zwischen den beiden Controllern zu ermöglichen. Jeder Controller ist mit einer dedizierten Schnittstellenkarte ausgestattet, die in Steckplatz 4 installiert ist. Diese Karte bietet zwei Ports und enthält zwei 0,5 m 200GbE-Kabel, die mit dem System geliefert werden.
+
++
+Verwenden Sie diese Kabel, um die Controller-Anschlüsse wie folgt zu verbinden:
+
++
+** Port e4a auf Controller A zu Port e4a auf Controller B
+** Port e4b auf Controller A zu Port e4b auf Controller B
++
+
+NOTE: Es ist unbedingt erforderlich, die Kabel genau wie beschrieben anzuschließen. Weitere Informationen finden Sie unter https://docs.netapp.com/us-en/e-series/install-hw-ef50-ef80/install-cable.html#step-1-cable-the-inter-controller-mirroring-connections["Verkabeln Sie die Spiegelungsverbindungen zwischen den Controllern – EF50 und EF80"].
+
+
+
++
+Verwenden Sie keine anderen Host-Ports (Slot 1, Slot 2 oder Slot 3) für die Kommunikation zwischen den Controllern, da dies nicht unterstützt wird. Eine korrekte Verkabelung zwischen den Controllern ist für den ordnungsgemäßen Betrieb sowohl der EF50- als auch der EF80-Arrays unerlässlich.
+
 
 
 
@@ -76,6 +95,60 @@ Unterstützte Upgrade-Pfade für jedes Storage-Array-Modell prüfen.
 
 [role="tabbed-block"]
 ====
+.Kompatibilität des Controller-Upgrades EF50 und EF80
+--
+[cols="h,d,d,d"]
+|===
+| Upgrade-Pfad | Batterie | Funktionsunterstützung | SAS-3 Shelfs 
+
+
+| Von EF300 zu EF50 oder EF80  a| 
+Bestellen Sie eine neue Batterie.
+ a| 
+* EF50 und EF80 unterstützen nur Duplex-Konfigurationen
+* EF50 und EF80 unterstützen 64Gb Fibre Channel Host-Schnittstellenkarten
+* EF80 unterstützt Dual-200Gbe NVMe over RoCE und NVMe over Infiniband Host-Schnittstellenkarten
+* EF50 und EF80 unterstützen bis zu 24 NVMe-Laufwerke pro Controller
+* EF50 und EF80 unterstützen TLC- und QLC-NVMe-Laufwerkskonfigurationen
+* EF50 und EF80 unterstützen keine Host-Schnittstellen auf der Basisplatine.
+* EF50 und EF80 unterstützen keine synchronen oder asynchronen Spiegelungen
+* EF50 und EF80 unterstützen keine Remote Storage Volumes
+* EF50 und EF80 unterstützen keine Thin Provisioned Volumes
+* EF50 unterstützt bis zu 2 Host-Schnittstellenkarten, und EF80 unterstützt bis zu 3 Host-Schnittstellenkarten.
+
+
+
+NOTE: Beim Upgrade von EF300 auf EF50 oder EF80 können Sie das Host-Protokoll über die SANtricity System Manager-Benutzeroberfläche konfigurieren. Weitere Informationen finden Sie unter  https://docs.netapp.com/us-en/e-series/maintenance-ef50-ef80/io-module-change-protocol.html["Ändern Sie das Host-I/O-Modulprotokoll – EF50 und EF80"].
+ a| 
+* EF50 und EF80 unterstützen keine SAS-Erweiterung.
+
+
+
+
+| Von EF600 zu EF80  a| 
+Bestellen Sie eine neue Batterie.
+ a| 
+* EF80 unterstützt nur Duplex-Konfigurationen
+* EF80 unterstützt 64Gb Fibre Channel Host-Schnittstellenkarten
+* EF80 unterstützt Dual-200Gbe NVMe over RoCE und NVMe over Infiniband Host-Schnittstellenkarten
+* EF80 unterstützt bis zu 24 NVMe-Laufwerke pro Controller
+* EF50 und EF80 unterstützen TLC- und QLC-NVMe-Laufwerkskonfigurationen
+* EF80 unterstützt keine Host-Schnittstellen auf der Basisplatine
+* EF80 unterstützt weder synchrones noch asynchrones Spiegeln
+* EF80 unterstützt keine Remote Storage Volumes
+* EF80 unterstützt keine Thin Provisioned Volumes
+* EF80 unterstützt bis zu 3 Host Interface Cards.
++
+
+NOTE: Beim Upgrade von EF600 auf EF80 können Sie das Host-Protokoll über die SANtricity System Manager-Benutzeroberfläche konfigurieren. Weitere Informationen finden Sie unter  https://docs.netapp.com/us-en/e-series//maintenance-ef50-ef80/io-module-change-protocol.html["Ändern Sie das Host-I/O-Modulprotokoll – EF50 und EF80"].
+
+
+ a| 
+* EF80 unterstützt keine SAS-Erweiterung.
+
+
+|===
+--
 .E4000-Controller-Upgrade-Kompatibilität
 --
 [cols="h,d,d,d"]
@@ -191,7 +264,7 @@ Beim Upgrade des E5500 oder der E5600 auf das E2600 oder beim Upgrade des E5400 
  a| 
 Ältere Snapshots werden auf der E2700 nicht unterstützt.
  a| 
-5400-, E5500- und E5600-Controller dürfen nicht in SAS-3-Shelfs platziert werden.
+Die Controller E5400, E5500 und E5600 dürfen nicht in SAS-3-Shelfs platziert werden.
 
 
 

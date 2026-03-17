@@ -1,0 +1,73 @@
+---
+permalink: maintenance-ef50-ef80/controller-replace-complete-replacement.html 
+sidebar: sidebar 
+keywords: ef50, ef80, how to complete the controller replacement process 
+summary: Um den Controller-Austausch für Ihr EF50- oder EF80-Speichersystem abzuschließen, stellen Sie sicher, dass die Firmware des Speichersystems aktuell ist, überprüfen Sie, ob die Volumes an ihre Besitzer zurückgegeben wurden, sammeln Sie System-Supportdaten und senden Sie das defekte Teil an NetApp zurück. 
+---
+= Schließen Sie den Controller-Austausch ab - EF50 und EF80
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Um den Controller-Austausch für Ihr EF50- oder EF80-Speichersystem abzuschließen, stellen Sie sicher, dass die neueste Version von SANtricity OS installiert ist, überprüfen Sie, ob die Volumes wieder ihren zugehörigen Controllern zugeordnet sind, sammeln Sie System Support-Daten und senden Sie das defekte Teil zurück an NetApp.
+
+
+
+== Schritt 1: Stellen Sie sicher, dass die neueste Version von SANtricity OS installiert ist, überprüfen Sie die Volume-Zugehörigkeit und sammeln Sie Supportdaten
+
+Verwenden Sie den SANtricity System Manager, um sicherzustellen, dass die neueste Version von SANtricity OS installiert ist, überprüfen Sie, ob alle Volumes an ihre zugehörigen Controller zurückgegeben wurden, und sammeln Sie Supportdaten, damit Sie den Betrieb wieder aufnehmen können.
+
+.Schritte
+. Stellen Sie sicher, dass die neueste Version von SANtricity OS auf dem Speichersystem installiert ist:
++
+.. Wählen Sie *Support* > *Upgrade Center*
+.. Installieren Sie bei Bedarf die neueste Version.
+
+
+. Überprüfen Sie, ob alle Volumes an ihre jeweiligen Controller zurückgegeben wurden:
++
+[cols="1,2"]
+|===
+| Wenn... | Dann... 
+
+
+ a| 
+Recovery Guru ist vorhanden und zeigt an, dass sich die Volumes nicht auf ihrem bevorzugten Pfad befinden (nicht an ihre zugehörigen Controller zurückgegeben wurden)
+ a| 
+.. Verteilen Sie die Volumes auf ihre jeweiligen Controller, indem Sie *Storage* > *Volumes* > *More* auswählen und im Dropdown-Menü *Redistribute volumes* wählen.
+.. Überprüfen Sie, ob alle Volumes ihren jeweiligen Controllern neu zugeordnet wurden, indem Sie prüfen, ob Recovery Guru vorhanden ist und weiterhin anzeigt, dass sich die Volumes nicht auf ihrem bevorzugten Pfad befinden.
+
+
+
+NOTE: Falls die Volumes immer noch nicht an ihre eigenen Controller zurückgegeben werden, wenden Sie sich an  https://mysupport.netapp.com/site/global/dashboard["NetApp Support"].
+
+
+
+ a| 
+Recovery Guru ist nicht vorhanden (es scheint, dass alle Volumes an ihre jeweiligen Controller zurückgegeben wurden)
+ a| 
+Überprüfen Sie, ob alle Volumes wieder ihren jeweiligen Controllern zugeordnet sind, indem Sie *Storage* > *Volumes* > *More* auswählen und im Dropdown-Menü *Change volume ownership* wählen, um die Volume-Besitzer anzuzeigen.
+
+|===
+. Sammeln Sie Supportdaten für Ihr Speichersystem:
++
+.. Wählen Sie *Support* > *Support Center* > *Diagnose*.
+.. Wählen Sie *Support-Daten Erfassen* Aus.
+.. Wählen Sie *Collect*.
++
+Die Datei wird im Ordner Downloads für Ihren Browser mit dem Namen *Support-Data.7z* gespeichert.
+
+
+
+
+
+
+
+== Schritt 2: Senden Sie das defekte Teil zurück an NetApp
+
+Senden Sie das defekte Teil an NetApp, wie in der mit dem Kit gelieferten RMA-Anleitung beschrieben, zurück. Siehe die https://mysupport.netapp.com/site/info/rma["Teilerückgabe und Ersatz"] Seite für weitere Informationen.
+
+.Was kommt als Nächstes?
+Der Austausch des Controllers ist abgeschlossen. Sie können den normalen Betrieb fortsetzen.

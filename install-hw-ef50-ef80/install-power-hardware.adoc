@@ -1,0 +1,47 @@
+---
+permalink: install-hw-ef50-ef80/install-power-hardware.html 
+sidebar: sidebar 
+keywords: ef50, ef80, connect power cables 
+summary: Nachdem Sie die Spiegelungs- und Host-Netzwerkverbindungen des Controllers für Ihr EF50 oder EF80 Speichersystem verkabelt haben, schalten Sie die Controller ein. 
+---
+= Schalten Sie die Hardware ein – EF50 und EF80
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Nachdem Sie die Inter-Controller-Mirroring- und Host-Verbindungen für Ihr EF50 oder EF80 Speichersystem verkabelt haben, schalten Sie die Controller ein.
+
+.Bevor Sie beginnen
+Treffen Sie antistatische Vorsichtsmaßnahmen.
+
+.Schritte
+. Schließen Sie ein Netzkabel an jedes Controller-Netzteil an und verbinden Sie sie dann mit Stromquellen an verschiedenen Stromkreisen.
++
+
+NOTE: Wenn Sie Stromverteilungseinheiten (PDUs) von Drittanbietern verwenden, verwenden Sie keine Steckdosen direkt hinter den Controllern, da Sie sonst den Zugang zu den Controllern blockieren könnten.
+
++
+*Stromkabel*
+
++
+image:../media/power_cable_inst-hw-ef600.png["Stromkabel"]
+
++
+image::../media/drw_psu_layout_1_ieops-1886.svg[Stromanschlussdiagramm für Speichersystem]
+
++
+** Das System beginnt zu starten. Der erste Startvorgang kann bis zu acht Minuten dauern.
+** Die LEDs am Systemgehäuse blinken und die Lüfter starten, was darauf hinweist, dass die Controller eingeschaltet werden.
++
+Beim Startvorgang ist es normal, dass die Lüfter sehr laut sind.
+
+** Das digitale Display an der Vorderseite des Systemgehäuses (hinter der Blende) leuchtet nicht.
+
+
+. Sichern Sie die Netzkabel mit der Sicherungsvorrichtung an jedem Netzteil.
+
+
+.Was kommt als Nächstes?
+Nach dem Einschalten Ihres Speichersystems link:install-complete-setup.html["vollständige Einrichtung des Speichersystems"].

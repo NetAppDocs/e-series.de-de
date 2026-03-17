@@ -1,0 +1,54 @@
+---
+permalink: maintenance-ef50-ef80/controller-replace-offline-controller.html 
+sidebar: sidebar 
+keywords: ef50, ef80, offline the impaired controller 
+summary: Setzen Sie den defekten Controller in Ihrem EF50- oder EF80-Speichersystem offline, um Datenverlust zu verhindern und die Systemstabilität beim Austausch des Controllers zu gewährleisten. 
+---
+= Die beeinträchtigte Steuerung – EF50 und EF80 – offline nehmen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Setzen Sie den defekten Controller in Ihrem EF50- oder EF80-Speichersystem offline, um Datenverlust zu verhindern und die Systemstabilität beim Austausch des Controllers zu gewährleisten.
+
+.Vor
+* Sie müssen die link:controller-replace-requirements.html["Anforderungen"] Voraussetzungen für dieses Verfahren erfüllt haben.
+* Sie müssen die link:controller-replace-prepare.html["Vorbereitung"] für dieses Verfahren abgeschlossen haben.
+
+
+.Über diese Aufgabe
+Wenn Sie einen Controller offline nehmen, müssen Sie mindestens eine Minute warten, bevor Sie den Controller wieder online schalten. Diese Wartezeit ermöglicht es dem Speichersystem, den Status des Controllers zu aktualisieren und sicherzustellen, dass alle zwischengespeicherten Daten auf die Laufwerke geschrieben werden.
+
+.Schritte
+. Falls der betroffene Controller noch nicht offline ist, schalten Sie ihn mithilfe von SANtricity System Manager offline:
++
+.. Wählen Sie *Hardware* > *Controllers and components*, um die Controller anzuzeigen.
+.. Wählen Sie den Controller aus, den Sie offline schalten möchten, um dessen Inhaltsmenü anzuzeigen.
+.. Wählen Sie *Offline schalten* aus und bestätigen Sie dann, dass Sie die Aktion durchführen möchten.
++
+
+NOTE: Wenn Sie auf den SANtricity System Manager über den Controller zugreifen, den Sie offline schalten möchten, wird die Meldung „SANtricity System Manager nicht verfügbar“ angezeigt. Wählen Sie *Connect to an alternate network connection*, um automatisch über den anderen Controller auf den SANtricity System Manager zuzugreifen.
+
+
+
+. Warten Sie, bis SANtricity System Manager den Status des Controllers auf „Offline“ aktualisiert.
++
+
+CAUTION: Beginnen Sie keine anderen Vorgänge, bis der Status aktualisiert wurde.
+
+. Bestätigen Sie mithilfe des Recovery Guru, dass die defekte Komponente sicher entfernt werden kann:
++
+.. Wählen Sie *Recheck*.
+.. Bestätigen Sie, dass im Bereich „Details“ im Feld *Entfernen möglich* *Ja* angezeigt wird.
++
+
+CAUTION: Wenn im Feld *OK to remove* nicht *Yes* angezeigt wird, fahren Sie nicht mit der Entfernung der fehlerhaften Komponente fort. Beheben Sie das Problem stattdessen mithilfe des Recovery Guru.
+
+
+
+
+
+.Was kommt als Nächstes?
+Nachdem der defekte Controller offline geschaltet wurde, link:controller-replace-move-hardware.html["Ersetzen Sie den defekten Controller"].

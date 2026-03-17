@@ -1,0 +1,56 @@
+= 
+:allow-uri-read: 
+
+
+.Schritte
+. Wenn Sie nicht bereits geerdet sind, sollten Sie sich richtig Erden.
+. Suchen Sie die NV-Batterie.
+. Entfernen Sie die NV-Batterie:
++
+image::../media/drw_g_nv_battery_replace_ieops-1864.svg[Ersetzen Sie die NV-Batterie]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image::../media/icon_round_1.png[Callout-Nummer 1]
+ a| 
+Heben Sie die NV-Batterie an und nehmen Sie sie aus ihrem Fach heraus.
+
+
+
+ a| 
+image::../media/icon_round_2.png[Callout-Nummer 2]
+ a| 
+Entfernen Sie den Kabelbaum aus seiner Halterung.
+
+
+
+ a| 
+image::../media/icon_round_3.png[Callout-Nummer 3]
+ a| 
+.. Drücken Sie die Lasche am Stecker hinein und halten Sie sie gedrückt.
+.. Ziehen Sie den Stecker nach oben und aus der Buchse.
++
+Wenn Sie den Stecker herausziehen, bewegen Sie ihn vorsichtig von einem Ende zum anderen (längs), um ihn zu lösen.
+
+
+
+|===
+. Packen Sie die Ersatz-NV-Batterie aus und legen Sie sie auf eine ebene, antistatische Oberfläche in der Nähe des Speichersystems.
++
+Bewahren Sie das Verpackungsmaterial auf, um es bei der Rücksendung des defekten NV-Akkus zu verwenden.
+
+. Installieren Sie die Ersatz-NV-Batterie:
++
+.. Stecken Sie den Kabelstecker in die Buchse.
+.. Verlegen Sie die Verkabelung an der Seite des Netzteils, in dessen Halterung und dann durch den Kanal vor dem NV-Batteriefach.
+.. Setzen Sie die NV-Batterie in ihr Fach ein.
++
+Der NV-Akku sollte bündig in seinem Fach sitzen.
+
+
+
+

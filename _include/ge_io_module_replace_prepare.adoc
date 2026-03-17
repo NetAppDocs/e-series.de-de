@@ -1,0 +1,41 @@
+= 
+:allow-uri-read: 
+
+
+.Schritte
+. Stellen Sie sicher, dass Sie Folgendes haben:
++
+** Das Ersatz-I/O-Modul.
++
+Stellen Sie sicher, dass Sie das defekte E/A-Modul durch ein E/A-Modul desselben Typs ersetzen. Sie können kein E/A-Modul eines anderen Typs installieren.
+
++
+Sie müssen in jedem Controller Ihres Speichersystems die gleiche Art und Anzahl von E/A-Modulen haben.
+
++
+
+CAUTION: *Möglicher Verlust des Datenzugriffs* -- Das Vorhandensein inkompatibler oder nicht übereinstimmender I/O-Module führt dazu, dass sich die Controller beim Einschalten sperren.
+
+** Ein ESD-Armband oder Sie haben andere antistatische Vorkehrungen getroffen.
+** Eine ebene, antistatische Arbeitsfläche.
+** Beschriftungen zur Kennzeichnung jedes Kabels, das mit dem defekten I/O-Modul verbunden ist.
+** Eine Managementstation mit einem Browser, der auf SANtricity System Manager für den beeinträchtigten Controller zugreifen kann.
++
+Um die System Manager-Oberfläche zu öffnen, rufen Sie im Browser den Domänennamen oder die IP-Adresse des betroffenen Controllers auf.
+
+
+
+. Sichern Sie die Konfigurationsdatenbank des Speichersystems mit SANtricity System Manager:
++
+Tritt beim Entfernen eines Controllers ein Problem auf, können Sie die gespeicherte Datei verwenden, um Ihre Konfiguration wiederherzustellen. Das System speichert den aktuellen Zustand der RAID-Konfigurationsdatenbank, die alle Daten für Volumengruppen und Datenträgerpools auf dem betroffenen Controller enthält.
+
++
+.. Wählen Sie *Support* > *Support Center* > *Diagnose*.
+.. Wählen Sie *Konfigurationsdaten Erfassen*.
+.. Wählen Sie *Collect*.
++
+Die Datei wird im Ordner Downloads für Ihren Browser mit dem Namen *configurationData-<arrayName>-<dateTime>.7z* gespeichert.
+
+
+
+

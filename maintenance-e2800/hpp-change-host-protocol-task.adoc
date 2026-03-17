@@ -25,7 +25,7 @@ Mit dem SANtricity System Manager können Sie ermitteln, welche Art von SFP-Tran
 .Schritte
 . Wählen Sie im SANtricity System Manager *Support* aus.
 . Wählen Sie die Kachel *Support Center* aus.
-. Wählen Sie auf der Registerkarte Support Resources den Link *Storage Array Profile* aus.
+. Suchen Sie auf der Seite „Supportressourcen“ den Link *Storage Array Profile* und wählen Sie ihn aus.
 . Geben Sie in das Textfeld * SFP* ein, und klicken Sie auf *Suchen*.
 . Suchen Sie für jeden SFP, der im Speicher-Array-Profil aufgelistet ist, den Eintrag für *unterstützte Datenrate(en)*.
 +

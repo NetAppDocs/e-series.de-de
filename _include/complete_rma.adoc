@@ -1,0 +1,5 @@
+= 
+:allow-uri-read: 
+
+
+Senden Sie das defekte Teil an NetApp, wie in der mit dem Kit gelieferten RMA-Anleitung beschrieben, zurück. Siehe die https://mysupport.netapp.com/site/info/rma["Teilerückgabe und Ersatz"] Seite für weitere Informationen.

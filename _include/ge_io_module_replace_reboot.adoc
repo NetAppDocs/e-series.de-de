@@ -1,0 +1,28 @@
+= 
+:allow-uri-read: 
+
+
+Nach dem Austausch eines I/O-Moduls muss der Controller neu gestartet werden.
+
+.Schritte
+. Starten Sie den Controller über die LOADER-Eingabeaufforderung neu:
++
+`bye`
+
++
+
+NOTE: Durch einen Neustart des betroffenen Controllers werden auch die I/O-Module und andere Komponenten neu initialisiert.
+
+. Stellen Sie den beeinträchtigten Controller wieder auf den Normalbetrieb um, indem Sie ihm seinen Speicher zurückgeben:
++
+`storage failover giveback -ofnode _impaired_node_name_`
+
+. Stellen Sie die automatische Rückgabe von der Konsole des funktionierenden Controllers wieder her:
++
+`storage failover modify -node local -auto-giveback true`
+
+. Wenn AutoSupport aktiviert ist, automatische Fallerstellung wiederherstellen:
++
+`system node autosupport invoke -node * -type all -message MAINT=END`
+
+

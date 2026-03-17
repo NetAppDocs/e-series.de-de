@@ -1,0 +1,34 @@
+---
+permalink: install-hw-ef50-ef80/install-workflow.html 
+sidebar: sidebar 
+keywords:  
+summary: Um Ihr EF50- oder EF80-Speichersystem zu installieren und einzurichten, müssen Sie Ihren Standort vorbereiten, die Hardwarekomponenten installieren und verkabeln, das Speichersystem einschalten und die Einrichtung sowie Konfiguration des Speichersystems abschließen. 
+---
+= Installation und Einrichtung - EF50 und EF80
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Um Ihr EF50- oder EF80-Speichersystem zu installieren und einzurichten, müssen Sie Ihren Standort vorbereiten, die Hardwarekomponenten installieren und verkabeln, das Speichersystem einschalten und die Einrichtung sowie Konfiguration des Speichersystems abschließen.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["Eins"]link:install-prepare.html["Installation vorbereiten"]
+[role="quick-margin-para"]
+Zur Vorbereitung der Installation sollten Sie den Aufstellungsort vorbereiten, sich mit den Hebevorkehrungen für Ihr Storage-System vertraut machen, die Kartons entpacken und den Inhalt mit dem Lieferschein vergleichen sowie das Storage-System registrieren, um Supportleistungen in Anspruch nehmen zu können.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["Zwei"]link:install-hardware.html["Installieren Sie die Hardware"]
+[role="quick-margin-para"]
+Zur Installation der Hardware installieren Sie die Rack-Montagehardware im Schrank oder Rack und installieren und sichern anschließend Ihr Speichersystem.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["Drittens"]link:install-cable.html["Verkabeln Sie die Hardware"]
+[role="quick-margin-para"]
+Um die Hardware zu verkabeln, verbinden Sie die Controller untereinander, um die Inter-Controller-Spiegelung zu ermöglichen, die eine vollständige Systemredundanz gewährleistet und für Cache-Spiegelung und I/O-Versand verwendet wird, und verbinden Sie dann die Controller mit Ihrem Host-Netzwerk.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png["Vier"]link:install-power-hardware.html["Schalten Sie das Speichersystem ein"]
+[role="quick-margin-para"]
+Um Ihr Speichersystem einzuschalten, stecken Sie ein Netzkabel in jedes Controller-Netzteil und verbinden Sie sie dann mit Stromquellen an verschiedenen Stromkreisen
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-5.png["Fünf"]link:install-complete-setup.html["Vervollständigen Sie die Einrichtung des Speichersystems"]
+[role="quick-margin-para"]
+Um die Einrichtung Ihres Speichersystems abzuschließen, verkabeln und konfigurieren Sie die Management-Ports an den Controllern, konfigurieren und verwalten Sie Ihr Speichersystem und überprüfen Sie anschließend, ob das Host-I/O-Modulprotokoll korrekt ist.

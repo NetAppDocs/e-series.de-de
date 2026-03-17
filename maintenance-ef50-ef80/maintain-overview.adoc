@@ -1,0 +1,75 @@
+---
+permalink: maintenance-ef50-ef80/maintain-overview.html 
+sidebar: sidebar 
+keywords: ef50, ef80 maintenance, maintenance, repairing ef50, ef80, replace ef50, ef80 components 
+summary: Pflegen Sie die Hardware Ihres EF50- oder EF80-Speichersystems, um langfristige Zuverlässigkeit und optimale Leistung zu gewährleisten. Führen Sie regelmäßige Wartungsarbeiten durch, wie zum Beispiel den Austausch defekter Komponenten, da dies dazu beiträgt, Ausfallzeiten und Datenverlust zu verhindern. 
+---
+= Übersicht über die Wartungsverfahren – EF50 und EF80
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Pflegen Sie die Hardware Ihres EF50- oder EF80-Speichersystems, um langfristige Zuverlässigkeit und optimale Leistung zu gewährleisten. Führen Sie regelmäßige Wartungsarbeiten durch, wie zum Beispiel den Austausch defekter Komponenten, da dies dazu beiträgt, Ausfallzeiten und Datenverlust zu verhindern.
+
+Die Wartungsverfahren setzen voraus, dass Ihr EF50- oder EF80-Speichersystem bereits in der SANtricity Umgebung bereitgestellt wurde.
+
+
+
+== Systemkomponenten
+
+Für Ihr EF50 oder EF80 Speichersystem können Sie Wartungsarbeiten an den folgenden Komponenten durchführen.
+
+[cols="25,65"]
+|===
+
+
+ a| 
+link:controller-replace-workflow.html["Controller"]
+ a| 
+Ein Controller besteht aus einer Platine, Firmware und Software. Er steuert die Laufwerke und führt die SANtricity Betriebssystem-Software aus.
+
+
+
+ a| 
+link:dimm-replace.html["DIMM"]
+ a| 
+Ein Dual-In-Line-Speichermodul (DIMM) ist ein Typ von Computerspeicher. Sie werden installiert, um den Systemspeicher auf einer Controller-Motherboard zu erweitern.
+
+
+
+ a| 
+link:drive-replace.html["Laufwerk"]
+ a| 
+Ein Laufwerk ist ein Gerät, das den für Daten benötigten physischen Speicher bereitstellt.
+
+
+
+ a| 
+link:fan-replace.html["Lüfter"]
+ a| 
+Ein Lüfter kühlt den Controller und die Laufwerke.
+
+
+
+ a| 
+link:io-module-overview.html["E/A-Modul"]
+ a| 
+Das I/O-Modul (Eingabe-/Ausgabemodul) ist eine Hardwarekomponente, die als Vermittler zwischen dem Controller und verschiedenen Geräten oder Systemen fungiert, die Daten mit dem Controller austauschen müssen.
+
+
+
+ a| 
+link:nvdimm-battery-replace.html["NV-Batterie"]
+ a| 
+Die Batterie des nichtflüchtigen Speichers (NVMEM) ist dafür verantwortlich, die NVMEM-Komponenten mit Strom zu versorgen, während Daten, die sich im Transfer befinden, nach einem Stromausfall in den Flash-Speicher ausgelagert werden.
+
+
+
+ a| 
+link:power-supply-replace.html["Stromversorgung"]
+ a| 
+Ein Netzteil stellt eine redundante Stromquelle in einem Controller bereit.
+
+|===

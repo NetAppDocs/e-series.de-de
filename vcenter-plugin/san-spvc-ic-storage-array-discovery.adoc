@@ -65,7 +65,7 @@ Wenn Sie CA-signierte Zertifikate importieren möchten, löschen Sie den Ermittl
 
 Sie müssen Probleme mit dem Zertifikat lösen, bevor Sie mit der Ermittlung fortfahren.
 
-. Wenn das Dialogfeld selbst signierte Zertifikate auflösen geöffnet wird, überprüfen Sie die Informationen, die für die nicht vertrauenswürdigen Zertifikate angezeigt werden. Für weitere Informationen können Sie auch auf die Ellipsen am äußersten Ende der Tabelle klicken und im Kontextmenü *Ansicht* wählen.
+. Wenn sich das Dialogfeld „Selbstsignierte Zertifikate auflösen“ öffnet, überprüfen Sie die angezeigten Informationen zu den nicht vertrauenswürdigen Zertifikaten. Für weitere Informationen können Sie auch auf die Auslassungspunkte am Ende der Tabelle klicken und im Pop-up-Menü *Ansicht* auswählen.
 . Führen Sie einen der folgenden Schritte aus:
 +
 ** Wenn Sie den Verbindungen zu den erkannten Speicherarrays vertrauen, klicken Sie auf *Weiter* und klicken Sie dann auf *Ja*, um den nächsten Dialog im Assistenten zu bestätigen. Die selbstsignierten Zertifikate werden als vertrauenswürdig gekennzeichnet und die Speicher-Arrays werden dem Plugin hinzugefügt.

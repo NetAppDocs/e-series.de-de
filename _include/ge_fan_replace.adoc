@@ -1,0 +1,30 @@
+= 
+:allow-uri-read: 
+
+
+.Schritte
+. Identifizieren Sie den Lüfter, den Sie austauschen müssen, indem Sie die Konsolen-Fehlermeldungen überprüfen.
+. Den defekten Lüfter entfernen:
++
+image::../media/drw_g_fan_replace_ieops-1903.svg[Lüfter austauschen]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image::../media/icon_round_1.png[Callout-Nummer 1]
+| Halten Sie den Ventilator an den blauen Berührungspunkten auf beiden Seiten fest. 
+
+
+ a| 
+image::../media/icon_round_2.png[Callout-Nummer 2]
+| Ziehen Sie den Lüfter gerade nach oben aus der Fassung. 
+|===
+. Packen Sie den Ersatzlüfter aus und stellen Sie ihn auf eine ebene, statikfreie Oberfläche in der Nähe des Speichersystems.
++
+Bewahren Sie das Verpackungsmaterial auf, um es bei der Rücksendung des defekten Ventilators zu verwenden.
+
+. Setzen Sie den Ersatzlüfter ein, indem Sie ihn an den Führungen ausrichten, und drücken Sie dann nach unten, bis der Lüfteranschluss vollständig in der Buchse sitzt.
+

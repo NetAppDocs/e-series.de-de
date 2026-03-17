@@ -108,6 +108,9 @@ image::../media/e5700_ib_hic_w_cache_led_callouts_maint-e5700.gif[Cache-aktiv-LE
 *(1)* _Cache Active LED_
 
 . Wählen Sie auf der Startseite des SANtricity System Managers die Option *Vorgänge in Bearbeitung anzeigen*. Warten Sie, bis alle Vorgänge abgeschlossen sind, bevor Sie mit dem nächsten Schritt fortfahren.
++
+Warten Sie, bis alle Vorgänge abgeschlossen sind, bevor Sie mit dem nächsten Schritt fortfahren.
+
 . Schalten Sie das Controller-Shelf aus.
 +
 .. Schalten Sie beide Netzschalter am Controller Shelf aus.

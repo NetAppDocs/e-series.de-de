@@ -1,0 +1,38 @@
+---
+permalink: maintenance-ef50-ef80/controller-replace-workflow.html 
+sidebar: sidebar 
+keywords: ef50, ef80, replace the controller workflow 
+summary: Sie können einen defekten Controller in Ihrem EF50 oder EF80 Speichersystem ersetzen, indem Sie die Anforderungen des Speichersystems erfüllen, das System vorbereiten, den defekten Controller offline nehmen, den Controller ersetzen, den neuen Controller online nehmen und den Austauschvorgang abschließen. 
+---
+= Arbeitsablauf zum Austausch von Controllern – EF50 und EF80
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können einen defekten Controller in Ihrem EF50 oder EF80 Speichersystem ersetzen, indem Sie die Anforderungen des Speichersystems erfüllen, das System vorbereiten, den defekten Controller offline nehmen, den Controller ersetzen, den neuen Controller online nehmen und den Austauschvorgang abschließen.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["Eins"]link:controller-replace-requirements.html["Überprüfen Sie die Anforderungen für den Controller-Austausch"]
+[role="quick-margin-para"]
+Vergewissern Sie sich, dass Ihr Speichersystem einen ausgefallenen Controller hat, überprüfen Sie den Zustand Ihres Speichersystems, beschaffen Sie die für das Verfahren benötigten Tools und stellen Sie eine Managementstation sowie einen Browser bereit, um auf SANtricity System Manager zuzugreifen.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["Zwei"]link:controller-replace-prepare.html["Bereiten Sie den Austausch des Controllers vor"]
+[role="quick-margin-para"]
+Packen Sie den Ersatzcontroller aus, notieren Sie sich seine MAC-Adresse, überprüfen Sie, ob seine Teilenummer korrekt ist, und sichern Sie die Konfigurationsdatenbank des Speichersystems.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["Drittens"]link:controller-replace-offline-controller.html["Den beeinträchtigten Controller offline schalten"]
+[role="quick-margin-para"]
+Nehmen Sie den defekten Controller offline, um Datenverlust zu verhindern und die Systemstabilität beim Austausch des defekten Controllers zu gewährleisten.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png["Vier"]link:controller-replace-move-hardware.html["Ersetzen Sie den defekten Controller"]
+[role="quick-margin-para"]
+Prüfen Sie, ob alle Daten im Cache-Speicher auf die Laufwerke geschrieben wurden, trennen Sie alle Kabel vom defekten Controller, entfernen Sie den Controller, übertragen Sie die Komponenten auf den Ersatzcontroller, installieren Sie den Ersatzcontroller und schließen Sie alle Kabel wieder an.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-5.png["Fünf"]link:controller-replace-online-controller.html["Online den Ersatzcontroller"]
+[role="quick-margin-para"]
+Bestätigen Sie die IP-Adresse des Ersatzcontrollers, schalten Sie den Controller online und vergewissern Sie sich, dass der Status des Speichersystems Optimal ist.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-6.png["Sechs"]link:controller-replace-complete-replacement.html["Schließen Sie den Controller-Austausch ab"]
+[role="quick-margin-para"]
+Stellen Sie sicher, dass die neueste Version von SANtricity OS installiert ist, überprüfen Sie, ob die Volumes an ihre jeweiligen Controller zurückgegeben wurden, sammeln Sie Systemunterstützungsdaten und senden Sie das defekte Teil zurück an NetApp.

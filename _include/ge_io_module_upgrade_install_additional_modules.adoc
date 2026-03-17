@@ -1,0 +1,55 @@
+= 
+:allow-uri-read: 
+
+
+.Über diese Aufgabe
+Sie beginnen mit einem Controller und wiederholen dann die Schritte für den anderen Controller.
+
+.Schritte
+. Wenn Sie nicht bereits geerdet sind, sollten Sie sich richtig Erden.
+. Trennen Sie an einem der Controller die Verkabelung vom E/A-Modul, das Sie entfernen, es sei denn, es handelt sich um ein E/A-Blindmodul.
++
+Sie können die Kabel beschriften, damit Sie wissen, woher sie stammen. Je nach Art des I/O-Moduls, auf das Sie aufrüsten, müssen Sie jedoch möglicherweise nicht an denselben Ports neu verkabeln oder Sie können möglicherweise nicht dieselben Kabel wiederverwenden.
+
+. Entfernen Sie das I/O-Modul oder das I/O-Blanking-Modul aus dem Zielsteckplatz.
++
+Die folgende Abbildung zeigt, wie ein I/O-Blanking-Modul entfernt wird.
+
++
+image::../media/drw_g_io_blanking_module_replace_ieops-1901.svg[Entfernen eines I/O-Blanking-Moduls]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image:../media/icon_round_1.png["Callout-Nummer 1"]
+ a| 
+Am E/A-Modul oder E/A-Blindmodul die Rändelschraube gegen den Uhrzeigersinn drehen, um sie zu lösen.
+
+
+
+ a| 
+image:../media/icon_round_2.png["Callout-Nummer 2"]
+ a| 
+Ziehen Sie das I/O-Modul oder das I/O-Blindmodul mithilfe der Lasche auf der linken Seite und der Rändelschraube aus dem Controller.
+
+|===
+. Packen Sie das neue E/A-Modul aus und stellen Sie es auf eine ebene, antistatische Oberfläche in der Nähe des Storage-Systems.
+. Installieren Sie das neue I/O-Modul:
++
+.. Richten Sie das E/A-Modul an den Kanten der Öffnung des Controller-Steckplatzes aus.
+.. Schieben Sie das I/O-Modul vorsichtig ganz in den Steckplatz und achten Sie darauf, dass das Modul richtig im Anschluss sitzt.
++
+Sie können die Lasche auf der linken Seite und die Rändelschraube verwenden, um das I/O-Modul einzuschieben.
+
+.. Drehen Sie die Rändelschraube im Uhrzeigersinn, um sie festzuziehen.
+
+
+. Verkabeln Sie das E/A-Modul mit dem Host-Netzwerk.
++
+Sie können den link:../install-hw-ef50-ef80/install-cable.html["Verkabeln Sie die Hardware"^] Abschnitt des Systeminstallations- und Einrichtungshinweises für die Host-Netzwerkverkabelung verwenden.
+
+. Wiederholen Sie diese Schritte, um ein I/O-Modul im anderen Controller zu aktualisieren.
+

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: cabling, cables, power cable, power cabling, power supply cabling, E-Series, eseries, E2800, E5700, EF300, EF600, DE212C, DE224C, DE460C 
 summary: Schließen Sie die Netzteile der einzelnen Komponenten an separate Stromkreise an. 
 ---
-= Verkabelung des Storage-Systems (E-Series)
+= Stromverkabelung Ihres Speichersystems - E-Series
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -24,9 +24,9 @@ Die Stromversorgung des Storage-Systems muss die Anforderungen an das neue Festp
 .Schritt
 . Schließen Sie ein Netzkabel an die einzelnen Netzteile des Speichersystems an.
 . Verbinden Sie die beiden Stromkabel für jedes Shelf mit verschiedenen Stromverteilungs-Einheiten (PDUs) im Schrank oder Rack.
-. Schalten Sie beide Netzschalter ein.
+. Schalten Sie beide Netzteile ein.
 +
 
-NOTE: EF300- und EF600-Storage-Systeme verfügen über keine Netzschalter. Sie schalten sich ein, sobald die Kabel angeschlossen sind.
+NOTE: Je nach Speichersystem verfügen die Netzteile entweder über Netzschalter oder es gibt keine Netzschalter und Sie müssen die Stromkabel anschließen, um sie einzuschalten.
 
 

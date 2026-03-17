@@ -17,6 +17,15 @@ Nach der Vorbereitung der Aktualisierung können Sie die Controller entfernen un
 
 == Schritt 1: Controller entfernen
 
+[role="tabbed-block"]
+====
+.EF280 und EF50 Controller-Modelle
+--
+Informationen zum Entfernen von Controllern aus EF280- und EF50-Speichersystemen finden Sie unter link:https://docs.netapp.com/us-en/e-series/maintenance-ef50-ef80/controller-replace-move-hardware.html#step-1-remove-the-controller["EF50 und EF80 - Schritt 1: Entfernen Sie den Controller"^].
+
+--
+.Andere Controller-Modelle der E-Series
+--
 Entfernen Sie den Controller-Behälter, damit Sie ihn mit einem neuen aktualisieren können. Sie müssen alle Kabel trennen und alle SFP-Transceiver entfernen. Anschließend können Sie den Controller-Behälter aus dem Controller-Regal schieben.
 
 .Bevor Sie beginnen
@@ -63,10 +72,11 @@ image:../media/28_dwg_e2824_remove_controller_canister_upg-hw.gif["Controller-Be
 
 . Stellen Sie den alten Controller-Behälter mit den Freigabehebeln auf eine flache, statische Oberfläche in der Nähe des Controller-Laufwerkfachs ein. Positionieren Sie den Controller-Behälter so, dass Sie auf die obere Abdeckung zugreifen können.
 . (Bedingt) Wenn Sie Controller in einem Duplex-Controller-Laufwerksfach aktualisieren, wiederholen Sie alle Schritte, um den zweiten Controller-Behälter zu entfernen.
+. Wenn Sie den Akku des alten Reglers in der neuen Steuerung verwenden möchten, gehen Sie zum nächsten Teil des Abschnitts; andernfalls gehen Sie zu link:install-controllers-task.html["Installieren Sie neue Controller"].
 
 
-Wenn Sie den Akku des alten Reglers in der neuen Steuerung verwenden möchten, gehen Sie zum nächsten Teil des Abschnitts; andernfalls gehen Sie zu link:install-controllers-task.html["Installieren Sie neue Controller"].
-
+--
+====
 
 
 == Schritt 2: Entfernen Sie den Akku

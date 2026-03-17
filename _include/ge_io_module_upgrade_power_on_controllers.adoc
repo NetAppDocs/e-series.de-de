@@ -1,0 +1,29 @@
+= 
+:allow-uri-read: 
+
+
+.Schritte
+. Schließen Sie das Netzkabel an beiden Controllern an.
++
+Die Controller beginnen zu booten.
+
+. Überprüfen Sie die LEDs an den Steuergeräten, um sicherzustellen, dass die Kommunikation zwischen den Steuergeräten wiederhergestellt ist:
++
+** Die Aufmerksamkeits-LED bleibt an.
+** Je nach Host-Schnittstelle leuchtet, blinkt oder leuchtet die LED für Host-Link möglicherweise nicht.
+
+
+. Wenn die Controller wieder online sind:
++
+.. Bestätigen Sie, dass ihr Status Optimal ist.
+.. Vergewissern Sie sich, dass die Attention-LED an jedem Controller ausgeschaltet ist.
++
+Wenn der Status nicht Optimal ist oder eine der Attention-LEDs leuchtet, überprüfen Sie, ob alle Kabel korrekt angeschlossen sind.
+
++
+
+NOTE: Wenn Sie das Problem nicht beheben können, wenden Sie sich an https://www.netapp.com/company/contact-us/support/["NetApp Support"^]. Sammeln Sie gegebenenfalls Supportdaten für Ihr Speichersystem mithilfe von SANtricity System Manager.
+
+
+
+

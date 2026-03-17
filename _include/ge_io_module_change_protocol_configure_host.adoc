@@ -1,0 +1,13 @@
+= 
+:allow-uri-read: 
+
+
+Ausführliche Schritt-für-Schritt-Anweisungen finden Sie im Leitfaden, der für Ihr Speichersystem geeignet ist:
+
+* link:../config-linux/index.html["Linux Express-Konfiguration"]
+* link:../config-vmware/index.html["VMware Express-Konfiguration"]
+* link:../config-windows/index.html["Windows Express-Konfiguration"]
++
+Bestimmte Einstellungen können variieren. Prüfen Sie die http://mysupport.netapp.com/matrix["NetApp Interoperabilitätsmatrix"^] Genaue Anweisungen und zusätzliche empfohlene Einstellungen für Ihre Lösung
+
+

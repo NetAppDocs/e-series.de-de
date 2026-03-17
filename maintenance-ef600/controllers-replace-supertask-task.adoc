@@ -169,10 +169,16 @@ Entfernen Sie den Akku aus dem defekten Controller-Behälter, so dass Sie ihn in
 . Suchen Sie die Registerkarte „Drücken“ auf der Seite des Controllers.
 . Lösen Sie die Batterie, indem Sie auf die Lasche drücken und das Batteriegehäuse zusammendrücken.
 +
-image::../media/batt_3.png[„Drücken Sie die Lasche, um den Akku zu entriegeln]
+image::../media/batt_3.png[Drücken Sie die Tabulatortaste, um die Batterie zu entriegeln]
 
-. Drücken Sie vorsichtig das Anschlussgehäuse der Batterieverdrahtung. Ziehen Sie den Akku nach oben, und trennen Sie ihn von der Platine.image:../media/batt_2.png["Entfernen Sie den Stecker, der die Batterieverkabelung beherbergt"]
-. Heben Sie die Batterie aus der Steuerung und legen Sie sie auf eine flache, antistatische Oberfläche.image:../media/batt_4.png["Batterie aus der Steuerung herausheben"]
+. Drücken Sie vorsichtig das Anschlussgehäuse der Batterieverdrahtung. Ziehen Sie den Akku aus der Platine heraus.
++
+image:../media/batt_2.png["Entfernen Sie den Stecker, der die Batterieverkabelung beherbergt"]
+
+. Heben Sie die Batterie aus der Steuerung heraus und legen Sie sie auf eine flache, statische Oberfläche.
++
+image:../media/batt_4.png["Batterie aus der Steuerung herausheben"]
+
 
 
 

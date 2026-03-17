@@ -2,16 +2,18 @@
 sidebar: sidebar 
 permalink: rackmount-hardware.html 
 keywords: rackmount, rack-mount, install in rack, rails 
-summary: Montieren Sie die Hardware als Rack. 
+summary: Rack-mount-Hardware wird verwendet, um Ihre Hardware in einem Rack oder Schrank zu installieren. Installationsanweisungen sollten im Karton der Rack-mount-Hardware enthalten sein. Wenn Sie jedoch auf Installationsanweisungen zugreifen müssen, verwenden Sie den entsprechenden Link unten. 
 ---
-= Rack-montierte Hardware (E-Series)
+= Rack-mount-Hardware – E-Series
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Verwenden Sie die folgenden Links, um auf die Dokumentation zuzugreifen, die beschreibt, wie die Rackmontage-Hardware installiert wird.
+Rack-mount-Hardware wird verwendet, um Ihr Speichersystem in einem Rack oder Schrank zu installieren. Installationsanweisungen sollten im Karton der Rack-mount-Hardware enthalten sein. Wenn Sie jedoch auf Installationsanweisungen zugreifen müssen, verwenden Sie den entsprechenden Link unten.
+
+Für neuere Speichersysteme können Sie die unterstützte Rackmount-Hardware im NetApp Hardware Universe unter  https://hwu.netapp.com["NetApp Hardware Universe"^] überprüfen.
 
 
 
@@ -40,4 +42,4 @@ Datenzugriff https://mysupport.netapp.com/ecm/ecm_download_file/ECMLP2484194["In
 
 == Vierpolige-Rack -- SuperRail
 
-Datenzugriff https://docs.netapp.com/us-en/ontap-systems/platform-supplemental/superrail-install.html["Installation von SuperRail in einem 4-Säulen-Rack (DE224C/DE460C Shelfs)"^].
+Zugang https://docs.netapp.com/us-en/ontap-systems/platform-supplemental/superrail-install.html["Installieren Sie SuperRail in ein Vierpfosten-Gestell"^].

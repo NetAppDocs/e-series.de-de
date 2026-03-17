@@ -137,6 +137,7 @@ Die folgende Abbildung zeigt ein Beispiel für den Standort des Management-Ports
 image:../media/ethernet_callout.png["EF600 Management-Ports"]
 
 |===
+. Verbinden Sie Controller B mit dem Netzwerk.
 . Öffnen Sie einen Browser, und verwenden Sie die Standard-IP-Adresse (169.254.128.101), um eine Verbindung zum Controller herzustellen. Der Controller sendet ein selbstsigniertes Zertifikat zurück. Der Browser informiert Sie darüber, dass die Verbindung nicht sicher ist.
 +
 
@@ -164,7 +165,6 @@ NOTE: Wenn die Verbindung zu Controller A unterbrochen wird, können Sie ein eth
 Der Assistent Netzwerkeinstellungen konfigurieren wird angezeigt.
 
 . Verwenden Sie die vom Netzwerkadministrator bereitgestellten Netzwerkeinstellungen im Assistenten * Netzwerkeinstellungen konfigurieren*, um die Netzwerkeinstellungen von Controller B zu konfigurieren, und wählen Sie dann *Fertig stellen* aus.
-. Verbinden Sie Controller B mit dem Netzwerk.
 . Überprüfen Sie die Netzwerkeinstellungen von Controller B, indem Sie die konfigurierte IP-Adresse von Controller B in einem Browser eingeben.
 +
 

@@ -1,0 +1,256 @@
+---
+permalink: maintenance-ef50-ef80/io-module-replace.html 
+sidebar: sidebar 
+keywords: ef50, ef80 replace io module, replace hic, replace host interface card 
+summary: Ersetzen Sie ein defektes I/O-Modul in Ihrem EF50- oder EF80-Speichersystem durch ein I/O-Modul des gleichen Typs, um das Speichersystem wieder in seinen optimalen Betriebszustand zu versetzen. 
+---
+= Ersetzen eines I/O-Moduls – EF50 und EF80
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Ersetzen Sie ein defektes I/O-Modul in Ihrem EF50- oder EF80-Speichersystem durch ein I/O-Modul des gleichen Typs, um das Speichersystem wieder in seinen optimalen Betriebszustand zu versetzen.
+
+.Über diese Aufgabe
+* Ersetzen Sie ein E/A-Modul, indem Sie es vorbereiten, den betroffenen Controller offline nehmen, das defekte E/A-Modul ersetzen, den Controller wieder online nehmen und das defekte Teil an NetApp zurückgeben.
+* Der Begriff _I/O-Modul_ wird in diesem Verfahren anstelle von Host-Schnittstellenkarten (HICs) verwendet.
+* Die Fehler-LEDs des I/O-Moduls (für alle vier Steckplätze) sind funktionslos. Sie bleiben permanent aus; daher können sie nicht zur Überprüfung eines Fehlerzustands verwendet werden.
++
+Die Fehler-LEDs befinden sich an den Controllern: Die Fehler-LEDs für Steckplatz 1 und 2 befinden sich rechts von Steckplatz 2. Die Fehler-LEDs für Steckplatz 3 und 4 befinden sich links von Steckplatz 4.
+
+* Der defekte Controller muss nicht aus dem Chassis entfernt werden, da die E/A-Module bei eingesetztem Controller zugänglich sind.
+* Sie müssen den defekten Controller offline nehmen, bevor Sie die Kabel eines E/A-Moduls abziehen.
+* Sie können die Standort-LEDs (blau) des Speichersystems (an der Vorderseite des Speichersystems und an beiden Controllern) einschalten, um das betroffene Speichersystem leichter zu finden. Verwenden Sie den SANtricity System Manager, wählen Sie *Hardware* > *Controllers and components*, wählen Sie die Registerkarte *Controller shelf* und wählen Sie im Kontextmenü *Turn on locator light*.
+
+
+
+
+== Schritt 1: Vorbereitung zum Austausch eines I/O-Moduls
+
+Bereiten Sie den Austausch eines E/A-Moduls vor, indem Sie die notwendigen Werkzeuge und Geräte zusammentragen und die Konfigurationsdatenbank des Speichersystems sichern.
+
+.Schritte
+. Stellen Sie sicher, dass Sie Folgendes haben:
++
+** Das Ersatz-I/O-Modul.
++
+Stellen Sie sicher, dass Sie das defekte E/A-Modul durch ein E/A-Modul desselben Typs ersetzen. Sie können kein E/A-Modul eines anderen Typs installieren.
+
++
+Sie müssen in jedem Controller Ihres Speichersystems die gleiche Art und Anzahl von E/A-Modulen haben.
+
++
+
+CAUTION: *Möglicher Verlust des Datenzugriffs* -- Das Vorhandensein inkompatibler oder nicht übereinstimmender I/O-Module führt dazu, dass sich die Controller beim Einschalten sperren.
+
+** Ein ESD-Armband oder Sie haben andere antistatische Vorkehrungen getroffen.
+** Eine ebene, antistatische Arbeitsfläche.
+** Beschriftungen zur Kennzeichnung jedes Kabels, das mit dem defekten I/O-Modul verbunden ist.
+** Eine Managementstation mit einem Browser, der auf SANtricity System Manager für den beeinträchtigten Controller zugreifen kann.
++
+Um die System Manager-Oberfläche zu öffnen, rufen Sie im Browser den Domänennamen oder die IP-Adresse des betroffenen Controllers auf.
+
+
+
+. Sichern Sie die Konfigurationsdatenbank des Speichersystems mit SANtricity System Manager:
++
+Tritt beim Entfernen eines Controllers ein Problem auf, können Sie die gespeicherte Datei verwenden, um Ihre Konfiguration wiederherzustellen. Das System speichert den aktuellen Zustand der RAID-Konfigurationsdatenbank, die alle Daten für Volumengruppen und Datenträgerpools auf dem betroffenen Controller enthält.
+
++
+.. Wählen Sie *Support* > *Support Center* > *Diagnose*.
+.. Wählen Sie *Konfigurationsdaten Erfassen*.
+.. Wählen Sie *Collect*.
++
+Die Datei wird im Ordner Downloads für Ihren Browser mit dem Namen *configurationData-<arrayName>-<dateTime>.7z* gespeichert.
+
+
+
+
+
+
+
+== Schritt 2: Den Controller offline schalten
+
+Setzen Sie den defekten Controller offline, damit Sie den Rest dieser Prozedur sicher durchführen können.
+
+.Über diese Aufgabe
+Wenn Sie einen Controller offline nehmen, müssen Sie mindestens eine Minute warten, bevor Sie den Controller wieder online schalten. Diese Wartezeit ermöglicht es dem Speichersystem, den Status des Controllers zu aktualisieren und sicherzustellen, dass alle zwischengespeicherten Daten auf die Laufwerke geschrieben werden.
+
+.Schritte
+. Falls der betroffene Controller noch nicht offline ist, schalten Sie ihn mithilfe von SANtricity System Manager offline:
++
+.. Wählen Sie *Hardware* > *Controllers and components*, um die Controller anzuzeigen.
+.. Wählen Sie den Controller aus, den Sie offline schalten möchten, um dessen Inhaltsmenü anzuzeigen.
+.. Wählen Sie *Offline schalten* aus und bestätigen Sie dann, dass Sie die Aktion durchführen möchten.
++
+
+NOTE: Wenn Sie auf den SANtricity System Manager über den Controller zugreifen, den Sie offline schalten möchten, wird die Meldung „SANtricity System Manager nicht verfügbar“ angezeigt. Wählen Sie *Connect to an alternate network connection*, um automatisch über den anderen Controller auf den SANtricity System Manager zuzugreifen.
+
+
+
+. Warten Sie, bis SANtricity System Manager den Status des Controllers auf „Offline“ aktualisiert.
++
+
+CAUTION: Beginnen Sie keine anderen Vorgänge, bis der Status aktualisiert wurde.
+
+. Bestätigen Sie mithilfe des Recovery Guru, dass die defekte Komponente sicher entfernt werden kann:
++
+.. Wählen Sie *Recheck*.
+.. Bestätigen Sie, dass im Bereich „Details“ im Feld *Entfernen möglich* *Ja* angezeigt wird.
++
+
+CAUTION: Wenn im Feld *OK to remove* nicht *Yes* angezeigt wird, fahren Sie nicht mit der Entfernung der fehlerhaften Komponente fort. Beheben Sie das Problem stattdessen mithilfe des Recovery Guru.
+
+
+
+
+
+
+
+== Schritt 3: Ersetzen Sie das E/A-Modul
+
+Trennen Sie die Verkabelung vom defekten I/O-Modul, ersetzen Sie es durch das Ersatz-I/O-Modul und verkabeln Sie dann das Ersatz-I/O-Modul.
+
+.Schritte
+. Wenn Sie nicht bereits geerdet sind, sollten Sie sich richtig Erden.
+. Die Kabel vom defekten E/A-Modul abziehen.
++
+Beschriften Sie die Kabel, damit Sie wissen, woher sie stammen.
+
+. Entfernen Sie das defekte E/A-Modul aus dem Controller:
++
+image::../media/drw_g_io_module_replace_ieops-1900.svg[E/A-Modul entfernen]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image::../media/icon_round_1.png[Callout-Nummer 1]
+ a| 
+Drehen Sie die Rändelschraube des I/O-Moduls gegen den Uhrzeigersinn, um sie zu lösen.
+
+
+
+ a| 
+image::../media/icon_round_2.png[Callout-Nummer 2]
+ a| 
+Ziehen Sie das I/O-Modul mithilfe der Lasche mit der Portbezeichnung auf der linken Seite und der Rändelschraube aus dem Controller heraus.
+
+|===
+. Packen Sie das Ersatz-E/A-Modul aus und legen Sie es auf eine ebene, antistatische Oberfläche in der Nähe des Storage-Systems.
++
+Bewahren Sie das Verpackungsmaterial auf, um es bei der Rücksendung des defekten I/O-Moduls zu verwenden.
+
+. Installieren Sie das Ersatz-I/O-Modul in den Zielsteckplatz:
++
+.. Richten Sie das E/A-Modul an den Kanten des Steckplatzes aus.
+.. Schieben Sie das I/O-Modul vorsichtig ganz in den Steckplatz und achten Sie darauf, dass das Modul richtig im Anschluss sitzt.
++
+Sie können die Lasche auf der linken Seite und die Rändelschraube verwenden, um das I/O-Modul einzudrücken.
+
+.. Drehen Sie die Rändelschraube im Uhrzeigersinn, um sie festzuziehen.
+
+
+. Verkabeln Sie das I/O-Modul.
+
+
+
+
+== Schritt 4: Setzen Sie den Controller online
+
+Setzen Sie den defekten Controller wieder online.
+
+.Schritte
+. Schalten Sie den Controller mithilfe des SANtricity System Manager online:
++
+.. Wählen Sie *Hardware* > *Controllers and components*, um die Controller anzuzeigen.
+.. Wählen Sie den Controller aus, den Sie online platzieren möchten, um dessen Kontextmenü anzuzeigen.
+.. Wählen Sie *Online platzieren*, und bestätigen Sie anschließend, dass Sie die Operation durchführen möchten.
++
+Das System stellt den Controller online.
+
+
+
+. Überprüfen Sie beim Booten des Controllers die Controller-LEDs.
++
+Wenn die Kommunikation mit der anderen Steuerung wiederhergestellt wird:
+
++
+** Die gelbe Warn-LED leuchtet weiterhin.
+** Je nach Host-Schnittstelle leuchtet, blinkt oder leuchtet die LED für Host-Link möglicherweise nicht.
+
+
+. Wenn der Controller wieder online ist:
++
+.. Bestätigen Sie, dass der Status Optimal ist.
+.. Vergewissern Sie sich, dass die Attention-LED am Controller ausgeschaltet ist.
++
+Wenn der Status nicht Optimal ist oder eine der Attention-LEDs leuchtet, überprüfen Sie, ob alle Kabel korrekt angeschlossen und der Controller richtig installiert ist. Entfernen Sie den Controller gegebenenfalls und installieren Sie ihn erneut.
+
++
+
+NOTE: Sollten Sie das Problem nicht beheben können, kontaktieren Sie  https://mysupport.netapp.com/site/global/dashboard["NetApp Support"^] bevor Sie mit diesem Verfahren fortfahren. Sammeln Sie gegebenenfalls Supportdaten für Ihr Speichersystem mithilfe von SANtricity System Manager.
+
+
+
+
+
+
+
+== Schritt 5: Schließen Sie den Austausch des E/A-Moduls ab
+
+Verwenden Sie den SANtricity System Manager, um sicherzustellen, dass die neueste Version von SANtricity OS installiert ist, überprüfen Sie, ob alle Volumes an ihre zugehörigen Controller zurückgegeben wurden, und sammeln Sie Supportdaten, damit Sie den Betrieb wieder aufnehmen können.
+
+.Schritte
+. Stellen Sie sicher, dass die neueste Version von SANtricity OS auf dem Speichersystem installiert ist:
++
+.. Wählen Sie *Support* > *Upgrade Center*
+.. Installieren Sie bei Bedarf die neueste Version.
+
+
+. Überprüfen Sie, ob alle Volumes an ihre jeweiligen Controller zurückgegeben wurden:
++
+[cols="1,2"]
+|===
+| Wenn... | Dann... 
+
+
+ a| 
+Recovery Guru ist vorhanden und zeigt an, dass sich die Volumes nicht auf ihrem bevorzugten Pfad befinden (nicht an ihre zugehörigen Controller zurückgegeben wurden)
+ a| 
+.. Verteilen Sie die Volumes auf ihre jeweiligen Controller, indem Sie *Storage* > *Volumes* > *More* auswählen und im Dropdown-Menü *Redistribute volumes* wählen.
+.. Überprüfen Sie, ob alle Volumes ihren jeweiligen Controllern neu zugeordnet wurden, indem Sie prüfen, ob Recovery Guru vorhanden ist und weiterhin anzeigt, dass sich die Volumes nicht auf ihrem bevorzugten Pfad befinden.
+
+
+
+NOTE: Falls die Volumes immer noch nicht an ihre eigenen Controller zurückgegeben werden, wenden Sie sich an  https://mysupport.netapp.com/site/global/dashboard["NetApp Support"].
+
+
+
+ a| 
+Recovery Guru ist nicht vorhanden (es scheint, dass alle Volumes an ihre jeweiligen Controller zurückgegeben wurden)
+ a| 
+Überprüfen Sie, ob alle Volumes wieder ihren jeweiligen Controllern zugeordnet sind, indem Sie *Storage* > *Volumes* > *More* auswählen und im Dropdown-Menü *Change volume ownership* wählen, um die Volume-Besitzer anzuzeigen.
+
+|===
+. Sammeln Sie Supportdaten für Ihr Speichersystem:
++
+.. Wählen Sie *Support* > *Support Center* > *Diagnose*.
+.. Wählen Sie *Support-Daten Erfassen* Aus.
+.. Wählen Sie *Collect*.
++
+Die Datei wird im Ordner Downloads für Ihren Browser mit dem Namen *Support-Data.7z* gespeichert.
+
+
+
+
+
+
+
+== Schritt 6: Senden Sie das defekte Teil zurück an NetApp
+
+Senden Sie das defekte Teil an NetApp, wie in der mit dem Kit gelieferten RMA-Anleitung beschrieben, zurück. Siehe die https://mysupport.netapp.com/site/info/rma["Teilerückgabe und Ersatz"] Seite für weitere Informationen.

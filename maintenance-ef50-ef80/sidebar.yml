@@ -1,0 +1,44 @@
+---
+section: maintenance-ef50-ef80
+title: EF50 und EF80
+entries:
+- title: Wartungsübersicht
+  url: "/maintenance-ef50-ef80/maintain-overview.html"
+- title: Controller
+  pdf-filename: EF50 und EF80 Controller
+  entries:
+  - title: Controller ersetzen Workflow
+    url: "/maintenance-ef50-ef80/controller-replace-workflow.html"
+  - title: Prüfen Sie die Anforderungen
+    url: "/maintenance-ef50-ef80/controller-replace-requirements.html"
+  - title: System vorbereiten
+    url: "/maintenance-ef50-ef80/controller-replace-prepare.html"
+  - title: Offline-Controller
+    url: "/maintenance-ef50-ef80/controller-replace-offline-controller.html"
+  - title: Controller austauschen
+    url: "/maintenance-ef50-ef80/controller-replace-move-hardware.html"
+  - title: Online-Controller
+    url: "/maintenance-ef50-ef80/controller-replace-online-controller.html"
+  - title: Kompletter Controller-Austausch
+    url: "/maintenance-ef50-ef80/controller-replace-complete-replacement.html"
+- title: DIMM
+  url: "/maintenance-ef50-ef80/dimm-replace.html"
+- title: Laufwerk
+  url: "/maintenance-ef50-ef80/drive-replace.html"
+- title: Lüfter
+  url: "/maintenance-ef50-ef80/fan-replace.html"
+- title: E/A-Modul
+  pdf-filename: EF50 und EF80 E/A-Modul
+  entries:
+  - title: E/A-Modulübersicht
+    url: "/maintenance-ef50-ef80/io-module-overview.html"
+  - title: E/A-Modul austauschen
+    url: "/maintenance-ef50-ef80/io-module-replace.html"
+  - title: I/O-Modul aktualisieren
+    url: "/maintenance-ef50-ef80/io-module-upgrade.html"
+- title: Hostprotokoll des I/O-Moduls
+  url: "/maintenance-ef50-ef80/io-module-change-protocol.html"
+- title: NV-Batterie
+  url: "/maintenance-ef50-ef80/nvdimm-battery-replace.html"
+- title: Stromversorgung
+  url: "/maintenance-ef50-ef80/power-supply-replace.html"

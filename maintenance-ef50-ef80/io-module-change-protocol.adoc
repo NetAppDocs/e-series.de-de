@@ -1,0 +1,210 @@
+---
+permalink: maintenance-ef50-ef80/io-module-change-protocol.html 
+sidebar: sidebar 
+keywords: host protocol change, EF50, EF80 
+summary: Sie können das Protokoll auf den Host-I/O-Modulen in Ihrem EF50- oder EF80-Speichersystem ändern, wenn Sie ein anderes Protokoll auf Ihren vorhandenen I/O-Modulen benötigen, als Teil eines I/O-Modul-Upgrades oder wenn das Standardprotokoll auf neuen Controllern im Rahmen einer neuen Speichersysteminstallation oder eines Controller-Upgrades nicht das gewünschte Protokoll ist. 
+---
+= Ändern Sie das Host-I/O-Modulprotokoll – EF50 und EF80
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können das Protokoll auf den Host-I/O-Modulen in Ihrem EF50- oder EF80-Speichersystem ändern, wenn Sie ein anderes Protokoll auf Ihren vorhandenen I/O-Modulen benötigen, als Teil eines I/O-Modul-Upgrades oder wenn das Standardprotokoll auf neuen Controllern im Rahmen einer neuen Speichersysteminstallation oder eines Controller-Upgrades nicht das gewünschte Protokoll ist.
+
+.Bevor Sie beginnen
+Wenn Sie das Host-Protokoll im Rahmen einer Hardwareprozedur ändern (I/O-Modul-Upgrade, Installation eines neuen Systems oder Controller-Upgrade), müssen Sie die entsprechende Hardwareprozedur abgeschlossen haben.
+
+
+NOTE: Neue Hardware muss bereits installiert sein, da das Standardprotokoll und die Liste der verfügbaren Protokolle (die Sie in diesem Verfahren anzeigen) auf den aktuell installierten Host-I/O-Modulen basieren.
+
+[cols="1,2"]
+|===
+| Wenn Sie das Host-Protokoll ändern... | Dann... 
+
+
+ a| 
+Auf Ihren vorhandenen Host-E/A-Modulen (es muss keine neue Hardware installiert werden)
+ a| 
+Fahren Sie mit diesem Verfahren fort.
+
+
+
+ a| 
+Im Rahmen eines Upgrades des E/A-Moduls
+ a| 
+Aktualisieren Sie die Host-I/O-Module, bevor Sie mit diesem Verfahren fortfahren.
+
+Verwenden Sie die link:../maintenance-ef50-ef80/io-module-upgrade.html["I/O-Module für einen EF50 oder EF80 aufrüsten"] Vorgehensweise.
+
+
+
+ a| 
+Im Rahmen einer neuen Speichersysteminstallation
+ a| 
+Schließen Sie die Systeminstallation und -einrichtung ab, bevor Sie mit diesem Verfahren fortfahren.
+
+Verwenden Sie die link:../install-hw-ef50-ef80/install-workflow.html["Installation und Einrichtung für einen EF50 oder EF80"] Vorgehensweise.
+
+
+
+ a| 
+Im Rahmen eines Controller-Upgrades
+ a| 
+Führen Sie das Controller-Upgrade durch, bevor Sie mit diesem Verfahren fortfahren.
+
+Beginnen Sie mit der link:../upgrade-controllers/index.html["Erfahren Sie mehr über Upgrades von E-Series Controllern"] Vorgehensweise.
+
+|===
+.Über diese Aufgabe
+* Ändern Sie das Protokoll auf den Host-E/A-Modulen, indem Sie die Host-E/A-Operationen vorbereiten, stoppen, das Protokoll ändern und dann den Host so konfigurieren, dass er das neue Protokoll verwendet.
+* Das Protokoll wird auf allen Host-E/A-Modulen in Ihrem Speichersystem geändert.
+* Wenn Sie das Protokoll auf den Host-E/A-Modulen ändern, unterbrechen Sie vorübergehend den Host-Zugriff auf alle Volumes und machen das Speichersystem während des Neustarts, der einige Minuten dauert, nicht verfügbar.
+
+
+
+
+== Schritt 1: Vorbereitung auf die Protokolländerung
+
+Bereiten Sie die Änderung des Protokolls auf den Host-E/A-Modulen vor, indem Sie das aktuell verwendete Protokoll überprüfen, feststellen, ob Sie das Protokoll ändern müssen, und falls ja, ein Wartungsfenster für die Ausfallzeit einplanen.
+
+.Schritte
+. Wenn Sie das Protokoll der Host-E/A-Module in Ihrem Speichersystem nicht kennen, überprüfen Sie es mit SANtricity System Manager.
++
+.. Wählen Sie *Settings* > *System*.
+.. Wählen Sie im Abschnitt *Zusätzliche Einstellungen* *Host-I/O-Protokoll ändern* aus, um diese Seite zu öffnen.
+.. Siehe das im Feld *Host I/O Protocol* angezeigte Standardprotokoll.
++
+
+NOTE: Wenn Sie die Liste der verfügbaren Protokolle für Ihre Host-E/A-Module anzeigen möchten, wählen Sie das Dropdown-Menü im Feld *Host I/O Protocol* aus. Die Protokollliste basiert auf den derzeit installierten Host-E/A-Modulen.
+
+
+
+. Der nächste Schritt hängt davon ab, ob das Standardprotokoll das gewünschte Protokoll ist oder nicht:
++
+[cols="1,2"]
+|===
+| Wenn... | Dann... 
+
+
+ a| 
+Das Standardprotokoll ist das Protokoll, das Sie möchten
+ a| 
+Es ist keine Aktion erforderlich. Sie können dieses Verfahren beenden.
+
+
+
+ a| 
+Das Standardprotokoll ist nicht das Protokoll, das Sie möchten
+ a| 
+Fahren Sie mit diesem Verfahren fort, um das Protokoll zu ändern.
+
+|===
+. Planen Sie ein Wartungsfenster für dieses Verfahren ein.
+
+
+
+
+== Schritt 2: Host-I/O-Operationen anhalten
+
+Sie müssen alle E/A-Operationen vom Host stoppen und dann alle definierten Hosts aus dem Speichersystem löschen, bevor Sie das Protokoll ändern.
+
+
+NOTE: Sie können nicht auf die Daten im Speichersystem zugreifen, bis Sie die Protokolländerung erfolgreich abgeschlossen haben.
+
+.Schritte
+. Stellen Sie sicher, dass keine E/A-Operationen zwischen dem Speichersystem und allen angeschlossenen Hosts stattfinden. Führen Sie beispielsweise die folgenden Schritte aus:
++
+** Beenden Sie alle Prozesse, die die LUNs umfassen, die den Hosts vom Storage zugeordnet sind.
+** Stellen Sie sicher, dass keine Applikationen Daten auf LUNs schreiben, die vom Storage den Hosts zugeordnet sind.
+** Hängen Sie alle mit LUNs auf dem Speichersystem verknüpften Dateisysteme aus.
++
+
+NOTE: Die genauen Schritte zum Stoppen von Host-E/A-Operationen hängen vom Host-Betriebssystem und der Konfiguration ab und gehen über den Rahmen dieser Anleitung hinaus. Wenn Sie sich nicht sicher sind, wie Sie Host-E/A-Operationen in Ihrer Umgebung stoppen können, sollten Sie den Host herunterfahren oder kontaktieren Sie  https://mysupport.netapp.com/site/global/dashboard["NetApp Support"^].
+
++
+
+CAUTION: *Möglicher Datenverlust* -- Wenn Sie diesen Vorgang während der I/O-Vorgänge fortsetzen, können Sie Daten verlieren.
+
+
+
+. Stellen Sie bei jedem Controller sicher, dass die NV Caching Active (grün) LED ausgeschaltet ist.
++
+Wenn die NV Caching Active (grün) LED aus ist, wurden alle Daten im Cache-Speicher auf die Laufwerke geschrieben und es ist sicher, mit diesem Verfahren fortzufahren.
+
++
+
+NOTE: Wenn die NV Caching Active (grüne) LED leuchtet, werden zwischengespeicherte Daten auf die Laufwerke geschrieben. Sie müssen warten, bis der Vorgang abgeschlossen ist und die NV Caching Active (grüne) LED erlischt. Sollte die LED jedoch länger als fünf Minuten leuchten, wenden Sie sich an  https://mysupport.netapp.com/site/global/dashboard["NetApp Support"] bevor Sie mit diesem Verfahren fortfahren.
+
++
+Die LED „NV Caching Active“ (grün) befindet sich neben dem NV-Symbol auf dem Controller.
+
++
+image::../media/drw_g_nvmem_led_ieops-1839.svg[Position der NV-Status-LED]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image::../media/icon_round_1.png[Callout-Nummer 1]
+ a| 
+NV-Symbol und NV-Caching-Aktiv-LED am Controller
+
+|===
+. Bestätigen Sie, dass die Vorgänge an den Controllern abgeschlossen sind, indem Sie den SANtricity System Manager verwenden:
++
+.. Wählen Sie *Storage* > *Operations in progress*, um die Übersichtsseite anzuzeigen.
+.. Warten Sie, bis alle Vorgänge abgeschlossen sind und auf dem Übersichtsbildschirm *No operations currently in progress* angezeigt wird, bevor Sie mit dem nächsten Schritt fortfahren.
+
+
+. Löschen Sie alle definierten Hosts aus dem Speichersystem.
++
+Anweisungen finden Sie im https://docs.netapp.com/us-en/e-series-santricity/sm-storage/delete-host-or-host-cluster.html["Einen Host oder Hostcluster im SANtricity System Manager löschen"^] Verfahren.
+
+
+
+
+
+== Schritt 3: Ändern Sie das Protokoll
+
+Verwenden Sie den SANtricity System Manager, um das Protokoll auf den Host-E/A-Modulen zu ändern, warten Sie, bis die Controller ihren Neustartzyklus abgeschlossen haben, bestätigen Sie, dass ihr Status Optimal ist, und erstellen Sie dann die Hostdefinitionen neu.
+
+.Schritte
+. Wählen Sie *Settings* > *System*.
+. Wählen Sie im Abschnitt *Zusätzliche Einstellungen* *Host-I/O-Protokoll ändern* aus, um diese Seite zu öffnen.
+. Im Feld *Host I/O Protocol* wählen Sie im Dropdown-Menü das Protokoll aus, das Sie verwenden möchten.
++
+Die Protokollliste basiert auf den aktuell installierten Host-I/O-Modulen.
+
+. Geben Sie *CHANGE* in das leere Feld ein, um Ihre Änderung zu bestätigen.
+. Wählen Sie die Schaltfläche *Change*.
+. Warten Sie, bis die Controller ihren Neustartvorgang abgeschlossen haben.
++
+Das kann etwa fünf Minuten dauern.
+
+. Sobald die Controller wieder online sind, bestätigen Sie mit SANtricity System Manager, dass ihr Status Optimal ist.
+. Hostdefinitionen neu erstellen.
++
+Anweisungen finden Sie im https://docs.netapp.com/us-en/e-series-santricity/sm-storage/create-host.html["Erstellen Sie einen Host manuell im SANtricity System Manager"^] Verfahren.
+
+
+
+
+
+== Schritt 4: Konfigurieren Sie den Host für die Verwendung des neuen Protokolls
+
+Nach der Änderung des Host-Protokolls müssen Sie den Host so konfigurieren, dass er das neue Protokoll verwendet.
+
+Ausführliche Schritt-für-Schritt-Anweisungen finden Sie im Leitfaden, der für Ihr Speichersystem geeignet ist:
+
+* link:../config-linux/index.html["Linux Express-Konfiguration"]
+* link:../config-vmware/index.html["VMware Express-Konfiguration"]
+* link:../config-windows/index.html["Windows Express-Konfiguration"]
++
+Bestimmte Einstellungen können variieren. Prüfen Sie die http://mysupport.netapp.com/matrix["NetApp Interoperabilitätsmatrix"^] Genaue Anweisungen und zusätzliche empfohlene Einstellungen für Ihre Lösung
+
+

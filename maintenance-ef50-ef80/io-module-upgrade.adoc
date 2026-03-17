@@ -1,0 +1,294 @@
+---
+permalink: maintenance-ef50-ef80/io-module-upgrade.html 
+sidebar: sidebar 
+keywords: ef50, ef80, upgrade io module, upgrade hic, upgrade host interface card 
+summary: Sie können die I/O-Module in Ihrem EF50- oder EF80-Speichersystem aufrüsten, um die Anzahl der Host-Ports für eine verbesserte Netzwerkkonnektivität zu erhöhen und die Fähigkeit Ihres Systems zur Handhabung von Datenverkehr zu erweitern. 
+---
+= Upgrade der I/O-Module – EF50 und EF80
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können die I/O-Module in Ihrem EF50- oder EF80-Speichersystem aufrüsten, um die Anzahl der Host-Ports für eine verbesserte Netzwerkkonnektivität zu erhöhen und die Fähigkeit Ihres Systems zur Handhabung von Datenverkehr zu erweitern.
+
+.Über diese Aufgabe
+* Der Begriff _I/O-Modul_ wird in diesem Verfahren anstelle von Host-Schnittstellenkarten (HICs) verwendet.
+* Sie können E/A-Module aufrüsten, indem Sie vorhandene E/A-Module ersetzen oder E/A-Module zu ungenutzten E/A-Steckplätzen hinzufügen.
++
+Nicht verwendete I/O-Steckplätze sollten mit Blindabdeckungen versehen werden, um mögliche thermische Probleme zu vermeiden und für die EMC-Konformität zu sorgen.
+
+* Aktualisieren Sie die I/O-Module, indem Sie beide Controller vorbereiten, beide Controller ausschalten, die I/O-Module in beiden Controllern aktualisieren, beide Controller einschalten, überprüfen, ob das Upgrade erfolgreich war, und falls erforderlich das Host-I/O-Modulprotokoll überprüfen und ändern.
++
+Controller müssen nicht aus dem Gehäuse entfernt werden, da die I/O-Module bei eingesetzten Controllern zugänglich sind.
+
+* Sie müssen beide Controller ausschalten, bevor Sie Kabel eines E/A-Moduls abziehen.
+* Sie können die Standort-LEDs (blau) des Speichersystems (an der Vorderseite des Speichersystems und an beiden Controllern) einschalten, um das betroffene Speichersystem leichter zu finden. Verwenden Sie den SANtricity System Manager, wählen Sie *Hardware* > *Controllers and components*, wählen Sie die Registerkarte *Controller shelf* und wählen Sie im Kontextmenü *Turn on locator light*.
+
+
+
+
+== Schritt 1: Vorbereitung auf die Aktualisierung der E/A-Module
+
+Bereiten Sie die Aktualisierung der E/A-Module vor, indem Sie ein Wartungsfenster für die Ausfallzeit einplanen, die notwendigen Werkzeuge und Geräte zusammenstellen und die Konfigurationsdatenbank des Speichersystems sichern.
+
+.Schritte
+. Planen Sie ein Wartungsfenster für diesen Vorgang ein. Sie können nicht auf Daten im Speichersystem zugreifen, bis Sie diesen Vorgang erfolgreich abgeschlossen haben. Da beide Controller beim Einschalten dieselbe I/O-Modulkonfiguration aufweisen müssen, muss die Stromversorgung ausgeschaltet sein, wenn Sie I/O-Module aufrüsten.
+. Stellen Sie sicher, dass Sie Folgendes haben:
++
+** Die neuen E/A-Module, auf die Sie aktualisieren.
++
+Stellen Sie sicher, dass die I/O-Module, auf die Sie upgraden, von Ihrem Speichersystem unterstützt werden, dass Sie für jeden Controller den gleichen Typ und die gleiche Anzahl von I/O-Modulen haben und dass Sie die Steckplatzpriorität verstehen (das neue I/O-Modul muss in jedem Controller im gleichen Steckplatz installiert werden).
+
++
+
+CAUTION: *Möglicher Verlust des Datenzugriffs* -- Das Vorhandensein inkompatibler oder nicht übereinstimmender I/O-Module führt dazu, dass sich die Controller beim Einschalten sperren.
+
++
+Bei Bedarf können Sie die unterstützten E/A-Module und die Steckplatzpriorität für Ihr Speichersystem unter  https://hwu.netapp.com["NetApp Hardware Universe"^] bestätigen.
+
+** Kabel zum Anschluss der neuen E/A-Module an Ihr Netzwerk.
+** Ein ESD-Armband oder Sie haben andere antistatische Vorkehrungen getroffen.
+** Eine ebene, antistatische Arbeitsfläche.
+** Eine Managementstation mit einem Browser, der auf SANtricity System Manager für die Controller zugreifen kann.
++
+Um die System Manager-Oberfläche zu öffnen, rufen Sie im Browser den Domänennamen oder die IP-Adresse des Zielcontrollers auf.
+
+
+
+. Sichern Sie die Konfigurationsdatenbank des Speichersystems mit SANtricity System Manager:
++
+Tritt beim Entfernen eines Controllers ein Problem auf, können Sie die gespeicherte Datei verwenden, um Ihre Konfiguration wiederherzustellen. Das System speichert den aktuellen Zustand der RAID-Konfigurationsdatenbank, die alle Daten für Volumengruppen und Datenträgerpools auf dem betroffenen Controller enthält.
+
++
+.. Wählen Sie *Support* > *Support Center* > *Diagnose*.
+.. Wählen Sie *Konfigurationsdaten Erfassen*.
+.. Wählen Sie *Collect*.
++
+Die Datei wird im Ordner Downloads für Ihren Browser mit dem Namen *configurationData-<arrayName>-<dateTime>.7z* gespeichert.
+
+
+
+
+
+
+
+== Schritt 2: Schalten Sie beide Controller aus
+
+Schalten Sie beide Controller im Speichersystem aus, damit Sie die I/O-Module in beiden Controllern sicher aufrüsten können.
+
+.Schritte
+. Stellen Sie auf der Startseite des SANtricity System Manager sicher, dass das Speichersystem den Status Optimal aufweist.
++
+
+NOTE: Wenn der Status nicht optimal ist, verwenden Sie den Recovery Guru oder kontaktieren Sie  https://mysupport.netapp.com/site/global/dashboard["NetApp Support"^], um das Problem zu beheben.
+
+. Stellen Sie sicher, dass keine E/A-Operationen zwischen dem Speichersystem und allen angeschlossenen Hosts stattfinden.
++
+Führen Sie beispielsweise diese Schritte aus:
+
++
+** Stoppen Sie alle Prozesse, die die vom Speichersystem auf die Hosts gemappten LUNs betreffen.
+** Stellen Sie sicher, dass keine Anwendungen Daten auf LUNs schreiben, die vom Speichersystem den Hosts zugeordnet sind.
+** Hängen Sie alle Dateisysteme aus, die mit Volumes auf dem Speichersystem verknüpft sind.
++
+
+NOTE: Die genauen Schritte zum Stoppen von Host-E/A-Operationen hängen vom Host-Betriebssystem und der Konfiguration ab und gehen über den Rahmen dieser Anleitung hinaus. Wenn Sie sich nicht sicher sind, wie Sie Host-E/A-Operationen in Ihrer Umgebung stoppen können, sollten Sie den Host herunterfahren oder kontaktieren Sie  https://mysupport.netapp.com/site/global/dashboard["NetApp Support"^].
+
++
+
+CAUTION: *Möglicher Datenverlust* -- Wenn Sie diesen Vorgang während der I/O-Vorgänge fortsetzen, kann die Host-Anwendung den Zugriff auf die Daten verlieren, da der Speicher nicht zugänglich ist.
+
+
+
+. Stellen Sie bei jedem Controller sicher, dass die NV Caching Active (grün) LED ausgeschaltet ist.
++
+Wenn die NV Caching Active (grün) LED aus ist, wurden alle Daten im Cache-Speicher auf die Laufwerke geschrieben und es ist sicher, den defekten Controller zu entfernen.
+
++
+
+NOTE: Wenn die NV Caching Active (grüne) LED leuchtet, werden zwischengespeicherte Daten auf die Laufwerke geschrieben. Sie müssen warten, bis der Vorgang abgeschlossen ist und die NV Caching Active (grüne) LED erlischt. Sollte die LED jedoch länger als fünf Minuten leuchten, wenden Sie sich an  https://mysupport.netapp.com/site/global/dashboard["NetApp Support"] bevor Sie mit diesem Verfahren fortfahren.
+
++
+Die LED „NV Caching Active“ (grün) befindet sich neben dem NV-Symbol auf dem Controller.
+
++
+image::../media/drw_g_nvmem_led_ieops-1839.svg[Position der NV-Status-LED]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image::../media/icon_round_1.png[Callout-Nummer 1]
+ a| 
+NV-Symbol und NV-Caching-Aktiv-LED am Controller
+
+|===
+. Bestätigen Sie, dass die Vorgänge an den Controllern im SANtricity System Manager abgeschlossen sind:
++
+.. Wählen Sie *Storage* > *Operations in progress*, um die Übersichtsseite anzuzeigen.
+.. Warten Sie, bis alle Vorgänge abgeschlossen sind und auf dem Übersichtsbildschirm *No operations currently in progress* angezeigt wird, bevor Sie mit dem nächsten Schritt fortfahren.
+
+
+. Schalten Sie beide Controller aus:
++
+.. Beschriften Sie das Netzkabel beider Controller und ziehen Sie es dann ab.
+.. Warten Sie, bis alle LEDs an beiden Controllern ausgeschaltet sind.
+
+
+
+
+
+
+== Schritt 3: Aktualisieren Sie die I/O-Module
+
+Trennen Sie die Verkabelung von den I/O-Modulen, die Sie aufrüsten möchten (es sei denn, Sie haben I/O-Blanking-Module), ersetzen Sie die I/O-Module oder die I/O-Blanking-Module durch die neuen I/O-Module, und verkabeln Sie dann die neuen I/O-Module.
+
+.Über diese Aufgabe
+Sie beginnen mit einem Controller und wiederholen dann die Schritte für den anderen Controller.
+
+.Schritte
+. Wenn Sie nicht bereits geerdet sind, sollten Sie sich richtig Erden.
+. Trennen Sie an einem der Controller die Verkabelung vom E/A-Modul, das Sie entfernen, es sei denn, es handelt sich um ein E/A-Blindmodul.
++
+Sie können die Kabel beschriften, damit Sie wissen, woher sie stammen. Je nach Art des I/O-Moduls, auf das Sie aufrüsten, müssen Sie jedoch möglicherweise nicht an denselben Ports neu verkabeln oder Sie können möglicherweise nicht dieselben Kabel wiederverwenden.
+
+. Entfernen Sie das I/O-Modul oder das I/O-Blanking-Modul aus dem Zielsteckplatz.
++
+Die folgende Abbildung zeigt, wie ein I/O-Blanking-Modul entfernt wird.
+
++
+image::../media/drw_g_io_blanking_module_replace_ieops-1901.svg[Entfernen eines I/O-Blanking-Moduls]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image:../media/icon_round_1.png["Callout-Nummer 1"]
+ a| 
+Am E/A-Modul oder E/A-Blindmodul die Rändelschraube gegen den Uhrzeigersinn drehen, um sie zu lösen.
+
+
+
+ a| 
+image:../media/icon_round_2.png["Callout-Nummer 2"]
+ a| 
+Ziehen Sie das I/O-Modul oder das I/O-Blindmodul mithilfe der Lasche auf der linken Seite und der Rändelschraube aus dem Controller.
+
+|===
+. Packen Sie das neue E/A-Modul aus und stellen Sie es auf eine ebene, antistatische Oberfläche in der Nähe des Storage-Systems.
+. Installieren Sie das neue I/O-Modul:
++
+.. Richten Sie das E/A-Modul an den Kanten der Öffnung des Controller-Steckplatzes aus.
+.. Schieben Sie das I/O-Modul vorsichtig ganz in den Steckplatz und achten Sie darauf, dass das Modul richtig im Anschluss sitzt.
++
+Sie können die Lasche auf der linken Seite und die Rändelschraube verwenden, um das I/O-Modul einzuschieben.
+
+.. Drehen Sie die Rändelschraube im Uhrzeigersinn, um sie festzuziehen.
+
+
+. Verkabeln Sie das E/A-Modul mit dem Host-Netzwerk.
++
+Sie können den link:../install-hw-ef50-ef80/install-cable.html["Verkabeln Sie die Hardware"^] Abschnitt des Systeminstallations- und Einrichtungshinweises für die Host-Netzwerkverkabelung verwenden.
+
+. Wiederholen Sie diese Schritte, um ein I/O-Modul im anderen Controller zu aktualisieren.
+
+
+
+
+== Schritt 4: Schalten Sie beide Controller ein
+
+Schalten Sie beide Controller ein.
+
+.Schritte
+. Schließen Sie das Netzkabel an beiden Controllern an.
++
+Die Controller beginnen zu booten.
+
+. Überprüfen Sie die LEDs an den Steuergeräten, um sicherzustellen, dass die Kommunikation zwischen den Steuergeräten wiederhergestellt ist:
++
+** Die Aufmerksamkeits-LED bleibt an.
+** Je nach Host-Schnittstelle leuchtet, blinkt oder leuchtet die LED für Host-Link möglicherweise nicht.
+
+
+. Wenn die Controller wieder online sind:
++
+.. Bestätigen Sie, dass ihr Status Optimal ist.
+.. Vergewissern Sie sich, dass die Attention-LED an jedem Controller ausgeschaltet ist.
++
+Wenn der Status nicht Optimal ist oder eine der Attention-LEDs leuchtet, überprüfen Sie, ob alle Kabel korrekt angeschlossen sind.
+
++
+
+NOTE: Wenn Sie das Problem nicht beheben können, wenden Sie sich an https://www.netapp.com/company/contact-us/support/["NetApp Support"^]. Sammeln Sie gegebenenfalls Supportdaten für Ihr Speichersystem mithilfe von SANtricity System Manager.
+
+
+
+
+
+
+
+== Schritt 5: Schließen Sie das Upgrade des E/A-Moduls ab
+
+Stellen Sie mithilfe des SANtricity System Manager sicher, dass die neueste Version des SANtricity Betriebssystem installiert ist, überprüfen Sie, ob alle Volumes wieder ihren jeweiligen Controllern zugeordnet sind, sammeln Sie Supportdaten, um den Betrieb wiederaufnehmen zu können, und überprüfen und ändern Sie gegebenenfalls das Host-I/O-Modulprotokoll.
+
+.Schritte
+. Stellen Sie sicher, dass die neueste Version von SANtricity OS installiert ist:
++
+.. Wählen Sie *Support* > *Upgrade Center*.
+.. Installieren Sie bei Bedarf die neueste Version.
+
+
+. Überprüfen Sie, ob alle Volumes an ihre jeweiligen Controller zurückgegeben wurden:
++
+.. Wählen Sie *Storage* > *Volumes*.
+.. Überprüfen Sie auf der Seite *Alle Volumes*, ob die Volumes ihren jeweiligen Controllern zugeordnet sind.
+.. Wählen Sie *Mehr* > *Change volume ownership*, um die Volume-Besitzer anzuzeigen.
+
+
+. Der nächste Schritt hängt davon ab, ob die Volumes an ihre jeweiligen Controller zurückgegeben werden oder nicht:
++
+[cols="1,2"]
+|===
+| Wenn... | Dann... 
+
+
+ a| 
+Volumes gehören alle ihren jeweiligen Controllern
+ a| 
+Gehen Sie zum nächsten Schritt.
+
+
+
+ a| 
+Keines der Volumes wird an seine zugehörigen Controller zurückgegeben
+ a| 
+Wählen Sie *Storage* > *Volumes* > *More* und wählen Sie im Dropdown-Menü *Redistribute volumes*, um die Volumes ihren jeweiligen Controllern zurückzugeben.
+
+
+
+ a| 
+Nur einige der Volumes werden nach der automatischen oder manuellen Verteilung an ihre jeweiligen Controller zurückgegeben.
+ a| 
+Überprüfen Sie den Recovery Guru auf Host-Konnektivitätsprobleme.
+
+Falls kein Recovery Guru vorhanden ist oder wenn nach Befolgung der Recovery-Guru-Schritte die Volumes immer noch nicht an ihre jeweiligen Controller zurückgegeben wurden, kontaktieren Sie  https://mysupport.netapp.com/site/global/dashboard["NetApp Support"] bevor Sie mit diesem Verfahren fortfahren.
+
+|===
+. Sammeln Sie Supportdaten für Ihr Speichersystem:
++
+.. Wählen Sie *Support* > *Support Center* > *Diagnose*.
+.. Wählen Sie *Support-Daten Erfassen* Aus.
+.. Wählen Sie *Collect*.
++
+Die Datei wird im Ordner Downloads für Ihren Browser mit dem Namen *Support-Data.7z* gespeichert.
+
+
+
+. Falls Sie das Host-E/A-Modulprotokoll überprüfen und ändern müssen, verwenden Sie die Prozedur xref:io-module-change-protocol.html[Ändern Sie das Host-I/O-Modulprotokoll für ein EF50 oder EF80].
+

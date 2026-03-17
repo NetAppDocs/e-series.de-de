@@ -1,0 +1,23 @@
+= 
+:allow-uri-read: 
+
+
+.Schritte
+. Öffnen Sie im SANtricity System Manager das Speichercontrollerprofil für den betroffenen Controller:
++
+.. Gehen Sie zu *Support* > *Support Center*.
+.. Wählen Sie auf der Seite *Supportressourcen* *Storage Array Profile* aus.
+.. Scrollen Sie nach unten oder verwenden Sie das Suchfeld, um die *Daten-Cache-Modul*-Informationen zu finden.
+
+
+. Wenn eine der folgenden Bedingungen für ein DIMM angezeigt wird, notieren Sie sich den Standort des DIMM und fahren Sie mit diesem Verfahren fort, um das DIMM auszutauschen.
++
+Wenn keine dieser Bedingungen zutrifft, müssen Sie das DIMM nicht austauschen. Beenden Sie dieses Verfahren.
+
++
+** Ein defektes DIMM
+** Ein DIMM meldet *Data Cache Module* als nicht optimal
+** Ein DIMM mit nicht übereinstimmender *Data Cache Module*-Kapazität
+
+
+

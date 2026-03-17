@@ -72,7 +72,7 @@ Falls erforderlich, müssen Sie Zertifikatprobleme beheben, bevor Sie mit dem Er
 Wenn während der Erkennung Speicherarrays den Status „nicht vertrauenswürdige Zertifikate“ aufweisen, wird das Dialogfeld Selbstsignierte Zertifikate auflösen angezeigt. In diesem Dialogfeld können Sie nicht vertrauenswürdige Zertifikate auflösen oder CA-Zertifikate importieren (siehe link:vc-olh-import-certificates-for-arrays.html["Importieren Sie Zertifikate für Arrays"]).
 
 .Schritte
-. Wenn das Dialogfeld selbst signierte Zertifikate auflösen geöffnet wird, überprüfen Sie die Informationen, die für die nicht vertrauenswürdigen Zertifikate angezeigt werden. Für weitere Informationen können Sie auch auf die Ellipsen am äußersten Ende der Tabelle klicken und im Kontextmenü *Ansicht* wählen.
+. Wenn sich das Dialogfeld „Selbstsignierte Zertifikate auflösen“ öffnet, überprüfen Sie die angezeigten Informationen zu den nicht vertrauenswürdigen Zertifikaten. Für weitere Informationen können Sie auch auf die Auslassungspunkte am Ende der Tabelle klicken und im Pop-up-Menü *Ansicht* auswählen.
 . Führen Sie einen der folgenden Schritte aus:
 +
 ** Wenn Sie den Verbindungen zu den erkannten Speicherarrays vertrauen, klicken Sie auf *Weiter* und klicken Sie dann auf *Ja*, um die nächste Karte im Assistenten zu bestätigen. Die selbstsignierten Zertifikate werden als vertrauenswürdig gekennzeichnet und die Speicher-Arrays werden dem Plugin hinzugefügt.

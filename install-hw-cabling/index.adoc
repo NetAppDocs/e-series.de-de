@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: cabling, cables, E-Series, eseries, E2800, E5700, EF300, EF600, DE212C, DE224C, DE460C 
 summary: Verbinden Sie einen Host direkt mit einem Controller oder verwenden Sie Switches. 
 ---
-= Verkabelung des Storage-Systems (E-Series)
+= Verkabelung Ihres Speichersystems - E-Series
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -22,6 +22,9 @@ Die Verkabelungsinformationen richten sich an Hardwareinstechniker oder Systemad
 == Anwendbares Hardware-Modell
 
 Verkabelungsinformationen gelten für die folgenden Hardware-Modelle.
+
+
+NOTE: Falls Ihr Controller-Regal (Speichersystem) unten nicht aufgeführt ist, siehe link:../getting-started/getup-run-concept.html["Schnellstart für E-Series"^] und klicken Sie auf den Link für Ihr spezifisches Speichersystem, um auf die Verkabelungsinformationen zuzugreifen.
 
 |===
 | *Controller-Shelf* | *Drive Shelf* 
@@ -51,7 +54,7 @@ DE460C
 
 == Weitere Informationen zur Verkabelung
 
-Wenn Sie für die folgende Konfiguration verkabeln, lesen Sie https://mysupport.netapp.com/ecm/ecm_download_file/ECMLP2859057["Hinzufügen von IOM-Laufwerk-Shelfs zu einem vorhandenen E27XX-, E56XX- oder EF560-Controller-Shelf"^]
+Wenn Sie die Verkabelung für eine der folgenden Konfigurationen vornehmen, siehe https://mysupport.netapp.com/ecm/ecm_download_file/ECMLP2859057["Hinzufügen von IOM-Laufwerk-Shelfs zu einem vorhandenen E27XX-, E56XX- oder EF560-Controller-Shelf"^]
 
 |===
 | *Controller-Shelf* | *Drive Shelf* 

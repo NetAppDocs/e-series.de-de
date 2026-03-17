@@ -1,0 +1,48 @@
+= 
+:allow-uri-read: 
+
+
+.Schritte
+. Wenn Sie nicht bereits geerdet sind, sollten Sie sich richtig Erden.
+. Die Kabel vom defekten E/A-Modul abziehen.
++
+Beschriften Sie die Kabel, damit Sie wissen, woher sie stammen.
+
+. Entfernen Sie das defekte E/A-Modul aus dem Controller:
++
+image::../media/drw_g_io_module_replace_ieops-1900.svg[E/A-Modul entfernen]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image::../media/icon_round_1.png[Callout-Nummer 1]
+ a| 
+Drehen Sie die Rändelschraube des I/O-Moduls gegen den Uhrzeigersinn, um sie zu lösen.
+
+
+
+ a| 
+image::../media/icon_round_2.png[Callout-Nummer 2]
+ a| 
+Ziehen Sie das I/O-Modul mithilfe der Lasche mit der Portbezeichnung auf der linken Seite und der Rändelschraube aus dem Controller heraus.
+
+|===
+. Packen Sie das Ersatz-E/A-Modul aus und legen Sie es auf eine ebene, antistatische Oberfläche in der Nähe des Storage-Systems.
++
+Bewahren Sie das Verpackungsmaterial auf, um es bei der Rücksendung des defekten I/O-Moduls zu verwenden.
+
+. Installieren Sie das Ersatz-I/O-Modul in den Zielsteckplatz:
++
+.. Richten Sie das E/A-Modul an den Kanten des Steckplatzes aus.
+.. Schieben Sie das I/O-Modul vorsichtig ganz in den Steckplatz und achten Sie darauf, dass das Modul richtig im Anschluss sitzt.
++
+Sie können die Lasche auf der linken Seite und die Rändelschraube verwenden, um das I/O-Modul einzudrücken.
+
+.. Drehen Sie die Rändelschraube im Uhrzeigersinn, um sie festzuziehen.
+
+
+. Verkabeln Sie das I/O-Modul.
+

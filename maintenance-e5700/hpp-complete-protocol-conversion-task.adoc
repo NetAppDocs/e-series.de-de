@@ -33,6 +33,7 @@ Diese Aufgabe gilt nicht, wenn Sie ein neues Speicher-Array konvertieren, das no
 Die Switches für den iSCSI-Datenverkehr sollten entsprechend den Empfehlungen des Anbieters für iSCSI konfiguriert werden. Diese Empfehlungen können sowohl Konfigurationsrichtlinien als auch Code-Updates enthalten.
 
 . Wählen Sie im SANtricity System Manager Menü:Hardware[iSCSI-Ports konfigurieren].
+. Klicken Sie auf den gewünschten Controller und wählen Sie *Configure iSCSI ports*.
 . Wählen Sie die Porteinstellungen aus.
 +
 Sie können Ihr iSCSI-Netzwerk auf unterschiedliche Weise einrichten. Wenden Sie sich an Ihren Netzwerkadministrator, wenn Sie Tipps zur Auswahl der für Ihre Umgebung am besten geeigneten Konfiguration benötigen.
@@ -49,9 +50,6 @@ NOTE: Falls Sie Anweisungen zum Hinzufügen von Hosts oder Host-Clustern benöti
 Das Dialogfeld Hosteinstellungen wird angezeigt.
 
 .. Klicken Sie auf die Registerkarte *Host Ports*.
-+
-image::../media/sam1130_ss_host_settings_dialog_ports_tab_maint-e5700.gif[Dialogfeld „Host-Einstellungen“]
-
 .. Klicken Sie auf *Hinzufügen*, und verwenden Sie das Dialogfeld *Host-Port hinzufügen*, um dem Host eine neue Host-Port-ID zuzuordnen.
 +
 Die Länge des Namens der Host-Port-Kennung wird durch die Host-Schnittstellentechnologie bestimmt. Die Namen der FC-Host-Port-ID müssen 16 Zeichen lang sein. Die Namen der iSCSI-Host-Port-ID dürfen maximal 223 Zeichen lang sein. Der Port muss eindeutig sein. Eine bereits konfigurierte Portnummer ist nicht zulässig.
@@ -95,9 +93,6 @@ Durch das Zoning der Switches werden die Hosts eine Verbindung zum Storage herst
 Das Dialogfeld Hosteinstellungen wird angezeigt.
 
 .. Klicken Sie auf die Registerkarte *Host Ports*.
-+
-image::../media/sam1130_ss_host_settings_dialog_ports_tab_maint-e5700.gif[Dialogfeld „Host-Einstellungen“]
-
 .. Klicken Sie auf *Hinzufügen*, und verwenden Sie das Dialogfeld *Host-Port hinzufügen*, um dem Host eine neue Host-Port-ID zuzuordnen.
 +
 Die Länge des Namens der Host-Port-Kennung wird durch die Host-Schnittstellentechnologie bestimmt. Die Namen der FC-Host-Port-ID müssen 16 Zeichen lang sein. Die Namen der iSCSI-Host-Port-ID dürfen maximal 223 Zeichen lang sein. Der Port muss eindeutig sein. Eine bereits konfigurierte Portnummer ist nicht zulässig.

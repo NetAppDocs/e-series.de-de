@@ -1,0 +1,441 @@
+---
+permalink: maintenance-ef50-ef80/dimm-replace.html 
+sidebar: sidebar 
+keywords: ef50, ef80, replace a dimm 
+summary: Tauschen Sie ein DIMM in Ihrem EF50 oder EF80-Speichersystem aus, wenn es ausgefallen ist, meldet, dass es sich nicht in einem optimalen Zustand befindet, oder eine nicht übereinstimmende Kapazität aufweist. 
+---
+= DIMM austauschen – EF50 und EF80
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Tauschen Sie ein DIMM in Ihrem EF50 oder EF80-Speichersystem aus, wenn es ausgefallen ist, meldet, dass es sich nicht in einem optimalen Zustand befindet, oder eine nicht übereinstimmende Kapazität aufweist.
+
+.Über diese Aufgabe
+* Ersetzen Sie ein DIMM, indem Sie feststellen, ob Sie eines ersetzen müssen, die Vorbereitung durchführen, den ausgefallenen Controller offline schalten, den Controller entfernen, das DIMM ersetzen, den Controller wieder installieren, ihn online schalten, den Austausch abschließen und das defekte Teil an NetApp zurücksenden.
+* Sie müssen den defekten Controller offline schalten, bevor Sie eines seiner Kabel abziehen.
+* Sie können die Standort-LEDs (blau) des Speichersystems (an der Vorderseite des Speichersystems und an beiden Controllern) einschalten, um das betroffene Speichersystem leichter zu finden. Verwenden Sie den SANtricity System Manager, wählen Sie *Hardware* > *Controllers and components*, wählen Sie die Registerkarte *Controller shelf* und wählen Sie im Kontextmenü *Turn on locator light*.
+
+
+
+
+== Schritt 1: Bestimmen Sie, ob Sie ein DIMM ersetzen müssen
+
+Tauschen Sie ein DIMM aus, wenn es ausfällt, meldet, dass es sich nicht in einem optimalen Zustand befindet oder eine nicht übereinstimmende Kapazität aufweist.
+
+.Schritte
+. Öffnen Sie im SANtricity System Manager das Speichercontrollerprofil für den betroffenen Controller:
++
+.. Gehen Sie zu *Support* > *Support Center*.
+.. Wählen Sie auf der Seite *Supportressourcen* *Storage Array Profile* aus.
+.. Scrollen Sie nach unten oder verwenden Sie das Suchfeld, um die *Daten-Cache-Modul*-Informationen zu finden.
+
+
+. Wenn eine der folgenden Bedingungen für ein DIMM angezeigt wird, notieren Sie sich den Standort des DIMM und fahren Sie mit diesem Verfahren fort, um das DIMM auszutauschen.
++
+Wenn keine dieser Bedingungen zutrifft, müssen Sie das DIMM nicht austauschen. Beenden Sie dieses Verfahren.
+
++
+** Ein defektes DIMM
+** Ein DIMM meldet *Data Cache Module* als nicht optimal
+** Ein DIMM mit nicht übereinstimmender *Data Cache Module*-Kapazität
+
+
+
+
+
+
+== Schritt 2: Bereiten Sie den Austausch eines DIMM vor
+
+Bereiten Sie sich auf den Austausch eines DIMM vor, indem Sie sicherstellen, dass keine anderen Probleme mit dem Speichersystem vorliegen, die behoben werden müssen, dass sich die Volumes im richtigen Zustand befinden, dass Sie die notwendigen Werkzeuge und Geräte bereithalten, dass Sie Vorkehrungen treffen, um elektrostatische Entladungen zu verhindern, und dass Sie die Konfigurationsdatenbank des Speichersystems sichern.
+
+.Schritte
+. Beheben Sie alle weiteren Probleme mit dem Speichersystem.
++
+Verwenden Sie den SANtricity System Manager, um die Details im Recovery Guru zu überprüfen und festzustellen, ob weitere Probleme vorliegen.
+
+. Stellen Sie sicher, dass keine Volumes verwendet werden oder dass auf allen Hosts, die diese Volumes verwenden, ein Multipath-Treiber installiert ist.
+. Stellen Sie sicher, dass Sie Folgendes haben:
++
+** Ein Ersatz-DIMM, das die richtige Größe für Ihre Speichersystemkonfiguration hat.
+** Ein ESD-Armband oder Sie haben andere antistatische Vorkehrungen getroffen.
+** Eine ebene, antistatische Arbeitsfläche.
+** Beschriftungen zur Kennzeichnung jedes Kabels, das mit dem defekten Controller verbunden ist.
+** Eine Managementstation mit einem Browser, der auf SANtricity System Manager für den beeinträchtigten Controller zugreifen kann.
++
+Um die System Manager-Oberfläche zu öffnen, rufen Sie im Browser den Domänennamen oder die IP-Adresse des betroffenen Controllers auf.
+
+
+
+. Elektrostatische Entladungen (ESD) während des Umgangs mit und der Installation eines DIMM verhindern:
++
+** Halten Sie das DIMM in der ESD-Tasche, bis Sie bereit sind, es zu installieren.
+** Öffnen Sie die ESD-Tasche von Hand oder schneiden Sie die Oberseite mit einer Schere ab. Setzen Sie kein Metallwerkzeug oder Messer in den ESD-Beutel.
+** Bewahren Sie den ESD-Beutel und sämtliches Verpackungsmaterial auf, um das defekte DIMM zurückzusenden oder verwenden Sie eine zugelassene Verpackung, wenn Sie ein DIMM versenden.
+** Tragen Sie stets ein ESD-Armband, das an einer unlackierten Oberfläche des Gehäuses Ihres Speichersystems geerdet ist.
+** Magnetfelder vermeiden. Halten Sie DIMMs von magnetischen Geräten fern.
+
+
+. Sichern Sie die Konfigurationsdatenbank des Speichersystems mit SANtricity System Manager:
++
+Tritt beim Entfernen eines Controllers ein Problem auf, können Sie die gespeicherte Datei verwenden, um Ihre Konfiguration wiederherzustellen. Das System speichert den aktuellen Zustand der RAID-Konfigurationsdatenbank, die alle Daten für Volumengruppen und Datenträgerpools auf dem betroffenen Controller enthält.
+
++
+.. Wählen Sie *Support* > *Support Center* > *Diagnose*.
+.. Wählen Sie *Konfigurationsdaten Erfassen*.
+.. Wählen Sie *Collect*.
++
+Die Datei wird im Ordner Downloads für Ihren Browser mit dem Namen *configurationData-<arrayName>-<dateTime>.7z* gespeichert.
+
+
+
+
+
+
+
+== Schritt 3: Den Controller offline schalten
+
+Setzen Sie den defekten Controller offline, damit Sie den Rest dieser Prozedur sicher durchführen können.
+
+.Über diese Aufgabe
+Wenn Sie einen Controller offline nehmen, müssen Sie mindestens eine Minute warten, bevor Sie den Controller wieder online schalten. Diese Wartezeit ermöglicht es dem Speichersystem, den Status des Controllers zu aktualisieren und sicherzustellen, dass alle zwischengespeicherten Daten auf die Laufwerke geschrieben werden.
+
+.Schritte
+. Falls der betroffene Controller noch nicht offline ist, schalten Sie ihn mithilfe von SANtricity System Manager offline:
++
+.. Wählen Sie *Hardware* > *Controllers and components*, um die Controller anzuzeigen.
+.. Wählen Sie den Controller aus, den Sie offline schalten möchten, um dessen Inhaltsmenü anzuzeigen.
+.. Wählen Sie *Offline schalten* aus und bestätigen Sie dann, dass Sie die Aktion durchführen möchten.
++
+
+NOTE: Wenn Sie auf den SANtricity System Manager über den Controller zugreifen, den Sie offline schalten möchten, wird die Meldung „SANtricity System Manager nicht verfügbar“ angezeigt. Wählen Sie *Connect to an alternate network connection*, um automatisch über den anderen Controller auf den SANtricity System Manager zuzugreifen.
+
+
+
+. Warten Sie, bis SANtricity System Manager den Status des Controllers auf „Offline“ aktualisiert.
++
+
+CAUTION: Beginnen Sie keine anderen Vorgänge, bis der Status aktualisiert wurde.
+
+. Bestätigen Sie mithilfe des Recovery Guru, dass die defekte Komponente sicher entfernt werden kann:
++
+.. Wählen Sie *Recheck*.
+.. Bestätigen Sie, dass im Bereich „Details“ im Feld *Entfernen möglich* *Ja* angezeigt wird.
++
+
+CAUTION: Wenn im Feld *OK to remove* nicht *Yes* angezeigt wird, fahren Sie nicht mit der Entfernung der fehlerhaften Komponente fort. Beheben Sie das Problem stattdessen mithilfe des Recovery Guru.
+
+
+
+
+
+
+
+== Schritt 4: Entfernen Sie den Controller
+
+Vergewissern Sie sich, dass alle Daten im Cache-Speicher auf die Laufwerke geschrieben wurden, trennen Sie alle Kabel vom defekten Controller, und entfernen Sie dann den defekten Controller aus dem Gehäuse.
+
+.Schritte
+. Stellen Sie am betroffenen Controller sicher, dass die NV Caching Active (grün) LED aus ist.
++
+Wenn die NV Caching Active (grün) LED aus ist, wurden alle Daten im Cache-Speicher auf die Laufwerke geschrieben und es ist sicher, den defekten Controller zu entfernen.
+
++
+
+NOTE: Wenn die NV Caching Active (grüne) LED leuchtet, werden zwischengespeicherte Daten auf die Laufwerke geschrieben. Sie müssen warten, bis der Vorgang abgeschlossen ist und die NV Caching Active LED erlischt. Wenn die LED jedoch länger als fünf Minuten leuchtet, wenden Sie sich an  https://mysupport.netapp.com/site/global/dashboard["NetApp Support"] bevor Sie mit diesem Verfahren fortfahren.
+
++
+Die LED „NV Caching Active“ (grün) befindet sich neben dem NV-Symbol auf dem Controller.
+
++
+image::../media/drw_g_nvmem_led_ieops-1839.svg[Position der NV-Status-LED]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image::../media/icon_round_1.png[Callout-Nummer 1]
+ a| 
+NV-Symbol und NV-Caching-Aktiv-LED am Controller
+
+|===
+
+
+. Setzen Sie ein ESD-Armband an oder ergreifen Sie andere antistatische Vorsichtsmaßnahmen.
+. Beschriften Sie jedes Kabel, das an den defekten Controller angeschlossen ist.
+. Trennen Sie das Netzkabel von der Stromversorgung am betroffenen Controller.
++
+
+NOTE: Das Netzteil (PSU) hat keinen Netzschalter.
+
+. Ziehen Sie alle Kabel vom defekten Controller ab.
+. Entfernen Sie den defekten Controller:
++
+Die folgende Abbildung zeigt die Funktionsweise der Controller-Handles (von der linken Seite des Controllers) beim Entfernen eines Controllers:
+
++
+image::../media/drw_g_and_t_handles_remove_ieops-1837.svg[Controller-Handle-Operation zum Entfernen eines Controllers]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image::../media/icon_round_1.png[Callout-Nummer 1]
+ a| 
+Drücken Sie an beiden Enden des Controllers die vertikalen Verriegelungslaschen nach außen, um die Griffe in ihre horizontale Position zu bringen.
+
+
+
+ a| 
+image::../media/icon_round_2.png[Callout-Nummer 2]
+ a| 
+** Ziehen Sie die Griffe zu sich heran, um den Controller aus der Midplane zu lösen.
++
+Wenn Sie ziehen, fahren die Griffe aus dem Controller heraus und dann spüren Sie einen Widerstand, ziehen Sie weiter.
+
+** Ziehen Sie den Controller aus dem Gehäuse, während Sie die Unterseite des Controllers stützen, und legen Sie ihn auf eine ebene, antistatische Arbeitsfläche.
+
+
+
+
+ a| 
+image::../media/icon_round_3.png[Callout-Nummer 3]
+ a| 
+Drehen Sie bei Bedarf die Griffe aufrecht (neben den Laschen), um sie aus dem Weg zu räumen.
+
+|===
+. Öffnen Sie die Controller-Abdeckung, indem Sie die Rändelschraube gegen den Uhrzeigersinn drehen, um sie zu lösen, und öffnen Sie dann die Abdeckung.
+
+
+
+
+== Schritt 5: DIMM austauschen
+
+Suchen Sie den defekten DIMM im Inneren des beschädigten Controllers und ersetzen Sie ihn.
+
+.Schritte
+. Wenn Sie nicht bereits geerdet sind, sollten Sie sich richtig Erden.
+. Suchen Sie das defekte DIMM.
++
+
+NOTE: Konsultieren Sie entweder die https://hwu.netapp.com["Hardware Universe"] oder die FRU-Karte auf der Abdeckung des Controllers, um die genauen DIMM-Positionen zu erfahren.
+
+. Entfernen Sie das defekte DIMM:
++
+image::../media/drw_g_dimm_ieops-1873.svg[DIMM ersetzen]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image::../media/icon_round_1.png[Callout-Nummer 1]
+ a| 
+DIMM-Steckplatznummerierung und -positionen.
+
+
+NOTE: Je nach Speichersystemmodell haben Sie zwei oder vier DIMMs.
+
+
+
+ a| 
+image::../media/icon_round_2.png[Callout-Nummer 2]
+ a| 
+** Beachten Sie die Ausrichtung des DIMM im Sockel, damit Sie das Ersatz-DIMM in der gleichen Ausrichtung einsetzen können.
+** Entfernen Sie das defekte DIMM, indem Sie die beiden Auswurfklappen an beiden Enden des DIMM-Steckplatzes langsam auseinanderdrücken.
+
+
+
+IMPORTANT: Fassen Sie das DIMM vorsichtig an den Ecken oder Kanten an, um Druck auf die Bauteile der DIMM-Leiterplatte zu vermeiden.
+
+
+
+ a| 
+image::../media/icon_round_3.png[Callout-Nummer 3]
+ a| 
+Heben Sie das DIMM-Modul an und nehmen Sie es aus dem Steckplatz heraus.
+
+Die Auswerferklappen bleiben in der offenen Position.
+
+|===
+. Packen Sie das Ersatz-DIMM aus und legen Sie es auf eine ebene, antistatische Oberfläche in der Nähe des Storage-Systems.
++
+Bewahren Sie das Verpackungsmaterial auf, um es bei der Rücksendung des defekten DIMM zu verwenden.
+
+. Installieren Sie das Ersatz-DIMM:
++
+.. Stellen Sie sicher, dass sich die DIMM-Auswurfklappen am Anschluss in der geöffneten Position befinden.
+.. Fassen Sie das DIMM an den Ecken und setzen Sie es gerade in den Steckplatz ein.
++
+Die Kerbe an der Unterseite des DIMM, zwischen den Pins, muss mit der Nase im Steckplatz übereinstimmen.
+
++
+Bei korrektem Einsetzen lässt sich das DIMM leicht einschieben, sitzt aber fest im Steckplatz. Setzen Sie das DIMM erneut ein, wenn Sie das Gefühl haben, dass es nicht korrekt eingesetzt ist. Drücken Sie ein DIMM niemals mit Gewalt in einen Steckplatz.
+
+.. Überprüfen Sie den DIMM visuell, um sicherzustellen, dass er gleichmäßig ausgerichtet und vollständig in den Steckplatz eingesetzt ist.
+.. Drücken Sie vorsichtig, aber fest auf die Oberkante des DIMM, bis die Auswurfstasten an beiden Enden des DIMM in die Kerben einrasten.
+
+
+
+
+
+
+== Schritt 6: Installieren Sie den Controller neu
+
+Bauen Sie den Controller wieder in das Gehäuse ein, schließen Sie das Netzkabel und alle seine Kabel wieder an.
+
+.Über diese Aufgabe
+Die folgende Abbildung zeigt die Bedienung der Griffe des Controllers (von der linken Seite eines Controllers) beim Wiedereinbau des Controllers und kann als Referenz für die Schritte des Wiedereinbaus des Controllers verwendet werden.
+
+image::../media/drw_g_and_t_handles_reinstall_ieops-1838.svg[Bedienvorgang zum Installieren eines Controllers]
+
+[cols="1,4"]
+|===
+
+
+ a| 
+image::../media/icon_round_1.png[Callout-Nummer 1]
+ a| 
+Falls Sie die Griffe des Controllers nach oben (neben den Laschen) gedreht haben, um sie während der Wartung des Controllers aus dem Weg zu räumen, drehen Sie sie nun wieder in die horizontale Position.
+
+
+
+ a| 
+image::../media/icon_round_2.png[Callout-Nummer 2]
+ a| 
+Drücken Sie die Griffe, um den Controller wieder in das Gehäuse einzusetzen.
+
+
+
+ a| 
+image::../media/icon_round_3.png[Callout-Nummer 3]
+ a| 
+Drehen Sie die Griffe in die aufrechte Position und arretieren Sie sie mit den Verriegelungslaschen.
+
+|===
+.Schritte
+. Schließen Sie die Abdeckung des Controllers und drehen Sie die Rändelschraube im Uhrzeigersinn, bis sie fest sitzt.
+. Setzen Sie den Controller in das Gehäuse ein:
++
+.. Richten Sie die Rückseite des Controllers an der Öffnung im Gehäuse aus und drücken Sie vorsichtig, aber fest auf die Griffe, bis der Controller die Midplane erreicht und vollständig eingesetzt ist.
++
+
+NOTE: Wenden Sie beim Einschieben des Controllers in das Gehäuse keine übermäßige Kraft an; dies könnte die Anschlüsse beschädigen.
+
+.. Drehen Sie die Griffe des Controllers nach oben und verriegeln Sie sie mit den Laschen.
+
+
+. Schließen Sie das Netzkabel wieder an das Netzteil an und sichern Sie das Netzkabel mit der Netzkabelhalterung.
++
+Sobald die Stromversorgung wiederhergestellt ist, sollte die Status-LED grün sein.
+
+. Schließen Sie alle Kabel wieder an den Controller an.
++
+
+NOTE: Die Kabel müssen wieder angeschlossen werden, bevor der Controller online geht. Dies ist besonders wichtig für die Spiegelungskabelverbindungen, da sie die vollständige Systemredundanz gewährleisten und für Cache-Spiegelung und E/A-Übertragung verwendet werden.
+
+
+
+
+
+== Schritt 7: Setzen Sie den Controller online
+
+Setzen Sie den defekten Controller wieder online.
+
+.Schritte
+. Schalten Sie den Controller mithilfe des SANtricity System Manager online:
++
+.. Wählen Sie *Hardware* > *Controllers and components*, um die Controller anzuzeigen.
+.. Wählen Sie den Controller aus, den Sie online platzieren möchten, um dessen Kontextmenü anzuzeigen.
+.. Wählen Sie *Online platzieren*, und bestätigen Sie anschließend, dass Sie die Operation durchführen möchten.
++
+Das System stellt den Controller online.
+
+
+
+. Überprüfen Sie beim Booten des Controllers die Controller-LEDs.
++
+Wenn die Kommunikation mit der anderen Steuerung wiederhergestellt wird:
+
++
+** Die gelbe Warn-LED leuchtet weiterhin.
+** Je nach Host-Schnittstelle leuchtet, blinkt oder leuchtet die LED für Host-Link möglicherweise nicht.
+
+
+. Wenn der Controller wieder online ist:
++
+.. Bestätigen Sie, dass der Status Optimal ist.
+.. Vergewissern Sie sich, dass die Attention-LED am Controller ausgeschaltet ist.
++
+Wenn der Status nicht Optimal ist oder eine der Attention-LEDs leuchtet, überprüfen Sie, ob alle Kabel korrekt angeschlossen und der Controller richtig installiert ist. Entfernen Sie den Controller gegebenenfalls und installieren Sie ihn erneut.
+
++
+
+NOTE: Sollten Sie das Problem nicht beheben können, kontaktieren Sie  https://mysupport.netapp.com/site/global/dashboard["NetApp Support"^] bevor Sie mit diesem Verfahren fortfahren. Sammeln Sie gegebenenfalls Supportdaten für Ihr Speichersystem mithilfe von SANtricity System Manager.
+
+
+
+
+
+
+
+== Schritt 8: Schließen Sie den DIMM-Austausch ab
+
+Verwenden Sie den SANtricity System Manager, um sicherzustellen, dass die neueste Version von SANtricity OS installiert ist, überprüfen Sie, ob alle Volumes an ihre zugehörigen Controller zurückgegeben wurden, und sammeln Sie Supportdaten, damit Sie den Betrieb wieder aufnehmen können.
+
+.Schritte
+. Stellen Sie sicher, dass die neueste Version von SANtricity OS auf dem Speichersystem installiert ist:
++
+.. Wählen Sie *Support* > *Upgrade Center*
+.. Installieren Sie bei Bedarf die neueste Version.
+
+
+. Überprüfen Sie, ob alle Volumes an ihre jeweiligen Controller zurückgegeben wurden:
++
+[cols="1,2"]
+|===
+| Wenn... | Dann... 
+
+
+ a| 
+Recovery Guru ist vorhanden und zeigt an, dass sich die Volumes nicht auf ihrem bevorzugten Pfad befinden (nicht an ihre zugehörigen Controller zurückgegeben wurden)
+ a| 
+.. Verteilen Sie die Volumes auf ihre jeweiligen Controller, indem Sie *Storage* > *Volumes* > *More* auswählen und im Dropdown-Menü *Redistribute volumes* wählen.
+.. Überprüfen Sie, ob alle Volumes ihren jeweiligen Controllern neu zugeordnet wurden, indem Sie prüfen, ob Recovery Guru vorhanden ist und weiterhin anzeigt, dass sich die Volumes nicht auf ihrem bevorzugten Pfad befinden.
+
+
+
+NOTE: Falls die Volumes immer noch nicht an ihre eigenen Controller zurückgegeben werden, wenden Sie sich an  https://mysupport.netapp.com/site/global/dashboard["NetApp Support"].
+
+
+
+ a| 
+Recovery Guru ist nicht vorhanden (es scheint, dass alle Volumes an ihre jeweiligen Controller zurückgegeben wurden)
+ a| 
+Überprüfen Sie, ob alle Volumes wieder ihren jeweiligen Controllern zugeordnet sind, indem Sie *Storage* > *Volumes* > *More* auswählen und im Dropdown-Menü *Change volume ownership* wählen, um die Volume-Besitzer anzuzeigen.
+
+|===
+. Sammeln Sie Supportdaten für Ihr Speichersystem:
++
+.. Wählen Sie *Support* > *Support Center* > *Diagnose*.
+.. Wählen Sie *Support-Daten Erfassen* Aus.
+.. Wählen Sie *Collect*.
++
+Die Datei wird im Ordner Downloads für Ihren Browser mit dem Namen *Support-Data.7z* gespeichert.
+
+
+
+
+
+
+
+== Schritt 9: Senden Sie das defekte Teil zurück an NetApp
+
+Senden Sie das defekte Teil an NetApp, wie in der mit dem Kit gelieferten RMA-Anleitung beschrieben, zurück. Siehe die https://mysupport.netapp.com/site/info/rma["Teilerückgabe und Ersatz"] Seite für weitere Informationen.

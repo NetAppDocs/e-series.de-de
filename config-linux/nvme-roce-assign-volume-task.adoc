@@ -41,7 +41,7 @@ Es werden alle nicht zugewiesenen Volumes angezeigt, aber Funktionen für Hosts 
 
 
 .Schritte
-. Wählen Sie Menü:Storage[Hosts].
+. Wählen Sie im linken Bereich der SANtricity System Manager-Oberfläche Menü:Storage[Hosts].
 . Wählen Sie den Host oder Host-Cluster aus, dem Sie Volumes zuweisen möchten, und klicken Sie dann auf *Volumes zuweisen*.
 +
 Es wird ein Dialogfeld angezeigt, in dem alle Volumes aufgelistet werden, die zugewiesen werden können. Sie können jede der Spalten sortieren oder etwas in die *Filter* Box geben, um bestimmte Volumen leichter zu finden.

@@ -142,7 +142,7 @@ Die Datei wird im Ordner Downloads Ihres Browsers mit dem Namen Support-Data.7z 
 ** Über den SANtricity System Manager:
 +
 ... Wählen Sie *Hardware*.
-... Wenn die Grafik die Laufwerke anzeigt, wählen Sie *Controller & Komponenten*, um die Controller anzuzeigen.
+... Wenn die Grafik die Laufwerke anzeigt, wählen Sie *Controller & Components*, um die Controller anzuzeigen
 ... Wählen Sie den Controller aus, den Sie in den Offline-Modus versetzen möchten.
 ... Wählen Sie im Kontextmenü die Option *Offline platzieren* aus, und bestätigen Sie, dass Sie den Vorgang ausführen möchten.
 +
@@ -341,8 +341,8 @@ NOTE: Wenden Sie sich an den technischen Support, wenn das Problem nicht gelöst
 
 . Überprüfen Sie, ob alle Volumes an den bevorzugten Eigentümer zurückgegeben wurden.
 +
-.. Wählen Sie *Storage › Volumes*. Überprüfen Sie auf der Seite * All Volumes*, ob die Volumes an die bevorzugten Eigentümer verteilt werden. Wählen Sie *Mehr › Eigentümerschaft ändern*, um die Eigentümer des Volumes anzuzeigen.
-.. Wenn alle Volumes im Besitz des bevorzugten Eigentümers sind, fahren Sie mit Schritt 5 fort.
+.. Wählen Sie *Storage › Volumes*. Überprüfen Sie auf der Seite *All Volumes*, ob die Volumes den bevorzugten Besitzern zugeordnet sind. Wählen Sie *More › Change ownership*, um die Besitzer der Volumes anzuzeigen.
+.. Wenn alle Volumes im Besitz des bevorzugten Eigentümers sind, fahren Sie mit Schritt 4 fort.
 .. Wenn keines der Volumes zurückgegeben wird, müssen Sie die Volumes manuell zurückgeben. Gehen Sie zu *Mehr › Volumes neu verteilen*.
 .. Wenn nach der automatischen Verteilung oder manuellen Verteilung nur einige der Volumes an ihre bevorzugten Besitzer zurückgegeben werden, müssen Sie den Recovery Guru auf Probleme bei der Host-Konnektivität prüfen.
 .. Wenn kein Recovery Guru vorhanden ist oder wenn die Volumes nach der Durchführung der Recovery Guru-Schritte immer noch nicht an ihre bevorzugten Besitzer zurückgegeben werden, wenden Sie sich an den Support.

@@ -1,0 +1,24 @@
+---
+permalink: maintenance-ef50-ef80/io-module-overview.html 
+sidebar: sidebar 
+keywords: ef50, ef80, replace io module, upgrade io module, io module overview 
+summary: Die Speichersysteme EF50 und EF80 bieten Flexibilität bei der Aufrüstung oder dem Austausch von I/O-Modulen, um die Netzwerkkonnektivität und Leistung zu verbessern. 
+---
+= Übersicht über die Wartung von E/A-Modulen – EF50 und EF80
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Die Speichersysteme EF50 und EF80 bieten Flexibilität beim Austausch oder der Aufrüstung von I/O-Modulen zur Verbesserung der Netzwerkanbindung und Leistung.
+
+* link:io-module-replace.html["Ersetzen Sie ein I/O-Modul"]
++
+Wenn ein E/A-Modul in Ihrem Speichersystem ausfällt, können Sie es durch ein E/A-Modul desselben Typs ersetzen, um das Speichersystem wieder in seinen optimalen Betriebszustand zu versetzen.
+
+* link:io-module-upgrade.html["Upgrade eines I/O-Moduls"]
++
+Sie können die E/A-Module Ihres Speichersystems aufrüsten, um die Anzahl der Host-Ports für eine verbesserte Netzwerkkonnektivität zu erhöhen und die Fähigkeit Ihres Systems zur Verarbeitung von Datenverkehr zu erweitern.
+
+

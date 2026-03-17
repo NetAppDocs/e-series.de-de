@@ -1,0 +1,163 @@
+---
+permalink: install-hw-ef50-ef80/install-complete-setup.html 
+sidebar: sidebar 
+keywords:  
+summary: Nach dem Einschalten Ihres EF50- oder EF80-Speichersystems schließen Sie die Systemeinrichtung ab, indem Sie den Management-Port an jedem Controller für das Out-of-Band-Systemmanagement verkabeln und konfigurieren, Ihr Speichersystem konfigurieren und anschließend überprüfen, ob das Host-I/O-Modulprotokoll korrekt ist. 
+---
+= Komplette Einrichtung des Speichersystems – EF50 und EF80
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Nach dem Einschalten Ihres EF50- oder EF80-Speichersystems schließen Sie die Systemeinrichtung ab, indem Sie den Management-Port an jedem Controller für das Out-of-Band-Systemmanagement verkabeln und konfigurieren, Ihr Speichersystem konfigurieren und anschließend überprüfen, ob das Host-I/O-Modulprotokoll korrekt ist.
+
+
+
+== Schritt 1: Verkabeln und konfigurieren Sie die Management-Ports
+
+Verkabeln Sie den Management-Port an jedem Controller und konfigurieren Sie die Ports anschließend mithilfe eines DHCP-Servers oder einer statischen IP-Adresse.
+
+[role="tabbed-block"]
+====
+.Option 1: DHCP-Server
+--
+Verkabeln Sie und konfigurieren Sie anschließend die Management-Ports mithilfe eines DHCP-Servers.
+
+.Bevor Sie beginnen
+* Holen Sie die zugewiesenen IP-Adressen zum Herstellen einer Verbindung zum Speichersystem vom Netzwerkadministrator ab.
+* Notieren Sie sich die MAC-Adresse an der Seite jedes Controllers. Sie verwenden die MAC-Adresse, um zu identifizieren, welche IP-Adresse jedem Controller zugewiesen ist.
+* Konfigurieren Sie Ihren DHCP-Server so, dass für jeden Controller eine IP-Adresse, eine Subnetzmaske und eine Gateway-Adresse als permanentes Leasing zugeordnet werden.
+
+
+.Schritte
+. Verwenden Sie Ethernet-Kabel, um die Management-Ports der einzelnen Controller mit Ihrem Netzwerk zu verbinden.
++
+*1000BASE-T RJ-45-Kabel*
+
++
+image::../media/oie_cable_rj45.png[RJ-45-Kabel]
+
++
+image:../media/drw_ef50-ef80_wrench_to_network_ieops-2613.svg["Verkabelung des ef50- und ef80-Controller-Management-Ports zum Netzwerk"]
+
+. Öffnen Sie einen Browser, und stellen Sie eine Verbindung zum Storage-System mit einer der Controller-IP-Adressen her, die Sie vom Netzwerkadministrator bereitgestellt haben.
+
+
+--
+.Option 2: Statische IP-Adresse
+--
+Verbinden Sie die Kabel und konfigurieren Sie anschließend die Management-Ports manuell, indem Sie die IP-Adresse und die Subnetzmaske eingeben.
+
+.Bevor Sie beginnen
+* Holen Sie die IP-Adresse, Subnetzmaske, Gateway-Adresse und DNS- und NTP-Serverinformationen des Controllers von Ihrem Netzwerkadministrator ab.
+* Stellen Sie sicher, dass der verwendete Laptop keine Netzwerkkonfiguration von einem DHCP-Server empfängt.
+
+
+.Schritte
+. Verbinden Sie den Management-Port von Controller A mit einem Ethernet-Kabel mit dem Ethernet-Port eines Laptops.
++
+*1000BASE-T RJ-45-Kabel*
+
++
+image::../media/oie_cable_rj45.png[RJ-45-Kabel]
+
++
+image:../media/drw_ef50-ef80_wrench_to_laptop_ieops-2663.svg["ef50 und ef80 Controller-Management-Port-Verkabelung"]
+
+. Öffnen Sie einen Browser und verwenden Sie die Standard-IP-Adresse (169.254.128.101), um eine Verbindung zum Controller herzustellen.
++
+Der Controller sendet ein selbstsigniertes Zertifikat zurück. Der Browser informiert Sie, dass die Verbindung nicht sicher ist.
+
+. Befolgen Sie die Anweisungen des Browsers, um SANtricity System Manager zu starten.
++
+Wenn Sie keine Verbindung herstellen können, überprüfen Sie, ob Sie keine Netzwerkkonfiguration von einem DHCP-Server erhalten.
+
+. Legen Sie das Kennwort des Speichersystems fest, um sich anzumelden.
+. Verwenden Sie die vom Netzwerkadministrator bereitgestellten Netzwerkeinstellungen im Assistenten * Netzwerkeinstellungen konfigurieren*, um die Netzwerkeinstellungen von Controller A zu konfigurieren, und wählen Sie dann *Fertig stellen* aus.
++
+
+NOTE: Da Sie die IP-Adresse zurücksetzen, verliert System Manager die Verbindung zum Controller.
+
+. Trennen Sie das Ethernet-Kabel von Ihrem Laptop (lassen Sie es an Controller A angeschlossen), und verbinden Sie es mit Ihrem Netzwerk.
+. Öffnen Sie einen Browser auf einem mit Ihrem Netzwerk verbundenen Computer, und geben Sie die neu konfigurierte IP-Adresse von Controller A ein.
++
+
+NOTE: Wenn Sie die Verbindung zu Controller A verlieren, können Sie ein Ethernet-Kabel an Controller B anschließen, um die Verbindung zu Controller A über Controller B (169.254.128.102) wiederherzustellen.
+
+. Melden Sie sich mit dem zuvor festgelegten Passwort an. Der Assistent *Netzwerkeinstellungen konfigurieren* wird angezeigt.
+. Verwenden Sie die vom Netzwerkadministrator bereitgestellten Netzwerkeinstellungen im Assistenten * Netzwerkeinstellungen konfigurieren*, um die Netzwerkeinstellungen von Controller B zu konfigurieren, und wählen Sie dann *Fertig stellen* aus.
+. Verbinden Sie Controller B mit dem Netzwerk.
++
+Beide Controller-Management-Ports sind jetzt mit dem Netzwerk verbunden:
+
++
+image:../media/drw_ef50-ef80_wrench_to_network_ieops-2613.svg["Verkabelung des ef50- und ef80-Controller-Management-Ports zum Netzwerk"]
+
+. Überprüfen Sie die Netzwerkeinstellungen von Controller B, indem Sie die neu konfigurierte IP-Adresse von Controller B in einem Browser eingeben.
++
+
+NOTE: Wenn die Verbindung zu Controller B unterbrochen wird, können Sie Ihre zuvor validierte Verbindung zu Controller A verwenden, um die Verbindung mit Controller B über Controller A wiederherzustellen
+
+
+
+--
+====
+
+
+== Schritt 2: Konfigurieren Sie Ihr Speichersystem
+
+Verwenden Sie SANtricity System Manager, um Ihr Speichersystem zu konfigurieren und zu verwalten.
+
+.Bevor Sie Beginnen
+* Sie müssen Ihre Management-Ports mit dem Netzwerk verkabelt und konfiguriert haben.
+* Überprüfen und notieren Sie Ihr Passwort und die konfigurierten IP-Adressen.
+
+
+.Schritte
+. Greifen Sie mit den konfigurierten IP-Adressen auf den SANtricity System Manager zu.
+. Verwenden Sie SANtricity System Manager, um Ihr Speichersystem zu verwalten.
++
+Sie können die im SANtricity System Manager enthaltene Online-Hilfe konsultieren.
+
+
+
+
+
+== Schritt 3: Überprüfen Sie, ob das Host-I/O-Modulprotokoll korrekt ist
+
+Ihr Speichersystem wird mit einem Standardprotokoll auf den Host-E/A-Modulen ausgeliefert. Wenn das Standardprotokoll nicht das gewünschte Protokoll ist, können Sie es ändern.
+
+.Schritte
+. Überprüfen Sie das Standardprotokoll, das auf den Host-E/A-Modulen Ihres Speichersystems verwendet wird, mit SANtricity System Manager.
++
+.. Wählen Sie *Settings* > *System*.
+.. Klicken Sie im Abschnitt *Zusätzliche Einstellungen* auf *Host-I/O-Protokoll ändern*, um diese Seite zu öffnen.
+.. Sehen Sie das standardmäßige Host-E/A-Protokoll, das auf den Host-E/A-Modulen Ihres Speichersystems verwendet wird, im Feld *Host-E/A-Protokoll* angezeigt.
+
+
+. Der nächste Schritt hängt davon ab, ob das Standardprotokoll das gewünschte Protokoll ist oder nicht:
++
+[cols="1,2"]
+|===
+| Wenn... | Dann... 
+
+
+ a| 
+Das Standardprotokoll ist das Protokoll, das Sie möchten
+ a| 
+Es ist kein Handeln erforderlich.
+
+
+
+ a| 
+Das Standardprotokoll ist nicht das Protokoll, das Sie möchten
+ a| 
+Sie müssen es mit dem link:../maintenance-ef50-ef80/io-module-change-protocol.html["Ändern Sie das Hostprotokoll"^] Verfahren ändern.
+
+
+NOTE: Die Änderung des Host-Port-Protokolls umfasst die Vorbereitung auf die Protokolländerung, das Anhalten der Host-I/O-Operationen, die Änderung des Protokolls und anschließend die Konfiguration des Hosts zur Nutzung des neuen Protokolls.
+
+|===
+

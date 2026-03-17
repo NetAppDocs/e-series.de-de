@@ -1,0 +1,40 @@
+= 
+:allow-uri-read: 
+
+
+Setzen Sie den defekten Controller wieder online.
+
+.Schritte
+. Schalten Sie den Controller mithilfe des SANtricity System Manager online:
++
+.. Wählen Sie *Hardware* > *Controllers and components*, um die Controller anzuzeigen.
+.. Wählen Sie den Controller aus, den Sie online platzieren möchten, um dessen Kontextmenü anzuzeigen.
+.. Wählen Sie *Online platzieren*, und bestätigen Sie anschließend, dass Sie die Operation durchführen möchten.
++
+Das System stellt den Controller online.
+
+
+
+. Überprüfen Sie beim Booten des Controllers die Controller-LEDs.
++
+Wenn die Kommunikation mit der anderen Steuerung wiederhergestellt wird:
+
++
+** Die gelbe Warn-LED leuchtet weiterhin.
+** Je nach Host-Schnittstelle leuchtet, blinkt oder leuchtet die LED für Host-Link möglicherweise nicht.
+
+
+. Wenn der Controller wieder online ist:
++
+.. Bestätigen Sie, dass der Status Optimal ist.
+.. Vergewissern Sie sich, dass die Attention-LED am Controller ausgeschaltet ist.
++
+Wenn der Status nicht Optimal ist oder eine der Attention-LEDs leuchtet, überprüfen Sie, ob alle Kabel korrekt angeschlossen und der Controller richtig installiert ist. Entfernen Sie den Controller gegebenenfalls und installieren Sie ihn erneut.
+
++
+
+NOTE: Sollten Sie das Problem nicht beheben können, kontaktieren Sie  https://mysupport.netapp.com/site/global/dashboard["NetApp Support"^] bevor Sie mit diesem Verfahren fortfahren. Sammeln Sie gegebenenfalls Supportdaten für Ihr Speichersystem mithilfe von SANtricity System Manager.
+
+
+
+

@@ -64,8 +64,7 @@ Die Datei wird im Ordner Downloads für Ihren Browser mit dem Namen *configurati
 
 . Wenn der Controller nicht bereits offline ist, versetzen Sie ihn jetzt mithilfe von SANtricity System Manager in den Offline-Modus.
 +
-.. Wählen Sie *Hardware*.
-.. Wenn die Grafik die Laufwerke anzeigt, wählen Sie *Zurück vom Shelf anzeigen* aus, um die Controller anzuzeigen.
+.. Menü auswählen:Hardware[Controllers and components].
 .. Wählen Sie den Controller aus, den Sie in den Offline-Modus versetzen möchten.
 .. Wählen Sie im Kontextmenü die Option *Offline platzieren* aus, und bestätigen Sie, dass Sie den Vorgang ausführen möchten.
 +
@@ -228,7 +227,7 @@ Platzieren Sie den Controller online, sammeln Sie Support-Daten und setzen Sie d
 .Schritte
 . Platzieren Sie den Controller in den Online-Modus
 +
-.. Navigieren Sie in System Manager zur Hardware-Seite.
+.. Navigieren Sie im System Manager zur Seite *Hardware*.
 .. Wählen Sie *Zurück von Controller anzeigen*.
 .. Wählen Sie den Controller mit der ausgetauschten Host-Schnittstellenkarte aus.
 .. Wählen Sie in der Dropdown-Liste * Online platzieren* aus.

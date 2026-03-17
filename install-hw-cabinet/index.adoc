@@ -4,14 +4,16 @@ sidebar: sidebar
 keywords: 3040 40U cabinet, cabinet installation, drive tray installation, controller installation, shelf installation, E2800, E5700, EF300, EF600, 
 summary: Übersicht über die Installation von Laufwerksfächern im E-Series 3040 40-HE-Schrank 
 ---
-= Installieren von Fächern im 3040 40-HE-Schrank (E-Series)
+= Installieren Sie Einschübe im 3040 40U-Schrank - E-Series
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Sie können die folgenden Controller-Laufwerksfächer und ErweiterungsLaufwerksfächer im 40-HE-Schrank der E-Series 3040 installieren:
+Sie können die folgenden Controller-Laufwerksschächte und Erweiterungslaufwerksschächte im E-Series 3040 40U-Schrank installieren.
+
+Falls Ihre Controller-Laufwerksschächte oder Erweiterungslaufwerksschächte unten nicht aufgeführt sind, siehe  https://hwu.netapp.com["NetApp Hardware Universe"^] um zu überprüfen, ob Ihre Controller-Laufwerksschächte oder Erweiterungslaufwerksschächte unterstützt werden.
 
 * E2612, E2624 und E2660 Controller-Laufwerksfächer
 * E2712, E2724 und E2760 Controller-Laufwerksfächer

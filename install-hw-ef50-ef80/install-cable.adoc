@@ -1,0 +1,332 @@
+---
+permalink: install-hw-ef50-ef80/install-cable.html 
+sidebar: sidebar 
+keywords: ef50, ef80, cabling, cable, host cabling, direct-attached topology, fabric-attached topology 
+summary: 'Nach der Installation Ihrer EF50- oder EF80-Speichersystemhardware verkabeln Sie die Inter-Controller-Spiegelungs- und Host-Netzwerkverbindungen. (Sie verkabeln die Management-Ports später im Abschnitt „Complete storage system setup“.)' 
+---
+= Hardware verkabeln – EF50 und EF80
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Nach der Installation Ihrer EF50- oder EF80-Speichersystemhardware verkabeln Sie die Inter-Controller-Spiegelungs- und Host-Netzwerkverbindungen. (Sie verkabeln die Management-Ports später im Abschnitt „Complete storage system setup“.)
+
+.Über diese Aufgabe
+* Der Begriff _I/O-Modul_ wird in diesem Verfahren verwendet, um sich auf die Host-Schnittstellenkarten (HICs) zu beziehen.
+* Die Kabelgrafiken enthalten Pfeilsymbole, die die richtige Ausrichtung (oben oder unten) der Zuglasche des Kabelsteckers beim Einstecken eines Steckers in einen Anschluss anzeigen.
++
+Beim Einstecken des Steckers sollten Sie ein Klicken spüren; wenn Sie kein Klicken spüren, entfernen Sie ihn, drehen Sie ihn um und versuchen Sie es erneut.
+
++
+image:../media/drw_cable_pull_tab_direction_ieops-1699.svg["Richtung der Kabelzuglasche"]
+
+
+
+
+
+== Schritt 1: Verkabeln Sie die Spiegelungsverbindungen zwischen den Controllern
+
+Verbinden Sie die Controller per Kabel, um die Inter-Controller-Spiegelung zu ermöglichen. Inter-Controller-Spiegelungsverbindungen gewährleisten vollständige Systemredundanz und werden für Cache-Spiegelung und I/O-Übertragung verwendet. Die Verkabelung ist für EF50 und EF80 Speichersysteme identisch.
+
+
+NOTE: Unabhängig von der Geschwindigkeit der in Ihrem Speichersystem installierten Inter-Controller-Mirroring-I/O-Module (100 GbE oder 200 GbE, wie von Ihrem Speichersystem unterstützt), verwenden Sie die mitgelieferten 200-GbE-Kabel. Wenn die Geschwindigkeit der Inter-Controller-Mirroring-I/O-Module 100 GbE beträgt, arbeitet die Verbindung mit der niedrigeren Geschwindigkeit (100 GbE).
+
+.Schritte
+. Verbinden Sie die Controller miteinander:
++
+.. Kabel Controller A Port e4a zu Controller B Port e4a.
+.. Kabel Controller A Port e4b zu Controller B Port e4b.
++
+*200 GbE Ethernet-Kabel*
+
++
+image::../media/oie_cable100_gbe_qsfp28.png[100 gbe ethernet cable zur Spiegelung von Verbindungen]
+
++
+image:../media/drw_ef50-ef80_mirroring_2p_100gbe_ieops-2659.svg["EF50- und EF80-Controller-zu-Controller-Spiegelungsverbindungskabel"]
+
+
+
+
+
+
+
+== Schritt 2: Verkabeln Sie die Host-Verbindungen
+
+Verkabeln Sie die Host-Anschlüsse Ihres Speichersystems entsprechend Ihrer Netzwerktopologie: direkt angeschlossen oder fabric-angebunden.
+
+.Über diese Aufgabe
+* Je nach Speichersystemmodell können die im Speichersystem installierten Host-I/O-Module entweder Ethernet oder Fibre Channel (FC) sein. Die Verkabelungsbeispiele in diesem Verfahren zeigen beide Typen von Host-I/O-Modulen, wie sie von den Speichersystemmodellen unterstützt werden.
+* In den Verkabelungsbeispielen sind keine 4-Port 64Gb FC HBAs in Host 1 und Host 2 dargestellt; wenn Sie diese jedoch installiert haben, verkabeln Sie jeden anderen Port auf die gleiche Weise wie bei den 2-Port HBAs.
+
+
+[role="tabbed-block"]
+====
+.Direkt-angebundene Topologie
+--
+Die folgenden Beispiele zeigen die Verkabelung eines Speichersystems mit den Hosts unter Verwendung einer Direct-Attached-Topologie.
+
+.EF50 mit zwei 4-Port 64Gb FC I/O-Modulen
+[%collapsible]
+=====
+.Über diese Aufgabe
+* Das Verkabelungsbeispiel zeigt Host-I/O-Module in den Steckplätzen 1 und 2. Dies ist die maximale Anzahl an Host-I/O-Modulen, die vom EF50 storage system unterstützt wird. Allerdings ist nur das Host-I/O-Modul in Steckplatz 1 erforderlich; das Host-I/O-Modul in Steckplatz 2 ist optional.
++
+Wenn in Ihrem Speichersystem ein Host-E/A-Modul installiert ist, können Sie die Verkabelung zum zusätzlichen Host-E/A-Modul ignorieren und nur das installierte Host-E/A-Modul verkabeln.
+
+* Ein direkt angeschlossenes Speichersystem verfügt über zwei separate Pfade für Redundanz: Pfad A und Pfad B.
++
+** Die Verbindung von Pfad A wird durch blaue Kabel und blaue Anschlüsse an den Hosts und Controllern dargestellt. Sie verbindet die HBA-Ports jedes Hosts mit den Ports a und c von Controller A.
+** Die Verbindung von Pfad B wird durch rote Kabel und rote Anschlüsse an den Hosts und Controllern dargestellt. Sie verbindet die HBA-Ports jedes Hosts mit den Ports a und c von Controller B.
+
+
+* Obwohl im Verkabelungsbeispiel die I/O-Modul-Anschlüsse a und c mit den Hosts verbunden sind, können Sie auch die Anschlüsse a und b oder die Anschlüsse c und d verwenden.
+
+
+.Schritte
+. Verbinden Sie die Hosts per Kabel mit den Controllern:
++
+.. Kabel-Host 1 Pfad A (blau) HBA-Ports zu Controller A's a-Ports (1a und 2a).
+.. Kabel Host 1 Pfad B (rot) HBA-Ports zu den a-Ports (1a und 2a) von Controller B.
+.. Kabel-Host 2 Pfad A (blau) HBA-Ports zu den c-Ports von Controller A (1c und 2c).
+.. Host 2 Pfad B (rot) HBA-Ports an die c-Ports (1c und 2c) von Controller B verkabeln.
++
+*64-Gbit/s-FC-Kabel*
+
++
+image:../media/oie_cable_sfp_gbe_copper.png["64 Gb FC-Kabel"]
+
++
+image:../media/drw_ef50_4p_64gb_fc_2hic_direct_ieops-2670.svg["EF50-Direktanschlusstopologie an Hosts über zwei 4-Port-64Gb-FC-IO-Module"]
+
+
+
+
+
+=====
+.EF80 mit drei 2-Port 200 GbE I/O-Modulen
+[%collapsible]
+=====
+.Über diese Aufgabe
+* Das Verkabelungsbeispiel zeigt Host-I/O-Module in den Steckplätzen 1, 2 und 3. Dies ist die maximale Anzahl von Host-I/O-Modulen, die für das EF80 storage system unterstützt wird. Allerdings ist nur das Host-I/O-Modul in Steckplatz 1 erforderlich; Host-I/O-Module in Steckplatz 2 und Steckplatz 3 sind beide optional.
++
+Wenn in Ihrem Speichersystem weniger Host-E/A-Module installiert sind, können Sie die Verkabelung zu den zusätzlichen Host-E/A-Modulen ignorieren und nur die installierten Host-E/A-Module verkabeln.
+
+* Ein direkt angeschlossenes Speichersystem verfügt über zwei separate Pfade für Redundanz: Pfad A und Pfad B.
++
+** Die Verbindung von Pfad A wird durch blaue Kabel und blaue Anschlüsse an den Hosts und Controllern dargestellt. Sie verbindet die HBA-Ports jedes Hosts mit den Ports a und b von Controller A.
+** Die Verbindung von Pfad B wird durch rote Kabel und rote Anschlüsse an den Hosts und Controllern dargestellt. Sie verbindet die HBA-Ports jedes Hosts mit den Ports a und b des Controllers B.
+
+
+
+
+.Schritte
+. Verbinden Sie die Hosts per Kabel mit den Controllern:
++
+.. Kabel-Host 1 Pfad A (blau) HBA-Ports zu Controller A's a-Ports (e1a, e2a und e3a).
+.. Kabel Host 1 Pfad B (rot) HBA-Ports zu Controller B's a-Ports (e1a, e2a und e3a).
+.. Host 2 Pfad A (blau) HBA-Ports an die b-Ports von Controller A (e1b, e2b und e3b) verkabeln.
+.. Kabel-Host 2 Pfad B (rot) HBA-Ports an die b-Ports (e1b, e2b und e3b) von Controller B anschließen.
++
+*200 GbE-Kabel*
+
++
+image::../media/oie_cable_sfp_gbe_copper.png[200-GbE-Kabel]
+
++
+image:../media/drw_ef80_2p_200gbe_ib_3hic_direct_ieops-2680.svg["EF80 direct-attached-Topologie zu Hosts mit drei 2-Port-200GbE-IB-IO-Modulen"]
+
+
+
+
+
+=====
+.EF80 mit drei 4-Port 64Gb FC I/O-Modulen
+[%collapsible]
+=====
+.Über diese Aufgabe
+* Das Verkabelungsbeispiel zeigt Host-I/O-Module in den Steckplätzen 1, 2 und 3. Dies ist die maximale Anzahl von Host-I/O-Modulen, die für das EF80 storage system unterstützt wird. Allerdings ist nur das Host-I/O-Modul in Steckplatz 1 erforderlich; Host-I/O-Module in Steckplatz 2 und Steckplatz 3 sind beide optional.
++
+Wenn in Ihrem Speichersystem weniger Host-E/A-Module installiert sind, können Sie die Verkabelung zu den zusätzlichen Host-E/A-Modulen ignorieren und nur die installierten Host-E/A-Module verkabeln.
+
+* Ein direkt angeschlossenes Speichersystem verfügt über zwei separate Pfade für Redundanz: Pfad A und Pfad B.
++
+** Die Verbindung von Pfad A wird durch blaue Kabel und blaue Anschlüsse an den Hosts und Controllern dargestellt. Sie verbindet die HBA-Ports jedes Hosts mit den Ports a und c von Controller A.
+** Die Verbindung von Pfad B wird durch rote Kabel und rote Anschlüsse an den Hosts und Controllern dargestellt. Sie verbindet die HBA-Ports jedes Hosts mit den Ports a und c von Controller B.
+
+
+* Obwohl im Verkabelungsbeispiel die I/O-Modul-Anschlüsse a und c mit den Hosts verbunden sind, können Sie auch die Anschlüsse a und b oder die Anschlüsse c und d verwenden.
+
+
+.Schritte
+. Verbinden Sie die Hosts per Kabel mit den Controllern:
++
+.. Kabel-Host 1 Pfad A (blau) HBA-Ports zu Controller A's a-Ports (1a, 2a und 3a).
+.. Kabel Host 1 Pfad B (rot) HBA-Ports zu den a-Ports von Controller B (1a, 2a und 3a).
+.. Kabel-Host 2 Pfad A (blau) HBA-Ports zu den c-Ports von Controller A (1c, 2c und 3c).
+.. Host 2 Pfad B (rot) HBA-Ports an die c-Ports (1c, 2c und 3c) von Controller B verkabeln.
++
+*64-Gbit/s-FC-Kabel*
+
++
+image:../media/oie_cable_sfp_gbe_copper.png["64 Gb FC-Kabel"]
+
++
+image:../media/drw_ef80_4p_64gb_fc_3hic_direct_ieops-2674.svg["EF80-Direktanschlusstopologie an Hosts über drei 4-Port-64Gb-FC-IO-Module"]
+
+
+
+
+
+=====
+--
+.Fabric-attached-Topologie
+--
+Die folgenden Beispiele zeigen die Verkabelung eines Speichersystems mit den Hosts unter Verwendung einer fabric-attached Topologie.
+
+.EF50 mit zwei 4-Port 64Gb FC I/O-Modulen
+[%collapsible]
+=====
+.Über diese Aufgabe
+* Das Verkabelungsbeispiel zeigt Host-I/O-Module in den Steckplätzen 1 und 2. Dies ist die maximale Anzahl an Host-I/O-Modulen, die vom EF50 storage system unterstützt wird. Allerdings ist nur das Host-I/O-Modul in Steckplatz 1 erforderlich; das Host-I/O-Modul in Steckplatz 2 ist optional.
++
+Wenn in Ihrem Speichersystem ein Host-E/A-Modul installiert ist, können Sie die Verkabelung zum zusätzlichen Host-E/A-Modul ignorieren und nur das installierte Host-E/A-Modul verkabeln.
+
+* Ein gewebegebundenes Speichersystem verfügt über zwei separate Switch-Pfade zur Redundanz: Switch 1 Pfad und Switch 2 Pfad.
++
+** Die Pfadverbindung von Switch 1 wird durch blaue Kabel und blaue Ports an den Hosts und Controllern dargestellt. Sie verbindet die HBA-Ports jedes Hosts über Switch 1 mit den a- und c-Ports von Controller A und Controller B.
+** Die Pfadverbindung von Switch 2 ist durch rote Kabel und rote Ports an den Hosts und Controllern dargestellt. Sie verbindet die HBA-Ports jedes Hosts über Switch 2 mit den b- und d-Ports von Controller A und Controller B.
+
+
+
+
+.Schritte
+. Verbinden Sie die Hosts mit den Switches.
++
+Sie können beliebige Ports an den Switches verwenden.
+
++
+.. Verkabeln Sie die Host 1 und Host 2 Switch 1 Pfad (blau) HBA-Ports zu Switch 1.
+.. Verkabeln Sie die Host 1 und Host 2 Switch 2 Pfad (rot) HBA-Ports zu Switch 2.
+
+
+. Verbinden Sie die Switches mit den Controllern:
++
+.. Kabelschalter 1 (blau) an die a- und c-Anschlüsse (1a, 2a, 1c und 2c) von Controller A anschließen.
+.. Kabelschalter 1 (blau) an die a- und c-Anschlüsse (1a, 2a, 1c und 2c) von Controller B anschließen.
+.. Kabelschalter 2 (rot) an die b- und d-Anschlüsse (1b, 2b, 1d und 2d) von Controller A anschließen.
+.. Kabelschalter 2 (rot) an die b- und d-Anschlüsse (1b, 2b, 1d und 2d) von Controller B anschließen.
++
+*64-Gbit/s-FC-Kabel*
+
++
+image:../media/oie_cable_sfp_gbe_copper.png["64 Gb FC-Kabel"]
+
++
+image:../media/drw_ef50_4p_64gb_fc_2hic_fabric_ieops-2673.svg["EF50 Fabric-Attached-Topologie mit zwei 4-Port-64Gb-FC-IO-Modulen"]
+
+
+
+
+
+=====
+.EF80 mit drei 2-Port 200 GbE I/O-Modulen
+[%collapsible]
+=====
+.Über diese Aufgabe
+* Das Verkabelungsbeispiel zeigt Host-I/O-Module in den Steckplätzen 1, 2 und 3. Dies ist die maximale Anzahl von Host-I/O-Modulen, die für das EF80 storage system unterstützt wird. Allerdings ist nur das Host-I/O-Modul in Steckplatz 1 erforderlich; Host-I/O-Module in Steckplatz 2 und Steckplatz 3 sind beide optional.
++
+Wenn in Ihrem Speichersystem weniger Host-E/A-Module installiert sind, können Sie die Verkabelung zu den zusätzlichen Host-E/A-Modulen ignorieren und nur die installierten Host-E/A-Module verkabeln.
+
+* Das Verkabelungsbeispiel zeigt drei HBAs auf jedem Host. Wenn Ihre Hosts weniger als drei HBAs haben, können Sie die Verkabelung zu den zusätzlichen HBAs ignorieren und nur zu den installierten HBAs verkabeln.
+* Ein gewebegebundenes Speichersystem verfügt über zwei separate Switch-Pfade zur Redundanz: Switch 1 Pfad und Switch 2 Pfad.
++
+** Die Pfadverbindung von Switch 1 wird durch blaue Kabel und blaue Ports an den Hosts und Controllern dargestellt. Sie verbindet die HBA-Ports jedes Hosts über Switch 1 mit den a-Ports von Controller A und Controller B.
+** Die Pfadverbindung von Switch 2 ist durch rote Kabel und rote Ports an den Hosts und Controllern dargestellt. Sie verbindet die HBA-Ports jedes Hosts über Switch 2 mit den b-Ports von Controller A und Controller B.
+
+
+
+
+.Schritte
+. Verbinden Sie die Hosts mit den Switches:
++
+Sie können beliebige Ports an den Switches verwenden.
+
++
+.. Verkabeln Sie die Host 1 und Host 2 Switch 1 Pfad (blau) HBA-Ports zu Switch 1.
+.. Verkabeln Sie die Host 1 und Host 2 Switch 2 Pfad (rot) HBA-Ports zu Switch 2.
+
+
+. Verbinden Sie die Switches mit den Controllern:
++
+.. Kabelschalter 1 (blau) an die a-Ports (e1a, e2a und e3a) von Controller A anschließen.
+.. Kabelschalter 1 (blau) an die a-Ports (e1a, e2a und e3a) von Controller B anschließen.
+.. Kabelschalter 2 (rot) an die b-Ports (e1b, e2b und e3b) von Controller A anschließen.
+.. Kabelschalter 2 (rot) an die b-Ports (e1b, e2b und e3b) von Controller B anschließen.
++
+*200 GbE-Kabel*
+
++
+image::../media/oie_cable_sfp_gbe_copper.png[200-GbE-Kabel]
+
++
+image:../media/drw_ef80_2p_200gbe_ib_3hic_fabric_ieops-2679.svg["EF80 fabric-attached-Topologie mit drei 2-Port-200GbE-IO-Modulen"]
+
+
+
+
+
+=====
+.EF80 mit drei 4-Port 64Gb FC I/O-Modulen
+[%collapsible]
+=====
+.Über diese Aufgabe
+* Das Verkabelungsbeispiel zeigt Host-I/O-Module in den Steckplätzen 1, 2 und 3. Dies ist die maximale Anzahl von Host-I/O-Modulen, die für das EF80 storage system unterstützt wird. Allerdings ist nur das Host-I/O-Modul in Steckplatz 1 erforderlich; Host-I/O-Module in Steckplatz 2 und Steckplatz 3 sind beide optional.
++
+Wenn in Ihrem Speichersystem weniger Host-E/A-Module installiert sind, können Sie die Verkabelung zu den zusätzlichen Host-E/A-Modulen ignorieren und nur die installierten Host-E/A-Module verkabeln.
+
+* Das Verkabelungsbeispiel zeigt drei HBAs auf jedem Host. Wenn Ihre Hosts weniger als drei HBAs haben, können Sie die Verkabelung zu den zusätzlichen HBAs ignorieren und nur zu den installierten HBAs verkabeln.
+* Ein gewebegebundenes Speichersystem verfügt über zwei separate Switch-Pfade zur Redundanz: Switch 1 Pfad und Switch 2 Pfad.
++
+** Die Pfadverbindung von Switch 1 wird durch blaue Kabel und blaue Ports an den Hosts und Controllern dargestellt. Sie verbindet die HBA-Ports jedes Hosts über Switch 1 mit den a- und c-Ports von Controller A und Controller B.
+** Die Pfadverbindung von Switch 2 ist durch rote Kabel und rote Ports an den Hosts und Controllern dargestellt. Sie verbindet die HBA-Ports jedes Hosts über Switch 2 mit den b- und d-Ports von Controller A und Controller B.
+
+
+
+
+.Schritte
+. Verbinden Sie die Hosts mit den Switches:
++
+Sie können beliebige Ports an den Switches verwenden.
+
++
+.. Verkabeln Sie die Host 1 und Host 2 Switch 1 Pfad (blau) HBA-Ports zu Switch 1.
+.. Verkabeln Sie die Host 1 und Host 2 Switch 2 Pfad (rot) HBA-Ports zu Switch 2.
+
+
+. Verbinden Sie die Switches mit den Controllern:
++
+.. Kabelschalter 1 (blau) an die Anschlüsse a und c von Controller A (1a, 2a, 3a, 1c, 2c und 3c) anschließen.
+.. Kabelschalter 1 (blau) an die a- und c-Anschlüsse (1a, 2a, 3a, 1c, 2c und 3c) von Controller B anschließen.
+.. Kabelschalter 2 (rot) an die b- und d-Anschlüsse (1b, 2b, 3b, 1d, 2d und 3d) von Controller A anschließen.
+.. Kabelschalter 2 (rot) an die b- und d-Anschlüsse (1b, 2b, 3b, 1d, 2d und 3d) von Controller B anschließen.
++
+*64-Gbit/s-FC-Kabel*
+
++
+image:../media/oie_cable_sfp_gbe_copper.png["64 Gb FC-Kabel"]
+
++
+image:../media/drw_ef80_4p_64gb_fc_3hic_fabric_ieops-2675.svg["EF80 Fabric-Attached-Topologie mit drei 4-Port-64Gb-FC-IO-Modulen"]
+
+
+
+
+
+=====
+--
+====
+.Was kommt als Nächstes?
+Nach der Verkabelung der Inter-Controller-Spiegelung und der Host-Verbindungen für Ihr Speichersystem link:install-power-hardware.html["Schalten Sie Ihr Speichersystem ein"].

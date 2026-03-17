@@ -18,6 +18,6 @@ Sie können den Namen des Speicher-Arrays ändern, der auf der Seite Verwalten d
 
 .Schritte
 . Aktivieren Sie auf der Seite *Verwalten* das Kontrollkästchen links neben dem Namen des Speicherarrays.
-. Wählen Sie die Ellipsen ganz rechts in der Zeile aus, und wählen Sie dann im Popup-Menü die Option *Speicher-Array umbenennen* aus.
+. Wählen Sie die Auslassungspunkte ganz rechts in der Zeile aus, und wählen Sie dann im Pop-up-Menü *Speicherarray umbenennen*.
 . Geben Sie den neuen Namen ein und klicken Sie auf *Speichern*.
 

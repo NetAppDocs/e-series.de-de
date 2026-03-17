@@ -1,0 +1,69 @@
+= 
+:allow-uri-read: 
+
+
+.Schritte
+. Wenn Sie nicht bereits geerdet sind, sollten Sie sich richtig Erden.
+. Suchen Sie das defekte DIMM.
++
+
+NOTE: Konsultieren Sie entweder die https://hwu.netapp.com["Hardware Universe"] oder die FRU-Karte auf der Abdeckung des Controllers, um die genauen DIMM-Positionen zu erfahren.
+
+. Entfernen Sie das defekte DIMM:
++
+image::../media/drw_g_dimm_ieops-1873.svg[DIMM ersetzen]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image::../media/icon_round_1.png[Callout-Nummer 1]
+ a| 
+DIMM-Steckplatznummerierung und -positionen.
+
+
+NOTE: Je nach Speichersystemmodell haben Sie zwei oder vier DIMMs.
+
+
+
+ a| 
+image::../media/icon_round_2.png[Callout-Nummer 2]
+ a| 
+** Beachten Sie die Ausrichtung des DIMM im Sockel, damit Sie das Ersatz-DIMM in der gleichen Ausrichtung einsetzen können.
+** Entfernen Sie das defekte DIMM, indem Sie die beiden Auswurfklappen an beiden Enden des DIMM-Steckplatzes langsam auseinanderdrücken.
+
+
+
+IMPORTANT: Fassen Sie das DIMM vorsichtig an den Ecken oder Kanten an, um Druck auf die Bauteile der DIMM-Leiterplatte zu vermeiden.
+
+
+
+ a| 
+image::../media/icon_round_3.png[Callout-Nummer 3]
+ a| 
+Heben Sie das DIMM-Modul an und nehmen Sie es aus dem Steckplatz heraus.
+
+Die Auswerferklappen bleiben in der offenen Position.
+
+|===
+. Packen Sie das Ersatz-DIMM aus und legen Sie es auf eine ebene, antistatische Oberfläche in der Nähe des Storage-Systems.
++
+Bewahren Sie das Verpackungsmaterial auf, um es bei der Rücksendung des defekten DIMM zu verwenden.
+
+. Installieren Sie das Ersatz-DIMM:
++
+.. Stellen Sie sicher, dass sich die DIMM-Auswurfklappen am Anschluss in der geöffneten Position befinden.
+.. Fassen Sie das DIMM an den Ecken und setzen Sie es gerade in den Steckplatz ein.
++
+Die Kerbe an der Unterseite des DIMM, zwischen den Pins, muss mit der Nase im Steckplatz übereinstimmen.
+
++
+Bei korrektem Einsetzen lässt sich das DIMM leicht einschieben, sitzt aber fest im Steckplatz. Setzen Sie das DIMM erneut ein, wenn Sie das Gefühl haben, dass es nicht korrekt eingesetzt ist. Drücken Sie ein DIMM niemals mit Gewalt in einen Steckplatz.
+
+.. Überprüfen Sie den DIMM visuell, um sicherzustellen, dass er gleichmäßig ausgerichtet und vollständig in den Steckplatz eingesetzt ist.
+.. Drücken Sie vorsichtig, aber fest auf die Oberkante des DIMM, bis die Auswurfstasten an beiden Enden des DIMM in die Kerben einrasten.
+
+
+

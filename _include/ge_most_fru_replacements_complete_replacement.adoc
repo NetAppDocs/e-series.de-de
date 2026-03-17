@@ -1,0 +1,49 @@
+= 
+:allow-uri-read: 
+
+
+Verwenden Sie den SANtricity System Manager, um sicherzustellen, dass die neueste Version von SANtricity OS installiert ist, überprüfen Sie, ob alle Volumes an ihre zugehörigen Controller zurückgegeben wurden, und sammeln Sie Supportdaten, damit Sie den Betrieb wieder aufnehmen können.
+
+.Schritte
+. Stellen Sie sicher, dass die neueste Version von SANtricity OS auf dem Speichersystem installiert ist:
++
+.. Wählen Sie *Support* > *Upgrade Center*
+.. Installieren Sie bei Bedarf die neueste Version.
+
+
+. Überprüfen Sie, ob alle Volumes an ihre jeweiligen Controller zurückgegeben wurden:
++
+[cols="1,2"]
+|===
+| Wenn... | Dann... 
+
+
+ a| 
+Recovery Guru ist vorhanden und zeigt an, dass sich die Volumes nicht auf ihrem bevorzugten Pfad befinden (nicht an ihre zugehörigen Controller zurückgegeben wurden)
+ a| 
+.. Verteilen Sie die Volumes auf ihre jeweiligen Controller, indem Sie *Storage* > *Volumes* > *More* auswählen und im Dropdown-Menü *Redistribute volumes* wählen.
+.. Überprüfen Sie, ob alle Volumes ihren jeweiligen Controllern neu zugeordnet wurden, indem Sie prüfen, ob Recovery Guru vorhanden ist und weiterhin anzeigt, dass sich die Volumes nicht auf ihrem bevorzugten Pfad befinden.
+
+
+
+NOTE: Falls die Volumes immer noch nicht an ihre eigenen Controller zurückgegeben werden, wenden Sie sich an  https://mysupport.netapp.com/site/global/dashboard["NetApp Support"].
+
+
+
+ a| 
+Recovery Guru ist nicht vorhanden (es scheint, dass alle Volumes an ihre jeweiligen Controller zurückgegeben wurden)
+ a| 
+Überprüfen Sie, ob alle Volumes wieder ihren jeweiligen Controllern zugeordnet sind, indem Sie *Storage* > *Volumes* > *More* auswählen und im Dropdown-Menü *Change volume ownership* wählen, um die Volume-Besitzer anzuzeigen.
+
+|===
+. Sammeln Sie Supportdaten für Ihr Speichersystem:
++
+.. Wählen Sie *Support* > *Support Center* > *Diagnose*.
+.. Wählen Sie *Support-Daten Erfassen* Aus.
+.. Wählen Sie *Collect*.
++
+Die Datei wird im Ordner Downloads für Ihren Browser mit dem Namen *Support-Data.7z* gespeichert.
+
+
+
+

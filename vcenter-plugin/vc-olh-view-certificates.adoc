@@ -24,5 +24,5 @@ Sie können zusammenfassende Informationen für ein Zertifikat anzeigen, das die
 ** *Trusted* -- zeigt Zertifikate, auf die das Plugin für Speicher-Arrays und andere Remote-Server zugreifen kann, z. B. einen LDAP-Server. Die Zertifikate können von einer Zertifizierungsstelle (CA) ausgestellt oder selbst signiert werden.
 
 
-. Um weitere Informationen zu einem Zertifikat anzuzeigen, wählen Sie seine Zeile aus, wählen Sie die Ellipsen am Zeilenende aus und klicken Sie dann auf *Ansicht* oder *Export*.
+. Um weitere Informationen zu einem Zertifikat anzuzeigen, wählen Sie die entsprechende Zeile aus, wählen Sie die Auslassungspunkte am Ende der Zeile aus und klicken Sie dann auf *Anzeigen* oder *Exportieren*.
 

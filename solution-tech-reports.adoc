@@ -79,20 +79,8 @@ summary: Technische Berichte der E-Series
 |===
 
 
-| https://www.netapp.com/pdf.html?item=/media/31665-tr-4884.pdf["*TR-4884: HPC-Systeme der Einstiegsklasse mit NetApp E-Series und IBM Spectrum Scale*"^] | https://www.netapp.com/pdf.html?item=/media/22029-tr-4859.pdf["*TR-4859: Deploying IBM Spectrum Scale with NetApp E-Series Storage*"^] | https://www.netapp.com/pdf.html?item=/media/19407-tr-4856-deploy.pdf["*TR-4856: BeeGFS High Availability mit E-Series unter Verwendung von Red hat Enterprise Linux Server*"^] 
-
-
-| Beschreibt die Referenzarchitektur für HPC-Systeme der Einstiegsklasse basierend auf NetApp E-Series Storage-Systemen und IBM Spectrum Scale. | Beschreibt den Prozess der Bereitstellung einer vollständigen parallelen Dateisystem-Lösung basierend auf IBM Spectrum Scale Software Stack. | Beschreibt die erforderlichen Konfigurationen für die Implementierung von Hochverfügbarkeit in einer BeeGFS-Architektur, die durch das NetApp E-Series-System unterstützt wird, sowie für BeeGFS Storage-, Metadaten- und Management-Services mit RedHat Enterprise Linux. 
+| https://www.netapp.com/pdf.html?item=/media/31665-tr-4884.pdf["*TR-4884: HPC-Systeme der Einstiegsklasse mit NetApp E-Series und IBM Spectrum Scale*"^] | https://www.netapp.com/pdf.html?item=/media/22029-tr-4859.pdf["*TR-4859: Deploying IBM Spectrum Scale with NetApp E-Series Storage*"^] |  
 
 
 |  |  |  
-
-
-|  |  |  
-
-
-| https://www.netapp.com/pdf.html?item=/media/19431-tr-4862.pdf["*TR-4862: BeeGFS High Availability mit E-Series unter Verwendung von SUSE Linux Enterprise Server*"^] |  |  
-
-
-| Beschreibt die erforderlichen Konfigurationen für die Implementierung von Hochverfügbarkeit in einer BeeGFS-Architektur, die durch das NetApp E-Series-System unterstützt wird, sowie für das Verwenden von SUSE Linux Enterprise Server für BeeGFS Storage-, Metadaten- und Management-Services. |  |  
 |===

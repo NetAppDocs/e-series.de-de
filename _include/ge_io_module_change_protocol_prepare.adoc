@@ -1,0 +1,38 @@
+= 
+:allow-uri-read: 
+
+
+.Schritte
+. Wenn Sie das Protokoll der Host-E/A-Module in Ihrem Speichersystem nicht kennen, überprüfen Sie es mit SANtricity System Manager.
++
+.. Wählen Sie *Settings* > *System*.
+.. Wählen Sie im Abschnitt *Zusätzliche Einstellungen* *Host-I/O-Protokoll ändern* aus, um diese Seite zu öffnen.
+.. Siehe das im Feld *Host I/O Protocol* angezeigte Standardprotokoll.
++
+
+NOTE: Wenn Sie die Liste der verfügbaren Protokolle für Ihre Host-E/A-Module anzeigen möchten, wählen Sie das Dropdown-Menü im Feld *Host I/O Protocol* aus. Die Protokollliste basiert auf den derzeit installierten Host-E/A-Modulen.
+
+
+
+. Der nächste Schritt hängt davon ab, ob das Standardprotokoll das gewünschte Protokoll ist oder nicht:
++
+[cols="1,2"]
+|===
+| Wenn... | Dann... 
+
+
+ a| 
+Das Standardprotokoll ist das Protokoll, das Sie möchten
+ a| 
+Es ist keine Aktion erforderlich. Sie können dieses Verfahren beenden.
+
+
+
+ a| 
+Das Standardprotokoll ist nicht das Protokoll, das Sie möchten
+ a| 
+Fahren Sie mit diesem Verfahren fort, um das Protokoll zu ändern.
+
+|===
+. Planen Sie ein Wartungsfenster für dieses Verfahren ein.
+

@@ -163,7 +163,7 @@ Platzieren Sie den Controller online, sammeln Sie Support-Daten und setzen Sie d
 
 . Platzieren Sie den Controller in den Online-Modus
 +
-.. Navigieren Sie in System Manager zur Hardware-Seite.
+.. Navigieren Sie im System Manager zur Seite *Hardware*.
 .. Wählen Sie *Zurück von Controller anzeigen*.
 .. Wählen Sie den Controller mit dem ausgetauschten Lüfter aus.
 .. Wählen Sie in der Dropdown-Liste * Online platzieren* aus.

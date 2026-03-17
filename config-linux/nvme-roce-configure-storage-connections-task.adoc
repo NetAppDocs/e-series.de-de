@@ -28,7 +28,7 @@ Sie können über die Seite *Hardware* oder über Menü:Einstellungen[System] au
 NOTE: Die NVMe-over-RoCE-Einstellungen und -Funktionen werden nur angezeigt, wenn der Controller des Storage-Arrays einen NVMe-over-RoCE-Port umfasst.
 
 .Schritte
-. Wählen Sie in der System Manager-Schnittstelle die Option *Hardware* aus.
+. Wählen Sie im linken Bereich der System Manager-Oberfläche *Hardware* aus.
 . Klicken Sie auf den Controller mit dem NVMe-over-RoCE-Port, den Sie konfigurieren möchten.
 +
 Das Kontextmenü des Controllers wird angezeigt.

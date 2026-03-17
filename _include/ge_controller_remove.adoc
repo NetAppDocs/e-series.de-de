@@ -1,0 +1,81 @@
+= 
+:allow-uri-read: 
+
+
+Vergewissern Sie sich, dass alle Daten im Cache-Speicher auf die Laufwerke geschrieben wurden, trennen Sie alle Kabel vom defekten Controller, und entfernen Sie dann den defekten Controller aus dem Gehäuse.
+
+.Schritte
+. Stellen Sie am betroffenen Controller sicher, dass die NV Caching Active (grün) LED aus ist.
++
+Wenn die NV Caching Active (grün) LED aus ist, wurden alle Daten im Cache-Speicher auf die Laufwerke geschrieben und es ist sicher, den defekten Controller zu entfernen.
+
++
+
+NOTE: Wenn die NV Caching Active (grüne) LED leuchtet, werden zwischengespeicherte Daten auf die Laufwerke geschrieben. Sie müssen warten, bis der Vorgang abgeschlossen ist und die NV Caching Active LED erlischt. Wenn die LED jedoch länger als fünf Minuten leuchtet, wenden Sie sich an  https://mysupport.netapp.com/site/global/dashboard["NetApp Support"] bevor Sie mit diesem Verfahren fortfahren.
+
++
+Die LED „NV Caching Active“ (grün) befindet sich neben dem NV-Symbol auf dem Controller.
+
++
+image::../media/drw_g_nvmem_led_ieops-1839.svg[Position der NV-Status-LED]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image::../media/icon_round_1.png[Callout-Nummer 1]
+ a| 
+NV-Symbol und NV-Caching-Aktiv-LED am Controller
+
+|===
+
+
+. Setzen Sie ein ESD-Armband an oder ergreifen Sie andere antistatische Vorsichtsmaßnahmen.
+. Beschriften Sie jedes Kabel, das an den defekten Controller angeschlossen ist.
+. Trennen Sie das Netzkabel von der Stromversorgung am betroffenen Controller.
++
+
+NOTE: Das Netzteil (PSU) hat keinen Netzschalter.
+
+. Ziehen Sie alle Kabel vom defekten Controller ab.
+. Entfernen Sie den defekten Controller:
++
+Die folgende Abbildung zeigt die Funktionsweise der Controller-Handles (von der linken Seite des Controllers) beim Entfernen eines Controllers:
+
++
+image::../media/drw_g_and_t_handles_remove_ieops-1837.svg[Controller-Handle-Operation zum Entfernen eines Controllers]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image::../media/icon_round_1.png[Callout-Nummer 1]
+ a| 
+Drücken Sie an beiden Enden des Controllers die vertikalen Verriegelungslaschen nach außen, um die Griffe in ihre horizontale Position zu bringen.
+
+
+
+ a| 
+image::../media/icon_round_2.png[Callout-Nummer 2]
+ a| 
+** Ziehen Sie die Griffe zu sich heran, um den Controller aus der Midplane zu lösen.
++
+Wenn Sie ziehen, fahren die Griffe aus dem Controller heraus und dann spüren Sie einen Widerstand, ziehen Sie weiter.
+
+** Ziehen Sie den Controller aus dem Gehäuse, während Sie die Unterseite des Controllers stützen, und legen Sie ihn auf eine ebene, antistatische Arbeitsfläche.
+
+
+
+
+ a| 
+image::../media/icon_round_3.png[Callout-Nummer 3]
+ a| 
+Drehen Sie bei Bedarf die Griffe aufrecht (neben den Laschen), um sie aus dem Weg zu räumen.
+
+|===
+. Öffnen Sie die Controller-Abdeckung, indem Sie die Rändelschraube gegen den Uhrzeigersinn drehen, um sie zu lösen, und öffnen Sie dann die Abdeckung.
+

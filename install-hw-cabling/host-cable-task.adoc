@@ -14,6 +14,9 @@ summary: Sie können einen Host direkt an einen Controller anschließen oder Swi
 Host kann direkt mit einem Controller (Direct-Attached Topology) verbunden oder mithilfe von Switches (Switch-Topologie) eine Host-Verbindung mit einem Controller hergestellt werden.
 
 
+NOTE: Die folgenden Informationen gelten nicht für alle Speichersysteme. Informationen zur Hostverkabelung speziell für Ihr Speichersystem finden Sie link:../getting-started/getup-run-concept.html["Schnellstart für E-Series"^] und klicken Sie auf den Link für Ihr spezifisches Speichersystem.
+
+
 
 == Verkabelung für eine direkt angeschlossene Topologie
 

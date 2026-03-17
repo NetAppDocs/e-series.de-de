@@ -1,0 +1,129 @@
+---
+permalink: install-hw-ef50-ef80/install-prepare.html 
+sidebar: sidebar 
+keywords:  
+summary: Bereiten Sie die Installation Ihres EF50 oder EF80 Storage-Systems vor, indem Sie den Standort vorbereiten, die Hebevorkehrungen für Ihr Storage-System beachten, die Kartons auspacken und den Inhalt mit dem Lieferschein vergleichen sowie das Storage-System registrieren, um Zugang zu Supportleistungen zu erhalten. 
+---
+= Vorbereitung zur Installation – EF50 und EF80
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Bereiten Sie die Installation Ihres EF50 oder EF80 Storage-Systems vor, indem Sie den Standort vorbereiten, die Hebevorkehrungen für Ihr Storage-System beachten, die Kartons auspacken und den Inhalt mit dem Lieferschein vergleichen sowie das Storage-System registrieren, um Zugang zu Supportleistungen zu erhalten.
+
+
+
+== Schritt 1: Bereiten Sie den Standort vor
+
+Stellen Sie sicher, dass der Standort und der Schrank oder das Rack, das Sie verwenden möchten, den Spezifikationen für Ihr Storage-System entsprechen.
+
+.Schritte
+. Verwenden Sie  https://hwu.netapp.com["NetApp Hardware Universe"^], um zu bestätigen, dass Ihr Standort die Umwelt- und Elektroanforderungen für Ihr Speichersystem erfüllt.
+. Stellen Sie sicher, dass Sie ausreichend Schrank- oder Rackplatz für Ihr Speichersystem und alle Switches haben.
++
+Falls erforderlich, siehe  https://hwu.netapp.com["NetApp Hardware Universe"^] für die genauen Abmessungen Ihres Speichersystems.
+
++
+** 2U für ein Speichersystem
+** 1U für die meisten Switches
+
+
+. Installieren Sie alle erforderlichen Netzwerk-Switches.
+. Stellen Sie sicher, dass Sie einen von der Managementsoftware unterstützten Browser verwenden:
++
+** Google Chrome (Version 89 und höher)
+** Microsoft Edge (Version 90 und höher)
+** Mozilla Firefox (Version 80 und höher)
+** Safari (Version 14 und höher)
+
+
+. Besorgen Sie die folgende Ausrüstung und die Werkzeuge, die für die Installation benötigt werden:
++
+** Elektrostatische Entladung (ESD) Armband
+** Philips #2 Schraubendreher
+** Taschenlampe
+
+
+
+
+
+
+== Schritt 2: Die Hebevorkehrungen verstehen
+
+Bevor Sie die Kartons entpacken und später, wenn Sie Ihr Lagersystem installieren, sollten Sie das Gewicht Ihres Lagersystems kennen, damit Sie beim Anheben und Bewegen die notwendigen Vorsichtsmaßnahmen treffen können.
+
+Ein EF50- oder EF80-Lagersystem kann bis zu 61,5 lbs (27,9 kg) wiegen. Zum Anheben des Lagersystems sollten zwei Personen oder ein hydraulischer Aufzug verwendet werden.
+
+image::../media/drw_g_lifting_weight_ieops-1831.svg[AFF A20 A30 A50 und C30 und C60 Gewichtswarnsymbol]
+
+
+
+== Schritt 3: Entpacken Sie die Kartons
+
+Nachdem Sie sich vergewissert haben, dass der Aufstellungsort und der Schrank oder das Regal, das Sie verwenden möchten, den Spezifikationen für Ihr Lagersystem entsprechen und Sie die Vorsichtsmaßnahmen beim Heben verstanden haben, entpacken Sie alle Kartons und vergleichen Sie den Inhalt mit den Angaben auf dem Lieferschein.
+
+.Schritte
+. Öffnen Sie alle Kartons vorsichtig und legen Sie den Inhalt in einer organisierten Weise aus.
+. Vergleichen Sie den entpackten Inhalt mit dem Lieferschein.
++
+Sie können Ihren Lieferschein abrufen, indem Sie den QR-Code an der Seite des Versandkartons scannen.
+
++
+
+NOTE: Sollten Unstimmigkeiten auftreten, notieren Sie diese für weitere Maßnahmen.
+
++
+Die folgenden Elemente sind einige der Inhalte, die Sie in den Boxen sehen könnten.
+
++
+Falls erforderlich, siehe  https://hwu.netapp.com/["NetApp Hardware Universe"^] für andere unterstützte Kabel und deren Verwendung.
+
++
+[cols="9,9,5"]
+|===
+
+
+| *Hardware* | *Kabel* |  
+
+
+ a| 
+** Speichersystem mit Laufwerken
+** Schalter
+** Rack-mount Hardware mit Anleitung
+** Blende
+
+ a| 
+** Ethernet-Kabel zur Spiegelung zwischen Controllern
+** Management-Ethernet-Kabel (RJ-45-Kabel)
+** Netzwerkkabel
+** Stromkabel
+
+|  
+|===
+
+
+
+
+== Schritt 4: Registrieren Sie Ihr Speichersystem
+
+Nachdem Sie sichergestellt haben, dass Ihr Standort die Spezifikationen für Ihr Speichersystem erfüllt und Sie überprüft haben, dass Sie alle Teile, die Sie bestellt haben, erhalten haben, sollten Sie Ihr Speichersystem registrieren.
+
+. Erstellen Sie ein Konto und registrieren Sie Ihre Hardware unter http://mysupport.netapp.com/["NetApp Support"^].
++
+Für den Registrierungsprozess wird die Seriennummer (SN) jedes Controllers benötigt. Sie finden die Seriennummer an folgenden Stellen:
+
++
+** Auf jedem Controller
+** Auf dem Lieferschein
+** In Ihrer Bestätigungs-E-Mail
++
+image::../media/drw_ef50-ef80_sn_label_ieops-2689.svg[Beispiel für das Seriennummernetikett]
+
+
+
+
+
+.Was kommt als Nächstes?
+Nach den Vorbereitungen zur Installation Ihres Speichersystems link:install-hardware.html["Installieren Sie die Hardware"].

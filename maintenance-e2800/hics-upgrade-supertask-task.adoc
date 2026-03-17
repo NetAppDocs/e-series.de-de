@@ -107,7 +107,10 @@ image::../media/28_dwg_2800_controller_attn_led_maint-e2800.gif[Cache-LED aktiv]
 +
 *(1)* _Cache Active LED_
 
-. Wählen Sie auf der Startseite des SANtricity System Managers die Option *Vorgänge in Bearbeitung anzeigen*. Warten Sie, bis alle Vorgänge abgeschlossen sind, bevor Sie mit dem nächsten Schritt fortfahren.
+. Wählen Sie auf der Startseite des SANtricity System Managers die Option *Vorgänge in Bearbeitung anzeigen*.
++
+Warten Sie, bis alle Vorgänge abgeschlossen sind, bevor Sie mit dem nächsten Schritt fortfahren.
+
 . Schalten Sie das Controller-Shelf aus.
 +
 .. Schalten Sie beide Netzschalter am Controller Shelf aus.

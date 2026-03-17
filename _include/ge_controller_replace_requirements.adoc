@@ -1,0 +1,34 @@
+= 
+:allow-uri-read: 
+
+
+* Überprüfen Sie, ob Sie einen defekten Controller haben. Sie können dies auf zwei Arten feststellen:
++
+** Der Recovery Guru im SANtricity System Manager hat Sie angewiesen, den Controller auszutauschen.
+** Die gelbe Attention-LED am Controller leuchtet, was darauf hinweist, dass der Controller eine Störung hat.
+
+
+
+
+* Überprüfen Sie, ob die folgenden Bedingungen Ihres Speichersystems erfüllt sind, um sicherzustellen, dass Sie den defekten Controller austauschen können, während Ihr Speichersystem eingeschaltet ist und Host-E/A-Operationen durchführt:
++
+** Der zweite Controller im Chassis hat den Status "Optimal".
+** Das Feld *OK to remove* im Detailbereich des Recovery Guru im SANtricity System Manager zeigt *Yes* an, was bedeutet, dass der beschädigte Controller sicher entfernt werden kann.
+
+
+* Stellen Sie sicher, dass Sie Folgendes haben:
++
+** Ein Ersatzregler mit der gleichen Teilenummer wie der Regler, den Sie ersetzen.
+** Ein ESD-Armband, oder Sie haben andere antistatische Vorsichtsmaßnahmen getroffen.
+** Eine flache, statische Arbeitsfläche.
+** Etiketten zur Kennzeichnung jedes Kabels, das Sie vom Controller trennen werden.
+** Eine Managementstation mit einem Browser, der auf SANtricity System Manager für den Controller zugreifen kann.
++
+Sie können die SANtricity System Manager Benutzeroberfläche öffnen, indem Sie im Browser auf den Domänennamen oder die IP-Adresse des Controllers verweisen.
+
++
+Optional können Sie die Befehlszeilenschnittstelle (CLI) verwenden, um einige der Prozeduren durchzuführen. Laden Sie das CLI-Paket (ZIP-Datei) mit SANtricity System Manager herunter: *Einstellungen* > *System* > *Add-ons* und wählen Sie *Command Line Interface*. Anschließend können Sie CLI-Befehle von einer Betriebssystem-Eingabeaufforderung ausgeben, wie zum Beispiel der DOS C:-Eingabeaufforderung.
+
+
+
+

@@ -1,0 +1,42 @@
+= 
+:allow-uri-read: 
+
+
+.Schritte
+. Planen Sie ein Wartungsfenster für diesen Vorgang ein. Sie können nicht auf Daten im Speichersystem zugreifen, bis Sie diesen Vorgang erfolgreich abgeschlossen haben. Da beide Controller beim Einschalten dieselbe I/O-Modulkonfiguration aufweisen müssen, muss die Stromversorgung ausgeschaltet sein, wenn Sie I/O-Module aufrüsten.
+. Stellen Sie sicher, dass Sie Folgendes haben:
++
+** Die neuen E/A-Module, auf die Sie aktualisieren.
++
+Stellen Sie sicher, dass die I/O-Module, auf die Sie upgraden, von Ihrem Speichersystem unterstützt werden, dass Sie für jeden Controller den gleichen Typ und die gleiche Anzahl von I/O-Modulen haben und dass Sie die Steckplatzpriorität verstehen (das neue I/O-Modul muss in jedem Controller im gleichen Steckplatz installiert werden).
+
++
+
+CAUTION: *Möglicher Verlust des Datenzugriffs* -- Das Vorhandensein inkompatibler oder nicht übereinstimmender I/O-Module führt dazu, dass sich die Controller beim Einschalten sperren.
+
++
+Bei Bedarf können Sie die unterstützten E/A-Module und die Steckplatzpriorität für Ihr Speichersystem unter  https://hwu.netapp.com["NetApp Hardware Universe"^] bestätigen.
+
+** Kabel zum Anschluss der neuen E/A-Module an Ihr Netzwerk.
+** Ein ESD-Armband oder Sie haben andere antistatische Vorkehrungen getroffen.
+** Eine ebene, antistatische Arbeitsfläche.
+** Eine Managementstation mit einem Browser, der auf SANtricity System Manager für die Controller zugreifen kann.
++
+Um die System Manager-Oberfläche zu öffnen, rufen Sie im Browser den Domänennamen oder die IP-Adresse des Zielcontrollers auf.
+
+
+
+. Sichern Sie die Konfigurationsdatenbank des Speichersystems mit SANtricity System Manager:
++
+Tritt beim Entfernen eines Controllers ein Problem auf, können Sie die gespeicherte Datei verwenden, um Ihre Konfiguration wiederherzustellen. Das System speichert den aktuellen Zustand der RAID-Konfigurationsdatenbank, die alle Daten für Volumengruppen und Datenträgerpools auf dem betroffenen Controller enthält.
+
++
+.. Wählen Sie *Support* > *Support Center* > *Diagnose*.
+.. Wählen Sie *Konfigurationsdaten Erfassen*.
+.. Wählen Sie *Collect*.
++
+Die Datei wird im Ordner Downloads für Ihren Browser mit dem Namen *configurationData-<arrayName>-<dateTime>.7z* gespeichert.
+
+
+
+

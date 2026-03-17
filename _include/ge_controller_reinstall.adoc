@@ -1,0 +1,55 @@
+= 
+:allow-uri-read: 
+
+
+.Über diese Aufgabe
+Die folgende Abbildung zeigt die Bedienung der Griffe des Controllers (von der linken Seite eines Controllers) beim Wiedereinbau des Controllers und kann als Referenz für die Schritte des Wiedereinbaus des Controllers verwendet werden.
+
+image::../media/drw_g_and_t_handles_reinstall_ieops-1838.svg[Bedienvorgang zum Installieren eines Controllers]
+
+[cols="1,4"]
+|===
+
+
+ a| 
+image::../media/icon_round_1.png[Callout-Nummer 1]
+ a| 
+Falls Sie die Griffe des Controllers nach oben (neben den Laschen) gedreht haben, um sie während der Wartung des Controllers aus dem Weg zu räumen, drehen Sie sie nun wieder in die horizontale Position.
+
+
+
+ a| 
+image::../media/icon_round_2.png[Callout-Nummer 2]
+ a| 
+Drücken Sie die Griffe, um den Controller wieder in das Gehäuse einzusetzen.
+
+
+
+ a| 
+image::../media/icon_round_3.png[Callout-Nummer 3]
+ a| 
+Drehen Sie die Griffe in die aufrechte Position und arretieren Sie sie mit den Verriegelungslaschen.
+
+|===
+.Schritte
+. Schließen Sie die Abdeckung des Controllers und drehen Sie die Rändelschraube im Uhrzeigersinn, bis sie fest sitzt.
+. Setzen Sie den Controller in das Gehäuse ein:
++
+.. Richten Sie die Rückseite des Controllers an der Öffnung im Gehäuse aus und drücken Sie vorsichtig, aber fest auf die Griffe, bis der Controller die Midplane erreicht und vollständig eingesetzt ist.
++
+
+NOTE: Wenden Sie beim Einschieben des Controllers in das Gehäuse keine übermäßige Kraft an; dies könnte die Anschlüsse beschädigen.
+
+.. Drehen Sie die Griffe des Controllers nach oben und verriegeln Sie sie mit den Laschen.
+
+
+. Schließen Sie das Netzkabel wieder an das Netzteil an und sichern Sie das Netzkabel mit der Netzkabelhalterung.
++
+Sobald die Stromversorgung wiederhergestellt ist, sollte die Status-LED grün sein.
+
+. Schließen Sie alle Kabel wieder an den Controller an.
++
+
+NOTE: Die Kabel müssen wieder angeschlossen werden, bevor der Controller online geht. Dies ist besonders wichtig für die Spiegelungskabelverbindungen, da sie die vollständige Systemredundanz gewährleisten und für Cache-Spiegelung und E/A-Übertragung verwendet werden.
+
+

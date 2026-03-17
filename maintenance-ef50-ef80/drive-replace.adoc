@@ -1,0 +1,219 @@
+---
+permalink: maintenance-ef50-ef80/drive-replace.html 
+sidebar: sidebar 
+keywords: ef50, ef80, replace the drives 
+summary: Tauschen Sie ein Laufwerk in Ihrem EF50 oder EF80-Speichersystem aus, wenn ein Laufwerk ausfällt oder ein Upgrade erforderlich ist. 
+---
+= Laufwerk austauschen – EF50 und EF80
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Tauschen Sie ein defektes Laufwerk aus, während Ihr EF50 oder EF80 Storage-System E/A empfängt, um den fortlaufenden Datenzugriff und die Systemleistung sicherzustellen.
+
+.Über diese Aufgabe
+* Ersetzen Sie ein Laufwerk, indem Sie es vorbereiten, das Laufwerk austauschen, den Austausch abschließen und dann das defekte Teil an NetApp zurücksenden.
+* Der Recovery Guru im SANtricity System Manager überwacht die Laufwerke im Speichersystem und kann Sie über einen drohenden oder tatsächlichen Laufwerksausfall informieren. Wenn ein Laufwerk ausgefallen ist, leuchtet die Attention (gelb) LED.
+
+
+
+
+== Schritt 1: Vorbereitung auf den Austausch des Laufwerks
+
+Bereiten Sie sich auf den Laufwerksaustausch vor, indem Sie sicherstellen, dass das Laufwerk tatsächlich ausgefallen ist, bestätigen, dass Sie über ein unterstütztes Ersatzlaufwerk verfügen, sicherstellen, dass Sie Zugriff auf SANtricity System Manager haben, Vorsichtsmaßnahmen gegen elektrostatische Entladung treffen und das ausgefallene Laufwerk physisch lokalisieren.
+
+.Schritte
+. Wenn der Recovery Guru im SANtricity System Manager Sie über einen _bevorstehenden Laufwerksausfall informiert hat_, aber es ist noch nicht ausgefallen, befolgen Sie die Anweisungen im Recovery Guru zum Fehlschlagen des Laufwerks.
+. Stellen Sie sicher, dass Sie ein Ersatzlaufwerk haben, das für Ihre Speichersystemkonfiguration geeignet ist.
++
+Bei Bedarf können Sie mit SANtricity System Manager Folgendes bestätigen:
+
++
+.. Wählen Sie *Hardware* > *Laufwerke*.
+.. Wählen Sie das ausgefallene Laufwerk in der Grafik aus, um dessen Kontextmenü anzuzeigen, und wählen Sie dann *View settings*.
+.. Vergewissern Sie sich, dass die Kapazität des Ersatzlaufwerks dem des Ersatzlaufwerks entspricht oder höher ist als das ersetzte Laufwerk und dass es die Funktionen besitzt, die Sie erwarten.
++
+Wenn Sie beispielsweise ein secure-capable Laufwerk ersetzen, stellen Sie sicher, dass das Ersatzlaufwerk ebenfalls secure-capable ist.
+
+
+
+. Stellen Sie sicher, dass Sie über eine Managementstation mit einem Browser verfügen, der auf SANtricity System Manager für einen der Controller zugreifen kann.
++
+Um die System Manager-Oberfläche zu öffnen, richten Sie den Browser auf einen der Domänennamen oder die IP-Adresse des Controllers.
+
+. Elektrostatische Entladungen (ESD) während des Umgangs mit und der Installation eines Laufwerks verhindern:
++
+** Stellen Sie sicher, dass Sie ein elektrostatisches Entladungsarmband (ESD) haben.
++
+Tragen Sie stets ein ESD-Armband, das an einer unlackierten Stelle am Gehäuse Ihres Speichersystems geerdet ist. Falls kein Armband verfügbar ist, berühren Sie vor dem Umgang mit dem Laufwerk eine unlackierte Stelle am Gehäuse Ihres Speichersystems.
+
+** Halten Sie das Laufwerk in der ESD-Tasche, bis Sie bereit sind, es zu installieren.
+** Öffnen Sie die ESD-Tasche von Hand oder schneiden Sie die Oberseite mit einer Schere ab. Setzen Sie kein Metallwerkzeug oder Messer in den ESD-Beutel.
+** Stellen Sie sicher, dass Sie eine ebene, statikfreie Arbeitsfläche haben.
+** Bewahren Sie den ESD-Beutel und sämtliches Verpackungsmaterial auf, um das defekte Laufwerk zurückzusenden oder verwenden Sie eine zugelassene Verpackung, wenn Sie ein Laufwerk versenden.
+** Magnetfelder vermeiden. Halten Sie Laufwerke von magnetischen Geräten fern.
++
+Magnetfelder können alle Daten auf dem Laufwerk zerstören und irreparable Schäden an der Antriebsschaltung verursachen.
+
+
+
+. Vermeiden Sie physische Beschädigungen beim Umgang mit dem Laufwerk und bei dessen Installation:
++
+
+CAUTION: Festplatten sind empfindlich; unsachgemäße Handhabung von Festplatten ist eine der Hauptursachen für Festplattenausfälle.
+
++
+** Beim Entfernen, Einbau oder Tragen eines Laufwerks immer zwei Hände verwenden.
+** Ein Laufwerk darf niemals mit Gewalt in den Laufwerksschacht gedrückt werden. Üben Sie stets sanften, aber festen Druck aus, um die Laufwerksverriegelung vollständig einzurasten.
+** Platzieren Sie Laufwerke auf gepolsterten Flächen und stapeln Sie niemals Laufwerke auf einander.
+** Laufwerke nicht gegen andere Oberflächen abstoßen.
+
+
+. Sie können die Standort-LEDs (blau) des Speichersystems (an der Vorderseite des Speichersystems und an beiden Controllern) einschalten, um das betroffene Speichersystem leichter zu finden. Verwenden Sie den SANtricity System Manager, wählen Sie *Hardware* > *Controllers and components*, wählen Sie die Registerkarte *Controller shelf* und wählen Sie im Kontextmenü *Turn on locator light*.
+. Bei Bedarf können Sie das defekte Laufwerk in Ihrem Speichersystem physisch lokalisieren, indem Sie dessen Attention-LED (gelb) blinken lassen. Verwenden Sie SANtricity System Manager, wählen Sie *Hardware* > *Laufwerke*, wählen Sie das defekte Laufwerk in der Grafik aus, um dessen Kontextmenü anzuzeigen, und wählen Sie dann *Locator-LED einschalten*.
++
+
+NOTE: Um die Laufwerks-LEDs zu sehen, müssen Sie die Blende an der Vorderseite des Speichersystems entfernen.
+
+
+
+
+
+== Schritt 2: Ersetzen Sie das Laufwerk
+
+Ersetzen Sie das ausgefallene Laufwerk durch ein neues.
+
+
+NOTE: Sie sollten das Ersatzlaufwerk so schnell wie möglich nach der Entfernung des defekten Laufwerks einbauen.
+
+.Schritte
+. Falls noch nicht geschehen, entfernen Sie die Blende von der Vorderseite des Storage-Systems.
+. Entfernen Sie das defekte Laufwerk:
++
+
+NOTE: Wenn Sie versehentlich ein aktives Laufwerk entfernen, warten Sie mindestens 60 Sekunden, und installieren Sie es erneut. Informationen zum Recovery-Verfahren finden Sie in der Storage Management Software.
+
++
+image::../media/drw_nvme_drive_replace_ieops-1904.svg[NVMe-Laufwerk entfernen]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image::../media/icon_round_1.png[Callout-Nummer 1]
+ a| 
+Drücken Sie den schwarzen Entriegelungsknopf auf der Laufwerksblende, um den Nockenhebel zu öffnen.
+
+
+
+ a| 
+image::../media/icon_round_2.png[Callout-Nummer 2]
+ a| 
+Drehen Sie den Nockenhebel nach unten, um das Laufwerk von der Mittelebene zu lösen.
+
+
+
+ a| 
+image::../media/icon_round_3.png[Callout-Nummer 3]
+ a| 
+.. Schieben Sie das Laufwerk mithilfe des Nockengriffs teilweise aus dem Laufwerksschacht heraus.
+.. Warten Sie 60 Sekunden, bis das Laufwerk herunterfährt.
+.. Entfernen Sie das Laufwerk mit beiden Händen vollständig aus dem Laufwerksschacht.
+
+
+|===
+. Platzieren Sie das Laufwerk auf einer antistatischen, gepolsterten Unterlage fern von Magnetfeldern.
+. Warten Sie 60 Sekunden, bis die Systemsoftware erkennt, dass das Laufwerk entfernt wurde.
+. Packen Sie das Ersatzlaufwerk aus und legen Sie es auf eine ebene, antistatische Oberfläche in der Nähe des Storage-Systems.
++
+Bewahren Sie das Verpackungsmaterial auf, um es bei der Rücksendung des defekten Laufwerks zu verwenden.
+
+. Setzen Sie das Ersatzlaufwerk ein.
++
+.. Öffnen Sie den Nockengriff.
+.. Setzen Sie das Ersatzlaufwerk mit beiden Händen in den offenen Laufwerksschacht ein und drücken Sie es fest hinein, bis das Laufwerk stoppt.
+.. Schließen Sie den Nockenhebel, sodass der Antrieb vollständig in der Mittelebene sitzt und der Nockenhebel einrastet.
++
+Achten Sie darauf, den Nockenhebel langsam zu schließen, damit er korrekt mit der Vorderseite des Laufwerks ausgerichtet ist.
+
++
+Die grüne LED am Laufwerk leuchtet, wenn das Laufwerk korrekt eingesetzt ist.
+
+
+
+
+
+
+
+== Schritt 3: Schließen Sie den Laufwerksaustausch ab
+
+Bestätigen Sie, dass das Ersatzlaufwerk ordnungsgemäß funktioniert, und stellen Sie sicher, dass die Laufwerksrekonstruktion gestartet wurde.
+
+.Schritte
+. Bestätigen Sie anhand des LED-Verhaltens, dass das Ersatzlaufwerk ordnungsgemäß funktioniert, und ergreifen Sie andernfalls die entsprechende Korrekturmaßnahme.
++
+
+NOTE: Beim ersten Einsetzen eines Laufwerks kann die Aufmerksamkeits-LED leuchten. Die LED sollte jedoch innerhalb einer Minute erlöschen, wenn das Ersatzlaufwerk ordnungsgemäß funktioniert.
+
++
+[cols="1,2"]
+|===
+| Wenn das Verhalten der LED am Ersatzlaufwerk angezeigt wird... | Dann... 
+
+
+ a| 
+Die Betriebs-LED leuchtet oder blinkt und die Aufmerksamkeits-LED ist aus
+ a| 
+Das Ersatzlaufwerk funktioniert einwandfrei.
+
+Gehen Sie zum nächsten Schritt.
+
+
+
+ a| 
+Die Betriebs-LED ist aus
+ a| 
+Das Laufwerk ist möglicherweise nicht korrekt installiert.
+
+.. Entfernen Sie das Laufwerk, warten Sie 60 Sekunden und installieren Sie es dann wieder.
+.. Wenn der Recovery Guru im SANtricity System Manager immer noch ein Problem zeigt, wählen Sie *recheck* aus, um sicherzustellen, dass das Problem behoben wurde.
+
+
+
+
+ a| 
+Attention-LED ist an
+ a| 
+Das neue Laufwerk könnte defekt sein.
+
+.. Ersetzen Sie das neue Laufwerk durch ein weiteres neues Laufwerk.
+.. Wenn der Recovery Guru im SANtricity System Manager immer noch ein Problem zeigt, wählen Sie *recheck* aus, um sicherzustellen, dass das Problem behoben wurde.
+
+
+|===
+. Falls der Recovery Guru im SANtricity System Manager anzeigt, dass die Laufwerksrekonstruktion nicht automatisch gestartet wurde, starten Sie die Rekonstruktion manuell, wenn Sie vom NetApp Support oder dem Recovery Guru dazu aufgefordert werden, und befolgen Sie die folgenden Schritte:
++
+
+NOTE: Je nach Konfiguration kann der Controller die Daten automatisch auf das neue Laufwerk rekonstruieren. Wenn das Speichersystem Hot-Spare-Laufwerke verwendet, muss der Controller möglicherweise eine vollständige Rekonstruktion auf dem Hot-Spare-Laufwerk durchführen, bevor er die Daten auf das Ersatzlaufwerk kopieren kann. Dieser Rekonstruktionsprozess erhöht die Zeit, die für den Abschluss dieses Verfahrens erforderlich ist.
+
++
+.. Wählen Sie *Hardware* > *Drive*.
+.. Wählen Sie das Ersatzlaufwerk in der Grafik aus, um dessen Kontextmenü anzuzeigen, und wählen Sie dann *Reconstruct*.
+.. Bestätigen Sie, dass Sie diesen Vorgang ausführen möchten.
++
+Nach Abschluss der Laufwerkswiederherstellung befindet sich die Volume-Gruppe in einem optimalen Zustand.
+
+
+
+. Bauen Sie die Blende wieder ein.
+
+
+
+
+== Schritt 4: Senden Sie das defekte Teil zurück an NetApp
+
+Senden Sie das defekte Teil an NetApp, wie in der mit dem Kit gelieferten RMA-Anleitung beschrieben, zurück. Siehe die https://mysupport.netapp.com/site/info/rma["Teilerückgabe und Ersatz"] Seite für weitere Informationen.

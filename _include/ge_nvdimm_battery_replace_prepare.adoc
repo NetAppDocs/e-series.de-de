@@ -1,0 +1,37 @@
+= 
+:allow-uri-read: 
+
+
+.Schritte
+. Bestätigen Sie, dass der Recovery Guru im SANtricity System Manager entweder den Status _Battery Failed_ oder _Battery Replacement Required_ meldet. Wenn einer dieser Status gemeldet wird, müssen Sie die betroffene NV-Batterie ersetzen.
+. Beheben Sie alle weiteren Probleme mit dem Speichersystem.
++
+Verwenden Sie den SANtricity System Manager, um die Details im Recovery Guru zu überprüfen und festzustellen, ob weitere Probleme vorliegen.
+
+. Stellen Sie sicher, dass keine Volumes verwendet werden oder dass auf allen Hosts, die diese Volumes verwenden, ein Multipath-Treiber installiert ist.
+. Stellen Sie sicher, dass Sie Folgendes haben:
++
+** Die Ersatz-NV-Batterie.
+** Ein ESD-Armband oder andere antistatische Vorkehrungen.
+** Eine ebene, antistatische Arbeitsfläche.
+** Beschriftungen zur Kennzeichnung jedes Kabels, das mit dem defekten Controller verbunden ist.
+** Eine Managementstation mit einem Browser, der auf SANtricity System Manager für den beeinträchtigten Controller zugreifen kann.
++
+Um die System Manager-Oberfläche zu öffnen, rufen Sie im Browser den Domänennamen oder die IP-Adresse des betroffenen Controllers auf.
+
+
+
+. Sichern Sie die Konfigurationsdatenbank des Speichersystems mit SANtricity System Manager:
++
+Tritt beim Entfernen eines Controllers ein Problem auf, können Sie die gespeicherte Datei verwenden, um Ihre Konfiguration wiederherzustellen. Das System speichert den aktuellen Zustand der RAID-Konfigurationsdatenbank, die alle Daten für Volumengruppen und Datenträgerpools auf dem betroffenen Controller enthält.
+
++
+.. Wählen Sie *Support* > *Support Center* > *Diagnose*.
+.. Wählen Sie *Konfigurationsdaten Erfassen*.
+.. Wählen Sie *Collect*.
++
+Die Datei wird im Ordner Downloads für Ihren Browser mit dem Namen *configurationData-<arrayName>-<dateTime>.7z* gespeichert.
+
+
+
+

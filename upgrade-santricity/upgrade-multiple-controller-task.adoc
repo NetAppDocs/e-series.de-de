@@ -49,7 +49,7 @@ Das Dialogfeld Integritätsprüfung vor dem Upgrade wird geöffnet und zeigt all
 +
 Der Fortschritt wird im Dialogfeld angezeigt, während die Integritätsprüfung durchgeführt wird.
 
-. Wenn die Integritätsprüfung abgeschlossen ist, können Sie rechts neben jeder Zeile auf die Ellipsen (...) klicken, um weitere Informationen anzuzeigen und andere Aufgaben auszuführen.
+. Wenn der Gesundheitscheck abgeschlossen ist, können Sie auf die Auslassungspunkte (...) rechts neben jeder Zeile klicken, um weitere Informationen anzuzeigen und andere Aufgaben auszuführen.
 +
 
 NOTE: Wenn Arrays die Integritätsprüfung nicht bestanden haben, können Sie das jeweilige Array überspringen und das Upgrade für die anderen fortsetzen. Alternativ können Sie den gesamten Prozess beenden und die Arrays, die nicht bestanden haben, beheben.

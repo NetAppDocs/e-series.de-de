@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: cabling, cables, ethernet cabling, ethernet cable, out of band, direct topology, fabric topology, E-Series, eseries, E2800, E5700, EF300, EF600, DE212C, DE224C, DE460C 
 summary: Verbinden Sie Ihr Storage-System mit einem Ethernet-Netzwerk für Out-of-Band-Management. 
 ---
-= Ethernet-Verkabelung für eine Management Station (E-Series)
+= Ethernet-Verkabelung für eine Managementstation - E-Series
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -13,9 +13,13 @@ summary: Verbinden Sie Ihr Storage-System mit einem Ethernet-Netzwerk für Out-o
 [role="lead"]
 Sie können Ihr Storage-System mit einem Ethernet-Netzwerk verbinden, um das Out-of-Band-Storage-Array-Management zu ermöglichen. Sie müssen für alle Managementverbindungen für Storage-Arrays Ethernet-Kabel verwenden.
 
+[NOTE]
+====
+Einige Speichersysteme verfügen nur über einen einzigen Out-of-Band-Ethernet-Management-Port an jedem Controller.
 
-NOTE: Die EF300, EF600 und E4000 verfügen nur über einen Out-of-Band-ethernet-Management-Port.
+Spezielle Verkabelungsanweisungen für Ihr Speichersystem finden Sie link:../getting-started/getup-run-concept.html["Schnellstart für E-Series"^] und klicken Sie auf den Link für Ihr spezifisches Speichersystem.
 
+====
 
 
 == Direkte Topologie

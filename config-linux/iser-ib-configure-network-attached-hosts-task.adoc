@@ -163,7 +163,7 @@ iscsiadm -m node --target <Target IQN> -I iface-ib1 -p <Target Port IP\> -l
 ----
 iscsiadm -m session
 ----
-.. Überprüfen Sie den iscsi-Sitzungsstatus vom Array. Navigieren Sie vom SANtricity-System-Manager zu *Storage-Array* > *iSER* > *Ansicht/End-Sitzungen*.
+.. Überprüfen Sie den iSCSI-Sitzungsstatus des Arrays. Navigieren Sie im SANtricity System Manager zu *Einstellungen* > *System* > *iSCSI-Sitzungen anzeigen/beenden*.
 
 
 
