@@ -29,9 +29,9 @@ NOTE: Die SANtricity OS 12.0-Version ist nur mit den neuen EF80 und EF50 All-Fla
  a| 
 Neue Speichersystemmodelle – EF80 und EF50 All-Flash-Storage-Systeme
  a| 
-Diese Version führt die EF80 und EF50 All-NVMe-Flash-Speichersysteme ein. Die EF80 und EF50 unterstützen 24 NVMe-SSD-Laufwerke und eine einzelne Host-Schnittstellenkarte (HIC) pro Controller. Die unterstützten NVMe-over-Fabrics-Host-Schnittstellen umfassen NVMe over RoCE, NVMe over IB für EF80 und NVMe over FC für EF50. Die unterstützten SCSI-Schnittstellen umfassen Fibre Channel.
+Diese Version führt die EF80 und EF50 All-NVMe-Flash-Speichersysteme ein. Die EF80 und EF50 unterstützen 24 NVMe-SSD-Laufwerke und eine Inter-Controller-Mirroring-Karte pro Controller. Die unterstützten NVMe-over-Fabrics-Host-Schnittstellen umfassen NVMe over RoCE, NVMe over IB, NVMe over FC für EF80 und NVMe over FC für EF50. Die unterstützte SCSI-Schnittstelle ist Fibre Channel für beide Systeme. Der EF50 unterstützt bis zu zwei Host-Schnittstellenkarten pro Controller, während der EF80 bis zu drei Host-Schnittstellenkarten pro Controller unterstützt.
 
-NVMe-SSDs mit hoher Kapazität von 30 TB oder 60 TB werden ebenfalls mit dem EF80 und EF30 unterstützt. Der EF80 und EF30 ist nur für die Verwendung mit Dynamic Disk Pool geeignet und bietet keine Unterstützung für Legacy-RAID.
+NVMe-SSDs mit hoher Kapazität von 30 TB oder 60 TB werden ebenfalls mit der EF80 und EF50 unterstützt. Die EF80 und EF50 können den Dynamic Disk Pool nur nutzen, wenn das Array mit 30-TB- oder 60-TB-Laufwerken bestückt ist.
 
 
 
