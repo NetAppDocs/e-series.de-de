@@ -13,7 +13,7 @@ summary: Bekannte Probleme
 [role="lead"]
 Versionshinweise sind außerhalb dieser Site erhältlich. Sie werden aufgefordert, sich mit Ihren Anmeldedaten für die NetApp Support Site anzumelden.
 
-* https://library.netapp.com/ecm/ecm_download_file/ECMLP3368670["12.0 Versionshinweise"^]
+* https://library.netapp.com/ecm/ecm_download_file/ECMLP3368670["12.00 Versionshinweise"^]
 * https://library.netapp.com/ecm/ecm_download_file/ECMLP3334464["11.90 Versionshinweise"^]
 * https://library.netapp.com/ecm/ecm_download_file/ECMLP2885976["11.80 Versionshinweise"^]
 * https://library.netapp.com/ecm/ecm_download_file/ECMLP2874254["11.70 Versionshinweise"^]
