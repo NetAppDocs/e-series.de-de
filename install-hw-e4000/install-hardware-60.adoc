@@ -43,7 +43,7 @@ image:../media/install_rails_inst-hw-e2800-e5700.png["Installieren Sie die Schie
 . Das Shelf einbauen.
 +
 
-CAUTION: Ein leeres Regal wiegt 114.91 kg (253.33 lb). Zum sicheren Bewegen eines leeren Regals sind ein mechanisierter Lift oder vier Personen mit Hebegriffen erforderlich.
+CAUTION: Ein leeres Regal wiegt ungefähr 134 lb (61 kg). Für den sicheren Transport eines leeren Regals ist ein mechanisierter Aufzug oder vier Personen erforderlich, die die Hebegriffe benutzen.
 
 +
 .. Wenn Sie das Regal mit der Hand anheben, setzen Sie die vier Hebe-Griffe an. Drücken Sie auf jeden Griff nach oben, bis er einrastet.
