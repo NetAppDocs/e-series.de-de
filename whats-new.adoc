@@ -16,10 +16,16 @@ Die folgende Tabelle beschreibt neue Funktionen in den neuesten SANtricity OS-Re
 
 
 
-== Neue Funktionen in Version 12.00
+== Neue Funktionen in Version 12.0R1
+
+Diese Version enthält nur geringfügige Änderungen und keine neuen Funktionen. Weitere Informationen zu den Änderungen in dieser Version finden Sie in der E-Series SANtricity OS 12.0R1 README.
 
 
-NOTE: Die SANtricity OS 12.00-Version ist nur mit den neuen EF80 und EF50 All-Flash-Storage-Systemen kompatibel.
+
+== Neue Funktionen in Version 12.0
+
+
+NOTE: Die SANtricity OS 12.0-Version ist nur mit den neuen EF80 und EF50 All-Flash-Storage-Systemen kompatibel.
 
 [cols="35h,~"]
 |===
