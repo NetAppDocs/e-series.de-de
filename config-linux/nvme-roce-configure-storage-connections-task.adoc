@@ -125,3 +125,6 @@ NOTE: Diese Option ist nur in einer iSCSI-Umgebung verfügbar. In einer NVMe ove
 |===
 . Klicken Sie Auf *Fertig Stellen*.
 
+
+.Was kommt als Nächstes?
+Nachdem Sie die NVMe over RoCE-Porteinstellungen konfiguriert haben, link:nvme-roce-discover-connect-storage-host-task.html["Speicher auf dem Host ermitteln und verbinden"].

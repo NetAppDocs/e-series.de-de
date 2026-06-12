@@ -14,6 +14,12 @@ summary: Bevor Sie jeden Host in SANtricity System Manager definieren können, m
 Bevor Sie jeden Host in SANtricity System Manager definieren können, müssen Sie die Ziel-Controller-Ports vom Host erkennen und dann NVMe-Verbindungen herstellen.
 
 .Schritte
+. Überprüfen Sie mit dem folgenden Befehl, ob Sie vom Host aus jeden Array-HIC-Port mit der erwarteten MTU-Rate anpingen können:
++
+[listing]
+----
+ping -M do -s <size> <IP of array HIC port>
+----
 . Ermitteln Sie mithilfe des folgenden Befehls verfügbare Subsysteme auf dem NVMe-of Ziel für alle Pfade:
 +
 [listing]
@@ -59,11 +65,11 @@ rdma_qptype: connected
 rdma_cms:    rdma-cm
 rdma_pkey: 0x0000
 ----
-. Wiederholen Sie Schritt 1 für alle anderen Verbindungen.
+. Wiederholen Sie Schritt 2 für alle weiteren Verbindungen.
 . Stellen Sie auf dem ersten Pfad eine Verbindung zum erkannten Subsystem her, indem Sie den Befehl verwenden: `nvme connect -t rdma -n discovered_sub_nqn -a target_ip_address -Q queue_depth_setting -l controller_loss_timeout_period`
 +
 
-NOTE: Der oben aufgeführte Befehl ist nicht durch ein Neubooten aufrecht erhalten. Der `NVMe connect` Nach jedem Neustart muss der Befehl ausgeführt werden, um die NVMe-Verbindungen wiederherzustellen.
+NOTE: Der oben aufgeführte Befehl bleibt nach einem Neustart nicht aktiv. Der  `nvme connect` Befehl muss nach jedem Neustart erneut ausgeführt werden, um die NVMe-Verbindungen wiederherzustellen.
 
 +
 
@@ -75,7 +81,7 @@ NOTE: Wenn Sie mit diesem Befehl eine Portnummer angeben, schlägt die Verbindun
 
 +
 
-NOTE: Die empfohlene Einstellung für die Warteschlangentiefe ist 1024. Überschreiben Sie die Standardeinstellung 128 mit 1024 mit dem ``-Q 1024``Die Befehlszeilenoption, wie im folgenden Beispiel gezeigt.
+NOTE: Die empfohlene Warteschlangentiefe-Einstellung ist 1024. Überschreiben Sie die Standardeinstellung von 128 mit 1024 unter Verwendung der Befehlszeilenoption `-Q 1024`, wie im folgenden Beispiel gezeigt.
 
 +
 
@@ -84,8 +90,27 @@ NOTE: Die empfohlene Zeit für den Controller-Verlust beträgt in Sekunden 60 Mi
 +
 [listing]
 ----
-# nvme connect -t rdma -a 192.168.1.77 -n nqn.1992-08.com.netapp:5700.600a098000a527a7000000005ab3af94 -Q 1024 -l 3600
-# nvme connect -t rdma -a 192.168.2.77 -n nqn.1992-08.com.netapp:5700.600a098000a527a7000000005ab3af94 -Q 1024 -l 3600
+# nvme connect -t rdma -a 192.168.1.77 -n nqn.1992-
+08.com.netapp:EF80.600a098000a527a7000000005ab3af94 -Q 1024 -l 3600
 ----
-. Wiederholen Sie Schritt 3, um das erkannte Subsystem auf dem zweiten Pfad zu verbinden.
+. Wiederholen Sie Schritt 4, um das gefundene Teilsystem auf dem zweiten Pfad anzuschließen.
+. **Optional** - Richten Sie Ihren Host so ein, dass er bei jedem Systemstart automatisch Ziele erkennt und sich mit ihnen verbindet.
++
+.. Fügen Sie die Ermittlungsparameter aus Schritt 2 und Schritt 3 zu `/etc/nvme/discovery.conf` mithilfe des folgenden Verfahrens und Formats hinzu:
++
+[listing]
+----
+# echo "--transport=rdma --traddr= target_ip_address --trsvcid=4420" | sudo tee -a /etc/nvme/discovery.conf
+----
+.. Aktivieren Sie den nvmf-autoconnect-Dienst, nachdem Sie die  `/etc/nvme/discovery.conf` Datei mit folgendem Befehl ausgefüllt haben:
++
+[listing]
+----
+sudo systemctl enable nvmf-autoconnect.service
+----
 
+
+
+
+.Was kommt als Nächstes?
+Nachdem Sie die Verbindungen hergestellt haben, link:nvme-roce-define-host-task.html["den Host definieren"].

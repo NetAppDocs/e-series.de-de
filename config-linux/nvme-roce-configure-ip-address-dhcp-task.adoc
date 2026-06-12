@@ -51,3 +51,6 @@ Wenn das Speicher-Array keine DHCP-zugewiesenen IP-Adressen innerhalb von 30 Sek
 Der Netzwerkadministrator benötigt die MAC-Adressen, um die IP-Adresse für jeden Controller zu bestimmen. Sie benötigen die IP-Adressen, um über Ihren Browser eine Verbindung mit Ihrem Speichersystem herzustellen.
 
 
+
+.Was kommt als Nächstes?
+Nachdem Sie die IP-Adressen mithilfe von DHCP konfiguriert haben, link:nvme-roce-access-sam-setup-wizard-task.html["Konfigurieren Sie Ihren Speicher mit SANtricity System Manager"].

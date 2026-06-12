@@ -46,7 +46,7 @@ Informationen zur Verwendung von NVMe over RoCE finden Sie im https://mysupport.
 === Einschränkungen für Switches
 
 
-CAUTION: *RISIKO EINES DATENVERLUSTS.* Sie müssen die Flusskontrolle zur Verwendung mit Global Pause Control auf dem Switch aktivieren, um das Risiko eines Datenverlusts in einer NVMe over RoCE Umgebung zu beseitigen.
+CAUTION: *RISIKO VON DATENVERLUST.* Sie müssen NVMe over RoCE in einer verlustfreien Umgebung ausführen. Aktivieren Sie die End-to-End-Flusskontrolle mithilfe von Global Pause Frames oder Priority Flow Control (PFC) in Ihrem Netzwerk, um das Risiko von Datenverlust zu eliminieren. PFC erfordert, dass NVMe over RoCE als Priorität-3-Datenverkehr mit einem DSCP-Wert von  `106` gekennzeichnet wird.
 
 
 
@@ -55,3 +55,6 @@ CAUTION: *RISIKO EINES DATENVERLUSTS.* Sie müssen die Flusskontrolle zur Verwen
 * Asynchrones und synchrones Spiegeln werden nicht unterstützt.
 * Thin Provisioning (die Erstellung von Thin Volumes) wird nicht unterstützt.
 
+
+.Was kommt als Nächstes?
+Nachdem Sie die Unterstützung für die Linux-Konfiguration überprüft und die Einschränkungen geprüft haben, link:nvme-roce-configure-ip-address-dhcp-task.html["IP-Adressen mithilfe von DHCP konfigurieren"].

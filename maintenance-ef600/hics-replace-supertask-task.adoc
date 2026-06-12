@@ -15,11 +15,11 @@ summary: 'Ersetzen Sie eine fehlerhafte EF300- oder EF600-Host-Schnittstellenkar
 Gehen Sie wie folgt vor, um eine fehlerhafte Host-Schnittstellenkarte (HIC) in einem EF300-, EF600-, EF300C- oder EF600C-Array zu ersetzen.
 
 .Über diese Aufgabe
-Wenn Sie eine fehlerhafte HIC ersetzen, müssen Sie das Speicher-Array ausschalten, die HIC ersetzen und wieder Strom einschalten.
+Wenn Sie einen defekten HIC ersetzen, müssen Sie einen Controller offline nehmen, um das System in einen nicht-redundanten Zustand zu versetzen, den HIC ersetzen und den Controller wieder online schalten.
 
 .Bevor Sie beginnen
 * Prüfen link:hics-overview-supertask-concept.html["Anforderungen für EF300- oder EF600 HIC-Upgrades"].
-* Planen Sie für dieses Verfahren ein Wartungsfenster zur Ausfallzeit. Sie können erst nach erfolgreichem Abschluss dieses Verfahrens auf Daten im Speicher-Array zugreifen. Da beide Controller beim Einschalten die gleiche HIC-Konfiguration aufweisen müssen, muss beim Installieren der HICs die Stromversorgung ausgeschaltet sein.
+* Planen Sie ein Wartungsfenster für diesen Vorgang ein. Sie können erst wieder auf die Daten des Speichersystems zugreifen, nachdem Sie diesen Vorgang erfolgreich abgeschlossen haben. Da beide Controller beim Einschalten dieselbe HIC-Konfiguration aufweisen müssen, müssen Sie einen Controller offline nehmen, um das System in einen nicht-redundanten Zustand zu versetzen, wenn Sie HICs installieren.
 * Stellen Sie sicher, dass Sie Folgendes haben:
 +
 ** HICs, die mit Ihren Controllern kompatibel sind.

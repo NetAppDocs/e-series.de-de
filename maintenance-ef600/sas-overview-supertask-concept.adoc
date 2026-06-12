@@ -21,6 +21,6 @@ Wenn Sie eine SAS-Erweiterungskarte zu einem EF300, EF600, EF300C oder EF600C hi
 * Sie haben einen #1 Kreuzschlitzschraubendreher.
 * Sie haben Etiketten, um jedes Kabel zu identifizieren, das mit dem Controller-Behälter verbunden ist.
 * Sie verfügen über eine Management Station mit einem Browser, der für den Controller auf den SANtricity System Manager zugreifen kann. (Zeigen Sie zum Öffnen der System Manager-Schnittstelle den Domain-Namen oder die IP-Adresse des Controllers im Browser.)
-* Für EF300-Controller ist möglicherweise eine SAS-Erweiterungskarte in Port 1 installiert, um die Laufwerksfacherweiterung zu ermöglichen.
+* Für EF300-Controller muss die SAS-Erweiterungskarte in Port 1 installiert werden, um die Erweiterung des Laufwerksschachts zu ermöglichen.
 * Informationen zur Verkabelung Ihrer SAS-Erweiterung finden Sie unter link:../install-hw-cabling/index.html["Verkabelung der E-Series Hardware"] Weitere Anweisungen.
 

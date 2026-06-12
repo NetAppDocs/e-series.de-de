@@ -56,3 +56,6 @@ Nachdem ein Volume oder ein Volume erfolgreich einem Host oder Host-Cluster zuge
 * Das zugewiesene Volume erhält die nächste verfügbare NSID. Der Host verwendet die NSID für den Zugriff auf das Volume.
 * Der vom Benutzer bereitgestellte Volume-Name wird in den Volume-Listen angezeigt, die dem Host zugeordnet sind.
 
+
+.Was kommt als Nächstes?
+Nachdem Sie ein Volumen zugewiesen haben, link:nvme-roce-display-volumes-visible-host-task.html["Die sichtbaren Volumes für den Host anzeigen"].

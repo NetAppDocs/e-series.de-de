@@ -89,3 +89,6 @@ Der Setup-Assistent wird gestartet, wenn keine Pools, Volume-Gruppen, Workloads 
 Weitere Informationen finden Sie in der Online-Hilfe von SANtricity System Manager.
 
 
+
+.Was kommt als Nächstes?
+Nachdem Sie den Speicher im SANtricity System Manager konfiguriert haben, link:nvme-roce-configure-switch-task.html["Konfigurieren Sie die Switches"].

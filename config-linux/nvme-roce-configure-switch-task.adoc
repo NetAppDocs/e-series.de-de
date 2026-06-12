@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: configure switch, express linux configuration, software configuration, linux host, E2800, E5700, EF300, EF600, E-Series, eseries 
 summary: Die Switches werden entsprechend den Empfehlungen des Anbieters für NVMe over RoCE konfiguriert. Diese Empfehlungen können sowohl Konfigurationsrichtlinien als auch Code-Updates enthalten. 
 ---
-= Switch in E-Series konfigurieren – Linux (NVMe over RoCE)
+= Konfigurieren Sie die Switches in E-Series - Linux (NVMe über RoCE)
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -14,9 +14,31 @@ summary: Die Switches werden entsprechend den Empfehlungen des Anbieters für NV
 Die Switches werden entsprechend den Empfehlungen des Anbieters für NVMe over RoCE konfiguriert. Diese Empfehlungen können sowohl Konfigurationsrichtlinien als auch Code-Updates enthalten.
 
 
-CAUTION: *RISIKO EINES DATENVERLUSTS.* Sie müssen die Flusskontrolle zur Verwendung mit Global Pause Control auf dem Switch aktivieren, um das Risiko eines Datenverlusts in einer NVMe over RoCE Umgebung zu beseitigen.
+CAUTION: *RISIKO VON DATENVERLUST.* Sie müssen NVMe/RoCE in einer verlustfreien Umgebung betreiben. Aktivieren Sie die End-to-End-Flusssteuerung mithilfe der Global Pause Frame-basierten Flusssteuerung oder der Priority Flow Control (PFC) in Ihrem Netzwerk, um das Risiko von Datenverlust zu eliminieren.
+
+
+
+== Globale Pausenframes
+
+Globale Pause-Frames sind die grundlegendste Form der Flusssteuerung und am einfachsten zu implementieren. Wenn der Datenverkehr einen Netzwerkport überlastet, werden Pause-Frames generiert, die den gesamten Datenverkehr an diesem Port anhalten, bis der vorherige Datenverkehr ausreichend verarbeitet wurde, damit der Netzwerkport den eingehenden Datenverkehr aufnehmen kann, ohne ihn zu verwerfen.
 
 .Schritte
-. Aktivieren Sie die Ethernet Pause Frame Flow Control *End to End* als Best Practice-Konfiguration.
+. Aktivieren Sie die globale, auf Pause Frames basierende Flusssteuerung *end to end* mithilfe der Dokumentation Ihres Switch-Herstellers.
+. Stellen Sie sicher, dass die Flusssteuerung auf Basis des Global Pause Frame auf allen Switch-Ports aktiviert ist, die mit Ihren Hosts, Arrays und Inter-Switch-Verbindungen in dieser Umgebung verbunden sind.
+
+
+
+
+== Prioritätsflusssteuerung
+
+Die Prioritätsflusssteuerung (PFC) ist eine komplexere Form der Flusssteuerung, die verschiedenen Datenverkehrstypen unterschiedliche Prioritätsstufen zuweist. Wenn zu viel Datenverkehr einer Prioritätsstufe eingeht, wird dieser angehalten, während Datenverkehr anderer Prioritätsstufen weiterhin verarbeitet werden kann, wodurch verhindert wird, dass starker Datenverkehr bestimmter Typen andere Datenverkehrsarten verlangsamt.
+
+Aktuell müssen Sie entweder ein EF600 E-Series Array mit 200Gb/s Ethernet HICs (PN 111-04583) mit Version 11.80.1 oder ein EF80 E-Series Array mit einem beliebigen unterstützten NVMe/RoCE HIC verwenden. PFC-Parameter sind im Array fest codiert und erfordern, dass NVMe/RoCE-Datenverkehr als Priorität 3 mit einem DSCP-Wert von  `106` getaggt wird.
+
+.Schritte
+. Weitere Informationen zur Einrichtung Ihres Netzwerks mithilfe der PFC-Werte finden Sie in der Dokumentation Ihres Switch-Herstellers.
 . Wenden Sie sich an Ihren Netzwerkadministrator, wenn Sie Tipps zur Auswahl der für Ihre Umgebung am besten geeigneten Konfiguration benötigen.
 
+
+.Was kommt als Nächstes?
+Nachdem Sie die Schalter konfiguriert haben, link:nvme-roce-setup-host-side-task.html["Richten Sie den NVMe-Initiator über RoCE auf dem Host ein"].
