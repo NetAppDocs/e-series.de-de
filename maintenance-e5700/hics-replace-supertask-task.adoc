@@ -33,6 +33,7 @@ Wenn Sie eine HIC ersetzen, setzen Sie den Controller offline (für Duplexkonfig
 
 
 
+[[step-1-place-controller-offline-duplex]]
 == Schritt 1: Controller offline setzen (Duplex)
 
 Wenn Sie über eine Duplexkonfiguration verfügen, müssen Sie den betroffenen Controller offline stellen, damit Sie die ausgefallene HIC sicher entfernen können.
@@ -105,6 +106,7 @@ NOTE: Beginnen Sie keine anderen Vorgänge, bis der Status aktualisiert wurde.
 
 
 
+[[step-2-remove-controller-canister]]
 == Schritt 2: Controller-Behälter entfernen
 
 Entfernen Sie den Controller-Behälter, damit Sie die neue HIC hinzufügen können.
@@ -165,6 +167,7 @@ Wenn Sie den Controller-Behälter aus einem E5724-Controller-Regal entfernen, sc
 
 
 
+[[step-3-install-a-hic]]
 == Schritt 3: Installieren einer HIC
 
 Installieren Sie eine neue HIC, um die fehlerhafte zu ersetzen.
@@ -219,6 +222,7 @@ image::../media/28_dwg_e2800_hic_faceplace_screws_maint-e5700.gif[Die Frontplatt
 
 
 
+[[step-4-reinstall-controller-canister]]
 == Schritt 4: Controller-Behälter wieder einbauen
 
 Setzen Sie nach der Installation der HIC den Controller-Behälter wieder in das Controller-Shelf ein.
@@ -261,6 +265,7 @@ NOTE: Schließen Sie derzeit keine Datenkabel an die neuen HIC-Ports an.
 
 
 
+[[step-5-place-controller-online-duplex]]
 == Schritt 5: Controller online stellen (Duplex)
 
 Wenn Sie über eine Duplexkonfiguration verfügen, bringen Sie den Controller online, um zu bestätigen, dass das Speicher-Array ordnungsgemäß funktioniert, Supportdaten erfasst und den Betrieb wieder aufgenommen wird.

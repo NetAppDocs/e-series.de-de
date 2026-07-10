@@ -15,6 +15,7 @@ summary: Konvertieren des Host-Protokolls für eine E5700.
 
 
 
+[[host-ports-you-can-change]]
 == Host-Ports, die Sie ändern können
 
 
@@ -26,6 +27,7 @@ image::../media/e5700_with_2_port_100g_edr_infiniband_hic_w_callouts.gif[Host- u
 
 
 
+[[requirements]]
 == Anforderungen
 
 * Sie müssen für dieses Verfahren ein Wartungsfenster zur Ausfallzeit planen.
@@ -38,6 +40,7 @@ image::../media/e5700_with_2_port_100g_edr_infiniband_hic_w_callouts.gif[Host- u
 
 
 
+[[considerations-for-changing-the-host-protocol]]
 == Überlegungen beim Ändern des Host-Protokolls
 
 Die Überlegungen zum Ändern des Host-Protokolls hängen von den Start- und Endprotokollen der Baseboard-Host-Ports und den HIC-Ports ab.
@@ -49,6 +52,7 @@ NOTE: Die folgenden Überlegungen gelten nur, wenn Sie ein bereits in Gebrauch g
 
 
 
+[[converting-from-fc-to-iscsi]]
 === Konvertierung von FC zu iSCSI
 
 * Für die asynchrone Spiegelung muss sowohl das lokale Storage-Array als auch das Remote-Storage-Array dasselbe Protokoll verwenden.
@@ -75,6 +79,7 @@ CAUTION: Wenn Sie die Synchronous Mirroring-Beziehungen vor der Konvertierung in
 
 
 
+[[converting-from-iscsi-to-fc]]
 === Konvertierung von iSCSI zu FC
 
 * Für die asynchrone Spiegelung muss sowohl das lokale Storage-Array als auch das Remote-Storage-Array dasselbe Protokoll verwenden. Wenn Sie derzeit asynchrone Spiegelung mit den Baseboard-Ports verwenden, müssen Sie das asynchrone Spiegeln deaktivieren, bevor Sie das Protokoll ändern.
@@ -83,6 +88,7 @@ CAUTION: Wenn Sie die Synchronous Mirroring-Beziehungen vor der Konvertierung in
 
 
 
+[[converting-ib-iser-tofrom-ib-srp]]
 === Konvertieren von IB-iSER nach/von IB-SRP
 
 * Sie müssen Ihre Hardware nicht ändern, wenn Sie von/nach iSER in SRP konvertieren.
@@ -102,6 +108,7 @@ NOTE: Nach dessen Deaktivierung kann das da auf dem Volume nicht wieder aktivier
 
 
 
+[[mirroring-operations-need-same-host-protocol]]
 === Spiegelungsvorgänge erfordern das gleiche Host-Protokoll
 
 Spiegelungsvorgänge werden nicht beeinträchtigt, wenn die Host-Ports, die für die Spiegelung genutzt werden, dasselbe Protokoll beibehalten, nachdem Sie das Funktionspaket angewendet haben. Selbst vor dem Anwenden des Feature Packs sollten Sie vor dem Anwenden bestätigen, dass alle Konsistenzgruppen der Spiegelung synchronisiert werden. Nach dem Anwenden des Feature Packs sollten Sie die Kommunikation zwischen dem lokalen Speicher-Array und dem Remote-Speicher-Array testen. Lesen Sie die Online-Hilfe für den SANtricity System Manager, wenn Sie Fragen dazu haben.

@@ -16,6 +16,7 @@ Prüfen Sie die Anforderungen und Überlegungen, bevor Sie eine Host-Schnittstel
 
 
 
+[[procedure-overview]]
 == Verfahrensübersicht
 
 Die Schritte zum Ersetzen einer HIC hängen davon ab, ob Sie einen oder zwei Controller haben:
@@ -50,6 +51,7 @@ Zwei Controller (E2860, E2812 oder E2824-Duplex)
 |===
 
 
+[[requirements-for-adding-upgrading-or-replacing-a-hic]]
 == Anforderungen für das Hinzufügen, Aktualisieren oder Ersetzen einer HIC
 
 Wenn Sie eine Host Interface Card (HIC) hinzufügen, aktualisieren oder ersetzen möchten, beachten Sie bitte die folgenden Anforderungen.

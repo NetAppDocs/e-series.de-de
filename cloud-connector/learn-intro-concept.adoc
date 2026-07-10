@@ -15,6 +15,7 @@ Ihr System muss die Kompatibilitätsanforderungen für den SANtricity Cloud Conn
 
 
 
+[[host-hardware-requirements]]
 == Anforderungen an die Host-Hardware
 
 Ihre Hardware muss die folgenden Mindestanforderungen erfüllen:
@@ -27,6 +28,7 @@ Sie müssen den SANtricity Web Services Proxy installieren, um den SANtricity Cl
 
 
 
+[[supported-browsers]]
 == Unterstützte Browser
 
 Die folgenden Browser werden von SANtricity Cloud Connector unterstützt (Mindestversionen angegeben):
@@ -43,6 +45,7 @@ NOTE: Die API-Dokumentation für die SANtricity-Cloud-Connector-Anwendung wird n
 
 
 
+[[compatible-storage-arrays-and-controller-firmware]]
 == Kompatible Storage Arrays und Controller Firmware
 
 Vor der Verwendung der SANtricity Cloud Connector-Applikation sollten Sie die Kompatibilität Ihrer Storage-Arrays und Firmware überprüfen.
@@ -51,6 +54,7 @@ Eine vollständige und aktuelle Liste aller kompatiblen Storage-Arrays und Firmw
 
 
 
+[[compatible-operating-systems]]
 == Kompatible Betriebssysteme
 
 Die Anwendung SANtricity Cloud Connector 4.0 ist mit folgenden Betriebssystemen kompatibel und unterstützt:
@@ -78,6 +82,7 @@ SUSE Linux Enterprise Server (SLES)
 |===
 
 
+[[supported-file-systems]]
 == Unterstützte Dateisysteme
 
 Sie müssen unterstützte Dateisysteme verwenden, um Backups und Wiederherstellungen über die SANtricity-Cloud-Connector-Anwendung durchzuführen.

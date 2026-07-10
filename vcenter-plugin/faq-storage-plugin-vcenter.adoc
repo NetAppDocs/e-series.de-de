@@ -19,6 +19,7 @@ Diese FAQ kann Ihnen helfen, wenn Sie nur nach einer schnellen Antwort auf eine 
 
 
 
+[[what-settings-are-imported]]
 == Welche Einstellungen werden importiert?
 
 Die Funktion „Importeinstellungen“ ist ein Batch-Vorgang, bei dem Konfigurationen von einem Speicher-Array auf mehrere Speicher-Arrays geladen werden.
@@ -36,6 +37,7 @@ Die während dieses Vorgangs importierten Einstellungen hängen davon ab, wie da
 
 
 
+[[why-do-i-not-see-all-of-my-storage-arrays]]
 == Warum sehe ich nicht alle meine Storage Arrays?
 
 Während des Vorgangs „Importeinstellungen“ stehen einige Ihrer Speicherarrays möglicherweise nicht im Dialogfeld „Zielauswahl“ zur Verfügung.
@@ -49,12 +51,14 @@ Speicher-Arrays werden möglicherweise aus den folgenden Gründen nicht angezeig
 
 
 
+[[why-are-these-volumes-not-associated-with-a-workload]]
 == Warum sind diese Volumes nicht mit einem Workload verbunden?
 
 Volumes sind keinem Workload zugeordnet, wenn sie mithilfe der Befehlszeilenschnittstelle (CLI) erstellt wurden oder aus einem anderen Storage-Array migriert (importiert/exportiert) wurden.
 
 
 
+[[how-does-my-selected-workload-impact-volume-creation]]
 == Wie wirkt sich mein ausgewählter Workload auf die Erstellung des Volumes aus?
 
 Während der Volume-Erstellung werden Sie aufgefordert, Informationen über die Verwendung eines Workloads zu erhalten. Das System erstellt anhand dieser Informationen eine optimale Volume-Konfiguration für Sie, die Sie nach Bedarf bearbeiten können. Optional können Sie diesen Schritt in der Sequenz zur Volume-Erstellung überspringen.
@@ -77,6 +81,7 @@ Sie können die empfohlene Volume-Konfiguration prüfen und die vom System empfo
 
 
 
+[[why-do-i-not-see-all-my-volumes-hosts-or-host-clusters]]
 == Warum sehe ich nicht alle meine Volumes, Hosts oder Host Cluster?
 
 Snapshot-Volumes mit einem da-fähigen Basis-Volume können nicht einem Host zugewiesen werden, der nicht Data Assurance (da)-fähig ist. Sie müssen das da auf dem Basisvolume deaktivieren, bevor ein Snapshot-Volume einem Host zugewiesen werden kann, der nicht über da-fähig ist.
@@ -92,12 +97,14 @@ NOTE: Sie können da nicht auf einem Volume deaktivieren, das mit Snapshots (Kon
 
 
 
+[[why-can-i-not-delete-the-selected-workload]]
 == Warum kann ich den ausgewählten Workload nicht löschen?
 
 Dieser Workload besteht aus einer Gruppe von Volumes, die mithilfe der Befehlszeilenschnittstelle (CLI) erstellt oder von einem anderen Storage Array migriert (importiert/exportiert) wurden. Daher sind die Volumes in diesem Workload keinem applikationsspezifischen Workload zugeordnet, sodass der Workload nicht gelöscht werden kann.
 
 
 
+[[how-do-application-specific-workloads-help-me-manage-my-storage-array]]
 == Wie können mir applikationsspezifische Workloads beim Management meines Storage Arrays helfen?
 
 Die Volume-Merkmale Ihres applikationsspezifischen Workloads diktieren, wie der Workload mit den Komponenten des Storage-Arrays interagiert und die Performance Ihrer Umgebung im Rahmen einer bestimmten Konfiguration bestimmt.
@@ -106,6 +113,7 @@ Eine Applikation ist Software wie SQL Server oder Exchange. Sie definieren einen
 
 
 
+[[what-do-i-need-to-do-to-recognize-the-expanded-capacity]]
 == Was muss ich tun, um die erweiterte Kapazität erkennen zu können?
 
 Wenn Sie die Kapazität für ein Volume erhöhen, erkennt der Host möglicherweise nicht sofort den Anstieg der Volume-Kapazität.
@@ -118,6 +126,7 @@ Weitere Informationen finden Sie in der Dokumentation Ihres Host-Betriebssystems
 
 
 
+[[when-would-i-want-to-use-the-assign-host-later-selection]]
 == Wann soll ich die spätere Auswahl Host zuweisen verwenden?
 
 Wenn Sie den Prozess zum Erstellen von Volumes beschleunigen möchten, können Sie den Hostzuordnungsschritt überspringen, damit neu erstellte Volumes offline initialisiert werden.
@@ -130,6 +139,7 @@ Wenn keines der Volumes einer Volume-Gruppe zugeordnet ist, wird die Offline-Ini
 
 
 
+[[what-do-i-need-to-know-about-host-block-size-requirements]]
 == Was muss ich über die Anforderungen der Host-Blockgröße wissen?
 
 Bei EF300- und EF600-Systemen kann ein Volume so eingestellt werden, dass es 512 Byte oder 4 KiB-Blockgrößen unterstützt (auch als „Sektorgröße“ bezeichnet). Sie müssen den richtigen Wert während der Volume-Erstellung einstellen. Wenn möglich, schlägt das System den entsprechenden Standardwert vor.
@@ -149,12 +159,14 @@ Bevor Sie die Blockgröße des Volumes festlegen, lesen Sie die folgenden Einsch
 
 
 
+[[why-would-i-need-to-create-a-host-cluster]]
 == Warum sollte ich ein Host-Cluster erstellen?
 
 Sie müssen ein Host-Cluster erstellen, wenn Sie mindestens zwei Hosts über gemeinsamen Zugriff auf dieselbe Gruppe von Volumes verfügen möchten. Normalerweise sind auf den einzelnen Hosts Clustering-Software installiert, um den Volume-Zugriff zu koordinieren.
 
 
 
+[[how-do-i-know-which-host-operating-system-type-is-correct]]
 == Wie kann ich feststellen, welches Host-Betriebssystem richtig ist?
 
 Das Feld Host-Betriebssystemtyp enthält das Betriebssystem des Hosts. Sie können den empfohlenen Hosttyp aus der Dropdown-Liste auswählen.
@@ -207,6 +219,7 @@ Einige der folgenden Host-Typen werden möglicherweise in der Liste angezeigt:
 |===
 
 
+[[how-do-i-match-the-host-ports-to-a-host]]
 == Wie Stelle ich die Host-Ports einem Host gegenüber?
 
 Wenn Sie einen Host manuell erstellen, müssen Sie zuerst das entsprechende HBA-Dienstprogramm (Host Bus Adapter) verwenden, das auf dem Host verfügbar ist, um die Host-Port-IDs zu ermitteln, die mit jedem HBA verknüpft sind, der im Host installiert ist.
@@ -218,6 +231,7 @@ CAUTION: Stellen Sie sicher, dass Sie die entsprechenden Host-Port-IDs für den 
 
 
 
+[[what-is-the-default-cluster]]
 == Was ist das Standard-Cluster?
 
 Das Standard-Cluster ist eine systemdefinierte Einheit, die jedem nicht zugeordneten Host-Port-Identifier, der beim Speicher-Array angemeldet ist, den Zugriff auf Volumes ermöglicht, die dem Standardcluster zugewiesen sind.
@@ -233,6 +247,7 @@ Zunächst können Sie Volumes über die Befehlszeilenschnittstelle (CLI) nur dem
 
 
 
+[[what-is-redundancy-check]]
 == Was ist Redundanzprüfung?
 
 Durch eine Redundanzprüfung wird ermittelt, ob die Daten auf einem Volume in einem Pool oder einer Volume-Gruppe konsistent sind. Redundanzdaten dienen der schnellen Rekonstruktion von Informationen über das Ersatzlaufwerk, wenn eines der Laufwerke im Pool oder der Volume-Gruppe ausfällt.
@@ -249,6 +264,7 @@ NOTE: Eine sofortige Durchführung einer Redundanzprüfung auf demselben Pool od
 
 
 
+[[what-is-preservation-capacity]]
 == Was ist Erhaltungskapazität?
 
 Bei der Konservierung wird die Kapazität (Anzahl der Laufwerke) verwendet, die in einem Pool reserviert ist, um potenzielle Laufwerksausfälle zu unterstützen.
@@ -259,6 +275,7 @@ Pools nutzen während der Rekonstruktion haltende Kapazitäten, wohingegen Volum
 
 
 
+[[what-raid-level-is-best-for-my-application]]
 == Welches RAID-Level eignet sich am besten für meine Applikation?
 
 Um die Performance einer Volume-Gruppe zu maximieren, müssen Sie den entsprechenden RAID-Level auswählen.
@@ -267,6 +284,7 @@ Sie können den entsprechenden RAID-Level ermitteln, indem Sie die Prozentsätze
 
 
 
+[[raid-levels-and-application-performance]]
 === RAID-Level und Applikations-Performance
 
 RAID verwendet eine Reihe von Konfigurationen, sogenannte Level, um zu ermitteln, wie Benutzer- und Redundanzdaten von den Laufwerken geschrieben und abgerufen werden. Jedes RAID-Level stellt eigene Performance-Funktionen bereit. Applikationen mit einem hohen Prozentsatz für Lesevorgänge können aufgrund der hervorragenden Lese-Performance der RAID 5- und RAID 6-Konfigurationen auch mit RAID 5-Volumes oder RAID 6-Volumes arbeiten.
@@ -389,6 +407,7 @@ NOTE: Sie können den RAID-Level eines Pools nicht ändern. Die Benutzeroberflä
 
 
 
+[[raid-levels-and-data-protection]]
 === RAID-Level und Datensicherung
 
 RAID 1-, RAID 5- und RAID 6-Daten für Schreibredundanz auf den Datenträger für Fehlertoleranz. Bei den Redundanzdaten kann es sich um eine Kopie der Daten (gespiegelt) oder um einen aus den Daten abgeleiteten, fehlerkorrigierenden Code handelt. Bei einem Laufwerksausfall können Sie mithilfe der Redundanzdaten schnell Informationen über das Ersatzlaufwerk wiederherstellen.
@@ -397,6 +416,7 @@ Sie konfigurieren eine einzelne RAID-Ebene für eine einzelne Volume-Gruppe. All
 
 
 
+[[why-are-some-drives-not-showing-up]]
 == Warum werden einige Laufwerke nicht angezeigt?
 
 Im Dialogfeld Kapazität hinzufügen stehen nicht alle Laufwerke zur Verfügung, um einem vorhandenen Pool oder einer Volume-Gruppe Kapazität hinzuzufügen.
@@ -423,6 +443,7 @@ NOTE: Die Kapazität kann im Speicher-Array erhöht werden, indem neue Laufwerke
 
 
 
+[[why-can-i-not-increase-my-preservation-capacity]]
 == Warum kann ich meine Konservierungskapazität nicht erhöhen?
 
 Wenn Sie Volumes auf allen verfügbaren nutzbaren Kapazitäten erstellt haben, können Sie die dauerhafte Kapazität möglicherweise nicht erhöhen.
@@ -436,6 +457,7 @@ NOTE: Die dauerhafte Kapazität wird als eine Reihe von Laufwerken festgelegt, a
 
 
 
+[[what-is-data-assurance]]
 == Was ist Data Assurance?
 
 Data Assurance (da) implementiert den T10 Protection Information (PI)-Standard. Dies erhöht die Datenintegrität, indem Fehler geprüft und korrigiert werden, die bei der Datenübertragung entlang des I/O-Pfads auftreten können.
@@ -448,6 +470,7 @@ Stellen Sie sicher, dass Sie diese DA-fähigen Volumes einem Host über eine E/A
 
 
 
+[[what-is-fdefips-security]]
 == Was ist FDE/FIPS-Sicherheit?
 
 FDE/FIPS-Sicherheit bezieht sich auf sichere Laufwerke, die Daten bei Schreibvorgängen verschlüsseln und während Lesevorgängen mit einem eindeutigen Verschlüsselungsschlüssel entschlüsseln.
@@ -459,6 +482,7 @@ NOTE: Für Volumes, die FIPS-Unterstützung erfordern, verwenden Sie nur FIPS-La
 
 
 
+[[what-is-secure-capable-drive-security]]
 == Was ist sicher-fähig (Drive Security)?
 
 Drive Security ist eine Funktion, die bei Entfernung aus dem Speicher-Array unberechtigten Zugriff auf Daten auf sicheren Laufwerken verhindert.
@@ -467,6 +491,7 @@ Dabei können es sich entweder um vollständige Festplattenverschlüsselung (Ful
 
 
 
+[[how-do-i-view-and-interpret-all-ssd-cache-statistics]]
 == Wie kann ich sämtliche SSD Cache Statistiken anzeigen und interpretieren?
 
 Sie können nominale Statistiken und detaillierte Statistiken für SSD Cache anzeigen.
@@ -475,6 +500,7 @@ Die Nominalstatistiken sind eine Untergruppe der detaillierten Statistiken. Die 
 
 
 
+[[nominal-statistics]]
 === Nominale Statistiken
 
 Um SSD Cache Statistiken anzuzeigen, gehen Sie zur Seite *Verwalten*. Wählen Sie Menü:Provisioning[Pools & Volume-Gruppen konfigurieren]. Wählen Sie den SSD-Cache aus, für den Sie Statistiken anzeigen möchten, und wählen Sie dann Menü:Mehr[Statistik anzeigen]. Die nominalen Statistiken werden im Dialogfeld „View SSD Cache Statistics“ angezeigt.
@@ -486,6 +512,7 @@ Die Liste enthält nominale Statistiken, die eine Untermenge der detaillierten S
 
 
 
+[[detailed-statistics]]
 === Detaillierte Statistiken
 
 Die detaillierten Statistiken bestehen aus den Nominalstatistiken sowie zusätzlichen Statistiken. Diese zusätzlichen Statistiken werden zusammen mit den nominalen Statistiken gespeichert, werden aber im Gegensatz zu den nominalen Statistiken nicht im Dialogfeld „View SSD Cache Statistics“ angezeigt. Sie können die detaillierten Statistiken nur anzeigen, nachdem Sie die Statistiken in eine CSV-Datei exportiert haben.
@@ -494,12 +521,14 @@ Die detaillierten Statistiken sind nach den Nominalstatistiken aufgelistet.
 
 
 
+[[what-is-shelf-loss-protection-and-drawer-loss-protection]]
 == Was ist der Schutz vor Regalverlust und der Schutz vor Schubladenverlust?
 
 Shelf-Schutz und Schutz vor Schubladenverlust sind Attribute von Pools und Volume-Gruppen, die es Ihnen ermöglichen, den Datenzugriff bei Ausfall eines einzelnen Shelfs oder einer Schublade aufrechtzuerhalten.
 
 
 
+[[shelf-loss-protection]]
 === Schutz vor Regalverlust
 
 Ein Shelf ist das Gehäuse, das entweder die Laufwerke oder die Laufwerke und den Controller enthält. Der Shelf-Verlust-Schutz garantiert den Zugriff auf die Daten auf den Volumes in einem Pool oder einer Volume-Gruppe, wenn ein totaler Verlust der Kommunikation mit einem einzelnen Festplatten-Shelf auftritt. Ein Beispiel für einen völligen Verlust der Kommunikation kann ein Verlust an Strom am Festplatten-Shelf oder ein Ausfall beider I/O-Module (IOMs) sein.
@@ -529,6 +558,7 @@ Die Kriterien für den Regalverlustschutz hängen von der Schutzmethode ab, wie 
 |===
 
 
+[[drawer-loss-protection]]
 === Schutz vor Schubladenverlust
 
 Eine Schublade ist eines der Fächer eines Regals, das Sie herausziehen, um auf die Laufwerke zuzugreifen. Nur die Regale mit hoher Kapazität verfügen über Schubladen. Der Schutz vor Schubladenverlust garantiert den Zugriff auf die Daten auf den Volumes in einem Pool oder einer Volume-Gruppe, wenn ein vollständiger Verlust der Kommunikation mit einem einzelnen Fach auftritt. Ein Beispiel für einen Totalverlust der Kommunikation kann zu einem Stromausfall in der Schublade oder einem Ausfall einer internen Komponente in der Schublade führen.
@@ -558,6 +588,7 @@ Die Kriterien für den Schubladenschutz sind abhängig von der Schutzmethode, wi
 |===
 
 
+[[how-do-i-maintain-shelf-and-drawer-loss-protection]]
 == Wie kann ich den Schutz vor Schubladenausfall wahren?
 
 Verwenden Sie die in der folgenden Tabelle aufgeführten Kriterien, um den Schutz vor Shelf- und Schubladenverlusten für einen Pool oder eine Volume-Gruppe aufrechtzuerhalten.
@@ -585,6 +616,7 @@ NOTE: Der Schutz vor Shelf-/Schubladenverlust bleibt nicht erhalten, wenn ein La
 
 
 
+[[what-is-optimization-capacity-for-pools]]
 == Was ist die Optimierungskapazität für Pools?
 
 SSD-Laufwerke haben eine längere Lebensdauer und eine bessere maximale Schreib-Performance, wenn ein Teil ihrer Kapazität nicht zugewiesen ist.
@@ -598,6 +630,7 @@ NOTE: Der Schieberegler „zusätzliche Optimierung der Kapazität“ ist nur f�
 
 
 
+[[what-is-optimization-capacity-for-volume-groups]]
 == Was ist die Optimierungskapazität für Volume-Gruppen?
 
 SSD-Laufwerke haben eine längere Lebensdauer und eine bessere maximale Schreib-Performance, wenn ein Teil ihrer Kapazität nicht zugewiesen ist.
@@ -611,6 +644,7 @@ NOTE: Der zusätzliche Schieberegler zur Optimierung der Kapazität ist nur für
 
 
 
+[[what-is-resource-provisioning-capable]]
 == Was ist die Fähigkeit zur Ressourcenbereitstellung?
 
 Resource Provisioning ist eine Funktion, die in den EF300- und EF600-Speicher-Arrays zur Verfügung steht und die es ermöglicht, Volumes ohne Hintergrundinitialisierung sofort in Betrieb zu nehmen.
@@ -621,6 +655,7 @@ Ein vom Ressourcen bereitgestelltes Volume ist ein Thick Volume in einer SSD-Vol
 
 
 
+[[what-do-i-need-to-know-about-the-resource-provisioned-volumes-feature]]
 == Was muss ich über die Funktion der Ressourcen-bereitgestellten Volumes wissen?
 
 Resource Provisioning ist eine Funktion, die in den EF300- und EF600-Speicher-Arrays zur Verfügung steht und die es ermöglicht, Volumes ohne Hintergrundinitialisierung sofort in Betrieb zu nehmen.
@@ -630,6 +665,7 @@ NOTE: Die Ressourcen-Provisioning-Funktion ist derzeit nicht verfügbar. In eini
 
 
 
+[[resource-provisioned-volumes]]
 === Volumes mit Ressourcenbereitstellung
 
 Ein vom Ressourcen bereitgestelltes Volume ist ein Thick Volume in einer SSD-Volume-Gruppe oder einem Pool. Dabei wird bei der Erstellung des Volume die Laufwerkskapazität zugewiesen (dem Volume zugewiesen), die Laufwerksblöcke jedoch aufgehoben (nicht zugewiesen). In einem herkömmlichen Thick Volume werden im Vergleich dazu alle Laufwerkblöcke während der Initialisierung eines Volume im Hintergrund zugeordnet oder zugewiesen, um die Felder für den Schutz der Data Assurance zu initialisieren und die Daten- und RAID-Parität in jedem RAID Stripe konsistent zu gestalten. Bei einem Volume, das für die Ressource bereitgestellt wird, gibt es keine zeitgebundene Hintergrundinitialisierung. Stattdessen wird jeder RAID-Stripe nach dem ersten Schreibvorgang auf einen Volume-Block im Stripe initialisiert.
@@ -638,6 +674,7 @@ Ein vom Ressourcen bereitgestelltes Volume ist ein Thick Volume in einer SSD-Vol
 
 
 
+[[enabling-and-disabling-the-feature]]
 === Aktivieren und Deaktivieren der Funktion
 
 Die Ressourcenbereitstellung ist standardmäßig auf Systemen aktiviert, auf denen die Laufwerke DULBE unterstützen. Sie können diese Standardeinstellung in Pools und Volume-Gruppen deaktivieren. Die Deaktivierung der Ressourcen-Bereitstellung ist eine permanente Aktion für vorhandene Volumes und kann nicht rückgängig gemacht werden (d. h. Sie können die Ressourcen-Bereitstellung für diese Volume-Gruppen und -Pools nicht erneut aktivieren).
@@ -646,6 +683,7 @@ Wenn Sie die Ressourcenbereitstellung jedoch für alle von Ihnen erstellten neue
 
 
 
+[[what-is-the-difference-between-internal-security-key-and-external-security-key-management]]
 == Worin besteht der Unterschied zwischen internem Sicherheitsschlüssel und externem Sicherheitsschlüsselmanagement?
 
 Wenn Sie die Laufwerksicherheit-Funktion implementieren, können Sie einen internen Sicherheitsschlüssel oder einen externen Sicherheitsschlüssel verwenden, um Daten zu sperren, wenn ein sicheres Laufwerk aus dem Speicher-Array entfernt wird.
@@ -654,6 +692,7 @@ Ein Sicherheitsschlüssel ist eine Zeichenkette, die von den sicheren Laufwerken
 
 
 
+[[what-do-i-need-to-know-before-creating-a-security-key]]
 == Was muss ich vor der Erstellung eines Sicherheitsschlüssels wissen?
 
 Ein Sicherheitsschlüssel wird von Controllern und sicheren Laufwerken innerhalb eines Storage-Arrays gemeinsam verwendet. Wenn ein sicheres Laufwerk aus dem Speicher-Array entfernt wird, schützt der Sicherheitsschlüssel die Daten vor unberechtigtem Zugriff.
@@ -666,6 +705,7 @@ Sie können Sicherheitsschlüssel mit einer der folgenden Methoden erstellen und
 
 
 
+[[internal-key-management]]
 == Internes Verschlüsselungsmanagement
 
 Interne Schlüssel werden in einem nicht zugänglichen Ort im persistenten Speicher des Controllers gepflegt und „versteckt“. Bevor Sie einen internen Sicherheitsschlüssel erstellen, müssen Sie Folgendes tun:
@@ -678,6 +718,7 @@ Sie können dann einen internen Sicherheitsschlüssel erstellen, der die Definit
 
 
 
+[[external-key-management]]
 === Externes Verschlüsselungskeymanagement
 
 Externe Schlüssel werden mithilfe eines Key Management Interoperability Protocol (KMIP) auf einem separaten Verschlüsselungsmanagement-Server aufbewahrt. Bevor Sie einen externen Sicherheitsschlüssel erstellen, müssen Sie Folgendes tun:
@@ -698,6 +739,7 @@ Anschließend können Sie einen externen Schlüssel erstellen, der die IP-Adress
 
 
 
+[[why-do-i-need-to-define-a-pass-phrase]]
 == Warum muss ich eine Passphrase definieren?
 
 Der Passphrase wird verwendet, um die auf dem lokalen Management-Client gespeicherte Sicherheitsschlüsseldatei zu verschlüsseln und zu entschlüsseln. Ohne den Passphrase kann der Sicherheitsschlüssel nicht entschlüsselt und verwendet werden, um Daten von einem sicheren Laufwerk zu entsperren, wenn er in einem anderen Speicher-Array neu installiert wird.

@@ -15,6 +15,7 @@ Sie können eine PDF-Datei auf dieser Seite erstellen und drucken und dann die K
 
 
 
+[[direct-connect-topology]]
 == Topologie mit direkter Verbindung
 
 In einer Topologie mit direkter Verbindung werden ein oder mehrere Hosts direkt mit dem Controller verbunden.
@@ -33,6 +34,7 @@ image::../media/nvme_fc_direct_topology.png[Beispiel für eine Direct-Connect-To
 
 
 
+[[switch-connect-topology]]
 == Switch Connect-Topologie
 
 In einer Fabric-Topologie werden ein oder mehrere Switches verwendet. Siehe https://mysupport.netapp.com/matrix["NetApp Interoperabilitäts-Matrix-Tool"^] Für eine Liste der unterstützten Switches.
@@ -41,6 +43,7 @@ image::../media/nvme_fc_fabric_topology.png[Beispiel für eine Switch Connect-To
 
 
 
+[[host-identifiers]]
 == Host-IDs
 
 Suchen und Dokumentieren des Initiator-NQN von jedem Host aus.
@@ -62,6 +65,7 @@ Host (Initiator) 2
 |===
 
 
+[[target-nqn]]
 == Ziel-NQN
 
 Dokumentieren Sie das Ziel-NQN für das Speicher-Array.
@@ -77,6 +81,7 @@ Array-Controller (Ziel)
 |===
 
 
+[[target-nqns]]
 == Ziel-NQNs
 
 Dokumentieren Sie die NQNs, die von den Array-Ports verwendet werden sollen.
@@ -110,6 +115,7 @@ Controller B, Port 2
 |===
 
 
+[[mapping-host-name]]
 == Zuordnung des Hostnamens
 
 

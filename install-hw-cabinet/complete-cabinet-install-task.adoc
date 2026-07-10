@@ -15,6 +15,7 @@ Nachdem Sie den Schrank bewegt haben, senken Sie die Nivellierfüße und den Sta
 
 
 
+[[step-1-lower-leveling-feet-and-stability-foot]]
 == Schritt 1: Untere Nivellierfüße und Stabilitätsfuß
 
 Sie stabilisieren den Schrank, indem Sie seine Füße einstellen. Die Nivellierfüße stützen den Schrank von den Rollen. Der Stabilitätsfuß verhindert, dass der Schrank überfällt, nachdem er sich in seiner festen Position befindet.
@@ -52,6 +53,7 @@ Stabile Füße
 
 
 
+[[step-2-reinstall-trays]]
 == Schritt 2: Installieren Sie die Fächer wieder
 
 Nachdem Sie den Schrank verschoben haben, können Sie die Fächer an ihren ursprünglichen Positionen wieder einsetzen.
@@ -76,6 +78,7 @@ Um Adresskonflikte und Datenverlust zu vermeiden, ersetzen Sie alle Komponenten 
 
 
 
+[[step-3-install-cable-spools-and-tie-wraps]]
 == Schritt 3: Installieren Sie Kabelspulen und Kabelbinder
 
 Nachdem Sie die Fächer wieder eingesetzt haben, installieren Sie die Kabelspulen und Kabelbinder. Die Kabelspulen und Kabelbinder bieten eine überlange Kabellänge und eine Kabelführung für die Controller und die Fächer.
@@ -106,6 +109,7 @@ Kabelspule
 
 
 
+[[step-4-install-additional-trays]]
 == Schritt 4: Installieren Sie zusätzliche Fächer
 
 Bei Bedarf können Sie zusätzliche Fächer installieren. Sie müssen nicht verwendete Positionen für Fächer abdecken, um einen korrekten Luftstrom zu gewährleisten.
@@ -121,6 +125,7 @@ Die Abdeckung der leeren Räume ist erforderlich, damit der Luftstrom durch den 
 
 
 
+[[step-5-install-additional-mounting-rails]]
 == Schritt 5: Installieren Sie zusätzliche Befestigungsschienen
 
 Wenn Sie Controller-Laufwerksfächer oder Laufwerksfächer installieren, die separat geliefert wurden (nicht bereits im Schrank installiert), müssen Sie möglicherweise weitere Befestigungsschienen im Schrank installieren.
@@ -230,6 +235,7 @@ NOTE: Die verbleibenden beiden Schraubenbohrungen werden zur Montage des Fachs v
 
 
 
+[[step-6-connect-the-cabinet-to-power]]
 == Schritt 6: Schließen Sie das Gehäuse an die Stromversorgung an
 
 Um die Schrankinstallation abzuschließen, schalten Sie die Schaltschrankkomponenten ein.

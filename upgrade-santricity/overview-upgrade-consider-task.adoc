@@ -16,12 +16,14 @@ summary: Prüfen Sie Upgrade-Überlegungen für die SANtricity OS Controller-Sof
 
 
 
+[[controller-upgrades-single-or-multiple]]
 == Controller-Upgrades (Single oder mehrere)
 
 Lesen Sie vor dem Controller-Upgrade diese wichtigen Überlegungen durch.
 
 
 
+[[current-versions]]
 === Aktuelle Versionen
 
 Sie können die aktuellen Versionen Ihrer Software und Firmware wie folgt anzeigen:
@@ -32,6 +34,7 @@ Sie können die aktuellen Versionen Ihrer Software und Firmware wie folgt anzeig
 
 
 
+[[components-included-in-the-upgrade]]
 === Im Upgrade enthaltene Komponenten
 
 Die folgenden Komponenten sind beim Upgrade-Prozess von SANtricity OS enthalten:
@@ -44,6 +47,7 @@ Die folgenden Komponenten sind beim Upgrade-Prozess von SANtricity OS enthalten:
 
 
 
+[[components-to-upgrade-separately]]
 === Komponenten für ein separates Upgrade
 
 Die folgenden Komponenten müssen separat aktualisiert werden:
@@ -58,6 +62,7 @@ Die folgenden Komponenten müssen separat aktualisiert werden:
 
 
 
+[[dual-controllers-and-io-processing]]
 === Dual Controller und I/O-Verarbeitung
 
 Wenn ein Storage-Array zwei Controller enthält und ein Multipath-Treiber installiert ist, kann das Storage-Array die I/O-Verarbeitung während des Upgrades fortsetzen. Während des Upgrades erfolgt der folgende Vorgang:
@@ -72,6 +77,7 @@ Nach Abschluss des Upgrades müssen Sie Volumes möglicherweise manuell zwischen
 
 
 
+[[health-check]]
 === Zustandsprüfung
 
 Im Rahmen des Upgrades wird eine Zustandsprüfung ausgeführt. Bei dieser Integritätsprüfung werden alle Storage Array-Komponenten bewertet, um sicherzustellen, dass das Upgrade fortgesetzt werden kann. Die folgenden Bedingungen können das Upgrade verhindern:
@@ -91,6 +97,7 @@ Sie können die Integritätsprüfung vor dem Upgrade auch separat durchführen, 
 
 
 
+[[immediate-or-staged-upgrade]]
 === Sofortiges oder stufenweise Upgrade
 
 Sie können das Upgrade sofort aktivieren oder es für einen späteren Zeitpunkt aktivieren. Aus folgenden Gründen können Sie sich später aktivieren:
@@ -101,18 +108,21 @@ Sie können das Upgrade sofort aktivieren oder es für einen späteren Zeitpunkt
 
 
 
+[[drive-firmware-upgrade]]
 == Upgrade der Laufwerk-Firmware
 
 Lesen Sie die folgenden wichtigen Überlegungen durch, bevor Sie Ihre Laufwerk-Firmware aktualisieren.
 
 
 
+[[drive-compatibility]]
 === Laufwerkskompatibilität
 
 Jede Laufwerk-Firmware-Datei enthält Informationen über den Laufwerkstyp, auf dem die Firmware ausgeführt wird. Sie können die angegebene Firmware-Datei nur auf ein kompatibles Laufwerk herunterladen. System Manager überprüft während des Upgrades die Kompatibilität automatisch.
 
 
 
+[[drive-upgrade-methods]]
 === Laufwerks-Upgrade-Methoden
 
 Es gibt zwei Arten von Upgrade-Methoden für die Festplatten-Firmware: Online und offline.

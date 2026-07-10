@@ -15,6 +15,7 @@ Das E-Series Storage-System muss so konfiguriert sein, dass es über das unterst
 
 
 
+[[configure-remote-storage-device-and-e-series-array]]
 == Konfiguration von Remote Storage-Gerät und E-Series Array
 
 Bevor Sie mit dem SANtricity System Manager fortfahren, um die Funktion Remote-Speicher-Volumes zu konfigurieren, gehen Sie wie folgt vor:
@@ -38,6 +39,7 @@ NOTE: Empfohlen: Sichern Sie das Remote-Quell-Volume, bevor Sie den Importvorgan
 
 
 
+[[cable-the-storage-arrays]]
 == Verkabeln Sie die Speicher-Arrays
 
 Im Rahmen des Setups müssen Speicher-Arrays und E/A-Host mit der iSCSI-kompatiblen Schnittstelle verbunden werden.
@@ -48,6 +50,7 @@ image:../media/remote_target_volumes_iscsi_use_case_1.png["ISCSI-Speicherverkabe
 
 
 
+[[configure-the-iscsi-ports]]
 == Konfigurieren Sie die iSCSI-Ports
 
 Sie müssen die iSCSI-Ports konfigurieren, um die Kommunikation zwischen dem Ziel (lokalem E-Series Storage-Array) und der Quelle (Remote-Storage-Array) sicherzustellen.

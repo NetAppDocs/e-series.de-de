@@ -15,6 +15,7 @@ Sie können eine PDF-Datei auf dieser Seite erstellen und drucken und dann mithi
 
 
 
+[[host-identifiers]]
 == Host-IDs
 
 
@@ -63,6 +64,7 @@ k. A.
 |===
 
 
+[[recommended-configuration]]
 == Empfohlene Konfiguration
 
 Empfohlene Konfigurationen bestehen aus zwei Host-Ports (Initiator) und vier Ziel-Ports.
@@ -71,6 +73,7 @@ image::../media/port_identifiers_ib_iser.gif[ISER über IB-Netzwerkkonfiguration
 
 
 
+[[target-iqn]]
 == Ziel-IQN
 
 Dokumentieren Sie die Ziel-IQN für das Speicher-Array. Sie werden diese Informationen in verwenden xref:iser-ib-configure-network-attached-hosts-task.adoc[Konfigurieren Sie das Netzwerk für Storage-verbundene Hosts].
@@ -90,6 +93,7 @@ Array-Controller (Ziel)
 |===
 
 
+[[network-configuration]]
 == Netzwerkkonfiguration
 
 Dokumentation der Netzwerkkonfiguration, die für die Hosts und den Storage auf der InfiniBand Fabric verwendet werden soll Diese Anweisungen setzen voraus, dass zwei Subnetze für volle Redundanz verwendet werden.
@@ -98,6 +102,7 @@ Ihr Netzwerkadministrator kann die folgenden Informationen bereitstellen. Sie ve
 
 
 
+[[subnet-a]]
 === Subnetz A
 
 Definieren Sie das zu verwendenden Subnetz.
@@ -157,6 +162,7 @@ Host 1, Port 1
 |===
 
 
+[[subnet-b]]
 === Subnetz B
 
 Definieren Sie das zu verwendenden Subnetz.
@@ -216,6 +222,7 @@ Host 1, Port 2
 |===
 
 
+[[mapping-host-name]]
 == Zuordnung des Hostnamens
 
 

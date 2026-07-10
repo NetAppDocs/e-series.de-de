@@ -38,6 +38,7 @@ CAUTION: *Möglicher Verlust des Datenzugriffs* -- Installieren Sie nie eine HIC
 
 
 
+[[step-1-place-controller-shelf-offline]]
 == Schritt 1: Platzieren Sie das Controller-Shelf offline
 
 Platzieren Sie das Controller-Shelf offline, damit Sie die HICs sicher aktualisieren können.
@@ -98,6 +99,8 @@ Die grüne LED „Cache aktiv“ auf der Rückseite jedes Controllers leuchtet, 
 
 
 
+[[step-2-remove-controller-canister]]
+[[step2_remove_controller_canister]]
 == Schritt 2: Controller-Behälter entfernen
 
 Entfernen Sie den Controller-Aktivkohlebehälter aus dem System, und entfernen Sie dann die Abdeckung des Controller-Aktivkohlebehälters.
@@ -119,6 +122,8 @@ image::../media/drw_E4000_open_controller_module_cover_IEOPS-870.png[Öffnen Sie
 
 
 
+[[step-3-upgrade-the-hic]]
+[[step3_upgrade_hic]]
 == Schritt 3: Aktualisieren Sie die HIC
 
 Entfernen und ersetzen Sie die HIC.
@@ -146,6 +151,8 @@ image::../media/drw_E4000_replace_HIC_source_IEOPS-864.png[Entfernen Sie die HIC
 
 
 
+[[step-4-reinstall-controller-canister]]
+[[step4_reinstall_controller]]
 == Schritt 4: Controller-Behälter wieder einbauen
 
 Setzen Sie den Controller-Aktivkohlebehälter wieder in das Gehäuse ein.
@@ -166,6 +173,7 @@ NOTE: Wenn Sie die Medienkonverter (QSFPs oder SFPs) entfernt haben, sollten Sie
 
 
 
+[[step-5-complete-the-hic-upgrade]]
 == Schritt 5: Führen Sie das HIC-Upgrade durch
 
 Setzen Sie beide Controller online, sammeln Sie Support-Daten und nehmen Sie den Betrieb wieder auf.

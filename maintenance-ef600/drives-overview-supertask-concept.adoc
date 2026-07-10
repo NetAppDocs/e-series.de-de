@@ -18,6 +18,7 @@ CAUTION: Beachten Sie, dass die Laufwerke in Ihrem Storage-Array anfällig sind.
 
 
 
+[[drive-replacement-requirements]]
 == Anforderungen für den Austausch von Laufwerken
 
 Befolgen Sie die folgenden Regeln, um Beschädigungen an den Laufwerken in Ihrem Speicher-Array zu vermeiden:
@@ -48,6 +49,7 @@ Magnetfelder können alle Daten auf dem Laufwerk zerstören und irreparable Sch�
 
 
 
+[[drive-staggering-in-24-drive-controller-shelf]]
 == Gestaffelte Laufwerk in Controller-Shelf mit 24 Laufwerken
 
 Standardmäßige Shelfs für 24 Laufwerke erfordern beeindruckende Laufwerke. Die folgende Abbildung zeigt, wie die Laufwerke in jedem Shelf nummeriert werden (die vordere Blende des Shelfs wurde entfernt).

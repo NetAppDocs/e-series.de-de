@@ -16,12 +16,14 @@ Um Storage-Systeme im Netzwerk zu managen, müssen Sie sie zunächst ermitteln u
 
 
 
+[[discover-storage-systems]]
 == Storage-Systeme erkennen
 
 Sie können die automatische Erkennung festlegen oder Storage-Systeme manuell ermitteln.
 
 
 
+[[automatically-discover-storage-systems]]
 === Automatische Erkennung von Storage-Systemen
 
 Sie können festlegen, dass Speichersysteme automatisch im Netzwerk erkannt werden, indem Sie die Einstellungen in der Datei wsconfig.xml ändern. Standardmäßig ist die automatische IPv6-Erkennung deaktiviert und IPv4 aktiviert.
@@ -56,6 +58,7 @@ NOTE: Wenn die Pfade konfiguriert, aber nicht so konfiguriert sind, dass der Ser
 
 
 
+[[discover-and-add-storage-systems-using-api-endpoints]]
 === Storage-Systeme mit API-Endpunkten erkennen und hinzufügen
 
 Über API-Endpunkte können Storage-Systeme ermittelt und der Liste gemanagt hinzugefügt werden. Durch dieses Verfahren wird eine Managementverbindung zwischen dem Storage-System und der API erstellt.
@@ -248,6 +251,7 @@ Es sind keine Parameter erforderlich.
 
 
 
+[[scale-up-the-number-of-managed-storage-systems]]
 == Skalieren Sie die Anzahl an gemanagten Storage-Systemen vertikal
 
 Standardmäßig kann die API bis zu 100 Storage-Systeme verwalten. Wenn Sie mehr verwalten müssen, müssen Sie die Speicheranforderungen für den Server erhöhen.

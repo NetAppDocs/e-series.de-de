@@ -38,6 +38,7 @@ Sie können ein Netzteil ersetzen, während Ihr Speicher-Array eingeschaltet ist
 
 
 
+[[step-1-prepare-to-replace-power-supply]]
 == Schritt 1: Vorbereitung auf den Austausch der Stromversorgung
 
 Bereiten Sie den Austausch eines Netzteils in einem Controller-Shelf mit 24 Laufwerken oder Festplatten-Shelfs vor.
@@ -93,6 +94,7 @@ Wenn die Achtung-LED image:../media/drw_sas_fault_icon_maint-e5700.gif["Fehlersy
 
 
 
+[[step-2-remove-failed-power-supply]]
 == Schritt 2: Entfernen Sie das defekte Netzteil
 
 Entfernen Sie ein ausgefallenes Netzteil, damit Sie es durch ein neues ersetzen können.
@@ -125,6 +127,7 @@ Beim Entfernen des Netzteils schwenkt eine Klappe an ihre Stelle, um den leeren 
 
 
 
+[[step-3-install-new-power-supply]]
 == Schritt 3: Neues Netzteil installieren
 
 Installieren Sie ein neues Netzteil, um das fehlerhafte Netzteil auszutauschen.
@@ -151,6 +154,7 @@ CAUTION: Beim Einschieben des Netzteils in das System keine übermäßige Kraft 
 
 
 
+[[step-4-complete-power-supply-replacement]]
 == Schritt 4: Vollständige Netzteilaustausch
 
 Überprüfen Sie, ob das neue Netzteil ordnungsgemäß funktioniert, sammeln Sie Support-Daten und setzen Sie den normalen Betrieb fort.

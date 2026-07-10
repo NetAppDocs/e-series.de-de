@@ -30,6 +30,7 @@ Wenn ein Netzteil ausfällt, müssen Sie es so schnell wie möglich ersetzen, da
 
 
 
+[[step-1-remove-failed-power-supply]]
 == Schritt 1: Entfernen Sie das fehlerhafte Netzteil
 
 Entfernen Sie ein ausgefallenes Netzteil, damit Sie es durch ein neues ersetzen können.
@@ -62,6 +63,7 @@ image::../media/psup_3.png[Ziehen Sie das Netzteil heraus]
 
 
 
+[[step-2-install-new-power-supply-and-complete-the-replacement]]
 == Schritt 2: Neues Netzteil installieren und den Austausch abschließen
 
 Installieren Sie nach dem Entfernen des fehlerhaften Netzteils ein neues.

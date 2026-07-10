@@ -18,6 +18,7 @@ Um Speicher im Speicher-Plugin für vCenter bereitzustellen, erstellen Sie entwe
 
 
 
+[[provisioning]]
 == Bereitstellung
 
 Physische Hardware wird in logischen Komponenten bereitgestellt, sodass Daten organisiert und einfach abgerufen werden können. Es werden zwei Arten von Gruppierungen unterstützt:
@@ -39,6 +40,7 @@ Es können zwar Pools oder Volume-Gruppen auf demselben Speichersystem vorhanden
 
 
 
+[[pools]]
 == Pools
 
 Pools wurden entwickelt, um physische Festplatten in einem großen Storage-Bereich zu aggregieren und bieten dafür besseren RAID-Schutz. Ein Pool erstellt viele virtuelle RAID-Sätze von der Gesamtzahl der Laufwerke, die dem Pool zugewiesen sind. Dabei werden die Daten gleichmäßig auf alle teilnehmenden Laufwerke verteilt. Wenn ein Laufwerk verloren geht oder hinzugefügt wird, gleicht das System die Daten dynamisch über alle aktiven Laufwerke aus.
@@ -47,12 +49,14 @@ Pools funktionieren als weitere RAID-Ebene und virtualisieren die zugrunde liege
 
 
 
+[[drive-matching]]
 === Abstimmung des Laufwerks
 
 Es besteht die Möglichkeit, entweder HDDs oder SSDs zur Nutzung in Pools zur Verfügung zu stellen. Allerdings müssen wie bei Volume-Gruppen alle Laufwerke im Pool dieselbe Technologie verwenden. Die Controller wählen automatisch aus, welche Laufwerke enthalten sollen. Sie müssen daher sicherstellen, dass Sie über eine ausreichende Anzahl an Laufwerken für die von Ihnen gewählte Technologie verfügen.
 
 
 
+[[managing-failed-drives]]
 === Verwalten ausgefallener Laufwerke
 
 Pools haben eine minimale Kapazität von 11 Laufwerken; allerdings ist die Kapazität eines Laufwerks im Wert von einer Ersatzkapazität bei einem Laufwerksausfall reserviert. Diese freie Kapazität wird als „Erhaltungskapazität“ bezeichnet.
@@ -63,6 +67,7 @@ Nach der Erstellung des Pools können Sie den Wert der Erhaltungskapazität auf 
 
 
 
+[[volume-groups]]
 == Volume-Gruppen
 
 Volume-Gruppen definieren, wie Kapazität im Storage-System Volumes zugewiesen wird. Festplattenlaufwerke sind in RAID-Gruppen eingeteilt und Volumes befinden sich über die Laufwerke in einer RAID-Gruppe hinweg. Aus diesem Grund identifizieren die Konfigurationseinstellungen der Volume-Gruppe, welche Laufwerke Teil der Gruppe sind und welches RAID-Level verwendet wird.
@@ -71,6 +76,7 @@ Wenn Sie eine Volume-Gruppe erstellen, wählen Controller automatisch die Laufwe
 
 
 
+[[drive-matching]]
 === Abstimmung des Laufwerks
 
 Für die Größe und Performance müssen die Laufwerke in der Volume-Gruppe übereinstimmen. Wenn in der Volume-Gruppe kleinere und größere Laufwerke vorhanden sind, werden alle Laufwerke als die kleinste Kapazitätsgröße erkannt. Wenn es langsamere und schnellere Laufwerke in der Volume-Gruppe gibt, werden alle Laufwerke mit der langsamsten Geschwindigkeit erkannt. Diese Faktoren wirken sich auf die Performance und die Gesamtkapazität des Storage-Systems aus.
@@ -79,6 +85,7 @@ Es ist nicht möglich, unterschiedliche Laufwerktechnologien (HDD- und SSD-Laufw
 
 
 
+[[managing-failed-drives]]
 === Verwalten ausgefallener Laufwerke
 
 Volume-Gruppen verwenden Hot-Spare-Laufwerke als Standby, falls ein Laufwerk in RAID 1/10-, RAID 3-, RAID 5- oder RAID 6-Volumes einer Volume-Gruppe ausfällt. Ein Hot-Spare-Laufwerk enthält keine Daten und fügt Ihrem Speicher-Array eine weitere Ebene von Redundanz hinzu.
@@ -87,10 +94,12 @@ Wenn ein Laufwerk im Speicher-Array ausfällt, wird das Hot-Spare-Laufwerk autom
 
 
 
+[[decide-whether-to-use-pools-or-volume-groups]]
 == Entscheiden Sie, ob Pools oder Volume-Gruppen verwendet werden sollen
 
 
 
+[[choose-a-pool]]
 === Wählen Sie einen Pool aus
 
 * Wenn Sie schnellere Laufwerk-Rebuilds und eine vereinfachte Storage-Administration benötigen, und/oder einen hochzufälligen Workload haben.
@@ -99,6 +108,7 @@ Wenn ein Laufwerk im Speicher-Array ausfällt, wird das Hot-Spare-Laufwerk autom
 
 
 
+[[choose-a-volume-group]]
 === Wählen Sie eine Volume-Gruppe aus
 
 * Wenn Sie die maximale Netzwerkbandbreite des Systems benötigen, die Möglichkeit zur Anpassung von Storage-Einstellungen und einen stark sequenziellen Workload benötigen.
@@ -111,6 +121,7 @@ NOTE: Da Pools mit Volume-Gruppen nebeneinander bestehen können, kann ein Stora
 
 
 
+[[automatic-versus-manual-pool-creation]]
 == Automatische Erstellung von Pools gegenüber manueller Poolanlage
 
 Je nach Ihrer Storage-Konfiguration können Sie es dem System ermöglichen, automatisch Pools zu erstellen, oder Sie können sie manuell selbst erstellen. Ein Pool ist eine Gruppe von logisch gruppierten Laufwerken.
@@ -119,6 +130,7 @@ Bevor Sie Pools erstellen und verwalten, prüfen Sie die folgenden Abschnitte, w
 
 
 
+[[automatic-creation]]
 === Automatische Erstellung
 
 Wenn das System nicht zugewiesene Kapazitäten im Speicher-Array erkennt, wird die automatische Poolerstellung initiiert, wenn das System nicht zugewiesene Kapazitäten in einem Speicher-Array erkennt. Sie werden automatisch aufgefordert, einen oder mehrere Pools zu erstellen, oder die nicht zugewiesene Kapazität einem vorhandenen oder beiden Pool hinzuzufügen.
@@ -135,6 +147,7 @@ Automatische Poolerstellung tritt auf, wenn eine dieser Bedingungen zutrifft:
 
 
 
+[[manual-creation]]
 === Manuelle Erstellung
 
 Sie möchten möglicherweise einen Pool manuell erstellen, wenn die automatische Erstellung die beste Konfiguration nicht bestimmen kann. Diese Situation kann aus einem der folgenden Gründe auftreten:

@@ -15,6 +15,7 @@ Prüfen Sie vor der Installation oder dem Upgrade des SANtricity Storage Plug-in
 
 
 
+[[installation-requirements]]
 == Installationsvoraussetzungen
 
 Sie können das Storage Plug-in für vCenter auf einem Windows Host-System installieren und konfigurieren. Die Plugin-Installation umfasst die folgenden Anforderungen.
@@ -63,6 +64,7 @@ Das Storage Plug-in für vCenter ist ein kostenloses eigenständiges Produkt, f�
 |===
 
 
+[[upgrade-considerations]]
 == Upgrade-Überlegungen
 
 Wenn Sie ein Upgrade von einer früheren Version durchführen, beachten Sie, dass das Plugin vor dem Upgrade von der vCSA nicht registriert werden muss.

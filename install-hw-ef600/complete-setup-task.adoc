@@ -15,12 +15,14 @@ Erfahren Sie, wie Sie die Controller-Kabel mit Ihrem Netzwerk verbinden und dann
 
 
 
+[[step-1-cable-the-data-hosts]]
 == Schritt: Verkabeln Sie die Daten-Hosts
 
 Verkabeln Sie das Storage-System gemäß Ihrer Netzwerktopologie.
 
 
 
+[[option-1-direct-attach-topology]]
 === Option 1: Direct-Attached-Topologie
 
 Das folgende Beispiel zeigt die Verkabelung zu den Daten-Hosts mithilfe einer Direct-Attached-Topologie.
@@ -37,6 +39,7 @@ image:../media/direct_topo.png["Direct-Attach-Topologie-Verkabelung"]
 |===
 
 
+[[option-2-fabric-topology]]
 === Option 2: Fabric-Topologie
 
 Das folgende Beispiel zeigt die Verkabelung zu den Daten-Hosts mithilfe einer Fabric-Topologie.
@@ -54,12 +57,14 @@ image:../media/fabric_topo.png["Verkabelung der Fabric-Topologie"]
 |===
 
 
+[[step-2-connect-and-configure-the-management-connection]]
 == Schritt 2: Verbinden und Konfigurieren der Verwaltungsverbindung
 
 Sie können die Controller-Management-Ports mit einem DHCP-Server oder einer statischen IP-Adresse konfigurieren.
 
 
 
+[[option-1-dhcp-server]]
 === Option 1: DHCP-Server
 
 Erfahren Sie, wie die Management-Ports mit einem DHCP-Server konfiguriert werden.
@@ -99,6 +104,7 @@ image:../media/ethernet_callout.png["EF600 Management-Ports"]
 
 
 
+[[option-2-static-ip-address]]
 === Option 2: Statische IP-Adresse
 
 Erfahren Sie, wie die Management-Ports manuell konfiguriert werden können, indem Sie die IP-Adresse und die Subnetzmaske eingeben.
@@ -174,6 +180,7 @@ NOTE: Wenn die Verbindung zu Controller B unterbrochen wird, können Sie Ihre zu
 
 
 
+[[step-3-configure-storage-system]]
 == Schritt 3: Storage-System konfigurieren
 
 Nachdem Sie die EF300- oder EF600-Hardware installiert haben, konfigurieren und verwalten Sie das Storage-System über die SANtricity Software.

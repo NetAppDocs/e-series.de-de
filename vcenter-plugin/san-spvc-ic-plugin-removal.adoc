@@ -20,6 +20,7 @@ Dies sind zwei verschiedene Schritte, die Sie in jeder Reihenfolge durchführen 
 
 
 
+[[unregister-the-plugin-from-a-vcenter-server-appliance]]
 == Registrieren Sie das Plug-in von einer vCenter Server Appliance
 
 Um das Plugin von einer vCenter Server Appliance zu registrieren, wählen Sie eine der folgenden Methoden aus:
@@ -30,6 +31,7 @@ Um das Plugin von einer vCenter Server Appliance zu registrieren, wählen Sie ei
 
 
 
+[[method-1-execute-the-registration-script]]
 === Methode 1: Führen Sie das Registrierungsskript aus
 
 . Öffnen Sie eine Eingabeaufforderung über die Befehlszeile, und navigieren Sie zum folgenden Verzeichnis:
@@ -57,6 +59,7 @@ Die Protokolle werden in gespeichert `%install_dir%/working/logs/vc-registration
 
 
 
+[[method-2-use-the-vcenter-server-mob-pages]]
 === Methode 2: Verwenden Sie die vCenter Server Mob Seiten
 
 . Öffnen Sie einen Webbrowser, und geben Sie die folgende url ein:
@@ -78,6 +81,7 @@ NOTE: Durch dieses Verfahren wird das Plugin von der vCenter Server Appliance re
 
 
 
+[[remove-the-plugin-webserver-from-the-application-host]]
 == Entfernen Sie den Plugin-Webserver vom Anwendungs-Host
 
 So entfernen Sie die Plugin-Software vom Anwendungs-Host:

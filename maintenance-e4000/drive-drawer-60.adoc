@@ -50,6 +50,7 @@ NOTE: Wenn Sie Informationen zum Austausch eines E-Series DE460c Erweiterungs-Sh
 
 
 
+[[step-1-prepare-to-replace-drive-drawer]]
 == Schritt 1: Vorbereitung auf den Austausch der Laufwerksschublade
 
 Ermitteln Sie, ob Sie den Ersatzvorgang durchführen können, während das Festplatten-Shelf online ist, oder ob Sie die Host-I/O-Aktivität beenden und eines der Shelfs, die eingeschaltet sind, ausschalten müssen.
@@ -144,6 +145,7 @@ Die grüne LED „Cache aktiv“ auf der Rückseite jedes Controllers leuchtet, 
 
 
 
+[[step-2-remove-cable-chains]]
 == Schritt 2: Die Kabelketten entfernen
 
 Entfernen Sie beide Kabelketten, damit Sie eine fehlerhafte Laufwerksschublade entfernen und ersetzen können.
@@ -285,6 +287,7 @@ Die LED könnte nach der Neuinstallation des Lüfters bis zu einer Minute einges
 
 
 
+[[step-3-remove-failed-drive-drawer]]
 == Schritt 3: Entfernen des fehlerhaften Laufwerksschubs
 
 Entfernen Sie ein ausgefallenes Laufwerksfach, um es durch ein neues zu ersetzen.
@@ -339,6 +342,7 @@ image::../media/92_pht_de6600_drive_drawer_release_lever_maint-e2800.gif[Entrieg
 
 
 
+[[step-4-install-new-drive-drawer]]
 == Schritt 4: Neue Laufwerksschublade einbauen
 
 Installieren Sie ein neues Laufwerksfach, um das fehlerhafte zu ersetzen.
@@ -378,6 +382,7 @@ CAUTION: *Risiko von Geräteschäden* -- Stoppen Sie die Antriebsklade, wenn Sie
 
 
 
+[[step-5-attach-cable-chains]]
 == Schritt 5: Kabelketten befestigen
 
 Schließen Sie die Kabelketten an, damit Sie die Laufwerke sicher wieder in die Laufwerksschublade einsetzen können.
@@ -462,6 +467,7 @@ Die LED könnte nach der Neuinstallation des Lüfters bis zu einer Minute einges
 
 
 
+[[step-6-complete-drive-drawer-replacement]]
 == Schritt 6: Schließen Sie den Austausch der Laufwerkschublade ab
 
 Setzen Sie die Laufwerke wieder ein, und ersetzen Sie die Frontverkleidung in der richtigen Reihenfolge.

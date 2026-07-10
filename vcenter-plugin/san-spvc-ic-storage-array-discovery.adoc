@@ -23,6 +23,7 @@ Um Speicherressourcen anzuzeigen und zu verwalten, müssen Sie die IP-Adressen v
 
 
 
+[[step-1-enter-network-addresses-for-discovery]]
 == Schritt 1: Geben Sie Netzwerkadressen für die Ermittlung ein
 
 .Schritte
@@ -61,6 +62,7 @@ Wenn Sie CA-signierte Zertifikate importieren möchten, löschen Sie den Ermittl
 
 
 
+[[step-2-resolve-untrusted-certificates-during-discovery]]
 == Schritt 2: Lösen Sie nicht vertrauenswürdige Zertifikate während der Ermittlung
 
 Sie müssen Probleme mit dem Zertifikat lösen, bevor Sie mit der Ermittlung fortfahren.
@@ -77,6 +79,7 @@ Sie müssen Probleme mit dem Zertifikat lösen, bevor Sie mit der Ermittlung for
 
 
 
+[[step-3-provide-passwords]]
 == Schritt 3: Geben Sie Passwörter ein
 
 Als letzter Schritt zur Ermittlung müssen Sie die Passwörter für die Speicherarrays eingeben, die Sie Ihrer Management-Domäne hinzufügen möchten.

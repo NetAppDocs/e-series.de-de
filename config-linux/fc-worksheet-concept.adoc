@@ -19,6 +19,7 @@ image::../media/port_identifiers_host_and_target_conf-lin.gif[Konfiguration des 
 
 
 
+[[host-identifiers]]
 == Host-IDs
 
 |===
@@ -51,6 +52,7 @@ Host Port 1 zu FC Switch Zone 1
 |===
 
 
+[[target-identifiers]]
 == Zielkennungen
 
 |===
@@ -108,6 +110,7 @@ Controller B, Port 2 zu FC Switch 2
 |===
 
 
+[[mapping-host]]
 == Host wird zugeordnet
 
 |===

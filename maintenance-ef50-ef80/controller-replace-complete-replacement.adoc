@@ -15,6 +15,7 @@ Um den Controller-Austausch für Ihr EF50- oder EF80-Speichersystem abzuschließ
 
 
 
+[[step-1-ensure-latest-version-of-santricity-os-verify-volume-ownership-and-collect-support-data]]
 == Schritt 1: Stellen Sie sicher, dass die neueste Version von SANtricity OS installiert ist, überprüfen Sie die Volume-Zugehörigkeit und sammeln Sie Supportdaten
 
 Verwenden Sie den SANtricity System Manager, um sicherzustellen, dass die neueste Version von SANtricity OS installiert ist, überprüfen Sie, ob alle Volumes an ihre zugehörigen Controller zurückgegeben wurden, und sammeln Sie Supportdaten, damit Sie den Betrieb wieder aufnehmen können.
@@ -65,6 +66,7 @@ Die Datei wird im Ordner Downloads für Ihren Browser mit dem Namen *Support-Dat
 
 
 
+[[step-2-return-the-failed-part-to-netapp]]
 == Schritt 2: Senden Sie das defekte Teil zurück an NetApp
 
 Senden Sie das defekte Teil an NetApp, wie in der mit dem Kit gelieferten RMA-Anleitung beschrieben, zurück. Siehe die https://mysupport.netapp.com/site/info/rma["Teilerückgabe und Ersatz"] Seite für weitere Informationen.

@@ -17,6 +17,7 @@ Bei SLES 12 wird die E/A vom Linux-Host an virtuelle Geräteziele weitergeleitet
 
 
 
+[[virtual-devices-are-io-targets]]
 == Virtuelle Geräte sind I/O-Ziele
 
 Stellen Sie sicher, dass Sie I/O nur zu den virtuellen Geräten ausführen, die von DM-MP erstellt wurden, und nicht zu den physischen Gerätepfaden. Wenn Sie I/O zu den physischen Pfaden ausführen, kann DM-MP kein Failover-Ereignis verwalten, und die I/O schlägt fehl.
@@ -30,6 +31,7 @@ Stellen Sie sicher, dass Sie I/O nur zu den virtuellen Geräten ausführen, die 
 ----
 
 
+[[example-output]]
 == Beispielausgabe
 
 Die Ausgabe des folgenden Beispiels aus dem `nvme list` Der Befehl zeigt den Namen des Host-Node und seine Korrelation mit der Namespace-ID an.

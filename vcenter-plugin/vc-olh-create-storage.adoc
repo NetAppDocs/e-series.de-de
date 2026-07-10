@@ -19,6 +19,7 @@ Im Storage Plug-in für vCenter erstellen Sie Storage, indem Sie zuerst einen Wo
 
 
 
+[[step-1-create-workloads]]
 == Schritt: Workloads erstellen
 
 Ein Workload ist ein Storage-Objekt, das eine Applikation unterstützt. Sie können einen oder mehrere Workloads oder Instanzen pro Applikation definieren.
@@ -47,6 +48,7 @@ Das Dialogfeld Anwendungs-Workload erstellen wird angezeigt.
 
 
 
+[[step-2-create-volumes]]
 == Schritt: Volumes erstellen
 
 Sie erstellen Volumes, um einem applikationsspezifischen Workload Storage-Kapazität hinzuzufügen und die erstellten Volumes für einen bestimmten Host oder Host-Cluster sichtbar zu machen.
@@ -60,6 +62,7 @@ Der Prozess zur Erstellung eines Volumes ist ein mehrstufiges Verfahren.
 
 
 
+[[step-2a-select-host-for-a-volume]]
 === Schritt 2a: Wählen Sie Host für ein Volume
 
 Im ersten Schritt können Sie einen bestimmten Host oder Host-Cluster für das Volume auswählen oder den Host später zuweisen.
@@ -101,6 +104,7 @@ Das Dialogfeld „Workload auswählen“ wird angezeigt.
 
 
 
+[[step-2b-select-a-workload-for-a-volume]]
 === Schritt 2b: Wählen Sie einen Workload für ein Volume
 
 Im zweiten Schritt wählen Sie einen Workload aus, um die Storage-Array-Konfiguration für eine bestimmte Applikation wie VMware anzupassen.
@@ -132,6 +136,7 @@ Beachten Sie folgende Richtlinien:
 
 
 
+[[step-2c-add-or-edit-volumes]]
 === Schritt 2c: Volumes hinzufügen oder bearbeiten
 
 Im dritten Schritt definieren Sie die Volume-Konfiguration.
@@ -329,6 +334,7 @@ Bereitgestellte Ressource (nur EF300 und EF600)
 
 
 
+[[step-2d-review-volume-configuration]]
 === Schritt 2d: Volumenkonfiguration prüfen
 
 Im letzten Schritt lesen Sie eine Zusammenfassung der Volumes, die Sie erstellen möchten, und nehmen alle erforderlichen Änderungen vor.

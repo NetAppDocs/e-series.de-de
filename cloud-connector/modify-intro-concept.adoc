@@ -16,6 +16,7 @@ Mit der Option Einstellungen können Sie die aktuellen Konfigurationen der Anwen
 
 
 
+[[modify-s3-account-settings]]
 == Ändern Sie die S3-Kontoeinstellungen
 
 Vorhandene S3-Einstellungen für die Anwendung SANtricity Cloud Connector können Sie im Fenster S3-Kontoeinstellungen ändern.
@@ -46,6 +47,7 @@ Die geänderten S3-Kontoeinstellungen werden angewendet.
 
 
 
+[[manage-storage-arrays]]
 == Managen Sie Storage-Arrays
 
 Sie können Speicher-Arrays von dem Web-Services-Proxy hinzufügen oder entfernen, der auf der Seite Speicherarrays managen beim SANtricity-Cloud-Connector-Host registriert ist.
@@ -88,6 +90,7 @@ Das ausgewählte Speicher-Array wird aus dem SANtricity-Cloud-Konnektor-Host ent
 
 
 
+[[modify-web-services-proxy-settings]]
 == Ändern Sie die Proxy-Einstellungen für Web Services
 
 Sie können vorhandene Webdienste-Proxy-Einstellungen für die SANtricity Cloud Connector-Anwendung im Fenster Internetdienste-Proxy-Einstellungen ändern.
@@ -113,6 +116,7 @@ Der Bildschirm Web Services Proxy-Einstellungen wird angezeigt.
 
 
 
+[[change-santricity-cloud-connector-password]]
 == Passwort für den SANtricity Cloud Connector ändern
 
 Sie können das Kennwort für den SANtricity-Cloud-Konnektor im Bildschirm Kennwort ändern ändern.

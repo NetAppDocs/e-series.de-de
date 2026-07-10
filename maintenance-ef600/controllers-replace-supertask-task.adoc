@@ -53,6 +53,7 @@ NOTE: Die gelbe Warn-LED des Controllers erlischt, wenn die folgenden Austauschb
 
 
 
+[[step-1-prepare-to-replace-controller]]
 == Schritt 1: Vorbereitung auf den Austausch der Steuerung
 
 Bereiten Sie sich darauf vor, einen defekten Controller-Behälter auszutauschen, indem Sie überprüfen, ob der Ersatzcontroller-Behälter die richtige FRU-Teilenummer hat, die Konfiguration sichern und Support-Daten erfassen.
@@ -119,6 +120,7 @@ CAUTION: Beginnen Sie keine anderen Vorgänge, bis der Status aktualisiert wurde
 
 
 
+[[step-2-remove-failed-controller]]
 == Schritt 2: Entfernen des fehlerhaften Controllers
 
 Entfernen Sie einen Controller-Behälter, um den defekten Behälter durch einen neuen zu ersetzen.
@@ -127,6 +129,7 @@ Dies ist ein mehrstufiges Verfahren, bei dem Sie die folgenden Komponenten entfe
 
 
 
+[[step-2a-remove-controller-canister]]
 === Schritt 2a: Controller-Behälter entfernen
 
 Entfernen Sie den defekten Reglerbehälter, so dass Sie ihn durch einen neuen ersetzen können.
@@ -160,6 +163,7 @@ image::../media/remove_controller_6.png[Tragen Sie beim Entfernen des Controller
 
 
 
+[[step-2b-remove-battery]]
 === Schritt 2b: Batterie entfernen
 
 Entfernen Sie den Akku aus dem defekten Controller-Behälter, so dass Sie ihn in den neuen Controller-Behälter installieren können.
@@ -183,6 +187,7 @@ image:../media/batt_4.png["Batterie aus der Steuerung herausheben"]
 
 
 
+[[step-2c-remove-the-hic]]
 === Schritt 2c: Entfernen Sie die HIC
 
 Wenn der Controller-Behälter eine HIC enthält, müssen Sie die HIC aus dem ursprünglichen Controller-Behälter entfernen. Andernfalls können Sie diesen Schritt überspringen.
@@ -218,6 +223,7 @@ image::../media/hic_4.png[Entfernen Sie die HIC von der Controllerkarte]
 
 
 
+[[step-2d-remove-power-supply]]
 === Schritt 2d: Netzteil entfernen
 
 Entfernen Sie das Netzteil, damit Sie es in den neuen Controller einsetzen können.
@@ -246,6 +252,7 @@ CAUTION: Wenn Sie ein Netzteil entfernen, verwenden Sie immer zwei Hände, um se
 
 
 
+[[step-2e-remove-dimms]]
 === Schritt 2e: Entfernen Sie die DIMMs
 
 Entfernen Sie die DIMMs, sodass Sie sie in den neuen Controller installieren können.
@@ -272,6 +279,7 @@ image::../media/dimim_3.png[Entfernen Sie die DIMM]
 
 
 
+[[step-2f-remove-fans]]
 === Schritt 2f: Entfernen Sie die Lüfter
 
 Entfernen Sie die Lüfter, sodass Sie sie in den neuen Controller einsetzen können.
@@ -286,6 +294,7 @@ image::../media/fan_2.png[Entfernen Sie den Lüfter]
 
 
 
+[[step-3-install-new-controller]]
 == Schritt 3: Neuen Controller installieren
 
 Installieren Sie einen neuen Controller-Behälter, um den defekten auszutauschen.
@@ -294,6 +303,7 @@ Bei diesem mehrstufigen Verfahren müssen Sie die folgenden Komponenten des ursp
 
 
 
+[[step-3a-install-battery]]
 === Schritt 3a: Batterie einbauen
 
 Setzen Sie den Akku in den Behälter des Ersatzcontrollers ein.
@@ -317,6 +327,7 @@ Der Akku rastet ein.
 
 
 
+[[step-3b-install-the-hic]]
 === Schritt 3b: Installieren der HIC
 
 Wenn Sie eine HIC aus dem ursprünglichen Controller-Behälter entfernt haben, müssen Sie diese HIC im neuen Controller-Behälter installieren. Andernfalls können Sie diesen Schritt überspringen.
@@ -355,6 +366,7 @@ NOTE: Das obige Bild ist ein Beispiel; das Aussehen Ihrer HIC kann sich untersch
 
 
 
+[[step-3c-install-power-supply]]
 === Schritt 3c: Installieren Sie das Netzteil
 
 Setzen Sie das Netzteil in den Behälter des Ersatzcontrollers ein.
@@ -375,6 +387,7 @@ image::../media/psup_4.png[Installieren Sie das Netzteil in den Controller]
 
 
 
+[[step-3d-install-dimms]]
 === Schritt 3d: Installieren von DIMMs
 
 Installieren Sie die DIMMs in den neuen Controller-Behälter.
@@ -407,6 +420,7 @@ image::../media/dimm_5.png[Drücken Sie die Verriegelungen am DIMM-Steckplatz na
 
 
 
+[[step-3e-install-fans]]
 === Schritt 3e: Installieren Sie die Lüfter
 
 Setzen Sie die Lüfter in den Ersatzcontroller-Behälter ein.
@@ -424,6 +438,7 @@ image::../media/fan_3_a.png[Lüfter in Controller einbauen]
 
 
 
+[[step-3f-install-new-controller-canister]]
 === Schritt 3f: Installieren Sie den neuen Controller-Behälter
 
 Installieren Sie anschließend den neuen Controller-Behälter in das Controller-Shelf.
@@ -451,6 +466,7 @@ NOTE: Wenn der ursprüngliche Controller DHCP für die IP-Adresse nicht verwende
 
 
 
+[[step-4-complete-controller-replacement]]
 == Schritt 4: Controller-Austausch abschließen
 
 Platzieren Sie den Controller online, sammeln Sie Support-Daten und setzen Sie den Betrieb fort.

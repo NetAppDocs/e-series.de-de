@@ -15,6 +15,7 @@ summary: Prüfen Sie die Anforderungen für die Konvertierung der Host-Port-Prot
 
 
 
+[[host-ports-you-can-change]]
 == Host-Ports, die Sie ändern können
 
 
@@ -99,6 +100,7 @@ Die Baseboard-Host-Ports und die HIC-Ports können das gleiche Host-Protokoll od
 
 
 
+[[requirements-for-changing-the-host-protocol]]
 == Anforderungen für die Änderung des Host-Protokolls
 
 * Sie müssen für dieses Verfahren ein Wartungsfenster zur Ausfallzeit planen.
@@ -111,6 +113,7 @@ Die Baseboard-Host-Ports und die HIC-Ports können das gleiche Host-Protokoll od
 
 
 
+[[considerations-for-changing-the-host-protocol]]
 == Überlegungen beim Ändern des Host-Protokolls
 
 Die Überlegungen zum Ändern des Host-Protokolls hängen von den Start- und Endprotokollen der Baseboard-Host-Ports und den HIC-Ports ab.
@@ -122,6 +125,7 @@ NOTE: Die folgenden Überlegungen gelten nur, wenn Sie ein bereits in Gebrauch g
 
 
 
+[[converting-from-fc-to-iscsi]]
 === Konvertierung von FC zu iSCSI
 
 * Wenn Ihre Konfiguration SAN-Boot-Hosts enthält, die mit den FC-Baseboard-Ports verbunden sind, überprüfen Sie den https://mysupport.netapp.com/NOW/products/interoperability["NetApp Interoperabilitätsmatrix"^] Tool, um sicherzustellen, dass die Konfiguration auf iSCSI unterstützt wird. Wenn dies nicht der Fall ist, können Sie das Host-Protokoll nicht in iSCSI konvertieren.
@@ -151,6 +155,7 @@ CAUTION: Wenn Sie die Synchronous Mirroring-Beziehungen vor der Konvertierung in
 
 
 
+[[converting-from-iscsi-to-fc]]
 === Konvertierung von iSCSI zu FC
 
 * Für die asynchrone Spiegelung muss sowohl das lokale Storage-Array als auch das Remote-Storage-Array dasselbe Protokoll verwenden. Wenn Sie derzeit asynchrone Spiegelung mit den Baseboard-Ports verwenden, müssen Sie das asynchrone Spiegeln deaktivieren, bevor Sie das Protokoll ändern.
@@ -159,6 +164,7 @@ CAUTION: Wenn Sie die Synchronous Mirroring-Beziehungen vor der Konvertierung in
 
 
 
+[[converting-from-fc-to-fciscsi]]
 === Konvertierung von FC zu FC/iSCSI
 
 Überlegungen zur Spiegelung:
@@ -244,6 +250,7 @@ Vor dem Anwenden des Feature Packs ist keine Aktion erforderlich, da derzeit kei
 
 
 
+[[converting-from-iscsi-to-fciscsi]]
 === Konvertierung von iSCSI zu FC/iSCSI
 
 * Wenn Sie einen Port konvertieren möchten, der für die Spiegelung verwendet wird, müssen Sie die Spiegelungsbeziehungen zu einem Port verschieben, der nach der Konvertierung iSCSI bleibt.
@@ -258,6 +265,7 @@ Bevor Sie das Feature Pack anwenden, sollten Sie bestätigen, dass alle Spiegelk
 
 
 
+[[converting-from-fciscsi-to-fc]]
 === Konvertierung von FC/iSCSI zu FC
 
 * Wenn alle Host-Ports zu FC konvertiert werden, beachten Sie, dass asynchrone Spiegelung über FC auf dem FC-Port mit der höchsten Nummer erfolgen muss.
@@ -322,6 +330,7 @@ Löschen Sie Spiegelungsbeziehungen vor und stellen Sie die Spiegelung danach wi
 
 
 
+[[converting-from-fciscsi-to-iscsi]]
 === Konvertierung von FC/iSCSI zu iSCSI
 
 * Synchrones Spiegeln wird für iSCSI nicht unterstützt.
@@ -337,6 +346,7 @@ CAUTION: *Möglicher Datenverlust* -- Wenn Sie nicht löschen die Spiegelungsbez
 
 
 
+[[same-host-protocol-and-mirroring-operations]]
 === Dasselbe Host-Protokoll und dieselben Spiegelungsvorgänge
 
 Spiegelungsvorgänge werden nicht beeinträchtigt, wenn die Host-Ports, die für die Spiegelung genutzt werden, dasselbe Protokoll beibehalten, nachdem Sie das Funktionspaket angewendet haben. Selbst vor dem Anwenden des Feature Packs sollten Sie vor dem Anwenden bestätigen, dass alle Konsistenzgruppen der Spiegelung synchronisiert werden.

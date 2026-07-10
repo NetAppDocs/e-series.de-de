@@ -15,6 +15,7 @@ Erfahren Sie, wie Sie die Controller mit Ihrem Netzwerk verbinden und die Einric
 
 
 
+[[step-1-cable-the-data-hosts]]
 == Schritt: Verkabeln Sie die Daten-Hosts
 
 Verkabeln Sie das System entsprechend Ihrer Netzwerktopologie.
@@ -51,6 +52,7 @@ image:../media/drw_e4012_fabric_topology_ieops-2157.svg["E4012 Fabric-Topologie,
 ====
 
 
+[[step-2-connect-and-configure-the-management-connection]]
 == Schritt 2: Verbinden und Konfigurieren der Verwaltungsverbindung
 
 Sie können die Controller-Management-Ports mit einem DHCP-Server oder einer statischen IP-Adresse konfigurieren.
@@ -123,6 +125,7 @@ NOTE: Wenn die Verbindung zu Controller B unterbrochen wird, können Sie Ihre zu
 ====
 
 
+[[step-3-configure-and-manage-your-storage-system]]
 == Schritt 3: Konfigurieren und verwalten Sie Ihr Storage-System
 
 Verwenden Sie nach der Installation der Hardware die SANtricity Software zum Konfigurieren und Managen Ihres Storage-Systems.

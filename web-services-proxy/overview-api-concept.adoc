@@ -15,6 +15,7 @@ In der Web Services-API umfasst HTTP-Kommunikation einen Anforderungsantwort-Zyk
 
 
 
+[[url-elements-in-requests]]
 == URL-Elemente in Anforderungen
 
 Unabhängig von der verwendeten Programmiersprache oder dem verwendeten Werkzeug hat jeder Aufruf der Web Services-API eine ähnliche Struktur, mit einer URL, einem HTTP-Verb und einem Accept-Header.
@@ -72,6 +73,7 @@ Der API-Pfad besteht aus drei Teilen:
 |===
 
 
+[[supported-http-verbs]]
 == Unterstützte HTTP-Verben
 
 Unterstützte HTTP-Verben umfassen ABRUFEN, POST und LÖSCHEN:
@@ -86,12 +88,14 @@ NOTE: Derzeit unterstützt die Web Services API PUT oder PATCH nicht. Stattdesse
 
 
 
+[[accept-headers]]
 == Kopfzeilen akzeptieren
 
 Wenn ein Anforderungsentext zurückgegeben wird, gibt Web Services die Daten im JSON-Format zurück (sofern nicht anders angegeben). Bestimmte Clients haben standardmäßig die Anforderung von „`Text/HTML`“ oder etwas ähnlichem. In diesen Fällen antwortet die API mit einem HTTP-Code 406 und bezeichnet, dass sie keine Daten in diesem Format bereitstellen kann. Als Best Practice sollten Sie den Header akzeptieren für alle Fälle als „`Application/json`“ definieren, in denen Sie JSON als Antworttyp erwarten. In anderen Fällen, in denen ein Antwortkörper nicht zurückgegeben wird (z. B. LÖSCHEN), verursacht die Annahme-Kopfzeile keine unbeabsichtigten Auswirkungen.
 
 
 
+[[responses]]
 == Antworten
 
 Wenn eine Anfrage an die API gestellt wird, gibt eine Antwort zwei wichtige Informationen zurück:

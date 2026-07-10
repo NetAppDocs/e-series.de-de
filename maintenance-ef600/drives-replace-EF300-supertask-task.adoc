@@ -21,6 +21,7 @@ Der EF300 und EF300C unterstützen SAS-Erweiterung mit 24-Laufwerk- und 60-Laufw
 
 
 
+[[replace-drive-in-an-ef300-24-drive-shelf]]
 == Ersetzen Sie das Laufwerk in einem EF300 (Shelf mit 24 Laufwerken).
 
 Gehen Sie folgendermaßen vor, um ein Laufwerk in einem Shelf mit 24 Laufwerken zu ersetzen.
@@ -42,6 +43,7 @@ Der Recovery Guru in SANtricity System Manager überwacht die Laufwerke im Stora
 
 
 
+[[step-1-prepare-to-replace-drive-24-drive]]
 === Schritt 1: Vorbereitung auf den Austausch des Antriebs (24 Laufwerke)
 
 Bereiten Sie sich auf den Austausch eines Laufwerks vor, indem Sie den Recovery Guru in SANtricity System Manager prüfen und alle erforderlichen Schritte ausführen. Dann können Sie die ausgefallene Komponente finden.
@@ -71,6 +73,7 @@ NOTE: Wenn Sie ein Laufwerk in einem Shelf ersetzen, das über eine Blende verf�
 
 
 
+[[step-2-remove-failed-drive-24-drive]]
 === Schritt 2: Entfernen des ausgefallenen Laufwerks (24 Laufwerke)
 
 Entfernen Sie ein ausgefallenes Laufwerk, um es durch ein neues zu ersetzen.
@@ -101,6 +104,7 @@ NOTE: Wenn Sie versehentlich ein aktives Laufwerk entfernen, warten Sie mindeste
 
 
 
+[[step-3-install-new-drive-24-drive]]
 === Schritt 3: Neues Laufwerk installieren (24-Laufwerk)
 
 Sie installieren ein neues Laufwerk, um das ausgefallene zu ersetzen. Installieren Sie das Ersatzlaufwerk so schnell wie möglich nach dem Entfernen des ausgefallenen Laufwerks. Andernfalls besteht die Gefahr, dass die Ausrüstung überhitzt.
@@ -120,6 +124,7 @@ NOTE: Je nach Konfiguration rekonstruiert der Controller möglicherweise automat
 
 
 
+[[step-4-complete-drive-replacement-24-drive]]
 === Schritt 4: Vollständiger Austausch von Laufwerken (24 Laufwerke)
 
 Überprüfen Sie, ob das neue Laufwerk ordnungsgemäß funktioniert.
@@ -160,6 +165,7 @@ Der Austausch des Laufwerks ist abgeschlossen. Sie können den normalen Betrieb 
 
 
 
+[[replace-drive-in-an-ef300-60-drive-shelf]]
 == Ersetzen Sie das Laufwerk in einem EF300 (Shelf mit 60 Laufwerken).
 
 Gehen Sie folgendermaßen vor, um ein Laufwerk in einem Shelf mit 60 Laufwerken zu ersetzen.
@@ -180,6 +186,7 @@ Der Recovery Guru in SANtricity System Manager überwacht die Laufwerke im Stora
 
 
 
+[[step-1-prepare-to-replace-drive-60-drive]]
 === Schritt 1: Vorbereitung auf den Austausch des Antriebs (60 Laufwerke)
 
 Bereiten Sie sich auf den Austausch eines Laufwerks vor, indem Sie den Recovery Guru in SANtricity System Manager prüfen und alle erforderlichen Schritte ausführen. Dann können Sie die ausgefallene Komponente finden.
@@ -237,6 +244,7 @@ image::../media/28_dwg_e2860_de460c_attention_led_drive_maint-e5700.gif[Achtung-
 
 
 
+[[step-2-remove-failed-drive-60-drive]]
 === Schritt 2: Entfernen des ausgefallenen Laufwerks (60 Laufwerke)
 
 Entfernen Sie ein ausgefallenes Laufwerk, um es durch ein neues zu ersetzen.
@@ -274,6 +282,7 @@ NOTE: Wenn Sie versehentlich ein aktives Laufwerk entfernen, warten Sie mindeste
 
 
 
+[[step-3-install-new-drive-60-drive]]
 === Schritt 3: Neues Laufwerk installieren (60-Laufwerk)
 
 Installieren Sie ein neues Laufwerk, um das ausgefallene zu ersetzen.
@@ -303,6 +312,7 @@ Je nach Konfiguration rekonstruiert der Controller möglicherweise automatisch D
 
 
 
+[[step-4-complete-drive-replacement-60-drive]]
 === Schritt 4: Vollständiger Austausch von Laufwerken (60 Laufwerke)
 
 Überprüfen Sie, ob das neue Laufwerk ordnungsgemäß funktioniert.

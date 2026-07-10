@@ -17,6 +17,7 @@ Bei RHEL 8, RHEL 9 und SLES 15 wird I/O vom Linux-Host an die physischen NVMe-Ge
 
 
 
+[[physical-nvme-devices-are-io-targets]]
 == Physische NVMe Geräte sind I/O-Ziele
 
 Es empfiehlt sich, I/O-Vorgänge zu den Links in auszuführen `/dev/disk/by-id/nvme-eui.[uuid#]` Statt direkt auf den physischen nvme-Gerätepfad zu gelangen `/dev/nvme[subsys#]n[id#]`. Die Verknüpfung zwischen diesen beiden Standorten kann mit folgendem Befehl gefunden werden:

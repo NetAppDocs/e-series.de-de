@@ -17,6 +17,7 @@ Bei den in diesem Abschnitt beschriebenen Verfahren wird vorausgesetzt, dass das
 
 
 
+[[system-components]]
 == Systemkomponenten
 
 Für das E5700 Storage-System können Sie Wartungsvorgänge für die folgenden Komponenten durchführen.

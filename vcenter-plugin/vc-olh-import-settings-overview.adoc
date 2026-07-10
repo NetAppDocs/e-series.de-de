@@ -18,6 +18,7 @@ Die Funktion „Importeinstellungen“ ist ein Batch-Vorgang, mit dem Sie die Ei
 
 
 
+[[settings-available-for-import]]
 == Für den Import verfügbare Einstellungen
 
 Die folgenden Konfigurationen können von einem Array in ein anderes importiert werden:
@@ -43,6 +44,7 @@ Die folgenden Konfigurationen können von einem Array in ein anderes importiert 
 
 
 
+[[configuration-workflow]]
 == Konfigurationsworkflow
 
 So importieren Sie Einstellungen:
@@ -55,12 +57,14 @@ So importieren Sie Einstellungen:
 
 
 
+[[requirements-for-replicating-storage-configurations]]
 == Anforderungen für die Replizierung von Storage-Konfigurationen
 
 Bevor Sie eine Speicherkonfiguration von einem Speicher-Array in ein anderes importieren, überprüfen Sie die Anforderungen und Richtlinien.
 
 
 
+[[shelves]]
 === Shelfs
 
 * Die Shelfs, in denen sich die Controller befinden, müssen auf den Quell- und Ziel-Arrays identisch sein.
@@ -70,6 +74,7 @@ Bevor Sie eine Speicherkonfiguration von einem Speicher-Array in ein anderes imp
 
 
 
+[[controllers]]
 === Controller
 
 * Der Controllertyp kann zwischen Quell- und Ziel-Arrays unterschiedlich sein, aber der RBOD-Gehäusetyp muss identisch sein.
@@ -80,6 +85,7 @@ Bevor Sie eine Speicherkonfiguration von einem Speicher-Array in ein anderes imp
 
 
 
+[[status]]
 === Status
 
 * Die Ziel-Arrays müssen den optimalen Status haben.
@@ -88,6 +94,7 @@ Bevor Sie eine Speicherkonfiguration von einem Speicher-Array in ein anderes imp
 
 
 
+[[storage]]
 === Storage
 
 * Die Laufwerkskapazität kann zwischen den Quell- und Ziel-Arrays variieren, solange die Volume-Kapazität auf dem Ziel größer ist als die Quelle. (In einem Ziel-Array sind unter Umständen neuere Laufwerke mit höherer Kapazität enthalten, die durch den Replizierungsvorgang nicht vollständig in Volumes konfiguriert wären.)

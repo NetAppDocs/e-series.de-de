@@ -38,6 +38,7 @@ Informationen über kompatible Hardware finden Sie im https://mysupport.netapp.c
 
 
 
+[[step-1-prepare-to-upgrade-hics]]
 == Schritt: Vorbereitung auf das HIC-Upgrade
 
 Bereiten Sie sich auf das Upgrade einer HIC vor, indem Sie die Konfigurationsdatenbank des Speicherarrays sichern, Supportdaten erfassen und Host-I/O-Vorgänge anhalten. Dann können Sie das Controller-Shelf herunterfahren.
@@ -121,6 +122,7 @@ Warten Sie, bis alle Vorgänge abgeschlossen sind, bevor Sie mit dem nächsten S
 
 
 
+[[step-2-remove-controller-canister]]
 == Schritt 2: Controller-Behälter entfernen
 
 Entfernen Sie den Controller-Behälter, damit Sie ein Upgrade der neuen HIC durchführen können.
@@ -185,6 +187,7 @@ Wenn Sie den Controller-Behälter aus einem E5724-Controller-Regal entfernen, sc
 
 
 
+[[step-3-remove-a-hic]]
 == Schritt 3: Entfernen einer HIC
 
 Entfernen Sie die ursprüngliche HIC, sodass Sie sie durch eine aktualisierte HIC ersetzen können.
@@ -232,6 +235,7 @@ image::../media/28_dwg_e2800_hic_thumbscrews_maint-e5700.gif[Entfernen Sie die H
 
 
 
+[[step-4-install-the-new-hic]]
 == Schritt 4: Installieren Sie die neue HIC
 
 Installieren Sie die neue Host-HIC.
@@ -272,6 +276,7 @@ Verwenden Sie keinen Schraubendreher, oder ziehen Sie die Schrauben möglicherwe
 
 
 
+[[step-5-reinstall-controller-canister]]
 == Schritt 5: Controller-Behälter wieder einbauen
 
 Setzen Sie nach dem Installieren der neuen HIC den Controller-Behälter wieder in das Controller-Shelf ein.
@@ -315,6 +320,7 @@ NOTE: Schließen Sie derzeit keine Datenkabel an die neuen HIC-Ports an.
 
 
 
+[[step-6-complete-the-hic-upgrade]]
 == Schritt 6: Führen Sie das HIC-Upgrade durch
 
 Überprüfen Sie die Controller-LEDs und die Anzeige für sieben Segmente und überprüfen Sie, ob der Status des Controllers optimal lautet.

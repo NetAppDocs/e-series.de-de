@@ -25,6 +25,7 @@ Die Schritte zur Vorbereitung auf den Batterieaustausch hängen davon ab, ob Sie
 
 
 
+[[place-controller-offline-duplex]]
 == Controller offline schalten (Duplex)
 
 Wenn Sie über eine Duplexkonfiguration verfügen, müssen Sie den betroffenen Controller offline stellen, damit Sie den fehlerhaften Akku sicher entfernen können. Der Controller, den Sie nicht in den Offline-Modus versetzen, muss den Status „Online“ (im optimalen Status) aufweisen.
@@ -101,6 +102,7 @@ CAUTION: Beginnen Sie keine anderen Vorgänge, bis der Status aktualisiert wurde
 
 
 
+[[power-down-the-controller-shelf-simplex]]
 == Controller-Shelf herunterfahren (Simplexkonfiguration)
 
 Wenn Sie eine Simplexkonfiguration haben, schalten Sie das Controller-Shelf aus, damit Sie den ausgefallenen Akku sicher entfernen können.

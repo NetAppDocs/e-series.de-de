@@ -38,6 +38,7 @@ Informationen über kompatible Hardware finden Sie im https://mysupport.netapp.c
 
 
 
+[[step-1-prepare-to-add-hic]]
 == Schritt 1: Vorbereitung auf das Hinzufügen von HIC
 
 Bereiten Sie sich vor, die HIC hinzuzufügen, indem Sie die Konfigurationsdatenbank des Speicherarrays sichern, Supportdaten erfassen und Host-I/O-Vorgänge anhalten. Dann können Sie das Controller-Shelf herunterfahren.
@@ -118,6 +119,7 @@ image::../media/28_dwg_2800_controller_attn_led_maint-e2800.gif[Cache-aktiv-LED 
 
 
 
+[[step-2-remove-controller-canister]]
 == Schritt 2: Controller-Behälter entfernen
 
 Entfernen Sie den Controller-Behälter, damit Sie die neue Host-Schnittstellenkarte hinzufügen können.
@@ -178,6 +180,7 @@ Wenn Sie den Controller-Behälter aus einem E2812-Controller-Shelf, einem E2824-
 
 
 
+[[step-3-install-the-hic]]
 == Schritt 3: Installieren Sie die HIC
 
 Installieren Sie die HIC, um die Anzahl der Host Ports in Ihrem Speicher-Array zu erhöhen.
@@ -232,6 +235,7 @@ image::../media/28_dwg_e2800_hic_faceplace_screws_maint-e2800.gif[Bringen Sie di
 
 
 
+[[step-4-reinstall-controller-canister]]
 == Schritt 4: Controller-Behälter wieder einbauen
 
 Setzen Sie den Controller-Behälter wieder in das Controller-Shelf ein, nachdem Sie die neue HIC installiert haben.
@@ -271,6 +275,7 @@ NOTE: Schließen Sie derzeit keine Datenkabel an die neuen HIC-Ports an.
 
 
 
+[[step-5-complete-hic-addition]]
 == Schritt 5: HIC-Ergänzung abschließen
 
 Überprüfen Sie die Controller-LEDs und die Anzeige für sieben Segmente und bestätigen Sie dann, dass der Status des Controllers optimal lautet.

@@ -17,6 +17,7 @@ image::../media/port_identifiers_ib_srp.gif[SRB über IB-Port-IDs]
 
 
 
+[[host-identifiers]]
 == Host-IDs
 
 
@@ -70,12 +71,14 @@ Host Port 2 zum IB Switch 2 (Pfad „B“)
 |===
 
 
+[[recommended-configuration]]
 == Empfohlene Konfiguration
 
 Empfohlene Konfigurationen bestehen aus zwei Initiator-Ports und vier Ziel-Ports.
 
 
 
+[[mapping-host-name]]
 == Zuordnung des Hostnamens
 
 

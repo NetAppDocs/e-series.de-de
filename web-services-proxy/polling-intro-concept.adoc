@@ -15,6 +15,7 @@ Sie können die automatische Abfrage für alle Festplatten- und Volume-Statistik
 
 
 
+[[overview-of-statistics]]
 == Übersicht über die Statistiken
 
 Statistiken enthalten Informationen zu den Erfassungsraten und der Performance der Storage-Systeme.
@@ -31,12 +32,14 @@ Sie können RAW-Statistiken abrufen, unabhängig davon, ob die automatische Abfr
 
 
 
+[[statistics-functionality]]
 == Statistikfunktion
 
 Der Web Services Proxy bietet API-Endpunkte, die den Abruf von RAW- und analysierten Controller- und Schnittstellenstatistiken von unterstützten Hardware-Modellen und Softwareversionen ermöglichen.
 
 
 
+[[raw-statistics-apis]]
 === RAW Statistics APIs
 
 * `+/storage-systems/{system-id}/controller-statistics+`
@@ -47,6 +50,7 @@ Der Web Services Proxy bietet API-Endpunkte, die den Abruf von RAW- und analysie
 
 
 
+[[analyzed-statistics-apis]]
 === Analysierte Statistik-APIs
 
 * `+/storage-systems/{id}/analysed-controller-statistics/+`
@@ -69,6 +73,7 @@ NOTE: Wenn das System startet, gibt es keine vorherige Statistiksammlung zur Ber
 
 
 
+[[configure-polling-intervals]]
 == Konfigurieren von Abfrageintervallen
 
 Um Abfrageintervalle zu konfigurieren, ändern Sie die Datei wsconfig.xml, um ein Abrufintervall in Sekunden festzulegen.

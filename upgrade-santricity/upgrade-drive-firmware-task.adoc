@@ -16,6 +16,7 @@ Befolgen Sie dieses Verfahren, um die Firmware Ihrer Laufwerke zu aktualisieren,
 
 
 
+[[step-1-download-drive-firmware-files]]
 == Schritt 1: Laden Sie Laufwerk-Firmware-Dateien
 
 In diesem Schritt rufen Sie die NetApp Support-Website auf, um die Laufwerk-Firmware-Dateien auf Ihren Management-Client herunterzuladen.
@@ -30,6 +31,7 @@ In diesem Schritt rufen Sie die NetApp Support-Website auf, um die Laufwerk-Firm
 
 
 
+[[step-2-begin-drive-firmware-upgrade]]
 == Schritt 2: Starten Sie die Aktualisierung der Laufwerk-Firmware
 
 In diesem Schritt aktualisieren Sie die Firmware der Laufwerke.

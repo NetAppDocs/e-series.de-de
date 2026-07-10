@@ -21,6 +21,7 @@ Befolgen Sie das entsprechende Verfahren für:
 
 
 
+[[internal-key-management]]
 == Internes Verschlüsselungsmanagement
 
 Führen Sie diese Schritte für das interne Verschlüsselungsmanagement aus, wenn alle Laufwerke gesperrt sind.
@@ -51,6 +52,7 @@ Die Controller werden mit der Synchronisierung von Autocodes von den Laufwerken 
 
 
 
+[[external-key-management]]
 == Externes Verschlüsselungskeymanagement
 
 Führen Sie diese Schritte für externes Verschlüsselungsmanagement aus, wenn alle Laufwerke gesperrt sind.

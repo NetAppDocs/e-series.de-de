@@ -33,6 +33,7 @@ CAUTION: Bei einem Upgrade von SANtricity OS auf einer StorageGRID Appliance (z.
 
 
 
+[[step-1-perform-pre-upgrade-health-check]]
 == Schritt 1: Durchführen einer Integritätsprüfung vor dem Upgrade
 
 Eine Zustandsprüfung wird im Rahmen des Upgrade-Prozesses ausgeführt, doch vor Beginn kann zusätzlich ein Systemcheck separat durchgeführt werden. Bei der Integritätsprüfung werden Komponenten des Storage-Arrays bewertet, um sicherzustellen, dass das Upgrade fortgesetzt werden kann.
@@ -58,6 +59,7 @@ NOTE: Wenn Arrays die Integritätsprüfung nicht bestanden haben, können Sie da
 
 
 
+[[step-2-download-software-files-from-support-site]]
 == Schritt 2: Laden Sie Software-Dateien von der Support-Website
 
 In diesem Schritt speichern Sie auf der NetApp Support Site die neuen DLP-Dateien (Download Package) in Ihrem Management-Host-System.
@@ -85,6 +87,7 @@ NOTE: In Version 8.42 und höher ist digital signierte Firmware erforderlich. We
 
 
 
+[[step-3-transfer-software-files-to-the-controllers]]
 == Schritt 3: Übertragen Sie Software-Dateien auf die Controller
 
 Sie laden die SANtricity OS Softwaredatei und die NVSRAM-Datei in das Repository, damit sie für das Unified Manager Upgrade Center zugänglich ist.
@@ -163,6 +166,7 @@ Die Datei wird im Ordner Downloads für Ihren Browser mit dem Namen gespeichert`
 
 
 
+[[step-4-activate-staged-software-files-optional]]
 == Schritt 4: Stufenweise Software-Dateien aktivieren (optional)
 
 Sie können die Software-Datei sofort aktivieren oder bis zu einem angenehmeren Zeitpunkt warten. Bei diesem Verfahren wird davon ausgegangen, dass Sie die Softwaredatei zu einem späteren Zeitpunkt aktivieren.

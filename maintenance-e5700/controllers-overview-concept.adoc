@@ -18,6 +18,7 @@ Jeder Controller-Behälter enthält eine Controller-Karte, einen Akku und eine o
 
 
 
+[[procedure-overview]]
 == Verfahrensübersicht
 
 Wenn Sie einen defekten Controller-Behälter ersetzen, müssen Sie die Batterie und HIC, falls vorhanden, aus dem ursprünglichen Controller-Behälter entfernen und in den Ersatzcontroller-Behälter installieren.
@@ -59,6 +60,7 @@ NOTE: Dieses Verfahren gilt für EAM-Hot-Swaps oder Ersatz wie für Regal-ähnli
 
 
 
+[[requirements-for-replacing-a-failed-controller]]
 == Anforderungen für den Austausch eines fehlerhaften Controllers
 
 Bevor Sie einen Controller austauschen, müssen folgende Funktionen erforderlich sein:
@@ -84,6 +86,7 @@ Optional können Sie einige der Verfahren mit der Befehlszeilenschnittstelle (CL
 
 
 
+[[duplex-configuration-requirements]]
 == Anforderungen für die Duplexkonfiguration
 
 Bei einem Controller-Shelf mit zwei Controllern (Duplexkonfiguration) können Sie einen Controller-Behälter ersetzen, während Ihr Speicher-Array eingeschaltet ist und Host-I/O-Vorgänge ausführt, sofern die folgenden Bedingungen erfüllt sind:

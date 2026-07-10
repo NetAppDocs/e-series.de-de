@@ -19,6 +19,7 @@ Sie können Zugriffsberechtigungen für das Storage Plugin für vCenter konfigur
 
 
 
+[[review-required-vsphere-privileges]]
 == Erforderliche vSphere-Berechtigungen prüfen
 
 Um auf das Plug-in im vSphere Client zuzugreifen, müssen Sie einer Rolle zugewiesen werden, die über die entsprechenden vSphere-Berechtigungen verfügt. Benutzer mit der Berechtigung „Datastore konfigurieren“ vSphere haben Lese-Schreib-Zugriff auf das Plugin, während Benutzer mit der Berechtigung „Datastore durchsuchen“ nur Lesezugriff haben. Wenn ein Benutzer keine dieser Berechtigungen hat, zeigt das Plugin eine Meldung „unzureichende Berechtigungen“ an.
@@ -34,6 +35,7 @@ Um auf das Plug-in im vSphere Client zuzugreifen, müssen Sie einer Rolle zugewi
 |===
 
 
+[[configure-storage-administrator-roles]]
 == Storage Administrator-Rollen konfigurieren
 
 Um Lese-/Schreibberechtigungen für Plugin-Benutzer bereitzustellen, können Sie eine Rolle erstellen, klonen oder bearbeiten. Weitere Informationen zum Konfigurieren von Rollen im vSphere-Client finden Sie im VMware Doc Center unter folgendem Thema:
@@ -43,6 +45,7 @@ Um Lese-/Schreibberechtigungen für Plugin-Benutzer bereitzustellen, können Sie
 
 
 
+[[access-role-actions]]
 === Auf Rollenaktionen zugreifen
 
 . Wählen Sie auf der Startseite des vSphere Clients im Bereich Access Control die Option *Administrator* aus.
@@ -63,6 +66,7 @@ Abhängig von der oben genannten Auswahl wird der entsprechende Assistent angeze
 
 
 
+[[create-a-new-role]]
 === Erstellen Sie eine neue Rolle
 
 . Wählen Sie in der Liste Berechtigungen die Zugriffsberechtigungen aus, die dieser Rolle zugewiesen werden sollen.
@@ -76,6 +80,7 @@ Um schreibgeschützten Zugriff auf das Plugin zu ermöglichen, wählen Sie Menü
 
 
 
+[[clone-a-role]]
 === Rolle klonen
 
 . Benennen Sie die Rolle und geben Sie eine Beschreibung ein.
@@ -92,6 +97,7 @@ Um schreibgeschützten Zugriff auf das Plugin zu ermöglichen, wählen Sie Menü
 
 
 
+[[edit-an-existing-role]]
 === Bearbeiten Sie eine vorhandene Rolle
 
 . Wählen Sie in der Liste Berechtigungen die Zugriffsberechtigungen aus, die dieser Rolle zugewiesen werden sollen.
@@ -105,6 +111,7 @@ Um schreibgeschützten Zugriff auf das Plugin zu ermöglichen, wählen Sie Menü
 
 
 
+[[set-permissions-for-vcenter-server-appliance]]
 == Legen Sie Berechtigungen für vCenter Server Appliance fest
 
 Nachdem Sie Berechtigungen für eine Rolle festgelegt haben, müssen Sie der vCenter Server Appliance eine Berechtigung hinzufügen. Mit dieser Berechtigung kann ein Benutzer oder eine Gruppe auf das Plugin zugreifen.

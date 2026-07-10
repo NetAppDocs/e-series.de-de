@@ -18,18 +18,21 @@ Verwenden Sie die Funktion Add/Discover, um die zu managenden Storage-Arrays im 
 
 
 
+[[considerations-for-discovering-arrays]]
 == Überlegungen bei der Array-Ermittlung
 
 Damit das Plug-in Storage-Ressourcen anzeigen und verwalten kann, müssen Sie die Storage-Arrays ermitteln, die Sie im Netzwerk Ihres Unternehmens managen möchten. Sie können entweder ein oder mehrere Arrays ermitteln und dann hinzufügen.
 
 
 
+[[multiple-storage-arrays]]
 === Mehrere Storage-Arrays
 
 Wenn Sie mehrere Arrays ermitteln möchten, geben Sie einen Netzwerk-IP-Adressbereich ein, und das System versucht dann individuelle Verbindungen zu jeder IP-Adresse in diesem Bereich. Jedes erfolgreich erreichte Storage Array wird im Plug-in angezeigt und Sie können sie dann Ihrer Management-Domäne hinzufügen.
 
 
 
+[[single-storage-array]]
 === Einzelnes Storage Array
 
 Wenn Sie ein einzelnes Array ermitteln möchten, geben Sie die einzelne IP-Adresse für einen der Controller im Storage Array ein und fügen Sie anschließend dieses Array zur Management-Domäne hinzu.
@@ -39,12 +42,14 @@ NOTE: Das Plugin erkennt und zeigt nur die einzige IP-Adresse oder IP-Adresse in
 
 
 
+[[user-credentials]]
 === Benutzeranmeldeinformationen
 
 Sie müssen für jedes Speicherarray, das Sie hinzufügen möchten, das Administratorkennwort angeben.
 
 
 
+[[certificates]]
 === Zertifikate
 
 Im Rahmen der Bestandsaufnahme überprüft das System, ob die erkannten Speicher-Arrays Zertifikate von einer vertrauenswürdigen Quelle verwenden. Das System verwendet zwei Arten von zertifikatbasierter Authentifizierung für alle Verbindungen, die es mit dem mit dem Browser herstellt:
@@ -55,6 +60,7 @@ Im Rahmen der Bestandsaufnahme überprüft das System, ob die erkannten Speicher
 
 
 
+[[storage-array-status]]
 == Status des Storage-Arrays
 
 Wenn Sie das Storage Plug-in für vCenter öffnen, wird die Kommunikation mit jedem Speicher-Array hergestellt und der Status jedes Speicher-Arrays wird angezeigt.
@@ -87,6 +93,7 @@ Auf der Seite *Verwalten - Alle* können Sie den Status des Speicherarrays und d
 |===
 
 
+[[plugin-interface-compared-to-system-manager]]
 == Plug-in-Schnittstelle verglichen mit System Manager
 
 Sie können Storage Plug-in für vCenter für grundlegende Betriebsaufgaben in Ihrem Speicher-Array verwenden. Es kann jedoch zu Zeiten kommen, in denen Sie System Manager starten müssen, um Aufgaben auszuführen, die im Plug-in nicht verfügbar sind.

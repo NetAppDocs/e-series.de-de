@@ -16,6 +16,7 @@ Um Web Services Proxy und Unified Manager zu entfernen, können Sie jeden belieb
 
 
 
+[[graphical-mode-uninstall]]
 == Grafikmodus deinstallieren
 
 Sie können die Deinstallation im grafischen Modus für Windows oder Linux ausführen. Im grafischen Modus werden die Aufforderungen in einer Windows-Benutzeroberfläche angezeigt.
@@ -48,6 +49,7 @@ Die Fortschrittsanzeige „Uninstaller“ wird angezeigt und zeigt den Fortschri
 
 
 
+[[console-mode-uninstall]]
 == Deinstallieren des Konsolenmodus
 
 Sie können die Deinstallation im Konsolenmodus für Windows oder Linux ausführen. Im Konsolenmodus werden die Eingabeaufforderungen im Terminalfenster angezeigt.
@@ -66,6 +68,7 @@ Der Deinstallationsprozess wird gestartet.
 
 
 
+[[silent-mode-uninstall]]
 == Deinstallation im Silent-Modus
 
 Sie können die Deinstallation im Silent-Modus für Windows oder Linux ausführen. Im Silent-Modus werden keine Rücksendemeldungen oder -Skripte im Terminalfenster angezeigt.
@@ -83,6 +86,7 @@ Der Deinstallationsprozess wird ausgeführt, es werden jedoch keine Rücksendeme
 
 
 
+[[rpm-command-uninstall-linux-only]]
 == RPM-Befehl deinstallieren (nur Linux)
 
 Sie können den Befehl RPM verwenden, um Web Services Proxy von einem Linux-System zu deinstallieren.

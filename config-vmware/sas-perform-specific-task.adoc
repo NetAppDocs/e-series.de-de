@@ -15,6 +15,7 @@ Für das SAS-Protokoll bestimmen Sie Host-Port-Adressen und treffen die empfohle
 
 
 
+[[step-1-determine-sas-host-identifiers-vmware]]
 == Schritt: SAS Host Identifikatoren bestimmen - VMware
 
 Suchen Sie mithilfe des HBA Utility die SAS-Adressen und nehmen Sie dann die entsprechenden Konfigurationseinstellungen mithilfe des HBA-BIOS vor.
@@ -36,6 +37,7 @@ Entsprechende Einstellungen finden Sie in der Spalte Hinweise des http://mysuppo
 
 
 
+[[step-2-record-your-configuration]]
 == Schritt 2: Notieren Sie Ihre Konfiguration
 
 Sie können eine PDF-Datei auf dieser Seite erstellen und drucken und dann mithilfe des folgenden Arbeitsblatts Ihre protokollspezifischen Speicherkonfigurationsinformationen aufzeichnen. Sie benötigen diese Informationen für Bereitstellungsaufgaben.
@@ -44,6 +46,7 @@ image::../media/sas_topology_diagram_conf-vmw.gif[Diagramm: SAS-Topologie]
 
 
 
+[[host-identifiers]]
 === Host-IDs
 
 |===
@@ -92,12 +95,14 @@ Host-Port 2 (Initiator) ist mit Controller B verbunden, Port 1
 |===
 
 
+[[target-identifiers]]
 === Zielkennungen
 
 Empfohlene Konfigurationen bestehen aus zwei Ziel-Ports.
 
 
 
+[[mapping-host-name]]
 === Zuordnung des Hostnamens
 
 |===

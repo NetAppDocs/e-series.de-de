@@ -18,6 +18,7 @@ Das SANtricity Storage Plug-in für vCenter ermöglicht das integrierte Manageme
 
 
 
+[[available-tasks]]
 == Verfügbare Aufgaben
 
 Sie können das Plugin verwenden, um die folgenden Aufgaben auszuführen:
@@ -41,12 +42,14 @@ image:../media/vcenter_communication2.png["VCenter Kommunikationsumgebung"]
 
 
 
+[[interface-overview]]
 == Schnittstellenübersicht
 
 Wenn Sie sich beim Plugin anmelden, öffnet sich die Hauptseite zu *Verwalten - Alle*. Auf dieser Seite können Sie alle erkannten Speicher-Arrays im Netzwerk anzeigen und verwalten.
 
 
 
+[[navigation-sidebar]]
 === Navigationsleiste rechts in der Seitenleiste
 
 In der Navigationsleiste wird Folgendes angezeigt:
@@ -64,6 +67,7 @@ NOTE: Einige Vorgänge sind nicht verfügbar, wenn ein Speicherarray einen nicht
 
 
 
+[[supported-browsers]]
 === Unterstützte Browser
 
 Auf das Storage Plug-in für vCenter kann über verschiedene Browsertypen zugegriffen werden. Die folgenden Browser und Versionen werden unterstützt.
@@ -75,12 +79,14 @@ Auf das Storage Plug-in für vCenter kann über verschiedene Browsertypen zugegr
 
 
 
+[[user-roles-and-permissions]]
 === Benutzerrollen und Berechtigungen
 
 Für den Zugriff auf Aufgaben im Storage Plugin für vCenter muss der Benutzer über Lese-/Schreibberechtigungen verfügen. Standardmäßig verfügen alle definierten VMware vCenter-Benutzer-IDs über keine Berechtigungen zum Ausführen von Aufgaben im Plug-in.
 
 
 
+[[configuration-overview]]
 == Konfigurationsübersicht
 
 Die Konfiguration umfasst folgende Schritte:
@@ -94,6 +100,7 @@ Die Konfiguration umfasst folgende Schritte:
 
 
 
+[[find-more-information]]
 == Weitere Informationen
 
 Weitere Informationen zum Verwalten von Datastores im vSphere Client finden Sie unter https://docs.vmware.com/en/VMware-vSphere/index.html["Dokumentation zu VMware vSphere"^].

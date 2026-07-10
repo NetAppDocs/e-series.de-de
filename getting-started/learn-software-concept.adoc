@@ -26,6 +26,7 @@ NOTE: Die EF600 und EF300 Storage-Arrays unterstützen keine Spiegelung, Thin Vo
 
 
 
+[[santricity-system-manager]]
 == SANtricity System Manager
 
 System Manager ist eine webbasierte Managementsoftware, die in jeden Controller integriert ist. Um auf die Benutzeroberfläche zuzugreifen, rufen Sie die IP-Adresse des Controllers in einem Browser auf. Ein Setup-Assistent hilft Ihnen beim Einstieg in die Systemkonfiguration.
@@ -92,6 +93,7 @@ Anzeigen von Diagnosedaten, Managen von Upgrades und Konfigurieren von AutoSuppo
 |===
 
 
+[[santricity-unified-manager]]
 == SANtricity Unified Manager
 
 Unified Manager ist webbasierte Software zur Verwaltung Ihrer gesamten Domäne. In einer zentralen Ansicht können Sie den Status aller neueren E-Series und EF-Series Arrays sehen, wie zum Beispiel EF50, EF80, E4000, E2800, EF280, EF300, E5700, EF570, EF600, EF300C und EF600C. Sie können außerdem Stapelvorgänge für ausgewählte Speicherarrays durchführen.
@@ -160,6 +162,7 @@ Konfigurieren Sie die Benutzerauthentifizierung, bei der sich Benutzer bei Unifi
 |===
 
 
+[[santricity-web-services-proxy]]
 == SANtricity Web Services Proxy
 
 Der Web Services Proxy ist ein RESTful API Server, der Hunderte neuer und älterer E-Series Arrays managen kann. Der Proxy wird separat auf einem Windows- oder Linux-Server installiert.
@@ -168,6 +171,7 @@ Web Services umfasst die API-Dokumentation, mit der Sie direkt mit DER REST API 
 
 
 
+[[command-line-interface-cli]]
 == Befehlszeilenschnittstelle (CLI)
 
 Die Befehlszeilenschnittstelle (CLI) ist eine Softwareapplikation, die eine Möglichkeit bietet, Speicher-Arrays zu konfigurieren und zu überwachen. Mit der CLI können Sie Befehle von einer Betriebssystem-Eingabeaufforderung aus ausführen, wie zum Beispiel der  `DOS C:`-Eingabeaufforderung, einem Linux-Betriebssystempfad oder einem Solaris-Betriebssystempfad.

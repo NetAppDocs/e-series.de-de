@@ -15,6 +15,7 @@ Sie können AutoSupport (ASUP) konfigurieren, der Daten sammelt und diese Daten 
 
 
 
+[[overview-of-autosupport-asup]]
 == Übersicht über AutoSupport (ASUP)
 
 Die AutoSupport (ASUP)-Funktion überträgt automatisch basierend auf manuellen und planungsbasierten Kriterien Meldungen an NetApp.
@@ -94,12 +95,14 @@ Diese Dateien enthalten Profildaten von Webservices und statistische Daten zur �
 |===
 
 
+[[configure-autosupport]]
 == Konfigurieren Sie AutoSupport
 
 Bei der Installation ist AutoSupport standardmäßig aktiviert. Sie können diese Einstellung jedoch ändern oder die Bereitstellungstypen ändern.
 
 
 
+[[enable-or-disable-autosupport]]
 === Aktivieren oder deaktivieren Sie AutoSupport
 
 Die AutoSupport-Funktion ist während der Erstinstallation des Web Services Proxy aktiviert oder deaktiviert, Sie können diese Einstellung jedoch in der ASUP-Datei ändern.
@@ -123,6 +126,7 @@ NOTE: Der Zeitstempeleintrag ist überflüssig.
 
 
 
+[[configure-autosupport-delivery-method]]
 === Konfigurieren der AutoSupport-Bereitstellungsmethode
 
 Sie können die AutoSupport-Funktion so konfigurieren, dass HTTPS- oder SMTP-Bereitstellungsmethoden verwendet werden. HTTPS ist die Standardausgabemethode.

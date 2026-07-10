@@ -20,6 +20,7 @@ Die Schritte zum vollständigen Batterieaustausch hängen davon ab, ob Sie über
 
 
 
+[[place-controller-online-duplex]]
 == Controller online schalten (Duplex)
 
 Stellen Sie den Controller online, um sicherzustellen, dass das Speicher-Array ordnungsgemäß funktioniert. Anschließend können Sie Supportdaten erfassen und den Betrieb fortsetzen.
@@ -98,6 +99,7 @@ Der Austausch des Akkus ist abgeschlossen. Sie können den normalen Betrieb fort
 
 
 
+[[power-up-controller-simplex]]
 == Controller einschalten (Simplexkonfiguration)
 
 Schalten Sie das Controller-Shelf ein, um zu überprüfen, ob es ordnungsgemäß funktioniert. Anschließend können Sie Supportdaten erfassen und den Betrieb fortsetzen.

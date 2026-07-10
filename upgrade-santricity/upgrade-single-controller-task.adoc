@@ -39,6 +39,7 @@ Gründe für eine spätere Aktivierung sind u. a.:
 
 
 
+[[step-1-download-software-files-from-support-site]]
 == Schritt 1: Laden Sie Software-Dateien von der Support-Website
 
 In diesem Schritt speichern Sie auf der NetApp Support Site die neuen DLP-Dateien (Download Package) in Ihrem Management-Host-System.
@@ -63,6 +64,7 @@ NOTE: In Version 8.42 und höher ist digital signierte Firmware erforderlich. We
 
 
 
+[[step-2-transfer-software-files-to-the-controllers]]
 == Schritt 2: Übertragen Sie Software-Dateien auf die Controller
 
 In diesem Schritt übertragen Sie die Software-Dateien auf Ihren Controller, damit Sie mit dem Upgrade-Prozess beginnen können. Die Komponenten werden vom Management-Client auf die Controller kopiert und in einen Staging-Bereich im Flash-Speicher platziert.
@@ -109,6 +111,7 @@ Wenn Sie Ihre Softwaredateien bereits aktiviert haben, gehen Sie zu <<Schritt 4:
 
 
 
+[[step-3-activate-software-files]]
 == Schritt 3: Aktivieren Sie Software-Dateien
 
 Führen Sie diesen Schritt nur aus, wenn Sie über Software oder Firmware verfügen, die zwar übertragen, aber nicht aktiviert wurde. Um diesen Status zu überprüfen, suchen Sie im Bereich Benachrichtigungen auf der System Manager-Startseite oder auf der Seite Upgrade Center nach einer Benachrichtigung.
@@ -126,6 +129,7 @@ Die Datei wird im Ordner Downloads für Ihren Browser mit dem Namen gespeichert.
 
 
 
+[[step-4-complete-software-and-firmware-upgrade]]
 == Schritt 4: Software- und Firmware-Upgrade abschließen
 
 Führen Sie das Software- und Firmware-Upgrade durch, indem Sie die Versionen im Dialogfeld Software- und Firmware-Bestandsaufnahme überprüfen.

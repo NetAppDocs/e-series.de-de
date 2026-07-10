@@ -18,6 +18,7 @@ NOTE: In finden Sie https://docs.netapp.com/us-en/e-series/getting-started/learn
 
 
 
+[[hardware-and-firmware-requirements]]
 == Hardware- und Firmware-Anforderungen erfüllen
 
 * *Duplex- und Simplex-Controller-Upgrades*
@@ -89,6 +90,7 @@ Verwenden Sie keine anderen Host-Ports (Slot 1, Slot 2 oder Slot 3) für die Kom
 
 
 
+[[upgrade-compatibility]]
 == Upgrade-Kompatibilität
 
 Unterstützte Upgrade-Pfade für jedes Storage-Array-Modell prüfen.
@@ -300,6 +302,7 @@ Die Controller EF540, EF550 und EF560 dürfen nicht in SAS-3-Shelfs platziert we
 ====
 
 
+[[sas-enclosures]]
 == SAS-Gehäuse
 
 Die E5700 unterstützt DE5600 und DE6600 SAS-2 Gehäuse über ein Head Upgrade. Wenn ein E5700 Controller in SAS-2-Gehäusen installiert ist, werden die Unterstützung der Basis-Host-Ports deaktiviert.
@@ -335,6 +338,7 @@ Hinweise:
 
 
 
+[[sas-2-to-sas-3-investment-protection]]
 == Investitionsschutz durch SAS-2 zu SAS-3
 
 Sie können Ihr SAS-2-System neu konfigurieren, damit Sie es hinter einem neuen SAS-3 Controller-Shelf (E57XX/EF570/E28XX) verwenden können.

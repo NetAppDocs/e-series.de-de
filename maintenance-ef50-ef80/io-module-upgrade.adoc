@@ -29,6 +29,7 @@ Controller müssen nicht aus dem Gehäuse entfernt werden, da die I/O-Module bei
 
 
 
+[[step-1-prepare-to-upgrade-io-modules]]
 == Schritt 1: Vorbereitung auf die Aktualisierung der E/A-Module
 
 Bereiten Sie die Aktualisierung der E/A-Module vor, indem Sie ein Wartungsfenster für die Ausfallzeit einplanen, die notwendigen Werkzeuge und Geräte zusammenstellen und die Konfigurationsdatenbank des Speichersystems sichern.
@@ -74,6 +75,7 @@ Die Datei wird im Ordner Downloads für Ihren Browser mit dem Namen *configurati
 
 
 
+[[step-2-power-off-both-controllers]]
 == Schritt 2: Schalten Sie beide Controller aus
 
 Schalten Sie beide Controller im Speichersystem aus, damit Sie die I/O-Module in beiden Controllern sicher aufrüsten können.
@@ -143,6 +145,7 @@ NV-Symbol und NV-Caching-Aktiv-LED am Controller
 
 
 
+[[step-3-upgrade-the-io-modules]]
 == Schritt 3: Aktualisieren Sie die I/O-Module
 
 Trennen Sie die Verkabelung von den I/O-Modulen, die Sie aufrüsten möchten (es sei denn, Sie haben I/O-Blanking-Module), ersetzen Sie die I/O-Module oder die I/O-Blanking-Module durch die neuen I/O-Module, und verkabeln Sie dann die neuen I/O-Module.
@@ -201,6 +204,7 @@ Sie können den link:../install-hw-ef50-ef80/install-cable.html["Verkabeln Sie d
 
 
 
+[[step-4-power-on-both-controllers]]
 == Schritt 4: Schalten Sie beide Controller ein
 
 Schalten Sie beide Controller ein.
@@ -233,6 +237,7 @@ NOTE: Wenn Sie das Problem nicht beheben können, wenden Sie sich an https://www
 
 
 
+[[step-5-complete-the-io-module-upgrade]]
 == Schritt 5: Schließen Sie das Upgrade des E/A-Moduls ab
 
 Stellen Sie mithilfe des SANtricity System Manager sicher, dass die neueste Version des SANtricity Betriebssystem installiert ist, überprüfen Sie, ob alle Volumes wieder ihren jeweiligen Controllern zugeordnet sind, sammeln Sie Supportdaten, um den Betrieb wiederaufnehmen zu können, und überprüfen und ändern Sie gegebenenfalls das Host-I/O-Modulprotokoll.

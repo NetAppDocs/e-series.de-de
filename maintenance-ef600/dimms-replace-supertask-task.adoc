@@ -33,6 +33,7 @@ Zum Austauschen eines DIMM müssen Sie die Cache-Größe des Controllers überpr
 
 
 
+[[step-1-determine-if-you-need-to-replace-a-dimm]]
 == Schritt 1: Bestimmen Sie, ob Sie ein DIMM ersetzen müssen
 
 Überprüfen Sie die Cache-Größe Ihres Controllers, bevor Sie das DIMMS ersetzen.
@@ -50,6 +51,7 @@ Zum Austauschen eines DIMM müssen Sie die Cache-Größe des Controllers überpr
 
 
 
+[[step-2-place-controller-offline]]
 == Schritt 2: Controller offline schalten
 
 Platzieren Sie den Controller offline, damit Sie die DIMMs sicher entfernen und austauschen können.
@@ -96,6 +98,7 @@ NOTE: Beginnen Sie keine anderen Vorgänge, bis der Status aktualisiert wurde.
 
 
 
+[[step-3-remove-controller-canister]]
 == Schritt 3: Controller-Behälter entfernen
 
 Sie entfernen den defekten Controller-Behälter, so dass Sie Ihre DIMMs durch neue ersetzen können.
@@ -126,6 +129,7 @@ image::../media/remove_controller_6.png[Tragen Sie beim Entfernen des Controller
 
 
 
+[[step-4-remove-dimms]]
 == Schritt 4: Entfernen Sie die DIMMs
 
 Wenn nicht genügend Arbeitsspeicher vorhanden ist, ersetzen Sie die DIMMs im Controller.
@@ -160,6 +164,7 @@ Die Anzahl und Anordnung der System-DIMMs hängt vom Modell Ihres Systems ab.
 
 
 
+[[step-5-install-new-dimms]]
 == Schritt 5: Neue DIMMs installieren
 
 Installieren Sie ein neues DIMM, um das alte zu ersetzen.
@@ -189,6 +194,7 @@ image::../media/dimm_5.png[DIMMs in den Steckplatz einsetzen und mit Laschen sic
 
 
 
+[[step-6-reinstall-controller-canister]]
 == Schritt 6: Controller-Behälter wieder einbauen
 
 Setzen Sie nach dem Installieren der neuen DIMMs den Controller-Behälter wieder in das Controller-Shelf ein.
@@ -208,6 +214,7 @@ image::../media/remove_controller_7.png[Installieren Sie das DIMM-Modul in den S
 
 
 
+[[step-7-complete-dimms-replacement]]
 == Schritt 7: Vollständige DIMMs austauschen
 
 Platzieren Sie den Controller online, sammeln Sie Support-Daten und setzen Sie den Betrieb fort.

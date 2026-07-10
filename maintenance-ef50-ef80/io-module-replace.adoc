@@ -27,6 +27,7 @@ Die Fehler-LEDs befinden sich an den Controllern: Die Fehler-LEDs für Steckplat
 
 
 
+[[step-1-prepare-to-replace-an-io-module]]
 == Schritt 1: Vorbereitung zum Austausch eines I/O-Moduls
 
 Bereiten Sie den Austausch eines E/A-Moduls vor, indem Sie die notwendigen Werkzeuge und Geräte zusammentragen und die Konfigurationsdatenbank des Speichersystems sichern.
@@ -71,6 +72,7 @@ Die Datei wird im Ordner Downloads für Ihren Browser mit dem Namen *configurati
 
 
 
+[[step-2-place-the-controller-offline]]
 == Schritt 2: Den Controller offline schalten
 
 Setzen Sie den defekten Controller offline, damit Sie den Rest dieser Prozedur sicher durchführen können.
@@ -109,6 +111,7 @@ CAUTION: Wenn im Feld *OK to remove* nicht *Yes* angezeigt wird, fahren Sie nich
 
 
 
+[[step-3-replace-the-io-module]]
 == Schritt 3: Ersetzen Sie das E/A-Modul
 
 Trennen Sie die Verkabelung vom defekten I/O-Modul, ersetzen Sie es durch das Ersatz-I/O-Modul und verkabeln Sie dann das Ersatz-I/O-Modul.
@@ -160,6 +163,7 @@ Sie können die Lasche auf der linken Seite und die Rändelschraube verwenden, u
 
 
 
+[[step-4-place-the-controller-online]]
 == Schritt 4: Setzen Sie den Controller online
 
 Setzen Sie den defekten Controller wieder online.
@@ -201,6 +205,7 @@ NOTE: Sollten Sie das Problem nicht beheben können, kontaktieren Sie  https://m
 
 
 
+[[step-5-complete-the-io-module-replacement]]
 == Schritt 5: Schließen Sie den Austausch des E/A-Moduls ab
 
 Verwenden Sie den SANtricity System Manager, um sicherzustellen, dass die neueste Version von SANtricity OS installiert ist, überprüfen Sie, ob alle Volumes an ihre zugehörigen Controller zurückgegeben wurden, und sammeln Sie Supportdaten, damit Sie den Betrieb wieder aufnehmen können.
@@ -251,6 +256,7 @@ Die Datei wird im Ordner Downloads für Ihren Browser mit dem Namen *Support-Dat
 
 
 
+[[step-6-return-the-failed-part-to-netapp]]
 == Schritt 6: Senden Sie das defekte Teil zurück an NetApp
 
 Senden Sie das defekte Teil an NetApp, wie in der mit dem Kit gelieferten RMA-Anleitung beschrieben, zurück. Siehe die https://mysupport.netapp.com/site/info/rma["Teilerückgabe und Ersatz"] Seite für weitere Informationen.

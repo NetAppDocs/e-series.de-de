@@ -18,6 +18,7 @@ Die Schritte, die Sie möglicherweise abschließen müssen, hängen von den Star
 
 
 
+[[complete-fc-to-iscsi-conversion]]
 == Vollständige FC-zu-iSCSI-Konvertierung
 
 Wenn Sie zuvor FC-Host-Ports hatten und Sie zu iSCSI konvertiert haben, müssen Sie möglicherweise Ihre vorhandene Konfiguration ändern, um iSCSI zu unterstützen. Das folgende Verfahren gilt nur, wenn keine iSCSI-HIC vorhanden ist.
@@ -71,6 +72,7 @@ Die Konvertierung Ihres Host-Protokolls ist abgeschlossen. Sie können den norma
 
 
 
+[[complete-iscsi-to-fc-conversion]]
 == Vollständige Konvertierung von iSCSI zu FC
 
 Wenn Sie zuvor iSCSI Host Ports hatten und zu FC konvertiert haben, müssen Sie möglicherweise Ihre vorhandene Konfiguration zur Unterstützung von FC ändern. Die folgende Vorgehensweise gilt nur, wenn keine FC-HIC vorhanden ist.
@@ -114,6 +116,7 @@ Die Konvertierung Ihres Host-Protokolls ist abgeschlossen. Sie können den norma
 
 
 
+[[complete-conversion-for-ib-iser-tofrom-ib-srp-nvme-over-ib-nvme-over-roce-or-nvme-over-fc]]
 == Vollständige Konvertierung für IB-iSER zu/von IB-SRP, NVMe over IB, NVMe over RoCE oder NVMe over FC
 
 Nachdem Sie den Feature Pack Key angewendet haben, um das vom InfiniBand iSER HIC Port verwendete Protokoll in/von SRP, NVMe over InfiniBand, NVMe over RoCE oder NVMe over Fibre Channel zu konvertieren, müssen Sie den Host so konfigurieren, dass das entsprechende Protokoll verwendet wird.

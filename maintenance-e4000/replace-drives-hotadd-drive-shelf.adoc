@@ -33,6 +33,7 @@ NOTE: Um die Integrität des Systems zu erhalten, müssen Sie den Vorgang genau 
 
 
 
+[[step-1-prepare-to-add-the-drive-shelf]]
 == Schritt 1: Bereiten Sie sich vor, das Laufwerk-Shelf hinzuzufügen
 
 Damit Sie ein Festplatten-Shelf vorbereiten können, müssen Sie nach kritischen Ereignissen suchen und den Status der IOMs überprüfen.
@@ -87,6 +88,8 @@ Das Dialogfeld Einstellungen für Shelf-Komponenten wird angezeigt, wobei die Re
 
 
 
+[[step-2-install-the-drive-shelf-and-apply-power]]
+[[step2_install_drive_shelf]]
 == Schritt 2: Installieren Sie das Festplatten-Shelf und bringen Sie Strom an
 
 Sie installieren ein neues Festplatten-Shelf oder ein zuvor installiertes Festplatten-Shelf, schalten den Strom ein und überprüfen, ob entsprechende LEDs erforderlich sind.
@@ -106,6 +109,7 @@ NOTE: In der Installationsanleitung Ihres Modells finden Sie das vollständige V
 
 
 
+[[step-3-cable-your-system]]
 == Schritt 3: Verkabeln Sie Ihr System
 
 Sie verbinden das Festplatten-Shelf mit Controller A, bestätigen den IOM-Status und verbinden dann das Festplatten-Shelf mit Controller B
@@ -156,6 +160,7 @@ NOTE: Der Status „optimal“ zeigt an, dass der Verlust eines Redundanzfehlers
 
 
 
+[[step-4-complete-hot-add]]
 == Schritt 4: Schließen Sie Hot Add ab
 
 Sie schließen das Hot Add-Laufwerk aus, indem Sie auf Fehler überprüfen und bestätigen, dass das neu hinzugefügte Festplatten-Shelf die neueste Firmware verwendet.

@@ -16,6 +16,7 @@ Für das iSCSI-Protokoll konfigurieren Sie die Switches und konfigurieren das Ne
 
 
 
+[[step-1-configure-the-switches-iscsi-vmware]]
 == Schritt: Die Switches konfigurieren – iSCSI, VMware
 
 Sie konfigurieren die Switches entsprechend den Empfehlungen des Anbieters für iSCSI. Diese Empfehlungen können sowohl Konfigurationsrichtlinien als auch Code-Updates enthalten.
@@ -37,6 +38,7 @@ Informieren Sie sich in der Dokumentation des Switch-Anbieters.
 
 
 
+[[step-2-configure-networking-iscsi-vmware]]
 == Schritt: Netzwerk-iSCSI VMware konfigurieren
 
 Je nach Ihren Datenspeicheranforderungen können Sie Ihr iSCSI-Netzwerk auf unterschiedliche Weise einrichten. Wenden Sie sich an Ihren Netzwerkadministrator, wenn Sie Tipps zur Auswahl der für Ihre Umgebung am besten geeigneten Konfiguration benötigen.
@@ -72,6 +74,7 @@ NOTE: Für IP-Overhead müssen viele Netzwerk-Switches über 9,000 Bytes konfigu
 
 
 
+[[step-3-configure-array-side-networking-iscsi-vmware]]
 == Schritt 3: Array-seitiges Netzwerk konfigurieren – iSCSI, VMware
 
 Mit der SANtricity System Manager GUI können Sie das iSCSI-Netzwerk auf der Array-Seite konfigurieren.
@@ -87,7 +90,7 @@ Stellen Sie sicher, dass Sie Folgendes haben:
 Dieser Task beschreibt den Zugriff auf die Konfiguration des iSCSI-Ports über die Seite Hardware. Sie können die Konfiguration auch über das Menü:System[Einstellungen > iSCSI-Ports konfigurieren] aufrufen.
 
 
-NOTE: Weitere Informationen zum Einrichten des Array-seitigen Netzwerkes in Ihrer VMware-Konfiguration finden Sie im folgenden technischen Bericht: https://www.netapp.com/pdf.html?item=/media/17017-tr4789pdf.pdf["Konfigurationsleitfaden für VMware E-Series SANtricity: ISCSI-Integration mit ESXi 6.x und 7.x"^].
+NOTE: Weitere Informationen zur Einrichtung der Array-seitigen Netzwerkfunktionen in Ihrer VMware-Konfiguration enthält der folgende technische Bericht: https://www.netapp.com/pdf.html?item=/media/17017-tr4789.pdf["Konfigurationsleitfaden für VMware E-Series SANtricity: ISCSI-Integration mit ESXi 6.x und 7.x"^].
 
 .Schritte
 . Geben Sie in Ihrem Browser die folgende URL ein: `+https://<DomainNameOrIPAddress>+`
@@ -197,6 +200,7 @@ Wählen Sie diese Option aus, und geben Sie dann eine statische Adresse in die F
 
 
 
+[[step-4-configure-host-side-networking-iscsi]]
 == Schritt 4: Host-seitiges Netzwerk konfigurieren – iSCSI
 
 Durch die Konfiguration des iSCSI-Netzwerkes auf der Hostseite kann der VMware iSCSI-Initiator eine Sitzung mit dem Array einrichten.
@@ -222,6 +226,7 @@ Die Schnittstellen variieren in der Funktionalität und der genaue Workflow wird
 
 
 
+[[step-5-verify-ip-network-connections-iscsi-vmware]]
 == Schritt 5: Überprüfen Sie IP-Netzwerkverbindungen - iSCSI, VMware
 
 Sie überprüfen IP-Netzwerkverbindungen des Internet Protocol (Internet Protocol), indem Sie Ping-Tests verwenden, um sicherzustellen, dass Host und Array kommunizieren können.
@@ -270,12 +275,14 @@ NOTE: Wenn der Befehl mit der Meldung fehlschlägt `sendto() failed (Message too
 
 
 
+[[step-6-record-your-configuration]]
 == Schritt 6: Notieren Sie Ihre Konfiguration
 
 Sie können eine PDF-Datei auf dieser Seite erstellen und drucken und dann mithilfe des folgenden Arbeitsblatts Ihre protokollspezifischen Speicherkonfigurationsinformationen aufzeichnen. Sie benötigen diese Informationen für Bereitstellungsaufgaben.
 
 
 
+[[recommended-configuration]]
 === Empfohlene Konfiguration
 
 Empfohlene Konfigurationen bestehen aus zwei Initiator-Ports und vier Ziel-Ports mit einem oder mehreren VLANs.
@@ -284,6 +291,7 @@ image::../media/50001_01_conf-vmw.gif[ISCSI-Port-ID]
 
 
 
+[[target-iqn]]
 === Ziel-IQN
 
 |===
@@ -299,6 +307,7 @@ Ziel-Port
 |===
 
 
+[[mapping-host-name]]
 === Zuordnung des Hostnamens
 
 |===

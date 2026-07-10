@@ -18,6 +18,7 @@ Im Storage Plug-in für vCenter können Sie Daten-Container, sogenannte Volumes,
 
 
 
+[[volume-types-and-characteristics]]
 == Volume-Typen und -Eigenschaften
 
 Volumes sind Daten-Container, die den Speicherplatz auf Ihrem Storage-Array managen und organisieren.
@@ -43,12 +44,14 @@ Während der Volume-Erstellung wird jedem Volume Kapazität zugewiesen. Sie erha
 
 
 
+[[capacity-for-volumes]]
 == Kapazität für Volumes
 
 Die Laufwerke in Ihrem Speicher-Array stellen die physische Speicherkapazität für Ihre Daten bereit. Bevor Sie mit dem Speichern von Daten beginnen können, müssen Sie die zugewiesene Kapazität in logischen Komponenten – Pools oder Volume-Gruppen – konfigurieren. Mithilfe dieser Speicherobjekte lassen sich Daten auf dem Speicher-Array konfigurieren, speichern, verwalten und erhalten.
 
 
 
+[[capacity-to-create-and-expand-volumes]]
 === Kapazität zur Erstellung und Erweiterung von Volumes
 
 Sie können Volumes entweder aus der nicht zugewiesenen Kapazität oder aus freien Kapazitäten in einem Pool oder einer Volume-Gruppe erstellen.
@@ -62,6 +65,7 @@ NOTE: Die Plugin-Schnittstelle bietet keine Option zum Erstellen von Thin Volume
 
 
 
+[[reported-capacity-for-volumes]]
 === Gemeldete Kapazität für Volumes
 
 Die gemeldete Kapazität des Volumes entspricht der Menge der zugewiesenen physischen Speicherkapazität. Es muss die gesamte physische Storage-Kapazität vorhanden sein. Der physisch zugewiesene Speicherplatz entspricht dem Speicherplatz, der dem Host gemeldet wird.
@@ -70,6 +74,7 @@ Normalerweise stellen Sie die gemeldete Kapazität des Volumes so ein, dass die 
 
 
 
+[[capacity-limits]]
 === Kapazitätsgrenzen
 
 Die minimale Kapazität für ein Volume beträgt 1 MiB, und die maximale Kapazität hängt von der Anzahl und Kapazität der Laufwerke im Pool bzw. der Volume-Gruppe ab.
@@ -83,6 +88,7 @@ Beachten Sie bei der Erhöhung der gemeldeten Kapazität für ein Volumen die fo
 
 
 
+[[application-specific-workloads]]
 == Applikationsspezifische Workloads
 
 Wenn Sie ein Volume erstellen, wählen Sie einen Workload aus, um die Storage-Array-Konfiguration für eine bestimmte Applikation anzupassen.
@@ -93,6 +99,7 @@ Während der Volume-Erstellung werden Sie vom System aufgefordert, Fragen zur Ve
 
 
 
+[[types-of-workloads]]
 === Workload-Typen
 
 Es können zwei unterschiedliche Workload-Typen erstellt werden: Applikationsspezifisch oder sonstige.
@@ -113,6 +120,7 @@ Sie können die empfohlene Volume-Konfiguration überprüfen und die vom System 
 
 
 
+[[application-and-workload-views]]
 === Anzeige von Applikationen und Workloads
 
 Um Anwendungen und Workloads anzuzeigen, starten Sie System Manager. Über diese Schnittstelle können Sie die Informationen anzeigen, die mit einem applikationsspezifischen Workload verknüpft sind. Sie haben verschiedene Möglichkeiten:

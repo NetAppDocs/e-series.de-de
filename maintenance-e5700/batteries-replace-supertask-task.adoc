@@ -32,6 +32,7 @@ Jeder E5700 Controller-Behälter enthält eine Batterie, die im Cache gespeicher
 
 
 
+[[step-1-place-controller-offline-duplex]]
 == Schritt 1: Controller offline setzen (Duplex)
 
 Wenn Sie über eine Duplexkonfiguration verfügen, legen Sie den betroffenen Controller offline, sodass Sie den fehlerhaften Akku sicher entfernen können. Der Controller, den Sie nicht in den Offline-Modus versetzen, muss den Status „Online“ (im optimalen Status) aufweisen.
@@ -108,6 +109,7 @@ CAUTION: Beginnen Sie keine anderen Vorgänge, bis der Status aktualisiert wurde
 
 
 
+[[step-2-remove-controller-canister]]
 == Schritt 2: Controller-Behälter entfernen
 
 Bevor Sie den defekten Akku entfernen können, müssen Sie den Controller-Behälter entfernen.
@@ -161,6 +163,7 @@ Wenn Sie den Controller-Behälter aus einem E5724-Controller-Regal entfernen, sc
 
 
 
+[[step-3-remove-failed-battery]]
 == Schritt 3: Fehlerhafte Batterie entfernen
 
 Nachdem Sie den Controller-Behälter aus dem Controller-Regal entfernt haben, entfernen Sie den Akku.
@@ -201,6 +204,7 @@ CAUTION: Um die International Air Transport Association (IATA) Bestimmungen zu e
 
 
 
+[[step-4-install-new-battery]]
 == Schritt 4: Neue Batterie einbauen
 
 Installieren Sie nach dem Entfernen der fehlerhaften Batterie eine neue.
@@ -249,6 +253,7 @@ image:../media/28_dwg_e2800_battery_flange_not_ok_maint-e5700.gif["Falscher Batt
 
 
 
+[[step-5-re-install-controller-canister]]
 == Schritt 5: Installieren Sie den Controller-Behälter neu
 
 Setzen Sie nach dem Einbau der neuen Batterie den Controller-Behälter wieder in das Reglerregal ein.
@@ -281,6 +286,7 @@ image::../media/28_dwg_e2860_add_controller_canister_maint-e5700.gif[Setzen Sie 
 
 
 
+[[step-6-place-controller-online-duplex]]
 == Schritt 6: Controller online stellen (Duplex)
 
 Legen Sie bei einer Duplexkonfiguration den Controller online, sammeln Sie Support-Daten und setzen Sie den Betrieb fort.

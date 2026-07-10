@@ -21,6 +21,7 @@ Tauschen Sie ein DIMM in Ihrem EF50 oder EF80-Speichersystem aus, wenn es ausgef
 
 
 
+[[step-1-determine-if-you-need-to-replace-a-dimm]]
 == Schritt 1: Bestimmen Sie, ob Sie ein DIMM ersetzen müssen
 
 Tauschen Sie ein DIMM aus, wenn es ausfällt, meldet, dass es sich nicht in einem optimalen Zustand befindet oder eine nicht übereinstimmende Kapazität aufweist.
@@ -47,6 +48,7 @@ Wenn keine dieser Bedingungen zutrifft, müssen Sie das DIMM nicht austauschen. 
 
 
 
+[[step-2-prepare-to-replace-a-dimm]]
 == Schritt 2: Bereiten Sie den Austausch eines DIMM vor
 
 Bereiten Sie sich auf den Austausch eines DIMM vor, indem Sie sicherstellen, dass keine anderen Probleme mit dem Speichersystem vorliegen, die behoben werden müssen, dass sich die Volumes im richtigen Zustand befinden, dass Sie die notwendigen Werkzeuge und Geräte bereithalten, dass Sie Vorkehrungen treffen, um elektrostatische Entladungen zu verhindern, und dass Sie die Konfigurationsdatenbank des Speichersystems sichern.
@@ -95,6 +97,7 @@ Die Datei wird im Ordner Downloads für Ihren Browser mit dem Namen *configurati
 
 
 
+[[step-3-place-the-controller-offline]]
 == Schritt 3: Den Controller offline schalten
 
 Setzen Sie den defekten Controller offline, damit Sie den Rest dieser Prozedur sicher durchführen können.
@@ -133,6 +136,7 @@ CAUTION: Wenn im Feld *OK to remove* nicht *Yes* angezeigt wird, fahren Sie nich
 
 
 
+[[step-4-remove-the-controller]]
 == Schritt 4: Entfernen Sie den Controller
 
 Vergewissern Sie sich, dass alle Daten im Cache-Speicher auf die Laufwerke geschrieben wurden, trennen Sie alle Kabel vom defekten Controller, und entfernen Sie dann den defekten Controller aus dem Gehäuse.
@@ -215,6 +219,7 @@ Drehen Sie bei Bedarf die Griffe aufrecht (neben den Laschen), um sie aus dem We
 
 
 
+[[step-5-replace-a-dimm]]
 == Schritt 5: DIMM austauschen
 
 Suchen Sie den defekten DIMM im Inneren des beschädigten Controllers und ersetzen Sie ihn.
@@ -287,6 +292,7 @@ Bei korrektem Einsetzen lässt sich das DIMM leicht einschieben, sitzt aber fest
 
 
 
+[[step-6-reinstall-the-controller]]
 == Schritt 6: Installieren Sie den Controller neu
 
 Bauen Sie den Controller wieder in das Gehäuse ein, schließen Sie das Netzkabel und alle seine Kabel wieder an.
@@ -345,6 +351,7 @@ NOTE: Die Kabel müssen wieder angeschlossen werden, bevor der Controller online
 
 
 
+[[step-7-place-the-controller-online]]
 == Schritt 7: Setzen Sie den Controller online
 
 Setzen Sie den defekten Controller wieder online.
@@ -386,6 +393,7 @@ NOTE: Sollten Sie das Problem nicht beheben können, kontaktieren Sie  https://m
 
 
 
+[[step-8-complete-the-dimm-replacement]]
 == Schritt 8: Schließen Sie den DIMM-Austausch ab
 
 Verwenden Sie den SANtricity System Manager, um sicherzustellen, dass die neueste Version von SANtricity OS installiert ist, überprüfen Sie, ob alle Volumes an ihre zugehörigen Controller zurückgegeben wurden, und sammeln Sie Supportdaten, damit Sie den Betrieb wieder aufnehmen können.
@@ -436,6 +444,7 @@ Die Datei wird im Ordner Downloads für Ihren Browser mit dem Namen *Support-Dat
 
 
 
+[[step-9-return-the-failed-part-to-netapp]]
 == Schritt 9: Senden Sie das defekte Teil zurück an NetApp
 
 Senden Sie das defekte Teil an NetApp, wie in der mit dem Kit gelieferten RMA-Anleitung beschrieben, zurück. Siehe die https://mysupport.netapp.com/site/info/rma["Teilerückgabe und Ersatz"] Seite für weitere Informationen.

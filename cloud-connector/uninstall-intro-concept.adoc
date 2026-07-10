@@ -15,6 +15,7 @@ Sie können den SANtricity-Cloud-Connector über den grafischen Deinstallationsp
 
 
 
+[[uninstall-using-graphical-mode]]
 == Deinstallieren Sie im grafischen Modus
 
 Sie können den Grafikmodus verwenden, um den SANtricity-Cloud-Connector auf einem Linux-Betriebssystem zu deinstallieren.
@@ -46,6 +47,7 @@ Die Deinstallation ist abgeschlossen und die Anwendung SANtricity Cloud Connecto
 
 
 
+[[uninstall-using-console-mode]]
 == Deinstallieren Sie im Konsolenmodus
 
 Sie können den Konsolenmodus verwenden, um den SANtricity-Cloud-Connector auf einem Linux-Betriebssystem zu deinstallieren.

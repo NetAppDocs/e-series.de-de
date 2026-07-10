@@ -15,12 +15,14 @@ Vor dem Austausch eines Laufwerks sollten Sie die Anforderungen und Überlegunge
 
 
 
+[[shelf-types]]
 == Shelf-Typen
 
 Sie können ein Laufwerk in einem Shelf mit 24 Laufwerken, in einem Shelf mit 60 Laufwerken oder in einer Laufwerkschublade ersetzen.
 
 
 
+[[24-drive-shelves]]
 === Shelfs mit 24 Laufwerken
 
 Die Abbildungen zeigen, wie die Laufwerke in jedem Shelf-Typ nummeriert werden (die Frontblende oder die Endkappen des Shelfs wurden entfernt).
@@ -34,6 +36,7 @@ NOTE: Ihr E5724 Storage Array kann ein oder mehrere veraltete SAS-2 Laufwerksfä
 
 
 
+[[60-drive-shelves]]
 === Shelfs mit 60 Laufwerken
 
 Sowohl das E5760 Controller-Shelf als auch das DE460C Festplatten-Shelf bestehen aus fünf Laufwerkschubladen, die jeweils 12 Laufwerksschächte enthalten. Die Laufwerksschublade 1 befindet sich oben, und die Laufwerksschublade 5 befindet sich unten.
@@ -49,6 +52,7 @@ NOTE: Ihr E5760 Storage Array verfügt möglicherweise über ein oder mehrere ve
 
 
 
+[[drive-drawer]]
 === Laufwerksschublade
 
 Sie können eine Laufwerksschublade in einem E5760 Controller-Shelf und einem DE460C Laufwerk-Shelf ersetzen. Jeder der Shelfs mit 60 Laufwerken verfügt über fünf Laufwerkfächer.
@@ -61,6 +65,7 @@ image::../media/92_dwg_de6600_drawer_with_hdds_no_callouts_maint-e5700.gif[Laufw
 
 
 
+[[requirements-for-handling-drives]]
 == Anforderungen für die Handhabung von Laufwerken
 
 

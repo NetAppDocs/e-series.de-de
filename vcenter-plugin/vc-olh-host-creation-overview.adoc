@@ -18,6 +18,7 @@ Für das Storage-Management mit dem Storage Plug-in für vCenter müssen Sie jed
 
 
 
+[[manual-host-creation]]
 == Manuelle Hosterstellung
 
 Das Erstellen eines Hosts ist einer der Schritte, die erforderlich sind, damit das Storage-Array wissen kann, an welche Hosts angeschlossen sind und um den I/O-Zugriff auf die Volumes zu ermöglichen. Ein Host kann manuell erstellt werden.
@@ -27,6 +28,7 @@ Das Erstellen eines Hosts ist einer der Schritte, die erforderlich sind, damit d
 
 
 
+[[how-volumes-are-assigned]]
 == Wie Volumes zugewiesen werden
 
 Damit ein Host I/O an ein Volume sendet, müssen Sie das Volume ihm zuweisen. Sie können entweder einen Host oder ein Host-Cluster auswählen, wenn Sie ein Volume erstellen, oder Sie können ein Volume später einem Host oder Host-Cluster zuweisen. Ein Host-Cluster ist eine Gruppe von Hosts. Sie erstellen ein Host-Cluster, damit Sie mehrere Hosts dieselben Volumes ganz einfach zuweisen können.

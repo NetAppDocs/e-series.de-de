@@ -15,6 +15,7 @@ Die Windows Express-Methode zur Installation Ihres Storage-Arrays und zum Zugrif
 
 
 
+[[procedure-overview]]
 == Verfahrensübersicht
 
 Die Express-Methode umfasst die folgenden Schritte, die ebenfalls im beschrieben werden link:understand-windows-concept.html["Windows-Workflow"].
@@ -32,6 +33,7 @@ Die Express-Methode umfasst die folgenden Schritte, die ebenfalls im beschrieben
 
 
 
+[[find-more-information]]
 == Weitere Informationen
 
 * Online-Hilfe – beschreibt die Verwendung von SANtricity System Manager zum Abschließen von Konfigurations- und Storage-Managementaufgaben. Es ist im Produkt verfügbar.

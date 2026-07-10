@@ -38,6 +38,7 @@ CAUTION: *Möglicher Verlust des Datenzugriffs* -- Installieren Sie nie eine HIC
 
 
 
+[[step-1-place-the-controller-offline]]
 == Schritt 1: Stellen Sie den Controller offline
 
 Platzieren Sie den betroffenen Controller offline, damit Sie die HICs sicher austauschen können.
@@ -83,6 +84,7 @@ NOTE: Beginnen Sie keine anderen Vorgänge, bis der Status aktualisiert wurde.
 
 
 
+[[step-2-remove-controller-canister]]
 == Schritt 2: Controller-Behälter entfernen
 
 Entfernen Sie den Controller-Behälter, damit Sie die fehlerhafte Host-Schnittstellenkarte austauschen können.
@@ -116,6 +118,7 @@ image::../media/remove_controller_6.png[Tragen Sie beim Entfernen des Controller
 
 
 
+[[step-3-remove-the-hic]]
 == Schritt 3: Entfernen Sie die HIC
 
 Entfernen Sie die ursprüngliche HIC, sodass Sie sie durch eine aktualisierte HIC ersetzen können.
@@ -164,6 +167,7 @@ NOTE: Das obige Bild ist ein Beispiel; das Aussehen Ihrer HIC kann sich untersch
 
 
 
+[[step-4-replace-the-hic]]
 == Schritt 4: Ersetzen Sie die HIC
 
 Installieren Sie nach dem Entfernen der alten HIC eine neue HIC.
@@ -198,6 +202,7 @@ Verwenden Sie keinen Schraubendreher, oder ziehen Sie die Schrauben möglicherwe
 
 
 
+[[step-5-reinstall-controller-canister]]
 == Schritt 5: Controller-Behälter wieder einbauen
 
 Setzen Sie nach dem Austausch der HIC den Controller-Behälter wieder in das Controller-Shelf ein.
@@ -220,6 +225,7 @@ Wenn Sie mehr als ein Host-Protokoll verwenden, installieren Sie unbedingt die S
 
 
 
+[[step-6-complete-hic-replacement]]
 == Schritt 6: HIC-Ersatz abschließen
 
 Platzieren Sie den Controller online, sammeln Sie Support-Daten und setzen Sie den Betrieb fort.

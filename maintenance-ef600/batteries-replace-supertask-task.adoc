@@ -33,6 +33,7 @@ Jeder Controller-Behälter enthält eine Batterie, die zwischengespeicherte Date
 
 
 
+[[step-1-place-controller-offline]]
 == Schritt 1: Controller offline schalten
 
 Sichern Sie die Daten, und platzieren Sie den betroffenen Controller in den Offline-Modus.
@@ -79,6 +80,7 @@ NOTE: Beginnen Sie keine anderen Vorgänge, bis der Status aktualisiert wurde.
 
 
 
+[[step-2-remove-controller-canister]]
 == Schritt 2: Controller-Behälter entfernen
 
 Tauschen Sie die fehlerhafte Batterie durch eine neue aus.
@@ -109,6 +111,7 @@ image::../media/remove_controller_6.png[Tragen Sie beim Entfernen des Controller
 
 
 
+[[step-3-remove-failed-battery]]
 == Schritt 3: Fehlerhafte Batterie entfernen
 
 Ziehen Sie den defekten Akku aus dem Controller.
@@ -141,6 +144,7 @@ CAUTION: Um die International Air Transport Association (IATA) Bestimmungen zu e
 
 
 
+[[step-4-install-new-battery]]
 == Schritt 4: Neue Batterie einbauen
 
 Nachdem Sie den defekten Akku aus dem Controller-Behälter entfernt haben, befolgen Sie diesen Schritt, um den neuen Akku zu installieren.
@@ -163,6 +167,7 @@ Der Akku rastet ein.
 
 
 
+[[step-5-reinstall-controller-canister]]
 == Schritt 5: Controller-Behälter wieder einbauen
 
 Setzen Sie den Controller wieder in das Controller-Shelf ein.
@@ -181,6 +186,7 @@ image::../media/remove_controller_7.png[Setzen Sie den Controller in das Shelf e
 
 
 
+[[step-6-complete-battery-replacement]]
 == Schritt 6: Vollständige Batteriewechsel
 
 Platzieren Sie den Controller online, sammeln Sie Support-Daten und setzen Sie den Betrieb fort.

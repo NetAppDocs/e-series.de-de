@@ -15,6 +15,7 @@ Bevor Sie ein E4000-Laufwerk austauschen, lesen Sie die Anforderungen und Überl
 
 
 
+[[shelf-types]]
 == Shelf-Typen
 
 Ein Laufwerk kann entweder in einem Controller-Shelf mit 12, 24 oder 60 Laufwerken oder als Festplatten-Shelf ersetzt werden.
@@ -24,6 +25,7 @@ NOTE: Standardmäßige Shelfs für 24 Laufwerke erfordern beeindruckende Laufwer
 
 
 
+[[drive-handling]]
 == Handhabung von Laufwerken
 
 Die Laufwerke in Ihrem Speicher-Array sind anfällig. Eine unsachgemäße Handhabung von Laufwerken stellt eine der Hauptursachen für Laufwerkausfälle dar.

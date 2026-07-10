@@ -38,6 +38,7 @@ CAUTION: Dieses Verfahren muss mit beiden Controller-Kanistern durchgeführt wer
 
 
 
+[[step-1-place-controller-shelf-offline]]
 == Schritt 1: Platzieren Sie das Controller-Shelf offline
 
 Platzieren Sie das Controller-Shelf offline, damit Sie die SAS-Erweiterungskarte sicher hinzufügen können.
@@ -94,6 +95,7 @@ Die grüne LED „Cache aktiv“ auf der Rückseite jedes Controllers leuchtet, 
 
 
 
+[[step-2-remove-controller-canister]]
 == Schritt 2: Controller-Behälter entfernen
 
 Entfernen Sie den Controller-Behälter, damit Sie die neue SAS-Erweiterungskarte hinzufügen können.
@@ -124,6 +126,7 @@ image::../media/remove_controller_6.png[Tragen Sie beim Entfernen des Controller
 
 
 
+[[step-3-add-the-new-sas-expansion-card]]
 == Schritt 3: Fügen Sie die neue SAS-Erweiterungskarte hinzu
 
 Installieren Sie die SAS-Erweiterungskarte, um die Erweiterung des Laufwerksfachs zu ermöglichen.
@@ -149,6 +152,7 @@ Verwenden Sie keinen Schraubendreher, oder ziehen Sie die Schrauben möglicherwe
 
 
 
+[[step-4-reinstall-the-controller-canister]]
 == Schritt 4: Montieren Sie den Controller-Behälter wieder
 
 Setzen Sie nach dem Installieren der neuen SAS-Erweiterungskarte den Controller-Behälter wieder in das Controller-Shelf ein.
@@ -167,6 +171,7 @@ image::../media/remove_controller_7.png[Controller in Shelf einbauen]
 
 
 
+[[step-5-complete-sas-expansion-card-addition]]
 == Schritt 5: Ergänzung der SAS-Erweiterungskarte abschließen
 
 Platzieren Sie den Controller online, sammeln Sie Support-Daten und setzen Sie den Betrieb fort.

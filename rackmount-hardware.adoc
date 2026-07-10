@@ -17,6 +17,7 @@ Für neuere Speichersysteme können Sie die unterstützte Rackmount-Hardware im 
 
 
 
+[[adjustable-support-rails]]
 == Verstellbare Stützschienen
 
 Datenzugriff https://mysupport.netapp.com/ecm/ecm_download_file/ECMP1652045["Einbau von verstellbaren Stützschienen"^] Zum Installieren eines Controller-Laufwerksfachs oder eines Laufwerksfachs, das separat geliefert wurde (nicht bereits im Rack installiert), Dieses Verfahren gilt für die folgenden 2U (9 cm oder 3.5 Zoll) Fächer:
@@ -28,18 +29,21 @@ Datenzugriff https://mysupport.netapp.com/ecm/ecm_download_file/ECMP1652045["Ein
 
 
 
+[[two-post-rack-2u]]
 == Rack mit zwei Höheneinheiten – 2 HE
 
 Datenzugriff https://mysupport.netapp.com/ecm/ecm_download_file/ECMM1280302["Installieren von 2-HE-Geräten in einem Rack mit zwei Säulen"^].
 
 
 
+[[four-post-rack-or-cabinet-2u]]
 == Rack oder Schrank mit vier Säulen – 2 HE
 
 Datenzugriff https://mysupport.netapp.com/ecm/ecm_download_file/ECMLP2484194["Installieren eines 2-HE-Gehäuses mit 12 Laufwerken in einem Rack oder Schrank mit vier Säulen"^].
 
 
 
+[[four-post-rack-superrail]]
 == Vierpolige-Rack -- SuperRail
 
 Zugang https://docs.netapp.com/us-en/ontap-systems/platform-supplemental/superrail-install.html["Installieren Sie SuperRail in ein Vierpfosten-Gestell"^].

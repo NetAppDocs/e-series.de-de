@@ -34,6 +34,7 @@ Wenn Sie eine HIC ersetzen, setzen Sie den Controller offline, entfernen Sie den
 
 
 
+[[step-1-place-controller-offline]]
 == Schritt 1: Controller offline schalten
 
 Die Schritte zum Offline-Schalten eines Controllers hängen davon ab, ob Sie über einen Controller (Simplexkonfiguration) oder zwei Controller (Duplexkonfiguration) verfügen. Gehen Sie zu den entsprechenden Anweisungen für:
@@ -44,6 +45,7 @@ Die Schritte zum Offline-Schalten eines Controllers hängen davon ab, ob Sie üb
 
 
 
+[[duplex-place-controller-offline]]
 === Duplex: Controller offline schalten
 
 Wenn Sie über eine Duplexkonfiguration verfügen, führen Sie diesen Schritt aus, um den Controller offline zu schalten, damit Sie die ausgefallene HIC sicher entfernen können.
@@ -118,6 +120,7 @@ CAUTION: Beginnen Sie keine anderen Vorgänge, bis der Status aktualisiert wurde
 
 
 
+[[simplex-power-down-the-controller-shelf]]
 === Simplex: Schalten Sie das Controller-Shelf ein
 
 Wenn Sie eine Simplexkonfiguration haben, schalten Sie das Controller-Shelf aus, damit Sie die ausgefallene HIC sicher entfernen können.
@@ -188,6 +191,7 @@ Die grüne LED „Cache aktiv“ auf der Rückseite des Controllers leuchtet, we
 
 
 
+[[step-2-remove-controller-canister]]
 == Schritt 2: Controller-Behälter entfernen
 
 Entfernen Sie den Controller-Behälter, damit Sie die neue Host-Schnittstellenkarte (HIC) hinzufügen können.
@@ -248,6 +252,7 @@ Wenn Sie den Controller-Behälter aus einem E2812-Controller-Shelf, einem E2824-
 
 
 
+[[step-3-install-a-hic]]
 == Schritt 3: Installieren einer HIC
 
 Installieren Sie eine HIC, um das fehlerhafte durch eine neue HIC zu ersetzen.
@@ -302,6 +307,7 @@ image::../media/28_dwg_e2800_hic_faceplace_screws_maint-e2800.gif[Bringen Sie di
 
 
 
+[[step-4-reinstall-controller-canister]]
 == Schritt 4: Controller-Behälter wieder einbauen
 
 Setzen Sie nach der Installation der HIC den Controller-Behälter wieder in das Controller-Shelf ein.
@@ -344,12 +350,14 @@ NOTE: Schließen Sie derzeit keine Datenkabel an die neuen HIC-Ports an.
 
 
 
+[[step-5-place-controller-online]]
 == Schritt 5: Controller online stellen
 
 Die Schritte zum Online-Platzieren eines Controllers hängen davon ab, ob Sie einen Controller (Simplexkonfiguration) oder zwei Controller (Duplexkonfiguration) haben.
 
 
 
+[[duplex-place-controller-online]]
 === Duplex: Controller online stellen
 
 Versetzen Sie den Controller bei einer Duplexkonfiguration in den Online-Modus, sammeln Sie Support-Daten und setzen Sie den Betrieb fort.
@@ -439,6 +447,7 @@ Wenden Sie sich an den technischen Support unter http://mysupport.netapp.com["Ne
 
 
 
+[[simplex-power-up-the-controller-shelf]]
 === Simplex: Schalten Sie das Controller-Shelf ein
 
 Wenden Sie bei einer Simplexkonfiguration die Stromversorgung auf das Controller Shelf an, erfassen Sie Support-Daten und setzen Sie den Betrieb fort.

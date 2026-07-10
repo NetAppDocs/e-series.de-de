@@ -15,6 +15,7 @@ Web Services umfasst die API-Dokumentation, mit der Sie direkt mit DER REST API 
 
 
 
+[[log-in-to-web-services-api]]
 == Melden Sie sich bei der Web Services-API an
 
 Nach der Installation des Web Services Proxy können Sie in einem Browser auf die interaktive API-Dokumentation zugreifen.
@@ -99,6 +100,7 @@ Die interaktive Dokumentation verwendet JavaScript, um die Anfrage direkt an die
 
 
 
+[[log-in-to-unified-manager]]
 == Melden Sie sich bei Unified Manager an
 
 Nach der Installation des Web Services Proxy können Sie auf Unified Manager zugreifen, um mehrere Speichersysteme in einer webbasierten Schnittstelle zu verwalten.

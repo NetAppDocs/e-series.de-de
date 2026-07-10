@@ -18,6 +18,7 @@ Wenn Sie Controller in einem Duplex-Controller-Laufwerksfach aktualisieren, wied
 
 
 
+[[step-1-power-on-controller]]
 == Schritt 1: Controller einschalten
 
 Sie müssen das Controller-Shelf einschalten, um sicherzustellen, dass es ordnungsgemäß funktioniert.
@@ -95,6 +96,7 @@ Controller-Swap mit externem Verschlüsselungsmanagement und allen gesicherten L
 
 
 
+[[step-2-check-status-of-controllers-and-trays]]
 == Schritt 2: Überprüfen Sie den Status der Controller und Fächer
 
 Sie können die LEDs und die Speicherverwaltungssoftware verwenden, um den Status Ihrer Controller und Fächer zu überprüfen.
@@ -119,6 +121,7 @@ Nachdem der Controller den Neustart erfolgreich abgeschlossen hat, können Sie d
 
 
 
+[[step-3-validate-controller-software-version]]
 == Schritt 3: Validieren der Controller-Softwareversion
 
 Sie müssen sicherstellen, dass Ihre neuen Controller mit dem richtigen Betriebssystem (Controller-Firmware) und NVSRAM ausgeführt werden.

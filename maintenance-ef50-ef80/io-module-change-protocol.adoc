@@ -66,6 +66,7 @@ Beginnen Sie mit der link:../upgrade-controllers/index.html["Erfahren Sie mehr �
 
 
 
+[[step-1-prepare-for-the-protocol-change]]
 == Schritt 1: Vorbereitung auf die Protokolländerung
 
 Bereiten Sie die Änderung des Protokolls auf den Host-E/A-Modulen vor, indem Sie das aktuell verwendete Protokoll überprüfen, feststellen, ob Sie das Protokoll ändern müssen, und falls ja, ein Wartungsfenster für die Ausfallzeit einplanen.
@@ -107,6 +108,7 @@ Fahren Sie mit diesem Verfahren fort, um das Protokoll zu ändern.
 
 
 
+[[step-2-stop-host-io-operations]]
 == Schritt 2: Host-I/O-Operationen anhalten
 
 Sie müssen alle E/A-Operationen vom Host stoppen und dann alle definierten Hosts aus dem Speichersystem löschen, bevor Sie das Protokoll ändern.
@@ -169,6 +171,7 @@ Anweisungen finden Sie im https://docs.netapp.com/us-en/e-series-santricity/sm-s
 
 
 
+[[step-3-change-the-protocol]]
 == Schritt 3: Ändern Sie das Protokoll
 
 Verwenden Sie den SANtricity System Manager, um das Protokoll auf den Host-E/A-Modulen zu ändern, warten Sie, bis die Controller ihren Neustartzyklus abgeschlossen haben, bestätigen Sie, dass ihr Status Optimal ist, und erstellen Sie dann die Hostdefinitionen neu.
@@ -195,6 +198,7 @@ Anweisungen finden Sie im https://docs.netapp.com/us-en/e-series-santricity/sm-s
 
 
 
+[[step-4-configure-the-host-to-use-the-new-protocol]]
 == Schritt 4: Konfigurieren Sie den Host für die Verwendung des neuen Protokolls
 
 Nach der Änderung des Host-Protokolls müssen Sie den Host so konfigurieren, dass er das neue Protokoll verwendet.

@@ -17,6 +17,7 @@ Für RHEL 9, RHEL 10, SLES 15 und SLES 16 verwaltet eine native NVMe-Multipathin
 
 
 
+[[nvme-devices-are-io-targets]]
 == NVMe-Geräte sind E/A-Ziele
 
 . Geben Sie den folgenden Befehl ein, um die diesem Host zugeordneten Volumes eines E-Series-Arrays zu finden.

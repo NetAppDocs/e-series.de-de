@@ -38,6 +38,7 @@ CAUTION: *Möglicher Geräteschaden* -- Wenn Sie diesen Vorgang bei eingeschalte
 
 
 
+[[step-1-prepare-to-replace-fan-canister]]
 == Schritt 1: Bereiten Sie den Austausch des Ventilatorkanisters vor
 
 Bereiten Sie sich darauf vor, einen Lüfterbehälter in einem Controller-Shelf mit 60 Laufwerken oder Festplatten-Shelf zu ersetzen, indem Sie Supportdaten zu Ihrem Speicher-Array erfassen und die ausgefallene Komponente ausfindig machen.
@@ -89,6 +90,7 @@ image::../media/28_dwg_e2860_de460c_single_fan_canister_with_led_callout_maint-e
 
 
 
+[[step-2-remove-failed-fan-canister-and-install-new-one]]
 == Schritt 2: Entfernen Sie den defekten Lüfterbehälter und installieren Sie einen neuen
 
 Entfernen Sie einen defekten Lüfterbehälter, so dass Sie ihn durch einen neuen ersetzen können.
@@ -120,6 +122,7 @@ image::../media/28_dwg_e2860_de460c_fan_canister_handle_with_callout_maint-e2800
 
 
 
+[[step-3-complete-fan-canister-replacement]]
 == Schritt 3: Vollständige Lüfterbehälter Austausch
 
 Überprüfen Sie, ob der neue Lüfterbehälter ordnungsgemäß funktioniert, sammeln Sie Support-Daten und setzen Sie den normalen Betrieb fort.

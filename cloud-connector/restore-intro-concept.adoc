@@ -20,6 +20,7 @@ NOTE: Alle Zeitstempel für Backup- und Wiederherstellungsjobs, die unter der An
 
 
 
+[[create-a-new-image-based-restore]]
 == Erstellen Sie eine neue Image-basierte Wiederherstellung
 
 Sie können neue bildbasierte Wiederherstellungen über die Funktion Erstellen auf der Seite Wiederherstellen der SANtricity-Cloud-Connector-Anwendung erstellen.
@@ -54,6 +55,7 @@ Die Wiederherstellung für das ausgewählte Ziel-Host-Volume wird gestartet, und
 
 
 
+[[create-a-new-file-based-restore]]
 == Erstellen Sie eine neue dateibasierte Wiederherstellung
 
 Sie können neue dateibasierte Wiederherstellungen über die Funktion Erstellen auf der Seite Wiederherstellen der Anwendung SANtricity Cloud Connector erstellen.
@@ -92,6 +94,7 @@ Die Wiederherstellung für das ausgewählte Ziel-Host-Volume wird gestartet, und
 
 
 
+[[delete-a-restore]]
 == Löschen Sie eine Wiederherstellung
 
 Mit der Funktion Löschen können Sie ein ausgewähltes Wiederherstellungselement aus dem Listenbereich Ergebnis der Seite Wiederherstellen löschen.

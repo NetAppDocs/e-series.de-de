@@ -15,6 +15,7 @@ Prüfen Sie die Anforderungen und Überlegungen, bevor Sie eine Host-Schnittstel
 
 
 
+[[procedure-overview]]
 == Verfahrensübersicht
 
 Sie können eine HIC im E5724 Controller Shelf und im E5760 Controller-Shelf hinzufügen, aktualisieren oder ersetzen.
@@ -30,6 +31,7 @@ Im Folgenden finden Sie eine Übersicht über die Schritte zum Ersetzen einer HI
 
 
 
+[[requirements-for-adding-upgrading-or-replacing-a-hic]]
 == Anforderungen für das Hinzufügen, Aktualisieren oder Ersetzen einer HIC
 
 Wenn Sie eine Host Interface Card (HIC) hinzufügen, aktualisieren oder ersetzen möchten, beachten Sie bitte die folgenden Anforderungen.

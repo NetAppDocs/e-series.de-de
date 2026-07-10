@@ -26,6 +26,7 @@ image:../media/drw_cable_pull_tab_direction_ieops-1699.svg["Richtung der Kabelzu
 
 
 
+[[step-1-cable-the-inter-controller-mirroring-connections]]
 == Schritt 1: Verkabeln Sie die Spiegelungsverbindungen zwischen den Controllern
 
 Verbinden Sie die Controller per Kabel, um die Inter-Controller-Spiegelung zu ermöglichen. Inter-Controller-Spiegelungsverbindungen gewährleisten vollständige Systemredundanz und werden für Cache-Spiegelung und I/O-Übertragung verwendet. Die Verkabelung ist für EF50 und EF80 Speichersysteme identisch.
@@ -53,6 +54,7 @@ image:../media/drw_ef50-ef80_mirroring_2p_100gbe_ieops-2659.svg["EF50- und EF80-
 
 
 
+[[step-2-cable-the-host-connections]]
 == Schritt 2: Verkabeln Sie die Host-Verbindungen
 
 Verkabeln Sie die Host-Anschlüsse Ihres Speichersystems entsprechend Ihrer Netzwerktopologie: direkt angeschlossen oder fabric-angebunden.

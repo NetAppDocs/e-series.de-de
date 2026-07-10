@@ -18,6 +18,7 @@ Sie können das Protokoll ändern, das von den im Controller integrierten Host P
 
 
 
+[[step-1-determine-whether-you-have-dual-protocol-sfps]]
 == Schritt: Bestimmen Sie, ob Sie SFPs mit zwei Protokollen haben
 
 Mit dem SANtricity System Manager können Sie ermitteln, welche Art von SFP-Transceivern Sie haben. Da diese SFPs sowohl mit FC- als auch mit iSCSI-Protokollen verwendet werden können, werden sie als _Dual-Protocol_ oder _Unified_ SFPs bezeichnet.
@@ -83,6 +84,7 @@ NOTE: 8 Gbit/s FC-SFPs werden NICHT in den Controllern E28xx und E57xx unterstü
 
 
 
+[[step-2-obtain-the-feature-pack]]
 == Schritt 2: Holen Sie sich das Funktionspaket
 
 Um das Feature Pack zu erhalten, benötigen Sie die Seriennummer vom Controller-Shelf, einen Feature Activation Code und die Feature Enable Identifier für das Speicher-Array.
@@ -492,6 +494,7 @@ NOTE: Die Website zur Aktivierung von Premium-Funktionen enthält einen Link zu 
 
 
 
+[[step-3-stop-host-io]]
 == Schritt 3: Stoppen Sie die Host I/O
 
 Sie müssen alle I/O-Vorgänge vom Host beenden, bevor Sie das Protokoll der Host-Ports konvertieren. Sie können erst dann auf Daten im Speicher-Array zugreifen, wenn Sie die Konvertierung erfolgreich abgeschlossen haben.
@@ -534,6 +537,7 @@ LED „Cache aktiv“
 
 
 
+[[step-4-change-the-feature-pack]]
 == Schritt 4: Ändern Sie das Funktionspaket
 
 Ändern Sie das Feature Pack, um das Host-Protokoll der Baseboard-Host-Ports, die IB-HIC-Ports oder beide Arten von Ports zu konvertieren.

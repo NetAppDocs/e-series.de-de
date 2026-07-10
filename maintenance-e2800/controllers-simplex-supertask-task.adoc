@@ -33,6 +33,7 @@ Stellen Sie sicher, dass Sie Folgendes haben:
 
 
 
+[[step-1-prepare-to-replace-controller-simplex]]
 == Schritt 1: Vorbereitung auf den Austausch der Steuerung (Simplexkonfiguration)
 
 Bereiten Sie sich darauf vor, einen Controller-Behälter zu ersetzen, indem Sie den Sicherheitsschlüssel des Laufwerks speichern, die Konfiguration sichern und Support-Daten sammeln. Dann können Sie die Host-I/O-Vorgänge beenden und das Controller-Shelf herunterfahren.
@@ -120,12 +121,14 @@ Daten auf dem Speicher-Array sind erst zugänglich, wenn Sie den Controller-Beh�
 
 
 
+[[step-2-remove-failed-controller-simplex]]
 == Schritt 2: Fehlerhafte Steuerung entfernen (Simplexkonfiguration)
 
 Ersetzen Sie den defekten Behälter durch einen neuen.
 
 
 
+[[step-2a-remove-controller-canister-simplex]]
 === Schritt 2a: Controller-Kanister ausbauen (Simplexkonfiguration)
 
 Entfernen Sie einen Controller-Behälter.
@@ -180,6 +183,7 @@ Wenn Sie den Controller-Behälter entfernen, schwenkt eine Klappe an ihre Stelle
 
 
 
+[[step-2b-remove-battery-simplex]]
 === Schritt 2b: Batterie entfernen (Simplexkonfiguration)
 
 Nachdem Sie den Controller-Behälter aus dem Controller-Regal entfernt haben, entfernen Sie den Akku.
@@ -215,6 +219,7 @@ image::../media/28_dwg_e2800_remove_battery_maint-e2800.gif[Entfernen Sie die Ba
 
 
 
+[[step-2c-remove-host-interface-card-simplex]]
 === Schritt 2c: Entfernen der Host-Schnittstellenkarte (Simplexkonfiguration)
 
 Wenn der Controller-Behälter eine Host-Schnittstellenkarte (HIC) enthält, entfernen Sie die HIC aus dem ursprünglichen Controller-Behälter, damit Sie sie im neuen Controller-Behälter wiederverwenden können.
@@ -248,12 +253,14 @@ image::../media/28_dwg_e2800_hic_thumbscrews_maint-e2800.gif[Entfernen Sie die H
 
 
 
+[[step-3-install-new-controller-simplex]]
 == Schritt 3: Neuen Controller installieren (Simplexkonfiguration)
 
 Installieren Sie einen neuen Controller-Behälter, um den defekten auszutauschen.
 
 
 
+[[step-3a-install-battery-simplex]]
 === Schritt 3a: Batterie einbauen (Simplexkonfiguration)
 
 Setzen Sie den Akku in den Behälter des Ersatzcontrollers ein. Sie können den Akku, den Sie aus dem ursprünglichen Controller-Behälter entfernt haben, installieren oder einen neuen Akku installieren, den Sie bestellt haben.
@@ -302,6 +309,7 @@ image:../media/28_dwg_e2800_battery_flange_not_ok_maint-e2800.gif["Falscher Meta
 
 
 
+[[step-3b-install-host-interface-card-simplex]]
 === Schritt 3b: Host-Schnittstellenkarte installieren (Simplexkonfiguration)
 
 Wenn Sie eine Host Interface Card (HIC) aus dem ursprünglichen Controller-Behälter entfernt haben, installieren Sie diese HIC im neuen Controller-Behälter.
@@ -338,6 +346,7 @@ image::../media/28_dwg_e2800_hic_faceplace_screws_maint-e2800.gif[Bringen Sie di
 
 
 
+[[step-3c-install-new-controller-canister-simplex]]
 === Schritt 3c: Neuen Controller-Behälter einbauen (Simplexkonfiguration)
 
 Nach der Installation der Batterie und der HIC kann der neue Controller-Behälter im Controller-Shelf installiert werden, sofern er ursprünglich installiert wurde.
@@ -405,6 +414,7 @@ Sie müssen die IP-Adresse des neuen Controllers manuell einstellen. (Sie könne
 
 
 
+[[step-4-complete-controller-replacement-simplex]]
 == Schritt 4: Vollständiger Controller-Austausch (Simplexkonfiguration)
 
 Schalten Sie das Controller-Shelf ein, sammeln Sie Support-Daten und setzen Sie den Betrieb fort.

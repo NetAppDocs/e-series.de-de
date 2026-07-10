@@ -15,12 +15,14 @@ Sie können den Benutzerzugriff auf die Web Services-API und Unified Manager fü
 
 
 
+[[overview-of-access-management]]
 == Überblick über Zugriffsmanagement
 
 Zum Zugriffsmanagement gehören rollenbasierte Anmeldedaten, Passwortverschlüsselung, grundlegende Authentifizierung und LDAP-Integration.
 
 
 
+[[role-based-access]]
 === Rollenbasierter Zugriff
 
 Rollenbasierte Zugriffssteuerung (Role Based Access Control, RBAC) ordnet vordefinierte Benutzer Rollen zu. Jede Rolle gewährt Berechtigungen für eine bestimmte Funktionsebene.
@@ -118,6 +120,7 @@ Der Benutzer ro (schreibgeschützt) enthält nur die Rolle „Storage.Monitor“
 |===
 
 
+[[password-encryption]]
 === Kennwortverschlüsselung
 
 Für jedes Passwort können Sie einen zusätzlichen Verschlüsselungsvorgang mit der vorhandenen SHA256-Kennwortkodierung anwenden. Bei diesem zusätzlichen Verschlüsselungsverfahren wird für jede SHA256-Hash-Verschlüsselung ein zufälliger Byte-Satz auf jedes Passwort (Salt) angewendet. Die SHA256-Verschlüsselung wird auf alle neu erstellten Passwörter angewendet.
@@ -127,12 +130,14 @@ NOTE: Vor der Veröffentlichung von Web Services Proxy 3.0 wurden Passwörter nu
 
 
 
+[[basic-authentication]]
 === Grundlegende Authentifizierung
 
 Standardmäßig ist die Basisauthentifizierung aktiviert, was bedeutet, dass der Server eine grundlegende Authentifizierungsaufgabe zurückgibt. Diese Einstellung kann in der Datei wsconfig.xml geändert werden.
 
 
 
+[[ldap]]
 === LDAP
 
 Lightweight Directory Access Protocol (LDAP), ein Anwendungsprotokoll für den Zugriff auf verteilte Verzeichnisinformationsdienste und die Wartung, ist für den Web Services Proxy aktiviert. Die LDAP-Integration ermöglicht die Benutzerauthentifizierung und Zuordnung von Rollen zu Gruppen.
@@ -141,12 +146,14 @@ Informationen zum Konfigurieren der LDAP-Funktionalität finden Sie in den Konfi
 
 
 
+[[configure-user-access]]
 == Konfigurieren Sie den Benutzerzugriff
 
 Sie können den Benutzerzugriff verwalten, indem Sie zusätzliche Verschlüsselung auf Passwörter anwenden, grundlegende Authentifizierungsvorgaben festlegen und rollenbasierten Zugriff festlegen.
 
 
 
+[[apply-additional-encryption-to-passwords]]
 === Wenden Sie die zusätzliche Verschlüsselung auf Passwörter an
 
 Um die höchste Sicherheitsstufe zu erreichen, können Sie mithilfe der vorhandenen SHA256-Kennwortkodierung zusätzliche Verschlüsselung für Passwörter anwenden.
@@ -170,6 +177,7 @@ NOTE: Alternativ können Sie lokale Benutzerpasswörter einfach salzen und hashe
 
 
 
+[[configure-basic-authentication]]
 === Konfigurieren Sie die grundlegende Authentifizierung
 
 Standardmäßig ist die Basisauthentifizierung aktiviert, was bedeutet, dass der Server eine grundlegende Authentifizierungsaufgabe zurückgibt. Sie können diese Einstellung bei Bedarf in der Datei wsconfig.xml ändern.
@@ -190,6 +198,7 @@ Beispiel: `<env key="enable-basic-auth">true</env>`
 
 
 
+[[configure-role-based-access]]
 === Konfigurieren Sie den rollenbasierten Zugriff
 
 Um den Benutzerzugriff auf bestimmte Funktionen zu beschränken, können Sie ändern, welche Rollen für jedes Benutzerkonto angegeben sind.

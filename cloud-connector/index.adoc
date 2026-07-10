@@ -20,6 +20,7 @@ NOTE: Das SANtricity Cloud Connector-Tool ist veraltet und kann nicht mehr herun
 
 
 
+[[considerations]]
 == Überlegungen
 
 Beachten Sie bei der Verwendung dieser Verfahren Folgendes:
@@ -30,6 +31,7 @@ Beachten Sie bei der Verwendung dieser Verfahren Folgendes:
 
 
 
+[[types-of-backups]]
 == Arten von Backups
 
 Der SANtricity Cloud Connector bietet zwei Arten von Backups: Image- und dateibasierte Backups.

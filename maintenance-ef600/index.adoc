@@ -17,6 +17,7 @@ Bei den in diesem Abschnitt beschriebenen Verfahren wird vorausgesetzt, dass das
 
 
 
+[[system-components]]
 == Systemkomponenten
 
 Für die Speichersysteme EF300, EF600, EF300C und EF600C können Sie Wartungsverfahren für die folgenden Komponenten durchführen.

@@ -15,6 +15,7 @@ Verwenden Sie die SANtricity® Funktion Remote Storage Volumes, um Daten von ein
 
 
 
+[[configuration-overview]]
 == Konfigurationsübersicht
 
 Die Funktion Remote Storage Volumes ist mit SANtricity System Manager für ausgewählte Untermodell-IDs verfügbar. Zur Verwendung dieser Funktion müssen Sie ein Remote-Storage-System und ein E-Series Storage-System konfigurieren, damit sie miteinander kommunizieren können.
@@ -31,6 +32,7 @@ NOTE: SANtricity-Remote-Speicher-Volumes werden derzeit nicht auf E4000-Systemen
 
 
 
+[[find-more-information]]
 == Weitere Informationen
 
 * Die Online-Hilfe von ist auf der Benutzeroberfläche von System Manager oder auf der verfügbar https://docs.netapp.com/us-en/e-series-santricity/index.html["SANtricity Software-Dokument-Site"^].

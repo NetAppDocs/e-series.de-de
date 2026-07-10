@@ -22,6 +22,7 @@ Spezielle Verkabelungsanweisungen für Ihr Speichersystem finden Sie link:../get
 ====
 
 
+[[direct-topology]]
 == Direkte Topologie
 
 Eine direkte Topologie verbindet den Controller direkt mit einem Ethernet-Netzwerk.
@@ -33,6 +34,7 @@ image::../media/74167.gif[Direkte Storage-Management-Verbindungen]
 
 
 
+[[fabric-topology]]
 == Fabric-Topologie
 
 Eine Fabric-Topologie verbindet den Controller mithilfe eines Switches mit einem Ethernet-Netzwerk.

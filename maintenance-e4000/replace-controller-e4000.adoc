@@ -25,6 +25,7 @@ Stellen Sie sicher, dass Sie Folgendes haben:
 
 
 
+[[step-1-prepare-to-replace-controller]]
 == Schritt 1: Vorbereitung auf den Austausch der Steuerung
 
 Bereiten Sie sich darauf vor, einen Controller-Behälter zu ersetzen, indem Sie den Sicherheitsschlüssel des Laufwerks speichern, die Konfiguration sichern und Support-Daten sammeln. Anschließend können Sie die Host-I/O-Vorgänge anhalten, den Controller offline setzen oder ihn herunterfahren.
@@ -208,6 +209,7 @@ CAUTION: Beginnen Sie keine anderen Vorgänge, bis der Status aktualisiert wurde
 ====
 
 
+[[step-2-remove-failed-controller]]
 == Schritt 2: Entfernen des fehlerhaften Controllers
 
 Ersetzen Sie den defekten Behälter durch einen neuen.
@@ -236,6 +238,7 @@ Die grüne LED „Cache aktiv“ auf der Rückseite des Controllers leuchtet, we
 
 
 
+[[step-3-remove-the-battery]]
 == Schritt 3: Entfernen Sie die Batterie
 
 Entfernen Sie den Akku aus der außer Betrieb genommenen Steuerung, und setzen Sie ihn in die Ersatzsteuerung ein.
@@ -278,6 +281,7 @@ NOTE: Schließen Sie den Akku noch nicht an. Sie schließen es an, sobald die re
 
 
 
+[[step-4-remove-the-hic]]
 == Schritt 4: Entfernen Sie die HIC
 
 Entfernen Sie die HIC-Blende und die PCIe-HIC-Karte vom Controller-Modul für beeinträchtigte Störungen.
@@ -297,6 +301,7 @@ NOTE: Sie können die Rändelschrauben mit den Fingern oder einem Schraubendrehe
 
 
 
+[[step-5-move-the-dimms]]
 == Schritt 5: Verschieben Sie die DIMMs
 
 Entfernen Sie die DIMMs aus dem Aktivkohlebehälter des Controllers, und setzen Sie sie in den Ersatzbehälter des Controllers ein.
@@ -353,6 +358,7 @@ NOTE: Prüfen Sie das DIMM visuell, um sicherzustellen, dass es gleichmäßig au
 
 
 
+[[step-6-install-the-hic]]
 == Schritt 6: Installieren Sie die HIC
 
 Setzen Sie den HIC in den Behälter des Ersatzcontrollers ein.
@@ -365,6 +371,7 @@ Setzen Sie den HIC in den Behälter des Ersatzcontrollers ein.
 
 
 
+[[step-7-install-the-battery]]
 == Schritt 7: Setzen Sie die Batterie ein
 
 Setzen Sie den Akku in den Behälter des Ersatzcontrollers ein.
@@ -381,6 +388,7 @@ Vergewissern Sie sich, dass der Stecker in der Akkubuchse auf der Hauptplatine e
 
 
 
+[[step-8-complete-controller-replacement]]
 == Schritt 8: Controller-Austausch abschließen
 
 Stellen Sie die Verbindung zum Controller-Shelf wieder her, sammeln Sie Support-Daten und setzen Sie den Betrieb fort.

@@ -18,6 +18,7 @@ CAUTION: *RISIKO VON DATENVERLUST.* Sie müssen NVMe/RoCE in einer verlustfreien
 
 
 
+[[global-pause-frames]]
 == Globale Pausenframes
 
 Globale Pause-Frames sind die grundlegendste Form der Flusssteuerung und am einfachsten zu implementieren. Wenn der Datenverkehr einen Netzwerkport überlastet, werden Pause-Frames generiert, die den gesamten Datenverkehr an diesem Port anhalten, bis der vorherige Datenverkehr ausreichend verarbeitet wurde, damit der Netzwerkport den eingehenden Datenverkehr aufnehmen kann, ohne ihn zu verwerfen.
@@ -29,6 +30,7 @@ Globale Pause-Frames sind die grundlegendste Form der Flusssteuerung und am einf
 
 
 
+[[priority-flow-control]]
 == Prioritätsflusssteuerung
 
 Die Prioritätsflusssteuerung (PFC) ist eine komplexere Form der Flusssteuerung, die verschiedenen Datenverkehrstypen unterschiedliche Prioritätsstufen zuweist. Wenn zu viel Datenverkehr einer Prioritätsstufe eingeht, wird dieser angehalten, während Datenverkehr anderer Prioritätsstufen weiterhin verarbeitet werden kann, wodurch verhindert wird, dass starker Datenverkehr bestimmter Typen andere Datenverkehrsarten verlangsamt.

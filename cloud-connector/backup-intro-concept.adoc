@@ -20,6 +20,7 @@ NOTE: Alle Zeitstempel für Backup- und Wiederherstellungsjobs, die unter der An
 
 
 
+[[create-a-new-image-based-backup]]
 == Erstellen Sie ein neues Image-basiertes Backup
 
 Über die Funktion Erstellen können Sie neue abbilderbasierte Backups auf der Backup-Seite der SANtricity Cloud Connector-Anwendung erstellen.
@@ -73,6 +74,7 @@ Das Backup für das ausgewählte E-Series Volume wird gestartet, und der Status 
 
 
 
+[[create-a-new-folderfile-based-backup]]
 == Erstellen Sie ein neues Ordner-/dateibasiertes Backup
 
 Sie können neue Ordner-/dateibasierte Backups über die Funktion Erstellen auf der Backup-Seite der SANtricity Cloud Connector-Anwendung erstellen.
@@ -136,6 +138,7 @@ Das Backup für das ausgewählte E-Series-Volume wird gestartet, und der Status 
 
 
 
+[[run-full-and-incremental-backups]]
 == Vollständige und inkrementelle Backups ausführen
 
 Sie können über die Funktion Ausführen auf der Seite Backups vollständige und inkrementelle Backups durchführen. Inkrementelle Backups sind nur für dateibasierte Backups verfügbar.
@@ -170,6 +173,7 @@ Die Backup-Anfrage wird gestartet.
 
 
 
+[[delete-a-backup-job]]
 == Löschen Sie einen Sicherungsauftrag
 
 Mit der Funktion Löschen werden gesicherte Daten am angegebenen Zielspeicherort für die ausgewählte Sicherung zusammen mit dem Backup-Satz gelöscht.

@@ -15,12 +15,14 @@ Sie können ein Upgrade Ihres Storage-Arrays durch den Austausch vorhandener Con
 
 
 
+[[controller-components]]
 == Controller-Komponenten
 
 Ein Controller besteht aus einer Hauptplatine, Firmware und Software. Sie steuert die Laufwerke und implementiert auch die Management Software-Funktionen.
 
 
 
+[[when-to-use-this-procedure]]
 == Wann wird dieses Verfahren durchgeführt
 
 In der Regel verwenden Sie diese Vorgehensweise, wenn Sie alle Controller auf ein anderes Modell oder eine andere Plattform aktualisieren möchten. Bei diesem Verfahren werden alle Controller in einem Controller-Laufwerksfach ausgetauscht

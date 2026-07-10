@@ -26,6 +26,7 @@ Stellen Sie sicher, dass Sie Folgendes haben:
 
 
 
+[[step-1-install-battery]]
 == Schritt 1: Batterie einbauen
 
 Setzen Sie den Akku ein, den Sie aus dem ursprünglichen Controller-Behälter entfernt haben, oder einen neuen Akku, den Sie bestellt haben.
@@ -56,6 +57,7 @@ Wenn die Verriegelung einrastet, Haken unten an der Verriegelung in einen Metall
 
 
 
+[[step-2-install-new-controller-canister]]
 == Schritt 2: Installieren Sie den neuen Controller-Behälter
 
 [role="tabbed-block"]

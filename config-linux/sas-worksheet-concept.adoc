@@ -17,6 +17,7 @@ image::../media/sas_topology_diagram_conf-lin.gif[Diagramm: SAS-Topologie]
 
 
 
+[[host-identifiers]]
 == Host-IDs
 
 |===
@@ -65,12 +66,14 @@ Host-Port 2 (Initiator) ist mit Controller B verbunden, Port 1
 |===
 
 
+[[target-identifiers]]
 == Zielkennungen
 
 Empfohlene Konfigurationen bestehen aus zwei Ziel-Ports.
 
 
 
+[[mapping-host]]
 == Host wird zugeordnet
 
 |===

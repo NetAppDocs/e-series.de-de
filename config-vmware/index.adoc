@@ -15,6 +15,7 @@ Die VMware Express Methode zur Installation Ihres Storage-Arrays und zum Zugriff
 
 
 
+[[procedure-overview]]
 == Verfahrensübersicht
 
 Die Express-Methode umfasst die folgenden Schritte, die ebenfalls im beschrieben werden link:understand-vmware-workflow-concept.html["VMware Workflow"].
@@ -34,12 +35,13 @@ Die Express-Methode umfasst die folgenden Schritte, die ebenfalls im beschrieben
 
 
 
+[[find-more-information]]
 == Weitere Informationen
 
 * Online-Hilfe – beschreibt die Verwendung von SANtricity System Manager zum Abschließen von Konfigurations- und Storage-Managementaufgaben. Es ist im Produkt verfügbar.
 * https://kb.netapp.com/["NetApp Knowledge Base"^] (Eine Datenbank mit Artikeln) – enthält Informationen zur Fehlerbehebung, häufig gestellte Fragen und Anweisungen zu einem breiten Spektrum an NetApp Produkten und Technologien.
 * http://mysupport.netapp.com/matrix["NetApp Interoperabilitäts-Matrix-Tool"^] -- ermöglicht die Suche nach Konfigurationen von NetApp Produkten und Komponenten, die den von NetApp angegebenen Standards und Anforderungen entsprechen.
-* https://www.netapp.com/pdf.html?item=/media/17017-tr4789pdf.pdf["VMware Konfigurationshandbuch für E-Series SANtricity iSCSI Integration mit ESXi 6.X"^] -- bietet technische Details zur iSCSI-Integration mit VMware.
+* https://www.netapp.com/pdf.html?item=/media/17017-tr4789.pdf["VMware Konfigurationshandbuch für E-Series SANtricity iSCSI Integration mit ESXi 6.X"^] Enthält technische Details zur iSCSI-Integration mit VMware.
 * https://configmax.broadcom.com/home["VMware Konfigurationsmaxima"^] -- beschreibt die Konfiguration von virtuellem und physischem Speicher, um innerhalb der zulässigen Maximalwerte zu bleiben, die ESX/ESXi unterstützt.
 * https://docs.vmware.com/en/VMware-vSphere/7.0/com.vmware.vsphere.storage.doc/GUID-9AEE5F4D-0CB8-4355-BF89-BB61C5F30C70.html["Anforderungen und Einschränkungen von VMware NVMe Storage"^].
 * https://docs.vmware.com/en/VMware-vSphere/index.html["Dokumentation zu VMware vSphere"^] -- stellt ESXi vCenter Server Dokumentation zur Verfügung.

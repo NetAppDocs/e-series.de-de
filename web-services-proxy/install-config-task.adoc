@@ -16,6 +16,7 @@ Sie können die Web Services Proxy-Einstellungen ändern, um die spezifischen Be
 
 
 
+[[stop-or-restart-the-webserver]]
 == Stoppen oder starten Sie den Webserver neu
 
 Der Webserver-Dienst wird während der Installation gestartet und läuft im Hintergrund. Während einiger Konfigurationsaufgaben müssen Sie den Webserver-Dienst möglicherweise anhalten oder neu starten.
@@ -37,6 +38,7 @@ Die am häufigsten verwendete Methode für die Interaktion mit dem Dienst ist di
 
 
 
+[[resolve-port-conflicts]]
 == Beheben von Port-Konflikten
 
 Wenn der Web Services Proxy ausgeführt wird, während eine andere Anwendung an der definierten Adresse oder dem festgelegten Port verfügbar ist, können Sie den Portkonflikt in der Datei wsconfig.xml beheben.
@@ -107,6 +109,7 @@ Nein
 
 
 
+[[configure-load-balancing-andor-high-availability]]
 == Konfiguration von Load Balancing und/oder Hochverfügbarkeit
 
 Wenn Sie den Web Services Proxy in einer hochverfügbaren (HA) Konfiguration verwenden möchten, können Sie den Lastausgleich konfigurieren. In einer HA-Konfiguration erhält normalerweise entweder ein einzelner Node alle Anfragen, während die anderen im Standby-Verhältnis sind oder bei den Anforderungen ein Lastausgleich über alle Nodes hinweg erfolgt.
@@ -134,6 +137,7 @@ Beispiel: `DEBUG_START_OPTIONS="-Dload-balance.enabled=true"`
 
 
 
+[[disable-symbol-https]]
 == Symbol HTTPS deaktivieren
 
 Sie können Symbolbefehle (Standardeinstellung) deaktivieren und Befehle über einen Remote-Prozeduraufruf (RPC) senden. Diese Einstellung kann in der Datei wsconfig.xml geändert werden.
@@ -162,6 +166,7 @@ Beispiel:
 
 
 
+[[configure-cross-origin-resource-sharing]]
 == Konfigurieren der Cross-Origin-Ressourcen-Sharing
 
 Sie können CORS (Cross-Origin Resource Sharing) konfigurieren. Hierbei handelt es sich um einen Mechanismus, der zusätzliche HTTP-Header verwendet, um eine Web-Anwendung bereitzustellen, die an einem Ursprung ausgeführt wird und über die Berechtigung zum Zugriff auf ausgewählte Ressourcen von einem Server mit einem anderen Ursprung verfügt.

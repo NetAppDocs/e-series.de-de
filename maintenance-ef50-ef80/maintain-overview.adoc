@@ -17,6 +17,7 @@ Die Wartungsverfahren setzen voraus, dass Ihr EF50- oder EF80-Speichersystem ber
 
 
 
+[[system-components]]
 == Systemkomponenten
 
 Für Ihr EF50 oder EF80 Speichersystem können Sie Wartungsarbeiten an den folgenden Komponenten durchführen.

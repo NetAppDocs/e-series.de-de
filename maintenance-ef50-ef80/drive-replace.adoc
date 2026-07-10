@@ -20,6 +20,7 @@ Tauschen Sie ein defektes Laufwerk aus, während Ihr EF50 oder EF80 Storage-Syst
 
 
 
+[[step-1-prepare-to-replace-the-drive]]
 == Schritt 1: Vorbereitung auf den Austausch des Laufwerks
 
 Bereiten Sie sich auf den Laufwerksaustausch vor, indem Sie sicherstellen, dass das Laufwerk tatsächlich ausgefallen ist, bestätigen, dass Sie über ein unterstütztes Ersatzlaufwerk verfügen, sicherstellen, dass Sie Zugriff auf SANtricity System Manager haben, Vorsichtsmaßnahmen gegen elektrostatische Entladung treffen und das ausgefallene Laufwerk physisch lokalisieren.
@@ -81,6 +82,7 @@ NOTE: Um die Laufwerks-LEDs zu sehen, müssen Sie die Blende an der Vorderseite 
 
 
 
+[[step-2-replace-the-drive]]
 == Schritt 2: Ersetzen Sie das Laufwerk
 
 Ersetzen Sie das ausgefallene Laufwerk durch ein neues.
@@ -149,6 +151,7 @@ Die grüne LED am Laufwerk leuchtet, wenn das Laufwerk korrekt eingesetzt ist.
 
 
 
+[[step-3-complete-the-drive-replacement]]
 == Schritt 3: Schließen Sie den Laufwerksaustausch ab
 
 Bestätigen Sie, dass das Ersatzlaufwerk ordnungsgemäß funktioniert, und stellen Sie sicher, dass die Laufwerksrekonstruktion gestartet wurde.
@@ -214,6 +217,7 @@ Nach Abschluss der Laufwerkswiederherstellung befindet sich die Volume-Gruppe in
 
 
 
+[[step-4-return-the-failed-part-to-netapp]]
 == Schritt 4: Senden Sie das defekte Teil zurück an NetApp
 
 Senden Sie das defekte Teil an NetApp, wie in der mit dem Kit gelieferten RMA-Anleitung beschrieben, zurück. Siehe die https://mysupport.netapp.com/site/info/rma["Teilerückgabe und Ersatz"] Seite für weitere Informationen.

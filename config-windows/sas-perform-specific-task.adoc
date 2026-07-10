@@ -15,6 +15,7 @@ Für das SAS-Protokoll bestimmen Sie Host-Port-Adressen und nehmen die entsprech
 
 
 
+[[step-1-determine-sas-host-identifiers-windows]]
 == Schritt: Bestimmen Sie die SAS-Host-IDs – Windows
 
 Suchen Sie mithilfe des HBA-Dienstprogramms die SAS-Adressen und verwenden Sie das HBA-BIOS, um die entsprechenden Konfigurationseinstellungen vorzunehmen.
@@ -36,6 +37,7 @@ Informationen zum Festlegen von Empfehlungen finden Sie in der Spalte Notizen de
 
 
 
+[[step-2-record-your-configuration]]
 == Schritt 2: Notieren Sie Ihre Konfiguration
 
 Sie können eine PDF-Datei auf dieser Seite erstellen und drucken und dann mithilfe des folgenden Arbeitsblatts Ihre protokollspezifischen Speicherkonfigurationsinformationen aufzeichnen. Sie benötigen diese Informationen für Bereitstellungsaufgaben.
@@ -44,6 +46,7 @@ image::../media/sas_topology_diagram_conf-win.gif[Diagramm: SAS-Topologie]
 
 
 
+[[host-identifiers]]
 === Host-IDs
 
 |===
@@ -92,12 +95,14 @@ Host-Port 2 (Initiator) ist mit Controller B verbunden, Port 1
 |===
 
 
+[[target-identifiers]]
 === Zielkennungen
 
 Empfohlene Konfigurationen bestehen aus zwei Ziel-Ports.
 
 
 
+[[mapping-host-name]]
 === Zuordnung des Hostnamens
 
 |===

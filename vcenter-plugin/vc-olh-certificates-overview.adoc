@@ -18,6 +18,7 @@ Die Zertifikatverwaltung im Speicher-Plugin für vCenter ermöglicht die Erstell
 
 
 
+[[what-are-certificates]]
 == Was sind Zertifikate?
 
 Zertifikate sind digitale Dateien, die Online-Einheiten wie Websites und Server für eine sichere Kommunikation im Internet identifizieren. Sie stellen sicher, dass die Webkommunikation in verschlüsselter Form, privat und unverändert, nur zwischen dem angegebenen Server und dem angegebenen Client übertragen wird. Mit dem Storage Plug-in für vCenter können Sie Zertifikate für den Browser auf einem Host-Managementsystem und die Controller in den ermittelten Speicher-Arrays verwalten.
@@ -31,6 +32,7 @@ NOTE: Auch wenn CA-signierte Zertifikate einen besseren Schutz bieten (zum Beisp
 
 
 
+[[signed-certificates]]
 == Signierte Zertifikate
 
 Ein signiertes Zertifikat wird von einer Zertifizierungsstelle (CA) validiert, einer vertrauenswürdigen Drittorganisation. Signierte Zertifikate enthalten Angaben über den Eigentümer der Einheit (in der Regel Server oder Website), Datum der Zertifikatausgabe und -Ablauf, gültige Domains für das Unternehmen und eine digitale Signatur bestehend aus Buchstaben und Zahlen.
@@ -46,6 +48,7 @@ Die CA führt Schritte durch, um Ihre Identität während des Anwendungsprozesse
 
 
 
+[[self-signed-certificates]]
 == Selbstsignierte Zertifikate
 
 Jeder Controller im Speicher-Array verfügt über ein vorinstalliertes, selbstsigniertes Zertifikat. Ein selbst signiertes Zertifikat ähnelt einem CA-signierten Zertifikat, außer dass es vom Eigentümer des Unternehmens anstelle eines Dritten validiert wird. Wie ein Zertifikat mit einer Zertifizierungsstelle enthält auch ein selbstsigniertes Zertifikat einen eigenen privaten Schlüssel und stellt sicher, dass Daten verschlüsselt und über eine HTTPS-Verbindung zwischen einem Server und einem Client gesendet werden.
@@ -54,12 +57,14 @@ Selbstsignierte Zertifikate werden von Browsern nicht „vertrauenswürdig“. J
 
 
 
+[[management-certificate]]
 == Managementzertifikat
 
 Wenn Sie das Plugin öffnen, versucht der Browser zu überprüfen, ob der Management-Host eine vertrauenswürdige Quelle ist, indem er nach einem digitalen Zertifikat prüft. Wenn der Browser ein von einer Zertifizierungsstelle signiertes Zertifikat nicht findet, wird eine Warnmeldung angezeigt. Von dort aus können Sie auf der Website fortfahren, um das selbstsignierte Zertifikat für diese Sitzung zu akzeptieren. Sie können auch signierte digitale Zertifikate von einer Zertifizierungsstelle beziehen, damit die Warnmeldung nicht mehr angezeigt wird.
 
 
 
+[[trusted-certificates]]
 == Vertrauenswürdige Zertifikate
 
 Während einer Plugin-Sitzung werden möglicherweise zusätzliche Sicherheitsmeldungen angezeigt, wenn Sie versuchen, auf einen Controller zuzugreifen, der kein von einer Zertifizierungsstelle signiertes Zertifikat hat. In diesem Fall können Sie dem selbst signierten Zertifikat dauerhaft vertrauen oder die CA-signierten Zertifikate für die Controller importieren, damit das Plugin eingehende Clientanforderungen von diesen Controllern authentifizieren kann.

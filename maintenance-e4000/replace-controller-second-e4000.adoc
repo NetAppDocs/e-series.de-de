@@ -29,6 +29,7 @@ Stellen Sie sicher, dass Sie Folgendes haben:
 
 
 
+[[step-1-verify-the-new-controllers-part-number]]
 == Schritt 1: Überprüfen Sie die Teilenummer des neuen Controllers
 
 Vergewissern Sie sich, dass der neue Controller dieselbe Teilenummer wie der aktuell installierte Controller hat.
@@ -67,6 +68,7 @@ Die Datei wird im Ordner *Downloads* Ihres Browsers unter dem Namen *Konfigurati
 
 
 
+[[step-2-install-host-interface-card]]
 == Schritt: Installieren Sie die Host Interface Card
 
 Wenn der aktuell installierte Controller eine Host-Schnittstellenkarte (HIC) enthält, müssen Sie dasselbe Modell von HIC im zweiten Controller-Behälter installieren.
@@ -90,6 +92,7 @@ CAUTION: Achten Sie darauf, die Schrauben nicht zu fest zu ziehen, da dies zu Sc
 
 
 
+[[step-3-collect-support-data]]
 == Schritt 3: Sammeln Sie Support-Daten
 
 Sammeln Sie Support-Daten vor und nach dem Austausch einer Komponente, um sicherzustellen, dass Sie einen vollständigen Satz Protokolle an den technischen Support senden können, falls das Problem durch den Austausch nicht behoben wird.
@@ -128,6 +131,7 @@ CAUTION: *Möglicher Datenverlust* – Wenn Sie diesen Vorgang fortsetzen, währ
 
 
 
+[[step-4-change-configuration-to-duplex]]
 == Schritt 4: Ändern Sie die Konfiguration auf Duplex
 
 Bevor Sie dem Controller-Shelf einen zweiten Controller hinzufügen, müssen Sie die Konfiguration auf Duplex ändern, indem Sie eine neue NVSRAM-Datei installieren und das Speicher-Array mit der Befehlszeilenschnittstelle auf Duplex setzen. Die Duplexversion der NVSRAM-Datei ist in der Download-Datei für SANtricity OS Software (Controller-Firmware) enthalten.
@@ -224,6 +228,7 @@ Nach dem Neustart des Controllers wird die Fehlermeldung „alternativer Control
 
 
 
+[[step-5-remove-the-controller-blank]]
 == Schritt 5: Entfernen Sie den Controller-Leereinschub
 
 Entfernen Sie den Controller-Leereinschub, bevor Sie den zweiten Controller installieren. Ein Controller-Leereinschub wird in Controller-Shelfs installiert, die nur über einen Controller verfügen.
@@ -238,6 +243,7 @@ Wenn Sie den Controller-Leereinschub entfernen, schwenkt eine Klappe an ihre Ste
 
 
 
+[[step-6-install-the-second-controller-canister]]
 == Schritt 6: Installieren Sie den zweiten Controller-Behälter
 
 Installieren Sie einen zweiten Controller-Behälter, um eine Simplex-Konfiguration in eine Duplexkonfiguration zu ändern.
@@ -256,6 +262,7 @@ NOTE: Beim Einschieben des Controller-Moduls in das Gehäuse keine übermäßige
 
 
 
+[[step-7-complete-adding-a-second-controller]]
 == Schritt 7: Schließen Sie das Hinzufügen eines zweiten Controllers ab
 
 Führen Sie den Vorgang durch, einen zweiten Controller hinzuzufügen, indem Sie bestätigen, dass er ordnungsgemäß funktioniert, installieren Sie die Duplex-NVSRAM-Datei neu, verteilen Sie Volumes zwischen den Controllern und sammeln Sie Support-Daten.

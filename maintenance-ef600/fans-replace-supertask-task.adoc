@@ -29,6 +29,7 @@ Stellen Sie sicher, dass Sie Folgendes haben:
 
 
 
+[[step-1-place-controller-offline]]
 == Schritt 1: Controller offline schalten
 
 Setzen Sie den Controller-Behälter offline, sodass Sie den defekten Lüfter sicher austauschen können.
@@ -75,6 +76,7 @@ NOTE: Beginnen Sie keine anderen Vorgänge, bis der Status aktualisiert wurde.
 
 
 
+[[step-2-remove-controller-canister]]
 == Schritt 2: Controller-Behälter entfernen
 
 Entfernen Sie den Controller-Behälter, damit Sie den defekten Lüfter durch einen neuen ersetzen können.
@@ -105,6 +107,7 @@ image::../media/remove_controller_6.png[Tragen Sie beim Entfernen des Controller
 
 
 
+[[step-3-remove-failed-fan]]
 == Schritt 3: Entfernen des fehlerhaften Lüfters
 
 Sie entfernen einen defekten Lüfter, so dass Sie ihn durch einen neuen ersetzen können.
@@ -123,6 +126,7 @@ image::../media/fan_2.png[Entfernen Sie den Lüfter]
 
 
 
+[[step-4-install-new-fan]]
 == Schritt 4: Neuen Lüfter installieren
 
 Installieren Sie einen neuen Lüfter, um den fehlerhaften zu ersetzen.
@@ -139,6 +143,7 @@ image::../media/fan_3_a.png[Lüfter in Controller einbauen]
 
 
 
+[[step-5-reinstall-controller-canister]]
 == Schritt 5: Controller-Behälter wieder einbauen
 
 Setzen Sie nach dem Einbau des neuen Lüfters den Controller-Behälter wieder in das Reglerregal ein.
@@ -157,6 +162,7 @@ image::../media/remove_controller_7.png[Controller in Shelf einbauen]
 
 
 
+[[step-6-complete-fan-replacement]]
 == Schritt 6: Vollständige Lüfteraustausch
 
 Platzieren Sie den Controller online, sammeln Sie Support-Daten und setzen Sie den Betrieb fort.

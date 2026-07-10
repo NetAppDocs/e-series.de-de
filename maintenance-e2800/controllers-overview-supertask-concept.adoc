@@ -25,6 +25,7 @@ NOTE: Diese Verfahren gelten für ähnliche IOM-Hot-Swap-ähnliche Regalfachteil
 
 
 
+[[requirements-for-adding-second-controller]]
 == Anforderungen für das Hinzufügen eines zweiten Controllers
 
 Sie können zur Simplex-Version der folgenden Controller-Shelves einen zweiten Controller-Behälter hinzufügen:
@@ -67,6 +68,7 @@ Optional können Sie einige der Verfahren mit der Befehlszeilenschnittstelle (CL
 
 
 
+[[requirements-for-replacing-controller]]
 == Anforderungen für den Austausch des Controllers
 
 Wenn Sie einen defekten Controller-Behälter ersetzen, müssen Sie die Batterie und HIC, falls vorhanden, aus dem ursprünglichen Controller-Behälter entfernen und in den Ersatzcontroller-Behälter installieren.
@@ -115,6 +117,7 @@ Optional können Sie einige der Verfahren mit der Befehlszeilenschnittstelle (CL
 
 
 
+[[duplex-configuration-requirements]]
 === Anforderungen für die Duplexkonfiguration
 
 Wenn das Controller-Shelf zwei Controller hat (Duplexkonfiguration), können Sie einen Controller-Behälter ersetzen, während Ihr Speicher-Array eingeschaltet ist und Host-I/O-Vorgänge ausführt, sofern die folgenden Bedingungen erfüllt sind:
@@ -125,6 +128,7 @@ Wenn das Controller-Shelf zwei Controller hat (Duplexkonfiguration), können Sie
 
 
 
+[[simplex-configuration-requirements]]
 === Simplex-Konfigurationsanforderungen
 
 Wenn nur ein Controller-Behälter (Simplex-Konfiguration) vorhanden ist, sind die Daten auf dem Speicher-Array erst zugänglich, wenn Sie den Controller-Behälter ersetzen. Sie müssen Host-I/O-Vorgänge anhalten und das Storage Array herunterfahren.

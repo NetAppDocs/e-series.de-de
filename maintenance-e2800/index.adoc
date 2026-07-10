@@ -17,6 +17,7 @@ Bei den in diesem Abschnitt beschriebenen Verfahren wird vorausgesetzt, dass das
 
 
 
+[[system-components]]
 == Systemkomponenten
 
 Für das E2800 Storage-System können Sie anhand der folgenden Komponenten Wartungsvorgänge durchführen.

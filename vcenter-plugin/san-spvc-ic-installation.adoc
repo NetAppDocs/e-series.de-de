@@ -19,6 +19,7 @@ Führen Sie diese Schritte aus, um das Storage Plug-in für vCenter zu installie
 
 
 
+[[review-installation-prerequisites]]
 == Installationsvoraussetzungen prüfen
 
 Stellen Sie sicher, dass Ihre Systeme die Anforderungen in erfüllen link:san-spvc-ic-reqs.html["Installations- und Upgrade-Anforderungen prüfen"].
@@ -28,6 +29,7 @@ NOTE: Die *vcenter.properties*-Dateien werden durch den Aktualisierungsprozess n
 
 
 
+[[install-the-plugin-software]]
 == Installieren Sie die Plug-in-Software
 
 So installieren Sie die Plugin-Software:
@@ -60,6 +62,7 @@ NOTE: Bei Bedarf können Sie die Einstellungen für Zertifikatvalidierung und We
 
 
 
+[[register-the-plugin-with-a-vcenter-server-appliance]]
 == Registrieren Sie das Plug-in mit einer vCenter Server Appliance
 
 Nachdem die Plugin-Software installiert ist, registrieren Sie das Plugin mit einem vCSA.
@@ -83,6 +86,7 @@ Die Protokolle werden in gespeichert `%install_dir%/working/logs/vc-registration
 
 
 
+[[verify-the-plugin-registration]]
 == Überprüfen Sie die Plugin-Registrierung
 
 Nachdem das Plugin installiert und das Registrierungsskript ausgeführt wurde, überprüfen Sie, ob das Plugin bei der vCenter Server Appliance erfolgreich registriert wurde.

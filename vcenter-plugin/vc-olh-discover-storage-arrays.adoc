@@ -32,6 +32,7 @@ Die Array-Erkennung ist ein mehrstufiges Verfahren:
 
 
 
+[[step-1-enter-network-addresses-for-discovery]]
 == Schritt 1: Geben Sie Netzwerkadressen für die Ermittlung ein
 
 Als erster Schritt zur Ermittlung von Speicherarrays geben Sie eine einzelne IP-Adresse oder eine Reihe von IP-Adressen ein, um im lokalen Teilnetzwerk zu suchen. Die Funktion Hinzufügen/Entdecken öffnet einen Assistenten, der Sie durch den Erkennungsprozess führt.
@@ -65,6 +66,7 @@ Das System führt eine Anmeldeinformationen für jedes Array aus, das Sie der Ma
 
 
 
+[[step-2-resolve-untrusted-certificates-during-discovery]]
 == Schritt 2: Lösen Sie nicht vertrauenswürdige Zertifikate während der Ermittlung
 
 Falls erforderlich, müssen Sie Zertifikatprobleme beheben, bevor Sie mit dem Erkennungsvorgang fortfahren.
@@ -83,6 +85,7 @@ Wenn während der Erkennung Speicherarrays den Status „nicht vertrauenswürdig
 
 
 
+[[step-3-provide-passwords]]
 == Schritt 3: Geben Sie Passwörter ein
 
 Als letzter Schritt zur Ermittlung müssen Sie die Passwörter für die Speicherarrays eingeben, die Sie Ihrer Management-Domäne hinzufügen möchten.

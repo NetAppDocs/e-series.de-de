@@ -32,6 +32,7 @@ Diese Aufgabe gilt für DCM-, DCM2- und DCM3-Laufwerksregale.
 
 
 
+[[step-1-prepare-to-replace-drive-60-drive]]
 == Schritt 1: Vorbereitung auf den Austausch des Antriebs (60 Laufwerke)
 
 Bereiten Sie sich darauf vor, ein Laufwerk in einem Shelf mit 60 Festplatten zu ersetzen, indem Sie den Recovery Guru in SANtricity System Manager prüfen und alle erforderlichen Schritte ausführen. Dann können Sie die ausgefallene Komponente finden.
@@ -89,6 +90,7 @@ image::../media/28_dwg_e2860_de460c_attention_led_drive_maint-e5700.gif[Achtung-
 
 
 
+[[step-2-remove-failed-drive-60-drive]]
 == Schritt 2: Entfernen des ausgefallenen Laufwerks (60 Laufwerke)
 
 Entfernen Sie ein ausgefallenes Laufwerk, um es durch ein neues zu ersetzen.
@@ -126,6 +128,7 @@ NOTE: Wenn Sie versehentlich ein aktives Laufwerk entfernen, warten Sie mindeste
 
 
 
+[[step-3-install-new-drive-60-drive]]
 == Schritt 3: Neues Laufwerk installieren (60-Laufwerk)
 
 Installieren Sie ein neues Laufwerk, um das ausgefallene zu ersetzen.
@@ -155,6 +158,7 @@ Je nach Konfiguration rekonstruiert der Controller möglicherweise automatisch D
 
 
 
+[[step-4-complete-drive-replacement-60-drive]]
 == Schritt 4: Vollständiger Austausch von Laufwerken (60 Laufwerke)
 
 Überprüfen Sie, ob das neue Laufwerk ordnungsgemäß funktioniert.

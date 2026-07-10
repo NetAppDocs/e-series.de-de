@@ -22,6 +22,7 @@ Tauschen Sie ein Lüftermodul in Ihrem EF50 oder EF80-Speichersystem aus, wenn e
 
 
 
+[[step-1-prepare-to-replace-a-fan]]
 == Schritt 1: Vorbereitung zum Austausch eines Lüfters
 
 Bereiten Sie sich auf den Austausch eines Lüfters vor, indem Sie sich vergewissern, dass der Austausch unbedenklich ist, die notwendigen Werkzeuge und Geräte zusammenstellen und die Konfigurationsdatenbank des Speichersystems sichern.
@@ -57,6 +58,7 @@ Die Datei wird im Ordner Downloads für Ihren Browser mit dem Namen *configurati
 
 
 
+[[step-2-place-the-controller-offline]]
 == Schritt 2: Den Controller offline schalten
 
 Setzen Sie den defekten Controller offline, damit Sie den Rest dieser Prozedur sicher durchführen können.
@@ -95,6 +97,7 @@ CAUTION: Wenn im Feld *OK to remove* nicht *Yes* angezeigt wird, fahren Sie nich
 
 
 
+[[step-3-remove-the-controller]]
 == Schritt 3: Entfernen Sie den Controller
 
 Vergewissern Sie sich, dass alle Daten im Cache-Speicher auf die Laufwerke geschrieben wurden, trennen Sie alle Kabel vom defekten Controller, und entfernen Sie dann den defekten Controller aus dem Gehäuse.
@@ -177,6 +180,7 @@ Drehen Sie bei Bedarf die Griffe aufrecht (neben den Laschen), um sie aus dem We
 
 
 
+[[step-4-replace-a-fan]]
 == Schritt 4: Einen Lüfter ersetzen
 
 Suchen Sie den defekten Lüfter im Inneren des beeinträchtigten Controllers und ersetzen Sie ihn.
@@ -210,6 +214,7 @@ Bewahren Sie das Verpackungsmaterial auf, um es bei der Rücksendung des defekte
 
 
 
+[[step-5-reinstall-the-controller]]
 == Schritt 5: Installieren Sie den Controller neu
 
 Bauen Sie den Controller wieder in das Gehäuse ein, schließen Sie das Netzkabel und alle seine Kabel wieder an.
@@ -268,6 +273,7 @@ NOTE: Die Kabel müssen wieder angeschlossen werden, bevor der Controller online
 
 
 
+[[step-6-place-the-controller-online]]
 == Schritt 6: Setzen Sie den Controller online
 
 Setzen Sie den defekten Controller wieder online.
@@ -309,6 +315,7 @@ NOTE: Sollten Sie das Problem nicht beheben können, kontaktieren Sie  https://m
 
 
 
+[[step-7-complete-the-fan-replacement]]
 == Schritt 7: Lüfteraustausch abschließen
 
 Verwenden Sie den SANtricity System Manager, um sicherzustellen, dass die neueste Version von SANtricity OS installiert ist, überprüfen Sie, ob alle Volumes an ihre zugehörigen Controller zurückgegeben wurden, und sammeln Sie Supportdaten, damit Sie den Betrieb wieder aufnehmen können.
@@ -359,6 +366,7 @@ Die Datei wird im Ordner Downloads für Ihren Browser mit dem Namen *Support-Dat
 
 
 
+[[step-8-return-the-failed-part-to-netapp]]
 == Schritt 8: Senden Sie das defekte Teil zurück an NetApp
 
 Senden Sie das defekte Teil an NetApp, wie in der mit dem Kit gelieferten RMA-Anleitung beschrieben, zurück. Siehe die https://mysupport.netapp.com/site/info/rma["Teilerückgabe und Ersatz"] Seite für weitere Informationen.

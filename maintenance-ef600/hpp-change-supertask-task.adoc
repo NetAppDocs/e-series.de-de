@@ -16,6 +16,7 @@ Gehen Sie wie folgt vor, um das Host-Port-Protokoll in einem EF300-, EF600-, EF3
 
 
 
+[[step-1-obtain-the-feature-pack-key]]
 == Schritt 1: Holen Sie sich den Feature Pack Key
 
 Um den Feature Pack Key zu erhalten, benötigen Sie die Seriennummer vom Controller-Shelf, einen Feature Activation Code und die Funktion Enable Identifier für das Speicher-Array.
@@ -616,6 +617,7 @@ NOTE: Die Website zur Aktivierung von Premium-Funktionen enthält einen Link zu 
 
 
 
+[[step-2-stop-host-io]]
 == Schritt 2: Stoppen Sie die Host-I/O
 
 Beenden Sie alle I/O-Vorgänge vom Host, bevor Sie das Protokoll der Host-Ports konvertieren.
@@ -648,6 +650,7 @@ Die grüne LED „Cache aktiv“ auf der Rückseite jedes Controllers leuchtet, 
 
 
 
+[[step-3-change-the-feature-pack]]
 == Schritt 3: Ändern Sie das Funktionspaket
 
 Ändern Sie das Feature Pack, um das Hostprotokoll Ihrer Host-Ports zu konvertieren.

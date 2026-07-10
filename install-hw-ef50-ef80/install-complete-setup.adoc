@@ -15,6 +15,7 @@ Nach dem Einschalten Ihres EF50- oder EF80-Speichersystems schließen Sie die Sy
 
 
 
+[[step-1-cable-and-configure-the-management-ports]]
 == Schritt 1: Verkabeln und konfigurieren Sie die Management-Ports
 
 Verkabeln Sie den Management-Port an jedem Controller und konfigurieren Sie die Ports anschließend mithilfe eines DHCP-Servers oder einer statischen IP-Adresse.
@@ -106,6 +107,7 @@ NOTE: Wenn die Verbindung zu Controller B unterbrochen wird, können Sie Ihre zu
 ====
 
 
+[[step-2-configure-your-storage-system]]
 == Schritt 2: Konfigurieren Sie Ihr Speichersystem
 
 Verwenden Sie SANtricity System Manager, um Ihr Speichersystem zu konfigurieren und zu verwalten.
@@ -125,6 +127,7 @@ Sie können die im SANtricity System Manager enthaltene Online-Hilfe konsultiere
 
 
 
+[[step-3-verify-the-host-io-module-protocol-is-correct]]
 == Schritt 3: Überprüfen Sie, ob das Host-I/O-Modulprotokoll korrekt ist
 
 Ihr Speichersystem wird mit einem Standardprotokoll auf den Host-E/A-Modulen ausgeliefert. Wenn das Standardprotokoll nicht das gewünschte Protokoll ist, können Sie es ändern.

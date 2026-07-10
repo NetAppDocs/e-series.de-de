@@ -19,6 +19,7 @@ Die Verkabelungsinformationen richten sich an Hardwareinstechniker oder Systemad
 
 
 
+[[applicable-hardware-model]]
 == Anwendbares Hardware-Modell
 
 Verkabelungsinformationen gelten für die folgenden Hardware-Modelle.
@@ -52,6 +53,7 @@ DE460C
 |===
 
 
+[[additional-cabling-information]]
 == Weitere Informationen zur Verkabelung
 
 Wenn Sie die Verkabelung für eine der folgenden Konfigurationen vornehmen, siehe https://mysupport.netapp.com/ecm/ecm_download_file/ECMLP2859057["Hinzufügen von IOM-Laufwerk-Shelfs zu einem vorhandenen E27XX-, E56XX- oder EF560-Controller-Shelf"^]
@@ -73,4 +75,4 @@ E2760, E5660
 DE460C
 
 |===
-Informationen über die Verkabelung zur Unterstützung von Spiegelungsfunktionen finden Sie im https://www.netapp.com/pdf.html?item=/media/17133-tr4656pdf.pdf["Funktionsbeschreibungen und Implementierungsleitfaden für synchrone und asynchrone Spiegelung"^].
+Informationen zur Verkabelung zur Unterstützung von Spiegelungsfunktionen sind unter  https://www.netapp.com/pdf.html?item=/media/17133-tr4656.pdf["Funktionsbeschreibungen und Implementierungsleitfaden für synchrone und asynchrone Spiegelung"^] zu finden.

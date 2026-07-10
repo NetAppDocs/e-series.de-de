@@ -15,6 +15,7 @@ Die Linux Express-Methode zur Installation Ihres Storage-Arrays und zum Zugriff 
 
 
 
+[[procedure-overview]]
 == Verfahrensübersicht
 
 Die Linux Express-Methode umfasst die folgenden Schritte.
@@ -37,6 +38,7 @@ Die Linux Express-Methode umfasst die folgenden Schritte.
 
 
 
+[[find-more-information]]
 == Weitere Informationen
 
 * Online-Hilfe – beschreibt die Verwendung von SANtricity System Manager zum Abschließen von Konfigurations- und Storage-Managementaufgaben. Es ist im Produkt verfügbar.

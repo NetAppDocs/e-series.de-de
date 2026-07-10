@@ -36,6 +36,7 @@ CAUTION: *Möglicher Verlust des Datenzugriffs* -- Installieren Sie nie eine HIC
 
 
 
+[[step-1-prepare-to-replace-hic]]
 == Schritt 1: Vorbereitung auf den Austausch von HIC
 
 Schalten Sie das Controller-Shelf (Simplexkonfiguration), oder setzen Sie den betroffenen Controller offline (Duplexkonfiguration), damit Sie die HICs sicher austauschen können.
@@ -206,6 +207,7 @@ CAUTION: Beginnen Sie keine anderen Vorgänge, bis der Status aktualisiert wurde
 ====
 
 
+[[step-2-remove-controller-canister]]
 == Schritt 2: Controller-Behälter entfernen
 
 Entfernen Sie den Controller-Aktivkohlebehälter aus dem System, und entfernen Sie dann die Abdeckung des Controller-Aktivkohlebehälters.
@@ -227,6 +229,7 @@ image::../media/drw_E4000_open_controller_module_cover_IEOPS-870.png[Öffnen Sie
 
 
 
+[[step-3-replace-the-hic]]
 == Schritt 3: Ersetzen Sie die HIC
 
 Ersetzen Sie die HIC.
@@ -261,6 +264,7 @@ Verwenden Sie keinen Schraubendreher, oder ziehen Sie die Schrauben möglicherwe
 
 
 
+[[step-4-reinstall-controller-canister]]
 == Schritt 4: Controller-Behälter wieder einbauen
 
 Setzen Sie den Controller-Aktivkohlebehälter wieder in das Gehäuse ein.
@@ -280,6 +284,7 @@ NOTE: Wenn Sie die Medienkonverter (QSFPs oder SFPs) entfernt haben, sollten Sie
 
 
 
+[[step-5-complete-hic-replacement]]
 == Schritt 5: HIC-Ersatz abschließen
 
 Fahren Sie den Controller hoch (Simplexkonfiguration), setzen Sie den Controller online (Duplexkonfiguration), sammeln Sie Support-Daten und nehmen Sie den Betrieb wieder auf.

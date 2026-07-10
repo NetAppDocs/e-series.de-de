@@ -15,6 +15,7 @@ Lesen Sie vor der Installation und Konfiguration des Web Services Proxy die Übe
 
 
 
+[[web-services]]
 == Web-Services
 
 Web Services ist eine API (Application Programming Interface), über die Sie Storage-Systeme der NetApp E-Series und EF-Series konfigurieren, managen und überwachen können. Es werden API-Anfragen gestellt, mit denen Workflows wie Konfiguration, Bereitstellung und Performance-Monitoring für E-Series Storage-Systeme durchgeführt werden können.
@@ -74,6 +75,7 @@ Verwaltet nur den Controller, auf dem er eingebettet ist.
 |===
 
 
+[[unified-manager]]
 == Unified Manager
 
 Das Proxy-Installationspaket umfasst Unified Manager, eine webbasierte Schnittstelle, über die der Konfigurationszugriff auf neuere E-Series und EF-Series Storage-Systeme wie E2800, E5700, EF300 und EF600 Systeme ermöglicht wird.

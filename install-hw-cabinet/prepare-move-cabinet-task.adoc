@@ -15,6 +15,7 @@ Bereiten Sie sich darauf vor, den Schrank von seinem Standort in Ihrem Empfangsb
 
 
 
+[[step-1-estimate-cabinet-weight]]
 == Schritt 1: Schätzen Sie das Gewicht des Gehäuses ab
 
 Der Schrank transportiert zuverlässig und sicher bis zu 909.1 kg (2000 lb) Kapazität. Sie müssen das ungefähre Gewicht des Schranks kennen, damit Sie ihn sicher bewegen können.
@@ -259,6 +260,7 @@ CAUTION: *Mögliche Beschädigung von Tray Components* -- Platzieren Sie kein DE
 
 
 
+[[step-2-acclimate-cabinet]]
 == Schritt 2: Acklimate Kabinett
 
 Stellen Sie sicher, dass der Schrank und die Tabletts in der Innenumgebung akklimatisiert sind, bevor Sie das Verpackungsmaterial entfernen.
@@ -274,6 +276,7 @@ CAUTION: *Eventuelle Schäden an den Behältern* -- Wenn die Außentemperatur un
 
 
 
+[[step-3-remove-packing-materials]]
 == Schritt 3: Verpackungsmaterial entfernen
 
 Das Verpackungsmaterial erst entfernen, nachdem sich das Gehäuse auf die Innentemperatur eingestellt hat.
@@ -285,6 +288,7 @@ Das Verpackungsmaterial erst entfernen, nachdem sich das Gehäuse auf die Innent
 
 
 
+[[step-4-check-shipping-contents]]
 == Schritt 4: Prüfen Sie den Versandinhalt
 
 Überprüfen Sie den Versandinhalt, um sicherzustellen, dass alle Geräte am Standort angekommen sind.
@@ -297,6 +301,7 @@ Das Verpackungsmaterial erst entfernen, nachdem sich das Gehäuse auf die Innent
 
 
 
+[[step-5-remove-heavy-components-from-cabinet]]
 == Schritt 5: Entfernen Sie schwere Bauteile aus dem Schrank
 
 Entfernen Sie einige der schwereren Komponenten, die sich oben im Gehäuse befinden, um eine maximale Stabilität zu gewährleisten.

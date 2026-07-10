@@ -49,6 +49,7 @@ CAUTION: *Möglicher Verlust des Datenzugriffs* -- Wenn ein Volume sich bereits 
 
 
 
+[[step-1-prepare-to-replace-drive-drawer-60-drive]]
 == Schritt 1: Vorbereitung auf den Austausch der Laufwerksschublade (60 Laufwerke)
 
 Bereiten Sie den Austausch einer Laufwerkschublade vor, indem Sie feststellen, ob der Austauschvorgang während des Online-Betriebs des Festplatten-Shelfs durchgeführt werden kann oder wenn Sie die I/O-Aktivität des Hosts beenden und eines der Shelfs, die eingeschaltet sind, ausschalten müssen. Wenn Sie eine Schublade in einem Shelf durch einen Schubladenschutz ersetzen, müssen Sie die Host-I/O-Aktivität nicht beenden und ein Regal ausschalten.
@@ -150,6 +151,7 @@ Sie können das Verfahren zum Austauschen durchführen, während das Laufwerksfa
 
 
 
+[[step-2-remove-cable-chains]]
 == Schritt 2: Die Kabelketten entfernen
 
 Entfernen Sie beide Kabelketten, damit Sie eine fehlerhafte Laufwerksschublade entfernen und ersetzen können. Die linken und rechten Kabelketten ermöglichen es den Schubladen ein- und auszuschieben.
@@ -289,6 +291,7 @@ Die LED könnte nach der Neuinstallation des Lüfters bis zu einer Minute einges
 
 
 
+[[step-3-remove-failed-drive-drawer-60-drive]]
 == Schritt 3: Entfernen der Laufwerkschublade (60 Laufwerke)
 
 Entfernen Sie ein ausgefallenes Laufwerksfach, um es durch ein neues zu ersetzen.
@@ -343,6 +346,7 @@ image::../media/92_pht_de6600_drive_drawer_release_lever_maint-e5700.gif[Entrieg
 
 
 
+[[step-4-install-new-drive-drawer-60-drive]]
 == Schritt 4: Neue Laufwerksschublade einbauen (60 Laufwerke)
 
 Installieren Sie ein neues Laufwerksfach, um das fehlerhafte zu ersetzen.
@@ -383,6 +387,7 @@ CAUTION: *Risiko von Geräteschäden* -- Stoppen Sie die Antriebsklade, wenn Sie
 
 
 
+[[step-5-attach-cable-chains]]
 == Schritt 5: Kabelketten befestigen
 
 Schließen Sie die Kabelketten an, damit Sie die Laufwerke sicher wieder in die Laufwerksschublade einsetzen können.
@@ -466,6 +471,7 @@ Die LED könnte nach der Neuinstallation des Lüfters bis zu einer Minute einges
 
 
 
+[[step-6-complete-drive-drawer-replacement-60-drive]]
 == Schritt 6: Austausch der Laufwerkschublade abschließen (60 Laufwerke)
 
 Füllen Sie den Austausch der Laufwerksschublade aus, indem Sie die Laufwerke wieder einsetzen und die Frontverkleidung in der richtigen Reihenfolge austauschen.

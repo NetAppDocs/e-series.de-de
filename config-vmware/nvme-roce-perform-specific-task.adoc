@@ -15,12 +15,14 @@ Für das NVMe over RoCE-Protokoll konfigurieren Sie die Switches und bestimmen d
 
 
 
+[[step-1-record-your-configuration]]
 == Schritt 1: Notieren Sie Ihre Konfiguration
 
 Sie können eine PDF-Datei auf dieser Seite erstellen und drucken und dann mithilfe des folgenden Arbeitsblatts Ihre protokollspezifischen Speicherkonfigurationsinformationen aufzeichnen. Sie benötigen diese Informationen für Bereitstellungsaufgaben.
 
 
 
+[[recommended-configuration]]
 === Empfohlene Konfiguration
 
 Empfohlene Konfigurationen bestehen aus zwei Initiator-Ports und vier Ziel-Ports mit einem oder mehreren VLANs.
@@ -29,6 +31,7 @@ image::../media/network_generic_worksheet.gif[NVMe über RoCE-Port-IDs"]
 
 
 
+[[host-identifiers]]
 === Host-IDs
 
 |===
@@ -52,6 +55,7 @@ Host (Initiator) 2
 |===
 
 
+[[target-identifiers]]
 === Zielkennungen
 
 |===
@@ -91,6 +95,7 @@ Array-Controller (Target) Port 4
 |===
 
 
+[[mapping-host]]
 === Host wird zugeordnet
 
 |===
@@ -109,12 +114,14 @@ Host-OS-Typ
 |===
 
 
+[[recommended-configuration]]
 === Empfohlene Konfiguration
 
 Dies kann je nach Array variieren. EF300, EF600 und EF50 verfügen über 2 Initiator-Ports mit bis zu 4 Ziel-Ports und einem oder mehreren VLANs. EF80 verfügt über 2 Initiator-Ports mit bis zu 6 Ziel-Ports und einem oder mehreren VLANs.
 
 
 
+[[step-2-configure-the-nvmeroce-switches]]
 == Schritt 2: Konfigurieren Sie die NVMe/RoCE-Switches
 
 Die Switches werden entsprechend den Empfehlungen des Anbieters für NVMe over RoCE konfiguriert. Diese Empfehlungen können sowohl Konfigurationsrichtlinien als auch Code-Updates enthalten.
@@ -132,6 +139,7 @@ Informieren Sie sich in der Dokumentation des Switch-Anbieters.
 
 
 
+[[step-3-configure-networking-nvmeroce-vmware]]
 == Schritt 3: Netzwerk konfigurieren – NVMe/RoCE, VMware
 
 Sie können Ihr NVMe-over-RoCE-Netzwerk auf verschiedene Arten einrichten, je nach Ihren Datenspeicheranforderungen. Wenden Sie sich an Ihren Netzwerkadministrator, um Tipps zur Auswahl der besten Konfiguration für Ihre Umgebung zu erhalten.
@@ -154,6 +162,7 @@ Informieren Sie sich in der Dokumentation des Switch-Anbieters.
 
 
 
+[[step-4-configure-array-side-networking-nvmeroce-vmware]]
 == Schritt 4: Netzwerkkonfiguration auf Array-Seite - NVMe/RoCE, VMware
 
 Sie verwenden die SANtricity System Manager-Oberfläche, um NVMe over RoCE-Netzwerke auf der Array-Seite zu konfigurieren.
@@ -254,6 +263,7 @@ Wählen Sie diese Option aus, und geben Sie dann eine statische Adresse in die F
 
 
 
+[[step-5-configure-host-side-networkingnvme-over-roce-vmware]]
 == Schritt 5: Hostseitige Netzwerkkonfiguration—NVMe über RoCE, VMware
 
 Durch die Konfiguration von NVMe over RoCE-Netzwerken auf der Hostseite kann der VMware NVMe over RDMA storage adapter initiator eine Sitzung mit dem Array herstellen.
@@ -293,6 +303,7 @@ Um diese Option zu nutzen, siehe Folgendes:
 
 
 
+[[step-6-verify-ip-network-connections-nvme-over-roce-vmware]]
 == Schritt 6: IP-Netzwerkverbindungen überprüfen – NVMe über RoCE, VMware
 
 Sie überprüfen IP-Netzwerkverbindungen des Internet Protocol (Internet Protocol), indem Sie Ping-Tests verwenden, um sicherzustellen, dass Host und Array kommunizieren können.

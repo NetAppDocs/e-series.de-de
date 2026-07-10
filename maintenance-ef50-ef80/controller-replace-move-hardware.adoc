@@ -25,6 +25,7 @@ CAUTION: Um eine Überhitzung zu vermeiden, lassen Sie den Controller-Einschub n
 
 
 
+[[step-1-remove-the-controller]]
 == Schritt 1: Entfernen Sie den Controller
 
 Vergewissern Sie sich, dass alle Daten im Cache-Speicher auf die Laufwerke geschrieben wurden, trennen Sie alle Kabel vom defekten Controller, und entfernen Sie dann den defekten Controller aus dem Gehäuse.
@@ -107,6 +108,7 @@ Drehen Sie bei Bedarf die Griffe aufrecht (neben den Laschen), um sie aus dem We
 
 
 
+[[step-2-move-the-power-supply]]
 == Schritt 2: Netzteil umstellen
 
 Verschieben Sie das Netzteil (PSU) auf den Ersatzcontroller.
@@ -165,6 +167,7 @@ NOTE: Um eine Beschädigung des internen Anschlusses zu vermeiden, verwenden Sie
 
 
 
+[[step-3-move-the-fans]]
 == Schritt 3: Die Ventilatoren umstellen
 
 Bewegen Sie die Lüfter zum Ersatzcontroller.
@@ -194,6 +197,7 @@ image::../media/icon_round_2.png[Callout-Nummer 2]
 
 
 
+[[step-4-move-the-nv-battery]]
 == Schritt 4: NV-Batterie umsetzen
 
 Setzen Sie die NV-Batterie in den Ersatzcontroller ein.
@@ -247,6 +251,7 @@ Der NV-Akku sollte bündig in seinem Fach sitzen.
 
 
 
+[[step-5-move-system-dimms]]
 == Schritt 5: System-DIMMs verschieben
 
 Setzen Sie die DIMMs in den Ersatzcontroller ein.
@@ -312,6 +317,7 @@ Bei korrekter Einsetzung lässt sich das DIMM leicht einschieben, sitzt aber str
 
 
 
+[[step-6-move-the-io-modules]]
 == Schritt 6: Verschieben Sie die E/A-Module
 
 Verschieben Sie die E/A-Module und alle E/A-Blindmodule auf den Ersatzcontroller.
@@ -360,6 +366,7 @@ Sie können die Lasche auf der linken Seite und die Rändelschraube auf der rech
 
 
 
+[[step-7-install-the-controller]]
 == Schritt 7: Installieren Sie den Controller
 
 Bauen Sie den Ersatzcontroller in das Gehäuse ein, schließen Sie das Netzkabel und alle zugehörigen Kabel wieder an.

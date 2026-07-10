@@ -17,6 +17,7 @@ Zu den Behältern gehören Netzteile, Strombehälter und Lüfterbehälter.
 
 
 
+[[power-supply]]
 == Stromversorgung
 
 
@@ -26,6 +27,7 @@ Jedes Controller-Shelf oder Laufwerk-Shelf für 12 oder 24 Laufwerke enthält zw
 
 
 
+[[shelf-types-for-a-power-supply]]
 === Shelf-Typen für ein Netzteil
 
 Sie können ein Netzteil in den folgenden Shelves ersetzen:
@@ -47,6 +49,7 @@ Das Verfahren zum Austausch eines Netzteils beschreibt nicht, wie ein ausgefalle
 
 
 
+[[requirements-for-replacing-a-power-supply]]
 === Anforderungen für den Austausch eines Netzteils
 
 Wenn Sie ein Netzteil austauschen möchten, beachten Sie die folgenden Anforderungen.
@@ -67,12 +70,14 @@ NOTE: Wenn das zweite Netzteil (Power-Fan-Behälter) im Shelf nicht über den op
 
 
 
+[[power-canister]]
 == Leistungsbehälter
 
 Jedes Controller-Shelf oder Festplatten-Shelf für 60 Laufwerke enthält zwei Stromankanister für Redundanz.
 
 
 
+[[shelf-types-for-a-power-canister]]
 === Regaltypen für einen Aktivkohlebehälter
 
 Sie können einen Leistungsbehälter in den folgenden Regalen ersetzen:
@@ -93,6 +98,7 @@ image::../media/28_dwg_e2860_de460c_psu_maint-e2800.gif[Leistungskanister]
 
 
 
+[[requirements-for-replacing-a-power-canister]]
 === Anforderungen für den Austausch eines Netzkanisters
 
 Wenn Sie einen Netzbehälter austauschen möchten, beachten Sie die folgenden Anforderungen.
@@ -118,12 +124,14 @@ NOTE: Wenn der zweite Strombehälter im Regal keinen optimalen Status hat oder w
 
 
 
+[[fan-canister]]
 == Gebläsebehälter
 
 Jedes Controller-Shelf oder Laufwerks-Shelf für 60 Laufwerke enthält zwei Lüfter-Kanister.
 
 
 
+[[shelf-types-for-a-fan-canister]]
 === Regaltypen für einen Lüfterbehälter
 
 Sie können einen Lüfterbehälter in den folgenden Regalen ersetzen:
@@ -147,6 +155,7 @@ CAUTION: *Möglicher Geräteschaden* -- Wenn Sie einen Lüfterbehälter durch ei
 
 
 
+[[requirements-for-replacing-a-fan-canister]]
 === Anforderungen für den Austausch eines Lüfterkanisters
 
 Wenn Sie einen Lüfterbehälter ersetzen möchten, beachten Sie die folgenden Anforderungen.

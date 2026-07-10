@@ -38,6 +38,7 @@ Informationen über kompatible Hardware finden Sie im https://mysupport.netapp.c
 
 
 
+[[step-1-prepare-to-upgrade-host-interface-cards]]
 == Schritt 1: Bereiten Sie das Upgrade der Host-Schnittstellenkarten vor
 
 Bereiten Sie sich auf ein Upgrade der Host-Schnittstellenkarten (HIC) vor, indem Sie die Konfigurationsdatenbank des Storage-Arrays sichern, Supportdaten erfassen und Host-I/O-Vorgänge anhalten. Dann können Sie das Controller-Shelf herunterfahren.
@@ -121,6 +122,7 @@ Warten Sie, bis alle Vorgänge abgeschlossen sind, bevor Sie mit dem nächsten S
 
 
 
+[[step-2-remove-controller-canister]]
 == Schritt 2: Controller-Behälter entfernen
 
 Sie entfernen den Controller-Behälter, so dass Sie die neue Host-Schnittstellenkarte (HIC) aktualisieren können. Wenn Sie einen Controller-Behälter entfernen, müssen Sie alle Kabel trennen. Anschließend können Sie den Controller-Behälter aus dem Controller-Regal schieben.
@@ -185,6 +187,7 @@ Wenn Sie den Controller-Behälter aus einem E2812-Controller-Shelf, einem E2824-
 
 
 
+[[step-3-remove-a-host-interface-card]]
 == Schritt 3: Entfernen Sie eine Host Interface Card
 
 Entfernen Sie die ursprüngliche Host Interface Card (HIC), damit Sie sie durch eine aktualisierte ersetzen können.
@@ -232,6 +235,7 @@ image::../media/28_dwg_e2800_hic_thumbscrews_maint-e2800.gif[HIC vom Controller 
 
 
 
+[[step-4-install-host-interface-card]]
 == Schritt 4: Installieren Sie die Host Interface Card
 
 Installieren Sie die neue Host Interface Card (HIC), um die Anzahl der Host Ports in Ihrem Speicher-Array zu erhöhen.
@@ -272,6 +276,7 @@ Verwenden Sie keinen Schraubendreher, oder ziehen Sie die Schrauben möglicherwe
 
 
 
+[[step-5-reinstall-controller-canister]]
 == Schritt 5: Controller-Behälter wieder einbauen
 
 Setzen Sie den Controller-Behälter wieder in das Controller-Shelf ein, nachdem Sie die neue Host-Schnittstellenkarte (HIC) installiert haben.
@@ -315,6 +320,7 @@ NOTE: Schließen Sie derzeit keine Datenkabel an die neuen HIC-Ports an.
 
 
 
+[[step-6-complete-host-interface-card-upgrade]]
 == Schritt 6: Führen Sie ein Upgrade der Host-Schnittstellenkarte durch
 
 Führen Sie das Upgrade einer Host-Schnittstellenkarte durch, indem Sie die Controller-LEDs und die Sieben-Segment-Anzeige überprüfen und bestätigen, dass der Status des Controllers optimal ist.

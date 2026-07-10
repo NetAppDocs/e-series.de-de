@@ -15,10 +15,12 @@ summary: Ihr System muss die Kompatibilitätsanforderungen für Remote Storage V
 
 
 
+[[hardware-requirements]]
 == Hardwareanforderungen
 
 
 
+[[supported-protocols]]
 === Unterstützte Protokolle
 
 Für die erste Version der Funktion Remote Storage Volumes wird nur Unterstützung für iSCSI- und IPv4-Protokolle geboten.
@@ -27,6 +29,7 @@ Siehe http://mysupport.netapp.com/matrix["NetApp Interoperabilitäts-Matrix-Tool
 
 
 
+[[storage-system-requirements]]
 === Storage-Systemanforderungen
 
 Das E-Series Storage-System muss Folgendes umfassen:
@@ -41,12 +44,14 @@ Das Remote-System kann entweder ein E-Series Storage-System oder ein System eine
 
 
 
+[[volume-requirements]]
 == Volume-Anforderungen
 
 Für Importe verwendete Volumes müssen die Anforderungen für Größe, Status und andere Kriterien erfüllen.
 
 
 
+[[remote-storage-volume]]
 === Remote Storage Volume
 
 Das Quell-Volume eines Imports wird als „Remote-Storage-Volume“ bezeichnet. Dieses Volume muss die folgenden Kriterien erfüllen:
@@ -73,6 +78,7 @@ Jedes Remote-Storage-Volume ist nur einem Remote-Storage-Objekt zugewiesen. Ein 
 
 
 
+[[target-volume-candidates]]
 === Kandidaten für Zielvolumen
 
 Das Ziel-Volume ist das Ziel-Volume auf dem lokalen E-Series System.
@@ -93,6 +99,7 @@ System Manager überprüft diese Anforderungen automatisch im Assistenten zum Im
 
 
 
+[[restrictions]]
 == Einschränkungen
 
 Die Remote-Speicherfunktion verfügt über folgende Einschränkungen:
@@ -111,6 +118,7 @@ Die Remote-Speicherfunktion verfügt über folgende Einschränkungen:
 
 
 
+[[preparation-for-production-imports]]
 == Vorbereitung für Produktionsimporte
 
 Sie sollten vor dem Produktionsimport einen Test oder einen „Probelauf“ durchführen, um die ordnungsgemäße Storage- und Fabric-Konfiguration zu überprüfen.

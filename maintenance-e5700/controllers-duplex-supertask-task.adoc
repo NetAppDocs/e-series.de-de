@@ -36,6 +36,7 @@ Stellen Sie sicher, dass Sie Folgendes haben:
 
 
 
+[[step-1-prepare-to-replace-controller-duplex]]
 == Schritt 1: Austausch der Steuerung (Duplex) vorbereiten
 
 Bereiten Sie den Austausch eines Controllerkanisters vor, indem Sie überprüfen, ob der Ersatzcontroller-Behälter über die richtige FRU-Teilenummer verfügt, die Konfiguration sichern und Support-Daten erfassen. Wenn der Controller noch online ist, müssen Sie ihn in den Offline-Modus versetzen.
@@ -143,6 +144,7 @@ CAUTION: Beginnen Sie keine anderen Vorgänge, bis der Status aktualisiert wurde
 
 
 
+[[step-2-remove-controller-canister-duplex]]
 == Schritt 2: Controller-Behälter (Duplex) ausbauen
 
 Entfernen Sie einen Controller-Behälter, um den defekten Behälter durch einen neuen zu ersetzen.
@@ -199,6 +201,7 @@ Wenn Sie den Controller-Behälter aus einem E5724-Controller-Regal entfernen, sc
 
 
 
+[[step-3-remove-battery-duplex]]
 == Schritt 3: Entfernen der Batterie (Duplex)
 
 Entfernen Sie den Akku, damit Sie den neuen Controller installieren können.
@@ -234,6 +237,7 @@ image::../media/28_dwg_e2800_remove_battery_maint-e5700.gif[Entfernen Sie die Ba
 
 
 
+[[step-4-remove-host-interface-card-duplex]]
 == Schritt 4: Entfernen der Host-Schnittstellenkarte (Duplex)
 
 Wenn der Controller-Behälter eine Host-Schnittstellenkarte (HIC) enthält, entfernen Sie die HIC aus dem ursprünglichen Controller-Behälter, damit Sie sie im neuen Controller-Behälter wiederverwenden können.
@@ -267,6 +271,7 @@ image::../media/28_dwg_e2800_hic_thumbscrews_maint-e5700.gif[HIC von der Control
 
 
 
+[[step-5-install-battery-duplex]]
 == Schritt 5: Batterie einbauen (Duplex)
 
 Setzen Sie den Akku in den Behälter des Ersatzcontrollers ein. Sie können den Akku, den Sie aus dem ursprünglichen Controller-Behälter entfernt haben, installieren oder einen neuen Akku installieren, den Sie bestellt haben.
@@ -312,6 +317,7 @@ image:../media/28_dwg_e2800_battery_flange_not_ok_maint-e5700.gif["Falscher Meta
 
 
 
+[[step-6-install-host-interface-card-duplex]]
 == Schritt 6: Installieren Sie die Host Interface Card (Duplex)
 
 Wenn Sie eine HIC aus dem ursprünglichen Controller-Behälter entfernt haben, müssen Sie diese HIC im neuen Controller-Behälter installieren.
@@ -348,6 +354,7 @@ image::../media/28_dwg_e2800_hic_faceplace_screws_maint-e5700.gif[Blende wieder 
 
 
 
+[[step-7-install-new-controller-canister-duplex]]
 == Schritt 7: Neuen Controller-Behälter (Duplex) einbauen
 
 Nach der Installation der Batterie und der Host-Schnittstellenkarte (HIC), wenn eine installiert wurde, können Sie den neuen Controller-Behälter im Controller-Shelf installieren.
@@ -388,6 +395,7 @@ NOTE: Wenn der ursprüngliche Controller DHCP für die IP-Adresse nicht verwende
 
 
 
+[[step-8-complete-controller-replacement-duplex]]
 == Schritt 8: Vollständiger Controller-Austausch (Duplex)
 
 Platzieren Sie den Controller online, sammeln Sie Support-Daten und setzen Sie den Betrieb fort.

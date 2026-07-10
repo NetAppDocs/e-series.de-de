@@ -26,6 +26,7 @@ Die Verwendung von CA-signierten Zertifikaten ist ein dreistufiges Verfahren:
 
 
 
+[[step-1-complete-a-csr-file]]
 == Schritt 1: Eine CSR-Datei ausfüllen
 
 Sie müssen zuerst eine CSR-Datei (Certificate Signing Request) generieren, die Ihre Organisation und das Host-System identifiziert, auf dem das Plugin ausgeführt wird. Alternativ können Sie eine CSR-Datei mit einem Tool wie OpenSSL generieren und zu überspringen <<Schritt 2: CSR-Datei senden>>.
@@ -55,6 +56,7 @@ Sie müssen zuerst eine CSR-Datei (Certificate Signing Request) generieren, die 
 
 
 
+[[step-2-submit-csr-file]]
 == Schritt 2: CSR-Datei senden
 
 Nachdem Sie eine CSR-Datei (Certificate Signing Request) erstellt haben, senden Sie die generierte CSR-Datei an eine CA, um signierte Management-Zertifikate für das System zu erhalten, das das Plugin hostet.
@@ -76,6 +78,7 @@ Immer wenn Sie eine CSR erstellen, erstellt das System ein privates und öffentl
 
 
 
+[[step-3-import-management-certificates]]
 == Schritt 3: Import Management Zertifikate
 
 Nachdem Sie von der Zertifizierungsstelle (CA) signierte Zertifikate erhalten haben, importieren Sie die Zertifikate in das Hostsystem, auf dem das Plugin installiert ist.

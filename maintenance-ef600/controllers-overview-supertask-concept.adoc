@@ -17,6 +17,7 @@ Ein Controller besteht aus einer Hauptplatine, Firmware und Software. Sie steuer
 
 
 
+[[controller-replacement-requirements]]
 == Anforderungen für den Austausch des Controllers
 
 Bevor Sie einen Controller austauschen, müssen folgende Funktionen erforderlich sein:
@@ -30,6 +31,7 @@ Bevor Sie einen Controller austauschen, müssen folgende Funktionen erforderlich
 
 
 
+[[replacement-while-powered-on]]
 == Ersatz beim Einschalten
 
 Sie können einen Controller-Behälter ersetzen, während Ihr Speicher-Array eingeschaltet ist und Host-I/O-Vorgänge ausführt, wenn die folgenden Bedingungen erfüllt sind:

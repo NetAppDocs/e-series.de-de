@@ -18,6 +18,7 @@ Jeder Controller-Behälter enthält eine Batterie, die zwischengespeicherte Date
 
 
 
+[[recovery-guru-alerts]]
 == Recovery Guru – Warnmeldungen
 
 Wenn der Recovery Guru in SANtricity System Manager einen der folgenden Statusmeldungen meldet, müssen Sie die betroffene Batterie austauschen:
@@ -30,6 +31,7 @@ Sehen Sie sich im SANtricity System Manager die Details im Recovery Guru an, um 
 
 
 
+[[procedure-overview]]
 == Verfahrensübersicht
 
 Um Ihre Daten zu schützen, müssen Sie eine fehlerhafte Batterie so schnell wie möglich austauschen.
@@ -45,6 +47,7 @@ Im Folgenden finden Sie eine Übersicht über die Schritte zum Austauschen einer
 
 
 
+[[requirements]]
 == Anforderungen
 
 Wenn Sie einen fehlerhaften Akku austauschen möchten, müssen Sie Folgendes haben:

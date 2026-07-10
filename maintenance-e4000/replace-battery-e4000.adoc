@@ -27,6 +27,7 @@ Wenn Sie einen fehlerhaften Akku austauschen möchten, müssen Sie Folgendes hab
 
 
 
+[[step-1-prepare-to-replace-battery]]
 == Schritt 1: Bereiten Sie den Batteriewechsel vor
 
 Die Schritte zur Vorbereitung auf den Batterieaustausch hängen davon ab, ob Sie über eine Duplexkonfiguration (zwei Controller) oder eine Simplex-Konfiguration (ein Controller) verfügen.
@@ -168,6 +169,7 @@ NOTE: Wenn Sie mit dem Controller auf SANtricity System Manager zugreifen, den S
 ====
 
 
+[[step-2-remove-e4000-controller-canister]]
 == Schritt 2: Entfernen Sie den E4000-Controllerbehälter
 
 Sie müssen den Controller-Behälter aus dem Controller-Regal entfernen, damit Sie den Akku entfernen können.
@@ -195,6 +197,7 @@ Wenn eine der LEDs leuchtet, wird der Controller weiterhin mit Akkustrom versorg
 
 
 
+[[step-3-install-the-new-battery]]
 == Schritt 3: Setzen Sie die neue Batterie ein
 
 Sie müssen die fehlerhafte Batterie entfernen und austauschen.
@@ -251,6 +254,7 @@ Stellen Sie sicher, dass der Anschluss in den Akkusockel auf der Hauptplatine ei
 
 
 
+[[step-4-reinstall-the-controller-canister]]
 == Schritt 4: Montieren Sie den Controller-Behälter wieder
 
 Nachdem Sie Komponenten im Controller-Aktivkohlebehälter ausgetauscht haben, setzen Sie ihn wieder in das Gehäuse ein.
@@ -270,6 +274,7 @@ NOTE: Wenn Sie die Medienkonverter (QSFPs oder SFPs) entfernt haben, sollten Sie
 
 
 
+[[step-5-complete-battery-replacement]]
 == Schritt 5: Kompletter Batteriewechsel
 
 Die Schritte zum vollständigen Batterieaustausch hängen davon ab, ob Sie eine Duplex- (zwei Controller) oder Simplex- (ein Controller)-Konfiguration haben.

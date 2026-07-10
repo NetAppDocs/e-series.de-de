@@ -16,6 +16,7 @@ Als ersten Schritt sollten Sie überprüfen, ob Ihre Linux-Konfiguration unterst
 
 
 
+[[verify-the-linux-configuration-is-supported]]
 == Überprüfen Sie, ob die Linux-Konfiguration unterstützt wird
 
 Um einen zuverlässigen Betrieb zu gewährleisten, erstellen Sie einen Implementierungsplan und überprüfen mit dem NetApp Interoperabilitäts-Matrix-Tool (IMT) die Unterstützung der gesamten Konfiguration.
@@ -37,12 +38,14 @@ Detaillierte Informationen zu der von Ihnen gewählten Konfiguration finden Sie 
 
 
 
+[[review-nvme-over-infiniband-restrictions]]
 == Einschränkungen von NVMe over InfiniBand prüfen
 
 Informationen zur Verwendung von NVMe over InfiniBand finden Sie im https://mysupport.netapp.com/matrix["NetApp Interoperabilitäts-Matrix-Tool"^] Um die aktuellen Einschränkungen hinsichtlich Controller, Host und Recovery zu prüfen.
 
 
 
+[[storage-and-disaster-recovery-restrictions]]
 === Einschränkungen bei Storage und Disaster Recovery
 
 * Asynchrones und synchrones Spiegeln werden nicht unterstützt.

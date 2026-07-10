@@ -27,6 +27,7 @@ NOTE: Siehe  https://mysupport.netapp.com/matrix["NetApp Interoperabilitäts-Mat
  SLES 12 use Device Mapper Multipath (DMMP) for multipathing when using NVMe over Infiniband. RHEL 8, RHEL 9, RHEL 10, SLES 15 and SLES 16 use a built-in Native NVMe Failover. Depending on which OS you are running, some additional configuration of multipath is required to get it running properly.
 
 
+[[enable-device-mapper-multipath-dmmp-sles-12]]
 == Aktivieren von Device Mapper Multipath (DMMP) SLES 12
 
 Standardmäßig ist DM-MP in SLES deaktiviert. Führen Sie die folgenden Schritte aus, um DM-MP-Komponenten auf dem Host zu aktivieren.
@@ -69,6 +70,7 @@ devices {
 
 
 
+[[setting-up-rhel-8-with-native-nvme-multipathing]]
 == Einrichtung von RHEL 8 mit nativem NVMe-Multipathing
 
 Natives NVMe-Multipathing ist in RHEL 8 standardmäßig deaktiviert und muss mit den folgenden Schritten aktiviert werden.

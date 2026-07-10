@@ -16,12 +16,14 @@ Die folgende Tabelle beschreibt neue Funktionen in den neuesten SANtricity OS-Re
 
 
 
+[[new-features-in-version-12-0r1]]
 == Neue Funktionen in Version 12.0R1
 
 Diese Version enthält nur geringfügige Änderungen und keine neuen Funktionen. Weitere Informationen zu den Änderungen in dieser Version finden Sie in der E-Series SANtricity OS 12.0R1 README.
 
 
 
+[[new-features-in-version-12-0]]
 == Neue Funktionen in Version 12.0
 
 
@@ -70,18 +72,21 @@ Im SANtricity System Manager ist jetzt ein neuer Skripteditor verfügbar. Der Sk
 |===
 
 
+[[new-features-in-version-11-90r5]]
 == Neue Funktionen in Version 11.90R5
 
 Diese Version enthält ausschließlich Fehlerbehebungen und keine neuen Funktionen. Weitere Informationen zu den Änderungen in dieser Version finden Sie in der E-Series SANtricity OS 11.90R5 README.
 
 
 
+[[new-features-in-version-11-90r4]]
 == Neue Funktionen in Version 11.90R4
 
 Diese Version enthält lediglich kleinere Änderungen und keine neuen Funktionen. Weitere Informationen zu den Änderungen in dieser Version finden Sie in der E-Series SANtricity OS 11.90R4 README.
 
 
 
+[[new-features-in-version-11-90r3]]
 == Neue Funktionen in Version 11.90R3
 
 [cols="35h,~"]
@@ -97,12 +102,14 @@ Unterstützung für IOM12C- und DCM3-SAS-3-Shelves ist ab der Controller-Firmwar
 |===
 
 
+[[new-features-in-version-11-90r2]]
 == Neue Funktionen in Version 11.90R2
 
 Diese Version enthält nur geringfügige Änderungen und keine neuen Funktionen. Weitere Informationen zu den Änderungen in dieser Version finden Sie im https://library.netapp.com/ecm/ecm_download_file/ECMLP3334464["Versionshinweise zu E-Series 11.90"^].
 
 
 
+[[new-features-in-version-11-90r1]]
 == Neue Funktionen in Version 11.90R1
 
 [cols="35h,~"]
@@ -125,6 +132,7 @@ Der E4000 Controller unterstützt jetzt 12 GB SAS-Host-Schnittstellenkarten.
 |===
 
 
+[[new-features-in-version-11-90]]
 == Neue Funktionen in Version 11.90
 
 [cols="35h,~"]
@@ -168,24 +176,28 @@ Konfigurierbar nur über die REST-API, eine neue Einstellung für die Anmeldespe
 |===
 
 
+[[new-features-in-version-11-80-1r4]]
 == Neue Funktionen in Version 11.80.1R4
 
 Diese Version enthält nur geringfügige Änderungen und keine neuen Funktionen oder Einschränkungen. Weitere Informationen zu den Änderungen in dieser Version finden Sie in der README-Datei.
 
 
 
+[[new-features-in-version-11-80-1r3]]
 == Neue Funktionen in Version 11.80.1R3
 
 Diese Version enthält nur geringfügige Änderungen und keine neuen Funktionen oder Einschränkungen. Weitere Informationen zu den Änderungen in dieser Version finden Sie in der README-Datei.
 
 
 
+[[new-features-in-version-11-80-1r2]]
 == Neue Funktionen in Version 11.80.1R2
 
 Diese Version enthält nur geringfügige Änderungen und keine neuen Funktionen oder Einschränkungen. Weitere Informationen zu den Änderungen in dieser Version finden Sie in der README-Datei.
 
 
 
+[[new-features-in-version-11-80-1r1]]
 == Neue Funktionen in Version 11.80.1R1
 
 [cols="35h,~"]
@@ -201,6 +213,7 @@ Die Länge des Schlüssels für Managementzertifikate für SANtricity System Man
 |===
 
 
+[[new-features-in-version-11-80-1]]
 == Neue Funktionen in Version 11.80.1
 
 [cols="35h,~"]
@@ -244,6 +257,7 @@ Der Web Services Proxy wurde auf Version 6.1 aktualisiert, um die Kompatibilitä
 |===
 
 
+[[new-features-in-version-11-80]]
 == Neue Funktionen in Version 11.80
 
 [cols="35h,~"]
