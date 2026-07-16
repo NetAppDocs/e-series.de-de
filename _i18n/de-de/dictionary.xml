@@ -10718,8 +10718,6 @@
   <block id="56dd88f73dc9e3fe0f4f088112d50bf6" category="admonition">*RISIKO VON DATENVERLUST.* Sie müssen NVMe over RoCE in einer verlustfreien Umgebung ausführen. Aktivieren Sie die End-to-End-Flusskontrolle mithilfe von Global Pause Frames oder Priority Flow Control (PFC) in Ihrem Netzwerk, um das Risiko von Datenverlust zu eliminieren. PFC erfordert, dass NVMe over RoCE als Priorität-3-Datenverkehr mit einem DSCP-Wert von <block ref="f0935e4cd5920aa6c7c996a5ee53a70f" prefix=" " category="inline-code"></block> gekennzeichnet wird.</block>
   <block id="cfc9a52b36b4bac1175d85feda4737d6" category="inline-link-macro">IP-Adressen mithilfe von DHCP konfigurieren</block>
   <block id="ab76f1b6a91823d84cc28d97a438ee49" category="paragraph">Nachdem Sie die Unterstützung für die Linux-Konfiguration überprüft und die Einschränkungen geprüft haben, <block ref="26e7ddc4a99218cc55e1c183bc759716" category="inline-link-macro-rx"></block>.</block>
-  <block id="70d9e3c68d42d6ec42ab792e06c44357" category="inline-link-macro">NVMe</block>
-  <block id="1791f8465d11d224647d11ee0eab3955" category="list-text"><block ref="1791f8465d11d224647d11ee0eab3955" category="inline-link-macro-rx"></block></block>
   <block id="68df22b283edf6918b272ee1e4eef450" category="paragraph">Wenn Sie einen defekten HIC ersetzen, müssen Sie einen Controller offline nehmen, um das System in einen nicht-redundanten Zustand zu versetzen, den HIC ersetzen und den Controller wieder online schalten.</block>
   <block id="7f3980e2c518e011140305dfa2c7cc40" category="list-text">Planen Sie ein Wartungsfenster für diesen Vorgang ein. Sie können erst wieder auf die Daten des Speichersystems zugreifen, nachdem Sie diesen Vorgang erfolgreich abgeschlossen haben. Da beide Controller beim Einschalten dieselbe HIC-Konfiguration aufweisen müssen, müssen Sie einen Controller offline nehmen, um das System in einen nicht-redundanten Zustand zu versetzen, wenn Sie HICs installieren.</block>
   <block id="79a7b3d475a1ce35fef4a7398f3e40b8" category="list-text">Für EF300-Controller muss die SAS-Erweiterungskarte in Port 1 installiert werden, um die Erweiterung des Laufwerksschachts zu ermöglichen.</block>
@@ -10745,4 +10743,5 @@
   <block id="22839016e944bb39ae944b854e55b7ef" category="cell"><block ref="22839016e944bb39ae944b854e55b7ef" category="inline-link-rx"></block></block>
   <block id="6a7c8d63e9ff78bb1b7b5d797d0587e5" category="cell"><block ref="6a7c8d63e9ff78bb1b7b5d797d0587e5" category="inline-link-rx"></block></block>
   <block id="1ed965aef797c8ec8dad05a7ba9680f3" category="cell"><block ref="1ed965aef797c8ec8dad05a7ba9680f3" category="inline-link-rx"></block></block>
+  <block id="030083a432b10805a22ebd213eb3faf3" category="list-text"><block ref="030083a432b10805a22ebd213eb3faf3" category="inline-link-macro-rx"></block></block>
 </blocks>
