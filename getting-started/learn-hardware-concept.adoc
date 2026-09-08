@@ -22,12 +22,12 @@ Einige der verfügbaren E-Series-Array-Modelle sind unten aufgeführt. Eine voll
 * E4000 Serie – Hybrid der Einstiegsklasse
 * EF600 Serie: Midrange-All-Flash- und All-NVMe-Storage
 * EF300 Serie – All-Flash der Einstiegsklasse, All NVMe
-* EF300C Serie – All-Flash der Einstiegsklasse, All NVMe
-* EF600C Serie: Midrange-All-Flash- und All-NVMe-Storage
-* E2800 Serie – Hybrid der Einstiegsklasse
-* EF280 Serie – All-Flash der Einstiegsklasse
-* E5700 Series – Midrange Hybrid
-* EF570 Serie – Midrange All Flash
+* EF300C series - All-Flash-Einstiegsmodell mit hoher NVMe-Dichte
+* EF600C Serie, Midrange All-Flash mit hoher Dichte und NVMe
+* E2800 Serie (Nicht mehr erhältlich) - Hybrid der Einstiegsklasse
+* EF280 series (End-of-availability) - Einstiegs-All-Flash-System
+* E5700 Serie (End-of-availability) - Midrange-Hybrid
+* EF570 series (End-of-availability) - Midrange-All-Flash
 
 
 
@@ -57,6 +57,10 @@ Laufwerke::
 ** 15,3 TB
 ** 30 TB
 ** 60 TB
++
+
+NOTE: Bei 30-TB- und 60-TB-Laufwerken unterstützt das EF50 ausschließlich die Verwendung von Dynamic Disk Pools ohne Unterstützung für Legacy RAID.
+
 
 
 * Unterstützen Sie bis zu 24 NVMe-SSD-Laufwerke im Controller-Einschub.
@@ -65,6 +69,13 @@ Laufwerke::
 +
 
 NOTE: Beim Konfigurieren Ihres EF50-Systems ist es entscheidend, die Spiegelungskabel korrekt anzuschließen. Weitere Informationen finden Sie unter https://docs.netapp.com/us-en/e-series/install-hw-ef50-ef80/install-cable.html#step-1-cable-the-inter-controller-mirroring-connections["Verkabeln Sie die Spiegelungsverbindungen zwischen den Controllern – EF50 und EF80"].
+
+* Unterstützung für eine optionale SAS-Erweiterungskarte, die SAS-Erweiterungs-Shelf-Verbindungen ermöglicht
+* Ein einzelner Festplattenpool wird automatisch erstellt, wenn beim Systemstart genügend nicht zugewiesene Laufwerke vorhanden sind.
+* Ab SANtricity OS 12.10 unterstützt das EF50 die Kombination von 3,8-TB-, 7,6-TB- und 15,3-TB-Festplatten mit 30-TB- und 60-TB-Festplatten. Diese Festplatten in einem gemischten Gehäuse werden automatisch in einem einzigen Festplattenpool ohne RAID-Unterstützung zusammengefasst.
++
+
+NOTE: Automatisch erstellte Festplattenpools können über den SANtricity System Manager oder SANtricity CLI gelöscht werden. Weitere Informationen finden Sie unter  https://docs.netapp.com/us-en/e-series-cli/commands-a-z/delete-diskpool.html["Löschen eines Festplattenpools - SANtricity CLI-Anleitung"^][Link 1] und  https://docs.netapp.com/us-en/e-series-santricity/sm-storage/delete-pool-or-volume-group.html["Löschen eines Pools oder einer Volume Group - SANtricity System Manager Guide"^][Link 2].
 
 
 
@@ -76,6 +87,7 @@ Verfügbar mit folgenden Schnittstellen:
 
 * 64Gb NVMe / Fibre Channel
 * 64Gb Fibre Channel
+* 25 GB iSCSI
 
 
 --
@@ -104,6 +116,10 @@ Laufwerke::
 ** 15,3 TB
 ** 30 TB
 ** 60 TB
++
+
+NOTE: Bei 30 TB- und 60 TB-Laufwerken unterstützt das EF80 ausschließlich die Verwendung von Dynamic Disk Pools ohne Unterstützung für ältere RAID-Systeme.
+
 
 
 * Unterstützen Sie bis zu 24 NVMe-SSD-Laufwerke im Controller-Einschub.
@@ -113,6 +129,12 @@ Laufwerke::
 
 NOTE: Beim Konfigurieren Ihres EF80-Systems ist es entscheidend, die Spiegelungskabel korrekt anzuschließen. Weitere Informationen finden Sie unter https://docs.netapp.com/us-en/e-series/install-hw-ef50-ef80/install-cable.html#step-1-cable-the-inter-controller-mirroring-connections["Verkabeln Sie die Spiegelungsverbindungen zwischen den Controllern – EF50 und EF80"].
 
+* Unterstützung für eine optionale SAS-Erweiterungskarte, die SAS-Erweiterungs-Shelf-Verbindungen ermöglicht
++
+Wenn die SAS Erweiterungskarte installiert ist, ist die maximale Anzahl von Host-Schnittstellenkarten für die Host-Konnektivität auf zwei pro Controller begrenzt.
+
+* Ein einzelner Festplattenpool wird automatisch erstellt, wenn beim Systemstart genügend nicht zugewiesene Laufwerke vorhanden sind.
+* Ab SANtricity OS 12.10 unterstützt das EF80 die Kombination von 3,8-TB-, 7,6-TB- und 15,3-TB-Festplatten mit 30-TB- und 60-TB-Festplatten. Diese Festplatten in einem gemischten Gehäuse werden automatisch in einem einzigen Festplattenpool ohne RAID-Unterstützung zusammengefasst. + HINWEIS: Automatisch erstellte Festplattenpools können über den SANtricity System Manager oder SANtricity CLI gelöscht werden. Weitere Informationen finden Sie unter  https://docs.netapp.com/us-en/e-series-cli/commands-a-z/delete-diskpool.html["Löschen eines Festplattenpools - SANtricity CLI-Anleitung"^] und  https://docs.netapp.com/us-en/e-series-santricity/sm-storage/delete-pool-or-volume-group.html["Löschen eines Pools oder einer Volume Group - SANtricity System Manager Guide"^].
 
 
 --
@@ -121,6 +143,7 @@ Schnittstellen::
 --
 Verfügbar mit folgenden Schnittstellen:
 
+* 200Gb NVMe / TCP
 * 200 GB NVMe/RoCE
 * 64Gb NVMe / Fibre Channel
 * 200 GB NVMe/IB
@@ -162,6 +185,7 @@ Schnittstellen::
 --
 Verfügbar mit folgenden Schnittstellen:
 
+* 25 GB iSCSI
 * 12 GB SAS
 * 1Gb oder 10Gb Base-T iSCSI
 * 1 GB, 10 GB oder 25 GB iSCSI
@@ -250,7 +274,11 @@ Laufwerke::
 ** Es werden keine Erweiterungs-Shelf-Konfigurationen unterstützt.
 
 
-* Ein einzelner Laufwerk-Pool wird automatisch erstellt, wenn während des Systemstarts nicht genügend nicht zugewiesene Laufwerke vorhanden sind.
+* Ein einzelner Festplattenpool wird automatisch erstellt, wenn beim Systemstart genügend nicht zugewiesene Laufwerke vorhanden sind.
++
+
+NOTE: Automatisch erstellte Festplattenpools können über den SANtricity System Manager oder SANtricity CLI gelöscht werden. Weitere Informationen finden Sie unter  https://docs.netapp.com/us-en/e-series-cli/commands-a-z/delete-diskpool.html["Löschen eines Festplattenpools - SANtricity CLI-Anleitung"^][Link 1] und  https://docs.netapp.com/us-en/e-series-santricity/sm-storage/delete-pool-or-volume-group.html["Löschen eines Pools oder einer Volume Group - SANtricity System Manager Guide"^][Link 2].
+
 
 
 --
@@ -342,6 +370,10 @@ Laufwerke::
 
 * Unterstützung für eine Host-Schnittstellenkarte pro Controller
 * Ein einzelner Laufwerk-Pool wird automatisch erstellt, wenn während des Systemstarts nicht genügend nicht zugewiesene Laufwerke vorhanden sind.
++
+
+NOTE: Automatisch erstellte Festplattenpools können über den SANtricity System Manager oder SANtricity CLI gelöscht werden. Weitere Informationen finden Sie unter  https://docs.netapp.com/us-en/e-series-cli/commands-a-z/delete-diskpool.html["Löschen eines Festplattenpools - SANtricity CLI-Anleitung"^][Link 1] und  https://docs.netapp.com/us-en/e-series-santricity/sm-storage/delete-pool-or-volume-group.html["Löschen eines Pools oder einer Volume Group - SANtricity System Manager Guide"^][Link 2].
+
 
 
 --
@@ -363,7 +395,7 @@ Verfügbar mit folgenden Schnittstellen:
 
 
 --
-.E2800 – Modelle
+.E2800 Modelle (EOA)
 --
 Rack-Größen::
 +
@@ -405,7 +437,7 @@ Verfügbar mit folgenden Schnittstellen:
 
 
 --
-.EF280 Modelle
+.EF280 Modelle (EOA)
 --
 Rack-Größen::
 +
@@ -435,7 +467,7 @@ Verfügbar mit folgenden Schnittstellen:
 
 
 --
-.E5700 Modelle
+.E5700 Modelle (EOA)
 --
 Rack-Größen::
 +
@@ -481,7 +513,7 @@ Verfügbar mit folgenden Schnittstellen:
 
 
 --
-.EF570 Modelle
+.EF570 Modelle (EOA)
 --
 Rack-Größen::
 +

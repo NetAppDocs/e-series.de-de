@@ -1,10 +1,10 @@
 ---
 permalink: maintenance-e2800/hpp-complete-protocol-conversion-task.html 
 sidebar: sidebar 
-keywords: 'E2800 convert host port protocol, convert E2800 FC iSCSI, Fibre Channel protocol, iSCSI protocol, convert HPP, converting host port protocol, SFP+ (optical) host ports, E2800, E-Series, eseries' 
+keywords: E2800 convert host port protocol, convert E2800 FC iSCSI, Fibre Channel protocol, iSCSI protocol, convert HPP, converting host port protocol, SFP optical host ports, E2800, E-Series, eseries 
 summary: Schließen Sie die Protokollkonvertierung für den Host-Port für ein E2800 Array ab. 
 ---
-= Schließen Sie die Host-Protokoll-Konvertierung an - E2800
+= Die Host-Protokollkonvertierung für ein E2800 Array wird abgeschlossen.
 :allow-uri-read: 
 :experimental: 
 :icons: font
@@ -29,6 +29,7 @@ Wenn Sie alle Host Ports von FC zu iSCSI konvertiert haben, müssen Sie iSCSI-Ne
 Die Switches für den iSCSI-Datenverkehr sollten entsprechend den Empfehlungen des Anbieters für iSCSI konfiguriert werden. Diese Empfehlungen können sowohl Konfigurationsrichtlinien als auch Code-Updates enthalten.
 
 . Wählen Sie im SANtricity System Manager Menü:Hardware[iSCSI-Ports konfigurieren].
+. Der Schalter wird angeklickt und *Configure iSCSI ports* wird ausgewählt.
 . Wählen Sie die Porteinstellungen aus.
 +
 Sie können Ihr iSCSI-Netzwerk auf unterschiedliche Weise einrichten. Wenden Sie sich an Ihren Netzwerkadministrator, wenn Sie Tipps zur Auswahl der für Ihre Umgebung am besten geeigneten Konfiguration benötigen.

@@ -11,7 +11,7 @@ summary: 'Nach der Installation Ihrer EF50- oder EF80-Speichersystemhardware ver
 
 
 [role="lead"]
-Nach der Installation Ihrer EF50- oder EF80-Speichersystemhardware verkabeln Sie die Inter-Controller-Spiegelungs- und Host-Netzwerkverbindungen. (Sie verkabeln die Management-Ports später im Abschnitt „Complete storage system setup“.)
+Nach der Installation Ihrer EF50 oder EF80 Speichersystemhardware werden gegebenenfalls die Inter-Controller-Spiegelung, die Host-Netzwerkverbindungen und die SAS Shelves verkabelt. (Die Management-Ports werden später im Abschnitt „Vollständige Einrichtung des Speichersystems“ verkabelt.)
 
 .Über diese Aufgabe
 * Der Begriff _I/O-Modul_ wird in diesem Verfahren verwendet, um sich auf die Host-Schnittstellenkarten (HICs) zu beziehen.
@@ -60,7 +60,10 @@ image:../media/drw_ef50-ef80_mirroring_2p_100gbe_ieops-2659.svg["EF50- und EF80-
 Verkabeln Sie die Host-Anschlüsse Ihres Speichersystems entsprechend Ihrer Netzwerktopologie: direkt angeschlossen oder fabric-angebunden.
 
 .Über diese Aufgabe
-* Je nach Speichersystemmodell können die im Speichersystem installierten Host-I/O-Module entweder Ethernet oder Fibre Channel (FC) sein. Die Verkabelungsbeispiele in diesem Verfahren zeigen beide Typen von Host-I/O-Modulen, wie sie von den Speichersystemmodellen unterstützt werden.
+* Je nach Speichersystemmodell und der verwendeten Version von SANtricity werden unterschiedliche Host-I/O-Module unterstützt. Die Verkabelungsbeispiele in diesem Verfahren zeigen Ethernet- und Fibre Channel (FC) Host-I/O-Module.
++
+Eine Übersicht aller unterstützten Host-E/A-Module und Steckplatzprioritäten für Ihr Speichersystemmodell finden Sie unter link:https://hwu.netapp.com["NetApp Hardware Universe"^].
+
 * In den Verkabelungsbeispielen sind keine 4-Port 64Gb FC HBAs in Host 1 und Host 2 dargestellt; wenn Sie diese jedoch installiert haben, verkabeln Sie jeden anderen Port auf die gleiche Weise wie bei den 2-Port HBAs.
 
 
@@ -330,5 +333,93 @@ image:../media/drw_ef80_4p_64gb_fc_3hic_fabric_ieops-2675.svg["EF80 Fabric-Attac
 =====
 --
 ====
+
+
+[[step-3-cable-the-sas-shelf-connections]]
+== Schritt 3: Verkabelung der SAS Shelf Verbindungen
+
+Die folgenden Verfahren zeigen, wie die Controller an ein DE460C Gehäuse oder an einen Stapel aus drei DE460C Gehäusen angeschlossen werden.
+
+.Über diese Aufgabe
+* Die Verkabelungsbeispiele zeigen DE460C Einschübe; die Verkabelung ist jedoch für alle unterstützten SAS Einschübe identisch. Eine Liste der unterstützten SAS Einschübe ist unter link:https://hwu.netapp.com["NetApp Hardware Universe"^] zu finden.
+* Informationen zur maximalen Anzahl der für Ihr Speichersystem unterstützten Shelfs sowie zu allen Verkabelungsoptionen, z. B. optischen, finden Sie unter link:https://hwu.netapp.com["NetApp Hardware Universe"^].
+* Die Verkabelungsverfahren zeigen Controller mit einem SAS E/A-Modul in Steckplatz 3. Dies ist die einzige unterstützte SAS E/A-Modulkonfiguration für SANtricity 12.10.
+* Die Verkabelungsabbildungen zeigen die Verkabelung von Controller A in Blau und die Verkabelung von Controller B in Rot.
+* Die Verkabelung der Controller und eines oder mehrerer Shelfs erfolgt stets so, dass zwei Kabelverbindungen für den A-seitigen Pfad (IOMA) und den B-seitigen Pfad (IOMB) vorhanden sind, wie in den Verkabelungsabbildungen dargestellt.
+* Sie verwenden die mit Ihrem Speichersystem gelieferten Speicherkabel, bei denen es sich um den folgenden Kabeltyp handeln könnte:
++
+*mini-SAS HD-Kabel*
+
++
+image::../media/oie_cable_mini_sas_hd_to_mini_sas_hd.svg[mini-SAS HD Kabel]
+
+
+
+[role="tabbed-block"]
+====
+.Option 1: Ein DE460C Shelf
+--
+Jeder Controller wird mit jedem IOM12-Modul auf dem DE460C-Einschub verkabelt, sodass die Controller über einen A-seitigen Pfad (IOMA) und einen B-seitigen Pfad (IOMB) zum Einschub verfügen.
+
+.Schritte
+. Verbinden Sie Controller A Port 3a mit Shelf IOMA Port 1.
+. Verbinden Sie Controller A, Port 3b, mit Shelf IOMA, Port 2.
+. Controller A Port 3c mit Shelf IOMB Port 3 verkabeln.
+. Controller A, Port 3d, mit Shelf IOMB, Port 4, verkabeln.
+. Controller B Port 3a mit Shelf IOMA Port 3 verkabeln.
+. Verbinden Sie Controller B Port 3b mit Shelf IOMA Port 4.
+. Verbinden Sie Controller B Port 3c mit Shelf IOMB Port 1.
+. Verbinden Sie Controller B Port 3d mit Shelf IOMB Port 2.
+
+
+Wenn die Verkabelung des Shelfs abgeschlossen ist, sollte sie wie folgt aussehen:
+
+image:../media/drw_ef50-ef80_1_de460c_cabling_ieops-2981.svg["Controller-Ports mit einem DE460C Shelf verkabeln"]
+
+--
+.Option 2: Drei DE460C Shelfs
+--
+Die drei Shelfs werden miteinander verbunden (Shelf-zu-Shelf-Verbindungen), und anschließend wird jeder Controller mit jedem Ende des Shelf-Stacks (Shelf 1 und Shelf 3) verbunden, sodass die Controller über einen A-seitigen Pfad (IOMA) und einen B-seitigen Pfad (IOMB) zum Shelf-Stack verfügen.
+
+. Die Shelf-zu-Shelf-Verbindungen für den IOMA-Pfad werden verkabelt:
++
+.. Schließen Sie Shelf 1, IOMA-Anschluss 1, an Shelf 2, IOMA-Anschluss 4, an.
+.. Verbinden Sie Shelf 1 IOMA port 2 mit Shelf 2 IOMA port 3.
+.. Verbinden Sie Shelf 2 IOMA-Anschluss 1 mit Shelf 3 IOMA-Anschluss 4.
+.. Verbinden Sie Shelf 2 IOMA Port 2 mit Shelf 3 IOMA Port 3.
+
+
+. Die Shelf-zu-Shelf-Verbindungen für den IOMB-Pfad werden verkabelt:
++
+.. Verbinden Sie Shelf 1 IOMB Port 1 mit Shelf 2 IOMB Port 3.
+.. Verbinden Sie Shelf 1 IOMB Port 2 mit Shelf 2 IOMB Port 4.
+.. Schließen Sie Shelf 2 IOMB port 1 an Shelf 3 IOMB port 3 an.
+.. Schließen Sie Shelf 2 IOMB Port 2 an Shelf 3 IOMB Port 4 an.
+
+
+. Verkabelung von Controller A mit Shelf 3 (IOMA Pfad) und 1 (IOMB Pfad):
++
+.. Verbinden Sie Controller A, Port 3a, mit Shelf 3, IOMA-Port 1
+.. Controller A, Port 3b, mit Shelf 3, IOMA-Port 2, verkabeln.
+.. Controller A, Port 3c, mit Shelf 1, IOMB Port 3, verkabeln.
+.. Verbinden Sie Controller A Port 3d mit Shelf 1 IOMB Port 4.
+
+
+. Controller B mit Shelf 1 (IOMA Pfad) und 3 (IOMB Pfad) verkabeln:
++
+.. Controller B Port 3a mit Shelf 1 IOMA Port 3 verkabeln.
+.. Verbinden Sie Controller B Port 3b mit Shelf 1 IOMA Port 4.
+.. Controller B Port 3c mit Shelf 3 IOMB Port 1 verkabeln.
+.. Verbinden Sie Controller B, Port 3d, mit Shelf 3, IOMB-Port 2.
+
+
+
+
+Wenn Sie die Regale verkabelt haben, sollte die Verkabelung wie folgt aussehen:
+
+image:../media/drw_ef50-ef80_3_de460c_cabling_ieops-2992.svg["Controller mit den DE460C Shelfs 1 und 3 verkabeln"]
+
+--
+====
 .Was kommt als Nächstes?
-Nach der Verkabelung der Inter-Controller-Spiegelung und der Host-Verbindungen für Ihr Speichersystem link:install-power-hardware.html["Schalten Sie Ihr Speichersystem ein"].
+Nach der Verkabelung Ihres Speichersystems link:install-power-hardware.html["Schalten Sie Ihr Speichersystem ein"].

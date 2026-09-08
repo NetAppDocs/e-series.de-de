@@ -116,7 +116,7 @@ CAUTION: *Möglicher Datenverlust* – Wenn Sie diesen Vorgang fortsetzen, währ
 +
 Die grüne LED „Cache aktiv“ auf der Rückseite des Controllers leuchtet, wenn Daten im Cache auf die Laufwerke geschrieben werden müssen. Sie müssen warten, bis diese LED ausgeschaltet ist.
 
-. Wählen Sie auf der Startseite des SANtricity System Managers die Option *Vorgänge in Bearbeitung anzeigen*.
+. Auf der Startseite des SANtricity System Manager wird Menü:Speicher[Laufende Vorgänge] ausgewählt.
 . Bestätigen Sie, dass alle Vorgänge abgeschlossen wurden, bevor Sie mit dem nächsten Schritt fortfahren.
 . Schalten Sie beide Netzschalter am Controller Shelf aus.
 . Warten Sie, bis alle LEDs am Controller-Shelf ausgeschaltet sind.
@@ -137,7 +137,7 @@ Bewahren Sie das Verpackungsmaterial auf, das beim Versand des defekten Reglerka
 Wenn ein Controller einen Fehler aufweist und ausgetauscht werden muss, wird im Bereich Details des Recovery Guru die Ersatzteilnummer angezeigt. Wenn Sie diese Nummer manuell suchen müssen, führen Sie die folgenden Schritte aus:
 
 +
-.. Wählen Sie *Hardware*.
+.. Menü auswählen:Hardware[Controllers and components].
 .. Suchen Sie das Controller-Shelf, das mit dem Controller-Symbol gekennzeichnet ist.
 .. Klicken Sie auf das Controller-Symbol.
 .. Wählen Sie den Controller aus und klicken Sie auf *Weiter*.
@@ -176,8 +176,7 @@ save storageArray dbmDatabase sourceLocation=onboard contentType=all file="filen
 +
 ** Über den SANtricity System Manager:
 +
-... Wählen Sie *Hardware*.
-... Wenn die Grafik die Laufwerke anzeigt, wählen Sie *Zurück vom Shelf anzeigen* aus, um die Controller anzuzeigen.
+... Menü auswählen:Hardware[Controllers and components].
 ... Wählen Sie den Controller aus, den Sie in den Offline-Modus versetzen möchten.
 ... Wählen Sie im Kontextmenü die Option *Offline platzieren* aus, und bestätigen Sie, dass Sie den Vorgang ausführen möchten.
 +
@@ -328,8 +327,7 @@ Die Datei wird im Ordner Downloads für Ihren Browser mit dem Namen *Support-Dat
 +
 ** Über den SANtricity System Manager:
 +
-... Wählen Sie *Hardware*.
-... Wenn die Grafik die Laufwerke anzeigt, wählen Sie *Zurück von Regal anzeigen*.
+... Menü auswählen:Hardware[Controllers and components].
 ... Wählen Sie den Controller aus, den Sie online platzieren möchten.
 ... Wählen Sie im Kontextmenü * Online platzieren* aus, und bestätigen Sie, dass Sie den Vorgang ausführen möchten.
 +
@@ -356,9 +354,9 @@ NOTE: Wenden Sie sich an den technischen Support, wenn das Problem nicht gelöst
 
 . Überprüfen Sie, ob alle Volumes an den bevorzugten Eigentümer zurückgegeben wurden.
 +
-.. Wählen Sie *Storage › Volumes*. Überprüfen Sie auf der Seite * All Volumes*, ob die Volumes an die bevorzugten Eigentümer verteilt werden. Wählen Sie *Mehr › Eigentümerschaft ändern*, um die Eigentümer des Volumes anzuzeigen.
+.. *Storage › Volumes* wird ausgewählt. Auf der Seite *All Volumes* wird überprüft, ob die Volumes ihren bevorzugten Eigentümern zugewiesen sind. *ellipse icon › Change ownership* wird ausgewählt, um die Volume-Eigentümer anzuzeigen.
 .. Wenn alle Volumes im Besitz des bevorzugten Eigentümers sind, fahren Sie mit Schritt 5 fort.
-.. Wenn keines der Volumes zurückgegeben wird, müssen Sie die Volumes manuell zurückgeben. Gehen Sie zu *Mehr › Volumes neu verteilen*.
+.. Falls keines der Volumes zurückgegeben wird, müssen Sie die Volumes manuell zurückgeben. Wechseln Sie zu *Symbol mit den drei Punkten › Volumes neu verteilen*.
 .. Wenn nach der automatischen Verteilung oder manuellen Verteilung nur einige der Volumes an ihre bevorzugten Besitzer zurückgegeben werden, müssen Sie den Recovery Guru auf Probleme bei der Host-Konnektivität prüfen.
 .. Wenn kein Recovery Guru vorhanden ist oder wenn die Volumes nach der Durchführung der Recovery Guru-Schritte immer noch nicht an ihre bevorzugten Besitzer zurückgegeben werden, wenden Sie sich an den Support.
 

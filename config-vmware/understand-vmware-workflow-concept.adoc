@@ -1,8 +1,8 @@
 ---
 permalink: config-vmware/understand-vmware-workflow-concept.html 
 sidebar: sidebar 
-keywords: workflow, guide, express, method, configuring, configure, storage, array, system, manager, host, understand 
-summary: Verwenden Sie den WVMware Express-Konfigurationsworkflow. 
+keywords: workflow, guide, express, method, configuring, configure, storage, array, system, manager, host, understand, vmware, VMware 
+summary: Der VMware Express Konfigurationsworkflow ist zu verwenden. 
 ---
 = Verstehen Sie den VMware Workflow in der E-Series
 :allow-uri-read: 
@@ -13,4 +13,4 @@ summary: Verwenden Sie den WVMware Express-Konfigurationsworkflow.
 [role="lead"]
 Dieser Workflow führt Sie durch die „Express Methode“ zur Konfiguration Ihres Storage Arrays und von SANtricity System Manager, um Storage einem VMware Host zur Verfügung zu stellen.
 
-image::../media/1130_flw_sys_mgr_vmware_express_guide_all_protocols.png[Workflow des VMware Express-Leitfadens“]
+image::../media/1130_flw_sys_mgr_vmware_express_guide_all_protocols.png[VMware Express Guide Workflow]

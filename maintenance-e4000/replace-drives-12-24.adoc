@@ -38,7 +38,7 @@ Bereiten Sie sich auf den Austausch eines Laufwerks vor, indem Sie den Recovery 
 . Wenn der Recovery Guru im SANtricity System Manager Sie über einen _bevorstehenden Laufwerksausfall informiert hat_, aber es ist noch nicht ausgefallen, befolgen Sie die Anweisungen im Recovery Guru zum Fehlschlagen des Laufwerks.
 . Überprüfen Sie bei Bedarf mit SANtricity System Manager, ob Sie ein geeignetes Ersatzlaufwerk besitzen.
 +
-.. Wählen Sie *Hardware*.
+.. Menü auswählen:Hardware[Controllers and components].
 .. Wählen Sie in der Shelf-Grafik das ausgefallene Laufwerk aus.
 .. Klicken Sie auf das Laufwerk, um das Kontextmenü anzuzeigen, und wählen Sie dann *Einstellungen anzeigen*.
 .. Vergewissern Sie sich, dass die Kapazität des Ersatzlaufwerks dem des Ersatzlaufwerks entspricht oder höher ist als das ersetzte Laufwerk und dass es die Funktionen besitzt, die Sie erwarten.

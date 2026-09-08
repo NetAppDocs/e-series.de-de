@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: LUNs, discover LUNs, express Windows configuration, software configuration, Windows host, E2800, E5700, EF300, EF600, E-Series, eseries 
 summary: Entdecken Sie Speicher für Windows Express-Methode. 
 ---
-= Ermitteln Sie Speicher auf dem Host in E-Series - Windows
+= Storage auf einem Windows-Host in der E-Series erkennen
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

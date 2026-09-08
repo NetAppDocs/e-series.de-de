@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: replace controller, replace canister, EF300, EF600, EF300C, EF600C 
 summary: Ersetzen Sie einen Single Controller in einem EF300- oder EF600 Controller-Shelf. 
 ---
-= Ersetzen Sie die Controller EF300 und EF600
+= Austausch des Controllers in einem EF300 oder EF600 Array
 :allow-uri-read: 
 :experimental: 
 :icons: font
@@ -69,7 +69,7 @@ Bewahren Sie das Verpackungsmaterial auf, das beim Versand des defekten Reglerka
 Wenn ein Controller einen Fehler aufweist und ausgetauscht werden muss, wird im Bereich Details des Recovery Guru die Ersatzteilnummer angezeigt. Wenn Sie diese Nummer manuell suchen müssen, führen Sie die folgenden Schritte aus:
 
 +
-.. Wählen Sie *Hardware*.
+.. Menü auswählen:Hardware[Controllers and components].
 .. Suchen Sie das Controller-Shelf, das mit dem Controller-Symbol gekennzeichnet ist image:../media/sam1130_ss_hardware_controller_icon_maint-ef600.gif[""].
 .. Klicken Sie auf das Controller-Symbol.
 .. Wählen Sie den Controller aus und klicken Sie auf *Weiter*.
@@ -100,8 +100,7 @@ Die Datei wird im Ordner Downloads für Ihren Browser mit dem Namen *configurati
 
 . Wenn der Controller nicht bereits offline ist, versetzen Sie ihn jetzt mithilfe von SANtricity System Manager in den Offline-Modus.
 +
-.. Wählen Sie *Hardware*.
-.. Wenn die Grafik die Laufwerke anzeigt, wählen Sie *Zurück vom Shelf anzeigen* aus, um die Controller anzuzeigen.
+.. Menü auswählen:Hardware[Controllers and components].
 .. Wählen Sie den Controller aus, den Sie in den Offline-Modus versetzen möchten.
 .. Wählen Sie im Kontextmenü die Option *Offline platzieren* aus, und bestätigen Sie, dass Sie den Vorgang ausführen möchten.
 

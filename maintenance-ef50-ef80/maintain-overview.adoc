@@ -48,6 +48,13 @@ Ein Laufwerk ist ein Gerät, das den für Daten benötigten physischen Speicher 
 
 
  a| 
+link:drive-drawer-de460c-replace.html["Laufwerksschublade"]
+ a| 
+Eine Laufwerksschublade ist eine von fünf Komponenten in einem DE460C Laufwerks-Shelf, die bis zu 12 Laufwerke aufnehmen.
+
+
+
+ a| 
 link:fan-replace.html["Lüfter"]
  a| 
 Ein Lüfter kühlt den Controller und die Laufwerke.

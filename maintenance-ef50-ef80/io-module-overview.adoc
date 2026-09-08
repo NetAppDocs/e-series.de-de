@@ -2,7 +2,7 @@
 permalink: maintenance-ef50-ef80/io-module-overview.html 
 sidebar: sidebar 
 keywords: ef50, ef80, replace io module, upgrade io module, io module overview 
-summary: Die Speichersysteme EF50 und EF80 bieten Flexibilität bei der Aufrüstung oder dem Austausch von I/O-Modulen, um die Netzwerkkonnektivität und Leistung zu verbessern. 
+summary: Die Speichersysteme EF50 und EF80 bieten Flexibilität beim Austausch oder bei der Aufrüstung von E/A-Modulen, um die Netzwerkverbindung und Leistung zu verbessern und die Speicherkapazität zu erhöhen. 
 ---
 = Übersicht über die Wartung von E/A-Modulen – EF50 und EF80
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: Die Speichersysteme EF50 und EF80 bieten Flexibilität bei der Aufrüst
 
 
 [role="lead"]
-Die Speichersysteme EF50 und EF80 bieten Flexibilität beim Austausch oder der Aufrüstung von I/O-Modulen zur Verbesserung der Netzwerkanbindung und Leistung.
+Die Speichersysteme EF50 und EF80 bieten Flexibilität beim Austausch oder bei der Aufrüstung von E/A-Modulen, um die Netzwerkverbindung und Leistung zu verbessern und die Speicherkapazität zu erhöhen.
 
 * link:io-module-replace.html["Ersetzen Sie ein I/O-Modul"]
 +
@@ -19,6 +19,10 @@ Wenn ein E/A-Modul in Ihrem Speichersystem ausfällt, können Sie es durch ein E
 
 * link:io-module-upgrade.html["Upgrade eines I/O-Moduls"]
 +
-Sie können die E/A-Module Ihres Speichersystems aufrüsten, um die Anzahl der Host-Ports für eine verbesserte Netzwerkkonnektivität zu erhöhen und die Fähigkeit Ihres Systems zur Verarbeitung von Datenverkehr zu erweitern.
+Die E/A-Module Ihres Speichersystems können aufgerüstet werden, um die Anzahl der Host-Ports für eine verbesserte Netzwerkanbindung zu erhöhen, die Fähigkeit Ihres Systems zur Verarbeitung von Datenverkehr zu erweitern und SAS-Erweiterungsgehäuse anzuschließen.
+
++
+
+NOTE: SAS Erweiterungs-E/A-Module werden auf Speichersystemen unterstützt, auf denen SANtricity 12.10 oder höher ausgeführt wird.
 
 

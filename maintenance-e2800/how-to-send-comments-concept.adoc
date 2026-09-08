@@ -2,9 +2,9 @@
 permalink: maintenance-e2800/how-to-send-comments-concept.html 
 sidebar: sidebar 
 keywords: improve, quality, documentation, send, feedback, automatic, notification, production-level, ga, fcs, release, exist, document 
-summary: 'Sie können uns dabei helfen, die Qualität unserer Dokumentation zu verbessern, indem Sie uns Ihr Feedback senden. Sie erhalten eine automatische Benachrichtigung, wenn die \(GA/FCS\)-Dokumentation auf Produktionsebene zuerst veröffentlicht wird oder wenn wichtige Änderungen an bestehenden Dokumenten auf Produktionsebene vorgenommen werden.' 
+summary: 'Sie können uns dabei helfen, die Qualität unserer Dokumentation zu verbessern, indem Sie uns Ihr Feedback senden. Sie erhalten eine automatische Benachrichtigung, wenn die Dokumentation auf Produktionsebene (GA/FCS) zuerst veröffentlicht wird oder wenn wichtige Änderungen an bestehenden Dokumenten auf Produktionsebene vorgenommen werden.' 
 ---
-= So senden Sie Kommentare zu Dokumentation und erhalten Update-Benachrichtigungen
+= Kommentare zur Dokumentation senden und Benachrichtigungen über Aktualisierungen erhalten
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

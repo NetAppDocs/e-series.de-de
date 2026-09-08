@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: host protocol change, EF300, EF600, EF600C, EF300C 
 summary: Ändern Sie das Host-Port-Protokoll für ein EF300- oder EF600-Array. 
 ---
-= Ändern Sie das Host-Protokoll - EF300 und EF600
+= Das Hostprotokoll auf einem EF300 oder EF600 Speichersystem kann geändert werden.
 :allow-uri-read: 
 :experimental: 
 :icons: font
@@ -35,7 +35,7 @@ image::../media/sam1130_ss_e2800_storage_array_profile_sn_smid_copy_maint-ef600.
 . Suchen Sie die Untermodell-ID des *Feature Packs*.
 +
 .. Wählen Sie im SANtricity System Manager die Option *Support* aus.
-.. Wählen Sie die Kachel *Support Resources* aus.
+.. Die Registerkarte *Support Resources* ist auszuwählen.
 .. Wählen Sie auf der Registerkarte Support Resources den Link *Storage Array Profile* aus.
 .. Geben Sie in das Textfeld * Feature Pack Submodel ID* ein, und klicken Sie auf *Suchen*.
 .. Suchen Sie die Submodel-ID für das Feature Pack für die Starting-Konfiguration.
@@ -669,8 +669,7 @@ Die Migration des Feature Packs beginnt. Beide Controller starten automatisch zw
 
 . Überprüfen Sie, ob die Host-Ports das erwartete Protokoll haben.
 +
-.. Wählen Sie im SANtricity System Manager die Option *Hardware* aus.
-.. Klicken Sie auf *Zurück von Regal anzeigen*.
+.. Im SANtricity System Manager ist Menü:Hardware[Controller und Komponenten] auszuwählen.
 .. Wählen Sie die Grafik für Controller A oder Controller B aus
 .. Wählen Sie im Kontextmenü die Option *Einstellungen anzeigen* aus.
 .. Wählen Sie die Registerkarte *Host Interfaces* aus.

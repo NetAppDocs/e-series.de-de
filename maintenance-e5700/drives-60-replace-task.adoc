@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: E5700 60-drive, replace E5700 60-drive, failed E5700 60-drive 
 summary: Ersetzen Sie ein Laufwerk in einem E5700 Shelf für 60 Laufwerke. 
 ---
-= Austauschen des Laufwerks – E5700 (Shelf mit 60 Laufwerken)
+= Austausch eines Laufwerks in einem E5700 Shelf mit 60 Laufwerken
 :allow-uri-read: 
 :experimental: 
 :icons: font

@@ -54,13 +54,12 @@ Die Datei wird im Ordner Downloads für Ihren Browser mit dem Namen *Support-Dat
 
 . Stellen Sie aus dem SANtricity-System-Manager fest, welcher Lüfterbehälter ausgefallen ist.
 +
-.. Wählen Sie *Hardware*.
+.. Menü auswählen:Hardware[Controllers and components].
 .. Sehen Sie sich das Lüftersymbol image:../media/sam1130_ss_hardware_fan_icon_maint-e2800.gif["Lüftersymbol"]rechts neben der Dropdown-Liste *Regal* an, um festzustellen, welches Regal den defekten Lüfterbehälter hat.
 +
 Wenn eine Komponente ausgefallen ist, ist dieses Symbol rot.
 
-.. Wenn Sie das Regal mit einem roten Symbol finden, wählen Sie *Controller & Komponenten*.
-.. Wählen Sie entweder Lüfterbehälter oder das rote Lüftersymbol.
+.. Wenn Sie das Shelf mit dem roten Symbol gefunden haben, wählen Sie entweder den Lüfterbehälter oder das rote Lüftersymbol aus.
 .. Prüfen Sie auf der Registerkarte *Lüfter* die Status der Lüfterbehälter, um zu ermitteln, welcher Lüfterbehälter ersetzt werden muss.
 +
 Eine Komponente mit dem Status *failed* muss ersetzt werden.

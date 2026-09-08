@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: E2800 maintenance, E2800 repair, replace E2800 components, replacing E2800 components, 
 summary: Führen Sie Wartungsarbeiten an E2800 Komponenten durch. 
 ---
-= Instandhaltung der Hardware - E2800
+= Wartung der Hardware für ein E2800 Speichersystem
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -14,6 +14,9 @@ summary: Führen Sie Wartungsarbeiten an E2800 Komponenten durch.
 Möglicherweise müssen Sie Wartungsverfahren für Ihre Hardware durchführen. In diesem Abschnitt finden Sie spezielle Verfahren zur Wartung Ihrer E2800 Systemkomponenten.
 
 Bei den in diesem Abschnitt beschriebenen Verfahren wird vorausgesetzt, dass das E2800 System bereits in der E-Series Umgebung implementiert wurde.
+
+
+NOTE: Die E2800 Speichersysteme sind Produkte am Ende ihrer Verfügbarkeit (EOA) und nicht mehr zum Kauf erhältlich, werden aber weiterhin unterstützt. Die Informationen in diesem Abschnitt dienen nur als Referenz.
 
 
 

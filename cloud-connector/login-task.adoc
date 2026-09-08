@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: Cloud Connector login, log in Cloud Connector 
 summary: Sie können über den konfigurierten Server in einem unterstützten Browser auf die grafische Benutzeroberfläche der SANtricity-Cloud-Connector-Anwendung zugreifen. Stellen Sie sicher, dass Sie über ein Konto für den SANtricity Cloud Connector verfügen. 
 ---
-= Melden Sie sich beim SANtricity Cloud Connector an
+= Bei SANtricity Cloud Connector erfolgt die Anmeldung
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

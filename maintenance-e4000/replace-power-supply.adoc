@@ -52,13 +52,12 @@ Die Datei wird im Ordner Downloads für Ihren Browser mit dem Namen *Support-Dat
 Sie finden diese Informationen im Bereich Details des Recovery Guru oder können die für das Shelf angezeigten Informationen einsehen.
 
 +
-.. Wählen Sie *Hardware*.
+.. Menü auswählen:Hardware[Controllers and components].
 .. Schauen Sie sich die Stromimage:../media/sam1130_ss_hardware_power_icon_maint-e2800.gif["Ein/aus-Symbol"]- und Lüftersymbole image:../media/sam1130_ss_hardware_fan_icon_maint-e2800.gif["Lüftersymbol"]rechts neben der Dropdown-Liste *Shelf* an, um festzustellen, welches Shelf das ausgefallene Netzteil hat.
 +
 Wenn eine Komponente ausgefallen ist, sind entweder oder beide Symbole rot.
 
-.. Wenn Sie das Regal mit einem roten Symbol finden, wählen Sie *Controller & Komponenten*.
-.. Wählen Sie eine der beiden Netzteile aus.
+.. Wenn das Shelf mit dem roten Symbol gefunden wurde, ist eines der beiden Netzteile auszuwählen.
 .. Auf den Registerkarten *Netzteile* und *Lüfter* können Sie anhand der Status der Power-Fan-Kanister, der Netzteile und der Lüfter bestimmen, welches Netzteil ausgetauscht werden muss.
 +
 Eine Komponente mit dem Status *failed* muss ersetzt werden.

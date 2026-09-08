@@ -56,13 +56,12 @@ Die Datei wird im Ordner Downloads für Ihren Browser mit dem Namen *Support-Dat
 
 . Bestimmen Sie aus dem SANtricity-System-Manager, welcher Stromversorgungsbehälter ausgefallen ist.
 +
-.. Wählen Sie *Hardware*.
+.. Menü auswählen:Hardware[Controllers and components].
 .. Sehen Sie sich das Power-image:../media/sam1130_ss_hardware_power_icon_maint-e2800.gif["Ein/aus-Symbol"]Symbol rechts neben der Dropdown-Liste *Shelf* an, um festzustellen, welches Shelf den defekten Strombehälter hat.
 +
 Wenn eine Komponente ausgefallen ist, ist dieses Symbol rot.
 
-.. Wenn Sie das Regal mit einem roten Symbol finden, wählen Sie *Controller & Komponenten*.
-.. Wählen Sie entweder den Netzbehälter oder das rote Power-Symbol.
+.. Wenn Sie das Shelf mit dem roten Symbol gefunden haben, wählen Sie entweder den Netzteilbehälter oder das rote Stromversorgungssymbol aus.
 .. Prüfen Sie auf der Registerkarte *Netzteile* den Status der Strombehälter, um festzustellen, welcher Netzbehälter ersetzt werden muss.
 +
 Eine Komponente mit dem Status *failed* muss ersetzt werden.

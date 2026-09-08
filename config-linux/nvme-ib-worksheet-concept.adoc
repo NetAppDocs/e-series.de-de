@@ -172,7 +172,9 @@ Definieren Sie das zu verwendenden Subnetz.
 
 
  a| 
+{nbsp}
  a| 
+{nbsp}
 
 |===
 Dokumentieren Sie die IQNs, die von den Array-Ports und jedem Host-Port verwendet werden sollen.

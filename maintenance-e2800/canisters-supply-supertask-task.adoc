@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: E2800 replace 12-drive power supply, E2800 replace 24-drive power supply, replacing E2800 power supply, E2800, E-Series, eseries 
 summary: Ein E2800 Controller-Shelf oder Laufwerks-Shelf für 12 oder 24 Laufwerke, das zwei Netzteile mit integrierten Lüftern enthält, kann ersetzt werden. 
 ---
-= Ersetzen Sie das Netzteil - E2800 (12 Laufwerke oder 24 Laufwerke).
+= Austausch des Netzteils in einem E2800 Shelf mit 12 oder 24 Laufwerken
 :allow-uri-read: 
 :experimental: 
 :icons: font
@@ -62,7 +62,7 @@ Sie finden diese Informationen im Bereich Details des Recovery Guru oder können
 
 +
 .. Wählen Sie *Hardware*.
-.. Schauen Sie sich die Stromimage:../media/sam1130_ss_hardware_power_icon_maint-e2800.gif["Ein/aus-Symbol"]- und Lüftersymbole image:../media/sam1130_ss_hardware_fan_icon_maint-e2800.gif["'Lüftersymbol'"]rechts neben der Dropdown-Liste *Shelf* an, um festzustellen, welches Shelf das ausgefallene Netzteil hat.
+.. Anhand der Strom-image:../media/sam1130_ss_hardware_power_icon_maint-e2800.gif["Ein/aus-Symbol"] und Lüfter-image:../media/sam1130_ss_hardware_fan_icon_maint-e2800.gif["Lüftersymbol"]Symbole rechts neben den Dropdown-Listen *Shelf* lässt sich feststellen, in welchem Regal sich das defekte Netzteil befindet.
 +
 Wenn eine Komponente ausgefallen ist, sind entweder oder beide Symbole rot.
 

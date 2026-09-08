@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: replace EF300 HIC, replace EF600 HIC, host interface card failed, HIC failure 
 summary: 'Ersetzen Sie eine fehlerhafte EF300- oder EF600-Host-Schnittstellenkarte (HIC).' 
 ---
-= Fehlerhafte Host-Schnittstellenkarte (HIC) austauschen – EF300 oder EF600
+= Austausch eines defekten HIC in einem EF300 oder EF600 Speichersystem
 :allow-uri-read: 
 :experimental: 
 :icons: font
@@ -16,6 +16,9 @@ Gehen Sie wie folgt vor, um eine fehlerhafte Host-Schnittstellenkarte (HIC) in e
 
 .Über diese Aufgabe
 Wenn Sie einen defekten HIC ersetzen, müssen Sie einen Controller offline nehmen, um das System in einen nicht-redundanten Zustand zu versetzen, den HIC ersetzen und den Controller wieder online schalten.
+
+
+NOTE: Das EF300 und EF600 Speicherarray muss nicht ausgeschaltet werden, wenn ein HIC desselben Protokolltyps ersetzt wird (z. B. beim Austausch eines Fibre Channel HIC gegen einen anderen Fibre Channel HIC).
 
 .Bevor Sie beginnen
 * Prüfen link:hics-overview-supertask-concept.html["Anforderungen für EF300- oder EF600 HIC-Upgrades"].
@@ -262,7 +265,7 @@ Installieren Sie bei Bedarf die neueste Version.
 
 . Überprüfen Sie, ob alle Volumes an den bevorzugten Eigentümer zurückgegeben wurden.
 +
-.. Wählen Sie Menü:Storage[Volumes]. Überprüfen Sie auf der Seite * All Volumes*, ob die Volumes an die bevorzugten Eigentümer verteilt werden. Wählen Sie MENU:Mehr[Eigentumsrechte ändern], um Volumeneigentümer anzuzeigen.
+.. Im Menü „Storage“ die Option „Volumes“ auswählen. Auf der Seite „All Volumes“ überprüfen, ob die Volumes ihren bevorzugten Eigentümern zugewiesen sind. Im Menü das Ellipsensymbol („Change ownership“) auswählen, um die Eigentümer der Volumes anzuzeigen.
 .. Wenn alle Volumes Eigentum des bevorzugten Eigentümers sind, fahren Sie mit Schritt 6 fort.
 .. Wenn keines der Volumes zurückgegeben wird, müssen Sie die Volumes manuell zurückgeben. Wechseln Sie zum Menü:Mehr[Umverteilung von Volumes].
 .. Wenn nach der automatischen Verteilung oder manuellen Verteilung nur einige der Volumes an ihre bevorzugten Eigentümer zurückgegeben werden, muss der Recovery Guru auf Probleme mit der Host-Konnektivität prüfen.

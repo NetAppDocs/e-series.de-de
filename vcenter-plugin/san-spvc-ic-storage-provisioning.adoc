@@ -214,6 +214,7 @@ Die Seite Hosts konfigurieren wird geöffnet.
 +
 Das Dialogfeld Host erstellen wird angezeigt.
 
+. Klicken Sie auf *+Host-Port hinzufügen*, um das Feld „Host-Ports“ aufzurufen und die Host-Port-IDs für den Host hinzuzufügen. Es können eine oder mehrere Host-Port-IDs hinzugefügt werden, um sie dem Host zuzuordnen.
 . Wählen Sie die entsprechenden Einstellungen für den Host aus.
 +
 [cols="25h,~"]

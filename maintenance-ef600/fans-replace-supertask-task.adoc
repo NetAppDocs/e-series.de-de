@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: EF600, EF300, EF600C, EF300C, replace fan, fan fail 
 summary: Ersetzen Sie einen Lüfter in einer EF300 oder EF600. 
 ---
-= Ersetzen Sie den Lüfter EF300 oder EF600
+= Austausch des Lüfters in einem EF300 oder EF600 Speichersystem
 :allow-uri-read: 
 :experimental: 
 :icons: font
@@ -56,7 +56,7 @@ Die Datei wird im Ordner Downloads für Ihren Browser mit dem Namen *configurati
 
 . Wenn der Controller nicht bereits offline ist, versetzen Sie ihn jetzt mithilfe von SANtricity System Manager in den Offline-Modus.
 +
-.. Wählen Sie *Hardware*.
+.. Wählen Sie Menü:Hardware[Laufwerke] aus.
 .. Wenn die Grafik die Laufwerke anzeigt, wählen Sie *Zurück vom Shelf anzeigen* aus, um die Controller anzuzeigen.
 .. Wählen Sie den Controller aus, den Sie in den Offline-Modus versetzen möchten.
 .. Wählen Sie im Kontextmenü die Option *Offline platzieren* aus, und bestätigen Sie, dass Sie den Vorgang ausführen möchten.
@@ -169,8 +169,7 @@ Platzieren Sie den Controller online, sammeln Sie Support-Daten und setzen Sie d
 
 . Platzieren Sie den Controller in den Online-Modus
 +
-.. Navigieren Sie im System Manager zur Seite *Hardware*.
-.. Wählen Sie *Zurück von Controller anzeigen*.
+.. Im SANtricity System Manager wird Menü:Hardware[Controller und Komponenten] ausgewählt.
 .. Wählen Sie den Controller mit dem ausgetauschten Lüfter aus.
 .. Wählen Sie in der Dropdown-Liste * Online platzieren* aus.
 

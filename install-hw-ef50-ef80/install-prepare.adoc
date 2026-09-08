@@ -21,10 +21,10 @@ Bereiten Sie die Installation Ihres EF50 oder EF80 Storage-Systems vor, indem Si
 Stellen Sie sicher, dass der Standort und der Schrank oder das Rack, das Sie verwenden möchten, den Spezifikationen für Ihr Storage-System entsprechen.
 
 .Schritte
-. Verwenden Sie  https://hwu.netapp.com["NetApp Hardware Universe"^], um zu bestätigen, dass Ihr Standort die Umwelt- und Elektroanforderungen für Ihr Speichersystem erfüllt.
+. Mit link:https://hwu.netapp.com["NetApp Hardware Universe"^] kann bestätigt werden, dass Ihr Standort die Umgebungs- und elektrischen Anforderungen für Ihr Speichersystem erfüllt.
 . Stellen Sie sicher, dass Sie ausreichend Schrank- oder Rackplatz für Ihr Speichersystem und alle Switches haben.
 +
-Falls erforderlich, siehe  https://hwu.netapp.com["NetApp Hardware Universe"^] für die genauen Abmessungen Ihres Speichersystems.
+Falls erforderlich, finden Sie in link:https://hwu.netapp.com["NetApp Hardware Universe"^] die genauen Abmessungen Ihres Speichersystems.
 
 +
 ** 2U für ein Speichersystem
@@ -81,7 +81,7 @@ NOTE: Sollten Unstimmigkeiten auftreten, notieren Sie diese für weitere Maßnah
 Die folgenden Elemente sind einige der Inhalte, die Sie in den Boxen sehen könnten.
 
 +
-Falls erforderlich, siehe  https://hwu.netapp.com/["NetApp Hardware Universe"^] für andere unterstützte Kabel und deren Verwendung.
+Falls erforderlich, finden Sie unter link:https://hwu.netapp.com["NetApp Hardware Universe"^] weitere unterstützte Kabel und Informationen zu deren Verwendung.
 
 +
 [cols="9,9,5"]
@@ -114,9 +114,12 @@ Falls erforderlich, siehe  https://hwu.netapp.com/["NetApp Hardware Universe"^] 
 
 Nachdem Sie sichergestellt haben, dass Ihr Standort die Spezifikationen für Ihr Speichersystem erfüllt und Sie überprüft haben, dass Sie alle Teile, die Sie bestellt haben, erhalten haben, sollten Sie Ihr Speichersystem registrieren.
 
-. Erstellen Sie ein Konto und registrieren Sie Ihre Hardware unter http://mysupport.netapp.com/["NetApp Support"^].
+
+NOTE: Sie können Ihr Speichersystem jetzt oder später registrieren. Später werden Sie beim Systemstart zur Registrierung Ihres Systems aufgefordert.
+
+. Die Seriennummer (SN) jedes Controllers ist zu notieren.
 +
-Für den Registrierungsprozess wird die Seriennummer (SN) jedes Controllers benötigt. Sie finden die Seriennummer an folgenden Stellen:
+Sie finden die Seriennummer an folgenden Stellen:
 
 +
 ** Auf jedem Controller
@@ -127,6 +130,8 @@ image::../media/drw_ef50-ef80_sn_label_ieops-2689.svg[Beispiel für das Seriennu
 
 
 
+. Erstellen Sie ein Konto bei  http://mysupport.netapp.com/["NetApp Support"^], falls Sie noch keins haben.
+. Ihr System wird gemäß den Anweisungen im NetApp Knowledge Base Article https://kb.netapp.com/nss/System_Registration/How_to_register_a_new_system_on_the_NetApp_Support_Site["Registrierung eines neuen Systems"^] registriert.
 
 
 .Was kommt als Nächstes?

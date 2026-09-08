@@ -126,7 +126,7 @@ Bewahren Sie das Verpackungsmaterial auf, das beim Versand des defekten Reglerka
 Wenn ein Controller einen Fehler aufweist und ausgetauscht werden muss, wird im Bereich Details des Recovery Guru die Ersatzteilnummer angezeigt. Wenn Sie diese Nummer manuell suchen müssen, führen Sie die folgenden Schritte aus:
 
 +
-.. Wählen Sie *Hardware*.
+.. Wählen Sie Menü:Hardware[Controller und Komponenten] aus.
 .. Suchen Sie das Controller-Shelf, das mit dem Controller-Symbol gekennzeichnet ist.
 .. Klicken Sie auf das Controller-Symbol.
 .. Wählen Sie den Controller aus und klicken Sie auf *Weiter*.
@@ -178,8 +178,7 @@ Die Datei wird im Ordner Downloads für Ihren Browser mit dem Namen *Support-Dat
 +
 ** Über den SANtricity System Manager:
 +
-... Wählen Sie *Hardware*.
-... Wenn die Grafik die Laufwerke anzeigt, wählen Sie *Zurück vom Shelf anzeigen* aus, um die Controller anzuzeigen.
+... Wählen Sie Menü:Hardware[Controller und Komponenten] aus.
 ... Wählen Sie den Controller aus, den Sie in den Offline-Modus versetzen möchten.
 ... Wählen Sie im Kontextmenü die Option *Offline platzieren* aus, und bestätigen Sie, dass Sie den Vorgang ausführen möchten.
 +
@@ -479,7 +478,7 @@ Wo?
 
 . Vergewissern Sie sich im SANtricity System Manager, dass der neue Controller optimal ist.
 +
-.. Wählen Sie *Hardware*.
+.. Wählen Sie Menü:Hardware[Controller und Komponenten] aus.
 .. Wählen Sie für das Controller-Shelf *Zurück von Regal anzeigen* aus.
 .. Wählen Sie den ausgetauschten Controllerbehälter aus.
 .. Wählen Sie *Anzeigeeinstellungen*.
@@ -547,7 +546,7 @@ NOTE: Wenden Sie sich an den technischen Support, wenn das Problem nicht gelöst
 . Falls erforderlich, verteilen Sie alle Volumes mithilfe von SANtricity System Manager zurück an ihren bevorzugten Eigentümer.
 +
 .. Wählen Sie *Storage › Volumes*.
-.. Wählen Sie *Mehr › Volumes neu verteilen*.
+.. *Ellipsensymbol › Volumes neu verteilen* wird ausgewählt.
 
 
 . Klicken Sie auf *Hardware › Support › Upgrade Center*, um sicherzustellen, dass die neueste Version der SANtricity OS-Software (Controller-Firmware) installiert ist.

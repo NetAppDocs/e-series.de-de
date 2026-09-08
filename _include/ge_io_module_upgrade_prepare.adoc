@@ -4,20 +4,21 @@
 
 .Schritte
 . Planen Sie ein Wartungsfenster für diesen Vorgang ein. Sie können nicht auf Daten im Speichersystem zugreifen, bis Sie diesen Vorgang erfolgreich abgeschlossen haben. Da beide Controller beim Einschalten dieselbe I/O-Modulkonfiguration aufweisen müssen, muss die Stromversorgung ausgeschaltet sein, wenn Sie I/O-Module aufrüsten.
+. Die Firmware ist auf die neueste Version zu aktualisieren. Zum Aktualisieren der Firmware sind die Anweisungen in link:../upgrade-santricity/index.html["Aktualisieren des SANtricity Betriebssystems"^]
 . Stellen Sie sicher, dass Sie Folgendes haben:
 +
 ** Die neuen E/A-Module, auf die Sie aktualisieren.
 +
-Stellen Sie sicher, dass die I/O-Module, auf die Sie upgraden, von Ihrem Speichersystem unterstützt werden, dass Sie für jeden Controller den gleichen Typ und die gleiche Anzahl von I/O-Modulen haben und dass Sie die Steckplatzpriorität verstehen (das neue I/O-Modul muss in jedem Controller im gleichen Steckplatz installiert werden).
+Stellen Sie sicher, dass die E/A-Module, auf die Sie aktualisieren, von Ihrem Speichersystem und Ihrer Version von SANtricity unterstützt werden, dass Sie für jeden Controller den gleichen Typ und die gleiche Anzahl von E/A-Modulen haben und dass Sie die Steckplatzpriorität verstehen (das neue E/A-Modul muss auf jedem Controller im gleichen Steckplatz installiert werden).
+
++
+Sie können die unterstützten E/A-Module und die Steckplatzpriorität für Ihr Speichersystem unter  https://hwu.netapp.com["NetApp Hardware Universe"^] überprüfen.
 
 +
 
 CAUTION: *Möglicher Verlust des Datenzugriffs* -- Das Vorhandensein inkompatibler oder nicht übereinstimmender I/O-Module führt dazu, dass sich die Controller beim Einschalten sperren.
 
-+
-Bei Bedarf können Sie die unterstützten E/A-Module und die Steckplatzpriorität für Ihr Speichersystem unter  https://hwu.netapp.com["NetApp Hardware Universe"^] bestätigen.
-
-** Kabel zum Anschluss der neuen E/A-Module an Ihr Netzwerk.
+** Kabel zum Anschluss der neuen E/A-Module an Ihr Netzwerk oder Ihre SAS-Erweiterungs-Shelfs.
 ** Ein ESD-Armband oder Sie haben andere antistatische Vorkehrungen getroffen.
 ** Eine ebene, antistatische Arbeitsfläche.
 ** Eine Managementstation mit einem Browser, der auf SANtricity System Manager für die Controller zugreifen kann.

@@ -16,6 +16,67 @@ Die folgende Tabelle beschreibt neue Funktionen in den neuesten SANtricity OS-Re
 
 
 
+[[new-features-in-version-12-10]]
+== Neue Funktionen in Version 12.10
+
+[cols="35h,~"]
+|===
+| Neues Feature | Beschreibung 
+
+
+ a| 
+SAS-Erweiterungssupport für EF50 und EF80 Speichersysteme
+ a| 
+Die Speichersysteme EF50 und EF80 unterstützen jetzt SAS-Erweiterung, was eine höhere Speicherkapazität und mehr Flexibilität ermöglicht. Mit SAS-Erweiterung besteht die Möglichkeit, zusätzliche Speichergehäuse an die Systeme EF50 und EF80 anzuschließen, sodass die Speicherumgebung nach Bedarf skaliert werden kann. Diese Funktion ist besonders vorteilhaft für Unternehmen, die Speicherlösungen mit einer hohen Kapazität benötigen und ihre Investition in die EF50 und EF80 Plattformen maximieren möchten.
+
+
+
+ a| 
+NVMe over TCP-Unterstützung für E-Series Speichersysteme
+ a| 
+Die Speichersysteme der E-Series unterstützen jetzt NVMe über TCP und bieten damit eine zusätzliche Host-Schnittstelle für hochperformanten Speicherzugriff. NVMe über TCP ermöglicht eine effiziente und mit niedriger Latenz Kommunikation zwischen dem Speichersystem und angeschlossenen Hosts und nutzt die Vorteile des NVMe-Protokolls über Standard-TCP/IP-Netzwerke. Diese Unterstützung erhöht die Vielseitigkeit der E-Series Systeme und ermöglicht es Unternehmen, sie in Umgebungen einzusetzen, in denen NVMe über TCP bevorzugt oder erforderlich ist.
+
+
+
+ a| 
+Verbesserungen der Benutzeroberfläche für SANtricity System Manager
+ a| 
+Die Benutzeroberfläche des SANtricity System Manager wurde weiter optimiert, um Navigation, Bedienbarkeit und das gesamte Benutzererlebnis zu verbessern. Zu diesen Verbesserungen gehören ein aktualisiertes Layout und eine übersichtlichere Organisation der Verwaltungsaufgaben sowie intuitivere Arbeitsabläufe für gängige Speicherverwaltungsoperationen.
+
+
+
+ a| 
+Erweiterte Unterstützung der E-Series Plattform für die neue SANtricity System Manager Benutzeroberfläche
+ a| 
+Die neue Benutzeroberfläche für SANtricity System Manager, die mit der SANtricity 12.00-Version für die Speichersysteme EF80 und EF50 eingeführt wurde, wurde erweitert, um zusätzliche E-Series Speicherplattformen zu unterstützen. Das bedeutet, dass Anwender, die eine größere Bandbreite an E-Series Speichersystemen verwalten, nun von der modernisierten Oberfläche und den verbesserten Bedienungsfunktionen profitieren können. Die erweiterte Unterstützung umfasst die Kompatibilität mit ausgewählten Modellen der E-Series Speichersysteme, sodass Anwender die verbesserte Navigation und die optimierten Verwaltungsaufgaben für einen größeren Teil ihrer Speicherinfrastruktur nutzen können.
+
+
+
+ a| 
+Gemischte Unterstützung von Performance- und Kapazitätslaufwerken für EF80 und EF50 Systeme
+ a| 
+Die Speichersysteme EF80 und EF50 unterstützen jetzt Performance NVMe-SSDs und Capacity NVMe-SSDs im selben Speicherarray, sofern eine Mindestanzahl von Laufwerken eingehalten wird (6 für Performance, 12 für Capacity). Performance-Laufwerke und Capacity-Laufwerke müssen in separaten Pools und Volume-Gruppen verbleiben.
+
+
+
+ a| 
+Erhöhte Zeichenbegrenzung für Standard- und Thin-Volume-Namen
+ a| 
+Das Zeichenlimit für Standard- und Thin-Volume-Namen wurde von 30 auf 60 Zeichen erhöht.
+
+
+NOTE: Downgrades auf SANtricity OS Softwareversion 11.90 oder älter werden nicht unterstützt, wenn Standard- oder Thin-Volumes mit Namen von mehr als 30 Zeichen vorhanden sind. Falls ein Downgrade auf SANtricity OS Softwareversion 11.90 oder älter geplant ist, sind vor dem Downgrade die Namen aller Standard- oder Thin-Volumes zu ändern, deren Namen mehr als 30 Zeichen umfassen.
+
+
+
+ a| 
+Minimale Inaktivitäts-Zeitüberschreitungsgrenze für die Benutzeroberfläche des SANtricity System Manager beträgt jetzt 10 Minuten
+ a| 
+Das Zeitüberschreitungs-Limit für Inaktivität in der Benutzeroberfläche des SANtricity System Manager wurde auf mindestens 10 Minuten aktualisiert. Zuvor lag das minimale Zeitüberschreitungs-Limit für Inaktivität bei 15 Minuten. Diese Änderung trägt dazu bei, die Sicherheit zu erhöhen, indem sichergestellt wird, dass die Benutzeroberfläche nach 10 Minuten Inaktivität automatisch abgemeldet wird.
+
+|===
+
+
 [[new-features-in-version-12-0r1]]
 == Neue Funktionen in Version 12.0R1
 

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: Web Services, WSP, SANtricity API, 
 summary: Kompatibilität und Einschränkungen für WSP. 
 ---
-= SANtricity Webdienste ProxyKompatibilität und Einschränkungen
+= Kompatibilität und Einschränkungen von SANtricity Web Services Proxy
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

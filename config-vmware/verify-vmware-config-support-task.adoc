@@ -1,7 +1,7 @@
 ---
 permalink: config-vmware/verify-vmware-config-support-task.html 
 sidebar: sidebar 
-keywords: express vmware configuration, software configuration, vmware host, E2800, E5700, EF300, EF600, E-Series, eseries 
+keywords: express vmware configuration, software configuration, vmware host, E2800, E5700, EF300, EF600, EF50, EF80, E4000, E-Series, eseries 
 summary: Vergewissern Sie sich, dass die VMware Konfiguration unterstützt wird. 
 ---
 = Überprüfen Sie die Unterstützung der VMware-Konfiguration in der E-Series
@@ -30,10 +30,11 @@ Der Abschnitt Suchkriterien verfeinern wird angezeigt. In diesem Abschnitt könn
 
  a| 
 ** Möglicherweise müssen Sie Out-of-Box-Treiber installieren, um die Funktionalität und den Support zu gewährleisten. Sie können HBA-Treiber mithilfe der ESXi Shell oder einer Remote-SSH-Verbindung zum ESXi Host installieren. Um mit einer dieser Methoden auf den Host zuzugreifen, müssen Sie den ESXi Shell- und SSH-Zugriff aktivieren. Weitere Informationen zur ESXi Shell finden Sie in der VMware Knowledge Base zur Verwendung der ESXi Shell in ESXi. Informationen zu Installationsbefehlen finden Sie in den Anweisungen zu den HBA-Treibern.
-** Jeder HBA-Anbieter verfügt über spezifische Methoden zur Aktualisierung des Boot-Codes und der Firmware. Einige dieser Methoden könnten die Verwendung eines vCenter-Plugins oder die Installation des CIM-Providers auf dem ESXi-Host beinhalten. Mit vCenter-Plugins erhalten Sie Informationen über den spezifischen HBA des Anbieters. Im Support-Abschnitt auf der Website des Anbieters finden Sie die Anweisungen und Software, die zur Aktualisierung des HBA-Startcodes oder der Firmware erforderlich sind. Informationen zum korrekten Startcode oder der korrekten Firmware erhalten Sie im _VMware Compatibility Guide_ oder auf der Website des HBA-Anbieters.
+** Jeder HBA-Hersteller verwendet spezifische Methoden zum Aktualisieren von Bootcode und Firmware. Einige dieser Methoden können die Verwendung eines vCenter Plugins oder die Installation eines CIM-Providers auf dem ESXi-Host umfassen. vCenter Plugins können verwendet werden, um Informationen über das jeweilige HBA des Herstellers zu erhalten. Informationen zu den Anweisungen und der Software, die zum Aktualisieren des HBA-Bootcodes oder der Firmware erforderlich sind, finden Sie im Supportbereich der Website des Herstellers. Informationen dazu finden Sie im  https://compatibilityguide.broadcom.com/search?program=io&persona=live&column=brandName&order=asc["_VMware Compatibility Guide_"] oder auf der Website des HBA-Herstellers, um den richtigen Bootcode oder die richtige Firmware zu erhalten.
+** Prüfen Sie Warnungen und Informationen im Zusammenhang mit der ausgewählten Konfiguration auf spezifische Betriebssystem-, Gastbetriebssystem-, HBA- oder andere relevante Einstellungen bzw. Informationen, die möglicherweise auf Ihre Konfiguration angewendet werden müssen.
 
  a| 
-FC
+FCP
  a| 
 Host Bus Adapter (HBA)-Treiber, Firmware und Bootcode
 
@@ -50,6 +51,27 @@ NIC-Treiber (Network Interface Card), Firmware und Bootcode
 SAS
  a| 
 Host Bus Adapter (HBA)-Treiber, Firmware und Bootcode
+
+
+
+ a| 
+NVMe über FC
+ a| 
+Host Bus Adapter (HBA)-Treiber, Firmware und Bootcode
+
+
+
+ a| 
+NVMe over RoCE
+ a| 
+Remote Direct Memory Access (RDMA) Treiber, Firmware und Bootcode
+
+
+
+ a| 
+NVMe über TCP
+ a| 
+NIC-Treiber (Network Interface Card), Firmware und Bootcode
 
 |===
 

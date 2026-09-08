@@ -1,7 +1,7 @@
 ---
 permalink: getting-started/learn-shelf-concept.html 
 sidebar: sidebar 
-keywords: E-Series, eseries, E4000, E2800, E5700, EF300, EF600, E-series hardware, E-Series shelf, DE212C, DE224C, DE460C, NE224, 
+keywords: E-Series, eseries, EF50, EF80, E4000, E2800, E5700, EF300, EF600, E-series hardware, E-Series shelf, DE212C, DE224C, DE460C, 
 summary: E-Series Systeme sind in verschiedenen Shelf-Größen erhältlich. 
 ---
 = Informieren Sie sich über die Shelf-Typen der E-Series
@@ -22,7 +22,7 @@ E-Series Systeme sind in verschiedenen Shelf-Größen erhältlich.
 
 * 2u12 (2 Rack-Einheiten; 12 Laufwerke)
 * 3.5-Zoll-HDDs und/oder 2.5-Zoll-SSDs (mit Adapter)
-* Nur für E4000 und E2800 Controller
+* EF50, EF80, E4000 und E2800 Controller
 
  a| 
 image:../media/e2812_front.gif["DE212C"]
@@ -34,7 +34,7 @@ image:../media/e2812_front.gif["DE212C"]
 
 * 2 he/24 (2 Rack-Einheiten; 24 Laufwerke)
 * 2.5-Zoll-HDD und/oder 2.5-Zoll-SSD-Laufwerke
-* E2800, EF280, E5700 und EF570 Controller
+* EF50, EF80, E2800, EF280, E5700 und EF570 Controller
 
  a| 
 image:../media/e2824_front.gif["DE224C"]
@@ -46,7 +46,7 @@ image:../media/e2824_front.gif["DE224C"]
 
 * 4 he/60 (4 Rack-Einheiten; 60 Laufwerke)
 * 3.5- und 2.5-Zoll-Laufwerke (NL-SAS, SAS und SSD)
-* E4000, E2800 und E5700 Controller
+* EF50, EF80, E4000, E2800 und E5700 Controller
 
  a| 
 image:../media/de460c.gif["DE460C"]

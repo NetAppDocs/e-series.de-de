@@ -35,7 +35,7 @@ Globale Pause-Frames sind die grundlegendste Form der Flusssteuerung und am einf
 
 Die Prioritätsflusssteuerung (PFC) ist eine komplexere Form der Flusssteuerung, die verschiedenen Datenverkehrstypen unterschiedliche Prioritätsstufen zuweist. Wenn zu viel Datenverkehr einer Prioritätsstufe eingeht, wird dieser angehalten, während Datenverkehr anderer Prioritätsstufen weiterhin verarbeitet werden kann, wodurch verhindert wird, dass starker Datenverkehr bestimmter Typen andere Datenverkehrsarten verlangsamt.
 
-Aktuell müssen Sie entweder ein EF600 E-Series Array mit 200Gb/s Ethernet HICs (PN 111-04583) mit Version 11.80.1 oder ein EF80 E-Series Array mit einem beliebigen unterstützten NVMe/RoCE HIC verwenden. PFC-Parameter sind im Array fest codiert und erfordern, dass NVMe/RoCE-Datenverkehr als Priorität 3 mit einem DSCP-Wert von  `106` getaggt wird.
+Aktuell müssen Sie entweder ein EF600 E-Series Array mit 200Gb/s Ethernet HICs (PN 111-04583) mit Version 11.80.1 oder ein EF80 E-Series Array mit einem beliebigen unterstützten NVMe/RoCE HIC verwenden. PFC-Parameter sind im Array fest codiert und erfordern, dass NVMe/RoCE-Datenverkehr als Priorität 3 mit einem DSCP-Wert von  `26` getaggt wird.
 
 .Schritte
 . Weitere Informationen zur Einrichtung Ihres Netzwerks mithilfe der PFC-Werte finden Sie in der Dokumentation Ihres Switch-Herstellers.

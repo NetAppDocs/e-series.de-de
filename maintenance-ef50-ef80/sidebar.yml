@@ -25,6 +25,8 @@ entries:
   url: "/maintenance-ef50-ef80/dimm-replace.html"
 - title: Laufwerk
   url: "/maintenance-ef50-ef80/drive-replace.html"
+- title: Laufwerksschublade
+  url: "/maintenance-ef50-ef80/drive-drawer-de460c-replace.html"
 - title: Lüfter
   url: "/maintenance-ef50-ef80/fan-replace.html"
 - title: E/A-Modul

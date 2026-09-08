@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: replacing E2800 HIC, replace E2800 HIC, replace host interface card, E2800, E-Series, eseries 
 summary: 'Ersetzen Sie eine fehlerhafte Host Interface Card (HIC).' 
 ---
-= Ersetzen Sie die Host-Schnittstellenkarte (HIC) - E2800
+= Austausch der Host-Schnittstellenkarte in einem E2800 Array
 :allow-uri-read: 
 :experimental: 
 :icons: font

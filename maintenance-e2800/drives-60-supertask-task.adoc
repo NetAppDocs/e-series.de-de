@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: E2800 replace drive drawer, replacing E2800 drive drawer, E2800 replace drive drawer, replacing E2800 drive drawer, E2800, E-Series, eseries 
 summary: Ersetzen Sie eine Laufwerksschublade in einem E2860 Controller-Shelf oder einem DE460C Festplatten-Shelf. 
 ---
-= Ersetzen einer Laufwerksschublade – E2800 (Shelf für 60 Laufwerke)
+= Austausch einer Laufwerksschublade in einem E2800 60-Laufwerk-Shelf
 :allow-uri-read: 
 :experimental: 
 :icons: font

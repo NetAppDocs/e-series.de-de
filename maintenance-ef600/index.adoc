@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: EF300 maintenance, EF600 maintenance, repairing EF300, repairing EF600, EF600C, EF300C replace EF300 components, replace EF600 components 
 summary: EF300- und EF600-Hardware Aufrechterhaltung 
 ---
-= Wartung der Hardware - EF300 und EF600
+= Hardwarewartung für EF300 und EF600 Systeme
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -51,6 +51,13 @@ Sie müssen ein DIMM (Dual-Inline-Speichermodul) ersetzen, wenn ein Speicherfehl
 https://docs.netapp.com/us-en/e-series/maintenance-ef600/drives-overview-supertask-concept.html["Laufwerke"]
  a| 
 Ein Laufwerk ist ein Gerät, das den physischen Speicher für Daten bereitstellt.
+
+
+
+ a| 
+link:drive-drawer-de460c-replace.html["Laufwerksschublade"]
+ a| 
+Eine Laufwerksschublade ist eine von fünf Komponenten in einem DE460C Laufwerks-Shelf, die bis zu 12 Laufwerke aufnehmen.
 
 
 

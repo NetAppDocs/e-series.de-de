@@ -23,11 +23,11 @@ Zur Installation der Hardware installieren Sie die Rack-Montagehardware im Schra
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["Drittens"]link:install-cable.html["Verkabeln Sie die Hardware"]
 [role="quick-margin-para"]
-Um die Hardware zu verkabeln, verbinden Sie die Controller untereinander, um die Inter-Controller-Spiegelung zu ermöglichen, die eine vollständige Systemredundanz gewährleistet und für Cache-Spiegelung und I/O-Versand verwendet wird, und verbinden Sie dann die Controller mit Ihrem Host-Netzwerk.
+Zur Verkabelung der Hardware werden die Controller untereinander verbunden, um die Inter-Controller-Spiegelung zu ermöglichen, die eine vollständige Systemredundanz sicherstellt und für Cache-Spiegelung und I/O-Versand verwendet wird, anschließend werden die Controller mit Ihrem Host-Netzwerk verbunden und danach gegebenenfalls die SAS-Erweiterungs-Shelfs verkabelt.
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png["Vier"]link:install-power-hardware.html["Schalten Sie das Speichersystem ein"]
 [role="quick-margin-para"]
-Um Ihr Speichersystem einzuschalten, stecken Sie ein Netzkabel in jedes Controller-Netzteil und verbinden Sie sie dann mit Stromquellen an verschiedenen Stromkreisen
+Zum Einschalten Ihres Speichersystems werden zuerst die Shelves eingeschaltet und Shelf-IDs zugewiesen, falls zutreffend, und anschließend die Controller eingeschaltet.
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-5.png["Fünf"]link:install-complete-setup.html["Vervollständigen Sie die Einrichtung des Speichersystems"]
 [role="quick-margin-para"]

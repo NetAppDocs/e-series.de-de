@@ -39,7 +39,7 @@ Vergewissern Sie sich, dass der neue Controller dieselbe Teilenummer wie der akt
 . Suchen Sie die Etiketten für MAC-Adresse und FRU-Teilenummer auf der Rückseite des Controller-Behälters.
 . Suchen Sie im SANtricity-System-Manager die Ersatzteil-Nummer für den installierten Controller-Behälter.
 +
-.. Wählen Sie *Hardware*.
+.. Wählen Sie Menü:Hardware[Controller und Komponenten] aus.
 .. Suchen Sie das Controller-Shelf, das mit dem Controller-Symbol gekennzeichnet ist.
 .. Klicken Sie auf das Controller-Symbol image:../media/sam1130_ss_hardware_controller_icon_maint-e2800.gif["GIF des Controller-Symbols"].
 .. Wählen Sie den Controller aus und klicken Sie auf *Weiter*.
@@ -324,7 +324,7 @@ Die Übertragung der Steuerung beginnt.
 . Optional verteilen Sie nach dem Neubooten der Controller zwischen Controller A und dem neuen Controller B
 +
 .. Wählen Sie *Storage › Volumes*.
-.. Wählen Sie auf der Registerkarte Alle Volumes die Option *Mehr › Besitzrechte ändern*.
+.. Auf der Registerkarte „Alle Volumes“ ist *Ellipsensymbol › Eigentümer ändern* auszuwählen.
 .. Geben Sie den folgenden Befehl in das Textfeld ein: `change ownership`
 +
 Die Schaltfläche „Eigentümerschaft ändern“ ist aktiviert.

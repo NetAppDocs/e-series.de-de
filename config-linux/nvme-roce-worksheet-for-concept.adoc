@@ -53,27 +53,35 @@ Suchen und Dokumentieren des Initiator-NQN von jedem Host aus.
  a| 
 Host (Initiator) 1
  a| 
+{nbsp}
 
 
 
  a| 
+{nbsp}
  a| 
+{nbsp}
 
 
 
  a| 
 Host (Initiator) 2
  a| 
+{nbsp}
 
 
 
  a| 
+{nbsp}
  a| 
+{nbsp}
 
 
 
  a| 
+{nbsp}
  a| 
+{nbsp}
 
 |===
 

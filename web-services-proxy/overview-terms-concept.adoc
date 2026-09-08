@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: Web Services terms, WSP concepts 
 summary: Erfahren Sie mehr über die Web Services API 
 ---
-= Erfahren Sie mehr über die Terminologie von SANtricity Webservices Proxy
+= SANtricity Web Services Proxy Terminologie
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

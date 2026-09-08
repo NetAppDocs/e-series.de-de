@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: EF300, EF600, EF300C, EF600C, installation, create account, register hardware 
 summary: Um eine EF300 oder EF600 zu installieren, erstellen Sie ein Konto und registrieren Sie Ihre Hardware. 
 ---
-= Installation vorbereiten - EF300, EF600, EF300C und EF600C
+= Vorbereitung der Installation Ihres EF300 oder EF600 Storage-Systems
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -21,7 +21,16 @@ Wenn Sie die Erweiterung EF300 für SAS verkabeln, lesen Sie die folgenden Infor
 
 
 .Schritte
-. Erstellen Sie ein Konto und registrieren Sie Ihre Hardware unter http://mysupport.netapp.com/["NetApp Support"^].
+. Registrierung Ihres Systems:
++
+
+NOTE: Sie können Ihr System jetzt oder später registrieren. Später werden Sie beim Systemstart zur Registrierung Ihres Systems aufgefordert.
+
++
+.. Erstellen Sie ein Konto bei  http://mysupport.netapp.com/["NetApp Support"^], falls Sie noch keins haben.
+.. Ihr System wird gemäß den Anweisungen im NetApp Knowledge Base Article https://kb.netapp.com/nss/System_Registration/How_to_register_a_new_system_on_the_NetApp_Support_Site["Registrierung eines neuen Systems"^] registriert.
+
+
 . Stellen Sie sicher, dass die folgenden Elemente in dem Feld enthalten sind, das Sie erhalten haben.
 +
 |===
@@ -41,7 +50,7 @@ Rack-montierte Hardware
 
 |===
 +
-In der folgenden Tabelle sind die Kabeltypen aufgeführt, die Sie möglicherweise erhalten können. Wenn Sie ein Kabel erhalten, das nicht in der Tabelle aufgeführt ist, lesen Sie https://hwu.netapp.com/["Hardware Universe"] Um das Kabel zu lokalisieren und dessen Verwendung zu identifizieren.
+Die folgende Tabelle listet die Kabeltypen auf, die Sie möglicherweise erhalten. Falls Sie ein Kabel erhalten, das nicht in der Tabelle aufgeführt ist, finden Sie unter link:https://hwu.netapp.com["NetApp Hardware Universe"^] Informationen dazu, wo sich das Kabel befindet und wofür es verwendet wird.
 
 +
 |===

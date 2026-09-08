@@ -14,7 +14,16 @@ summary:
 Sie müssen Ihren Standort so vorbereiten, dass er den Spezifikationen für Ihr Speichersystem der E4000-Serie entspricht.
 
 .Schritte
-. Erstellen Sie ein Konto und registrieren Sie Ihre Hardware unter http://mysupport.netapp.com/["NetApp Support"^].
+. Registrierung Ihres Systems:
++
+
+NOTE: Sie können Ihr System jetzt oder später registrieren. Später werden Sie beim Systemstart zur Registrierung Ihres Systems aufgefordert.
+
++
+.. Erstellen Sie ein Konto bei  http://mysupport.netapp.com/["NetApp Support"^], falls Sie noch keins haben.
+.. Ihr System wird gemäß den Anweisungen im NetApp Knowledge Base Article https://kb.netapp.com/nss/System_Registration/How_to_register_a_new_system_on_the_NetApp_Support_Site["Registrierung eines neuen Systems"^] registriert.
+
+
 . Stellen Sie sicher, dass die folgenden Elemente in der Verpackung enthalten sind, die Sie erhalten haben:
 +
 [role="tabbed-block"]

@@ -65,7 +65,7 @@ NOTE: Wenn in den letzten zwei bis drei Wochen nicht gelöste kritische Ereignis
 
 . Wenn EAMs an Ihre Hardware angeschlossen sind, führen Sie die folgenden Schritte aus. Andernfalls fahren Sie mit fort <<step2_install_drive_shelf,Schritt 2: Installieren Sie das Laufwerk-Shelf und schalten Sie die Stromversorgung ein.>>
 +
-.. Wählen Sie *Hardware*.
+.. Menü auswählen:Hardware[Controllers and components].
 .. Wählen Sie das Symbol * IOMs (ESMs)* aus.
 +
 image::../media/sam1130_ss_hardware_iom_icon.gif[IOM-Symbol]
@@ -122,7 +122,7 @@ Die folgende Abbildung zeigt eine Beispielverbindung zwischen einem zusätzliche
 +
 image::../media/hot_e4000_cabling_1.png[Verkabelung des Laufwerks-Shelf]
 
-. Klicken Sie im SANtricity System Manager auf *Hardware*.
+. Im SANtricity System Manager wird Menü:Hardware[Controller und Komponenten] ausgewählt.
 +
 
 NOTE: An diesem Punkt in der Prozedur verfügen Sie nur über einen aktiven Pfad zum Controller-Shelf.
@@ -168,7 +168,7 @@ Sie schließen das Hot Add-Laufwerk aus, indem Sie auf Fehler überprüfen und b
 .Schritte
 . Klicken Sie im SANtricity System Manager auf *Home*.
 . Wenn der Link *Recover from Problems* in der Mitte oben auf der Seite angezeigt wird, klicken Sie auf den Link und beheben Sie alle im Recovery Guru angezeigten Probleme.
-. Klicken Sie im SANtricity System Manager auf *Hardware* und scrollen Sie nach unten, um das neu hinzugefügte Festplatten-Shelf anzuzeigen.
+. Wählen Sie in SANtricity System Manager im Menü „Hardware“ die Option „Controller und Komponenten“ aus und scrollen Sie bei Bedarf nach unten, um das neu hinzugefügte Laufwerks-Shelf anzuzeigen.
 . Fügen Sie bei Laufwerken, die zuvor in einem anderen Storage-System installiert waren, dem neu installierten Festplatten-Shelf ein Laufwerk hinzu. Warten Sie, bis jedes Laufwerk erkannt wird, bevor Sie das nächste Laufwerk einsetzen.
 +
 Wenn ein Laufwerk vom Speichersystem erkannt wird, wird die Darstellung des Laufwerkssteckplatzes auf der Seite *Hardware* als blaues Rechteck angezeigt.

@@ -1,0 +1,77 @@
+---
+permalink: config-linux/nvme-tcp-setup-failover-host-task.html 
+sidebar: sidebar 
+keywords: failover, express linux configuration, software configuration, linux host, E2800, E5700, EF300, EF600, E-Series, eseries 
+summary: Konfigurieren Sie den Host für das Failover. 
+---
+= Failover auf dem Host in E-Series einrichten - Linux (NVMe über TCP)
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Um einen redundanten Pfad zum Speicher-Array bereitzustellen, können Sie den Host so konfigurieren, dass ein Failover ausgeführt wird.
+
+.Bevor Sie beginnen
+Beachten Sie die  https://mysupport.netapp.com/matrix["NetApp Interoperabilitäts-Matrix-Tool"^] , um sicherzustellen, dass alle erforderlichen Updates installiert sind, da wichtige Fehlerbehebungen für Versionen von SLES oder RHEL erforderlich sein können, die in der ersten Version nicht verfügbar sind.
+
+.Über diese Aufgabe
+Bei SLES 15, SLES 16, RHEL 9 und RHEL 10 ist Native NVMe Multipathing standardmäßig aktiviert und es ist keine zusätzliche Konfiguration erforderlich.
+
+
+
+[[configure-nvme-io-policy]]
+== Konfiguration der NVMe E/A-Richtlinie
+
+.Über diese Aufgabe
+Linux NVMe nativ für Multipathing verwendet möglicherweise standardmäßig die  `numa`I/O-Richtlinie. Für E-Series/EF-Series NVMe-over-Fabrics Konfigurationen ist die empfohlene I/O-Richtlinie  `round-robin`, die E/A gleichmäßig auf alle verfügbaren Pfade verteilt.
+
+.Schritte
+. Die aktuelle NVMe-E/A-Richtlinie wird überprüft:
++
+[listing]
+----
+# cat /sys/module/nvme_core/parameters/iopolicy
+numa
+----
+. Die  `round-robin`E/A-Richtlinie kann mit einer der folgenden Methoden festgelegt werden:
++
+** *Persistent (empfohlen)*: Es wird eine udev-Regeldatei erstellt.
++
+.<code>/etc/udev/rules.d/71-nvme-io-policy.rules</code>
+[listing]
+----
+ACTION=="add|change", SUBSYSTEM=="nvme-subsystem", ATTR{iopolicy}="round-robin"
+----
++
+Anschließend die Regeln neu laden und anwenden:
+
++
+[listing]
+----
+udevadm control --reload
+udevadm trigger --subsystem-match=nvme-subsystem
+----
+** *Globale Einstellung beim Systemstart* - Der folgende Kernel-Parameter ist Ihrer Bootloader-Konfiguration hinzuzufügen:
++
+[listing]
+----
+nvme_core.iopolicy=round-robin
+----
+** *Nicht persistent (online, keine E/A-Unterbrechung)* - sofortige Anwendung ohne Neustart:
++
+[listing]
+----
+echo "round-robin" > /sys/class/nvme-subsystem/nvme-subsys0/iopolicy
+----
++
+
+NOTE: Diese Einstellung bleibt nach einem Neustart nicht erhalten.
+
+
+
+
+
+.Was kommt als Nächstes?
+Mit aktiviertem nativen NVMe-Multipathing link:nvme-tcp-access-physical-targets-concept.html["Zugriff auf die NVMe-Volumes für ein E-Series-Ziel vom Host"].

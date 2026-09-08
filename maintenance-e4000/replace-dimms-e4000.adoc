@@ -144,8 +144,7 @@ Die Datei wird im Ordner Downloads Ihres Browsers mit dem Namen *KonfigurationDa
 
 . Wenn der Controller nicht bereits offline ist, versetzen Sie ihn jetzt mithilfe von SANtricity System Manager in den Offline-Modus.
 +
-.. Wählen Sie *Hardware*.
-.. Wenn die Grafik die Laufwerke anzeigt, wählen Sie *Zurück vom Shelf anzeigen* aus, um die Controller anzuzeigen.
+.. Wählen Sie im Menü die Option Hardware [Controller und Komponenten] aus.
 .. Wählen Sie den Controller aus, den Sie in den Offline-Modus versetzen möchten.
 .. Wählen Sie im Kontextmenü die Option *Offline platzieren* aus, und bestätigen Sie, dass Sie den Vorgang ausführen möchten.
 +
@@ -325,9 +324,9 @@ Wenn der Status nicht optimal ist oder eine der Warn-LEDs leuchtet, vergewissern
 
 . Überprüfen Sie, ob alle Volumes an den bevorzugten Eigentümer zurückgegeben wurden.
 +
-.. Wählen Sie *Storage › Volumes*. Überprüfen Sie auf der Seite * All Volumes*, ob die Volumes an die bevorzugten Eigentümer verteilt werden. Wählen Sie *Mehr › Eigentümerschaft ändern*, um die Eigentümer des Volumes anzuzeigen.
+.. *Storage › Volumes* wird ausgewählt. Auf der Seite *All Volumes* wird überprüft, ob die Volumes ihren bevorzugten Eigentümern zugewiesen sind. *ellipse icon › Change ownership* wird ausgewählt, um die Volume-Eigentümer anzuzeigen.
 .. Wenn alle Volumes Eigentum des bevorzugten Eigentümers sind, fahren Sie mit Schritt 6 fort.
-.. Wenn keines der Volumes zurückgegeben wird, müssen Sie die Volumes manuell zurückgeben. Gehen Sie zu *Mehr › Volumes neu verteilen*.
+.. Falls keines der Volumes zurückgegeben wird, müssen Sie die Volumes manuell zurückgeben. Wechseln Sie zu *Symbol mit den drei Punkten › Volumes neu verteilen*.
 .. Wenn kein Recovery Guru zur Verfügung steht oder bei Durchführung der Schritte des Recovery Guru erfolgt, werden die Volumes immer noch nicht an den von ihnen bevorzugten Eigentümer zurückgegeben.
 
 

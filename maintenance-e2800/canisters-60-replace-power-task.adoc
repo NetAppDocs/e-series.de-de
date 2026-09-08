@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: E2800 replace 60-drive power canister, replacing E2800 power canister, E2800, E-Series, eseries 
 summary: Ersetzen Sie ein Controller-Shelf oder Festplatten-Shelf für 60 Laufwerke, das zwei Stromankanister für Redundanz enthält. 
 ---
-= Ersetzen Sie den E2800-Aktivkohlebehälter (60 Laufwerke).
+= Austausch des Netzteils in einem E2800 Shelf mit 60 Laufwerken
 :allow-uri-read: 
 :experimental: 
 :icons: font

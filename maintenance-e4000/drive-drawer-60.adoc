@@ -2,7 +2,7 @@
 permalink: maintenance-e4000/drive-drawer-60.html 
 sidebar: sidebar 
 keywords: E4000 replace drive drawer, replacing E4000 drive drawer, E4000 replace drive drawer, replacing E4000 drive drawer, E4000, E-Series, eseries 
-summary: Ersetzen Sie eine Laufwerksschublade in einem E2860 Controller-Shelf oder einem DE460C Festplatten-Shelf. 
+summary: Eine Laufwerkschublade kann in einem E4060 Controller-Shelf oder einem DE460C Festplatten-Shelf ersetzt werden. 
 ---
 = Ersetzen Sie die Laufwerksschublade E4000 (Shelf für 60 Laufwerke).
 :allow-uri-read: 
@@ -15,7 +15,7 @@ summary: Ersetzen Sie eine Laufwerksschublade in einem E2860 Controller-Shelf od
 Eine Laufwerkschublade kann in einem E4060 Controller-Shelf oder einem DE460C Festplatten-Shelf ersetzt werden.
 
 .Über diese Aufgabe
-Die Schritte zum Ersetzen einer fehlerhaften Laufwerksschublade in einem E4060 Controller-Shelf oder einem DE460C Festplatten-Shelf hängen davon ab, ob die Volumes in der Schublade durch Abschubladenschutz geschützt sind. Wenn sich alle Volumes in der Laufwerksschublade in Festplattenpools oder Volume-Gruppen befinden, die einen Schubladenschutz besitzen, können Sie diesen Vorgang online ausführen. Andernfalls müssen Sie alle Host-I/O-Aktivitäten beenden und das Shelf ausschalten, bevor Sie das Laufwerkschublade ersetzen.
+Die Schritte zum Austauschen eines ausgefallenen Laufwerksschachts in einem E4060 Controller Shelf oder einem DE460C Drive Shelf hängen davon ab, ob die Volumes im Schacht durch Drawer Loss Protection geschützt sind. Wenn sich alle Volumes im Laufwerksschacht in Disk Pools oder Volume Groups mit Drawer Loss Protection befinden, kann dieser Vorgang online durchgeführt werden. Andernfalls muss dieser Vorgang offline erfolgen, indem vor dem Austausch eines Laufwerksschachts alle Host-E/A-Aktivitäten beendet und das gesamte Speichersystem (Controller Shelf und alle Expansion Shelves) ausgeschaltet wird.
 
 .Bevor Sie beginnen
 * Stellen Sie sicher, dass das Festplatten-Shelf alle folgenden Bedingungen erfüllt:
@@ -46,14 +46,14 @@ CAUTION: *Möglicher Verlust des Datenzugriffs* -- Wenn ein Volume sich bereits 
 
 
 
-NOTE: Wenn Sie Informationen zum Austausch eines E-Series DE460c Erweiterungs-Shelf benötigen, finden Sie sich im https://kb.netapp.com/on-prem/E-Series/Hardware-KBs/How_to_replace_an_E_Series_DE460c_controller_expansion_shelf["NetApp Knowledge Base"^].
+NOTE: Informationen zum Austausch eines E-Series DE460C Erweiterungsfachs finden sich in der entsprechenden Dokumentation https://kb.netapp.com/on-prem/E-Series/Hardware-KBs/How_to_replace_an_E_Series_DE460c_controller_expansion_shelf["NetApp Knowledge Base"^].
 
 
 
 [[step-1-prepare-to-replace-drive-drawer]]
 == Schritt 1: Vorbereitung auf den Austausch der Laufwerksschublade
 
-Ermitteln Sie, ob Sie den Ersatzvorgang durchführen können, während das Festplatten-Shelf online ist, oder ob Sie die Host-I/O-Aktivität beenden und eines der Shelfs, die eingeschaltet sind, ausschalten müssen.
+Es ist zu prüfen, ob der Austauschvorgang durchgeführt werden kann, während das Laufwerksgehäuse online ist, oder ob die Host-E/A-Aktivität gestoppt und alle eingeschalteten Gehäuse ausgeschaltet werden müssen (den Vorgang offline durchführen).
 
 Wenn Sie eine Schublade in einem Shelf durch einen Schubladenschutz ersetzen, müssen Sie die Host-I/O-Aktivität nicht beenden und ein Regal ausschalten.
 
@@ -64,11 +64,11 @@ Wenn Sie eine Schublade in einem Shelf durch einen Schubladenschutz ersetzen, m�
 ** Wenn der Strom eingeschaltet ist, fahren Sie mit dem nächsten Schritt fort.
 
 
-. Greifen Sie auf die CLI zu, und geben Sie dann den folgenden Befehl ein:
+. Der Zugriff auf die CLI erfolgt, anschließend ist der folgende Befehl einzugeben, um die Zielschublade in den Servicemodus zu versetzen:
 +
 [listing]
 ----
-SMcli <ctlr_IP1\> -p "array_password" -c "set tray [trayID] drawer [drawerID]
+SMcli <ctlr_IP1\> -k -u "array_username" -p "array_password" -c "set tray [trayID] drawer [drawerID]
 serviceAllowedIndicator=on;"
 ----
 +
@@ -76,6 +76,7 @@ Wo?
 
 +
 ** `<ctlr_IP1>` Ist die Kennung des Controllers.
+**  `array_username` ist der Benutzername für das Speicherarray. Der Wert für  `array_username` muss in doppelte Anführungszeichen ("") gesetzt werden.
 **  `array_password` Ist das Passwort für das Speicher-Array. Sie müssen den Wert für einschließen `array_password` In doppelten Anführungszeichen (").
 ** `[trayID]` Ist die Kennung des Festplatten-Shelf, das das Laufwerksfach enthält, das Sie ersetzen möchten. Die Werte für die Shelf-ID des Laufwerks sind 0 bis 99. Sie müssen den Wert für einschließen `trayID` In eckigen Klammern.
 ** `[drawerID]` Ist die Kennung der Laufwerksschublade, die Sie ersetzen möchten. Die Werte für die Fach-ID sind 1 (oberes Fach) bis 5 (unteres Fach). Sie müssen den Wert für einschließen `drawerID` In eckigen Klammern.
@@ -87,7 +88,7 @@ Mit diesem Befehl wird sichergestellt, dass Sie das am häufigsten herausziehbar
 +
 [listing]
 ----
-SMcli <ctlr_IP1\> -p "safety-1" -c "set tray [10] drawer [1]
+SMcli <ctlr_IP1\> -k -u "DC1-PRD-SAN-01" -p "safety-1" -c "set tray [10] drawer [1]
 serviceAllowedIndicator=forceOnWarning;"
 ----
 . Ermitteln Sie wie folgt, ob Sie die Host-I/O-Aktivität anhalten müssen:
@@ -120,7 +121,7 @@ CAUTION: *Möglicher Datenverlust* -- Wenn Sie diesen Vorgang während der I/O-V
 +
 Die grüne LED „Cache aktiv“ auf der Rückseite jedes Controllers leuchtet, wenn die Daten im Cache auf die Laufwerke geschrieben werden müssen. Sie müssen warten, bis diese LED ausgeschaltet ist.
 
-. Wählen Sie auf der Startseite des SANtricity System Managers die Option *Vorgänge in Bearbeitung anzeigen*.
+. Im linken Bereich des SANtricity System Manager wird menu:Storage[Operations in Progress] ausgewählt.
 . Warten Sie, bis alle Vorgänge abgeschlossen sind, bevor Sie mit dem nächsten Schritt fortfahren.
 . Schalten Sie die Shelves mithilfe eines der folgenden Verfahren aus:
 +
@@ -160,7 +161,7 @@ Die Metallenden an den Kabelketten gleiten wie folgt in die entsprechenden verti
 
 
 
-CAUTION: *Möglicher Hardwareschaden* -- Wenn das Laufwerksfach eingeschaltet ist, wird die Kabelkette so lange aktiviert, bis beide Enden wieder angeschlossen sind. Um ein Kurzschluss am Gerät zu vermeiden, darf der nicht angeschlossene Kabelkettenanschluss das Metallgehäuse nicht berühren, wenn das andere Ende der Kabelkette noch angeschlossen ist.
+CAUTION: *Mögliche Hardwarebeschädigung* - Wenn das Laufwerks-Shelf eingeschaltet ist, steht die Kabelkette unter Spannung, bis beide Enden abgezogen sind. Um einen Kurzschluss des Geräts zu vermeiden, darf der abgezogene Kabelkettenstecker das Metallgehäuse nicht berühren, solange das andere Ende der Kabelkette noch eingesteckt ist.
 
 .Schritte
 . Stellen Sie sicher, dass das Laufwerk-Shelf und das Controller-Shelf nicht mehr über I/O-Aktivitäten verfügt und ausgeschaltet ist oder Sie die ausgestellt haben `Set Drawer Attention Indicator` CLI-Befehl.
@@ -176,8 +177,8 @@ image::../media/28_dwg_e2860_de460c_fan_canister_handle_with_callout_maint-e2800
 +
 *(1)* _Behälter-Griff_
 
-.. Ziehen Sie den Lüfterbehälter mithilfe des Griffs aus dem Laufwerksfach heraus und legen Sie ihn beiseite.
-.. Wenn das Fach eingeschaltet ist, stellen Sie sicher, dass der linke Lüfter seine maximale Geschwindigkeit erreicht.
+.. Mithilfe des Griffs wird der Lüfterbehälter aus dem Laufwerksfach herausgezogen und beiseitegelegt.
+.. Wenn das Shelf eingeschaltet ist, stellen Sie sicher, dass der linke Lüfter auf seine maximale Geschwindigkeit geht.
 +
 
 CAUTION: *Mögliche Geräteschäden aufgrund von Überhitzung* -- Wenn das Fach eingeschaltet ist, entfernen Sie nicht beide Lüfter gleichzeitig. Andernfalls kann das Gerät überhitzen.
@@ -271,7 +272,7 @@ CAUTION: *Mögliche Geräteschäden aufgrund von Überhitzung* -- Wenn das Regal
 .. Ziehen Sie zum Abziehen der Kabelkette ca. 2.5 cm zu Ihnen. Den Kabelkettenstecker in der vertikalen Führungsschiene verlassen.
 +
 
-CAUTION: *Möglicher Hardwareschaden* -- Wenn das Laufwerksfach eingeschaltet ist, wird die Kabelkette so lange aktiviert, bis beide Enden wieder angeschlossen sind. Um ein Kurzschluss am Gerät zu vermeiden, darf der nicht angeschlossene Kabelkettenanschluss das Metallgehäuse nicht berühren, wenn das andere Ende der Kabelkette noch angeschlossen ist.
+CAUTION: *Mögliche Hardwarebeschädigung* - Wenn das Laufwerks-Shelf eingeschaltet ist, steht die Kabelkette unter Spannung, bis beide Enden abgezogen sind. Um einen Kurzschluss des Geräts zu vermeiden, darf der abgezogene Kabelkettenstecker das Metallgehäuse nicht berühren, solange das andere Ende der Kabelkette noch eingesteckt ist.
 
 
 
@@ -393,7 +394,7 @@ Beim Anschließen einer Kabelkette die Reihenfolge umkehren, die Sie beim Trenne
 .Schritte
 . Stellen Sie sicher, dass:
 +
-** Ein neuer Laufwerkseinschub installiert.
+** Eine neue Laufwerksschublade ist installiert.
 ** Sie haben zwei Ersatzkabelketten, die LINKS und RECHTS gekennzeichnet sind (am horizontalen Anschluss neben der Laufwerksschublade).
 
 
@@ -470,7 +471,7 @@ Die LED könnte nach der Neuinstallation des Lüfters bis zu einer Minute einges
 [[step-6-complete-drive-drawer-replacement]]
 == Schritt 6: Schließen Sie den Austausch der Laufwerkschublade ab
 
-Setzen Sie die Laufwerke wieder ein, und ersetzen Sie die Frontverkleidung in der richtigen Reihenfolge.
+Die Laufwerke werden in der richtigen Reihenfolge wieder eingesetzt, der Laufwerksschacht wird wieder im Laufwerksgehäuse installiert, die Frontblende wird wieder angebracht, die Stromversorgung wird bei Bedarf wiederhergestellt, und die Laufwerke werden bei Bedarf manuell rekonstruiert.
 
 
 CAUTION: *Möglicher Verlust des Datenzugriffs* -- Sie müssen jedes Laufwerk in seiner ursprünglichen Position in der Laufwerksschublade installieren.
@@ -533,6 +534,10 @@ CAUTION: *Gefahr einer Gerätestörung* -- Verschließen Sie die Antriebsschubla
 
 
 
+
+. Wenn Sie das Verfahren zum Austausch des Laufwerksschachts online durchgeführt haben und wenn Laufwerke im Ersatzschubfach ausgefallen sind, müssen Sie die Laufwerke manuell rekonstruieren.
++
+Mithilfe von SANtricity System Manager wird die link:https://docs.netapp.com/us-en/e-series-santricity/sm-hardware/reconstruct-drive-manually.html["Laufwerk manuell rekonstruieren"^] Prozedur abgeschlossen.
 
 
 
