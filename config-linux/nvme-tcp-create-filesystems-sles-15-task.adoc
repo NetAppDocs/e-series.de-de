@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: file systems, express linux configuration, software configuration, linux host, E2800, E5700, EF300, EF600, E-Series, eseries 
 summary: Bei RHEL 9, RHEL 10, SLES 15 und SLES 16 erstellen Sie ein Dateisystem auf dem nativen nvme-Gerät und mounten das Dateisystem. 
 ---
-= Dateisysteme in E-Series erstellen - Linux (NVMe über TCP)
+= Erstellen von Dateisystemen für E-Series Linux Hosts mit NVMe over TCP
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -51,4 +51,4 @@ Writing superblocks and filesystem accounting information: done
 
 
 .Was kommt als Nächstes?
-Nachdem Sie die Dateisysteme erstellt haben, link:nvme-tcp-worksheet-for-concept.html["Aufzeichnung Ihrer NVMe over TCP Konfigurationsinformationen"].
+Nachdem Sie die Dateisysteme erstellt haben, link:nvme-tcp-worksheet-for-concept.html["Ihre NVMe over TCP Konfigurationsinformationen werden notiert."].

@@ -4,51 +4,51 @@ sidebar: sidebar
 keywords: cabling, cables, hot add, hot add drive shelf, E-Series, eseries, E4000, E2800, E5700, EF300, EF300C, EF600, EF600C, DE212C, DE224C, DE460C, ef50, ef80 
 summary: Fügen Sie ein neues Festplatten-Shelf hinzu, während die Stromversorgung weiterhin auf die anderen Komponenten angewendet wird. 
 ---
-= Hot-Add eines Laufwerk-Shelfs im laufenden Betrieb - E-Series
+= Hot-Add eines Laufwerksfachs in einem E-Series Storage-System
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Sie können ein neues Laufwerksgehäuse hinzufügen, während die anderen Komponenten des Speichersystems weiterhin mit Strom versorgt werden, sofern Ihre Speichersystemcontroller über freie SAS-Ports verfügen. Sie können die Speichersystemkapazität konfigurieren, rekonfigurieren, erweitern oder verlagern, ohne den Benutzerzugriff auf Daten zu unterbrechen.
+Sie können ein neues Laufwerksgehäuse hinzufügen, während die anderen Komponenten des Speichersystems weiterhin mit Strom versorgt werden, sofern Ihre Speichersystem Controller über freie SAS-Ports verfügen. Sie können die Kapazität des Speichersystems konfigurieren, rekonfigurieren, erweitern oder verlagern, ohne den Benutzerzugriff auf die Daten zu unterbrechen.
 
 .Bevor Sie beginnen
-* Aufgrund der Komplexität dieses Verfahrens sollten vor Beginn des Verfahrens alle Schritte vollständig gelesen werden.
+* Aufgrund der Komplexität dieses Verfahrens sollten vor Beginn des Verfahrens alle Schritte gelesen werden.
 +
 Beim Hinzufügen eines Regals zu einem oder mehreren bestehenden Regalen im laufenden Betrieb muss zur Aufrechterhaltung der Systemintegrität während des Vorgangs stets ein aktiver Pfad aufrechterhalten werden. Die Vorgehensweise muss exakt in der angegebenen Reihenfolge befolgt werden.
 
 +
-Zum Verkabeln des neuen Shelf werden die Controller-zu-Shelf-Verbindungen auf der A-Seite (Shelf IOM A) neu verkabelt und Shelf-zu-Shelf-Verbindungen hinzugefügt, es wird überprüft, ob der Pfad auf der A-Seite aktiv ist, die Controller-zu-Shelf-Verbindungen auf der B-Seite (Shelf IOMB) werden neu verkabelt und Shelf-zu-Shelf-Verbindungen hinzugefügt, und anschließend wird überprüft, ob die Redundanz wiederhergestellt wurde.
+Zum Verkabeln des neuen Shelf werden die Controller-zu-Shelf-Verbindungen auf der A-Seite (Shelf IOM A) neu verkabelt und Shelf-zu-Shelf-Verbindungen hinzugefügt, es wird überprüft, ob der A-Seiten-Pfad aktiv ist, die Controller-zu-Shelf-Verbindungen auf der B-Seite (Shelf IOMB) werden neu verkabelt und Shelf-zu-Shelf-Verbindungen hinzugefügt, und anschließend wird überprüft, ob die Redundanz wiederhergestellt wurde.
 
 +
 
-NOTE: Wenn Sie ein Laufwerksgehäuse installieren, das zuvor in einem Speichersystem installiert war, sind zusätzliche Schritte erforderlich.
+NOTE: Wenn Sie ein Laufwerksgehäuse installieren, das zuvor in einem Speichersystem installiert war, sind in diesem Verfahren zusätzliche Schritte erforderlich.
 
 * Stellen Sie sicher, dass das Hinzufügen eines Festplatten-Shelfs während des laufenden Vorgangs erfolgt.
-* Stellen Sie sicher, dass auf Ihrem Speichersystem eine Version von SANtricity ausgeführt wird, die SAS-Erweiterungsgehäuse unterstützt, und dass Sie die maximale Anzahl der unterstützten SAS-Gehäuse nicht überschreiten.
+* Es muss überprüft werden, dass auf Ihrem Speichersystem eine Version von SANtricity ausgeführt wird, die SAS-Erweiterungsgehäuse unterstützt, und dass die maximale Anzahl der unterstützten SAS-Gehäuse nicht überschritten wird.
 +
-Informationen zu den unterstützten Versionen von SANtricity und zur maximalen Anzahl von SAS-Erweiterungsgehäusen für Ihr Speichersystem sind in NetApp Hardware Universe https://hwu.netapp.com/Controller/Index?platformTypeId=2357027["Hardware Universe"^] enthalten.
+Informationen zu den unterstützten Versionen von SANtricity und zur maximalen Anzahl von SAS-Erweiterungsgehäusen für Ihr Speichersystem finden Sie im NetApp Hardware Universe: https://hwu.netapp.com/Controller/Index?platformTypeId=2357027["Hardware Universe"^].
 
 +
 
-NOTE: EF50 und EF80 Speichersysteme, auf denen SANtricity 12.10 oder höher läuft, unterstützen SAS Erweiterungs Shelfs.
+NOTE: EF50 und EF80 Speichersysteme, auf denen SANtricity 12.10 oder höher ausgeführt wird, unterstützen SAS Erweiterungs-Shelves.
 
-* Ihr Speichersystem muss über freie SAS-Anschlüsse verfügen. Das bedeutet, dass SAS-E/A-Module bereits installiert sein müssen. Falls dies nicht der Fall ist, sind die SAS-E/A-Module gemäß der entsprechenden Vorgehensweise zu installieren; anschließend ist zu dieser Vorgehensweise zurückzukehren, um das Laufwerksgehäuse im laufenden Betrieb hinzuzufügen.
+* Ihr Speichersystem muss über freie SAS-Anschlüsse verfügen. Das bedeutet, dass SAS-E/A-Module bereits installiert sein müssen. Falls dies nicht der Fall ist, sind die SAS-E/A-Module gemäß der entsprechenden Vorgehensweise zu installieren; anschließend ist zu dieser Vorgehensweise zurückzukehren, um das Laufwerks-Shelf im laufenden Betrieb hinzuzufügen.
 +
 ** Für EF50 und EF80 Speichersysteme ist das link:../maintenance-ef50-ef80/io-module-upgrade.html["Upgrade der E/A-Module"^]Verfahren zu verwenden.
-** Für ältere Speichersysteme ist die Prozedur _SAS expansion cards_ für Ihr Speichersystemmodell im Abschnitt _Maintain systems_ zu verwenden.
+** Für ältere Speichersysteme ist das Verfahren _SAS expansion cards_ für Ihr Speichersystemmodell im Abschnitt _Maintain systems_ zu verwenden.
 
 
 
 
 .Über diese Aufgabe
-* Dieses Verfahren gilt für ein Controller-Shelf E2800, E2800B, EF280, E5700, E5700B, EF570, EF300, EF600, EF300C, EF600C, E4000, EF50 oder EF80.
+* Dieses Verfahren gilt für einen Controller-Einschub E2800, E2800B, EF280, E5700, E5700B, EF570, EF300, EF600, EF300C, EF600C, E4000, EF50 oder EF80.
 +
 
 NOTE: Wenn Sie ein älteres Controller-Gehäuse verkabeln, finden Sie weitere Informationen unter  https://mysupport.netapp.com/ecm/ecm_download_file/ECMLP2859057["Hinzufügen von IOM-Laufwerk-Shelfs zu einem vorhandenen E27XX-, E56XX- oder EF560-Controller-Shelf"^].
 
-* Dieses Verfahren gilt für das Hot-Adding von DE212C-, DE224C- oder DE460C-Laufwerk-Shelfs mit IOM12-, IOM12B- oder IOM12C-Modulen.
+* Dieses Verfahren gilt für das Hot-Adding von DE212C, DE224C oder DE460C Laufwerks-Shelfs mit IOM12, IOM12B oder IOM12C Modulen.
 +
 
 NOTE: IOM12C-Module werden nur ab SANtricity OS 11.90R3 unterstützt. Stellen Sie sicher, dass die Firmware Ihres Controllers aktualisiert wurde, bevor Sie auf ein IOM12C installieren oder aktualisieren.
@@ -134,17 +134,17 @@ NOTE: In der Installationsanleitung Ihres Modells finden Sie das vollständige V
 
 
 [[step-3-cable-the-drive-shelf]]
-== Schritt 3: Laufwerk-Shelf verkabeln
+== Schritt 3: Das Laufwerk-Shelf verkabeln
 
-Um das Shelf an Ihr Speichersystem anzuschließen, verbinden Sie jeden Controller so, dass er über einen A-seitigen Pfad (IOMA) und einen B-seitigen Pfad (IOMB) zum einzelnen Shelf oder Shelf-Stapel (je nach Fall) verfügt. Wenn ein Shelf-Stapel vorhanden ist, werden die Shelfs anschließend über den A-seitigen Pfad und den B-seitigen Pfad miteinander verbunden (Shelf-zu-Shelf-Verbindungen).
+Zum Verkabeln des Shelfs mit Ihrem Speichersystem wird jeder Controller so verbunden, dass ein A-seitiger Pfad (IOMA) und ein B-seitiger Pfad (IOMB) zum einzelnen Shelf oder Shelf-Stack (je nach Fall) vorhanden sind. Wenn ein Shelf-Stack vorhanden ist, werden die Shelfs anschließend über den A-seitigen Pfad und den B-seitigen Pfad miteinander verbunden (Shelf-zu-Shelf-Verbindungen).
 
-Die Verkabelung der Controller und eines oder mehrerer Shelfs erfolgt stets so, dass zwei Kabelverbindungen für den A-seitigen Pfad (IOMA) und den B-seitigen Pfad (IOMB) vorhanden sind, wie in den Verkabelungsabbildungen dargestellt.
+Die Verkabelung der Controller und eines oder mehrerer Shelfs erfolgt immer so, dass zwei Kabelverbindungen für den A-seitigen Pfad (IOMA) und den B-seitigen Pfad (IOMB) vorhanden sind, wie in den Verkabelungsabbildungen gezeigt.
 
 [role="tabbed-block"]
 ====
-.Anschließen der Laufwerksschublade für EF50 oder EF80
+.Anschluss des Laufwerk-Shelfs für EF50 oder EF80
 --
-Dieses Verfahren beschreibt, wie das erste SAS-Erweiterungsgehäuse im laufenden Betrieb zu Ihrem EF50 oder EF80 Speichersystem hinzugefügt wird und wie das erste Gehäuse neu verkabelt wird, um ein zweites Gehäuse im laufenden Betrieb hinzuzufügen; dieses Verfahren kann jedoch auch beim Hinzufügen weiterer Gehäuse angewendet werden.
+Dieses Verfahren enthält Anweisungen dazu, wie das erste SAS Erweiterungsgehäuse im laufenden Betrieb zu Ihrem EF50 oder EF80 Speichersystem hinzugefügt wird und wie das erste Gehäuse neu verkabelt wird, um ein zweites Gehäuse im laufenden Betrieb hinzuzufügen; dieses Verfahren kann jedoch auch beim Hinzufügen weiterer Gehäuse angewendet werden.
 
 .Bevor Sie beginnen
 Sie haben Ihre Firmware auf die neueste Version aktualisiert. Befolgen Sie zum Aktualisieren der Firmware die Anweisungen im link:../upgrade-santricity/index.html["Aktualisieren des SANtricity Betriebssystems"].
@@ -154,20 +154,20 @@ Sie haben Ihre Firmware auf die neueste Version aktualisiert. Befolgen Sie zum A
 +
 ** Bei diesem Verfahren werden die Verbindungen zwischen Controller und Shelf neu verkabelt, sodass stets ein aktiver Pfad zum Controller Shelf erhalten bleibt.
 +
-Um während dieses Vorgangs einen aktiven Pfad aufrechtzuerhalten, werden die Controller-zu-Shelf-Verbindungen auf der A-Seite (Shelf IOMA) neu verkabelt und Shelf-zu-Shelf-Verbindungen hinzugefügt, anschließend wird überprüft, ob der Pfad auf der A-Seite aktiv ist, danach werden die Controller-zu-Shelf-Verbindungen auf der B-Seite (Shelf IOMB) neu verkabelt und Shelf-zu-Shelf-Verbindungen hinzugefügt, und schließlich wird überprüft, ob die Redundanz wiederhergestellt wurde.
+Um während dieses Vorgangs einen aktiven Pfad aufrechtzuerhalten, werden die Controller-zu-Shelf-Verbindungen der A-Seite (Shelf IOMA) neu verkabelt und Shelf-zu-Shelf-Verbindungen hinzugefügt, anschließend wird überprüft, ob der Pfad der A-Seite aktiv ist, danach werden die Controller-zu-Shelf-Verbindungen der B-Seite (Shelf IOMB) neu verkabelt und Shelf-zu-Shelf-Verbindungen hinzugefügt, und schließlich wird überprüft, ob die Redundanz wiederhergestellt wurde.
 
-** Kabel werden immer vom letzten Shelf im Stack zu denselben IOMs und IOM-Ports am neuen Shelf verlegt, und anschließend wird das neue Shelf mit dem zuvor letzten Shelf im Stack verbunden (Shelf-zu-Shelf-Verbindungen).
+** Kabel werden immer vom letzten Shelf im Stack zu denselben IOMs und IOM Ports auf dem neuen Shelf verlegt, und anschließend wird das neue Shelf mit dem zuvor letzten Shelf im Stack verbunden (Shelf-zu-Shelf-Verbindungen).
 
 
-* Dieses Verfahren umfasst Schritte zum Hot-Adding von bis zu zwei Shelfs. Wenn jedoch ein zusätzliches Shelf per Hot-Adding hinzugefügt wird, ist mit Schritt 2 zu beginnen, und die Schritte sind auf das zusätzliche Shelf anzuwenden.
-* Dieses Verfahren zeigt Controller mit einem SAS E/A-Modul in Steckplatz 3. Eine Übersicht aller unterstützten SAS E/A-Modulkonfigurationen ist unter link:https://hwu.netapp.com["NetApp Hardware Universe"^] zu finden.
-* In den Verkabelungsabbildungen sind die Anschlüsse von Controller A blau und die von Controller B rot dargestellt. Die gestrichelten Linien (blau und rot) zeigen die vorhandene Verkabelung, die für die Verkabelungsschritte umgelegt wird. Die grauen Anschlüsse und Linien stellen die vorhandene Verkabelung dar, die während der Verkabelungsschritte an Ort und Stelle bleibt.
+* Diese Anleitung beschreibt das Hot-Adding von bis zu zwei Shelfs im laufenden Betrieb. Wenn jedoch ein zusätzliches Shelf im laufenden Betrieb hinzugefügt wird, ist mit Schritt 2 zu beginnen, und die Schritte sind auf das zusätzliche Shelf anzuwenden.
+* Dieses Verfahren zeigt Controller mit einem SAS E/A-Modul in Steckplatz 3. Eine Übersicht aller unterstützten SAS E/A-Modulkonfigurationen ist unter link:https://hwu.netapp.com["NetApp Hardware Universe"^] verfügbar.
+* In den Verkabelungsabbildungen sind die Anschlüsse von Controller A blau und die von Controller B rot dargestellt. Die gestrichelten Linien (blau und rot) stellen die vorhandene Verkabelung dar, die für die Durchführung der Verkabelungsschritte umgesetzt wird. Die grauen Anschlüsse und Linien stellen die vorhandene Verkabelung dar, die während der Durchführung der Verkabelungsschritte an Ort und Stelle bleibt.
 
 
 .Schritte
-. Um ein SAS Shelf im laufenden Betrieb hinzuzufügen, das das erste SAS Erweiterungs Shelf ist, sind die folgenden Teilschritte auszuführen; andernfalls ist mit dem nächsten Schritt fortzufahren.
+. Zum Hot-Add eines SAS Shelf als erstes SAS Expansion Shelf sind die folgenden Teilschritte auszuführen, andernfalls ist mit dem nächsten Schritt fortzufahren.
 +
-.. Controller A Port 3a wird mit Gehäuse IOMA Port 1 verbunden.
+.. Controller A Port 3a wird mit Shelf IOMA Port 1 verbunden.
 .. Controller A Port 3b wird mit Shelf IOMA Port 2 verbunden.
 .. Controller A Port 3c wird mit Shelf IOMB Port 3 verbunden.
 .. Controller A Port 3d wird mit Shelf IOMB Port 4 verbunden.
@@ -176,21 +176,21 @@ Um während dieses Vorgangs einen aktiven Pfad aufrechtzuerhalten, werden die Co
 .. Controller B Port 3c wird mit Shelf IOMB Port 1 verbunden.
 .. Controller B Port 3d wird mit Shelf IOMB Port 2 verbunden.
 +
-Wenn die Verkabelung des Shelfs abgeschlossen ist, sollte sie wie folgt aussehen:
+Wenn Sie die Verkabelung des Shelfs abgeschlossen haben, sollte die Verkabelung wie folgt aussehen:
 
 +
 image::../media/drw_ef50-ef80_1_de460c_cabling_ieops-2981.svg[Verkabelung des ersten Shelfs]
 
 
 
-. Zum Hot-Add eines zweiten SAS Erweiterungsgehäuses (Gehäuse 2) werden die Controller-zu-Gehäuse-Verbindungen auf der A-Seite neu verkabelt und Gehäuse-zu-Gehäuse-Verbindungen auf der A-Seite wie folgt hinzugefügt; andernfalls ist mit dem nächsten Schritt fortzufahren.
+. Zum Hot-Add eines zweiten SAS Erweiterungsgehäuses (Gehäuse 2) werden die Controller-zu-Gehäuse-Verbindungen auf der A-Seite neu verkabelt und die Gehäuse-zu-Gehäuse-Verbindungen auf der A-Seite wie folgt hinzugefügt; andernfalls wird mit dem nächsten Schritt fortgefahren.
 +
 .. Das Kabel wird von shelf 1 IOMA port 1 getrennt und wieder mit shelf 2 IOMA port 1 verbunden.
 .. Das Kabel von Shelf 1 IOMA Port 2 wird getrennt und wieder an Shelf 2 IOMA Port 2 angeschlossen.
-.. Der IOMA Port 1 von Shelf 1 wird mit dem IOMA Port 4 von Shelf 2 verbunden.
+.. Shelf 1 IOMA Port 1 wird mit Shelf 2 IOMA Port 4 verbunden.
 .. Shelf 1 IOMA Port 2 wird mit Shelf 2 IOMA Port 3 verbunden.
 +
-Nachdem die Anschlüsse auf der A-Seite neu verkabelt wurden, sollte die Verkabelung wie folgt aussehen:
+Nachdem Sie die Anschlüsse auf der A-Seite neu verkabelt haben, sollte die Verkabelung wie folgt aussehen:
 
 +
 image::../media/drw_ef50-ef80_2nd_de460c_cabling_hotadd_a-side_ieops-2998.svg[Ein zweites Shelf wird hinzugefügt und die Verbindungen auf der A-Seite werden neu verkabelt.]
@@ -200,7 +200,7 @@ image::../media/drw_ef50-ef80_2nd_de460c_cabling_hotadd_a-side_ieops-2998.svg[Ei
 . Klicken Sie im SANtricity System Manager auf menu:Hardware[Controllers and components].
 +
 
-NOTE: Wenn Sie ein zweites SAS-Erweiterungsgehäuse hinzufügen, besteht zu diesem Zeitpunkt im Verfahren nur ein aktiver Pfad zum Controller-Gehäuse.
+NOTE: Wenn ein zweites SAS-Erweiterungsgehäuse hinzugefügt wird, besteht zu diesem Zeitpunkt im Verfahren nur ein aktiver Pfad zum Controller-Gehäuse.
 
 . Blättern Sie nach unten, um alle Laufwerk-Shelfs im neuen Storage-System zu sehen. Wenn das neue Festplatten-Shelf nicht angezeigt wird, lösen Sie das Verbindungsproblem.
 . Wählen Sie das Symbol *ESMs/IOMs* für das neue Festplatten-Shelf aus.
@@ -213,32 +213,32 @@ Das Dialogfeld *Shelf-Komponenteneinstellungen* wird angezeigt.
 . Wählen Sie im Dialogfeld *Shelf-Komponenteneinstellungen* die Registerkarte *ESMs/IOMs* aus.
 . Wählen Sie * Weitere Optionen anzeigen* aus, und überprüfen Sie Folgendes:
 +
-** Wenn Sie das erste SAS Erweiterungsgehäuse hinzufügen, werden IOM/ESM A und IOM/ESM B aufgeführt. Wenn Sie ein zweites SAS Erweiterungsgehäuse hinzufügen, wird IOM/ESM A aufgeführt.
+** Wenn das erste SAS Erweiterungs-Shelf hinzugefügt wird, sind IOM/ESM A und IOM/ESM B aufgeführt. Wenn ein zweites SAS Erweiterungs-Shelf hinzugefügt wird, ist IOM/ESM A aufgeführt.
 ** Die aktuelle Datenrate beträgt 12 Gbit/s für ein SAS-3 Festplatten-Shelf.
 ** Kartenkommunikation ist in Ordnung.
 
 
-. Wenn ein zweites SAS-Erweiterungsgehäuse hinzugefügt wird, müssen die Controller-zu-Gehäuse-Verbindungen auf der B-Seite neu verkabelt und die Gehäuse-zu-Gehäuse-Verbindungen auf der B-Seite wie folgt hinzugefügt werden; andernfalls ist mit Schritt 10 fortzufahren.
+. Wenn ein zweites SAS-Erweiterungsgehäuse hinzugefügt wird, sind die Controller-zu-Gehäuse-Verbindungen auf der B-Seite neu zu verkabeln und die Gehäuse-zu-Gehäuse-Verbindungen auf der B-Seite wie folgt hinzuzufügen; andernfalls ist mit Schritt 10 fortzufahren.
 +
-.. Das Kabel wird von Shelf 1 IOMB port 1 getrennt und wieder mit Shelf 2 IOMB port 1 verbunden.
-.. Das Kabel wird von Shelf 1 IOMB Port 2 getrennt und wieder mit Shelf 2 IOMB Port 2 verbunden.
+.. Das Kabel wird von IOMB-Port 1 von Shelf 1 getrennt und wieder mit IOMB-Port 1 von Shelf 2 verbunden.
+.. Das Kabel wird von IOMB-Port 2 an Shelf 1 getrennt und wieder an IOMB-Port 2 an Shelf 2 angeschlossen.
 .. Shelf 1 IOMB Port 1 wird mit Shelf 2 IOMB Port 3 verbunden.
-.. Shelf 1 IOMB Port 2 wird mit Shelf 2 IOMB Port 4 verbunden.
+.. IOMB-Port 2 von Shelf 1 wird mit IOMB-Port 4 von Shelf 2 verbunden.
 +
 Nachdem die Anschlüsse auf der B-Seite neu verkabelt wurden, sollte die Verkabelung wie folgt aussehen:
 
 +
-image::../media/drw_ef50-ef80_2nd_de460c_cabling_hotadd_b-side_ieops-3007.svg[Eine zweite Shelf hinzufügen und die Verbindungen auf der B-Seite neu verkabeln]
+image::../media/drw_ef50-ef80_2nd_de460c_cabling_hotadd_b-side_ieops-3007.svg[zweites Shelf hinzufügen und die Verbindungen auf der B-Seite neu verkabeln]
 
 
 
 . Wenn ein zweites SAS-Erweiterungsgehäuse hinzugefügt wird, sollte die Verkabelung nach dem Neuverkabeln der beiden Gehäuse wie folgt aussehen:
 +
 
-NOTE: Wenn ein drittes Shelf zu einem Stack mit zwei Shelves im laufenden Betrieb hinzugefügt wird, sollte die Verkabelung der Abbildung im link:../install-hw-ef50-ef80/install-cable.html#step-3-cable-the-sas-shelf-connections["Option 2: Registerkarte „Drei DE460C Shelfs“"^] Abschnitt „Verkabelung der SAS Shelf Verbindungen“ für neue Systeminstallationen entsprechen.
+NOTE: Wenn einem Stack aus zwei Shelfs ein drittes Shelf im laufenden Betrieb hinzugefügt wird, sollte die Verkabelung wie in der Abbildung im link:../install-hw-ef50-ef80/install-cable.html#step-3-cable-the-sas-shelf-connections["Option 2: Registerkarte „Drei DE460C Shelfs“"^] Abschnitt „Verkabelung der SAS Shelf Verbindungen“ für neue Systeminstallationen aussehen.
 
 +
-image::../media/drw_ef50-ef80_2nd_de460c_cabling_hotadd_final_ieops-3012.svg[Beispiel für die Verkabelung von zwei im laufenden Betrieb hinzugefügten Shelfs]
+image::../media/drw_ef50-ef80_2nd_de460c_cabling_hotadd_final_ieops-3012.svg[Beispiel für die Verkabelung von zwei im laufenden Betrieb hinzugefügten Shelves]
 
 . Wenn er nicht bereits ausgewählt ist, wählen Sie im Dialogfeld *Shelf-Komponenteneinstellungen* die Registerkarte *ESMs/IOMs* aus, und wählen Sie dann *Weitere Optionen anzeigen*. Stellen Sie sicher, dass die Kartenkommunikation *JA* lautet.
 +
@@ -407,23 +407,23 @@ NOTE: Der Status „optimal“ zeigt an, dass der Verlust eines Redundanzfehlers
 
 
 [[step-4-assign-drive-shelf-ids]]
-== Schritt 4: IDs für Laufwerksschächte zuweisen
+== Schritt 4: Laufwerkseinschub-IDs zuweisen
 
-Die Regale werden eingeschaltet, und anschließend wird jedem Regal eine eindeutige Regal-ID zugewiesen.
+Die Shelfs werden eingeschaltet, und anschließend wird jedem Shelf eine eindeutige Shelf-ID zugewiesen.
 
 .Über diese Aufgabe
-* Durch die Vergabe einer eindeutigen Shelf ID an jedes Shelf wird sichergestellt, dass das Shelf innerhalb Ihres Storage Systems klar unterscheidbar ist.
+* Durch die Vergabe einer eindeutigen Shelf-ID an jedes Shelf wird sichergestellt, dass das Shelf innerhalb Ihres Speichersystems eindeutig identifizierbar ist.
 +
-Eine gültige Shelf ID ist 01 bis 99.
+Eine gültige Shelf-ID ist 01 bis 99.
 
 +
 Interne Shelfs (Storage), die in die Controller integriert sind, erhalten eine feste Shelf-ID von 00.
 
-* Damit die Shelf-ID wirksam wird, muss ein Aus- und Einschalten des Shelfs erfolgen (dazu den Netzschalter an jedem Netzteil des SAS Shelfs ausschalten, mindestens 10 Sekunden warten und dann die Stromversorgung wieder einschalten).
+* Damit die Shelf-ID wirksam wird, muss ein Shelf vollständig aus- und wieder eingeschaltet werden (hierzu wird an jedem Netzteil des SAS Shelf der Netzschalter ausgeschaltet, mindestens 10 Sekunden gewartet und anschließend die Stromversorgung wieder eingeschaltet).
 
 
 .Schritte
-. Zum Zugriff auf die orangefarbene Shelf ID-Taste auf der Frontblende muss die linke Endkappe entfernt werden.
+. Zum Zugriff auf die orangefarbene Shelf ID-Taste auf der Frontplatte muss die linke Endkappe entfernt werden.
 +
 image::../media/drw_shelf_id_sas_ieops-2187.svg[Ändern der SAS-Shelf-ID]
 
@@ -435,14 +435,14 @@ image::../media/drw_shelf_id_sas_ieops-2187.svg[Ändern der SAS-Shelf-ID]
  a| 
 image::../media/icon_round_1.png[Callout-Nummer 1]
  a| 
-Regalendkappe
+Shelf Endkappe
 
 
 
  a| 
-image::../media/icon_round_2.png[[Legende Nummer 2]
+image::../media/icon_round_2.png[Callout-Nummer 2]
  a| 
-Shelf Frontplatte
+Blende des Shelfs
 
 
 
@@ -459,15 +459,15 @@ image::../media/icon_round_4.png[[Legende Nummer 4]
 Shelf ID Nummer
 
 |===
-. Die erste Ziffer der Regal-ID wird geändert:
+. Die erste Ziffer der Shelf-ID wird geändert:
 +
-.. Die Shelf ID Taste ist so lange gedrückt zu halten, bis die erste Zahl auf dem digitalen Display blinkt; anschließend ist die Taste loszulassen.
+.. Die Taste „Shelf ID“ ist so lange gedrückt zu halten, bis die erste Zahl auf dem Digitaldisplay blinkt; anschließend ist die Taste loszulassen.
 +
 Es kann bis zu 15 Sekunden dauern, bis die Zahl blinkt. Dadurch wird der Programmiermodus für die Shelf ID aktiviert.
 
 +
 
-NOTE: Wenn die ID länger als 15 Sekunden blinkt, drücken und halten Sie die Shelf ID Taste erneut und achten Sie darauf, sie vollständig durchzudrücken.
+NOTE: Wenn die ID länger als 15 Sekunden zum Blinken benötigt, drücken und halten Sie die Shelf ID-Taste erneut und achten Sie darauf, sie vollständig durchzudrücken.
 
 .. Durch Drücken und Loslassen der Shelf ID Taste wird die Zahl erhöht, bis die gewünschte Zahl von 0 bis 9 erreicht ist.
 +
@@ -478,7 +478,7 @@ Die erste Zahl blinkt weiterhin.
 
 
 
-. Ändern Sie die zweite Ziffer der Shelf-ID:
+. Die zweite Ziffer der Shelf-ID ist zu ändern:
 +
 .. Halten Sie die Taste gedrückt, bis die zweite Zahl auf der Digitalanzeige blinkt.
 +
@@ -493,18 +493,18 @@ Die zweite Zahl blinkt weiterhin.
 
 
 
-. Die gewünschte Nummer wird gespeichert, und der Programmiermodus wird verlassen, indem die Shelf ID-Taste gedrückt gehalten wird, bis die zweite Ziffer aufhört zu blinken.
+. Die gewünschte Nummer wird gespeichert, und der Programmiermodus wird beendet, indem die Shelf ID-Taste gedrückt gehalten wird, bis die zweite Zahl aufhört zu blinken.
 +
 Es kann bis zu drei Sekunden dauern, bis die Zahl aufhört zu blinken.
 
 +
-Beide Zahlen auf dem Digitaldisplay beginnen zu blinken, und die gelb LED leuchtet nach etwa fünf Sekunden auf. Dies weist darauf hin, dass die ausstehende Shelf-ID noch nicht wirksam geworden ist.
+Beide Zahlen auf dem Digitaldisplay beginnen zu blinken, und die gelbe LED leuchtet nach etwa fünf Sekunden auf. Dies weist darauf hin, dass die ausstehende Shelf ID noch nicht wirksam geworden ist.
 
-. Durch Aus- und Wiedereinschalten des Shelfs für mindestens 10 Sekunden wird die Shelf-ID wirksam.
+. Das Shelf muss für mindestens 10 Sekunden aus- und wieder eingeschaltet werden, damit die Shelf-ID wirksam wird.
 +
-.. Der Netzschalter an jedem der Netzteile muss ausgeschaltet werden.
+.. Der Netzschalter an jedem der Netzteile ist auszuschalten.
 .. 10 Sekunden warten.
-.. Schalten Sie an jedem der Netzteile den Netzschalter ein, um den Aus- und Wiedereinschaltvorgang abzuschließen.
+.. Schalten Sie an jedem der Netzteile den Netzschalter ein, um den Aus- und Einschaltzyklus abzuschließen.
 +
 Wenn ein Netzteil eingeschaltet wird, sollte die zweifarbige LED grün leuchten.
 
@@ -516,7 +516,7 @@ Wenn ein Netzteil eingeschaltet wird, sollte die zweifarbige LED grün leuchten.
 
 
 [[step-5-complete-the-hot-add]]
-== Schritt 5: Der Hot Add-Vorgang wird abgeschlossen
+== Schritt 5: Der Hot Add-Vorgang wird abgeschlossen.
 
 Sie schließen das Hot Add-Laufwerk aus, indem Sie auf Fehler überprüfen und bestätigen, dass das neu hinzugefügte Festplatten-Shelf die neueste Firmware verwendet.
 

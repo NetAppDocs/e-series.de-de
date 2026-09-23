@@ -4,16 +4,16 @@ sidebar: sidebar
 keywords: discover storage ESXi, express vmware configuration, software configuration, vmware host, E2800, E5700, EF300, EF600, EF50, EF80, E4000, E-Series, eseries 
 summary: Nachdem Sie Volumes zum Host zugewiesen haben, führen Sie einen erneuten Scan durch, sodass der Host die Volumes für das Multipathing erkennt und konfiguriert. 
 ---
-= Ermitteln Sie Storage auf dem Host in der E-Series – VMware
+= Ermittlung von Speicher auf dem Host in E-Series für VMware
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Die Volumes werden dem Host zugewiesen. Ein erneuter Scan wird durchgeführt, damit der Host die Volumes erkennt und für Multipathing konfiguriert.
+Die Zuweisung der Volumes an den Host erfolgt. Ein erneuter Scan erfolgt, damit der Host die Volumes erkennt und für Multipathing konfiguriert.
 
-Informationen zum Erstellen von Hosts und Zuweisen von Volumes finden Sie hier:
+Informationen zum Erstellen von Hosts und Zuweisen von Volumes finden Sie unter:
 
 * https://docs.netapp.com/us-en/e-series-santricity/sm-storage/create-host-manually.html["Hostdefinitionen erstellen"^]
 * https://docs.netapp.com/us-en/e-series-santricity/sm-storage/create-host-cluster.html["Host Cluster erstellen"^]
@@ -23,8 +23,8 @@ Informationen zum Erstellen von Hosts und Zuweisen von Volumes finden Sie hier:
 Standardmäßig führt ein ESXi Host automatisch alle fünf Minuten einen erneuten Scan durch. Möglicherweise wird ein Volume zwischen dem Zeitpunkt der Erstellung und der Zuordnung zu einem Host angezeigt, bevor Sie einen manuellen erneuten Scan durchführen. Unabhängig davon können Sie einen manuellen erneuten Scan durchführen, um sicherzustellen, dass alle Volumes ordnungsgemäß konfiguriert wurden.
 
 .Schritte
-. Stellen Sie sicher, dass die Volumes wie in den obigen Links beschrieben erstellt und dem ESXi Host zugewiesen sind.
+. Es ist sicherzustellen, dass die Volumes wie in den obigen Links beschrieben erstellt und dem ESXi Host zugewiesen werden.
 . Wenn Sie einen vCenter Server verwenden, fügen Sie den Host zum Server-Inventar hinzu.
 . Verwenden Sie den vSphere Client oder vSphere Web Client, um eine direkte Verbindung zum vCenter Server oder zum ESXi Host herzustellen.
-. Anweisungen zum erneuten Scannen des Speichers auf einem ESXi-Host finden Sie unter  https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/9-1/vsphere-storage/managing-esxi-storage-devices/rescan-operations-for-esxi-storage/perform-storage-rescan.html["Storage-Rescan durchführen"^].
+. Anweisungen zum erneuten Scannen des Speichers auf einem ESXi Host finden Sie unter https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/9-1/vsphere-storage/managing-esxi-storage-devices/rescan-operations-for-esxi-storage/perform-storage-rescan.html["Storage-Rescan durchführen"^].
 

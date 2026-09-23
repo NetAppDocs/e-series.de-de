@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: failover, express linux configuration, software configuration, linux host, E2800, E5700, EF300, EF600, E-Series, eseries 
 summary: Konfigurieren Sie den Host für das Failover. 
 ---
-= Failover auf dem Host in E-Series einrichten - Linux (NVMe über TCP)
+= Einrichtung von Failover auf einem E-Series Linux NVMe over TCP Host
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -22,22 +22,22 @@ Bei SLES 15, SLES 16, RHEL 9 und RHEL 10 ist Native NVMe Multipathing standardm�
 
 
 [[configure-nvme-io-policy]]
-== Konfiguration der NVMe E/A-Richtlinie
+== Konfiguration der NVMe I/O-Richtlinie
 
 .Über diese Aufgabe
-Linux NVMe nativ für Multipathing verwendet möglicherweise standardmäßig die  `numa`I/O-Richtlinie. Für E-Series/EF-Series NVMe-over-Fabrics Konfigurationen ist die empfohlene I/O-Richtlinie  `round-robin`, die E/A gleichmäßig auf alle verfügbaren Pfade verteilt.
+Linux NVMe nativ Multipathing verwendet möglicherweise standardmäßig die  `numa`I/O-Richtlinie. Für E-Series/EF-Series NVMe-over-Fabrics Konfigurationen ist die empfohlene I/O-Richtlinie  `round-robin`, die E/A gleichmäßig auf alle verfügbaren Pfade verteilt.
 
 .Schritte
-. Die aktuelle NVMe-E/A-Richtlinie wird überprüft:
+. Die aktuelle NVMe-E/A-Richtlinie ist zu überprüfen:
 +
 [listing]
 ----
 # cat /sys/module/nvme_core/parameters/iopolicy
 numa
 ----
-. Die  `round-robin`E/A-Richtlinie kann mit einer der folgenden Methoden festgelegt werden:
+. Die  `round-robin`E/A-Richtlinie wird mit einer der folgenden Methoden festgelegt:
 +
-** *Persistent (empfohlen)*: Es wird eine udev-Regeldatei erstellt.
+** *Persistent (empfohlen)*: Es ist eine udev-Regeldatei zu erstellen:
 +
 .<code>/etc/udev/rules.d/71-nvme-io-policy.rules</code>
 [listing]
@@ -45,7 +45,7 @@ numa
 ACTION=="add|change", SUBSYSTEM=="nvme-subsystem", ATTR{iopolicy}="round-robin"
 ----
 +
-Anschließend die Regeln neu laden und anwenden:
+Anschließend werden die Regeln neu geladen und angewendet:
 
 +
 [listing]
@@ -53,7 +53,7 @@ Anschließend die Regeln neu laden und anwenden:
 udevadm control --reload
 udevadm trigger --subsystem-match=nvme-subsystem
 ----
-** *Globale Einstellung beim Systemstart* - Der folgende Kernel-Parameter ist Ihrer Bootloader-Konfiguration hinzuzufügen:
+** *Globale Einstellung beim Systemstart*: Der folgende Kernel-Parameter ist der Bootloader-Konfiguration hinzuzufügen:
 +
 [listing]
 ----

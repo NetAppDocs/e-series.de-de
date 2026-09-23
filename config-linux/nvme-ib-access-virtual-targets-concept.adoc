@@ -2,9 +2,9 @@
 permalink: config-linux/nvme-ib-access-virtual-targets-concept.html 
 sidebar: sidebar 
 keywords: NVMe volume virtual, express linux configuration, software configuration, linux host, E2800, E5700, EF300, EF600, E-Series, eseries 
-summary: 'Die an das Geräteziel gerichteten E/A-Vorgänge werden entsprechend Ihrer SLES-Version (SUSE Linux-Version) konfiguriert.' 
+summary: 'Die an das Zielgerät gerichteten E/A-Vorgänge werden basierend auf Ihrer SLES-Version (SUSE Linux-Version) konfiguriert.' 
 ---
-= Zugriff auf NVMe Volumes für virtuelle Geräteziele in der E-Series – Linux (NVMe over InfiniBand)
+= Wie E-Series E/A über InfiniBand an virtuelle NVMe-Ziele unter Linux weiterleitet
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

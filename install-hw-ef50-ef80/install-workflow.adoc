@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: Um Ihr EF50- oder EF80-Speichersystem zu installieren und einzurichten, müssen Sie Ihren Standort vorbereiten, die Hardwarekomponenten installieren und verkabeln, das Speichersystem einschalten und die Einrichtung sowie Konfiguration des Speichersystems abschließen. 
 ---
-= Installation und Einrichtung - EF50 und EF80
+= Installations- und Einrichtungsablauf für EF50 und EF80 Speichersysteme
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -23,11 +23,11 @@ Zur Installation der Hardware installieren Sie die Rack-Montagehardware im Schra
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["Drittens"]link:install-cable.html["Verkabeln Sie die Hardware"]
 [role="quick-margin-para"]
-Zur Verkabelung der Hardware werden die Controller untereinander verbunden, um die Inter-Controller-Spiegelung zu ermöglichen, die eine vollständige Systemredundanz sicherstellt und für Cache-Spiegelung und I/O-Versand verwendet wird, anschließend werden die Controller mit Ihrem Host-Netzwerk verbunden und danach gegebenenfalls die SAS-Erweiterungs-Shelfs verkabelt.
+Zur Verkabelung der Hardware werden die Controller miteinander verbunden, um die Inter-Controller-Spiegelung zu ermöglichen, die eine vollständige Systemredundanz sicherstellt und für die Cache-Spiegelung und den E/A-Transport verwendet wird, anschließend werden die Controller mit Ihrem Host-Netzwerk verbunden, und danach werden gegebenenfalls die SAS-Erweiterungs-Shelves verkabelt.
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png["Vier"]link:install-power-hardware.html["Schalten Sie das Speichersystem ein"]
 [role="quick-margin-para"]
-Zum Einschalten Ihres Speichersystems werden zuerst die Shelves eingeschaltet und Shelf-IDs zugewiesen, falls zutreffend, und anschließend die Controller eingeschaltet.
+Zum Einschalten Ihres Speichersystems werden zuerst die Shelfs eingeschaltet und ihnen gegebenenfalls Shelf-IDs zugewiesen. Anschließend werden die Controller eingeschaltet.
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-5.png["Fünf"]link:install-complete-setup.html["Vervollständigen Sie die Einrichtung des Speichersystems"]
 [role="quick-margin-para"]

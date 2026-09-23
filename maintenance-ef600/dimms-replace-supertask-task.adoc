@@ -221,7 +221,7 @@ Platzieren Sie den Controller online, sammeln Sie Support-Daten und setzen Sie d
 .Schritte
 . Platzieren Sie den Controller in den Online-Modus
 +
-.. Im SANtricity System Manager wird Menü:Hardware[Controller und Komponenten] ausgewählt.
+.. In SANtricity System Manager ist Menü:Hardware[Controller und Komponenten] auszuwählen.
 .. Wählen Sie den Controller mit den ersetzten DIMMs aus.
 .. Wählen Sie in der Dropdown-Liste * Online platzieren* aus.
 

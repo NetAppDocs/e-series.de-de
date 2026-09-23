@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: ef50, ef80, replace the controller workflow 
 summary: Sie können einen defekten Controller in Ihrem EF50 oder EF80 Speichersystem ersetzen, indem Sie die Anforderungen des Speichersystems erfüllen, das System vorbereiten, den defekten Controller offline nehmen, den Controller ersetzen, den neuen Controller online nehmen und den Austauschvorgang abschließen. 
 ---
-= Arbeitsablauf zum Austausch von Controllern – EF50 und EF80
+= Workflow zum Austausch von Controllern für EF50 und EF80 Speichersysteme
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

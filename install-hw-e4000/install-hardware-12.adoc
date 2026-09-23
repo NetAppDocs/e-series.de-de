@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: So installieren Sie ein E4012, DE212C oder DE224C Storage-System in einem Rack mit zwei Säulen oder einem NetApp System-Rack. 
 ---
-= Installieren Sie die Hardware E4012
+= Die Hardware für ein E4012 Storage-System wird installiert
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

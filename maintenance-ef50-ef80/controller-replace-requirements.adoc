@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: ef50, ef80, prerequisite, replace the controller module 
 summary: Bevor Sie den Controller in Ihrem EF50- oder EF80-Speichersystem austauschen, stellen Sie sicher, dass Sie die Voraussetzungen für einen erfolgreichen Austausch erfüllen. Dazu gehört die Überprüfung, ob tatsächlich ein Controller defekt ist, die Überprüfung des Zustands Ihres Speichersystems, die Beschaffung der für das Verfahren benötigten Werkzeuge sowie eine Managementstation und ein Browser, um auf SANtricity System Manager zuzugreifen. 
 ---
-= Anforderungen für den Austausch eines Controllers - EF50 und EF80
+= Anforderungen an den Controller Austausch für EF50 und EF80 Speichersysteme
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

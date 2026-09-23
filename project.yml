@@ -54,7 +54,7 @@ sidebar:
         url: "/install-hw-ef600/power-controller-shelves-task.html"
       - title: Einrichtung des Storage-Systems abschließen
         url: "/install-hw-ef600/complete-setup-task.html"
-    - title: Systeme mit Ende der Verfügbarkeit
+    - title: Nicht mehr verfügbare Systeme
       entries:
       - title: E2800 und E5700
         entries:
@@ -323,7 +323,7 @@ sidebar:
           url: "/config-linux/nvme-roce-create-filesystems-sles-15-task.html"
         - title: NVMe over RoCE-Arbeitsblatt für Linux
           url: "/config-linux/nvme-roce-worksheet-for-concept.html"
-      - title: Einrichtung von NVMe over TCP
+      - title: NVMe over TCP Einrichtung
         entries:
         - title: Überprüfen Sie die Linux-Konfiguration
           url: "/config-linux/nvme-tcp-verify-linux-config-support-task.html"
@@ -407,9 +407,9 @@ sidebar:
         url: "/config-vmware/fc-perform-specific-task.html"
       - title: NVMe-over-RoCE-spezifische Aufgaben ausführen
         url: "/config-vmware/nvme-roce-perform-specific-task.html"
-      - title: NVMe over FC-spezifische Aufgaben ausführen
+      - title: Ausführen von NVMe over FC-spezifischen Aufgaben
         url: "/config-vmware/nvme-fc-perform-specific-task.html"
-      - title: NVMe über TCP-spezifische Aufgaben ausführen
+      - title: NVMe over TCP-spezifische Aufgaben
         url: "/config-vmware/nvme-tcp-perform-specific-task.html"
       - title: Führen Sie iSCSI-spezifische Aufgaben aus
         url: "/config-vmware/iscsi-perform-specific-task.html"
@@ -564,7 +564,7 @@ sidebar:
           url: "/maintenance-ef600/sas-overview-supertask-concept.html"
         - title: Fügen Sie SAS-Erweiterungskarten hinzu
           url: "/maintenance-ef600/sas-add-supertask-task.html"
-    - title: Systeme mit Ende der Verfügbarkeit
+    - title: Nicht mehr verfügbare Systeme
       entries:
       - title: E2800
         pdf-filename: E2800 Wartung des Systems

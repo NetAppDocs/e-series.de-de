@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: express linux configuration, software configuration, linux host, E2800, E5700, EF300, EF600, E-Series, eseries 
 summary: Bevor Sie den Namespace verwenden, überprüfen Sie, ob der Host Daten in den Namespace schreiben und wieder lesen kann. 
 ---
-= Storage-Zugriff auf dem Host in E-Series – Linux (NVMe over FC) überprüfen
+= Überprüfung des Speicherzugriffs auf einem Linux-Host für NVMe over FC in E-Series
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

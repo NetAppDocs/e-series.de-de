@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: EF300, EF600, EF300C, EF600C, installation, power on, power cables 
 summary: Schließen Sie die Stromkabel an, und schalten Sie die Laufwerk-Shelfs ein. 
 ---
-= Die Controller-Regale für Ihr EF300 oder EF600 Speichersystem werden eingeschaltet.
+= Einschalten der Controller-Regale für Ihr EF300 oder EF600 Speichersystem
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

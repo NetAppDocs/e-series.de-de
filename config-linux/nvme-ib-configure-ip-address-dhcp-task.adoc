@@ -2,9 +2,9 @@
 permalink: config-linux/nvme-ib-configure-ip-address-dhcp-task.html 
 sidebar: sidebar 
 keywords: IP address, DHCP, express linux configuration, software configuration, linux host, E2800, E5700, EF300, EF600, E-Series, eseries 
-summary: 'Dynamic Host Configuration Protocol (DHCP) wird zum Bereitstellen von IP-Adressen verwendet.' 
+summary: 'IP-Adressen werden über Dynamic Host Configuration Protocol (DHCP) bereitgestellt.' 
 ---
-= IP-Adressen mit DHCP in der E-Series – Linux (NVMe over InfiniBand) konfigurieren
+= Konfiguration von IP-Adressen mithilfe von DHCP auf einem Linux-Host in E-Series
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

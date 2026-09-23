@@ -2,9 +2,9 @@
 permalink: config-linux/sas-configure-ip-address-dhcp-task.html 
 sidebar: sidebar 
 keywords: IP address, DHCP, express linux configuration, software configuration, linux host, E2800, E5700, EF300, EF600, E-Series, eseries 
-summary: 'Dynamic Host Configuration Protocol (DHCP) wird zum Bereitstellen von IP-Adressen verwendet.' 
+summary: 'IP-Adressen werden über Dynamic Host Configuration Protocol (DHCP) bereitgestellt.' 
 ---
-= IP-Adressen mit DHCP in E-Series – Linux (SAS) konfigurieren
+= IP-Adressen für E-Series Linux SAS-Hosts mithilfe von DHCP konfigurieren
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

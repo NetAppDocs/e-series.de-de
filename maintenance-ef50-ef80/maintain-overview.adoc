@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: ef50, ef80 maintenance, maintenance, repairing ef50, ef80, replace ef50, ef80 components 
 summary: Pflegen Sie die Hardware Ihres EF50- oder EF80-Speichersystems, um langfristige Zuverlässigkeit und optimale Leistung zu gewährleisten. Führen Sie regelmäßige Wartungsarbeiten durch, wie zum Beispiel den Austausch defekter Komponenten, da dies dazu beiträgt, Ausfallzeiten und Datenverlust zu verhindern. 
 ---
-= Übersicht über die Wartungsverfahren – EF50 und EF80
+= Informationen zu Wartungsverfahren für die EF50 und EF80 Speichersysteme
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -50,7 +50,7 @@ Ein Laufwerk ist ein Gerät, das den für Daten benötigten physischen Speicher 
  a| 
 link:drive-drawer-de460c-replace.html["Laufwerksschublade"]
  a| 
-Eine Laufwerksschublade ist eine von fünf Komponenten in einem DE460C Laufwerks-Shelf, die bis zu 12 Laufwerke aufnehmen.
+Eine Laufwerksschublade ist eine von fünf Komponenten in einem DE460C Laufwerksgehäuse, die bis zu 12 Laufwerke aufnehmen.
 
 
 

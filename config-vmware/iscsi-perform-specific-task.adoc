@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: iscsi, express vmware configuration, software configuration, vmware host, E2800, E5700, EF300, EF600, EF50, EF80, E4000, E-Series, eseries 
 summary: Für das iSCSI-Protokoll konfigurieren Sie die Switches und konfigurieren das Netzwerk auf der Array-Seite und auf der Host-Seite. Anschließend überprüfen Sie die IP-Netzwerkverbindungen. 
 ---
-= Ausführen von iSCSI-spezifischen Aufgaben in E-Series – VMware
+= Konfiguration von iSCSI Switches und Netzwerkfunktionen für VMware in der E-Series
 :allow-uri-read: 
 :experimental: 
 :icons: font
@@ -15,16 +15,16 @@ summary: Für das iSCSI-Protokoll konfigurieren Sie die Switches und konfigurier
 Für das iSCSI-Protokoll konfigurieren Sie die Switches und konfigurieren das Netzwerk auf der Array-Seite und auf der Host-Seite. Anschließend überprüfen Sie die IP-Netzwerkverbindungen.
 
 
-NOTE: Um die Kompatibilität mit VMware zu gewährleisten, müssen Volumes für die 512-Byte-Emulation (512e) konfiguriert werden, wenn 4096-Byte-Laufwerke verwendet werden. Weitere Informationen zur Konfiguration eines Volumes für die 512-Byte-Emulation (512e) finden Sie in der Online-Hilfe des SANtricity System Manager.
+NOTE: Volumes müssen für die Verwendung der 512-Byte-Emulation (512e) konfiguriert werden, wenn 4096-Byte-Laufwerke verwendet werden, um die Kompatibilität mit VMware sicherzustellen. Weitere Informationen zum Konfigurieren eines Volumes für die 512-Byte-Emulation (512e) finden Sie in der Online-Hilfe des SANtricity System Manager.
 
 
 
 [[step-1-record-your-configuration]]
 == Schritt 1: Notieren Sie Ihre Konfiguration
 
-Von dieser Seite kann ein PDF erstellt und gedruckt werden; anschließend kann das folgende Arbeitsblatt verwendet werden, um Ihre protokollspezifischen Speicherkonfigurationsinformationen zu erfassen. Diese Informationen werden bei der Durchführung der Bereitstellungsaufgaben benötigt.
+Es ist möglich, eine PDF-Datei dieser Seite zu erstellen und auszudrucken und anschließend das folgende Arbeitsblatt zu verwenden, um Ihre protokollspezifischen Speicherkonfigurationsinformationen zu erfassen. Diese Informationen werden bei der Durchführung von Bereitstellungsaufgaben benötigt.
 
-Die Abbildung zeigt einen Host, der mit einem E-Series Storage-System verbunden ist, das durch VLANs und/oder separate Subnetze getrennt ist. Ein VLAN/Subnetz wird durch die blaue Linie angezeigt, das andere VLAN/Subnetz durch die rote Linie. Jedes VLAN/Subnetz enthält mindestens einen Initiator-Port und die Hälfte der Ziel-Ports. Die Anzahl der Host- und/oder Controller-Ports variiert je nach Anzahl der Netzwerkschnittstellen und dem Controller-Modell. Möglicherweise stehen mehr Ports zur Verfügung, bis zu 6 pro Controller.
+Die Abbildung zeigt einen Host, der mit einem E-Series Storage-Array verbunden ist, das durch VLANs und/oder separate Subnetze getrennt ist. Ein VLAN/Subnetz ist durch die blaue Linie gekennzeichnet, das andere VLAN/Subnetz durch die rote Linie. Jedes VLAN/Subnetz enthält mindestens einen Initiator-Port und die Hälfte der Ziel-Ports. Die Anzahl der Host- und/oder Controller-Ports variiert je nach Anzahl der Netzwerkschnittstellen und dem Controller-Modell. Möglicherweise stehen mehr Ports zur Verfügung, bis zu 6 pro Controller.
 
 image::../media/50001_01_conf-vmw.gif[ISCSI-Port-ID]
 
@@ -57,9 +57,9 @@ Sie konfigurieren die Switches entsprechend den Empfehlungen des Anbieters für 
 Stellen Sie sicher, dass Sie Folgendes haben:
 
 * Zwei separate Netzwerke für Hochverfügbarkeit, Vergewissern Sie sich, dass Sie den iSCSI-Datenverkehr in getrennten Netzwerksegmenten isolieren.
-* Hardware-Flusssteuerung für Senden und Empfangen *durchgängig* aktiviert.
+* Aktivierte Hardware-Flusssteuerung für das Senden und Empfangen *durchgängig*.
 * Flusskontrolle mit Priorität deaktiviert.
-* Jumbo-Frames werden gegebenenfalls aktiviert (empfohlen).
+* Falls angemessen, werden Jumbo Frames aktiviert (empfohlen).
 
 
 
@@ -71,28 +71,28 @@ Informieren Sie sich in der Dokumentation des Switch-Anbieters.
 
 
 [[step-3-configure-networking]]
-== Schritt 3: Netzwerkkonfiguration
+== Schritt 3: Netzwerk konfigurieren
 
 Je nach Ihren Datenspeicheranforderungen können Sie Ihr iSCSI-Netzwerk auf unterschiedliche Weise einrichten. Wenden Sie sich an Ihren Netzwerkadministrator, wenn Sie Tipps zur Auswahl der für Ihre Umgebung am besten geeigneten Konfiguration benötigen.
 
 .Bevor Sie beginnen
 Stellen Sie sicher, dass Sie Folgendes haben:
 
-* Hardware-Flusssteuerung für Senden und Empfangen *durchgängig* aktiviert.
+* Aktivierte Hardware-Flusssteuerung für das Senden und Empfangen *durchgängig*.
 * Flusskontrolle mit Priorität deaktiviert.
-* Jumbo-Frames werden gegebenenfalls aktiviert (empfohlen).
+* Falls angemessen, werden Jumbo Frames aktiviert (empfohlen).
 +
-Wenn Sie Jumbo-Frames im IP-SAN aus Performancegründen verwenden, stellen Sie sicher, dass das Array, die Switches und die Hosts für die Verwendung von Jumbo-Frames konfiguriert sind. Informationen zur Aktivierung von Jumbo-Frames auf den Hosts und den Switches finden Sie in der Dokumentation Ihres Betriebssystems und Ihrer Switches. Zur Aktivierung von Jumbo-Frames auf dem Array sind die Schritte in Schritt 4 auszuführen.
+Wenn Sie Jumbo-Frames aus Leistungsgründen im IP-SAN verwenden, stellen Sie sicher, dass das Array, die Switches und die Hosts für die Verwendung von Jumbo-Frames konfiguriert sind. Informationen zum Aktivieren von Jumbo-Frames auf den Hosts und den Switches finden Sie in der Dokumentation Ihres Betriebssystems und Ihrer Switches. Zum Aktivieren von Jumbo-Frames auf dem Array sind die Schritte in Schritt 4 auszuführen.
 
 
 
 .Über diese Aufgabe
-Bei der Planung Ihrer iSCSI-Netzwerkkonfiguration sollten Sie daran denken, dass  https://configmax.broadcom.com/guest["VMware Configuration Maximums Guide"^] angibt, dass die maximal unterstützten iSCSI-Pfade zu einer LUN 32 betragen und die maximale Anzahl an Netzwerkkarten, die pro Server mit dem Software iSCSI Stack verbunden oder an Ports gebunden werden können, 8 beträgt. Diese Anforderung sollten Sie berücksichtigen, um die Konfiguration von zu vielen Pfaden zu vermeiden.
+Bei der Planung Ihrer iSCSI-Netzwerkkonfiguration ist zu beachten, dass die https://configmax.broadcom.com/guest["VMware Configuration Maximums Guide"^] angibt, dass die maximal unterstützten iSCSI-Pfade zu einer LUN 32 betragen und die maximale Anzahl an Netzwerkkarten, die pro Server mit dem Software-iSCSI-Stack verbunden oder an Ports gebunden werden können, 8 beträgt. Diese Anforderung muss berücksichtigt werden, um die Konfiguration zu vieler Pfade zu vermeiden.
 
 Standardmäßig erstellt der VMware iSCSI Software Initiator eine einzelne Sitzung pro iSCSI-Ziel, wenn Sie keine iSCSI-Port-Bindung verwenden.
 
 
-NOTE: Die VMware iSCSI-Portbindung ist eine Funktion, die alle gebundenen VMkernel-Ports dazu zwingt, sich an allen Zielports anzumelden, die in den konfigurierten Netzwerksegmenten erreichbar sind. Sie ist für Arrays vorgesehen, die eine einzelne Netzwerkadresse für das iSCSI-Ziel bereitstellen. NetApp empfiehlt, die iSCSI-Portbindung nicht zu verwenden. Weitere Informationen finden Sie https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/9-1/vsphere-storage/configuring-iscsi-and-iser-adapters-and-storage-with-esxi/setting-up-network-for-iscsi-and-iser-with-esxi/best-practices-for-configuring-networking-with-software-iscsi.html["Best Practices für die Verwendung der Software iSCSI Portbindung in ESX/ESXi"^]. Wenn der ESXi-Host an den Speicher eines anderen Anbieters angeschlossen ist, empfiehlt NetApp die Verwendung separater iSCSI-VMkernel-Ports, um Konflikte mit der Portbindung zu vermeiden.
+NOTE: Die VMware iSCSI-Portbindung ist eine Funktion, die alle gebundenen VMkernel-Ports dazu zwingt, sich an allen Zielports anzumelden, die in den konfigurierten Netzwerksegmenten erreichbar sind. Sie ist für Arrays vorgesehen, die eine einzelne Netzwerkadresse für das iSCSI-Ziel bereitstellen. NetApp empfiehlt, die iSCSI-Portbindung nicht zu verwenden. Zusätzliche Informationen finden Sie unter  https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/9-1/vsphere-storage/configuring-iscsi-and-iser-adapters-and-storage-with-esxi/setting-up-network-for-iscsi-and-iser-with-esxi/best-practices-for-configuring-networking-with-software-iscsi.html["Best Practices für die Verwendung der Software iSCSI Portbindung in ESX/ESXi"^]. Wenn der ESXi-Host an den Storage eines anderen Herstellers angeschlossen ist, empfiehlt NetApp die Verwendung separater iSCSI-VMkernel-Ports, um Konflikte mit der Portbindung zu vermeiden.
 
 Verwenden Sie für eine gute Multipathing-Konfiguration mehrere Netzwerksegmente für das iSCSI-Netzwerk. Platzieren Sie mindestens einen Host-seitigen Port und mindestens einen Port jedes Array-Controllers in einem Netzwerksegment und eine identische Gruppe von Host- und Array-seitigen Ports in einem anderen Netzwerksegment. Verwenden Sie, falls möglich, mehrere Ethernet Switches, um zusätzliche Redundanz bereitzustellen.
 
@@ -105,7 +105,7 @@ NOTE: Für IP-Overhead müssen viele Netzwerk-Switches über 9,000 Bytes konfigu
 
 
 [[step-4-configure-array-side-networking]]
-== Schritt 4: Konfigurieren der Netzwerkverbindung auf der Array-Seite
+== Schritt 4: Netzwerkkonfiguration auf der Array-Seite
 
 Mit der SANtricity System Manager GUI können Sie das iSCSI-Netzwerk auf der Array-Seite konfigurieren.
 
@@ -132,7 +132,7 @@ Wenn SANtricity System Manager zum ersten Mal auf einem Array geöffnet wird, da
 
 . Geben Sie in den Feldern Administratorpasswort festlegen und Passwort bestätigen das Passwort für die Administratorrolle ein und klicken Sie dann auf *Passwort festlegen*.
 +
-Der Setup-Assistent wird gestartet, wenn keine Pools, Volumengruppen, Workloads oder Benachrichtigungen konfiguriert sind.
+Der Setup-Assistent wird gestartet, wenn keine Pools, Volume-Gruppen, Workloads oder Benachrichtigungen konfiguriert sind.
 
 . Schließen Sie den Setup-Assistenten.
 +
@@ -167,7 +167,7 @@ Konfigurierte Geschwindigkeit des ethernet-Ports
 Die gewünschte Geschwindigkeit wird ausgewählt. Die in der Dropdown-Liste angezeigten Optionen hängen von der maximalen Geschwindigkeit ab, die Ihr Netzwerk unterstützt (z. B. 25 Gbit/s).
 
 
-NOTE: Die iSCSI Host-Schnittstellenkarten auf den Controllern handeln Geschwindigkeiten nicht automatisch aus. Die Geschwindigkeit für jeden Port muss auf 1 Gbit/s, 10 Gbit/s oder 25 Gbit/s eingestellt werden. Alle Ports müssen auf dieselbe Geschwindigkeit eingestellt sein.
+NOTE: Die auf den Controllern verfügbaren iSCSI Host-Schnittstellenkarten handeln die Geschwindigkeit nicht automatisch aus. Die Geschwindigkeit für jeden Port muss auf 1 Gbit/s, 10 Gbit/s oder 25 Gbit/s eingestellt werden. Alle Ports müssen auf dieselbe Geschwindigkeit eingestellt sein.
 
 
 
@@ -192,7 +192,7 @@ MTU-Größe (verfügbar durch Klicken auf *Weitere Porteinstellungen anzeigen*.)
  a| 
 Geben Sie bei Bedarf eine neue Größe in Byte für die maximale Übertragungseinheit (MTU) ein.
 
-Die Standardgröße der maximalen Übertragungseinheit (MTU) beträgt 1500 Byte pro Frame. Es muss ein Wert zwischen 1500 und 9000 eingegeben werden. Zum Aktivieren von Jumbo-Frames muss dieser Wert auf 9000 Byte festgelegt werden.
+Die Standardgröße der Maximum Transmission Unit (MTU) beträgt 1500 Byte pro Frame. Es ist ein Wert zwischen 1500 und 9000 einzugeben. Zum Aktivieren von Jumbo-Frames ist dieser Wert auf 9000 Byte festzulegen.
 
 
 
@@ -231,51 +231,51 @@ Wählen Sie diese Option aus, und geben Sie dann eine statische Adresse in die F
 
 
 [[step-5-configure-host-side-networking]]
-== Schritt 5: Hostseitige Netzwerkkonfiguration
+== Schritt 5: Host-seitige Netzwerkkonfiguration
 
 Durch die Konfiguration des iSCSI-Netzwerkes auf der Hostseite kann der VMware iSCSI-Initiator eine Sitzung mit dem Array einrichten.
 
 .Über diese Aufgabe
-Diese Aufgabe konfiguriert die iSCSI-Netzwerkverbindung auf der Hostseite und stellt iSCSI-Sitzungen mit dem Storage Array her.
+Diese Aufgabe konfiguriert die iSCSI-Netzwerkverbindung auf der Hostseite und richtet iSCSI-Sitzungen mit dem Storage Array ein.
 
 Nach Abschluss dieser Aufgabe ist der Host mit einem einzigen vSwitch konfiguriert, der sowohl VMkernel-Ports als auch vmnics enthält.
 
-Weitere Informationen zur Konfiguration von iSCSI-Netzwerken für VMware finden Sie unter https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/9-1/vsphere-storage/configuring-iscsi-and-iser-adapters-and-storage-with-esxi.html["Konfigurieren von iSCSI Adaptern und Speicher mit ESXi"^].
+Zusätzliche Informationen zur Konfiguration von iSCSI-Netzwerken für VMware sind unter  https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/9-1/vsphere-storage/configuring-iscsi-and-iser-adapters-and-storage-with-esxi.html["Konfigurieren von iSCSI-Adaptern und Speicher mit ESXi"^] zu finden.
 
 
-NOTE: Notieren Sie während dieses Vorgangs den iSCSI Qualified Name (IQN) des hinzugefügten Software iSCSI Adapters. Dieser wird später für die Konfiguration der Hostzuordnungen benötigt.
+NOTE: Während dieses Vorgangs ist der iSCSI Qualified Name (IQN) des hinzugefügten Software iSCSI Adapters zu notieren. Dieser wird später für die Konfiguration der Hostzuordnungen benötigt.
 
 .Bevor Sie beginnen
 Stellen Sie sicher, dass Sie Folgendes haben:
 
-* Es wurden Switches konfiguriert, die für den iSCSI-Speicherdatenverkehr verwendet werden.
-* Die Hardware-Flusssteuerung für Senden und Empfangen ist auf dem Switch *durchgängig* aktiviert.
+* Konfigurierte Switches, die für die Übertragung von iSCSI-Speicherverkehr verwendet werden.
+* Die Hardware-Flusssteuerung für Senden und Empfangen ist *durchgängig* auf dem Switch aktiviert.
 * Die Prioritätsflusssteuerung ist auf dem Switch deaktiviert.
 * Die iSCSI-Konfiguration auf der Array-Seite ist abgeschlossen.
 * Mindestens zwei Host-NIC-Ports für iSCSI-Datenverkehr.
 
 
 .Schritte
-. Für die hostseitige Konfiguration kann entweder der vSphere Client oder der vSphere Web Client verwendet werden. Siehe https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/9-1/vsphere-storage/configuring-iscsi-and-iser-adapters-and-storage-with-esxi.html["Konfigurieren von iSCSI Adaptern und Speicher mit ESXi"^].
+. Für die hostseitige Konfiguration kann entweder der vSphere Client oder der vSphere Web Client verwendet werden. Siehe https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/9-1/vsphere-storage/configuring-iscsi-and-iser-adapters-and-storage-with-esxi.html["Konfigurieren von iSCSI-Adaptern und Speicher mit ESXi"^].
 +
 Die Schnittstellen variieren in der Funktionalität und der genaue Workflow wird unterschiedlich.
 
 . Das Netzwerk für iSCSI wird eingerichtet. Siehe https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/9-1/vsphere-storage/configuring-iscsi-and-iser-adapters-and-storage-with-esxi/setting-up-network-for-iscsi-and-iser-with-esxi.html["Einrichten des Netzwerks für iSCSI mit ESX"^].
 +
-.. Es wird empfohlen, die Portbindung nicht zu verwenden. Die VMware iSCSI-Portbindung ist eine Funktion, die alle gebundenen VMkernel-Ports dazu zwingt, sich bei allen Zielports anzumelden, die in den konfigurierten Netzwerksegmenten erreichbar sind. Sie ist für die Verwendung mit Arrays vorgesehen, die eine einzelne Netzwerkadresse für das iSCSI-Ziel bereitstellen. NetApp empfiehlt, die iSCSI-Portbindung nicht zu verwenden. Zusätzliche Informationen finden Sie unter https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/9-1/vsphere-storage/configuring-iscsi-and-iser-adapters-and-storage-with-esxi/setting-up-network-for-iscsi-and-iser-with-esxi/best-practices-for-configuring-networking-with-software-iscsi.html["Best Practices für die Verwendung der Software iSCSI Portbindung in ESX/ESXi"^]. Wenn der ESXi-Host an den Speicher eines anderen Anbieters angeschlossen ist, empfiehlt NetApp die Verwendung separater iSCSI-VMkernel-Ports, um Konflikte mit der Portbindung zu vermeiden.
-.. NetApp empfiehlt mehrere Adapterzuordnungen auf einem vSphere Standard Switch, wobei Active/Standby-Adapter für Redundanz genutzt werden. Weitere Informationen finden Sie unter  https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/9-1/vsphere-storage/configuring-iscsi-and-iser-adapters-and-storage-with-esxi/setting-up-network-for-iscsi-and-iser-with-esxi/multiple-network-adapters-in-iscsi-or-iser-configuration.html["Mehrere Netzwerkadapter in iSCSI Konfiguration"^].
+.. Es wird empfohlen, Portbindung nicht zu verwenden. VMware iSCSI-Portbindung ist eine Funktion, die alle gebundenen VMkernel-Ports dazu zwingt, sich an allen Zielports anzumelden, die in den konfigurierten Netzwerksegmenten erreichbar sind. Sie ist für Arrays vorgesehen, die eine einzelne Netzwerkadresse für das iSCSI-Ziel bereitstellen. NetApp empfiehlt, iSCSI-Portbindung nicht zu verwenden. Weitere Informationen sind unter  https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/9-1/vsphere-storage/configuring-iscsi-and-iser-adapters-and-storage-with-esxi/setting-up-network-for-iscsi-and-iser-with-esxi/best-practices-for-configuring-networking-with-software-iscsi.html["Best Practices für die Verwendung der Software iSCSI Portbindung in ESX/ESXi"^] zu finden. Wenn der ESXi-Host an den Speicher eines anderen Anbieters angeschlossen ist, empfiehlt NetApp die Verwendung separater iSCSI-VMkernel-Ports, um Konflikte mit der Portbindung zu vermeiden.
+.. NetApp empfiehlt mehrere Adapterzuordnungen auf einem vSphere Standard Switch, wobei Active/Standby-Adapter für Redundanz genutzt werden. Siehe https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/9-1/vsphere-storage/configuring-iscsi-and-iser-adapters-and-storage-with-esxi/setting-up-network-for-iscsi-and-iser-with-esxi/multiple-network-adapters-in-iscsi-or-iser-configuration.html["Mehrere Netzwerkadapter in iSCSI Konfiguration"^].
 .. Jumbo-Frames können bei Bedarf mit iSCSI aktiviert werden. Siehe https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/9-1/vsphere-storage/configuring-iscsi-and-iser-adapters-and-storage-with-esxi/using-jumbo-frames-with-iscsi-and-iser.html["Verwenden von Jumbo Frames mit iSCSI auf ESX"^].
 
 
-. Es ist ein Software iSCSI Adapter hinzuzufügen. Siehe https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/9-1/vsphere-storage/configuring-iscsi-and-iser-adapters-and-storage-with-esxi/configure-the-software-iscsi-adapter-with-esxi/add-or-remove-the-software-iscsi-adapter.html["Hinzufügen oder Entfernen des Software iSCSI Adapters"^].
+. Ein Software iSCSI-Adapter wird hinzugefügt. Siehe https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/9-1/vsphere-storage/configuring-iscsi-and-iser-adapters-and-storage-with-esxi/configure-the-software-iscsi-adapter-with-esxi/add-or-remove-the-software-iscsi-adapter.html["Hinzufügen oder Entfernen des Software iSCSI Adapters"^].
 +
-.. Der Host-IQN wird erfasst, und optional wird ein iSCSI-Alias hinzugefügt. Siehe https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/9-1/vsphere-storage/configuring-iscsi-and-iser-adapters-and-storage-with-esxi/modify-general-properties-for-iscsi-and-iser-adapters-on-esxi-hosts.html["Allgemeine Eigenschaften für iSCSI auf ESX Hosts ändern"^].
+.. Der Host-IQN wird notiert und optional ein iSCSI-Alias hinzugefügt. Siehe https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/9-1/vsphere-storage/configuring-iscsi-and-iser-adapters-and-storage-with-esxi/modify-general-properties-for-iscsi-and-iser-adapters-on-esxi-hosts.html["Allgemeine Eigenschaften für iSCSI auf ESX Hosts ändern"^].
 .. Die CHAP-Parameter werden konfiguriert, wenn CHAP-Secrets verwendet werden. Siehe https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/9-1/vsphere-storage/configuring-iscsi-and-iser-adapters-and-storage-with-esxi/configuring-chap-parameters-for-iscsi-or-iser-storage-adapters-with-esxi.html["Konfiguration von CHAP-Parametern für iSCSI-Adapter auf einem ESX-Host"^].
 
 
 
 
-Nach erfolgreichem Hinzufügen können die Verbindungen in der Ansicht „Speicheradapter“ im vSphere Client angezeigt werden. Falls dies nicht erfolgreich war, kann mit Schritt 6 fortgefahren werden, um die Kommunikation mit den Ports zu überprüfen und etwaige Verbindungseinstellungen zu korrigieren.
+Nach erfolgreichem Hinzufügen können die Verbindungen in der Ansicht „Speicheradapter“ im vSphere Client eingesehen werden. Falls dies nicht erfolgreich war, ist mit Schritt 6 fortzufahren, um die Kommunikation mit den Ports zu überprüfen und etwaige Verbindungseinstellungen zu korrigieren.
 
 
 
@@ -323,5 +323,5 @@ Approximate round trip times in milliseconds:
 
 NOTE: Wenn der Befehl mit der Meldung fehlschlägt `sendto() failed (Message too long)`, Überprüfen Sie die MTU-Größe (Jumbo Frame-Unterstützung) für die Ethernet-Schnittstellen auf dem Host-Server, dem Storage-Controller und den Switch-Ports.
 
-. Falls die Erkennung in Schritt 5 fehlgeschlagen ist, erfolgt die Rückkehr zum Verfahren für die iSCSI Host-seitige Netzwerkkonfiguration, um die Sitzungserkennung abzuschließen.
+. Falls die Erkennung in Schritt 5 nicht erfolgreich war, kehren Sie zum Verfahren für die iSCSI-Host-seitige Netzwerkkonfiguration zurück, um die Sitzungserkennung abzuschließen.
 

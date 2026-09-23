@@ -2,9 +2,9 @@
 permalink: config-linux/nvme-tcp-configure-storage-connections-task.html 
 sidebar: sidebar 
 keywords: NVMe over TCP, express linux configuration, software configuration, linux host, E2800, E5700, EF300, EF600, E-Series, eseries 
-summary: Wenn Ihr Controller eine Verbindung für NVMe over TCP umfasst, können Sie die NVMe Porteinstellungen auf der Hardware-Seite oder der System-Seite in SANtricity System Manager konfigurieren. 
+summary: Wenn Ihr Controller über eine Verbindung für NVMe over TCP verfügt, können Sie die NVMe Porteinstellungen auf der Hardware-Seite oder der System-Seite im SANtricity System Manager konfigurieren. 
 ---
-= Konfigurieren von Storage Arrays für NVMe over TCP Verbindungen in der E-Series unter Linux
+= Konfiguration von E-Series Speicher NVMe over TCP Verbindungen für Linux Hosts
 :allow-uri-read: 
 :experimental: 
 :icons: font
@@ -12,28 +12,28 @@ summary: Wenn Ihr Controller eine Verbindung für NVMe over TCP umfasst, können
 
 
 [role="lead"]
-Wenn Ihr Controller eine Verbindung für NVMe over TCP umfasst, können Sie die NVMe Porteinstellungen auf der Hardware-Seite oder der System-Seite in SANtricity System Manager konfigurieren.
+Wenn Ihr Controller über eine Verbindung für NVMe over TCP verfügt, können Sie die NVMe Porteinstellungen auf der Hardware-Seite oder der System-Seite im SANtricity System Manager konfigurieren.
 
 .Bevor Sie beginnen
 Stellen Sie sicher, dass Sie Folgendes haben:
 
-* Ein NVMe over TCP Host-Port an Ihrem Controller; andernfalls sind die NVMe over TCP Einstellungen in System Manager nicht verfügbar.
+* Ein NVMe over TCP Hostport auf Ihrem Controller, andernfalls sind die NVMe over TCP Einstellungen in System Manager nicht verfügbar.
 * Die IP-Adresse der Hostverbindung.
 
 
 .Über diese Aufgabe
-Auf die NVMe over TCP Konfiguration können Sie über die Seite *Hardware* oder über das Menü:Settings[System] zugreifen. Diese Aufgabe beschreibt, wie die Ports auf der Seite *Hardware* konfiguriert werden.
+Auf die NVMe over TCP Konfiguration kann über die Seite *Hardware* oder über Menü:Settings[System] zugegriffen werden. Diese Aufgabe beschreibt, wie die Ports auf der Seite *Hardware* konfiguriert werden.
 
 
-NOTE: Die Einstellungen und Funktionen für NVMe over TCP werden nur angezeigt, wenn der Controller Ihres Speichersystems über einen NVMe over TCP Port verfügt.
+NOTE: Die Einstellungen und Funktionen für NVMe over TCP werden nur angezeigt, wenn der Controller Ihres Storage-Arrays über einen NVMe over TCP Port verfügt.
 
 .Schritte
 . Wählen Sie im linken Bereich der System Manager-Oberfläche *Hardware* aus.
-. Wählen Sie den Controller mit dem NVMe over TCP Port aus, der konfiguriert werden soll.
+. Wählen Sie den Controller mit dem NVMe over TCP Port aus, den Sie konfigurieren möchten.
 +
 Das Kontextmenü des Controllers wird angezeigt.
 
-. *NVMe über TCP-Ports konfigurieren* wird ausgewählt.
+. *NVMe über TCP-Ports konfigurieren* auswählen.
 +
 Das Dialogfeld *NVMe über TCP Ports konfigurieren* wird geöffnet.
 
@@ -50,7 +50,7 @@ Um alle Porteinstellungen anzuzeigen, klicken Sie rechts im Dialogfeld auf den L
  a| 
 Konfigurierte Geschwindigkeit des ethernet-Ports
  a| 
-Die gewünschte Geschwindigkeit wird ausgewählt. Die in der Dropdown-Liste angezeigten Optionen hängen von der maximalen Geschwindigkeit ab, die Ihr Netzwerk unterstützt (z. B. 10 Gbit/s). Mögliche Werte sind:
+Die gewünschte Geschwindigkeit wird ausgewählt. Die Optionen, die in der Dropdown-Liste angezeigt werden, hängen von der maximalen Geschwindigkeit ab, die Ihr Netzwerk unterstützen kann (z. B. 10 Gbit/s). Mögliche Werte sind:
 
 ** Autom. Aushandlung
 ** 10 Gbit/S
@@ -67,9 +67,9 @@ NOTE: Die konfigurierte NVMe over TCP Portgeschwindigkeit sollte der Geschwindig
 
 
  a| 
-Konfigurierter Forward Error Correction (FEC)-Modus
+Konfigurierter FEC Modus
  a| 
-Der gewünschte FEC-Modus ist auszuwählen. Die in der Dropdown-Liste angezeigten Optionen hängen von der aktuell ausgewählten Geschwindigkeit ab und führen nur die für diese Geschwindigkeit unterstützten Optionen auf. Nicht alle FEC-Modi sind für alle Geschwindigkeiten verfügbar. Mögliche Werte sind:
+Der gewünschte FEC-Modus kann ausgewählt werden. Die in der Dropdown-Liste angezeigten Optionen hängen von der aktuell ausgewählten Geschwindigkeit ab und führen nur die für diese Geschwindigkeit unterstützten Optionen auf. Nicht alle FEC-Modi sind für alle Geschwindigkeiten verfügbar. Mögliche Werte sind:
 
 ** Keine
 ** Reed-Solomon
@@ -122,7 +122,7 @@ NOTE: Wenn nur eine routingfähige IP-Adresse vorhanden ist, setzen Sie die verb
 Aktivieren Sie die VLAN-Unterstützung (verfügbar durch Klicken auf *Weitere Einstellungen anzeigen*.)
  a| 
 
-NOTE: Diese Option ist nur in einer iSCSI-Umgebung verfügbar. Sie ist in einer NVMe über TCP Umgebung nicht verfügbar.
+NOTE: Diese Option ist nur in einer iSCSI-Umgebung verfügbar. Sie ist in einer NVMe over TCP Umgebung nicht verfügbar.
 
 
 
@@ -130,7 +130,7 @@ NOTE: Diese Option ist nur in einer iSCSI-Umgebung verfügbar. Sie ist in einer 
 ethernet-Priorität aktivieren (verfügbar durch Klicken auf *Weitere Einstellungen anzeigen*.)
  a| 
 
-NOTE: Diese Option ist nur in einer iSCSI-Umgebung verfügbar. Sie ist in einer NVMe über TCP Umgebung nicht verfügbar.
+NOTE: Diese Option ist nur in einer iSCSI-Umgebung verfügbar. Sie ist in einer NVMe over TCP Umgebung nicht verfügbar.
 
 |===
 . Klicken Sie Auf *Fertig Stellen*.

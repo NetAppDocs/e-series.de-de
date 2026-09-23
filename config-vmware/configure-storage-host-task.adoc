@@ -2,27 +2,27 @@
 permalink: config-vmware/configure-storage-host-task.html 
 sidebar: sidebar 
 keywords: configure storage ESXi, express vmware configuration, software configuration, vmware host, E2800, E5700, EF300, EF600, EF50, EF80, E4000, E-Series, eseries 
-summary: 'Der einem ESXi-Host zugewiesene Speicher kann entweder als VMFS-Datenspeicher (Virtual Machine File System) oder als RDM (Raw Device Mapping) verwendet werden. RDMs werden von den NVMe over Fabric Protokollen (NVMe over FC, NVMe over RoCE, NVMe over TCP) nicht unterstützt.' 
+summary: 'Der einem ESXi Host zugewiesene Speicher kann entweder als VMFS-Datenspeicher (Virtual Machine File System) oder als RDM (Raw Device Mapping) verwendet werden. RDMs werden von den NVMe over fabric Protokollen (NVMe over FC, NVMe over RoCE, NVMe over TCP) nicht unterstützt.' 
 ---
-= Konfigurieren Sie Speicher auf dem Host in E-Series - VMware
+= Konfiguration des Speichers auf dem Host in E-Series für VMware
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Der einem ESXi-Host zugewiesene Speicher kann entweder als VMFS-Datenspeicher (Virtual Machine File System) oder als RDM (Raw Device Mapping) verwendet werden. RDMs werden von den NVMe over Fabric Protokollen (NVMe over FC, NVMe over RoCE, NVMe over TCP) nicht unterstützt.
+Der einem ESXi Host zugewiesene Speicher kann entweder als VMFS-Datenspeicher (Virtual Machine File System) oder als RDM (Raw Device Mapping) verwendet werden. RDMs werden von den NVMe over fabric Protokollen (NVMe over FC, NVMe over RoCE, NVMe over TCP) nicht unterstützt.
 
 Alle aktuellen Versionen von ESXi unterstützen VMFS Versionen 5 und 6.
 
 
-NOTE: Die Verwendung von VMFS-Extents auf VMware wird nicht empfohlen. Anstatt ein weiteres Volume als Extent zu einem vorhandenen VMFS-Datenspeicher hinzuzufügen, um die Kapazität zu erhöhen, wird empfohlen, eine DVE-Operation ((https://kb.netapp.com/on-prem/E-Series/Management-Apps-KBs/How_to_expand_Volumes["Erweiterung von Volumes - NetApp Knowledge Base"^]) auf dem vorhandenen zugrunde liegenden Volume durchzuführen und den VMFS-Datenspeicher zu erweitern.
+NOTE: Die Verwendung von VMFS-Extents auf VMware wird nicht empfohlen. Statt ein weiteres Volume als Extent zu einem bestehenden VMFS-Datenspeicher hinzuzufügen, um die Kapazität zu erhöhen, empfiehlt sich eine DVE-Operation ((https://kb.netapp.com/on-prem/E-Series/Management-Apps-KBs/How_to_expand_Volumes["So erweitern Sie Volumes - NetApp Knowledge Base"^]) auf dem vorhandenen zugrunde liegenden Volume sowie die Erweiterung des VMFS-Datenspeichers.
 
 
 NOTE: Es wird empfohlen, auf virtuellen Linux-Maschinen virtuelle RDMs oder virtuelle Festplatten anstelle physischer RDMs zu verwenden.
 
 .Schritte
 . Stellen Sie sicher, dass die Volumes, die dem ESXi-Host zugeordnet sind, ordnungsgemäß erkannt wurden.
-. Anweisungen zum Erstellen von VMFS Datenspeichern finden Sie unter https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/9-1/vsphere-storage/working-with-datastores-in-vsphere-storage-environment/vsphere-vmfs-datastore-concepts-and-operations/create-a-vsphere-vmfs-datastore.html["Erstellen eines vSphere VMFS-Datenspeichers"^].
-. Informationen zum Erstellen von RDMs sind unter  https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/9-1/vsphere-storage/raw-device-mapping-in-vsphere.html["Raw Device Mapping in vSphere"^] zu finden.
+. Anweisungen zum Erstellen von VMFS-Datenspeichern finden Sie unter https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/9-1/vsphere-storage/working-with-datastores-in-vsphere-storage-environment/vsphere-vmfs-datastore-concepts-and-operations/create-a-vsphere-vmfs-datastore.html["Erstellen eines vSphere VMFS-Datenspeichers"^].
+. Anweisungen zum Erstellen von RDMs finden Sie unter https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/9-1/vsphere-storage/raw-device-mapping-in-vsphere.html["Rohgerätezuordnung in vSphere"^].
 

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: configure subnet manager Linux, path loss, subnet manager, opensm, express linux configuration, linux host, 
 summary: Die Verwendung eines InfiniBand-Switches zum Ausführen des Subnetz-Managers kann zu unerwarteten Pfadverlusten bei hohen Lasten führen. Um Pfadverluste zu vermeiden, konfigurieren Sie den Subnetz-Manager auf einem oder mehreren Hosts, die opensm verwenden. 
 ---
-= Subnetz-Manager in E-Series – Linux (NVMe over InfiniBand) konfigurieren
+= Konfiguration des Subnetzmanagers auf E-Series Linux-Hosts mit NVMe über InfiniBand
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

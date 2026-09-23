@@ -2,16 +2,16 @@
 permalink: maintenance-ef50-ef80/io-module-upgrade.html 
 sidebar: sidebar 
 keywords: ef50, ef80, upgrade io module, upgrade hic, upgrade host interface card 
-summary: Die E/A-Module Ihres EF50 oder EF80 Speichersystems können aufgerüstet werden, um die Anzahl der Host-Ports für eine verbesserte Netzwerkanbindung zu erhöhen, die Fähigkeit Ihres Systems zur Verarbeitung von Datenverkehr zu erweitern und SAS-Erweiterungsgehäuse anzuschließen. 
+summary: In Ihrem EF50 oder EF80 Speichersystem können E/A-Module aufgerüstet werden, um die Anzahl der Host-Ports für eine verbesserte Netzwerkanbindung zu erhöhen, die Fähigkeit Ihres Systems zur Verarbeitung von Datenverkehr zu erweitern und SAS-Erweiterungsgehäuse anzuschließen. 
 ---
-= Upgrade der I/O-Module – EF50 und EF80
+= Upgrade der E/A-Module in einem EF50 oder EF80 Speichersystem
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Die E/A-Module Ihres EF50 oder EF80 Speichersystems können aufgerüstet werden, um die Anzahl der Host-Ports für eine verbesserte Netzwerkanbindung zu erhöhen, die Fähigkeit Ihres Systems zur Verarbeitung von Datenverkehr zu erweitern und SAS-Erweiterungsgehäuse anzuschließen.
+In Ihrem EF50 oder EF80 Speichersystem können E/A-Module aufgerüstet werden, um die Anzahl der Host-Ports für eine verbesserte Netzwerkanbindung zu erhöhen, die Fähigkeit Ihres Systems zur Verarbeitung von Datenverkehr zu erweitern und SAS-Erweiterungsgehäuse anzuschließen.
 
 .Über diese Aufgabe
 * Der Begriff _I/O-Modul_ wird in diesem Verfahren anstelle von Host-Schnittstellenkarten (HICs) verwendet.
@@ -50,7 +50,7 @@ Sie können die unterstützten E/A-Module und die Steckplatzpriorität für Ihr 
 
 CAUTION: *Möglicher Verlust des Datenzugriffs* -- Das Vorhandensein inkompatibler oder nicht übereinstimmender I/O-Module führt dazu, dass sich die Controller beim Einschalten sperren.
 
-** Kabel zum Anschluss der neuen E/A-Module an Ihr Netzwerk oder Ihre SAS-Erweiterungs-Shelfs.
+** Kabel zum Anschluss der neuen E/A-Module an Ihr Netzwerk oder an Ihre SAS-Erweiterungs-Shelfs.
 ** Ein ESD-Armband oder Sie haben andere antistatische Vorkehrungen getroffen.
 ** Eine ebene, antistatische Arbeitsfläche.
 ** Eine Managementstation mit einem Browser, der auf SANtricity System Manager für die Controller zugreifen kann.
@@ -153,7 +153,7 @@ Trennen Sie die Verkabelung von den I/O-Modulen, die Sie aufrüsten möchten (es
 
 .Über diese Aufgabe
 * Sie beginnen mit einem Controller und wiederholen dann die Schritte für den anderen Controller.
-* Die Abbildung zeigt die Entfernung eines E/A-Moduls aus Steckplatz 2. Je nach Typ des E/A-Moduls, auf das Sie ein Upgrade durchführen, kann der Steckplatz ein anderer sein.
+* Die Abbildung zeigt die Entfernung eines E/A-Moduls aus Steckplatz 2. Je nach Typ des E/A-Moduls, auf das Sie ein Upgrade durchführen, kann der Steckplatz unterschiedlich sein.
 
 
 .Schritte
@@ -198,10 +198,10 @@ Sie können die Lasche auf der linken Seite und die Rändelschraube verwenden, u
 .. Drehen Sie die Rändelschraube im Uhrzeigersinn, um sie festzuziehen.
 
 
-. Das E/A-Modul wird per Kabel mit dem Host-Netzwerk oder dem SAS-Erweiterungsgehäuse verbunden.
+. Das E/A-Modul wird per Kabel mit dem Host-Netzwerk oder dem SAS-Erweiterungs-Shelf verbunden.
 +
-** Für die Verkabelung des Host-Netzwerks kann der link:../install-hw-ef50-ef80/install-cable.html["Verkabeln Sie die Hardware"^]Abschnitt „Verkabelung des Host-Netzwerks“ im Inhalt zur Systeminstallation und -einrichtung verwendet werden.
-** Für die Verkabelung von SAS Erweiterungsschächten können Sie das link:../install-hw-cabling/hotadd-drive-shelf-task.html["Hot-Add eines Laufwerk-Shelfs im laufenden Betrieb - E-Series"^] Verfahren verwenden.
+** Für die Verkabelung des Host-Netzwerks können Sie den link:../install-hw-ef50-ef80/install-cable.html["Verkabeln Sie die Hardware"^] Abschnitt des Inhalts zur Systeminstallation und -einrichtung für die Verkabelung des Host-Netzwerks verwenden.
+** Für die Verkabelung von SAS-Erweiterungsschächten kann das folgende link:../install-hw-cabling/hotadd-drive-shelf-task.html["Hot-Add eines Laufwerksfachs in einem E-Series Storage-System"^] Verfahren verwendet werden.
 
 
 . Wiederholen Sie diese Schritte, um ein I/O-Modul im anderen Controller zu aktualisieren.
@@ -304,4 +304,4 @@ Die Datei wird im Ordner Downloads für Ihren Browser mit dem Namen *Support-Dat
 
 
 .Was kommt als Nächstes
-Der Prozess der Aktualisierung der E/A-Module auf Ihr Speichersystem ist abgeschlossen. Der normale Betrieb kann wieder aufgenommen werden.
+Der Prozess des Upgrades der E/A-Module auf Ihrem Speichersystem ist abgeschlossen. Der normale Betrieb kann wieder aufgenommen werden.

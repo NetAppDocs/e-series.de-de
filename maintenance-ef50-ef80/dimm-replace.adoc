@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: ef50, ef80, replace a dimm 
 summary: Tauschen Sie ein DIMM in Ihrem EF50 oder EF80-Speichersystem aus, wenn es ausgefallen ist, meldet, dass es sich nicht in einem optimalen Zustand befindet, oder eine nicht übereinstimmende Kapazität aufweist. 
 ---
-= DIMM austauschen – EF50 und EF80
+= Austausch eines DIMM in EF50 und EF80 Speichersystemen
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

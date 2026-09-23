@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: E5700 24-drive, replace E5700 24-drive, failed E5700 24-drive 
 summary: Ersetzen Sie ein Laufwerk in einem E5700 Shelf für 24 Laufwerke. 
 ---
-= Austausch eines Laufwerks in einem E5700 24-Laufwerk-Shelf
+= Austausch eines Laufwerks in einem E5700 24-Laufwerksschacht
 :allow-uri-read: 
 :experimental: 
 :icons: font

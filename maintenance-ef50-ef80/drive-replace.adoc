@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: ef50, ef80, replace the drives 
 summary: Tauschen Sie ein Laufwerk in Ihrem EF50 oder EF80-Speichersystem aus, wenn ein Laufwerk ausfällt oder ein Upgrade erforderlich ist. 
 ---
-= Laufwerk austauschen – EF50 und EF80
+= Austausch eines Laufwerks in EF50 und EF80 Speichersystemen
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

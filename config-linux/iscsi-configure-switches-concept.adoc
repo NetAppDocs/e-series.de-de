@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: Switches, zoning, express linux configuration, software configuration, linux host, E2800, E5700, EF300, EF600, E-Series, eseries 
 summary: Konfigurieren Sie die Switches entsprechend den Empfehlungen des Anbieters für iSCSI. 
 ---
-= Switches in E-Series konfigurieren – Linux (iSCSI)
+= Konfigurationsanforderungen für iSCSI Switches für E-Series Linux Hosts
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

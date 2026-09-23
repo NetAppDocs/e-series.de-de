@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: ef50, ef80, prepare the impaired controller 
 summary: Bereiten Sie den Austausch des defekten Controllers in Ihrem EF50- oder EF80-Speichersystem vor, indem Sie den Ersatzcontroller entpacken, bestätigen, dass die Teilenummer korrekt ist, und die Konfigurationsdatenbank sichern. 
 ---
-= Bereiten Sie den Austausch des Controllers vor – EF50 und EF80
+= Vorbereitung des Austauschs eines Controllers in EF50 und EF80 Speichersystemen
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

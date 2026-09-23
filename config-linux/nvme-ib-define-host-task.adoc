@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: define Linux host, express linux configuration, linux host, 
 summary: Mit dem SANtricity System Manager definieren Sie die Hosts, die Daten an das Storage Array senden. Die Definition eines Hosts ist einer der Schritte, die erforderlich sind, damit das Storage-Array wissen kann, an welche Hosts angeschlossen sind, und um den I/O-Zugriff auf die Volumes zu ermöglichen. 
 ---
-= Host mit SANtricity System Manager - Linux (NVMe over InfiniBand) erstellen
+= Erstellung eines E-Series Hosts mit SANtricity System Manager unter Linux
 :allow-uri-read: 
 :experimental: 
 :icons: font

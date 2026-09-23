@@ -2,9 +2,9 @@
 permalink: config-linux/srp-ib-configure-ip-address-dhcp-task.html 
 sidebar: sidebar 
 keywords: express linux configuration, software configuration, linux host, E2800, E5700, EF300, EF600, E-Series, eseries 
-summary: 'Dynamic Host Configuration Protocol (DHCP) wird zum Bereitstellen von IP-Adressen verwendet.' 
+summary: 'IP-Adressen werden über Dynamic Host Configuration Protocol (DHCP) bereitgestellt.' 
 ---
-= Konfigurieren von IP-Adressen mit DHCP in E-Series – Linux (SRP over InfiniBand)
+= Konfiguration von DHCP-IP-Adressen für SRP über InfiniBand in E-Series
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

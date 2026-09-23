@@ -2,9 +2,9 @@
 permalink: config-linux/fc-configure-ip-address-dhcp-task.html 
 sidebar: sidebar 
 keywords: IP address, DHCP, express linux configuration, software configuration, linux host, 
-summary: 'Dynamic Host Configuration Protocol (DHCP) wird zum Bereitstellen von IP-Adressen verwendet.' 
+summary: 'IP-Adressen werden über Dynamic Host Configuration Protocol (DHCP) bereitgestellt.' 
 ---
-= IP-Adressen mit DHCP in E-Series konfigurieren – Linux (FC)
+= IP-Adressen für E-Series Linux FC Hosts mithilfe von DHCP konfigurieren
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

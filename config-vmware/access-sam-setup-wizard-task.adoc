@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: access System Manager vmware, express vmware configuration, software configuration, vmware host, E2800, E5700, EF300, EF600, EF50, EF80, E4000, E-Series, eseries 
 summary: Mit dem Setup-Assistenten in SANtricity System Manager konfigurieren Sie das Storage-Array. 
 ---
-= Konfigurieren Sie Ihren Storage mit SANtricity System Manager – VMware
+= Konfiguration von E-Series Storage-System mit SANtricity System Manager für VMware
 :allow-uri-read: 
 :experimental: 
 :icons: font
@@ -77,7 +77,7 @@ Wenn SANtricity System Manager zum ersten Mal auf einem Array geöffnet wird, da
 
 . Geben Sie in den Feldern Administratorpasswort festlegen und Passwort bestätigen das Passwort für die Administratorrolle ein und klicken Sie dann auf *Passwort festlegen*.
 +
-Der Setup-Assistent wird gestartet, wenn keine Pools, Volumengruppen, Workloads oder Benachrichtigungen konfiguriert sind.
+Der Setup-Assistent wird gestartet, wenn keine Pools, Volume-Gruppen, Workloads oder Benachrichtigungen konfiguriert sind.
 
 . Mit dem Setup-Assistenten können Sie die folgenden Aufgaben ausführen:
 +
@@ -91,6 +91,6 @@ Der Setup-Assistent wird gestartet, wenn keine Pools, Volumengruppen, Workloads 
 . Falls Sie noch kein Volume erstellt haben, klicken Sie im Menü:Storage[Volumes > Create > Volume] auf.
 +
 
-NOTE: Um die Kompatibilität mit VMware zu gewährleisten, müssen Volumes für die 512-Byte-Emulation (512e) konfiguriert werden, wenn 4096-Byte-Laufwerke verwendet werden. Weitere Informationen zur Konfiguration eines Volumes für die 512-Byte-Emulation (512e) finden Sie in der Online-Hilfe des SANtricity System Manager.
+NOTE: Volumes müssen für die Verwendung der 512-Byte-Emulation (512e) konfiguriert werden, wenn 4096-Byte-Laufwerke verwendet werden, um die Kompatibilität mit VMware sicherzustellen. Weitere Informationen zum Konfigurieren eines Volumes für die 512-Byte-Emulation (512e) finden Sie in der Online-Hilfe des SANtricity System Manager.
 
 

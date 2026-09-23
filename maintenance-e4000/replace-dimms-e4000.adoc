@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary:  
 ---
-= Ersetzen Sie die DIMMs E4000
+= Austausch der DIMMs in einem E4000 Speichersystem
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -144,7 +144,7 @@ Die Datei wird im Ordner Downloads Ihres Browsers mit dem Namen *KonfigurationDa
 
 . Wenn der Controller nicht bereits offline ist, versetzen Sie ihn jetzt mithilfe von SANtricity System Manager in den Offline-Modus.
 +
-.. Wählen Sie im Menü die Option Hardware [Controller und Komponenten] aus.
+.. Menü: Hardware[Controller und Komponenten] auswählen
 .. Wählen Sie den Controller aus, den Sie in den Offline-Modus versetzen möchten.
 .. Wählen Sie im Kontextmenü die Option *Offline platzieren* aus, und bestätigen Sie, dass Sie den Vorgang ausführen möchten.
 +
@@ -324,9 +324,9 @@ Wenn der Status nicht optimal ist oder eine der Warn-LEDs leuchtet, vergewissern
 
 . Überprüfen Sie, ob alle Volumes an den bevorzugten Eigentümer zurückgegeben wurden.
 +
-.. *Storage › Volumes* wird ausgewählt. Auf der Seite *All Volumes* wird überprüft, ob die Volumes ihren bevorzugten Eigentümern zugewiesen sind. *ellipse icon › Change ownership* wird ausgewählt, um die Volume-Eigentümer anzuzeigen.
+.. *Storage › Volumes* ist auszuwählen. Auf der Seite *All Volumes* ist zu überprüfen, ob die Volumes ihren bevorzugten Besitzern zugeordnet sind. *Ellipse icon › Change ownership* ist auszuwählen, um die Volume-Besitzer anzuzeigen.
 .. Wenn alle Volumes Eigentum des bevorzugten Eigentümers sind, fahren Sie mit Schritt 6 fort.
-.. Falls keines der Volumes zurückgegeben wird, müssen Sie die Volumes manuell zurückgeben. Wechseln Sie zu *Symbol mit den drei Punkten › Volumes neu verteilen*.
+.. Falls keines der Volumes zurückgegeben wird, müssen Sie die Volumes manuell zurückgeben. Navigieren Sie zu *Symbol mit den drei Punkten › Volumes neu verteilen*.
 .. Wenn kein Recovery Guru zur Verfügung steht oder bei Durchführung der Schritte des Recovery Guru erfolgt, werden die Volumes immer noch nicht an den von ihnen bevorzugten Eigentümer zurückgegeben.
 
 

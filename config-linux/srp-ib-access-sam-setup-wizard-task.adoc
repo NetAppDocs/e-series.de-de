@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: express linux configuration, software configuration, linux host, E2800, E5700, EF300, EF600, E-Series, eseries 
 summary: Mit dem Setup-Assistenten in SANtricity System Manager konfigurieren Sie das Storage-Array. 
 ---
-= Storage-Konfiguration mit SANtricity System Manager – Linux (SRP over InfiniBand)
+= E-Series Storage mit dem Einrichtungsassistenten für SRP über InfiniBand konfigurieren
 :allow-uri-read: 
 :experimental: 
 :icons: font

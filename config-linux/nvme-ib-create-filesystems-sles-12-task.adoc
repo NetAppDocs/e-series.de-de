@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: file systems, express linux configuration, software configuration, linux host, E2800, E5700, EF300, EF600, E-Series, eseries 
 summary: Für SLES 12 erstellen Sie ein Dateisystem im Namespace und mounten das Dateisystem. 
 ---
-= Erstellen von Filesystemen in der E-Series – Linux SLES 12 (NVMe over InfiniBand)
+= Erstellen von Dateisystemen auf E-Series Linux SLES 12 Hosts mit NVMe über InfiniBand
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

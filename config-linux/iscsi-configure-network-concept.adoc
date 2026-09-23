@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: express linux configuration, software configuration, linux host, E2800, E5700, EF300, EF600, E-Series, eseries 
 summary: Konfigurieren Sie das iSCSI-Netzwerk. 
 ---
-= Netzwerk in E-Series konfigurieren – Linux (iSCSI)
+= Informationen zur iSCSI Netzwerkkonfiguration für Linux Hosts in E-Series
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

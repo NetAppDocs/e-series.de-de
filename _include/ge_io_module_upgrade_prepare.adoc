@@ -18,7 +18,7 @@ Sie können die unterstützten E/A-Module und die Steckplatzpriorität für Ihr 
 
 CAUTION: *Möglicher Verlust des Datenzugriffs* -- Das Vorhandensein inkompatibler oder nicht übereinstimmender I/O-Module führt dazu, dass sich die Controller beim Einschalten sperren.
 
-** Kabel zum Anschluss der neuen E/A-Module an Ihr Netzwerk oder Ihre SAS-Erweiterungs-Shelfs.
+** Kabel zum Anschluss der neuen E/A-Module an Ihr Netzwerk oder an Ihre SAS-Erweiterungs-Shelfs.
 ** Ein ESD-Armband oder Sie haben andere antistatische Vorkehrungen getroffen.
 ** Eine ebene, antistatische Arbeitsfläche.
 ** Eine Managementstation mit einem Browser, der auf SANtricity System Manager für die Controller zugreifen kann.

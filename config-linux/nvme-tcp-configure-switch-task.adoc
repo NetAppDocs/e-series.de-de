@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: configure switch, express linux configuration, software configuration, linux host, E2800, E5700, EF300, EF600, E-Series, eseries 
 summary: Die Switches sind gemäß den Empfehlungen des Herstellers für NVMe über TCP zu konfigurieren. Diese Empfehlungen können sowohl Konfigurationsanweisungen als auch Codeaktualisierungen umfassen. 
 ---
-= Die Konfiguration der Switches in E-Series - Linux (NVMe über TCP)
+= Konfiguration von Switches für E-Series Linux NVMe over TCP Hosts
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -13,7 +13,7 @@ summary: Die Switches sind gemäß den Empfehlungen des Herstellers für NVMe ü
 [role="lead"]
 Die Switches sind gemäß den Empfehlungen des Herstellers für NVMe über TCP zu konfigurieren. Diese Empfehlungen können sowohl Konfigurationsanweisungen als auch Codeaktualisierungen umfassen.
 
-E-Series enthält keine spezifischen Vorgaben zu Ihrer Netzwerkkonfiguration. Für Hinweise zur Auswahl der geeigneten Konfiguration für Ihre Umgebung wenden Sie sich bitte an Ihren Netzwerkadministrator.
+E-Series enthält keine spezifischen Vorgaben zu Ihrer Netzwerkkonfiguration. Eine Abstimmung mit Ihrem Netzwerkadministrator zur Auswahl der für Ihre Umgebung geeigneten Konfiguration ist empfehlenswert.
 
 .Was kommt als Nächstes?
-Nachdem Sie die Schalter konfiguriert haben, link:nvme-tcp-setup-host-side-task.html["Der NVMe-Initiator über TCP wird auf dem Host eingerichtet."].
+Nachdem Sie die Schalter konfiguriert haben, link:nvme-tcp-setup-host-side-task.html["Einrichten des NVMe Initiators über TCP auf dem Host"].

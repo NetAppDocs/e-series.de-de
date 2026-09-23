@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: configure network connection, express linux configuration, software configuration, linux host, E2800, E5700, EF300, EF600, E-Series, eseries 
 summary: Wenn in Ihrer Konfiguration das iSER-over-InfiniBand-Protokoll verwendet wird, führen Sie die in diesem Abschnitt beschriebenen Schritte aus. 
 ---
-= Netzwerkverbindungen mit SANtricity System Manager - Linux (iSER over InfiniBand) konfigurieren
+= Die Konfiguration der E-Series Netzwerkverbindungen im SANtricity System Manager für iSER über IB
 :allow-uri-read: 
 :experimental: 
 :icons: font

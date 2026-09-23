@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: cabling, cables, drive shelf cabling, controller shelf cabling, E-Series, eseries, E2800, E5700, EF300, EF600, E4000, DE212C, DE224C, DE460C 
 summary: 'Verbinden Sie jeden Controller im Controller-Shelf mit einem I/O-Modul (IOM) in einem Festplatten-Shelf.' 
 ---
-= Controller-Shelf zu Festplatten-Shelf verkabeln (E-Series)
+= Verkabelung eines E-Series Controller-Shelfs mit einem Laufwerk-Shelf
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -20,7 +20,7 @@ Sie müssen jeden Controller im Controller-Shelf mit einem I/O-Modul (IOM) in ei
 NOTE: IOM12C-Module werden nur ab SANtricity OS 11.70.2 unterstützt. Stellen Sie sicher, dass die Firmware Ihres Controllers aktualisiert wurde, bevor Sie auf ein IOM12C installieren oder aktualisieren.
 
 * Wenn Sie ein älteres Controller-Shelf mit einem DE212C, DE224C oder DE460 verkabeln, finden Sie unter https://mysupport.netapp.com/ecm/ecm_download_file/ECMLP2859057["Hinzufügen von IOM-Laufwerk-Shelfs zu einem vorhandenen E27XX-, E56XX- oder EF560-Controller-Shelf"^].
-* Wenn Sie im Rahmen einer Neuinstallation ein EF50 oder EF80 Speichersystem an SAS Erweiterungsgehäuse anschließen, finden Sie Informationen im Verfahren link:../install-hw-ef50-ef80/install-cable.html["Hardware verkabeln – EF50 und EF80"].
+* Wenn Sie im Rahmen einer Neuinstallation ein EF50 oder EF80 Storage-System an SAS-Erweiterungs-Shelfs anschließen, finden Sie Informationen im Verfahren link:../install-hw-ef50-ef80/install-cable.html["Verkabelung der Hardware für EF50 und EF80 Storage-Systeme"].
 
 
 

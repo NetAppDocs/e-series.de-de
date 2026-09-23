@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: assign volume Linux, assign namespace Linux, express linux configuration, linux host, 
 summary: 'Sie müssen einem Host oder Host-Cluster ein Volume (Namespace) zuweisen, damit es für I/O-Vorgänge verwendet werden kann. Diese Zuweisung gewährt einem Host oder Host-Cluster Zugriff auf einen oder mehrere Namespaces in einem Storage-Array.' 
 ---
-= Zuweisung eines Volumes mit SANtricity System Manager - Linux (NVMe über TCP)
+= Einem Linux NVMe over TCP Host in E-Series wird ein Volume zugewiesen.
 :allow-uri-read: 
 :experimental: 
 :icons: font

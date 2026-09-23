@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: express linux configuration, software configuration, linux host, E2800, E5700, EF300, EF600, E-Series, eseries 
 summary: 'Um einen zuverlässigen Betrieb zu gewährleisten, erstellen Sie einen Implementierungsplan und überprüfen mit dem NetApp Interoperabilitäts-Matrix-Tool (IMT) die Unterstützung der gesamten Konfiguration.' 
 ---
-= Die Unterstützung der Linux-Konfiguration sowie die Einschränkungen in E-Series (NVMe über TCP) sind zu überprüfen.
+= Die Unterstützung der Linux NVMe over TCP Konfiguration in E-Series kann überprüft werden.
 :allow-uri-read: 
 :experimental: 
 :icons: font
@@ -39,9 +39,9 @@ Detaillierte Informationen zu der von Ihnen gewählten Konfiguration finden Sie 
 
 
 [[verify-nvme-over-tcp-restrictions]]
-== Überprüfen der NVMe over TCP Beschränkungen
+== NVMe over TCP Beschränkungen prüfen
 
-Vor der Verwendung von NVMe über TCP finden Sie in der  https://mysupport.netapp.com/matrix["NetApp Interoperabilitäts-Matrix-Tool"^]Dokumentation die aktuellen Einschränkungen für Controller, Host und Wiederherstellung.
+Vor der Verwendung von NVMe über TCP ist die  https://mysupport.netapp.com/matrix["NetApp Interoperabilitäts-Matrix-Tool"^]Dokumentation zu den aktuellen Einschränkungen für Controller, Host und Wiederherstellung zu beachten.
 
 
 

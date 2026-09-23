@@ -65,7 +65,7 @@ Erhöhte Zeichenbegrenzung für Standard- und Thin-Volume-Namen
 Das Zeichenlimit für Standard- und Thin-Volume-Namen wurde von 30 auf 60 Zeichen erhöht.
 
 
-NOTE: Downgrades auf SANtricity OS Softwareversion 11.90 oder älter werden nicht unterstützt, wenn Standard- oder Thin-Volumes mit Namen von mehr als 30 Zeichen vorhanden sind. Falls ein Downgrade auf SANtricity OS Softwareversion 11.90 oder älter geplant ist, sind vor dem Downgrade die Namen aller Standard- oder Thin-Volumes zu ändern, deren Namen mehr als 30 Zeichen umfassen.
+NOTE: Ein Downgrade auf SANtricity OS Softwareversion 11.90 oder älter wird nicht unterstützt, wenn Standard- oder Thin-Volumes mit Namen vorhanden sind, die länger als 30 Zeichen sind. Falls ein Downgrade auf SANtricity OS Softwareversion 11.90 oder älter geplant ist, müssen vor dem Downgrade die Namen aller Standard- oder Thin-Volumes geändert werden, deren Namen länger als 30 Zeichen sind.
 
 
 

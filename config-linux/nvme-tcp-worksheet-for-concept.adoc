@@ -2,29 +2,29 @@
 permalink: config-linux/nvme-tcp-worksheet-for-concept.html 
 sidebar: sidebar 
 keywords: NVMe over TCP worksheet Linux, express linux configuration, software configuration, linux host, E2800, E5700, EF300, EF600, E-Series, eseries 
-summary: Dieses Arbeitsblatt dient zum Erfassen von Konfigurationsinformationen für NVMe over TCP-Speicher. 
+summary: Dieses Arbeitsblatt dient zur Erfassung von Konfigurationsinformationen für NVMe over TCP Speicher. 
 ---
-= Dokumentation Ihrer NVMe over TCP Konfiguration in E-Series - Linux
+= NVMe over TCP Konfigurationsarbeitsblatt für E-Series Linux Hosts
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Sie können diese Seite als PDF erstellen und ausdrucken und anschließend das folgende Arbeitsblatt verwenden, um die Konfigurationsinformationen für NVMe over TCP-Speicher zu erfassen. Sie benötigen diese Informationen, um Bereitstellungsaufgaben durchzuführen.
+Sie können eine PDF-Datei dieser Seite erstellen und ausdrucken und anschließend das folgende Arbeitsblatt verwenden, um die Konfigurationsinformationen für NVMe over TCP Speicher zu erfassen. Diese Informationen werden für die Durchführung von Bereitstellungsaufgaben benötigt.
 
 
 
 [[direct-connect-topology]]
 == Topologie mit direkter Verbindung
 
-In einer Direktverbindungstopologie sind ein oder mehrere Hosts direkt mit dem Subsystem verbunden. In SANtricity OS 11.50 wird eine einzelne Verbindung von jedem Host zu einem Subsystem-Controller unterstützt, wie unten dargestellt. In dieser Konfiguration sollte ein Port der Netzwerkkarte jedes Hosts sich im selben Subnetz wie der E-Series Controller Port befinden, mit dem er verbunden ist, jedoch in einem anderen Subnetz als der andere Port der Netzwerkkarte.
+In einer Direktverbindungstopologie sind ein oder mehrere Hosts direkt mit dem Subsystem verbunden. In SANtricity OS 11.50 wird eine einzelne Verbindung von jedem Host zu einem Subsystem Controller unterstützt, wie unten dargestellt. In dieser Konfiguration sollte sich ein Port der Netzwerkkarte jedes Hosts im selben Subnetz wie der E-Series Controller Port befinden, mit dem er verbunden ist, jedoch in einem anderen Subnetz als der andere Port der Netzwerkkarte.
 
-image::../media/nvmeof_direct_connect.gif[Beispiel für eine direkte NVMe over TCP Verbindung]
+image::../media/nvmeof_direct_connect.gif[Beispiel für NVMe über TCP Direktverbindung]
 
 Eine Beispielkonfiguration, die die Anforderungen erfüllt, besteht aus vier Netznetzen wie folgt:
 
-* Subnetz 1: Host 1 NIC Port 1 und Controller 1 Host Port 1
+* Subnetz 1: Host 1 NIC Port 1 und Controller 1 Host port 1
 * Subnetz 2: Host 1 NIC Port 2 und Controller 2 Host Port 1
 * Subnetz 3: Host 2 NIC Port 1 und Controller 1 Host Port 2
 * Subnetz 4: Host 2 NIC Port 2 und Controller 2 Host Port 2
@@ -37,7 +37,7 @@ Eine Beispielkonfiguration, die die Anforderungen erfüllt, besteht aus vier Net
 
 In einer Fabric-Topologie werden ein oder mehrere Switches verwendet. Siehe https://mysupport.netapp.com/matrix["NetApp Interoperabilitäts-Matrix-Tool"^] Für eine Liste der unterstützten Switches.
 
-image::../media/nvmeof_switch_connect.gif[Beispiel für eine NVMe over TCP Switch-Verbindung]
+image::../media/nvmeof_switch_connect.gif[Beispiel für eine NVMe over TCP Switch Verbindung]
 
 
 

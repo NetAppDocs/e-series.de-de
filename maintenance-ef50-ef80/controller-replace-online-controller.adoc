@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: ef50, ef80, how to online the controller 
 summary: Nachdem Sie den Ersatzcontroller für Ihr EF50- oder EF80-Speichersystem installiert haben, bestätigen Sie die IP-Adresse des Ersatzcontrollers, schalten Sie den Controller online und vergewissern Sie sich, dass der Status des Speichersystems Optimal ist. 
 ---
-= Online den Ersatzcontroller – EF50 und EF80
+= Ersatz-Controller auf EF50 und EF80 Speichersystemen online schalten
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

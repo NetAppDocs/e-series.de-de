@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: ef50, ef80, offline the impaired controller 
 summary: Setzen Sie den defekten Controller in Ihrem EF50- oder EF80-Speichersystem offline, um Datenverlust zu verhindern und die Systemstabilität beim Austausch des Controllers zu gewährleisten. 
 ---
-= Die beeinträchtigte Steuerung – EF50 und EF80 – offline nehmen
+= Den beeinträchtigten Controller auf EF50 und EF80 Speichersystemen offline nehmen
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: access System Manager Linux, express linux configuration, software configuration, linux host, E2800, E5700, EF300, EF600, E-Series, eseries 
 summary: Mit dem Setup-Assistenten in SANtricity System Manager konfigurieren Sie das Storage-Array. 
 ---
-= Die Konfiguration Ihres Speichers mit SANtricity System Manager - Linux (NVMe über TCP)
+= Die Konfiguration Ihres E-Series Speicherarrays erfolgt mithilfe des SANtricity Setup-Assistenten
 :allow-uri-read: 
 :experimental: 
 :icons: font
@@ -14,7 +14,7 @@ summary: Mit dem Setup-Assistenten in SANtricity System Manager konfigurieren Si
 [role="lead"]
 Zum Konfigurieren des Speicher-Arrays können Sie den Setup-Assistenten in SANtricity System Manager verwenden.
 
-SANtricity System Manager ist eine webbasierte Schnittstelle, die auf jedem Controller integriert ist. Für den Zugriff auf die Benutzeroberfläche wird im Browser die IP-Adresse des Controllers eingegeben. Ein Einrichtungsassistent unterstützt beim Einstieg in die Systemkonfiguration.
+SANtricity System Manager ist eine webbasierte Schnittstelle, die in jeden Controller integriert ist. Für den Zugriff auf die Benutzeroberfläche wird die IP-Adresse des Controllers in einem Browser eingegeben. Ein Einrichtungsassistent unterstützt Sie bei den ersten Schritten der Systemkonfiguration.
 
 .Bevor Sie beginnen
 Stellen Sie sicher, dass Sie Folgendes haben:

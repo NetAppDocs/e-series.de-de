@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary:  
 ---
-= Fügen Sie einen zweiten Behälter hinzu - E4000
+= Hinzufügen eines zweiten Controller-Containers zu einem E4000 Array
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -39,7 +39,7 @@ Vergewissern Sie sich, dass der neue Controller dieselbe Teilenummer wie der akt
 . Suchen Sie die Etiketten für MAC-Adresse und FRU-Teilenummer auf der Rückseite des Controller-Behälters.
 . Suchen Sie im SANtricity-System-Manager die Ersatzteil-Nummer für den installierten Controller-Behälter.
 +
-.. Wählen Sie Menü:Hardware[Controller und Komponenten] aus.
+.. Menü auswählen:Hardware[Controllers and components].
 .. Suchen Sie das Controller-Shelf, das mit dem Controller-Symbol gekennzeichnet ist.
 .. Klicken Sie auf das Controller-Symbol image:../media/sam1130_ss_hardware_controller_icon_maint-e2800.gif["GIF des Controller-Symbols"].
 .. Wählen Sie den Controller aus und klicken Sie auf *Weiter*.

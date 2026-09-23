@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: ef50, ef80, move the controller module hardware 
 summary: Ersetzen Sie den defekten Controller in Ihrem EF50 oder EF80 Speichersystem, indem Sie den Controller ausbauen, die Komponenten auf den Ersatzcontroller übertragen und den Ersatzcontroller installieren. 
 ---
-= Ersetzen Sie den Controller - EF50 und EF80
+= Austausch des Controllers in EF50 und EF80 Speichersystemen
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

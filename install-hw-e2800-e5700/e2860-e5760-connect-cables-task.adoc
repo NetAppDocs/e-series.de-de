@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: E2800, E5700, connect power cables 
 summary: Schließen Sie die Stromkabel an, und schalten Sie die Laufwerk-Shelfs ein. 
 ---
-= Die Stromkabel für E2860, E5760 und DE460 werden angeschlossen.
+= Anschließen der Stromkabel für E2860, E5760 und DE460
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

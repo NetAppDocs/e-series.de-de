@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: host port GUIDs, express linux configuration, software configuration, linux host, E2800, E5700, EF300, EF600, E-Series, eseries 
 summary: Ermittlung der Host-Port-GUIDs 
 ---
-= Globale eindeutige Host-Port-IDs in der E-Series festlegen – Linux (NVMe over InfiniBand)
+= Ermitteln der Host-Port-GUIDs für E-Series Linux Hosts, die NVMe über InfiniBand verwenden
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

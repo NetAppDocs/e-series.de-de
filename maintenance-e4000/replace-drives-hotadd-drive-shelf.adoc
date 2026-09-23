@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: E4000 replace drive, replacing E4000 drive, E4000 replace drive, replacing E4000 drive, E4000, E-Series, eseries 
 summary: Ein Laufwerk in einer E4000 kann durch ein Shelf mit 12 Laufwerken oder 24 Laufwerken ersetzt werden. 
 ---
-= Hot-Add eines Laufwerks-Shelf - IOM12- oder IOM12B-Module - E4000
+= Ein E4000 Laufwerk-Shelf mit IOM12 oder IOM12B Modulen kann im laufenden Betrieb hinzugefügt werden.
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -122,7 +122,7 @@ Die folgende Abbildung zeigt eine Beispielverbindung zwischen einem zusätzliche
 +
 image::../media/hot_e4000_cabling_1.png[Verkabelung des Laufwerks-Shelf]
 
-. Im SANtricity System Manager wird Menü:Hardware[Controller und Komponenten] ausgewählt.
+. In SANtricity System Manager ist Menü:Hardware[Controller und Komponenten] auszuwählen.
 +
 
 NOTE: An diesem Punkt in der Prozedur verfügen Sie nur über einen aktiven Pfad zum Controller-Shelf.
@@ -168,7 +168,7 @@ Sie schließen das Hot Add-Laufwerk aus, indem Sie auf Fehler überprüfen und b
 .Schritte
 . Klicken Sie im SANtricity System Manager auf *Home*.
 . Wenn der Link *Recover from Problems* in der Mitte oben auf der Seite angezeigt wird, klicken Sie auf den Link und beheben Sie alle im Recovery Guru angezeigten Probleme.
-. Wählen Sie in SANtricity System Manager im Menü „Hardware“ die Option „Controller und Komponenten“ aus und scrollen Sie bei Bedarf nach unten, um das neu hinzugefügte Laufwerks-Shelf anzuzeigen.
+. Wählen Sie in SANtricity System Manager im Menü „Hardware[Controller und Komponenten]“ gegebenenfalls nach unten, um das neu hinzugefügte Laufwerksgehäuse anzuzeigen.
 . Fügen Sie bei Laufwerken, die zuvor in einem anderen Storage-System installiert waren, dem neu installierten Festplatten-Shelf ein Laufwerk hinzu. Warten Sie, bis jedes Laufwerk erkannt wird, bevor Sie das nächste Laufwerk einsetzen.
 +
 Wenn ein Laufwerk vom Speichersystem erkannt wird, wird die Darstellung des Laufwerkssteckplatzes auf der Seite *Hardware* als blaues Rechteck angezeigt.

@@ -3,7 +3,7 @@
 
 
 .Über diese Aufgabe
-Die Schritte zum Austausch eines ausgefallenen Laufwerksschachts in einem DE460C Laufwerk-Shelf hängen davon ab, ob die Volumes im Schacht durch Drawer Loss Protection geschützt sind. Wenn sich alle Volumes im Laufwerksschacht in Disk Pools oder Volume Groups befinden, die über Drawer Loss Protection verfügen, kann dieses Verfahren online durchgeführt werden. Andernfalls muss dieses Verfahren offline durchgeführt werden, indem alle Host-I/O-Aktivitäten gestoppt und das gesamte Storage-System (Controller-Shelf und alle Erweiterungs-Shelfs) ausgeschaltet wird, bevor ein Laufwerksschacht ausgetauscht wird.
+Die Schritte zum Austausch einer ausgefallenen Laufwerksschublade in einem DE460C Laufwerk-Shelf hängen davon ab, ob die Volumes in der Schublade durch Drawer Loss Protection geschützt sind. Wenn sich alle Volumes in der Laufwerksschublade in Disk Pools oder Volume Groups mit Drawer Loss Protection befinden, kann dieses Verfahren online durchgeführt werden. Andernfalls muss dieses Verfahren offline durchgeführt werden, indem vor dem Austausch einer Laufwerksschublade die gesamte Host-I/O-Aktivität angehalten und das gesamte Speichersystem (Controller-Shelf und alle Erweiterungs-Shelfs) ausgeschaltet wird.
 
 .Bevor Sie beginnen
 * Stellen Sie sicher, dass das Festplatten-Shelf alle folgenden Bedingungen erfüllt:
@@ -34,7 +34,7 @@ CAUTION: *Möglicher Verlust des Datenzugriffs* -- Wenn ein Volume sich bereits 
 
 
 
-NOTE: Informationen zum Austausch eines E-Series DE460C Erweiterungsfachs finden sich in der entsprechenden Dokumentation https://kb.netapp.com/on-prem/E-Series/Hardware-KBs/How_to_replace_an_E_Series_DE460c_controller_expansion_shelf["NetApp Knowledge Base"^].
+NOTE: Informationen zum Austausch eines E-Series DE460C Erweiterungsfachs sind in der entsprechenden Dokumentation  https://kb.netapp.com/on-prem/E-Series/Hardware-KBs/How_to_replace_an_E_Series_DE460c_controller_expansion_shelf["NetApp Knowledge Base"^] zu finden.
 
 
 
@@ -43,12 +43,12 @@ NOTE: Informationen zum Austausch eines E-Series DE460C Erweiterungsfachs finden
 
 Es ist zu prüfen, ob der Austauschvorgang durchgeführt werden kann, während das Laufwerksgehäuse online ist, oder ob die Host-E/A-Aktivität gestoppt und das Speichersystem ausgeschaltet werden muss (der Vorgang wird offline durchgeführt).
 
-Wenn eine Schublade in einem Shelf mit Drawer Loss Protection ausgetauscht wird, müssen die Host-E/A-Aktivität nicht angehalten und das Speichersystem nicht ausgeschaltet werden.
+Wenn Sie eine Schublade in einem Shelf mit Drawer Loss Protection austauschen, ist es nicht erforderlich, die Host-E/A-Aktivität zu stoppen und das Speichersystem auszuschalten.
 
 .Schritte
-. Es ist zu prüfen, ob das Ziel Laufwerk eingeschaltet ist.
+. Es ist zu ermitteln, ob das Ziel-Laufwerk-Shelf eingeschaltet ist.
 +
-** Wenn die Stromversorgung ausgeschaltet ist, muss der CLI-Befehl nicht ausgeführt werden, um die Zielschublade in den Servicemodus zu versetzen. Wechseln Sie zu <<Schritt 2: Die Kabelketten entfernen>>.
+** Wenn die Stromversorgung ausgeschaltet ist, muss der CLI-Befehl nicht ausgeführt werden, um die Ziel-Shelf in den Servicemodus zu versetzen. Wechseln Sie zu <<Schritt 2: Die Kabelketten entfernen>>.
 ** Wenn der Strom eingeschaltet ist, fahren Sie mit dem nächsten Schritt fort.
 
 
@@ -76,7 +76,7 @@ Mit diesem Befehl wird sichergestellt, dass Sie das am häufigsten herausziehbar
 +
 [listing]
 ----
-SMcli <ctlr_IP1\> -k -u "DC1-PRD-SAN-01" -p "safety-1" -c "set tray [10] drawer [1]
+SMcli <ctlr_IP1\> -k -u "array_username" -p "array_password" -c "set tray [10] drawer [1]
 serviceAllowedIndicator=forceOnWarning;"
 ----
 . Ermitteln Sie wie folgt, ob Sie die Host-I/O-Aktivität anhalten müssen:
@@ -86,7 +86,7 @@ serviceAllowedIndicator=forceOnWarning;"
 
 CAUTION: *Möglicher Schaden an Laufwerken* -- Warten Sie 60 Sekunden, nachdem der Befehl abgeschlossen ist, bevor Sie die Laufwerkschublade öffnen. Durch das Warten von 60 Sekunden können die Laufwerke heruntergefahren werden, um mögliche Hardware-Schäden zu vermeiden.
 
-** Wenn eine Warnung angezeigt wird, dass dieser Befehl nicht abgeschlossen werden konnte, müssen Sie die Host-E/A-Aktivität beenden, bevor Sie die Schublade entfernen. Die Warnung wird angezeigt, weil sich ein oder mehrere Laufwerke in der betroffenen Schublade in Pools oder Volume-Gruppen ohne Schubladenverlustschutz befinden. Um Datenverlust zu vermeiden, müssen Sie die nächsten Schritte ausführen, um die Host-E/A-Aktivität zu beenden und das Controller Shelf sowie alle Erweiterungs-Shelfs auszuschalten.
+** Wenn eine Warnung angezeigt wird, die darauf hinweist, dass dieser Befehl nicht abgeschlossen werden konnte, müssen Sie die Host-E/A-Aktivität beenden, bevor Sie die Schublade entfernen. Die Warnung wird angezeigt, weil sich ein oder mehrere Laufwerke in der betroffenen Schublade in Pools oder Volume-Gruppen ohne Schutz vor Schubladenverlust befinden. Um Datenverlust zu vermeiden, müssen Sie die nächsten Schritte ausführen, um die Host-E/A-Aktivität zu beenden und das Controller Shelf sowie alle Expansion Shelves auszuschalten.
 
 
 . Stellen Sie sicher, dass keine E/A-Operationen zwischen dem Speichersystem und allen angeschlossenen Hosts stattfinden. Führen Sie beispielsweise diese Schritte aus:
@@ -100,10 +100,10 @@ NOTE: Die genauen Schritte zur Stoerung von Host-I/O-Vorgängen hängen vom Host
 
 
 
-. Wenn das Speichersystem an einer Spiegelungsbeziehung beteiligt ist, werden alle Host-E/A-Vorgänge auf dem sekundären Speichersystem angehalten.
+. Wenn das Speichersystem an einer Spiegelungsbeziehung beteiligt ist, sind alle Host-E/A-Vorgänge auf dem sekundären Speichersystem zu stoppen.
 +
 
-CAUTION: *Möglicher Datenverlust* - Wenn dieses Verfahren fortgesetzt wird, während E/A-Vorgänge stattfinden, kann die Host-Anwendung Daten verlieren, da auf das Speichersystem nicht zugegriffen werden kann.
+CAUTION: *Möglicher Datenverlust* - Wenn diese Prozedur fortgesetzt wird, während E/A-Operationen stattfinden, kann die Host-Anwendung Daten verlieren, da das Speichersystem nicht zugänglich ist.
 
 . Warten Sie, bis alle Daten im Cache-Speicher auf die Laufwerke geschrieben werden.
 +
@@ -114,12 +114,12 @@ Die grüne LED „Cache aktiv“ auf der Rückseite jedes Controllers leuchtet, 
 . Das gesamte Speichersystem muss ausgeschaltet werden, wenn Erweiterungslaufwerksschächte *ohne* _Drawer Loss Protection_ vorhanden sind:
 +
 
-NOTE: Wenn Sie eine Schublade in einem Shelf mit _Drawer Loss Protection_ austauschen, müssen die Shelfs NICHT ausgeschaltet werden. Der Austauschvorgang kann durchgeführt werden, während die Laufwerksschublade online ist, da der CLI-Befehl „Set Drawer Service Action Allowed Indicator“ erfolgreich abgeschlossen wurde.
+NOTE: Wenn Sie eine Schublade in einem Shelf *mit* _Drawer Loss Protection_ austauschen, müssen die Shelfs NICHT ausgeschaltet werden. Der Austauschvorgang kann durchgeführt werden, während die Laufwerksschublade online ist, da der CLI-Befehl „Set Drawer Service Action Allowed Indicator“ erfolgreich abgeschlossen wurde.
 
 +
 .. Schalten Sie beide Netzschalter am Controller Shelf aus.
 .. Warten Sie, bis alle LEDs am Controller Shelf nicht mehr leuchten.
-.. Beide Netzschalter an jedem der Erweiterungslaufwerksgehäuse werden ausgeschaltet.
+.. An jedem der Erweiterungslaufwerksgehäuse sind beide Netzschalter auszuschalten.
 .. Warten Sie zwei Minuten, bis die Fahraktivität beendet ist.
 
 
@@ -145,8 +145,8 @@ Die Metallenden an den Kabelketten gleiten wie folgt in die entsprechenden verti
 CAUTION: *Mögliche Hardwarebeschädigung* - Wenn das Laufwerks-Shelf eingeschaltet ist, steht die Kabelkette unter Spannung, bis beide Enden abgezogen sind. Um einen Kurzschluss des Geräts zu vermeiden, darf der abgezogene Kabelkettenstecker das Metallgehäuse nicht berühren, solange das andere Ende der Kabelkette noch eingesteckt ist.
 
 .Schritte
-. Stellen Sie sicher, dass das Controller Shelf und die Expansion Shelves keine E/A-Aktivität mehr aufweisen und ausgeschaltet sind oder dass Sie den  `Set Drawer Attention Indicator`CLI command ausgegeben haben.
-. An der Rückseite des Ziel Laufwerk-Shelfs wird der rechte Lüfterbehälter entfernt:
+. Stellen Sie sicher, dass die Controller Einheit und die Erweiterungseinheiten keine E/A-Aktivität mehr aufweisen und ausgeschaltet sind oder dass Sie den  `Set Drawer Attention Indicator`CLI-Befehl ausgeführt haben.
+. Von der Rückseite des Ziellaufwerk-Shelfs wird der rechte Lüfterbehälter entfernt:
 +
 .. Drücken Sie die orangefarbene Lasche, um den Lüfterbehälter zu lösen.
 +
@@ -452,7 +452,7 @@ Die LED könnte nach der Neuinstallation des Lüfters bis zu einer Minute einges
 [[step-6-complete-drive-drawer-replacement]]
 == Schritt 6: Schließen Sie den Austausch der Laufwerkschublade ab
 
-Die Laufwerke sind in der richtigen Reihenfolge wieder einzusetzen, die Laufwerksschublade ist wieder im Laufwerksgehäuse zu installieren, die Frontblende ist wieder anzubringen, die Stromversorgung ist wiederherzustellen (falls erforderlich), die Laufwerke sind manuell zu rekonstruieren (falls erforderlich), und anschließend ist das defekte Teil an NetApp zurückzusenden.
+Die Laufwerke werden in der richtigen Reihenfolge wieder eingesetzt, die Laufwerksschublade wieder im Laufwerks-Shelf installiert, die Frontblende wieder angebracht, die Stromversorgung (falls erforderlich) wiederhergestellt, die Laufwerke (falls erforderlich) manuell rekonstruiert und das defekte Teil anschließend an NetApp zurückgesendet.
 
 
 CAUTION: *Möglicher Verlust des Datenzugriffs* -- Sie müssen jedes Laufwerk in seiner ursprünglichen Position in der Laufwerksschublade installieren.
@@ -499,7 +499,7 @@ CAUTION: *Gefahr einer Gerätestörung* -- Verschließen Sie die Antriebsschubla
 . Befestigen Sie die Blende an der Vorderseite des Festplatten-Shelf.
 . Wenn Sie das Speichersystem (Controller-Einschub und die Erweiterungseinschübe) zum Austausch eines Laufwerksschachts ausgeschaltet haben, schalten Sie es wieder ein:
 +
-.. An allen Erweiterungs-Shelfs sind beide Netzschalter einzuschalten.
+.. An allen Erweiterungsfächern müssen beide Netzschalter eingeschaltet sein.
 .. Vergewissern Sie sich, dass beide Lüfter aufleuchten und die gelbe LED auf der Rückseite der Lüfter ausgeschaltet ist.
 .. Warten Sie zwei Minuten, bevor Sie das Controller-Shelf einschalten.
 .. Schalten Sie beide Netzschalter am Controller Shelf ein.

@@ -82,7 +82,7 @@ image:../media/28_dwg_e2824_remove_controller_canister_upg-hw.gif["Controller-Be
 [discrete]
 === EF600 und EF300 Controller-Modelle
 
-Der Steuergerätebehälter muss entfernt werden, damit er durch einen neuen ersetzt werden kann.
+Der Steuergerätebehälter ist zu entfernen, damit er durch einen neuen ersetzt werden kann.
 
 .Schritte
 . Setzen Sie ein ESD-Armband an oder ergreifen Sie andere antistatische Vorsichtsmaßnahmen.
@@ -94,7 +94,7 @@ CAUTION: Um eine verminderte Leistung zu vermeiden, dürfen die Kabel nicht verd
 
 . Wenn der Controller-Behälter über eine HIC verfügt, die SFP+-Transceiver verwendet, entfernen Sie die SFPs.
 +
-Da Sie den HIC aus dem alten Controller-Gehäuse entfernen müssen, müssen Sie alle SFPs von den HIC-Ports entfernen. Beim Wiederanschließen der Kabel können Sie diese SFPs in das neue Controller-Gehäuse einsetzen.
+Da Sie den HIC aus dem alten Controller Gehäuse entfernen müssen, müssen Sie auch alle SFPs von den HIC Ports entfernen. Beim Wiederanschließen der Kabel können Sie diese SFPs dann in das neue Controller Gehäuse einsetzen.
 
 . Drücken Sie die Griffe auf beiden Seiten des Controllers, und ziehen Sie sie nach hinten, bis sie sich aus dem Shelf lösen.
 +

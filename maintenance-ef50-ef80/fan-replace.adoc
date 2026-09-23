@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: ef50, ef80, swap, out, fan, module, interrupt, service, sequence, task, hot-swap, hot-swap a fan module 
 summary: Tauschen Sie ein Lüftermodul in Ihrem EF50 oder EF80-Speichersystem aus, wenn ein Lüfter ausfällt oder nicht effizient arbeitet, da dies die Systemkühlung und die Gesamtleistung beeinträchtigen kann. 
 ---
-= Lüftermodul austauschen – EF50 und EF80
+= Austausch eines Lüftermoduls in einem EF50 oder EF80 Speichersystem
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

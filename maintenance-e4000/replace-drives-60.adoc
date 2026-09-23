@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: E4000 replace drive, replacing E4000 drive, E4000 replace drive, replacing E4000 drive, E4000 
 summary: Ein Laufwerk in einer E2800 kann durch ein Shelf mit 60 Laufwerken ersetzt werden. 
 ---
-= Ersetzen Sie das Laufwerk E4000 (Shelf mit 60 Laufwerken).
+= Austausch eines Laufwerks in einem E4000 60-Laufwerksschacht
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -144,7 +144,7 @@ Je nach Konfiguration rekonstruiert der Controller möglicherweise automatisch D
 NOTE: Führen Sie diesen Vorgang nur aus, wenn Sie vom technischen Support oder dem Recovery Guru dazu aufgefordert werden.
 
 +
-.. Wählen Sie Menü:Hardware[Laufwerke] aus.
+.. Wählen Sie im Menü die Option Hardware[Laufwerke] aus.
 .. Klicken Sie auf das Laufwerk, das Sie ersetzt haben.
 .. Wählen Sie im Kontextmenü des Laufwerks die Option *rekonstruieren*.
 .. Bestätigen Sie, dass Sie diesen Vorgang ausführen möchten.

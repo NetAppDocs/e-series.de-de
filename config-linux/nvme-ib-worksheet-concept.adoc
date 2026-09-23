@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: NVMe over Infiniband worksheet Linux, express linux configuration, software configuration, linux host, E2800, E5700, EF300, EF600, E-Series, eseries 
 summary: Verwenden Sie dieses Arbeitsblatt, um Informationen zur NVMe-over-InfiniBand-Storage-Konfiguration aufzuzeichnen. 
 ---
-= Zeichnen Sie Ihre NVMe-over-InfiniBand-Konfiguration in der E-Series – Linux auf
+= NVMe over InfiniBand Konfigurationsarbeitsblatt für E-Series
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

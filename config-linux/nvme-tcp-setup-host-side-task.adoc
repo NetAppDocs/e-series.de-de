@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: express linux configuration, software configuration, linux host, E2800, E5700, EF300, EF600, E-Series, eseries 
 summary: Die NVMe Initiator Konfiguration in einer TCP-Umgebung umfasst die Installation und Konfiguration des nvme-cli-Pakets, die Konfiguration der Initiator-IP-Adressen und die Einrichtung der NVMe-oF-Schicht auf dem Host. 
 ---
-= Einrichtung des NVMe over TCP Initiators auf dem Host in der E-Series unter Linux
+= Einrichtung des NVMe over TCP Initiators auf einem E-Series Linux Host
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -17,7 +17,7 @@ Die NVMe Initiator Konfiguration in einer TCP-Umgebung umfasst die Installation 
 Sie müssen das neueste kompatible Betriebssystem RHEL 9, RHEL 10, SLES 15 oder SLES 16 mit Service Pack ausführen. Siehe die https://mysupport.netapp.com/matrix["NetApp Interoperabilitäts-Matrix-Tool"^] für eine vollständige Liste der aktuellen Anforderungen.
 
 .Schritte
-. Wenn Sie den mitgelieferten Ethernet-Treiber für Ihren HCA verwenden, ist das  `nvme-cli`Paket wie folgt zu installieren:
+. Wenn Sie den mitgelieferten Ethernet-Treiber für Ihren HCA verwenden, erfolgt die Installation des  `nvme-cli`Pakets wie folgt:
 +
 *SLES 15 oder SLES 16*
 
@@ -37,7 +37,7 @@ Sie müssen das neueste kompatible Betriebssystem RHEL 9, RHEL 10, SLES 15 oder 
 # yum install nvme-cli
 ----
 +
-Wenn Sie eine NVIDIA HCA verwenden und den externen DOCA-Treiber nutzen möchten, finden Sie in der link:https://developer.nvidia.com/doca-downloads["NVIDIA-Dokumentation"] Informationen dazu, wie er in dieser Umgebung korrekt installiert wird.
+Wenn Sie eine NVIDIA HCA verwenden und den externen DOCA-Treiber nutzen möchten, finden Sie im link:https://developer.nvidia.com/doca-downloads["NVIDIA-Dokumentation"] Informationen dazu, wie er in dieser Umgebung korrekt installiert wird.
 
 . Für RHEL 9 Netzwerk-Skripte installieren:
 +
@@ -58,7 +58,7 @@ NOTE: Netzwerkskripte sind für RHEL 10 nicht verfügbar.
 ----
 # cat /etc/nvme/hostnqn
 ----
-. IPv4 IP-Adressen werden auf den Ethernet-Ports eingerichtet, die für die Verbindung von NVMe über TCP verwendet werden. Für jede Netzwerkschnittstelle wird ein Konfigurationsskript erstellt, das die verschiedenen Variablen für diese Schnittstelle enthält.
+. IPv4-IP-Adressen werden auf den Ethernet-Ports eingerichtet, die für die Verbindung von NVMe über TCP verwendet werden. Für jede Netzwerkschnittstelle wird ein Konfigurationsskript erstellt, das die verschiedenen Variablen für diese Schnittstelle enthält.
 +
 Die in diesem Schritt verwendeten Variablen basieren auf der Server-Hardware und der Netzwerkumgebung. Die Variablen enthalten die `IPADDR` Und `GATEWAY`. Dies sind Beispielanweisungen für SLES und RHEL:
 
@@ -66,7 +66,7 @@ Die in diesem Schritt verwendeten Variablen basieren auf der Server-Hardware und
 *SLES 15*
 
 +
-Die Beispieldatei  `/etc/sysconfig/network/ifcfg-eth4` wird mit folgendem Inhalt erstellt.
+Die Beispieldatei  `/etc/sysconfig/network/ifcfg-eth4`wird mit folgendem Inhalt erstellt.
 
 +
 [listing]
@@ -172,7 +172,7 @@ method=auto
 ----
 . Starten Sie den Host neu.
 +
-.. Alternativ kann das  `nvme_tcp`Kernelmodul auch ohne Neustart geladen werden, indem der folgende Befehl ausgeführt wird:
+.. Alternativ kann das  `nvme_tcp`Kernelmodul auch ohne Neustart durch Ausführen dieses Befehls geladen werden:
 +
 [listing]
 ----
@@ -193,6 +193,6 @@ t10_pi                 16384  2 sd_mod,nvme_core
 ----
 +
 .Was kommt als Nächstes?
-Nachdem Sie den NVMe over TCP Initiator auf dem Host eingerichtet haben, link:nvme-tcp-configure-storage-connections-task.html["die NVMe über TCP Porteinstellungen konfigurieren"].
+Nachdem der NVMe over TCP Initiator auf dem Host eingerichtet wurde, link:nvme-tcp-configure-storage-connections-task.html["die NVMe über TCP Porteinstellungen konfigurieren"].
 
 

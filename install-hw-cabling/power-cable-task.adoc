@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: cabling, cables, power cable, power cabling, power supply cabling, E-Series, eseries, E2800, E5700, EF300, EF600, DE212C, DE224C, DE460C 
 summary: Schließen Sie die Netzteile der einzelnen Komponenten an separate Stromkreise an. 
 ---
-= Stromverkabelung Ihres Speichersystems - E-Series
+= Stromkabel für Ihr E-Series Storage-System
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

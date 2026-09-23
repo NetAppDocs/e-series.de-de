@@ -4,7 +4,7 @@
 
 .Über diese Aufgabe
 * Sie beginnen mit einem Controller und wiederholen dann die Schritte für den anderen Controller.
-* Die Abbildung zeigt die Entfernung eines E/A-Moduls aus Steckplatz 2. Je nach Typ des E/A-Moduls, auf das Sie ein Upgrade durchführen, kann der Steckplatz ein anderer sein.
+* Die Abbildung zeigt die Entfernung eines E/A-Moduls aus Steckplatz 2. Je nach Typ des E/A-Moduls, auf das Sie ein Upgrade durchführen, kann der Steckplatz unterschiedlich sein.
 
 
 .Schritte
@@ -49,10 +49,10 @@ Sie können die Lasche auf der linken Seite und die Rändelschraube verwenden, u
 .. Drehen Sie die Rändelschraube im Uhrzeigersinn, um sie festzuziehen.
 
 
-. Das E/A-Modul wird per Kabel mit dem Host-Netzwerk oder dem SAS-Erweiterungsgehäuse verbunden.
+. Das E/A-Modul wird per Kabel mit dem Host-Netzwerk oder dem SAS-Erweiterungs-Shelf verbunden.
 +
-** Für die Verkabelung des Host-Netzwerks kann der link:../install-hw-ef50-ef80/install-cable.html["Verkabeln Sie die Hardware"^]Abschnitt „Verkabelung des Host-Netzwerks“ im Inhalt zur Systeminstallation und -einrichtung verwendet werden.
-** Für die Verkabelung von SAS Erweiterungsschächten können Sie das link:../install-hw-cabling/hotadd-drive-shelf-task.html["Hot-Add eines Laufwerk-Shelfs im laufenden Betrieb - E-Series"^] Verfahren verwenden.
+** Für die Verkabelung des Host-Netzwerks können Sie den link:../install-hw-ef50-ef80/install-cable.html["Verkabeln Sie die Hardware"^] Abschnitt des Inhalts zur Systeminstallation und -einrichtung für die Verkabelung des Host-Netzwerks verwenden.
+** Für die Verkabelung von SAS-Erweiterungsschächten kann das folgende link:../install-hw-cabling/hotadd-drive-shelf-task.html["Hot-Add eines Laufwerksfachs in einem E-Series Storage-System"^] Verfahren verwendet werden.
 
 
 . Wiederholen Sie diese Schritte, um ein I/O-Modul im anderen Controller zu aktualisieren.

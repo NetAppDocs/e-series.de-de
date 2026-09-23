@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: Nachdem Sie die Installation Ihres EF50 oder EF80 Speichersystems vorbereitet haben, installieren Sie die Rack-Mount-Hardware in einem Schrank oder Telco-Rack und installieren und sichern Sie anschließend Ihr Speichersystem. 
 ---
-= Installieren Sie die Hardware – EF50 und EF80
+= Die Hardware für die Speichersysteme EF50 und EF80 wird installiert.
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

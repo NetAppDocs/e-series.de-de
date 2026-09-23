@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: host protocol change, EF50, EF80 
 summary: Sie können das Protokoll auf den Host-I/O-Modulen in Ihrem EF50- oder EF80-Speichersystem ändern, wenn Sie ein anderes Protokoll auf Ihren vorhandenen I/O-Modulen benötigen, als Teil eines I/O-Modul-Upgrades oder wenn das Standardprotokoll auf neuen Controllern im Rahmen einer neuen Speichersysteminstallation oder eines Controller-Upgrades nicht das gewünschte Protokoll ist. 
 ---
-= Ändern Sie das Host-I/O-Modulprotokoll – EF50 und EF80
+= Das Protokoll des Host-E/A-Moduls in einem EF50 oder EF80 System ändern
 :allow-uri-read: 
 :experimental: 
 :icons: font

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: FC worksheet Linux, express linux configuration, software configuration, linux host, 
 summary: Verwenden Sie dieses Arbeitsblatt, um Informationen zur FC-Storage-Konfiguration aufzunehmen. 
 ---
-= Notieren Sie Ihre FC-Konfiguration unter E-Series – Linux
+= FC-Konfigurationsarbeitsblatt für Linux Hosts in E-Series
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: ef50, ef80, replace a power supply 
 summary: 'Tauschen Sie das Netzteil (PSU) in Ihrem EF50 oder EF80-Speichersystem aus, wenn es ausfällt oder defekt ist, um sicherzustellen, dass Ihr System weiterhin die für einen stabilen Betrieb erforderliche Leistung erhält.' 
 ---
-= Netzteil austauschen – EF50 und EF80
+= Austausch eines Netzteils in einem EF50 oder EF80 Speichersystem
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

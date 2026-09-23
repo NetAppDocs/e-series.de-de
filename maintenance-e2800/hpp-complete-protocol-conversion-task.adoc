@@ -29,7 +29,7 @@ Wenn Sie alle Host Ports von FC zu iSCSI konvertiert haben, müssen Sie iSCSI-Ne
 Die Switches für den iSCSI-Datenverkehr sollten entsprechend den Empfehlungen des Anbieters für iSCSI konfiguriert werden. Diese Empfehlungen können sowohl Konfigurationsrichtlinien als auch Code-Updates enthalten.
 
 . Wählen Sie im SANtricity System Manager Menü:Hardware[iSCSI-Ports konfigurieren].
-. Der Schalter wird angeklickt und *Configure iSCSI ports* wird ausgewählt.
+. Wählen Sie den Schalter und anschließend *iSCSI ports konfigurieren* aus.
 . Wählen Sie die Porteinstellungen aus.
 +
 Sie können Ihr iSCSI-Netzwerk auf unterschiedliche Weise einrichten. Wenden Sie sich an Ihren Netzwerkadministrator, wenn Sie Tipps zur Auswahl der für Ihre Umgebung am besten geeigneten Konfiguration benötigen.

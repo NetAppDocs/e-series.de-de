@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: E4000 replace 60-drive power canister, replacing E4000 power canister, E4000, E-Series, eseries 
 summary: Ersetzen Sie ein Controller-Shelf oder Festplatten-Shelf für 60 Laufwerke, das zwei Stromankanister für Redundanz enthält. 
 ---
-= Ersetzen Sie den Aktivkohlebehälter E4000 (60 Laufwerke).
+= Austausch eines Netzteils in einem E4000 Shelf mit 60 Laufwerken
 :allow-uri-read: 
 :experimental: 
 :icons: font
@@ -61,7 +61,7 @@ Die Datei wird im Ordner Downloads für Ihren Browser mit dem Namen *Support-Dat
 +
 Wenn eine Komponente ausgefallen ist, ist dieses Symbol rot.
 
-.. Wenn Sie das Shelf mit dem roten Symbol gefunden haben, wählen Sie entweder den Netzteilbehälter oder das rote Stromversorgungssymbol aus.
+.. Wenn Sie das Shelf mit dem roten Symbol gefunden haben, wählen Sie entweder den Power Canister oder das rote Power-Symbol aus.
 .. Prüfen Sie auf der Registerkarte *Netzteile* den Status der Strombehälter, um festzustellen, welcher Netzbehälter ersetzt werden muss.
 +
 Eine Komponente mit dem Status *failed* muss ersetzt werden.

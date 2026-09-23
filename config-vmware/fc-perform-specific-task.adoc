@@ -2,28 +2,28 @@
 permalink: config-vmware/fc-perform-specific-task.html 
 sidebar: sidebar 
 keywords: Fibre Channel protocol, switches, zone switches, zoning, host port identifiers, express vmware configuration, software configuration, vmware host, E2800, E5700, EF300, EF600, E4000, EF50, EF80, E-Series, eseries 
-summary: 'Für das Fibre Channel Protocol (FCP) werden die Switches konfiguriert und die Kennungen der Host-Ports ermittelt.' 
+summary: 'Beim Fibre Channel Protocol (FCP) werden die Switches konfiguriert und die Host-Port-Kennungen ermittelt.' 
 ---
-= FC-spezifische Aufgaben in E-Series – VMware ausführen
+= Konfiguration von FC-Switches und Host-IDs für VMware in E-Series
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Für das Fibre Channel Protocol (FCP) werden die Switches konfiguriert und die Kennungen der Host-Ports ermittelt.
+Beim Fibre Channel Protocol (FCP) werden die Switches konfiguriert und die Host-Port-Kennungen ermittelt.
 
 
-NOTE: Um die Kompatibilität mit VMware zu gewährleisten, müssen Volumes für die 512-Byte-Emulation (512e) konfiguriert werden, wenn 4096-Byte-Laufwerke verwendet werden. Weitere Informationen zur Konfiguration eines Volumes für die 512-Byte-Emulation (512e) finden Sie in der Online-Hilfe des SANtricity System Manager.
+NOTE: Volumes müssen für die Verwendung der 512-Byte-Emulation (512e) konfiguriert werden, wenn 4096-Byte-Laufwerke verwendet werden, um die Kompatibilität mit VMware sicherzustellen. Weitere Informationen zum Konfigurieren eines Volumes für die 512-Byte-Emulation (512e) finden Sie in der Online-Hilfe des SANtricity System Manager.
 
 
 
 [[step-1-record-your-configuration]]
 == Schritt 1: Notieren Sie Ihre Konfiguration
 
-Sie können diese Seite als PDF erstellen und ausdrucken und anschließend das folgende Arbeitsblatt verwenden, um die Konfigurationsinformationen des FC-Speichers zu erfassen. Diese Informationen benötigen Sie für die Durchführung der Bereitstellungsaufgaben.
+Es ist möglich, eine PDF-Datei dieser Seite zu erstellen und zu drucken und anschließend das folgende Arbeitsblatt zu verwenden, um die Konfigurationsinformationen des FC-Speichers zu erfassen. Diese Informationen werden bei der Durchführung von Bereitstellungsaufgaben benötigt.
 
-Die Abbildung zeigt einen Host, der in zwei Zonen an ein E-Series Storage-System angeschlossen ist. Eine Zone wird durch die roten Linien, die andere durch die blauen Linien gekennzeichnet. Jede Zone enthält mindestens einen Initiator-Port und die Hälfte aller Ziel-Ports. Die Anzahl der Host- und/oder Controller-Ports variiert je nach Anzahl der Host-Bus-Adapter und dem Controller-Modell. Möglicherweise stehen mehr Ports zur Verfügung, bis zu 12 pro Controller. Bei Bedarf können zusätzliche PDFs gedruckt werden.
+Die Abbildung zeigt einen Host, der in zwei Zonen an ein E-Series Storage-Array angeschlossen ist. Eine Zone wird durch die roten Linien angezeigt, die andere Zone durch die blauen Linien. Jede Zone enthält mindestens einen Initiator-Port und die Hälfte aller Target-Ports. Die Anzahl der Host- und/oder Controller-Ports variiert je nach Anzahl der Host Bus Adapters und dem Controller-Modell. Möglicherweise stehen mehr Ports zur Verfügung, bis zu 12 pro Controller. Bei Bedarf sind zusätzliche PDFs zu drucken.
 
 image::../media/port_identifiers_host_and_target_conf-vmw.gif[Fibre Channel Portkennungen]
 
@@ -98,7 +98,7 @@ Controller A, Port 1 zu FC Switch 1
  a| 
 5
  a| 
-Controller A, Port 2 zu FC-Switch 1
+Controller A, Port 2 mit FC Switch 1
  a| 
 
 
@@ -106,7 +106,7 @@ Controller A, Port 2 zu FC-Switch 1
  a| 
 9
  a| 
-Controller A, Port 3 mit FC-Switch 2 verbinden
+Controller A, Port 3 mit FC-Switch 2
  a| 
 
 
@@ -114,7 +114,7 @@ Controller A, Port 3 mit FC-Switch 2 verbinden
  a| 
 9
  a| 
-Controller A, Port 4 mit FC-Switch 2
+Controller A, Port 4 mit FC Switch 2
  a| 
 
 
@@ -130,7 +130,7 @@ Controller B, Port 1 zu FC Switch 1
  a| 
 4
  a| 
-Controller B, Port 2 zu FC-Switch 1
+Controller B, Port 2 zu FC Switch 1
  a| 
 
 
@@ -138,7 +138,7 @@ Controller B, Port 2 zu FC-Switch 1
  a| 
 8
  a| 
-Controller B, Port 3 mit FC-Switch 2
+Controller B, Port 3 zu FC Switch 2
  a| 
 
 
@@ -146,7 +146,7 @@ Controller B, Port 3 mit FC-Switch 2
  a| 
 8
  a| 
-Controller B, Port 4 mit FC-Switch 2
+Controller B, Port 4 mit FC Switch 2 verbinden
  a| 
 
 |===
@@ -170,14 +170,14 @@ Controller B, Port 4 mit FC-Switch 2
 Zum Konfigurieren des FC-Zoning müssen Sie den weltweiten Port-Namen (WWPN) jedes Initiator-Ports bestimmen.
 
 .Schritte
-. Eine Verbindung zum ESXi-Host kann über SSH oder die ESXi-Shell hergestellt werden. Informationen zum Aktivieren der ESXi-Shell finden Sie unter  https://knowledge.broadcom.com/external/article/311213/using-esxi-shell-in-esxi.html["Verwenden der ESXi Shell in ESXi"^].
+. Sie stellen über SSH oder die ESXi-Shell eine Verbindung zum ESXi Host her. Informationen zum Aktivieren der ESXi-Shell finden Sie unter  https://knowledge.broadcom.com/external/article/311213/using-esxi-shell-in-esxi.html["Verwenden der ESXi Shell in ESXi"^].
 . Führen Sie den folgenden Befehl aus:
 +
 [listing]
 ----
 esxcli storage core adapter list
 ----
-. Die Initiator-WWPN-Kennungen (UID im Format fc.WWNN:WWPN) sind zu notieren. Die Ausgabe sieht in etwa so aus wie in diesem Beispiel:
+. Die Initiator-WWPN-Kennungen (UID im Format fc.WWNN:WWPN) sind zu notieren. Die Ausgabe ähnelt diesem Beispiel:
 +
 [listing]
 ----
@@ -194,7 +194,7 @@ vmhba65   lpfc      link-up     fc.200070b7e4395531:100070b7e4395531            
 Im obigen Beispiel sind die UIDs für vmhba4 und vmhba64 sowie vmhba5 und vmhba65 identisch. Dies ist bei FC-Adaptern, die sowohl FCP als auch NVMe über FC unterstützen, zu erwarten. Jeder eindeutige WWPN sollte notiert werden.
 
 
-NOTE: Eine weitere Befehlsoption ist `esxcli storage san fc list`. Dabei werden weitere Details und die WWPN im Hexadezimalformat, durch Doppelpunkte getrennt, angezeigt.
+NOTE: Eine weitere Befehlsoption ist `esxcli storage san fc list`. Dadurch werden weitere Details und die WWPN im Hexadezimalformat, getrennt durch Doppelpunkte, angezeigt.
 
 
 
@@ -223,4 +223,4 @@ Jeder Initiator-Port muss sich in einer separaten Zone mit allen entsprechenden 
 . Speichern Sie die Zonen, und aktivieren Sie dann die neue Zoning-Konfiguration.
 
 
-Detaillierte Anweisungen zur Konfiguration von Zonen finden Sie in der Dokumentation des Switch-Herstellers.
+Detaillierte Anweisungen zur Konfiguration von Zonen sind in der Dokumentation des Switch-Herstellers zu finden.

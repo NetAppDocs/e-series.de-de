@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: express linux configuration, software configuration, linux host, 
 summary: Vor der Verwendung des Volumes überprüfen Sie, ob der Host Daten auf das Volume schreiben und wieder lesen kann. 
 ---
-= Überprüfen des Storage-Zugriffs auf dem Host in E-Series – Linux (FC)
+= Überprüfung des FC-Speicherzugriffs auf einem Linux-Host in E-Series
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

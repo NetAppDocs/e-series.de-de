@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: Nach dem Einschalten Ihres EF50- oder EF80-Speichersystems schließen Sie die Systemeinrichtung ab, indem Sie den Management-Port an jedem Controller für das Out-of-Band-Systemmanagement verkabeln und konfigurieren, Ihr Speichersystem konfigurieren und anschließend überprüfen, ob das Host-I/O-Modulprotokoll korrekt ist. 
 ---
-= Komplette Einrichtung des Speichersystems – EF50 und EF80
+= Vollständige Einrichtung des Speichersystems für EF50 und EF80 Speichersysteme
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

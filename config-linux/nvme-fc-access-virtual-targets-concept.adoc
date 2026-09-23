@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: NVMe volumes virtual, express linux configuration, software configuration, linux host, E2800, E5700, EF300, EF600, E-Series, eseries 
 summary: Sie können den auf das Geräteziel gerichteten I/O basierend auf Ihrer Linux-Version konfigurieren. DM-MP verwaltet die physischen Pfade, die diesen virtuellen Zielen zugrunde liegen. 
 ---
-= Zugriff auf NVMe Volumes für virtuelle Geräteziele in der E-Series – Linux (NVMe over FC)
+= Wie das E-Series Storage-System E/A an virtuelle NVMe-Geräteziele auf Linux-Hosts weiterleitet
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

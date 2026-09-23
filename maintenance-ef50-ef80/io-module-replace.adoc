@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: ef50, ef80 replace io module, replace hic, replace host interface card 
 summary: Ersetzen Sie ein defektes I/O-Modul in Ihrem EF50- oder EF80-Speichersystem durch ein I/O-Modul des gleichen Typs, um das Speichersystem wieder in seinen optimalen Betriebszustand zu versetzen. 
 ---
-= Ersetzen eines I/O-Moduls – EF50 und EF80
+= Austausch eines E/A-Moduls in einem EF50 oder EF80 Speichersystem
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

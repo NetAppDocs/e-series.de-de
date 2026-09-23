@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: discover storage, host, express linux configuration, software configuration, linux host, E2800, E5700, EF300, EF600, E-Series, eseries 
 summary: Bevor Sie jeden Host in SANtricity System Manager definieren können, müssen Sie die Ziel-Controller-Ports vom Host erkennen und dann NVMe-Verbindungen herstellen. 
 ---
-= Erkennen und Herstellen einer Verbindung mit dem Storage vom Host in E-Series unter Linux (NVMe über TCP)
+= E-Series Speicher von einem Linux Host aus erkennen und verbinden
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -14,7 +14,7 @@ summary: Bevor Sie jeden Host in SANtricity System Manager definieren können, m
 Bevor Sie jeden Host in SANtricity System Manager definieren können, müssen Sie die Ziel-Controller-Ports vom Host erkennen und dann NVMe-Verbindungen herstellen.
 
 .Schritte
-. Es ist zu überprüfen, ob vom Host aus jeder Array HIC Port mit dem folgenden Befehl per Ping erreichbar ist:
+. Überprüfen Sie, ob vom Host aus jeder Array HIC Port mit folgendem Befehl per Ping erreichbar ist:
 +
 [listing]
 ----
@@ -62,7 +62,7 @@ eflags:  none
 sectype: none
 ----
 . Wiederholen Sie Schritt 2 für alle weiteren Verbindungen.
-. Eine Verbindung zum ermittelten Subsystem über den ersten Pfad wird mit folgendem Befehl hergestellt: `nvme connect -t tcp -n discovered_sub_nqn -a target_ip_address -Q queue_depth_setting -l controller_loss_timeout_period`
+. Die Verbindung zum ermittelten Subsystem über den ersten Pfad erfolgt mit dem folgenden Befehl: `nvme connect -t tcp -n discovered_sub_nqn -a target_ip_address -Q queue_depth_setting -l controller_loss_timeout_period`
 +
 
 NOTE: Der oben aufgeführte Befehl bleibt nach einem Neustart nicht aktiv. Der  `nvme connect` Befehl muss nach jedem Neustart erneut ausgeführt werden, um die NVMe-Verbindungen wiederherzustellen.

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: ef50, ef80, replace the NV battery, NV battery 
 summary: Tauschen Sie die NV-Batterie in Ihrem EF50 oder EF80-Speichersystem aus, sobald die Batterie an Ladung verliert oder ausfällt, da sie für die Erhaltung wichtiger Systemdaten bei Stromausfällen verantwortlich ist. 
 ---
-= NV-Batterie austauschen - EF50 und EF80
+= Austausch der NV-Batterie in einem EF50 oder EF80 Speichersystem
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

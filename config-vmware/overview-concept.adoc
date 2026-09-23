@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: express vmware configuration, software configuration, vmware host, E2800, E5700, EF300, EF600, EF50, EF80, E4000, E-Series, eseries 
 summary: Anforderungen zur Nutzung der Express-Methode zur Einrichtung eines E-Series Arrays und eines VMware Hosts prüfen 
 ---
-= Annahmen (E-Series und VMware)
+= Annahmen zur VMware Express Konfiguration für E-Series
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -64,7 +64,7 @@ Storage-Bereitstellung
  a| 
 * Freigegebene Volumes werden nicht verwendet.
 * Sie erstellen Pools statt Volume-Gruppen.
-* Um die Kompatibilität mit VMware zu gewährleisten, müssen Volumes für die 512-Byte-Emulation (512e) konfiguriert werden, wenn 4096-Byte-Laufwerke verwendet werden. Weitere Informationen zur Konfiguration eines Volumes für die 512-Byte-Emulation (512e) finden Sie in der Online-Hilfe des SANtricity System Manager.
+* Volumes müssen für die Verwendung der 512-Byte-Emulation (512e) konfiguriert werden, wenn 4096-Byte-Laufwerke verwendet werden, um die Kompatibilität mit VMware sicherzustellen. Weitere Informationen zum Konfigurieren eines Volumes für die 512-Byte-Emulation (512e) finden Sie in der Online-Hilfe des SANtricity System Manager.
 
 
 
@@ -111,8 +111,8 @@ Protokoll SAS
 Protokoll: NVMe über RoCE (RDMA über konvergiertes Ethernet)
  a| 
 * Sie verwenden Ethernet-Switches, die RDMA-Datenverkehr unterstützen.
-* Die Ethernet-Switches wurden für verlustfreies Ethernet mithilfe von DSCP-basierter Priority Flow Control (PFC) konfiguriert.
-* Sie verwenden RDMA-Treiber- und Firmware-Versionen, wie sie in der  http://mysupport.netapp.com/matrix["NetApp Interoperabilitäts-Matrix-Tool"^] aufgeführt sind.
+* Sie haben die Ethernet-Switches für verlustfreies Ethernet unter Verwendung von DSCP-basierter Priority Flow Control (PFC) konfiguriert.
+* Sie verwenden die RDMA-Treiber- und Firmware-Versionen, die in der Liste  http://mysupport.netapp.com/matrix["NetApp Interoperabilitäts-Matrix-Tool"^] aufgeführt sind.
 
 
 
@@ -122,7 +122,7 @@ Protokoll: NVMe über TCP
  a| 
 * Sie verwenden Ethernet-Switches, die TCP-Datenverkehr unterstützen
 * Sie haben die Ethernet-Switches gemäß der Empfehlung des Herstellers für TCP konfiguriert.
-* Sie verwenden Netzwerk-Treiber- und Firmwareversionen wie in der  http://mysupport.netapp.com/matrix["NetApp Interoperabilitäts-Matrix-Tool"^] aufgeführt.
+* Sie verwenden die in der Liste aufgeführten Versionen des Netzwerktreibers und der Firmware  http://mysupport.netapp.com/matrix["NetApp Interoperabilitäts-Matrix-Tool"^].
 
 
 |===

@@ -669,7 +669,7 @@ Die Migration des Feature Packs beginnt. Beide Controller starten automatisch zw
 
 . Überprüfen Sie, ob die Host-Ports das erwartete Protokoll haben.
 +
-.. Im SANtricity System Manager ist Menü:Hardware[Controller und Komponenten] auszuwählen.
+.. Im SANtricity System Manager wird menu:Hardware[Controllers and components] ausgewählt.
 .. Wählen Sie die Grafik für Controller A oder Controller B aus
 .. Wählen Sie im Kontextmenü die Option *Einstellungen anzeigen* aus.
 .. Wählen Sie die Registerkarte *Host Interfaces* aus.

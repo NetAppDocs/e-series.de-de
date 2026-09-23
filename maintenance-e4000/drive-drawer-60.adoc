@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: E4000 replace drive drawer, replacing E4000 drive drawer, E4000 replace drive drawer, replacing E4000 drive drawer, E4000, E-Series, eseries 
 summary: Eine Laufwerkschublade kann in einem E4060 Controller-Shelf oder einem DE460C Festplatten-Shelf ersetzt werden. 
 ---
-= Ersetzen Sie die Laufwerksschublade E4000 (Shelf für 60 Laufwerke).
+= Austausch der Laufwerksschublade in einem E4000 60-Laufwerk-Shelf
 :allow-uri-read: 
 :experimental: 
 :icons: font
@@ -15,7 +15,7 @@ summary: Eine Laufwerkschublade kann in einem E4060 Controller-Shelf oder einem 
 Eine Laufwerkschublade kann in einem E4060 Controller-Shelf oder einem DE460C Festplatten-Shelf ersetzt werden.
 
 .Über diese Aufgabe
-Die Schritte zum Austauschen eines ausgefallenen Laufwerksschachts in einem E4060 Controller Shelf oder einem DE460C Drive Shelf hängen davon ab, ob die Volumes im Schacht durch Drawer Loss Protection geschützt sind. Wenn sich alle Volumes im Laufwerksschacht in Disk Pools oder Volume Groups mit Drawer Loss Protection befinden, kann dieser Vorgang online durchgeführt werden. Andernfalls muss dieser Vorgang offline erfolgen, indem vor dem Austausch eines Laufwerksschachts alle Host-E/A-Aktivitäten beendet und das gesamte Speichersystem (Controller Shelf und alle Expansion Shelves) ausgeschaltet wird.
+Die Schritte zum Austausch einer ausgefallenen Laufwerksschublade in einem E4060 Controller Shelf oder einem DE460C Drive Shelf hängen davon ab, ob die Volumes in der Schublade durch Drawer Loss Protection geschützt sind. Wenn sich alle Volumes in der Laufwerksschublade in Disk Pools oder Volume Groups mit Drawer Loss Protection befinden, kann dieses Verfahren online durchgeführt werden. Andernfalls muss dieses Verfahren offline durchgeführt werden, indem vor dem Austausch einer Laufwerksschublade alle Host-I/O-Aktivitäten angehalten und das gesamte Speichersystem (Controller Shelf und alle Expansion Shelves) ausgeschaltet wird.
 
 .Bevor Sie beginnen
 * Stellen Sie sicher, dass das Festplatten-Shelf alle folgenden Bedingungen erfüllt:
@@ -46,14 +46,14 @@ CAUTION: *Möglicher Verlust des Datenzugriffs* -- Wenn ein Volume sich bereits 
 
 
 
-NOTE: Informationen zum Austausch eines E-Series DE460C Erweiterungsfachs finden sich in der entsprechenden Dokumentation https://kb.netapp.com/on-prem/E-Series/Hardware-KBs/How_to_replace_an_E_Series_DE460c_controller_expansion_shelf["NetApp Knowledge Base"^].
+NOTE: Informationen zum Austausch eines E-Series DE460C Erweiterungsfachs sind in der entsprechenden Dokumentation  https://kb.netapp.com/on-prem/E-Series/Hardware-KBs/How_to_replace_an_E_Series_DE460c_controller_expansion_shelf["NetApp Knowledge Base"^] zu finden.
 
 
 
 [[step-1-prepare-to-replace-drive-drawer]]
 == Schritt 1: Vorbereitung auf den Austausch der Laufwerksschublade
 
-Es ist zu prüfen, ob der Austauschvorgang durchgeführt werden kann, während das Laufwerksgehäuse online ist, oder ob die Host-E/A-Aktivität gestoppt und alle eingeschalteten Gehäuse ausgeschaltet werden müssen (den Vorgang offline durchführen).
+Stellen Sie fest, ob der Austauschvorgang durchgeführt werden kann, während das Laufwerksgehäuse online ist, oder ob die Host-E/A-Aktivität angehalten und alle eingeschalteten Gehäuse ausgeschaltet werden müssen (der Vorgang wird offline durchgeführt).
 
 Wenn Sie eine Schublade in einem Shelf durch einen Schubladenschutz ersetzen, müssen Sie die Host-I/O-Aktivität nicht beenden und ein Regal ausschalten.
 
@@ -88,7 +88,7 @@ Mit diesem Befehl wird sichergestellt, dass Sie das am häufigsten herausziehbar
 +
 [listing]
 ----
-SMcli <ctlr_IP1\> -k -u "DC1-PRD-SAN-01" -p "safety-1" -c "set tray [10] drawer [1]
+SMcli <ctlr_IP1\> -k -u "array_username" -p "array_password" -c "set tray [10] drawer [1]
 serviceAllowedIndicator=forceOnWarning;"
 ----
 . Ermitteln Sie wie folgt, ob Sie die Host-I/O-Aktivität anhalten müssen:
@@ -121,7 +121,7 @@ CAUTION: *Möglicher Datenverlust* -- Wenn Sie diesen Vorgang während der I/O-V
 +
 Die grüne LED „Cache aktiv“ auf der Rückseite jedes Controllers leuchtet, wenn die Daten im Cache auf die Laufwerke geschrieben werden müssen. Sie müssen warten, bis diese LED ausgeschaltet ist.
 
-. Im linken Bereich des SANtricity System Manager wird menu:Storage[Operations in Progress] ausgewählt.
+. Im linken Bereich des SANtricity System Manager ist Menü:Storage[Operations in Progress] auszuwählen.
 . Warten Sie, bis alle Vorgänge abgeschlossen sind, bevor Sie mit dem nächsten Schritt fortfahren.
 . Schalten Sie die Shelves mithilfe eines der folgenden Verfahren aus:
 +
@@ -471,7 +471,7 @@ Die LED könnte nach der Neuinstallation des Lüfters bis zu einer Minute einges
 [[step-6-complete-drive-drawer-replacement]]
 == Schritt 6: Schließen Sie den Austausch der Laufwerkschublade ab
 
-Die Laufwerke werden in der richtigen Reihenfolge wieder eingesetzt, der Laufwerksschacht wird wieder im Laufwerksgehäuse installiert, die Frontblende wird wieder angebracht, die Stromversorgung wird bei Bedarf wiederhergestellt, und die Laufwerke werden bei Bedarf manuell rekonstruiert.
+Die Laufwerke werden in der richtigen Reihenfolge wieder eingesetzt, die Laufwerksschublade wird wieder im Laufwerks-Shelf installiert, die Frontblende wird wieder angebracht, die Stromversorgung wird bei Bedarf wiederhergestellt, und anschließend werden die Laufwerke bei Bedarf manuell rekonstruiert.
 
 
 CAUTION: *Möglicher Verlust des Datenzugriffs* -- Sie müssen jedes Laufwerk in seiner ursprünglichen Position in der Laufwerksschublade installieren.

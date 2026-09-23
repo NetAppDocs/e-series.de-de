@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: multipath software for vmware, express vmware configuration, software configuration, vmware host, E2800, E5700, EF300, EF600, E4000, EF50, EF80, E-Series, eseries 
 summary: Konfigurieren Sie Multipath-Software so, dass sie einen redundanten Pfad zum Storage Array bereitstellen kann, falls einer der physischen Pfade unterbrochen wird. 
 ---
-= Konfigurieren Sie die Multipath-Software in der E-Series - VMware
+= Wie Multipathing für VMware Hosts in E-Series funktioniert
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -20,24 +20,24 @@ Die Multipath-Software liefert einen redundanten Pfad zum Storage Array, falls e
 [[multipathing-policies]]
 == Multipathing-Richtlinien
 
-Details zu den Multipathing-Richtlinien folgen unten. Für die Protokolle FCP, iSCSI und SAS ist standardmäßig Native Multipathing Plug-In (NMP) festgelegt. Für NVMe over Fabrics (NVMe over FC, NVMe over RoCE und NVMe over TCP) ist standardmäßig High Performance Plug-In (HPP) festgelegt.
+Details zu den Multipathing-Richtlinien sind unten aufgeführt. Für die Protokolle FCP, iSCSI und SAS ist der Standard Native Multipathing Plug-Ins (NMP). Für NVMe over Fabrics (NVMe over FC, NVMe over RoCE und NVMe over TCP) ist der Standard High Performance Plug-In (HPP).
 
 
 
 [[native-multipathing-plug-ins-nmp]]
 === Native Multipathing Plug-Ins (NMP)
 
-Gilt nur für die Protokolle FCP, iSCSI und SAS https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/9-1/vsphere-storage/understanding-multipathing-and-failover-in-the-esxi-environment/vmware-multipathing-module.html["VMware bietet Native Multipathing Plug-Ins (NMP) an"^], bekannt als Storage Array Type Plug-ins (SATP), zur Handhabung der Failover-Implementierungen von Storage Arrays bestimmter Anbieter.
+Gilt nur für die Protokolle FCP, iSCSI und SAS https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/9-1/vsphere-storage/understanding-multipathing-and-failover-in-the-esxi-environment/vmware-multipathing-module.html["VMware bietet Native Multipathing Plug-Ins (NMP) an"^], die als Storage Array Type Plug-ins (SATP) bezeichnet werden, um die Failover-Implementierungen der Speichersysteme bestimmter Anbieter zu handhaben.
 
-Der zu verwendende SATP ist *VMW_SATP_ALUA* (dies ist die ausgewählte Standardeinstellung für NetApp E-Series). Weitere Informationen finden sich unter  https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/9-1/vsphere-storage/understanding-multipathing-and-failover-in-the-esxi-environment/vmware-satps.html["VMware SATA"^].
+Der zu verwendende SATP ist *VMW_SATP_ALUA* (dies ist der ausgewählte Standard für NetApp E-Series). Weitere Informationen sind unter  https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/9-1/vsphere-storage/understanding-multipathing-and-failover-in-the-esxi-environment/vmware-satps.html["VMware SATA"^] zu finden.
 
 
 
-==== Plug-Ins und Richtlinien (PSP) für die Pfadauswahl
+==== Plug-Ins und Richtlinien für die Pfadauswahl (PSP)
 
-Diese Plug-ins sind Submodule des VMware NMP. Der NMP weist jedem logischen Gerät basierend auf dem Gerätetyp einen Standard-PSP zu. Sie können den Standard-PSP überschreiben. Weitere Informationen finden Sie unter https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/9-1/vsphere-storage/understanding-multipathing-and-failover-in-the-esxi-environment/viewing-and-managing-storage-paths-on-esxi-hosts/change-the-path-selection-policy.html["Ändern der Pfadauswahlrichtlinie"^]. Der NMP weist NetApp Geräten standardmäßig die Pfadauswahlrichtlinie VMW_PSP_RR (Round Robin) zu. Dies ist der empfohlene PSP.
+Diese Plug-ins sind Submodule des VMware NMP. Der NMP weist jedem logischen Gerät basierend auf dem Gerätetyp eine Standard-PSP zu. Sie können die Standard-PSP überschreiben. Weitere Informationen finden Sie unter  https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/9-1/vsphere-storage/understanding-multipathing-and-failover-in-the-esxi-environment/viewing-and-managing-storage-paths-on-esxi-hosts/change-the-path-selection-policy.html["Ändern der Pfadauswahlrichtlinie"^]. Der NMP weist NetApp Geräten standardmäßig die Pfadauswahlrichtlinie VMW_PSP_RR (Round Robin) zu. Dies ist die empfohlene PSP.
 
-Weitere Informationen finden sich unter  https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/9-1/vsphere-storage/understanding-multipathing-and-failover-in-the-esxi-environment/vmware-psps.html["VMware Pfadauswahl Plug-Ins und Richtlinien"^].
+Weitere Informationen finden sich unter  https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/9-1/vsphere-storage/understanding-multipathing-and-failover-in-the-esxi-environment/vmware-psps.html["VMware Path Selection Plug-Ins und Richtlinien"^].
 
 
 
@@ -48,8 +48,8 @@ Das HPP ersetzt das NMP für Hochgeschwindigkeitsgeräte wie NVMe. Das HPP ist d
 
 
 
-==== Pfadauswahlschemata (PSS)
+==== Pfadauswahlverfahren (PSS)
 
 Zur Unterstützung von Multipathing verwendet HPP bei der Auswahl physischer Pfade für E/A-Anforderungen die Pfadauswahlverfahren (PSS). Das Standardschema für von HPP beanspruchte Geräte ist LB-RR (Load Balance - Round Robin). Dies ist das empfohlene PSS.
 
-Weitere Informationen zu HPP oder PSS finden Sie unter https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/9-1/vsphere-storage/understanding-multipathing-and-failover-in-the-esxi-environment/vmware-hpp.html["VMware High Performance Plug-In und Pfadauswahlschemata"^].
+Weitere Informationen zu HPP oder PSS sind unter  https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/9-1/vsphere-storage/understanding-multipathing-and-failover-in-the-esxi-environment/vmware-hpp.html["VMware High Performance Plug-In und Pfadauswahlschemata"^] zu finden.

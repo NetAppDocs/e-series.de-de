@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: Erfahren Sie, wie Sie die Controller mit Ihrem Netzwerk verbinden und die Einrichtung und Konfiguration des Storage-Systems abschließen. 
 ---
-= Vollständige Einrichtung des Speichersystems – E4060
+= Vollständige Einrichtung des E4060 Storage-Systems
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

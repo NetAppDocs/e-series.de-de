@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: ef50, ef80, how to complete the controller replacement process 
 summary: Um den Controller-Austausch für Ihr EF50- oder EF80-Speichersystem abzuschließen, stellen Sie sicher, dass die Firmware des Speichersystems aktuell ist, überprüfen Sie, ob die Volumes an ihre Besitzer zurückgegeben wurden, sammeln Sie System-Supportdaten und senden Sie das defekte Teil an NetApp zurück. 
 ---
-= Schließen Sie den Controller-Austausch ab - EF50 und EF80
+= Der Controller-Austausch auf EF50 und EF80 Speichersystemen wird abgeschlossen.
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
