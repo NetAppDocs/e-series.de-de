@@ -211,7 +211,7 @@ Weitere Informationen finden sich unter link:https://techdocs.broadcom.com/us/en
 
 . NVMe-Controller für NVMe über TCP hinzufügen.
 +
-Weitere Informationen finden sich unter link:https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/9-1/vsphere-storage/about-vmware-nvme-storage/configuring-nvme-over-tcp-on-esxi/shared-content/submaps/GUID-23E6D699-BEDC-4B5F-9515-3390C0E73888_copy.html["Controller für NVMe over Fabrics hinzufügen"^].
+Weitere Informationen finden Sie unter link:https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/9-1/vsphere-storage/about-vmware-nvme-storage/configuring-nvme-over-tcp-on-esxi.html["Controller für NVMe over Fabrics hinzufügen"^].
 
 
 

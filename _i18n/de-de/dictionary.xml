@@ -9112,7 +9112,6 @@
   <block id="dce708315880727f8ba7e84bab86b168" category="paragraph">Dieses Verfahren gilt für Laufwerksregale IOM12, IOM12B und IOM12C.</block>
   <block id="3f457ff9c17714d64ba75fd9d6d618f2" category="admonition">IOM12C-Module werden nur ab SANtricity OS 11.90R3 unterstützt. Stellen Sie sicher, dass die Firmware Ihres Controllers aktualisiert wurde, bevor Sie auf ein IOM12C installieren oder aktualisieren.</block>
   <block id="8d93e2013316d1241b304432f0103be5" category="admonition">Dieses Verfahren gilt für EAM-Hot-Swaps oder Ersatz wie für Regal-ähnliche. Dies bedeutet, dass Sie nur ein IOM12-Modul durch ein anderes IOM12-Modul oder ein IOM12C-Modul durch ein anderes IOM12C-Modul ersetzen können. (Ihr Regal kann zwei IOM12-Module oder zwei IOM12C-Module enthalten.)</block>
-  <block id="e0f75caa67759a6c5e34cbad6ae84d57" category="admonition">IOM12C-Module werden nur ab SANtricity OS 11.70.2 unterstützt. Stellen Sie sicher, dass die Firmware Ihres Controllers aktualisiert wurde, bevor Sie auf ein IOM12C installieren oder aktualisieren.</block>
   <block id="bbfd15448c83d50ee0a4a62cc152d856" category="paragraph"><block ref="bbfd15448c83d50ee0a4a62cc152d856" category="inline-image-macro-rx" type="image"></block></block>
   <block id="f7178ecd56d859f9f7e4878779a236ea" category="paragraph"><block ref="f7178ecd56d859f9f7e4878779a236ea" category="inline-image-macro-rx" type="image"></block></block>
   <block id="949ca69f081f10e2fc1938e0e24759c8" category="paragraph"><block ref="949ca69f081f10e2fc1938e0e24759c8" category="inline-image-macro-rx" type="image"></block></block>
@@ -10663,7 +10662,6 @@
   <block id="63caec46d73c7fc7cfb31576f03448b3" category="list-text">Fügen Sie den Software-NVMe-over-TCP-Adapter hinzu.</block>
   <block id="38e873b40f9f1fadf5b58bb3e7881a0a" category="paragraph">Weitere Informationen finden sich unter <block ref="83ec1ea21d3b4612b4378c8e0322370e" category="inline-link-macro-rx"></block>.</block>
   <block id="35364a0d878a8e2835e056f68bbe94ca" category="list-text">NVMe-Controller für NVMe über TCP hinzufügen.</block>
-  <block id="85711dc46edb07fe18d562b7bd2afd62" category="paragraph">Weitere Informationen finden sich unter <block ref="138a9b696f8791e3b3cb78426f306288" category="inline-link-macro-rx"></block>.</block>
   <block id="6ffa0472c7a35ad33e212ebdffd65a85" category="paragraph">In diesem Beispiel lautet die Ziel-IP-Adresse für NVMe over TCP 192.29.11.111.</block>
   <block id="6ecdef344e2ba5fc1740960e5ecc14b7" category="list-text">Geben Sie von der Initiatoradresse jedes Hosts (der IP-Adresse des für NVMe über TCP verwendeten Ethernet-Ports des Hosts) zu jedem NVMe über TCP Port des Controllers einen <block ref="bb8dcb7aca9e5a9c6d0064e07e54900b" prefix=" " category="inline-code"></block> Befehl aus. Diese Aktion ist von jedem Host-Server in der Konfiguration auszuführen, wobei die IP-Adressen nach Bedarf anzupassen sind.</block>
   <block id="ef85308abea9690943da10064f1e07e0" category="list-text">Falls die Erkennung in Schritt 5 nicht erfolgreich war, kehren Sie zur Konfigurationsprozedur für die hostseitige Netzwerkkonfiguration von NVMe over TCP zurück, um das Hinzufügen der Zielcontroller abzuschließen.</block>
@@ -11180,4 +11178,5 @@
   <block id="c258d5ff72ac6cde3a2d2c9160d9be3e" category="doc">Austausch eines Netzteils in einem EF50 oder EF80 Speichersystem</block>
   <block id="8f7e1bfda34b5c8fb95937ace0e0bea7" category="doc">Austausch der Laufwerksschublade in einem DE460C - EF300 und EF600</block>
   <block id="6c1d99e806e444e516c2482fdbe8f055" category="list-text">Im Menü „Storage“ ist „Volumes“ auszuwählen. Auf der Seite „All Volumes“ ist zu überprüfen, ob die Volumes ihren bevorzugten Eigentümern zugeordnet sind. Das *ellipsis icon* &gt; *Change ownership* ist auszuwählen, um die Volume-Eigentümer anzuzeigen.</block>
+  <block id="7baca5088011490565ae0a1cf6125785" category="paragraph">Weitere Informationen finden Sie unter <block ref="540ffd17fd5ec0a460640b11d1bd0a3b" category="inline-link-macro-rx"></block>.</block>
 </blocks>

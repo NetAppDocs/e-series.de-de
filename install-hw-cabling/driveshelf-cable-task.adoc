@@ -17,7 +17,7 @@ Sie müssen jeden Controller im Controller-Shelf mit einem I/O-Modul (IOM) in ei
 * Dieses Verfahren gilt für Laufwerksregale IOM12, IOM12B und IOM12C.
 +
 
-NOTE: IOM12C-Module werden nur ab SANtricity OS 11.70.2 unterstützt. Stellen Sie sicher, dass die Firmware Ihres Controllers aktualisiert wurde, bevor Sie auf ein IOM12C installieren oder aktualisieren.
+NOTE: IOM12C-Module werden nur ab SANtricity OS 11.90R3 unterstützt. Stellen Sie sicher, dass die Firmware Ihres Controllers aktualisiert wurde, bevor Sie auf ein IOM12C installieren oder aktualisieren.
 
 * Wenn Sie ein älteres Controller-Shelf mit einem DE212C, DE224C oder DE460 verkabeln, finden Sie unter https://mysupport.netapp.com/ecm/ecm_download_file/ECMLP2859057["Hinzufügen von IOM-Laufwerk-Shelfs zu einem vorhandenen E27XX-, E56XX- oder EF560-Controller-Shelf"^].
 * Wenn Sie im Rahmen einer Neuinstallation ein EF50 oder EF80 Storage-System an SAS-Erweiterungs-Shelfs anschließen, finden Sie Informationen im Verfahren link:../install-hw-ef50-ef80/install-cable.html["Verkabelung der Hardware für EF50 und EF80 Storage-Systeme"].
