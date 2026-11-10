@@ -11179,4 +11179,6 @@
   <block id="8f7e1bfda34b5c8fb95937ace0e0bea7" category="doc">Austausch der Laufwerksschublade in einem DE460C - EF300 und EF600</block>
   <block id="6c1d99e806e444e516c2482fdbe8f055" category="list-text">Im Menü „Storage“ ist „Volumes“ auszuwählen. Auf der Seite „All Volumes“ ist zu überprüfen, ob die Volumes ihren bevorzugten Eigentümern zugeordnet sind. Das *ellipsis icon* &gt; *Change ownership* ist auszuwählen, um die Volume-Eigentümer anzuzeigen.</block>
   <block id="7baca5088011490565ae0a1cf6125785" category="paragraph">Weitere Informationen finden Sie unter <block ref="540ffd17fd5ec0a460640b11d1bd0a3b" category="inline-link-macro-rx"></block>.</block>
+  <block id="712baff1701c605dfc39f4e5da7d934e" category="section-title">Neue Funktionen in Version 12.10R1</block>
+  <block id="9bee6f4318d6dc6bfd57ef5376da8437" category="paragraph">Diese Version enthält nur geringfügige Änderungen und keine neuen Funktionen. Weitere Informationen zu den Änderungen in dieser Version finden Sie in der E-Series SANtricity OS 12.10R1 README.</block>
 </blocks>
